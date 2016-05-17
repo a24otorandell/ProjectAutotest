@@ -141,6 +141,7 @@ public class JiraDetails {
 
     }
 //HOLA QUE TAL
+    //asdfñlqe alex
     private void setStatus(TestDriver driver) {
         if(driver.getTeststatus()!=0){
             this.teststatus = "FAIL";
