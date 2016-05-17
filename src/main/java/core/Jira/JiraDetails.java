@@ -143,6 +143,7 @@ public class JiraDetails {
 //HOLA QUE TAL
     private void setStatus(TestDriver driver) {
         //Ignacio comment
+        //Second attempt
         if(driver.getTeststatus()!=0){
             this.teststatus = "FAIL";
         }
