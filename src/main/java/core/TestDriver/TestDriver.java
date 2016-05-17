@@ -40,10 +40,9 @@ public class TestDriver {
 
     //<editor-fold desc="GETTERES & SETTERS">
 
-
+//AAAAAA
     public AT2Test getTest() {
         return test;
-        //como va eso
     }
 
     public Class<?> getClazz() {
