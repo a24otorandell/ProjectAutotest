@@ -54,8 +54,8 @@
       <file leaf-file-name="JiraDetails.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/Jira/JiraDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73285717">
-              <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.75714284">
+              <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -843,7 +843,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463483385710</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Yo también he comentado en jiraDetails, dos veses">
+      <created>1463484183459</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1463484183459</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -924,7 +930,8 @@
     <MESSAGE value="He quitado el package que sobraba" />
     <MESSAGE value="He quitado el package que sobraba, y he añadido algo en juraDetails" />
     <MESSAGE value="Yo también he comentado en jiraDetails" />
-    <option name="LAST_COMMIT_MESSAGE" value="Yo también he comentado en jiraDetails" />
+    <MESSAGE value="Yo también he comentado en jiraDetails, dos veses" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yo también he comentado en jiraDetails, dos veses" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1506,8 +1513,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/Jira/JiraDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73285717">
-          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.75714284">
+          <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
