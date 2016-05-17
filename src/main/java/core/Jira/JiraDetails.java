@@ -140,7 +140,7 @@ public class JiraDetails {
 
 
     }
-
+//HOLA QUE TAL
     private void setStatus(TestDriver driver) {
         if(driver.getTeststatus()!=0){
             this.teststatus = "FAIL";
