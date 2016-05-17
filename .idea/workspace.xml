@@ -836,7 +836,13 @@
       <option name="project" value="LOCAL" />
       <updated>1463483319127</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="he añadido un comentario en jiradetails 2">
+      <created>1463483458476</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1463483458476</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -908,7 +914,8 @@
     <MESSAGE value="He quitado el package que sobraba" />
     <MESSAGE value="He quitado el package que sobraba, y he añadido algo en juraDetails" />
     <MESSAGE value="he añadido un comentario en jiradetails" />
-    <option name="LAST_COMMIT_MESSAGE" value="he añadido un comentario en jiradetails" />
+    <MESSAGE value="he añadido un comentario en jiradetails 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="he añadido un comentario en jiradetails 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
