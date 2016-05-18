@@ -3,8 +3,6 @@ package screen.AT2ACCDI0003;
 import core.CommonActions.CommonProcedures;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
-import core.recursiveData.recursiveXPaths;
-import org.openqa.selenium.By;
 
 /**
  * Created by otorandell on 29/12/2015.
