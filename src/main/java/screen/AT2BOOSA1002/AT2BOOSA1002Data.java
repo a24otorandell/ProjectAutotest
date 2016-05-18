@@ -26,6 +26,7 @@ public class AT2BOOSA1002Data {
         this.data = harvester.harvestAll();
         if(data.get("empty").equals("true")){
             setDefaultData();
+            //PRUEBA
         }
     }
     public void setDefaultData(){
