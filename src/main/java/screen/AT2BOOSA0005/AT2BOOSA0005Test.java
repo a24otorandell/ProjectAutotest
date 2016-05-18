@@ -1,5 +1,7 @@
 package screen.AT2BOOSA0005;
 
+import core.TestDriver.TestDriver;
+
 /**
  * Created by icastaneira on 17/05/2016.
  */
@@ -28,12 +30,9 @@ public class AT2BOOSA0005Test {
         this.data = data;
     }
 
-    //TODO go on from here
-    /*
     protected void setScreenInfo(TestDriver driver) {
-        driver.setMainmenu("Bookings");
-        driver.setSubmenu("Sales");
-        driver.setScreen("Occupancy Graphic 2.0");
+        driver.getTestdetails().setMainmenu("Bookings");
+        driver.getTestdetails().setSubmenu("Sales");
+        driver.getTestdetails().setScreen("Occupancy Graphic 2.0");
     }
-    */
 }
