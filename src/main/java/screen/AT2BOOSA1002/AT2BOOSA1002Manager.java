@@ -11,32 +11,25 @@ import java.util.Map;
 public class AT2BOOSA1002Manager {
     AT2BOOSA1002Test test;
     String[] procedure;
-
     public AT2BOOSA1002Manager() {
         setTest(new AT2BOOSA1002Test());
         this.test.setData(new AT2BOOSA1002Data());
         this.test.setLocators(new AT2BOOSA1002Locators());
     }
-
     public String[] getProcedure() {
         return procedure;
     }
-
     public AT2BOOSA1002Test getTest() {
         return test;
     }
-
     public Map<String, String> getData() {
         return this.test.getData().getData();}
-
     public void setTest(AT2BOOSA1002Test test) {
         this.test = test;
     }
-
     public void setProcedure(String[] procedure) {
         this.procedure = procedure;
     }
-
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
         getTest().start(driver);
@@ -45,7 +38,6 @@ public class AT2BOOSA1002Manager {
         }
         return true;
     }
-
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
@@ -68,6 +60,5 @@ public class AT2BOOSA1002Manager {
             }
         }
         return true;
-
     }
 }
