@@ -19,5 +19,6 @@ public class AT2BOOSA0005Locators {
 
     public void setElements() {
         elements.put("element_id", "//*[contains(@id, 'things')]");
+        //this is a fake xpath
     }
 }
