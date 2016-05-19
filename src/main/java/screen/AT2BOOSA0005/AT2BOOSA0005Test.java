@@ -3,6 +3,7 @@ package screen.AT2BOOSA0005;
 
 import core.CommonActions.Functions;
 import core.recursiveData.recursiveXPaths;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import core.CommonActions.CommonProcedures;
@@ -60,7 +61,6 @@ public class AT2BOOSA0005Test {
     }
 
     protected boolean testCSED(final TestDriver driver) {
-        WebDriverWait webDriverWait = new WebDriverWait(driver.getDriver(), 300, 1000);
         driver.getReport().addHeader("\"Occupancy graphic 2.0\" TEST START:", 2, true);
         if(!searchBooking(driver)){return false;}
         if(!navigateToBOOSA0005(driver)){return false;}
@@ -111,8 +111,15 @@ public class AT2BOOSA0005Test {
                 new String[]{"glass", recursiveXPaths.glass},
                 " on \"AT2BOOSA0005\" DETAILS"))) {return false;}
 
-        //TODO clear
-        if(!(Functions.screenshot(driver))) {return false;}
+        if (driver.getDriver().findElements(By.xpath(getElements("boosa0005_detail_of_units_e_result"))).size() > 0 &&
+                driver.getDriver().findElement(By.xpath(getElements("boosa0005_detail_of_units_e_result"))).isDisplayed()) {
+            //getData from result
+            //query
+        } else {
+            if (!(Functions.screenshot(driver))) {
+                return false;
+            }
+        }
 
         if(!(Functions.checkClickByAbsence(driver,
                 new String[]{"boosa0005_detail_b_close", getElements("boosa0005_detail_b_close")},
