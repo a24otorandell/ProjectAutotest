@@ -64,6 +64,7 @@ public class AT2BOOSA0005Test {
         driver.getReport().addHeader("\"Occupancy graphic 2.0\" TEST START:", 2, true);
         if(!searchBooking(driver)){return false;}
         if(!navigateToBOOSA0005(driver)){return false;}
+        if(!monthlyData(driver)){return false;}
         return true;
     }
 
@@ -92,6 +93,30 @@ public class AT2BOOSA0005Test {
         if(!(Functions.checkClickByAbsence(driver,
                 new String[]{"boosa1002_search_result_actions_b_graphic", getElements("boosa1002_search_result_actions_b_graphic")},
                 new String[]{"boosa1002_search_result_actions_b_graphic", getElements("boosa1002_search_result_actions_b_graphic")},
+                " on \"AT2BOOSA1002\" BOOKING SEARCH"))) {return false;}
+        return true;
+    }
+
+    private boolean monthlyData(final TestDriver driver) {
+        if(!(Functions.simpleClick(driver,
+                new String[]{"boosa0005_search_b_monthly", getElements("boosa0005_search_b_monthly")},
+                " on \"AT2BOOSA0005\" CONSULT"))) {return false;}
+        if(!(Functions.screenshot(driver))) {return false;}
+        return true;
+    }
+
+    private boolean detailsTest(final TestDriver driver) {
+        if(!(Functions.checkClick(driver,
+                new String[]{"boosa0005_search_b_detail", getElements("boosa0005_search_b_detail")},
+                new String[]{"glass", recursiveXPaths.glass},
+                " on \"AT2BOOSA0005\" DETAILS"))) {return false;}
+
+        //TODO clear
+        if(!(Functions.screenshot(driver))) {return false;}
+
+        if(!(Functions.checkClickByAbsence(driver,
+                new String[]{"boosa0005_detail_b_close", getElements("boosa0005_detail_b_close")},
+                new String[]{"glass", recursiveXPaths.glass},
                 " on \"AT2BOOSA1002\" BOOKING SEARCH"))) {return false;}
         return true;
     }
