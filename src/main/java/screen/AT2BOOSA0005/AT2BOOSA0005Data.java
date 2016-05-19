@@ -29,6 +29,6 @@ public class AT2BOOSA0005Data {
     }
 
     public void setDefaultData(){
-        //TODO FILL WITH DATA
+        data.put("booking_number", "3091480");
     }
 }
