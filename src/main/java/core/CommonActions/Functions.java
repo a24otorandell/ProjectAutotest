@@ -31,9 +31,9 @@ public class Functions {
      */
     public static boolean simpleClick(TestDriver driver, String path[], String where) {
 //HOW TO CALL THIS METHOD
-        /* SwissKnife.simpleClick(driver,
-                new String[]{"x", elements.get("x")}, //element to click
-                " on where");*/
+        /* if (!Functions.simpleClick(driver,
+                new String[]{"header_add", getElements("header_add")}, //element to click
+                " on CREATION HEADER")){return false;}*/
         try {
             driver.getDriver().findElement(By.xpath(path[1])).click();
             driver.getReport().addContent(path[0] + " clicked " + where);

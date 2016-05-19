@@ -42,17 +42,23 @@ class AT2BOOSA1002Test {
         return this.data.getData().get(key);
     }
     protected boolean testCSED(TestDriver driver) {
-
         return create_header(driver);
-
     }
-
     private boolean create_header(TestDriver driver) {
         driver.getReport().addHeader("CREATE NEW BOOKING", 2, true);
 
-        return Functions.simpleClick(driver,
+        if (!Functions.simpleClick(driver,
                 new String[]{"header_add", getElements("header_add")}, //element to click
-                " on CREATION HEADER");
+                " on CREATION HEADER")){return false;};
+        if (!Functions.createLov(driver,
+                new String[]{"header_add_lov_interface",getElements("header_add_lov_interface")}, // b_lov
+                new String[]{"header_add_i_interface", getElements("header_add_i_interface")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "", //Data name
+                "")){return false;}
+        return true;
     }
 
 }
