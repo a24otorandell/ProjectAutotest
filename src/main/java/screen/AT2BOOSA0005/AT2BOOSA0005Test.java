@@ -4,7 +4,6 @@ package screen.AT2BOOSA0005;
 import core.CommonActions.Functions;
 import core.recursiveData.recursiveXPaths;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import core.CommonActions.CommonProcedures;
 import core.TestDriver.TestDriver;
@@ -14,6 +13,7 @@ import core.TestDriver.TestDriver;
  */
 public class AT2BOOSA0005Test {
 
+    //TODO Details method mut be completed. However, not a single booking with details has been found (╯°□°）╯︵ ┻━┻
     protected AT2BOOSA0005Locators locators;
     protected AT2BOOSA0005Data data;
 
@@ -65,6 +65,7 @@ public class AT2BOOSA0005Test {
         if(!searchBooking(driver)){return false;}
         if(!navigateToBOOSA0005(driver)){return false;}
         if(!monthlyData(driver)){return false;}
+        if(!detailsTest(driver)){return false;}
         return true;
     }
 
