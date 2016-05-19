@@ -1,6 +1,7 @@
 package screen.AT2BOOSA1002;
 
 import core.TestDriver.TestDriver;
+import screen.AT2Test;
 
 
 import java.util.Map;
@@ -8,7 +9,7 @@ import java.util.Map;
 /**
  * Created by acarrillo on 18/05/2016.
  */
-public class AT2BOOSA1002Manager {
+public class AT2BOOSA1002Manager  implements AT2Test{
     AT2BOOSA1002Test test;
     String[] procedure;
     public AT2BOOSA1002Manager() {
@@ -33,10 +34,7 @@ public class AT2BOOSA1002Manager {
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
         getTest().start(driver);
-        if (!csedIteration(driver)) {
-            return false;
-        }
-        return true;
+        return csedIteration(driver);
     }
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
