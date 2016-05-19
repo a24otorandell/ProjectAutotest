@@ -49,7 +49,8 @@ public class CommonProcedures {
     public static boolean goToScreen(TestDriver driver) {
         try {
             if(!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")){return false;}
-            if(!Functions.insertInput(driver, new String[]{"Component", recursiveXPaths.componentinput}, "Component", driver.getTestdetails().getTestname(), " on main ATLAS page")){return false;}
+            //if(!Functions.insertInput(driver, new String[]{"Component", recursiveXPaths.componentinput}, "Component", driver.getTestdetails().getTestname(), " on main ATLAS page")){return false;}
+            if(!Functions.insertInput(driver, new String[]{"Component", recursiveXPaths.componentinput}, "Component", driver.getTestdetails().getScreen(), " on main ATLAS page")){return false;}
             if(!Functions.checkClick(driver, new String[]{"Search component icon", recursiveXPaths.searchcomponent}, new String[]{"Component result", recursiveXPaths.result}, 180, 500, " on main ATLAS page")){return false;}
             if(!Functions.checkClickByAbsence(driver, new String[]{"Component result", recursiveXPaths.result}, new String[]{"Component result", recursiveXPaths.result}, 360, 500, " on main ATLAS page")){return false;}
         } catch (Exception e) {
