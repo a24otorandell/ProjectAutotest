@@ -40,25 +40,6 @@ public class AT2BOOSA1002Manager {
     }
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
-        for (int i = 0; i < procedure.length; i++) {
-            if (getProcedure()[i].equals("c")) {
-
-            }
-            if (getProcedure()[i].equals("s")) {
-
-            }
-            if (getProcedure()[i].equals("e")) {
-
-            }
-            if (getProcedure()[i].equals("d")) {
-
-            }
-            if (getProcedure()[i].equals("x")) {
-                if (!getTest().testCSED(driver)) {
-                    return false;
-                }
-            }
-        }
-        return true;
+        return getTest().testCSED(driver);
     }
 }
