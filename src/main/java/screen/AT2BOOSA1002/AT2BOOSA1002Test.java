@@ -1,12 +1,14 @@
 package screen.AT2BOOSA1002;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
+import core.recursiveData.recursiveXPaths;
 
 /**
  * Created by acarrillo on 18/05/2016.
  */
-public class AT2BOOSA1002Test {
+class AT2BOOSA1002Test {
     protected AT2BOOSA1002Locators locators;
     protected AT2BOOSA1002Data data;
 
@@ -34,14 +36,23 @@ public class AT2BOOSA1002Test {
         driver.getTestdetails().setScreen("Bookings Maintenance");
     }
     protected String getElements(String key){
-        String value = this.locators.getElements().get(key);
-        return value;
+        return this.locators.getElements().get(key);
     }
     protected String getData(String key){
-        String value = this.data.getData().get(key);
-        return value;
+        return this.data.getData().get(key);
     }
     protected boolean testCSED(TestDriver driver) {
-        return false;
+
+        return create_header(driver);
+
     }
+
+    private boolean create_header(TestDriver driver) {
+        driver.getReport().addHeader("CREATE NEW BOOKING", 2, true);
+
+        return Functions.simpleClick(driver,
+                new String[]{"header_add", getElements("header_add")}, //element to click
+                " on CREATION HEADER");
+    }
+
 }
