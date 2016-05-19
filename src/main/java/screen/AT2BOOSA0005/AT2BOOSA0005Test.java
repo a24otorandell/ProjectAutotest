@@ -1,5 +1,10 @@
 package screen.AT2BOOSA0005;
 
+
+import core.CommonActions.Functions;
+import core.recursiveData.recursiveXPaths;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import core.CommonActions.CommonProcedures;
 import core.TestDriver.TestDriver;
 
@@ -55,7 +60,39 @@ public class AT2BOOSA0005Test {
     }
 
     protected boolean testCSED(final TestDriver driver) {
+        WebDriverWait webDriverWait = new WebDriverWait(driver.getDriver(), 300, 1000);
+        driver.getReport().addHeader("\"Occupancy graphic 2.0\" TEST START:", 2, true);
+        if(!searchBooking(driver)){return false;}
+        if(!navigateToBOOSA0005(driver)){return false;}
+        return true;
+    }
 
+    private boolean searchBooking(final TestDriver driver) {
+        if(!(Functions.checkClick(driver,
+                new String[]{"boosa1002_search_b_icon", getElements("boosa1002_search_b_icon")},
+                new String[]{"glass", recursiveXPaths.glass},
+                " on \"AT2BOOSA1002\" BOOKING SEARCH"))) {return false;}
+        if(!(Functions.insertInput(driver,
+                new String[]{"boosa1002_search_i_booking", getElements("boosa1002_search_i_booking")},
+                "booking_search",
+                getData("booking_number"),
+                " on \"AT2BOOSA1002\" BOOKING SEARCH"))) {return false;}
+        if(!(Functions.clickSearchAndResult(driver,
+                new String[]{"boosa1002_search_b_search", getElements("boosa1002_search_b_search")},
+                new String[]{"boosa1002_search_e_result", getElements("boosa1002_search_e_result")},
+                " on \"AT2BOOSA1002\" BOOKING SEARCH"))) {return false;}
+        return true;
+    }
+
+    private boolean navigateToBOOSA0005(final TestDriver driver) {
+        if(!(Functions.checkClick(driver,
+                new String[]{"boosa1002_search_result_b_actions", getElements("boosa1002_search_result_b_actions")},
+                new String[]{"boosa1002_search_result_actions_b_graphic", getElements("boosa1002_search_result_actions_b_graphic")},
+                " on \"AT2BOOSA1002\" BOOKING SEARCH"))) {return false;}
+        if(!(Functions.checkClickByAbsence(driver,
+                new String[]{"boosa1002_search_result_actions_b_graphic", getElements("boosa1002_search_result_actions_b_graphic")},
+                new String[]{"boosa1002_search_result_actions_b_graphic", getElements("boosa1002_search_result_actions_b_graphic")},
+                " on \"AT2BOOSA1002\" BOOKING SEARCH"))) {return false;}
         return true;
     }
 }
