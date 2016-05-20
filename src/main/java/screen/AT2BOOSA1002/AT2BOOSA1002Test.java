@@ -31,15 +31,12 @@ class AT2BOOSA1002Test {
     }
     public void start(TestDriver driver) {
         setScreenInfo(driver);
-        //driver.getTestdetails().getTestname();
-        driver.getTestdetails().setTestname("AT2BOOSA0005");
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("BOOKINGS");
         driver.getTestdetails().setSubmenu("SALE");
         driver.getTestdetails().setScreen("Bookings Maintenance");
-
     }
     protected String getElements(String key){
         return this.locators.getElements().get(key);
@@ -69,6 +66,41 @@ class AT2BOOSA1002Test {
                 getData("header_to"), // value to search
                 "header_to", //name of the data
                 " on HEADER CREATION")){return false;}
+        if (!Functions.createLovByValue(driver,
+                new String[]{"header_add_lov_branch", getElements("header_add_lov_branch")}, //LoV button
+                new String[]{"header_add_i_branch", getElements("header_add_i_branch")}, //external LoV input
+                new String[]{"header_add_lov_branch_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("header_branch"), // value to search
+                "header_branch", //name of the data
+                " on HEADER CREATION")){return false;}
+        if (!Functions.createLovByValue(driver,
+                new String[]{"header_add_lov_user", getElements("header_add_lov_user")}, //LoV button
+                new String[]{"header_add_i_user", getElements("header_add_i_user")}, //external LoV input
+                new String[]{"header_add_lov_user_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("header_user"), // value to search
+                "header_user", //name of the data
+                " on HEADER CREATION")){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"header_add_i_despt",getElements("header_add_i_despt")},
+                getData("header_despt"),
+                "header_despt",
+                " on HEADER CREATION")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"header_add_i_adults",getElements("header_add_i_adults")},
+                "header_adults", getData("header_adults")," on HEADER CREATION")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"header_add_i_child",getElements("header_add_i_child")},
+                "header_child", getData("header_child")," on HEADER CREATION")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"header_add_i_baby",getElements("header_add_i_baby")},
+                "header_baby", getData("header_baby")," on HEADER CREATION")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"header_add_i_pax_mane",getElements("header_add_i_pax_mane")},
+                "header_pax_name", getData("header_pax_name")," on HEADER CREATION")){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"header_add_i_transfers_valuation",getElements("header_add_i_transfers_valuation")},
+                getData("header_valuation"),
+                "header_valuation",
+                " on HEADER CREATION")){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"header_add_b_save", getElements("header_add_b_save")}, //element to click
+                " on CREATION HEADER")){return false;}
         return true;
     }
 

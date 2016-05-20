@@ -273,8 +273,8 @@ return true;
     public static boolean insertInput(TestDriver driver, String path[], String data_name, String value, String where) {
         //HOW TO CALL THIS METHOD:
         /*
-         SwissKnife.insertInput(driver, new String[]{"inputname",elements.get("inputvalue")},
-          "dataname", datavalue," where");
+         if (!Functions.insertInput(driver, new String[]{"x",getElements("x")},
+                "data_name", "value"," on where")){return false;}
         */
         driver.getReport().addContent("Insert Input:","h5","");
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
@@ -561,11 +561,11 @@ return true;
      */
     public static boolean selectText(TestDriver driver, String[] pathselect, String content, String dataname, String where){
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.selectText(driver,
-                    new String[]{"x",elements.get("x")},
-                    "content",
-                    "dataname",
-                    " where");*/
+        /*if (!Functions.selectText(driver,
+                new String[]{"x",getElements("x")},
+                "data"),
+                "data_name",
+                " on where")){return false;}*/
         boolean found = false;
         Select e_select;
         List<WebElement> options = null;
