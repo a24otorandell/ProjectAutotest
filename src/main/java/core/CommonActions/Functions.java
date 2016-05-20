@@ -486,13 +486,13 @@ return true;
      */
     public static boolean createLovByValue (TestDriver driver, String[] b_lov, String[] i_lov, String[] i_inside_lov, String value, String data_name, String where){
         //HOW TO CALL THIS METHOD
-        /* SwissKnife.createLovByValue(driver,
-                new String[]{"x", elements.get("x")}, //LoV button
-                new String[]{"y", elements.get("y")}, //external LoV input
-                new String[]{"z", elements.get("z")}, //internal LoV input
+        /*if (!Functions.createLovByValue(driver,
+                new String[]{"x", getElements("x")}, //LoV button
+                new String[]{"y", getElements("y")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 "value", // value to search
-                "key", //name of the data
-                " on where");*/ //where this operation occurs
+                "data_name", //name of the data
+                " on where")){return false;}*/ //where this operation occurs
         driver.getReport().addContent("LoV by value Creation: ", "h4", "");
         String attr ="";
         if(!simpleClick(driver, i_lov, where)){return false;}

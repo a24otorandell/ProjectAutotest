@@ -26,6 +26,8 @@ public class AT2BOOSA1002Data {
         }
     }
     public void setDefaultData(){
-        data.put("","");
+        data.put("header_interface","A");
+        data.put("header_to","turchese");
+
     }
 }

@@ -39,9 +39,9 @@ public class AT2BOOSA0005Test {
 
     public void start(TestDriver driver) {
         setScreenInfo(driver);
-        driver.getTestdetails().setScreen("AT2BOOSA1002");
+        driver.getTestdetails().setTestname("AT2BOOSA1002");
         CommonProcedures.goToScreen(driver);
-        driver.getTestdetails().setScreen("AT2BOOSA0005");
+        driver.getTestdetails().setTestname("AT2BOOSA0005");
     }
 
     protected void setScreenInfo(TestDriver driver) {
