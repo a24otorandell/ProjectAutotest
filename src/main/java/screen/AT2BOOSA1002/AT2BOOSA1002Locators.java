@@ -32,6 +32,7 @@ public class AT2BOOSA1002Locators {
         elements.put("header_add_i_baby", "//*[contains(@id, 'it21::content')]");
         elements.put("header_add_i_pax_mane", "//*[contains(@id, 'it22::content')]");
         elements.put("header_add_i_transfers_valuation", "//*[contains(@id, 'soc3::content')]");
+        elements.put("header_add_b_save", "//*[contains(@id, 'pcgt1:boton_commit')]");
 
 
         //search
