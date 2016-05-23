@@ -24,8 +24,9 @@ public class AT2BOOSA1002Locators {
         elements.put("header_add_lov_branch", "//*[contains(@id, 'gsucCodSucId::lovIconId')]");
         elements.put("header_add_i_user", "//*[contains(@id, 'nomAgenteId::content')]");
         elements.put("header_add_lov_user", "//*[contains(@id, 'ilov1::lovIconId')]");
-        elements.put("header_add_i_user", "//*[contains(@id, 'rtreCodTipoRes::content')]");
-        elements.put("header_add_lov_user", "//*[contains(@id, 'rtreCodTipoRes::lovIconId')]");
+        elements.put("header_add_i_booking_type", "//*[contains(@id, 'rtreCodTipoRes::content')]");
+        elements.put("header_add_lov_booking_type", "//*[contains(@id, 'rtreCodTipoRes::lovIconId')]");
+        elements.put("header_add_i_ag_ref", "//*[contains(@id, 'it23::content')]");
         elements.put("header_add_i_despt", "//*[contains(@id, 'soc11::content')]");
         elements.put("header_add_i_adults", "//*[contains(@id, 'it19::content')]");
         elements.put("header_add_i_child", "//*[contains(@id, 'it20::content')]");
@@ -33,6 +34,9 @@ public class AT2BOOSA1002Locators {
         elements.put("header_add_i_pax_mane", "//*[contains(@id, 'it22::content')]");
         elements.put("header_add_i_transfers_valuation", "//*[contains(@id, 'soc3::content')]");
         elements.put("header_add_b_save", "//*[contains(@id, 'pcgt1:boton_commit')]");
+
+        elements.put("header_edit_booking_tab", "//*[contains(@id, ':2:tabIndex::disclosureAnchor')]");
+
 
 
         //search
