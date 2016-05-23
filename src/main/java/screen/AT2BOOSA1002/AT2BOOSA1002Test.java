@@ -41,6 +41,10 @@ class AT2BOOSA1002Test {
     protected String getElements(String key){
         return this.locators.getElements().get(key);
     }
+    public void putData (String key, String value){
+        this.data.getData().put(key,value);
+        System.out.println("The value is save in "+key+" ("+value+")");
+    }
     protected String getData(String key){
         return this.data.getData().get(key);
     }
@@ -49,6 +53,7 @@ class AT2BOOSA1002Test {
     }
     private boolean create_header(TestDriver driver) {
         driver.getReport().addHeader("CREATE NEW BOOKING", 2, true);
+        Functions.zoomOut(driver);
         if (!Functions.simpleClick(driver,
                 new String[]{"header_add", getElements("header_add")}, //element to click
                 " on CREATION HEADER")){return false;}
@@ -80,6 +85,15 @@ class AT2BOOSA1002Test {
                 getData("header_user"), // value to search
                 "header_user", //name of the data
                 " on HEADER CREATION")){return false;}
+        if (!Functions.createLovByValue(driver,
+                new String[]{"header_add_lov_booking_type", getElements("header_add_lov_booking_type")}, //LoV button
+                new String[]{"header_add_i_booking_type", getElements("header_add_i_booking_type")}, //external LoV input
+                new String[]{"header_add_lov_booking_type_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("header_booking_type"), // value to search
+                "header_booking_type", //name of the data
+                " on HEADER CREATION")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"header_add_i_ag_ref",getElements("header_add_i_ag_ref")},
+                "header_ag_ref", getData("header_ag_ref")," on HEADER CREATION")){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"header_add_i_despt",getElements("header_add_i_despt")},
                 getData("header_despt"),
@@ -101,6 +115,16 @@ class AT2BOOSA1002Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"header_add_b_save", getElements("header_add_b_save")}, //element to click
                 " on CREATION HEADER")){return false;}
+
+        if (!Functions.getText(driver,new String[]{"header_edit_booking_tab", getElements("header_edit_booking_tab")}, // element path
+                "booking_value", // key for data value (the name)
+                " on BOOKING CREATED")){return false;}
+
+        String bookings_value [] = getData("booking_value").split("-");
+        putData("booking",bookings_value[1]);
+        String recep_value [] = bookings_value[0].split(" ");
+        putData("receptive",recep_value[2]);
+
         return true;
     }
 

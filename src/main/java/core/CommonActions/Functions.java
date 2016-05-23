@@ -456,9 +456,9 @@ return true;
      */
     public static boolean getText(TestDriver driver, String[] path, String data_name, String where){
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.getText(driver,new String[]{"x", elements.get("x")}, // element path
-                data_name, // key for data value (the name)
-                " where");*/ // where this operation occurs
+        /*        if (!Functions.getText(driver,new String[]{"x", getElements("x")}, // element path
+                "key", // key for data value (the name)
+                " on where")){return false;}*/ // where this operation occurs
         WebElement element = findElement(driver, path, where);
         String text="";
         try{
