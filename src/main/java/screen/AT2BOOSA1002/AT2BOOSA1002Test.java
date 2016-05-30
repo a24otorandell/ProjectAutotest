@@ -31,6 +31,7 @@ class AT2BOOSA1002Test {
     }
     public void start(TestDriver driver) {
         setScreenInfo(driver);
+
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
