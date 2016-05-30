@@ -117,14 +117,13 @@ public class DataGenerator {
 
     /**
      * This method generates and returns a String referent to the date of today
-     * @param driver this class manages all the information referent to the current test.
      * @param format defines the date format of the result
      * @param incrmonth integer that defines the increment of month value
      * @param incrday integer that defines the increment of month day value
      * @param incryear integer value that defines the increment of the year value
      * @return String representing a date value
      */
-    public static String getRelativeDateToday(TestDriver driver, String format, int incrmonth, int incrday, int incryear){
+    public static String getRelativeDateToday(String format, int incrmonth, int incrday, int incryear){
         String today="";
         try{
             Calendar fecha = Calendar.getInstance();
@@ -137,8 +136,8 @@ public class DataGenerator {
         }
         catch(Exception e){
             String ecode = "--ERROR:getRelativeDateToday(): Unable to convert " + format + " to DateFormat please check that is inserted correctly.";
+            today = "01/01/2015";
             e.printStackTrace();
-            ErrorManager.process(driver, ecode);
         }
         return today;
     }

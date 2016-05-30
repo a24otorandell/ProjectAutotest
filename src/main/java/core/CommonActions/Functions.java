@@ -221,10 +221,10 @@ public class Functions {
      */
     public static boolean clickQbE (TestDriver driver, String[] b_qbe, String[] qbe_input, String where){
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.clickQbE(driver,
-                new String[]{"x", elements.get("x")},// query button
-                new String[]{"y", elements.get("y")},//any query input
-                "where"); // where the operation occurs
+        /*if(!Functions.clickQbE(driver,
+                new String[]{"x", getElements("x")},// query button
+                new String[]{"y", getElements("y")},//any query input
+                "where"));{return false;} // where the operation occurs
                 */
         driver.getReport().addContent("QbE Deployment: ", "h5", "");
         if(driver.getDriver().findElements(By.xpath(qbe_input[1])).size()>0){
@@ -247,10 +247,10 @@ public class Functions {
      */
     public static boolean clickSearchAndResult(TestDriver driver, String[] b_search, String[] e_result, String where){
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.clickSearchAndResult(driver,
-                new String[]{"x", elements.get("x")}, //search button
-                new String[]{"y", elements.get("y")}, //result element
-                " on SEARCH");*/ // where
+        /*if(!Functions.clickSearchAndResult(driver,
+                new String[]{"x", getElements("x")}, //search button
+                new String[]{"y", getElements("y")}, //result element
+                " on SEARCH")){return false;}*/ // where
         if(!checkClick(driver,b_search, e_result, where)){return false;}
         try {
             Thread.sleep(3000);
@@ -273,8 +273,8 @@ return true;
     public static boolean insertInput(TestDriver driver, String path[], String data_name, String value, String where) {
         //HOW TO CALL THIS METHOD:
         /*
-         if (!Functions.insertInput(driver, new String[]{"x",getElements("x")},
-                "data_name", "value"," on where")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"inputname",elements.get("inputvalue")},
+                "dataname", datavalue," where")){return false;}
         */
         driver.getReport().addContent("Insert Input:","h5","");
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
@@ -382,14 +382,14 @@ return true;
      */
     public static boolean createLov (TestDriver driver, String[] b_lov, String[] i_lov, String[] b_search, String[] e_result, String[] b_ok, String data_name, String where){
         // HOW TO CALL THIS METHOD
-        /*SwissKnife.createLov(driver,
-                    new String[]{"x",elements.get("y")}, // b_lov
-                    new String[]{"", elements.get("")}, // i_lov
-                    recursiveXPaths.lov_b_search, // lov b search
-                    recursiveXPaths.lov_e_result, // lov result
-                    recursiveXPaths.lov_b_ok, //lov b ok
-                    "", //Data name
-                    "");*/ // where the operation occurs
+        /* if(!Functions.createLov(driver,
+                new String[]{"x",getElements("y")}, // b_lov
+                new String[]{"", getElements("")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "", //Data name
+                "")){return false;} */ // where the operation occurs
         driver.getReport().addContent("LoV Creation: ", "h4", "");
         String attr ="";
         if(!simpleClick(driver, i_lov, where)){return false;}
@@ -456,8 +456,8 @@ return true;
      */
     public static boolean getText(TestDriver driver, String[] path, String data_name, String where){
         //HOW TO CALL THIS METHOD
-        /*        if (!Functions.getText(driver,new String[]{"x", getElements("x")}, // element path
-                "key", // key for data value (the name)
+        /* if(!Functions.getText(driver,new String[]{"x", getElements("x")}, // element path
+                "dataname", // key for data value (the name)
                 " on where")){return false;}*/ // where this operation occurs
         WebElement element = findElement(driver, path, where);
         String text="";
@@ -563,9 +563,9 @@ return true;
         //HOW TO CALL THIS METHOD
         /*if (!Functions.selectText(driver,
                 new String[]{"x",getElements("x")},
-                "data"),
-                "data_name",
-                " on where")){return false;}*/
+                "content",
+                "dataname",
+                " where")){return false;}*/
         boolean found = false;
         Select e_select;
         List<WebElement> options = null;
@@ -613,10 +613,10 @@ return true;
      */
     public static boolean detachTable(TestDriver driver, String[] path, boolean screenshot, String where){
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.detachTable(driver,
-                new String[]{"x",elements.get("x")}, //detach button
+        /*if(!Functions.detachTable(driver,
+                new String[]{"x",getElements("x")}, //detach button
                 true/false,     //screenshot??
-                "where");*/     //where this occurs
+                "where")){return false;}*/     //where this occurs
         driver.getReport().addContent("Detach Table:", "h5", "");
         if(!simpleClick(driver, path, where)){return false;}
         //if(screenshot){screenshot(driver);}

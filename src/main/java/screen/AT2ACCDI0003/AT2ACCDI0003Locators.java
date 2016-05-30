@@ -30,8 +30,8 @@ public class AT2ACCDI0003Locators {
          /* BOOSA0001 */
         elements.put("boosa0001_i_creationdate", "//*[contains(@id, 'id4::content')]");
         elements.put("boosa0001_b_search", "//*[contains(@id, 'pt1:dyntdc:r2:1:cb3')]");
-        elements.put("boosa0001_e_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
-        elements.put("boosa0001_e_result_e_bookreference", "//*[contains(@id, '1:pc1:t1:0:cl1')]");
+        elements.put("boosa0001_e_result", "//*[contains(@id, '1:pc1:t1::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("boosa0001_e_result_e_bookreference", "//*[contains(@id, 'pc1:t1:0:cl1')]");
         elements.put("boosa0001_b_closetab", "//*[contains(@id, 'dynTabsPane:2:tabIndex::rmAbv')]");
 
         /* ACCDI0003 */
@@ -55,7 +55,24 @@ public class AT2ACCDI0003Locators {
         elements.put("accdi0003_cb_agr", "//*[contains(@id, 'r1:0:sbc1::content')]");
         elements.put("accdi0003_cb_payment", "//*[contains(@id, 'r1:0:sbc2::content')]");
         elements.put("accdi0003_b_search", "//*[contains(@id, 'r1:0:r1:0:ctb1')]");
+        elements.put("accdi0003_e_result", "//*[contains(@id, 'never found a result to catch')]");
         elements.put("accdi0003_b_detach", "//*[contains(@id, 'r1:0:pc1:_dchTbr')]");
+        elements.put("accdi0003_b_qbe", "//*[contains(@id, 'r1:0:pc1:_qbeTbr')]");
+
+         /* ACCDI0003 QbE */
+        elements.put("accdi0003_b_qbe_i_hotel", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c16::content')]");
+        elements.put("accdi0003_b_qbe_i_contract", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c19::content')]");
+        elements.put("accdi0003_b_qbe_i_availability", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c13::content')]");
+        elements.put("accdi0003_b_qbe_i_room", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c1::content')]");
+        elements.put("accdi0003_b_qbe_i_characteristics", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c20::content')]");
+        elements.put("accdi0003_b_qbe_i_rate", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c12::content')]");
+        elements.put("accdi0003_b_qbe_i_release", "//*[contains(@id, 'r1:0:pc1:t2:id6::content')]");
+        elements.put("accdi0003_b_qbe_i_amountpernight", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c28::content')]");
+        elements.put("accdi0003_b_qbe_i_totalamount", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c4::content')]");
+        elements.put("accdi0003_b_qbe_i_retailer", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c26::content')]");
+        elements.put("accdi0003_b_qbe_i_checkin", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c2::content')]");
+        elements.put("accdi0003_b_qbe_i_board", "//*[contains(@id, 'r1_afr_0_afr_pc1_afr_t2_afr_c15::content')]");
+        elements.put("accdi0003_b_qbe_select_touroperator", "//*[contains(@id, 'r1:0:pc1:t2:soc5::content')]");
 
     }
 }

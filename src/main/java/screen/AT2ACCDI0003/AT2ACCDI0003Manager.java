@@ -49,9 +49,9 @@ public class AT2ACCDI0003Manager implements AT2Test {
 
     private boolean csedIteration(TestDriver driver) {
         //TODO CSED TEST
-      /*  String[] procedure = getProcedure();
+        String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
-                if (getProcedure()[i].equals("c")) {
+               /* if (getProcedure()[i].equals("c")) {
                     getTest().enabler(driver);
                     getTest().recordInteraction(driver, true);
                     getTest().reset(driver);
@@ -70,13 +70,13 @@ public class AT2ACCDI0003Manager implements AT2Test {
                     getTest().enabler(driver);
                     getTest().delete(driver);
                     getTest().reset(driver);
-                }
+                }*/
                 if (getProcedure()[i].equals("x")) {
                     if (!getTest().testCSED(driver)) {
                         return false;
                     }
                 }
-            }*/
+            }
         return true;
 
     }

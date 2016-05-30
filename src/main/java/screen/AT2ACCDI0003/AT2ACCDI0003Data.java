@@ -29,6 +29,6 @@ public class AT2ACCDI0003Data {
         }
     }
     public void setDefaultData(){
-        //TODO FILL WITH DATA
+        getData().put("booking_creation_date",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0, -1, 0));
     }
 }
