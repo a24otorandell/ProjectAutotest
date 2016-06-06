@@ -311,6 +311,8 @@ return true;
      * @param driver this object gathers all the info refferent to the current test
      */
     public static boolean screenshot(TestDriver driver) {
+        //HOW TO CALL THIS METHOD
+        //Functions.screenshot(driver);// where
         try {
             String name = driver.getTestdetails().getTestname();
             WebElement html = driver.getDriver().findElement(By.tagName("html"));

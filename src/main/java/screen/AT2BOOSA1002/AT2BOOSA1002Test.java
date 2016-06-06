@@ -50,8 +50,60 @@ class AT2BOOSA1002Test {
         return this.data.getData().get(key);
     }
     protected boolean testCSED(TestDriver driver) {
-        return create_header(driver);
+        if(!create_header(driver)){return false;}
+        if(!header_actions(driver)){return false;}
+
+        if(!create_remarks(driver)){return false;}
+        //edicion
+        // qquery
+        return true;
     }
+
+    private boolean header_actions(TestDriver driver) {
+
+        if(!header_to_booking(driver)){return false;}
+
+        //TO_booking
+        //Paxes
+        //Colelction Data
+        //Fax Mail
+        //Hotelopia Client
+
+        return true;
+    }
+
+    private boolean header_to_booking(TestDriver driver) {
+
+        if(!Functions.checkClick(driver,
+                new String[]{"header_b_actions", getElements("header_b_actions")}, //element to click
+                new String[]{"header_b_actions_b_tobooking", getElements("header_b_actions_b_tobooking")}, //element expected to appear
+                " on BOOSA1002 Header")){return false;}
+
+        if(!Functions.checkClick(driver,
+                new String[]{"header_b_actions_b_tobooking", getElements("header_b_actions_b_tobooking")}, //element to click
+                new String[]{"glass", recursiveXPaths.glass}, //element expected to appear
+                " on BOOSA1002 Header")){return false;}
+
+        Functions.screenshot(driver);
+
+        if(!Functions.checkClickByAbsence(driver,
+                new String[]{"header_b_actions_b_tobooking_b_accept", getElements("header_b_actions_b_tobooking_b_accept")}, //element to click
+                new String[]{"glass", recursiveXPaths.glass}, //element expected to appear
+                " on BOOSA1002 Header")){return false;}
+
+        return true;
+    }
+
+    private boolean create_remarks(TestDriver driver) {
+
+        if (!Functions.simpleClick(driver,
+                new String[]{"remmarks_tab_booking", getElements("remmarks_tab_booking")}, //element to click
+                " on CREATION HEADER")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"remmarks_booking_i_bookingadd",getElements("remmarks_booking_i_bookingadd")},
+                "booking_remmarks", getData("booking_remmarks")," on HEADER CREATION")){return false;}
+        return true;
+    }
+
     private boolean create_header(TestDriver driver) {
         driver.getReport().addHeader("CREATE NEW BOOKING", 2, true);
         Functions.zoomOut(driver);
@@ -116,12 +168,19 @@ class AT2BOOSA1002Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"header_add_b_save", getElements("header_add_b_save")}, //element to click
                 " on CREATION HEADER")){return false;}
+        try{
+            Thread.sleep(5000);
+        }
+        catch (Exception e){
 
+        }
         if (!Functions.getText(driver,new String[]{"header_edit_booking_tab", getElements("header_edit_booking_tab")}, // element path
                 "booking_value", // key for data value (the name)
                 " on BOOKING CREATED")){return false;}
 
-        String bookings_value [] = getData("booking_value").split("-");
+        String mystring = getData("booking_value");
+        System.out.println(mystring);
+        String bookings_value [] = mystring.split("-");
         putData("booking",bookings_value[1]);
         String recep_value [] = bookings_value[0].split(" ");
         putData("receptive",recep_value[2]);

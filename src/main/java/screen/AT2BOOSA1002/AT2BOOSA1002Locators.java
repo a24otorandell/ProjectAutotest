@@ -47,5 +47,35 @@ public class AT2BOOSA1002Locators {
         elements.put("search_e_result", "//*[contains(@id, 'pc1:tSales::db')]/table/tbody/tr/td[1]");
         elements.put("search_result_b_actions", "//*[contains(@id, 'pc1:pdm12:dc_m1')]");
         elements.put("search_result_actions_b_graphic", "//*[contains(@id, 'pc1:pdm12:dc_cmi9')]/td[2]");
+
+        //Remarks
+        //Booking observations
+        elements.put("remmarks_tab_booking", "//*[contains(@id, '0:sdi1::disAcr')]");
+        elements.put("remmarks_booking_i_bookingadd", "//*[contains(@id, '0:inputText1::content')]");
+        elements.put("remmarks_booking_b_bookingadd", "//*[contains(@id, '0:ctb1::icon')]");
+        elements.put("remmarks_booking_i_adminadd", "//*[contains(@id, '0:inputText2::content')]");
+        elements.put("remmarks_booking_b_adminadd", "//*[contains(@id, '0:ctb2::icon')]");
+        //TO tab
+        elements.put("remmarks_to_tab", "//*[contains(@id, '0:sdi1::disAcr')]");
+        elements.put("remmarks_to_i_commentsadd", "//*[contains(@id, '0:inputText1::content')]");
+        elements.put("remmarks_to_b_commentsadd", "//*[contains(@id, '0:ctb1::icon')]");
+
+        //ACTIONS
+        elements.put("header_b_actions", "//*[contains(@id, '0:pcgm1:dc_m1')]/div/table/tbody/tr/td[3]/div");
+        //TO_BOOKING
+        elements.put("header_b_actions_b_tobooking", "//*[contains(@id, '0:pcgm1:dc_cmi2')]/td[2]");
+        elements.put("header_b_actions_b_tobooking_b_accept", "//*[contains(@id, '0:cb10");
+        //PAXES
+        elements.put("header_b_actions_b_collectiondata", "//*[contains(@id, '0:pcgm1:dc_cmi5')]/td[2]");
+        elements.put("header_b_actions_b_collectiondata_b_close", "//*[contains(@id, '0:d19::close')]");
+        //HOTELOPIACLIENT
+        elements.put("header_b_actions_b_hotelopiaclient", "//*[contains(@id, '0:pcgm1:dc_cmi7')]/td[2]");
+        elements.put("header_b_actions_b_hotelopiaclient_b_chargecps", "//*[contains(@id, 'r1:1:r2:0:cb4')]");
+        elements.put("header_b_actions_b_hotelopiaclient_b_chargecps_b_close", "//*[contains(@id, 'd10::close')]");
+
+
+
+
+
     }
 }

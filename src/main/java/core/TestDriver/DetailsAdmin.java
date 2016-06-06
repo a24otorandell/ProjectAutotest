@@ -25,19 +25,19 @@ public class DetailsAdmin {
     private void setURL(DriverDetails driverdetails, TestDetails testdetails) {
         switch (testdetails.getEnvironment()) {
             case "des":
-                driverdetails.setUrl("http://atladfdes.tuitravel-ad.com/ATLAS20/faces/atlas");
+                driverdetails.setUrl("http://atladfdes.hotelbeds.com/ATLAS20/faces/atlas");
                 break;
             case "test":
-                driverdetails.setUrl("http://atladftest.tuitravel-ad.com/ATLAS20/faces/atlas");
+                driverdetails.setUrl("http://atladftest.hotelbeds.com/ATLAS20/faces/atlas");
                 break;
             case "sis":
-                driverdetails.setUrl("http://atladfsis.tuitravel-ad.com/ATLAS20/faces/atlas");
+                driverdetails.setUrl("http://atladfsis.hotelbeds.com/ATLAS20/faces/atlas");
                 break;
             case "pro":
-                driverdetails.setUrl("http://atladf.tuitravel-ad.com/ATLAS20/faces/atlas");
+                driverdetails.setUrl("http://atladf.hotelbeds.com/ATLAS20/faces/atlas");
                 break;
             default:
-                driverdetails.setUrl("http://atladftest.tuitravel-ad.com/ATLAS20/faces/atlas");
+                driverdetails.setUrl("http://atladftest.hotelbeds.com/ATLAS20/faces/atlas");
                 break;
         }
     }
