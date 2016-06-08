@@ -224,7 +224,7 @@ public class Functions {
         /*if(!Functions.clickQbE(driver,
                 new String[]{"x", getElements("x")},// query button
                 new String[]{"y", getElements("y")},//any query input
-                "where"));{return false;} // where the operation occurs
+                "where")){return false;} // where the operation occurs
                 */
         driver.getReport().addContent("QbE Deployment: ", "h5", "");
         if(driver.getDriver().findElements(By.xpath(qbe_input[1])).size()>0){
@@ -356,11 +356,11 @@ return true;
      */
     public static boolean auditData(TestDriver driver, String[] b_actions, String[] b_audit, String[] b_ok, String where){
         //HOW TO CALL THIS METHOD
-        /* SwissKnife.auditData(driver,
-                new String[]{"x",elements.get("x")}, //actions button
-                new String[]{"y",elements.get("y")}, //audit button
+        /* if(!Functions.auditData(driver,
+                new String[]{"x",getElements("x")}, //actions button
+                new String[]{"y",getElements("y")}, //audit button
                 new String[]{"audit_b_ok",recursiveXPaths.audit_b_ok}, //audit_b_ok
-                "where");*/ //where this occurs
+                "where")){return false;}*/ //where this occurs
         driver.getReport().addContent("Audit Data:", "h5", "");
         String[] glass = {"glass", recursiveXPaths.glass};
         if(!checkClick(driver, b_actions, b_audit, where)){return false;}
@@ -534,10 +534,10 @@ return true;
      */
     public static boolean enterQueryAndClickResult(TestDriver driver, String[] qbe_input, String[] e_result, String where){
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.enterQueryAndClickResult(driver,
-            new String[]{"x", elements.get("x")}, //any query input
-            new String[]{"y", elements.get("y")}, //table result
-                "where"); // where this operation occurs
+        /*if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"x", getElements("x")}, //any query input
+                new String[]{"y", getElements("y")}, //table result
+                "where")){return false;} // where this operation occurs
                 */
         if(!simpleClick(driver, qbe_input, where)){return false;}
         try {

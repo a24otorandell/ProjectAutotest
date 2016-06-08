@@ -38,6 +38,12 @@ public class AT2BOOSA1002Data {
         data.put("header_baby","0");
         data.put("header_pax_name","Federico");
         data.put("header_valuation","Booking");
+        data.put("booking_remmarks","Testing random data");
+        data.put("hotel_startdate",DataGenerator.getToday());
+        data.put("hotel_night","5");
+        data.put("hotel_name","CAPDEMAR");
+        data.put("room_name","1BS");
+        data.put("char_name","1BS");
 
 
 

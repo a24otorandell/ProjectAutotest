@@ -144,19 +144,18 @@ public class DataGenerator {
 
     /**
      * This method generates and returns a String referent to the date of today
-     * @param driver this class manages all the information referent to the current test.
      * @return String that represents the date of today
      */
-    public static String getToday(TestDriver driver){
+    public static String getToday(){
         String today="";
         try{
+            Date testdate = new Date();
             DateFormat myformat = new SimpleDateFormat("dd/MM/yyyy");
-            today = myformat.format(driver.getTestdate().getTime());
+            today = myformat.format(testdate.getTime());
         }
         catch(Exception e){
             String ecode = "--ERROR:getToday(): An unexpected error has ocurred, please check.";
             e.printStackTrace();
-            ErrorManager.process(driver, ecode);
         }
 
         return today;
