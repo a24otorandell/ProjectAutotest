@@ -44,6 +44,10 @@ public class AT2BOOSA1002Data {
         data.put("hotel_name","CAPDEMAR");
         data.put("room_name","1BS");
         data.put("char_name","1BS");
+        data.put("hotel_fixinfo_phone","971971971");
+        data.put("hotel_fixinfo_mail","anemail@adomain.none");
+        data.put("hotel_fixinfo_comment","Testing some stuff");
+        data.put("transfer_date",DataGenerator.getToday());
 
 
 

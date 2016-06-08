@@ -365,7 +365,7 @@ return true;
         String[] glass = {"glass", recursiveXPaths.glass};
         if(!checkClick(driver, b_actions, b_audit, where)){return false;}
         if(!checkClick(driver, b_audit, glass, where)){return false;}
-        //screenshot(driver);
+        screenshot(driver);
         if(!checkClickByAbsence(driver, b_ok, glass, where)){return false;}
         driver.getReport().addContent("","br","");
         return true;
