@@ -66,6 +66,151 @@ class AT2BOOSA1002Test {
         if(!create_remarks(driver)){return false;}
         if(!hotel(driver)){return false;}
         if(!transfers(driver)){return false;}
+        if(!activities(driver)){return false;}
+
+        return true;
+    }
+
+    private boolean activities(TestDriver driver) {
+        if(!Functions.simpleClick(driver,
+                new String[]{"activities_tab_tab", getElements("activities_tab_tab")}, //element to click
+                " on BOOSA1002 Activities")){return false;} // where the operation occurs
+        if(!create_activites(driver)){return false;}
+        //TODO EDITION
+        if(!query_activites(driver)){return false;}
+       // if(!actions_activites(driver)){return false;}
+
+
+        return true;
+    }
+
+    private boolean query_activites(TestDriver driver) {
+
+        if(!Functions.clickQbE(driver,
+                new String[]{"activities_b_query", getElements("activities_b_query")}, //element to click
+                new String[]{"activities_b_query_i_service", getElements("activities_b_query_i_service")}, //element expected to appear
+                " on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_startdate",getElements("activities_b_query_i_startdate")},
+                "activities_startdate", getData("activities_startdate")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_enddate",getElements("activities_b_query_i_enddate")},
+                "activities_enddate", getData("activities_enddate")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_service",getElements("activities_b_query_i_service")},
+                "activities_service", getData("activities_service")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_modality",getElements("activities_b_query_i_modality")},
+                "activities_modality", getData("activities_modality")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_contract",getElements("activities_b_query_i_contract")},
+                "activities_contract", getData("activities_contract")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_supplier",getElements("activities_b_query_i_supplier")},
+                "activities_supplier", getData("activities_supplier")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_origin",getElements("activities_b_query_i_origin")},
+                "activities_origin", getData("activities_origin")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_destination",getElements("activities_b_query_i_destination")},
+                "activities_destination", getData("activities_destination")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_adults",getElements("activities_b_query_i_adults")},
+                "activities_adults", getData("activities_adults")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_query_i_children",getElements("activities_b_query_i_children")},
+                "activities_children", getData("activities_children")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"activities_b_query_i_children", getElements("activities_b_query_i_children")}, //any query input
+                new String[]{"activities_e_result", getElements("activities_e_result")}, //table result
+                "where")){return false;} // where this operation occurs
+
+        return true;
+    }
+
+    private boolean create_activites(TestDriver driver) {
+
+        if(!Functions.checkClick(driver,
+                new String[]{"activities_b_add", getElements("activities_b_add")}, //element to click
+                new String[]{"glass", recursiveXPaths.glass}, //element expected to appear
+                " on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.selectText(driver,
+                new String[]{"activities_b_add_select_activity",getElements("activities_b_add_select_activity")},
+                "Car hire",
+                "activities_activity",
+                " on BOOSA1002 Activities")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"activities_b_add_select_i_startdate",getElements("activities_b_add_select_i_startdate")},
+                "activities_startdate", getData("activities_startdate")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_add_select_i_enddate",getElements("activities_b_add_select_i_enddate")},
+                "activities_enddate", getData("activities_enddate")," on BOOSA1002 Activities")){return false;}
+
+        if(!Functions.createLov(driver,
+                new String[]{"activities_b_add_select_lov_service",getElements("activities_b_add_select_lov_service")}, // b_lov
+                new String[]{"activities_b_add_select_i_service", getElements("activities_b_add_select_i_service")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "activities_service", //Data name
+                " on BOOSA1002 Activities")){return false;}
+
+        if(!Functions.createLov(driver,
+                new String[]{"activities_b_add_select_lov_modality",getElements("activities_b_add_select_lov_modality")}, // b_lov
+                new String[]{"activities_b_add_select_i_modality", getElements("activities_b_add_select_i_modality")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "activities_modality", //Data name
+                " on BOOSA1002 Activities")){return false;}
+
+        if(!Functions.createLov(driver,
+                new String[]{"activities_b_add_select_lov_contract",getElements("activities_b_add_select_lov_contract")}, // b_lov
+                new String[]{"activities_b_add_select_i_contract", getElements("activities_b_add_select_i_contract")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "activities_contract", //Data name
+                " on BOOSA1002 Activities")){return false;}
+
+        if(!Functions.createLov(driver,
+                new String[]{"activities_b_add_select_lov_supplier",getElements("activities_b_add_select_lov_supplier")}, // b_lov
+                new String[]{"activities_b_add_select_i_supplier", getElements("activities_b_add_select_i_supplier")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "activities_supplier", //Data name
+                " on BOOSA1002 Activities")){return false;}
+
+        if(!Functions.createLov(driver,
+                new String[]{"activities_b_add_select_lov_origin",getElements("activities_b_add_select_lov_origin")}, // b_lov
+                new String[]{"activities_b_add_select_i_origin", getElements("activities_b_add_select_i_origin")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "activities_origin", //Data name
+                " on BOOSA1002 Activities")){return false;}
+
+        if(!Functions.createLov(driver,
+                new String[]{"activities_b_add_select_lov_destination",getElements("activities_b_add_select_lov_destination")}, // b_lov
+                new String[]{"activities_b_add_select_i_destination", getElements("activities_b_add_select_i_destination")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "activities_destination", //Data name
+                " on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_add_select_i_adults",getElements("activities_b_add_select_i_adults")},
+                "activities_adults", getData("activities_adults")," on BOOSA1002 Activities")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"activities_b_add_select_i_children",getElements("activities_b_add_select_i_children")},
+                "activities_children", getData("activities_children")," on BOOSA1002 Activities")){return false;}
+
+        if(!Functions.checkClickByAbsence(driver,
+                new String[]{"activities_b_add_select_b_save", getElements("activities_b_add_select_b_save")},// query button
+                new String[]{"glass", recursiveXPaths.glass},//any query input
+                " on BOOSA1002 Activities")){return false;} // where the operation occurs
 
         return true;
     }
@@ -76,10 +221,17 @@ class AT2BOOSA1002Test {
                 " on BOOSA1002 Transfer")){return false;} // where the operation occurs
         if(!create_transfer(driver)){return false;}
         if(!query_transfer(driver)){return false;}
+        if(!actions_transfer(driver)){return false;}
         //edit
         //TODO
 
 
+        return true;
+    }
+
+    private boolean actions_transfer(TestDriver driver) {
+
+        //TODO
         return true;
     }
 

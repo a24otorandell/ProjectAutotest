@@ -226,6 +226,63 @@ public class AT2BOOSA1002Locators {
         elements.put("transfer_b_query_i_rep", "//*[contains(@id, '_afr_1_afr_pc1_afr_t1_afr_c18::content')]");
 
 
+        //ACTIVITIES TAB
+
+        elements.put("activities_tab_tab", "//*[contains(@id, 'pt1:dyntdc:r1:1:image1')]/a");
+        //toolbar
+        elements.put("activities_b_save", "//*[contains(@id, '1:pc1:pcgt1:boton_commit')]");
+        elements.put("activities_b_add", "//*[contains(@id, '1:pc1:pcgt1:boton_add')]");
+        elements.put("activities_b_remove", "//*[contains(@id, '1:pc1:pcgt1:boton_remove')]");
+        elements.put("activities_b_edit", "//*[contains(@id, '1:pc1:pcgt1:boton_edit')]");
+        elements.put("activities_b_actions", "//*[contains(@id, '1:pc1:pcgm12:dc_m1')]/div/table/tbody/tr/td[3]");
+        elements.put("activities_b_fixinfo", "//*[contains(@id, '1:pc1:ctb1::icon')]");
+        elements.put("activities_b_notification", "//*[contains(@id, '1:pc1:ctb1::icon')]");
+        elements.put("activities_b_query", "//*[contains(@id, '1:pc1:_qbeTbr')]");
+
+        //ADD
+        elements.put("activities_b_add_select_activity", "//*[contains(@id, 'pc1:pcgt1:soc4::content')]");
+        elements.put("activities_b_add_b_save", "//*[contains(@id, 'pc1:pcgt1:soc4::content')]");
+
+        //Creation
+        elements.put("activities_b_add_select_i_activity2", "//*[contains(@id, 'pc1:pcgt1:soc4::content')]");
+        elements.put("activities_b_add_select_i_startdate", "//*[contains(@id, '1:pc1:pcgt1:id38::content')]");
+        elements.put("activities_b_add_select_i_enddate", "//*[contains(@id, 'pc1:pcgt1:id27::content')]");
+        elements.put("activities_b_add_select_i_service", "//*[contains(@id, 'pc1:pcgt1:iLOV4::content')]");
+        elements.put("activities_b_add_select_lov_service", "//*[contains(@id, 'pc1:pcgt1:iLOV4::lovIconId')]");
+        elements.put("activities_b_add_select_i_modality", "//*[contains(@id, 'pc1:pcgt1:iLOV3::content')]");
+        elements.put("activities_b_add_select_lov_modality", "//*[contains(@id, 'pc1:pcgt1:iLOV3::lovIconId')]");
+        elements.put("activities_b_add_select_i_contract", "//*[contains(@id, 'pc1:pcgt1:iLOV10::content')]");
+        elements.put("activities_b_add_select_lov_contract", "//*[contains(@id, 'pc1:pcgt1:iLOV10::lovIconId')]");
+        elements.put("activities_b_add_select_i_supplier", "//*[contains(@id, 'pc1:pcgt1:iLOV14::content')]");
+        elements.put("activities_b_add_select_lov_supplier", "//*[contains(@id, 'pc1:pcgt1:iLOV14::lovIconId')]");
+        elements.put("activities_b_add_select_i_origin", "//*[contains(@id, 'pc1:pcgt1:iLOV12::content')]");
+        elements.put("activities_b_add_select_lov_origin", "//*[contains(@id, 'pc1:pcgt1:iLOV12::lovIconId')]");
+        elements.put("activities_b_add_select_i_destination", "//*[contains(@id, 'pc1:pcgt1:ilov1::content')]");
+        elements.put("activities_b_add_select_lov_destination", "//*[contains(@id, 'pc1:pcgt1:ilov1::lovIconId')]");
+        elements.put("activities_b_add_select_i_destination", "//*[contains(@id, 'pc1:pcgt1:iLOV1::content')]");
+        elements.put("activities_b_add_select_lov_destination", "//*[contains(@id, 'pc1:pcgt1:iLOV1::lovIconId')]");
+        elements.put("activities_b_add_select_i_adults", "//*[contains(@id, 'pc1:pcgt1:it72::content')]");
+        elements.put("activities_b_add_select_i_children", "//*[contains(@id, 'pc1:pcgt1:it113::content')]");
+        elements.put("activities_b_add_select_b_save", "//*[contains(@id, 'pc1:pcgt1:btn_commitExit')]");
+
+        //query
+        elements.put("activities_b_query_i_service", "//*[contains(@id, '1_afr_pc1_afr_tAct1_afr_c10::content')]");
+        elements.put("activities_b_query_i_startdate", "//*[contains(@id, 'pc1:tAct1:id23::content')]");
+        elements.put("activities_b_query_i_enddate", "//*[contains(@id, 'pc1:tAct1:id2::content')]");
+        elements.put("activities_b_query_i_service", "//*[contains(@id, '_pc1_afr_tAct1_afr_c24::content')]");
+        elements.put("activities_b_query_i_modality", "//*[contains(@id, '_pc1_afr_tAct1_afr_c23::content')]");
+        elements.put("activities_b_query_i_contract", "//*[contains(@id, '_1_afr_pc1_afr_tAct1_afr_c25::content')]");
+        elements.put("activities_b_query_i_supplier", "//*[contains(@id, '1_afr_pc1_afr_tAct1_afr_c41::content')]");
+        elements.put("activities_b_query_i_origin", "//*[contains(@id, '_1_afr_pc1_afr_tAct1_afr_c64::content')]");
+        elements.put("activities_b_query_i_destination", "//*[contains(@id, '_afr_1_afr_pc1_afr_tAct1_afr_c7::content')]");
+        elements.put("activities_b_query_i_adults", "//*[contains(@id, '_1_afr_pc1_afr_tAct1_afr_c34::content')]");
+        elements.put("activities_b_query_i_children", "//*[contains(@id, '_afr_1_afr_pc1_afr_tAct1_afr_c17::content')]");
+
+        //result
+        elements.put("activities_e_result", "//*[contains(@id, '---')]");
+
+        //Actions
+        elements.put("activities_b_query_i_children", "//*[contains(@id, '_afr_1_afr_pc1_afr_tAct1_afr_c17::content')]");
 
 
 

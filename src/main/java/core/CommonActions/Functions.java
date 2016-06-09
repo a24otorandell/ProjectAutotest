@@ -273,8 +273,8 @@ return true;
     public static boolean insertInput(TestDriver driver, String path[], String data_name, String value, String where) {
         //HOW TO CALL THIS METHOD:
         /*
-        if (!Functions.insertInput(driver, new String[]{"inputname",elements.get("inputvalue")},
-                "dataname", datavalue," where")){return false;}
+        if (!Functions.insertInput(driver, new String[]{"inputname",getElements("inputvalue")},
+                "dataname", getData("")," where")){return false;}
         */
         driver.getReport().addContent("Insert Input:","h5","");
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);

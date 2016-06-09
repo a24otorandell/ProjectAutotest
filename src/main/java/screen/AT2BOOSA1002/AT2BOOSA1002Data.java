@@ -48,6 +48,7 @@ public class AT2BOOSA1002Data {
         data.put("hotel_fixinfo_mail","anemail@adomain.none");
         data.put("hotel_fixinfo_comment","Testing some stuff");
         data.put("transfer_date",DataGenerator.getToday());
+        data.put("activities_startdate",DataGenerator.getToday());
 
 
 

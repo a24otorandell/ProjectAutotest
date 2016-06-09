@@ -38,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="226" column="70" selection-start-line="223" selection-start-column="10" selection-end-line="226" selection-end-column="70" />
+              <caret line="539" column="71" selection-start-line="536" selection-start-column="10" selection-end-line="539" selection-end-column="71" />
               <folding>
                 <element signature="docComment;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#simpleClick#0;class#Functions#0" expanded="false" />
@@ -54,7 +54,6 @@
                 <element signature="docComment;method#zoomIn#0;class#Functions#0" expanded="false" />
                 <element signature="method#zoomIn#0;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#checkExistence#0;class#Functions#0" expanded="false" />
-                <element signature="method#checkExistence#0;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#findElement#0;class#Functions#0" expanded="false" />
               </folding>
             </state>
@@ -65,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Locators.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="209" column="45" selection-start-line="209" selection-start-column="22" selection-end-line="209" selection-end-column="45" />
+              <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,13 +73,16 @@
       <file leaf-file-name="AT2BOOSA1002Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3323217">
-              <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.41426402">
+              <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
               <folding>
                 <element signature="method#start#0;class#AT2BOOSA1002Test#0" expanded="false" />
                 <element signature="method#setScreenInfo#0;class#AT2BOOSA1002Test#0" expanded="false" />
                 <element signature="method#putData#0;class#AT2BOOSA1002Test#0" expanded="false" />
-                <element signature="method#testCSED#0;class#AT2BOOSA1002Test#0" expanded="false" />
+                <element signature="method#query_activites#0;class#AT2BOOSA1002Test#0" expanded="false" />
+                <element signature="method#create_activites#0;class#AT2BOOSA1002Test#0" expanded="false" />
+                <element signature="method#query_transfer#0;class#AT2BOOSA1002Test#0" expanded="false" />
+                <element signature="method#create_transfer#0;class#AT2BOOSA1002Test#0" expanded="false" />
                 <element signature="method#hotel#0;class#AT2BOOSA1002Test#0" expanded="false" />
                 <element signature="method#hotel_actions#0;class#AT2BOOSA1002Test#0" expanded="false" />
                 <element signature="method#service_notifications#0;class#AT2BOOSA1002Test#0" expanded="false" />
@@ -116,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Data.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+              <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -1041,7 +1043,13 @@
       <option name="project" value="LOCAL" />
       <updated>1465373644747</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="AT2BOOSA1002 WIP">
+      <created>1465386096494</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1465386096494</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1059,12 +1067,11 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32123655" sideWeight="0.4974293" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32123655" sideWeight="0.5025707" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2679083" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0867347" sideWeight="0.48971722" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4704301" sideWeight="0.48971722" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18839541" sideWeight="0.49489796" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36053985" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1072,6 +1079,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34169054" sideWeight="0.50510204" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32123655" sideWeight="0.4974293" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="PMD" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1180,13 +1188,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java</url>
-          <line>449</line>
+          <line>601</line>
           <properties />
           <option name="timeStamp" value="536" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java</url>
-          <line>69</line>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="538" />
         </line-breakpoint>
@@ -1543,54 +1551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#57201#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#6390#6391#0" expanded="false" />
-            <element signature="e#6438#6439#0" expanded="false" />
-            <element signature="e#6844#6845#0" expanded="false" />
-            <element signature="e#6875#6876#0" expanded="false" />
-            <element signature="e#7577#7578#0" expanded="false" />
-            <element signature="e#7625#7626#0" expanded="false" />
-            <element signature="e#8526#8527#0" expanded="false" />
-            <element signature="e#8578#8579#0" expanded="false" />
-            <element signature="e#10720#10721#0" expanded="false" />
-            <element signature="e#10750#10751#0" expanded="false" />
-            <element signature="e#28620#28621#0" expanded="false" />
-            <element signature="e#28671#28672#0" expanded="false" />
-            <element signature="e#29442#29443#0" expanded="false" />
-            <element signature="e#29506#29507#0" expanded="false" />
-            <element signature="e#30042#30043#0" expanded="false" />
-            <element signature="e#30120#30121#0" expanded="false" />
-            <element signature="e#31971#31972#0" expanded="false" />
-            <element signature="e#32021#32022#0" expanded="false" />
-            <element signature="e#32819#32820#0" expanded="false" />
-            <element signature="e#32872#32873#0" expanded="false" />
-            <element signature="e#33584#33585#0" expanded="false" />
-            <element signature="e#33655#33656#0" expanded="false" />
-            <element signature="e#34244#34245#0" expanded="false" />
-            <element signature="e#34289#34290#0" expanded="false" />
-            <element signature="e#34885#34886#0" expanded="false" />
-            <element signature="e#34934#34935#0" expanded="false" />
-            <element signature="e#35418#35419#0" expanded="false" />
-            <element signature="e#35465#35466#0" expanded="false" />
-            <element signature="e#36078#36079#0" expanded="false" />
-            <element signature="e#36131#36132#0" expanded="false" />
-            <element signature="e#36717#36718#0" expanded="false" />
-            <element signature="e#36764#36765#0" expanded="false" />
-            <element signature="e#37365#37366#0" expanded="false" />
-            <element signature="e#37418#37419#0" expanded="false" />
-            <element signature="e#37718#37719#0" expanded="false" />
-            <element signature="e#37754#37755#0" expanded="false" />
-            <element signature="e#38710#38711#0" expanded="false" />
-            <element signature="e#38770#38771#0" expanded="false" />
-            <element signature="e#39232#39233#0" expanded="false" />
-            <element signature="e#39292#39293#0" expanded="false" />
-            <element signature="e#39988#39989#0" expanded="false" />
-            <element signature="e#40069#40070#0" expanded="false" />
-            <element signature="e#57143#57144#0" expanded="false" />
-            <element signature="e#57197#57198#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1613,7 +1573,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
+          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1621,7 +1581,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="226" column="70" selection-start-line="223" selection-start-column="10" selection-end-line="226" selection-end-column="70" />
+          <caret line="539" column="71" selection-start-line="536" selection-start-column="10" selection-end-line="539" selection-end-column="71" />
           <folding>
             <element signature="docComment;class#Functions#0" expanded="false" />
             <element signature="docComment;method#simpleClick#0;class#Functions#0" expanded="false" />
@@ -1637,7 +1597,6 @@
             <element signature="docComment;method#zoomIn#0;class#Functions#0" expanded="false" />
             <element signature="method#zoomIn#0;class#Functions#0" expanded="false" />
             <element signature="docComment;method#checkExistence#0;class#Functions#0" expanded="false" />
-            <element signature="method#checkExistence#0;class#Functions#0" expanded="false" />
             <element signature="docComment;method#findElement#0;class#Functions#0" expanded="false" />
           </folding>
         </state>
@@ -1646,20 +1605,23 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="209" column="45" selection-start-line="209" selection-start-column="22" selection-end-line="209" selection-end-column="45" />
+          <caret line="285" column="0" selection-start-line="285" selection-start-column="0" selection-end-line="285" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3323217">
-          <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.41426402">
+          <caret line="80" column="9" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="9" />
           <folding>
             <element signature="method#start#0;class#AT2BOOSA1002Test#0" expanded="false" />
             <element signature="method#setScreenInfo#0;class#AT2BOOSA1002Test#0" expanded="false" />
             <element signature="method#putData#0;class#AT2BOOSA1002Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2BOOSA1002Test#0" expanded="false" />
+            <element signature="method#query_activites#0;class#AT2BOOSA1002Test#0" expanded="false" />
+            <element signature="method#create_activites#0;class#AT2BOOSA1002Test#0" expanded="false" />
+            <element signature="method#query_transfer#0;class#AT2BOOSA1002Test#0" expanded="false" />
+            <element signature="method#create_transfer#0;class#AT2BOOSA1002Test#0" expanded="false" />
             <element signature="method#hotel#0;class#AT2BOOSA1002Test#0" expanded="false" />
             <element signature="method#hotel_actions#0;class#AT2BOOSA1002Test#0" expanded="false" />
             <element signature="method#service_notifications#0;class#AT2BOOSA1002Test#0" expanded="false" />
