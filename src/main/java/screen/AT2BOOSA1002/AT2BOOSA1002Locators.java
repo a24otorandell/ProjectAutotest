@@ -282,11 +282,130 @@ public class AT2BOOSA1002Locators {
         elements.put("activities_e_result", "//*[contains(@id, '---')]");
 
         //Actions
-        elements.put("activities_b_query_i_children", "//*[contains(@id, '_afr_1_afr_pc1_afr_tAct1_afr_c17::content')]");
+        elements.put("activities_b_actions", "//*[contains(@id, '1:pc1:pcgm12:dc_m1')]/div/table/tbody/tr/td[3]");
+        elements.put("activities_b_actions_b_audit", "//*[contains(@id, '1:pc1:pdm12:dc_cmi3')]/td[2]");
 
 
+        //Extra
+        elements.put("extra_tab_tab", "//*[contains(@id, 'pt1:dyntdc:r1:1:image2']/a");
+
+        //toolbar
+        elements.put("extra_b_save", "//*[contains(@id, '1:pc1:pcgt12:boton_commit')]");
+        elements.put("extra_b_add", "//*[contains(@id, '1:pc1:pcgt12:boton_add')]");
+        elements.put("extra_b_remove", "//*[contains(@id, '1:pc1:pcgt12:boton_remove')]");
+        elements.put("extra_b_edit", "//*[contains(@id, '1:pc1:pcgt12:boton_edit')]");
+        elements.put("extra_b_actions", "//*[contains(@id, 'pc1:pcgm1:dc_m1')]/div/table/tbody/tr/td[3]");
+        elements.put("extra_b_fixinfo", "//*[contains(@id, '1:pc1:ctb1::icon')]");
+        elements.put("extra_b_query", "//*[contains(@id, '1:pc1:_qbeTbr')]");
+
+        //ADD
+        elements.put("extra_b_add_i_startdate", "//*[contains(@id, 'pc1:pcgt12:id4::content')]");
+        elements.put("extra_b_add_lov_extra", "//*[contains(@id, '1:pc1:pcgt12:ilov1::lovIconId')]");
+        elements.put("extra_b_add_i_extra", "//*[contains(@id, '1:pc1:pcgt12:ilov1::content')]");
+        elements.put("extra_b_add_lov_supplier", "//*[contains(@id, '1:pc1:pcgt12:ilov3::content')]");
+        elements.put("extra_b_add_i_supplier", "//*[contains(@id, 'pc1:pcgt12:ilov3::lovIconId')]");
+        elements.put("extra_b_add_i_units", "//*[contains(@id, '1:pc1:pcgt12:it16::content')]");
+        elements.put("extra_b_add_i_adults", "//*[contains(@id, '1:pc1:pcgt12:it17::content')]");
+        elements.put("extra_b_add_i_childs", "//*[contains(@id, '1:pc1:pcgt12:it18::content')]");
+        elements.put("extra_b_add_select_pax", "//*[contains(@id, '1:pc1:pcgt12:soc3::content')]");
+        elements.put("extra_b_add_select_type", "//*[contains(@id, '1:pc1:pcgt12:soc4::content')]");
+        elements.put("extra_b_add_i_costperunit", "//*[contains(@id, '1:pc1:pcgt12:it21::content')]");
+        elements.put("extra_b_add_lov_currency", "//*[contains(@id, '1:pc1:pcgt12:ilov11::content')]");
+        elements.put("extra_b_add_i_currency", "//*[contains(@id, '1:pc1:pcgt12:ilov11::lovIconId')]");
+        elements.put("extra_b_add_i_saleperunit", "//*[contains(@id, '1:pc1:pcgt12:it25::content')]");
+        elements.put("extra_b_add_lov_officeproduct", "//*[contains(@id, '1:pc1:pcgt12:ilov4::lovIconId')]");
+        elements.put("extra_b_add_i_officeproduct", "//*[contains(@id, '1:pc1:pcgt12:ilov4::content')]");
+        elements.put("extra_b_add_lov_product", "//*[contains(@id, '1:pc1:pcgt12:ilov5::lovIconId')]");
+        elements.put("extra_b_add_i_product", "//*[contains(@id, '1:pc1:pcgt12:ilov5::content')]");
+        elements.put("extra_b_add_b_save", "//*[contains(@id, '1:pc1:pcgt12:btn_commitExit')]");
+
+        //QUERY
+        elements.put("extra_b_query_i_startdate", "//*[contains(@id, '1:pc1:tExtras:id9::content')]");
+        elements.put("extra_b_query_i_extra", "//*[contains(@id, '1_afr_pc1_afr_tExtras_afr_c4::content')]");
+        elements.put("extra_b_query_i_supplier", "//*[contains(@id, '1_afr_pc1_afr_tExtras_afr_c20::content')]");
+        elements.put("extra_b_query_i_units", "//*[contains(@id, '_afr_pc1_afr_tExtras_afr_c7::content')]");
+        elements.put("extra_b_query_i_adults", "//*[contains(@id, '1_afr_pc1_afr_tExtras_afr_c8::content')]");
+        elements.put("extra_b_query_i_childs", "//*[contains(@id, 'afr_1_afr_pc1_afr_tExtras_afr_c9::content')]");
+        elements.put("extra_b_query_select_pax", "//*[contains(@id, '1:pc1:tExtras:soc1::content')]");
+        elements.put("extra_b_query_select_type", "//*[contains(@id, 'pc1:tExtras:soc6::content')]");
+        elements.put("extra_b_query_i_costperunit", "//*[contains(@id, '_afr_1_afr_pc1_afr_tExtras_afr_c15::content')]");
+        elements.put("extra_b_query_i_currency", "//*[contains(@id, 'afr_1_afr_pc1_afr_tExtras_afr_c17::content')]");
+        elements.put("extra_b_query_i_saleperunit", "//*[contains(@id, '_afr_1_afr_pc1_afr_tExtras_afr_c16::content')]");
+
+        //ACTIONS
+        elements.put("extra_b_actions_b_audit", "//*[contains(@id, '1:pc1:pcgm1:dc_cmi1')]/td[2]");
+
+        //REMARKS
+        elements.put("extra_remmarks_internal_b_edit", "//*[contains(@id, '0:pcgt1:boton_edit')]");
+        elements.put("extra_remmarks_internal_b_save", "//*[contains(@id, '0:pcgt1:boton_commit')]");
+        elements.put("extra_remmarks_internal_b_edit_i_internal", "//*[contains(@id, '0:it3::content')]");
+        elements.put("extra_remmarks_internal_b_edit_b_save", "//*[contains(@id, '0:pcgt3:boton_commit')]");
+
+        elements.put("extra_remmarks_voucher_b_edit", "//*[contains(@id, '0:pcgt2:boton_edit')]");
+        elements.put("extra_remmarks_voucher_b_save", "//*[contains(@id, '0:pcgt2:boton_commit')]");
+        elements.put("extra_remmarks_voucher_b_edit_i_internal", "//*[contains(@id, '0:it5::content')]");
+        elements.put("extra_remmarks_voucher_b_edit_b_save", "//*[contains(@id, '0:pcgt3:boton_commit')]");
 
 
+        //FEES AND DISCOUNTS TABL
+        elements.put("extra_tab_tab", "//*[contains(@id, 'pt1:dyntdc:r1:1:image2']/a");
 
+        //toolbar
+        elements.put("fees_b_save", "//*[contains(@id, '1:pc1:pcgt12:boton_commit')]");
+        elements.put("fees_b_add", "//*[contains(@id, '1:pc1:pcgt12:boton_add')]");
+        elements.put("fees_b_remove", "//*[contains(@id, '1:pc1:pcgt12:boton_remove')]");
+        elements.put("fees_b_edit", "//*[contains(@id, '1:pc1:pcgt12:boton_edit')]");
+        elements.put("fees_b_actions", "//*[contains(@id, 'pc1:pcgm1:dc_m1')]/div/table/tbody/tr/td[3]");
+        elements.put("fees_b_fixinfo", "//*[contains(@id, '1:pc1:ctb1::icon')]");
+        elements.put("fees_b_query", "//*[contains(@id, '1:pc1:_qbeTbr')]");
+
+    //ADD
+
+        elements.put("fees_b_add_i_startdate", "//*[contains(@id, 'pc1:pcgt12:id4::content')]");
+        elements.put("fees_b_add_lov_extra", "//*[contains(@id, '1:pc1:pcgt12:ilov1::lovIconId')]");
+        elements.put("fees_b_add_i_extra", "//*[contains(@id, '1:pc1:pcgt12:ilov1::content')]");
+        elements.put("fees_b_add_lov_supplier", "//*[contains(@id, '1:pc1:pcgt12:ilov3::content')]");
+        elements.put("fees_b_add_i_supplier", "//*[contains(@id, 'pc1:pcgt12:ilov3::lovIconId')]");
+        elements.put("fees_b_add_i_units", "//*[contains(@id, '1:pc1:pcgt12:it16::content')]");
+        elements.put("fees_b_add_i_adults", "//*[contains(@id, '1:pc1:pcgt12:it17::content')]");
+        elements.put("fees_b_add_i_childs", "//*[contains(@id, '1:pc1:pcgt12:it18::content')]");
+        elements.put("fees_b_add_select_pax", "//*[contains(@id, '1:pc1:pcgt12:soc3::content')]");
+        elements.put("fees_b_add_select_type", "//*[contains(@id, '1:pc1:pcgt12:soc4::content')]");
+        elements.put("fees_b_add_i_costperunit", "//*[contains(@id, '1:pc1:pcgt12:it21::content')]");
+        elements.put("fees_b_add_lov_currency", "//*[contains(@id, '1:pc1:pcgt12:ilov11::content')]");
+        elements.put("fees_b_add_i_currency", "//*[contains(@id, '1:pc1:pcgt12:ilov11::lovIconId')]");
+        elements.put("fees_b_add_i_saleperunit", "//*[contains(@id, '1:pc1:pcgt12:it25::content')]");
+        elements.put("fees_b_add_lov_officeproduct", "//*[contains(@id, '1:pc1:pcgt12:ilov4::lovIconId')]");
+        elements.put("fees_b_add_i_officeproduct", "//*[contains(@id, '1:pc1:pcgt12:ilov4::content')]");
+        elements.put("fees_b_add_lov_product", "//*[contains(@id, '1:pc1:pcgt12:ilov5::lovIconId')]");
+        elements.put("fees_b_add_i_product", "//*[contains(@id, '1:pc1:pcgt12:ilov5::content')]");
+        elements.put("fees_b_add_b_save", "//*[contains(@id, '1:pc1:pcgt12:btn_commitExit')]");
+
+        //QUERY
+        elements.put("fees_b_query_i_startdate", "//*[contains(@id, '1:pc1:tExtras:id9::content')]");
+        elements.put("fees_b_query_i_extra", "//*[contains(@id, '1_afr_pc1_afr_tExtras_afr_c4::content')]");
+        elements.put("fees_b_query_i_supplier", "//*[contains(@id, '1_afr_pc1_afr_tExtras_afr_c20::content')]");
+        elements.put("fees_b_query_i_units", "//*[contains(@id, '_afr_pc1_afr_tExtras_afr_c7::content')]");
+        elements.put("fees_b_query_i_adults", "//*[contains(@id, '1_afr_pc1_afr_tExtras_afr_c8::content')]");
+        elements.put("fees_b_query_i_childs", "//*[contains(@id, 'afr_1_afr_pc1_afr_tExtras_afr_c9::content')]");
+        elements.put("fees_b_query_select_pax", "//*[contains(@id, '1:pc1:tExtras:soc1::content')]");
+        elements.put("fees_b_query_select_type", "//*[contains(@id, 'pc1:tExtras:soc6::content')]");
+        elements.put("fees_b_query_i_costperunit", "//*[contains(@id, '_afr_1_afr_pc1_afr_tExtras_afr_c15::content')]");
+        elements.put("fees_b_query_i_currency", "//*[contains(@id, 'afr_1_afr_pc1_afr_tExtras_afr_c17::content')]");
+        elements.put("fees_b_query_i_saleperunit", "//*[contains(@id, '_afr_1_afr_pc1_afr_tExtras_afr_c16::content')]");
+
+        //ACTIONS
+        elements.put("fees_b_actions_b_audit", "//*[contains(@id, '1:pc1:pcgm1:dc_cmi1')]/td[2]");
+
+        //REMARKS
+        elements.put("fees_remmarks_internal_b_edit", "//*[contains(@id, '0:pcgt1:boton_edit')]");
+        elements.put("fees_remmarks_internal_b_save", "//*[contains(@id, '0:pcgt1:boton_commit')]");
+        elements.put("fees_remmarks_internal_b_edit_i_internal", "//*[contains(@id, '0:it3::content')]");
+        elements.put("fees_remmarks_internal_b_edit_b_save", "//*[contains(@id, '0:pcgt3:boton_commit')]");
+
+        elements.put("fees_remmarks_voucher_b_edit", "//*[contains(@id, '0:pcgt2:boton_edit')]");
+        elements.put("fees_remmarks_voucher_b_save", "//*[contains(@id, '0:pcgt2:boton_commit')]");
+        elements.put("fees_remmarks_voucher_b_edit_i_internal", "//*[contains(@id, '0:it5::content')]");
+        elements.put("fees_remmarks_voucher_b_edit_b_save", "//*[contains(@id, '0:pcgt3:boton_commit')]");
     }
 }

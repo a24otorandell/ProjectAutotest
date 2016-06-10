@@ -565,9 +565,7 @@ return true;
         //HOW TO CALL THIS METHOD
         /*if (!Functions.selectText(driver,
                 new String[]{"x",getElements("x")},
-                "content",
-                "dataname",
-                " where")){return false;}*/
+                "content", "dataname", " where")){return false;}*/
         boolean found = false;
         Select e_select;
         List<WebElement> options = null;
