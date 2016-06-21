@@ -60,10 +60,10 @@ public class AT2ACCDI0003Test {
            if(!getBookingProcedure(driver)){return false;}
            if(!goToScreen(driver)){return false;}
            if(!search(driver)){return false;}
-        //   if(!edit){return false;} // NOT IMPLEMENTED
+        // TODO  if(!edit){return false;} // NOT IMPLEMENTED
            if(!query(driver)){return false;}
            if(!detachTable(driver)){return false;}
-        //   if(!delete(driver)){return false;} // NOT IMPLEMENTED
+        // TODO  if(!delete(driver)){return false;} // NOT IMPLEMENTED
         return true;
 
     }
