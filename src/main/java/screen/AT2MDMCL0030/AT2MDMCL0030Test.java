@@ -1,6 +1,7 @@
 package screen.AT2MDMCL0030;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
@@ -62,10 +63,16 @@ public class AT2MDMCL0030Test{
         return false;
     }
 
+    /**
+     *
+     * @param driver
+     * @param add
+     * @return
+     */
     protected boolean recordInteraction(TestDriver driver, boolean add) {
 
             if (add) {
-
+driver.getReport().addHeader("RECORD CREATION",3, true);
                 if(!Functions.checkClick(driver,
                         new String[]{"record_interaction_b_add", getElements("record_interaction_b_add")},
                         new String[]{"glass", recursiveXPaths.glass},
