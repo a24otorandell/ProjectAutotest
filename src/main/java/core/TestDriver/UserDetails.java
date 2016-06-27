@@ -25,6 +25,7 @@ public class UserDetails {
 
     public void setUsername(String username) {
         this.username = username;
+        int i = 0;
     }
 
     public String getPassword() {

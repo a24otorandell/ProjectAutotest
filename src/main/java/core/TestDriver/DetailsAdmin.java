@@ -43,24 +43,6 @@ public class DetailsAdmin {
     }
 
     private void setDefaults(DriverDetails driverdetails, TestDetails testdetails, UserDetails userdetails) {
-        if(driverdetails.getBrowser().equals("")){
-            driverdetails.setBrowser("ff");
-        }
-        if(testdetails.getEnvironment().equals("")){
-            testdetails.setEnvironment("test");
-        }
-        if(testdetails.getTestname().equals("")){
-            testdetails.setTestname("AT2MDMCL0030");
-        }
-        if(testdetails.getCsedProcedure().equals("")){
-            testdetails.setCsedProcedure("x");
-        }
-        if(userdetails.getPassword().equals("")){
-            userdetails.setPassword("Forteza2016#");
-        }
-        if(userdetails.getUsername().equals("")){
-            userdetails.setUsername("u_icastaneda");
-        }
 
     }
 
