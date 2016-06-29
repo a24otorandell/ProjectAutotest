@@ -9,15 +9,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java" line="329" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="AT2ACCOP0025 creation">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" afterPath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/FileGestor/DataHarvester.class" afterPath="$PROJECT_DIR$/target/classes/core/FileGestor/DataHarvester.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/FileGestor/ReportFile.class" afterPath="$PROJECT_DIR$/target/classes/core/FileGestor/ReportFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/HTMLReport/AutoReport.class" afterPath="$PROJECT_DIR$/target/classes/core/HTMLReport/AutoReport.class" />
+    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="AT2ACCOP0025 changed and finished">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Data.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Data.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Locators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Manager.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Manager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Test.java" />
     </list>
     <ignored path="ProjectAutotest.iws" />
@@ -89,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Manager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
               <folding>
                 <element signature="e#160#213#0" expanded="true" />
                 <element signature="e#549#550#0" expanded="true" />
@@ -102,15 +95,14 @@
       <file leaf-file-name="AT2ACCOP0025Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45821327">
-              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.30246913">
+              <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#310#363#0" expanded="true" />
                 <element signature="docComment;method#recordInteraction#0;class#AT2ACCOP0025Test#0" expanded="false" />
                 <element signature="method#search#0;class#AT2ACCOP0025Test#0" expanded="false" />
                 <element signature="docComment;method#qbe#0;class#AT2ACCOP0025Test#0" expanded="false" />
-                <element signature="method#qbe#0;class#AT2ACCOP0025Test#0" expanded="false" />
                 <element signature="docComment;method#auditDetach#0;class#AT2ACCOP0025Test#0" expanded="false" />
                 <element signature="method#auditDetach#0;class#AT2ACCOP0025Test#0" expanded="false" />
                 <element signature="docComment;method#delete#0;class#AT2ACCOP0025Test#0" expanded="false" />
@@ -120,50 +112,6 @@
                 <element signature="docComment;method#enabler#0;class#AT2ACCOP0025Test#0" expanded="false" />
                 <element signature="method#enabler#0;class#AT2ACCOP0025Test#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AT2MDMCL0030Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2413793">
-              <caret line="111" column="46" selection-start-line="111" selection-start-column="46" selection-end-line="112" selection-end-column="22" />
-              <folding>
-                <element signature="docComment;method#recordInteraction#0;class#AT2MDMCL0030Test#0" expanded="false" />
-                <element signature="method#delete#0;class#AT2MDMCL0030Test#0" expanded="false" />
-                <element signature="method#enabler#0;class#AT2MDMCL0030Test#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AT2MDMCL0030Data.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Data.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="91" selection-start-line="31" selection-start-column="7" selection-end-line="32" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AT2ACCDI0003Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0003/AT2ACCDI0003Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="45" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AT2MDMOR0028Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0028/AT2MDMOR0028Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="101" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="101" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -755,7 +703,7 @@
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.24482758" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -799,7 +747,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="core.TestDriver.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-t AT2MDMCL0030 -u u_moliver -p Hola1234" />
+      <option name="PROGRAM_PARAMETERS" value="-t AT2ACCOP0025 -u u_moliver -p Hola1234" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -1331,7 +1279,13 @@
       <option name="project" value="LOCAL" />
       <updated>1467116582137</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="AT2ACCOP0025 changed and finished">
+      <created>1467194989316</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1467194989316</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1353,8 +1307,8 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2857143" sideWeight="0.5164756" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2679083" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4674635" sideWeight="0.48971722" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28808865" sideWeight="0.48352435" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.466759" sideWeight="0.48971722" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28808865" sideWeight="0.48352435" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.49713466" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25385603" sideWeight="0.90561223" order="3" side_tool="false" content_ui="combo" />
@@ -1420,7 +1374,8 @@
     <MESSAGE value="AT2ACCDI0003 añadida" />
     <MESSAGE value="AT2BOOSA1002 WIP" />
     <MESSAGE value="AT2ACCOP0025 creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="AT2ACCOP0025 creation" />
+    <MESSAGE value="AT2ACCOP0025 changed and finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="AT2ACCOP0025 changed and finished" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -1502,7 +1457,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="590" />
+      <option name="time" value="591" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1609,13 +1564,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/HTMLReport/AutoReport.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1655,6 +1603,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1782,18 +1731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="20" selection-start-line="48" selection-start-column="20" selection-end-line="48" selection-end-column="20" />
-          <folding>
-            <element signature="e#160#213#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1916,17 +1853,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19596542">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding>
+            <element signature="e#160#213#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45821327">
-          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.30246913">
+          <caret line="177" column="8" selection-start-line="177" selection-start-column="8" selection-end-line="177" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#310#363#0" expanded="true" />
             <element signature="docComment;method#recordInteraction#0;class#AT2ACCOP0025Test#0" expanded="false" />
             <element signature="method#search#0;class#AT2ACCOP0025Test#0" expanded="false" />
             <element signature="docComment;method#qbe#0;class#AT2ACCOP0025Test#0" expanded="false" />
-            <element signature="method#qbe#0;class#AT2ACCOP0025Test#0" expanded="false" />
             <element signature="docComment;method#auditDetach#0;class#AT2ACCOP0025Test#0" expanded="false" />
             <element signature="method#auditDetach#0;class#AT2ACCOP0025Test#0" expanded="false" />
             <element signature="docComment;method#delete#0;class#AT2ACCOP0025Test#0" expanded="false" />

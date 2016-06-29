@@ -282,7 +282,7 @@ public class AT2ACCOP0025Test {
      * @return Boolean
      */
     protected boolean qbe(TestDriver driver) {
-        //Functions.zoomOut(driver);
+        Functions.zoomOut(driver);
         if (!Functions.clickQbE(driver,
                 new String[]{"record_interaction_b_qbe", getElements("record_interaction_b_qbe")},
                 new String[]{"record_interaction_qbe_i_initialDate", getElements("record_interaction_qbe_i_initialDate")},
