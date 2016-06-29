@@ -8,6 +8,7 @@ import java.util.Map;
 /***
  * Created by ajvirgili on 23/06/2016.
  */
+@SuppressWarnings({"unused", "RedundantIfStatement"})
 public class AT2ACCOP0025Manager implements AT2Test {
 
     AT2ACCOP0025Test test;

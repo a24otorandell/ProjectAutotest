@@ -36,15 +36,19 @@ public class AT2ACCOP0025Data {
         data.put("update_end_date", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6, 10), 0));
         data.put("provider", Integer.toString(1));
         data.put("update_provider", Integer.toString(2));
+        data.put("update_provider_description", "World Pay");
         data.put("merchant", "SAIBSA PRUEBA");
         data.put("update_merchant", "prueba55");
+        data.put("update_submerchant", "prueba55");
         data.put("payment_method", "CARD");
         data.put("update_payment_method", "VISA");
+        data.put("update_payment_method_description", "Visa");
         data.put("fix", Integer.toString(DataGenerator.random(1, 10)));
         data.put("update_fix", Integer.toString(DataGenerator.random(1, 10)));
         data.put("percentage", Integer.toString(DataGenerator.random(1, 100)));
         data.put("update_percentage", Integer.toString(DataGenerator.random(1, 100)));
         data.put("currency_fix", "GBP");
         data.put("update_currency_fix", "EUR");
+        data.put("update_currency_fix_description", "Euro");
     }
 }
