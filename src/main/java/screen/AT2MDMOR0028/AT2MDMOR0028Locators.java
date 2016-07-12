@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by otorandell on 08/04/2016.
+ * @author otorandell on 08/04/2016.
  */
 public class AT2MDMOR0028Locators {
 
@@ -13,6 +13,7 @@ public class AT2MDMOR0028Locators {
     public AT2MDMOR0028Locators() {
         setElements();
     }
+
     public Map<String, String> getElements() {
         return elements;
     }

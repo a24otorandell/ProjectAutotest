@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by otorandell on 08/04/2016.
+ * @author otorandell on 08/04/2016.
  */
 public class AT2MDMOR0028Data {
     Map<String, String> data = new HashMap<>();
@@ -24,11 +24,12 @@ public class AT2MDMOR0028Data {
 
     public void setData() {
         this.data = harvester.harvestAll();
-        if(data.get("empty").equals("true")){
+        if (data.get("empty").equals("true")) {
             setDefaultData();
         }
     }
-    public void setDefaultData(){
+
+    public void setDefaultData() {
 
     }
 }

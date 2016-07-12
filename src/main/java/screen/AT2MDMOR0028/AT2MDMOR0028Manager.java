@@ -9,7 +9,7 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * Created by otorandell on 08/04/2016.
+ * @author otorandell on 08/04/2016.
  */
 public class AT2MDMOR0028Manager implements AT2Test {
     AT2MDMOR0028Test test;
@@ -25,19 +25,20 @@ public class AT2MDMOR0028Manager implements AT2Test {
         return procedure;
     }
 
+    public void setProcedure(String[] procedure) {
+        this.procedure = procedure;
+    }
+
     public AT2MDMOR0028Test getTest() {
         return test;
     }
-
-    public Map<String, String> getData() {
-        return this.test.getData().getData();}
 
     public void setTest(AT2MDMOR0028Test test) {
         this.test = test;
     }
 
-    public void setProcedure(String[] procedure) {
-        this.procedure = procedure;
+    public Map<String, String> getData() {
+        return this.test.getData().getData();
     }
 
     public boolean start(TestDriver driver) {
@@ -50,9 +51,9 @@ public class AT2MDMOR0028Manager implements AT2Test {
     }
 
     private boolean csedIteration(TestDriver driver) {
-                if (!getTest().testCSED(driver)) {
-                    return false;
-                }
+        if (!getTest().testCSED(driver)) {
+            return false;
+        }
         return true;
 
     }

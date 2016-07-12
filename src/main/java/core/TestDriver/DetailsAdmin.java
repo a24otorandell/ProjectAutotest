@@ -4,17 +4,29 @@ import core.ConnectionDDBB.ConnectionMSSQL;
 import core.ConnectionDDBB.DDBBInteractions;
 import core.FileGestor.DataHarvester;
 
-import java.util.List;
+//import java.util.List;
 
 /**
- * Created by otorandell on 09/02/2016.
+ * This class consists on determine the specifics parameters to configure the test arrangement
+ *
+ * @author otorandell on 09/02/2016
+ * @author ajvirgili on 01/07/2016
  */
+@SuppressWarnings("unused")
 public class DetailsAdmin {
 
     public DetailsAdmin() {
     }
 
-    public void setAll(DriverDetails driverdetails, TestDetails testdetails, UserDetails userdetails, String[] args){
+    /**
+     * Calls all the other set functions in this class
+     *
+     * @param driverdetails DriverDetails - This object controls the variables of the url enviroment and browser
+     * @param testdetails   TestDetails - This object sets the some of the configuration variables
+     * @param userdetails   Userdetails - This object controls the user variables
+     * @param args          String[] - Arguments of the Main run
+     */
+    public void setAll(DriverDetails driverdetails, TestDetails testdetails, UserDetails userdetails, String[] args) {
         setFileDetails(driverdetails, testdetails, userdetails);
         setArgsDetails(driverdetails, testdetails, userdetails, args);
         setDDBBCredentials(userdetails);
@@ -22,6 +34,12 @@ public class DetailsAdmin {
         setURL(driverdetails, testdetails);
     }
 
+    /**
+     * Sets in which enviroment url will be the test
+     *
+     * @param driverdetails DriverDetails - This object controls the variables of the url enviroment and browser
+     * @param testdetails   TestDetails - This object sets the some of the configuration variables
+     */
     private void setURL(DriverDetails driverdetails, TestDetails testdetails) {
         switch (testdetails.getEnvironment()) {
             case "des":
@@ -42,41 +60,82 @@ public class DetailsAdmin {
         }
     }
 
+    /**
+     * Set which arguments data will be by default if they are not specified
+     *
+     * @param driverdetails DriverDetails - This object controls the variables of the url enviroment and browser
+     * @param testdetails   TestDetails - This object sets the some of the configuration variables
+     * @param userdetails   Userdetails - This object controls the user variables
+     */
     private void setDefaults(DriverDetails driverdetails, TestDetails testdetails, UserDetails userdetails) {
-
+        if (driverdetails.getBrowser().equals("")) {
+            driverdetails.setBrowser("ff");
+        }
+        if (testdetails.getEnvironment().equals("")) {
+            testdetails.setEnvironment("test");
+        }
+        if (testdetails.getCsedProcedure().equals("")) {
+            testdetails.setCsedProcedure("x");
+        }
     }
 
+    /**
+     * Getting the arguments sets the (-e)enviroment, (-br)browser, (-p)password, (-t)test, (-u)user, (-i)issue, (-c)csed
+     * to work with
+     *
+     * @param driverdetails DriverDetails - This object controls the variables of the url enviroment and browser
+     * @param testdetails   TestDetails - This object sets the some of the configuration variables
+     * @param userdetails   Userdetails - This object controls the user variables
+     * @param args          String[] - Arguments of the Main run
+     */
     private void setArgsDetails(DriverDetails driverdetails, TestDetails testdetails, UserDetails userdetails, String[] args) {
         for (int i = 0; i < args.length; i++) {
             if (!(args.length <= (i + 1))) {
-                if (args[i].equals("-e")) {
-                    i++;
-                    testdetails.setEnvironment(args[i].toLowerCase());
-                } else if (args[i].equals("-br")) {
-                    i++;
-                   driverdetails.setBrowser(args[i].toLowerCase());
-                } else if (args[i].equals("-p")) {
-                    i++;
-                    userdetails.setPassword(args[i]);
-                } else if (args[i].equals("-t")) {
-                    i++;
-                    testdetails.setTestname(args[i].toUpperCase());
-                } else if (args[i].equals("-u")) {
-                    i++;
-                    userdetails.setUsername(args[i].toLowerCase());
-                } else if (args[i].equals("-i")) {
-                    i++;
-                    testdetails.setIssue(args[i]);
-                }
-                else if (args[i].equals("-c")) {
-                    i++;
-                    testdetails.setCsedProcedure(args[i]);
+                switch (args[i]) {
+                    case "-e":
+                        i++;
+                        testdetails.setEnvironment(args[i].toLowerCase());
+                        break;
+                    case "-br":
+                        i++;
+                        driverdetails.setBrowser(args[i].toLowerCase());
+                        break;
+                    case "-p":
+                        i++;
+                        userdetails.setPassword(args[i]);
+                        break;
+                    case "-t":
+                        i++;
+                        testdetails.setTestname(args[i].toUpperCase());
+                        break;
+                    case "-u":
+                        i++;
+                        userdetails.setUsername(args[i].toLowerCase());
+                        break;
+                    case "-i":
+                        i++;
+                        testdetails.setIssue(args[i]);
+                        break;
+                    case "-c":
+                        i++;
+                        testdetails.setCsedProcedure(args[i]);
+                        break;
+                    case "":
+                        break;
                 }
             }
         }
     }
 
-    public void setFileDetails(DriverDetails driverdetails, TestDetails testdetails, UserDetails userdetails){
+    /**
+     * Gets the arguments from a file and sets them
+     *
+     * @param driverdetails DriverDetails - This object controls the variables of the url enviroment and browser
+     * @param testdetails   TestDetails - This object sets the some of the configuration variables
+     * @param userdetails   Userdetails - This object controls the user variables
+     * @see DataHarvester
+     */
+    public void setFileDetails(DriverDetails driverdetails, TestDetails testdetails, UserDetails userdetails) {
         String filepath = "C:/AutotestInfo.txt";
         //AS
         DataHarvester harvester = new DataHarvester(filepath);
@@ -89,16 +148,24 @@ public class DetailsAdmin {
         userdetails.setPassword(harvester.harvest("password"));
     }
 
-    public void setDDBBCredentials(UserDetails userdetails){
-        if(userdetails.getUsername().equals("") && userdetails.getPassword().equals("")){
-        ConnectionMSSQL connection = new ConnectionMSSQL();
-        connection.dbConnect("jdbc:jtds:sqlserver://VS-GORGBLAU;databaseName=Testing;", "betatester", "betatester");
-        String[]user = DDBBInteractions.getOptimalUser(connection);
-        userdetails.setUsername(user[0]);
-        userdetails.setPassword(user[1]);
-        DDBBInteractions.updateTable(connection, user[1], 1);
-        userdetails.setDDBBCredentials(true);
-        connection.closeConnection();
+    /**
+     * Connects with a db to obtain an user and a password, and update the value of usage related at that user
+     *
+     * @param userdetails Userdetails - This object controls the user variables
+     * @see ConnectionMSSQL
+     * @see UserDetails
+     * @see DDBBInteractions
+     */
+    public void setDDBBCredentials(UserDetails userdetails) {
+        if (userdetails.getUsername().equals("") && userdetails.getPassword().equals("")) {
+            ConnectionMSSQL connection = new ConnectionMSSQL();
+            connection.dbConnect("jdbc:jtds:sqlserver://VS-GORGBLAU;databaseName=Testing;", "betatester", "betatester");
+            String[] user = DDBBInteractions.getOptimalUser(connection);
+            userdetails.setUsername(user[0]);
+            userdetails.setPassword(user[1]);
+            DDBBInteractions.updateTable(connection, user[1], 1);
+            userdetails.setDDBBCredentials(true);
+            connection.closeConnection();
         }
 
     }

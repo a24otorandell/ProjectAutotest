@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by otorandell on 16/02/2016.
+ * @author otorandell on 16/02/2016.
  */
 public class AT2ACCDI0003Data {
     Map<String, String> data = new HashMap<>();
@@ -24,11 +24,12 @@ public class AT2ACCDI0003Data {
 
     public void setData() {
         this.data = harvester.harvestAll();
-        if(data.get("empty").equals("true")){
+        if (data.get("empty").equals("true")) {
             setDefaultData();
         }
     }
-    public void setDefaultData(){
-        getData().put("booking_creation_date",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0, -1, 0));
+
+    public void setDefaultData() {
+        getData().put("booking_creation_date", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, -1, 0));
     }
 }

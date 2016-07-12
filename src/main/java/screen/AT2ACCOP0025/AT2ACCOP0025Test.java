@@ -6,10 +6,10 @@ import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 import org.openqa.selenium.By;
 
-//import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;
 
-/***
- * Created by ajvirgili on 23/06/2016.
+/**
+ * @author ajvirgili on 23/06/2016.
  */
 @SuppressWarnings({"unused", "RedundantIfStatement"})
 public class AT2ACCOP0025Test {
@@ -57,27 +57,34 @@ public class AT2ACCOP0025Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
-        if (recordInteraction(driver, true)) {
-            if (search(driver)) {
-                if (recordInteraction(driver, false)) {
-                    if (search(driver)) {
-                        if (reset(driver)) {
-                            if (auditDetach(driver)) {
-                                if (qbe(driver)) {
-                                    if (delete(driver)) {
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        if (!recordInteraction(driver, true)) {
+            return false;
+        }
+        if (!search(driver)) {
+            return false;
+        }
+        if (!recordInteraction(driver, false)) {
+            return false;
+        }
+        if (!search(driver)) {
+            return false;
+        }
+        if (!reset(driver)) {
+            return false;
+        }
+        if (!auditDetach(driver)) {
+            return false;
+        }
+        if (!qbe(driver)) {
+            return false;
+        }
+        if (!delete(driver)) {
+            return false;
         }
         return false;
     }
 
-    /***
+    /**
      * @param driver TestDriver
      * @param type   boolean que controla el flujo inicial para saber si creamos o modificamos el registro
      * @return Boolean
@@ -89,15 +96,16 @@ public class AT2ACCOP0025Test {
             driver.getReport().addHeader("RECORD CREATION", 3, true);
             if (!Functions.checkClick(driver,
                     new String[]{"record_interaction_b_add", getElements("record_interaction_b_add")},
-                    new String[]{"glass", recursiveXPaths.glass}, "")) {
+                    recursiveXPaths.glass, "")) {
                 return false;
             }
         } else {
             update = "update_";
             on = "on EDIT";
+            driver.getReport().addHeader("RECORD EDITION:", 3, true);
             if (!Functions.checkClick(driver,
                     new String[]{"record_interaction_b_edit", getElements("record_interaction_b_edit")},
-                    new String[]{"glass", recursiveXPaths.glass},
+                    recursiveXPaths.glass,
                     on)) {
                 return false;
             }
@@ -168,18 +176,19 @@ public class AT2ACCOP0025Test {
         }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"record_interaction_b_add_b_save", getElements("record_interaction_b_add_b_save")},
-                new String[]{"glass", recursiveXPaths.glass},
+                recursiveXPaths.glass,
                 on)) {
             return false;
         }
         return true;
     }
 
-    /***
+    /**
      * @param driver TestDriver
      * @return Boolean
      */
     protected boolean search(TestDriver driver) {
+        driver.getReport().addContent("SEARCH RECORD:", "h4", "");
         try {
             if (!Functions.insertInput(driver,
                     new String[]{"search_i_initialDate", getElements("search_i_initialDate")},
@@ -277,11 +286,12 @@ public class AT2ACCOP0025Test {
         return true;
     }
 
-    /***
+    /**
      * @param driver TestDriver
      * @return Boolean
      */
     protected boolean qbe(TestDriver driver) {
+        driver.getReport().addContent("QBE SEARCH RECORD:", "h4", "");
         Functions.zoomOut(driver);
         if (!Functions.clickQbE(driver,
                 new String[]{"record_interaction_b_qbe", getElements("record_interaction_b_qbe")},
@@ -381,7 +391,7 @@ public class AT2ACCOP0025Test {
         return true;
     }
 
-    /***
+    /**
      * @param driver TestDriver
      * @return boolean
      */
@@ -401,18 +411,18 @@ public class AT2ACCOP0025Test {
         if (!Functions.detachTable(driver,
                 new String[]{"record_interaction_b_fullPage", getElements("record_interaction_b_fullPage")},
                 false,
-                " on Detach table"
-        )) {
+                " on Detach table")) {
             return false;
         }
         return true;
     }
 
-    /***
+    /**
      * @param driver TestDriver
      * @return Boolean
      */
     protected boolean delete(TestDriver driver) {
+        driver.getReport().addContent("DELETE RECORD:", "h4", "");
         try {
             if (!Functions.simpleClick(driver,
                     new String[]{"search_e_result", getElements("search_e_result")},
@@ -436,22 +446,20 @@ public class AT2ACCOP0025Test {
         return true;
     }
 
-    /***
+    /**
      * @param driver TestDriver
      * @return Boolean
      */
     protected boolean reset(TestDriver driver) {
-
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")},
                 " on RESET")) {
             return false;
-            }
-
+        }
         return true;
     }
 
-    /***
+    /**
      * @param driver TestDriver
      * @return Boolean
      */

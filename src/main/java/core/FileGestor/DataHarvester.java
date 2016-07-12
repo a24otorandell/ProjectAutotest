@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by otorandell on 09/02/2016.
+ * This class tries to open and read files to recover data
+ *
+ * @author otorandell on 09/02/2016
  */
 public class DataHarvester {
     String filepath;
@@ -15,58 +17,79 @@ public class DataHarvester {
     FileReader filereader;
     BufferedReader bufferedreader;
     boolean open = false;
+
     public DataHarvester(String filepath) {
         this.filepath = filepath;
     }
 
-    public void openFile(){
-        try{
-        this.file= new File(filepath);
-            if(this.file.exists()){
-        this.filereader = new FileReader(file);
-        this.bufferedreader = new BufferedReader(filereader);
-            open=true;
+    /**
+     * This function tries to open and read a file
+     */
+    public void openFile() {
+        try {
+            this.file = new File(filepath);
+            if (this.file.exists()) {
+                this.filereader = new FileReader(file);
+                this.bufferedreader = new BufferedReader(filereader);
+                open = true;
+            } else {
+                System.out.println(filepath + " was not found, please check.");
             }
-            else{
-                System.out.println(filepath+" was not found, please check.");
-            }
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
-    public void closeFile(){
-        if(open){
-        try{
 
-    this.filereader.close();}
-        catch (Exception e){
-            e.printStackTrace();
-        }}
+    /**
+     * This function closes the buffer of the file
+     */
+    public void closeFile() {
+        if (open) {
+            try {
+
+                this.filereader.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
-    public String harvest(String dataname){
+
+    /**
+     * This function gets a simple line from the file where matches with the variable passed by parameter
+     *
+     * @param dataname String - The chain to search in the file
+     * @return {@code String}
+     */
+    public String harvest(String dataname) {
         openFile();
         String line;
-        String data="";
-        if(open){
-    try{
-        while (((line = this.bufferedreader.readLine()) != null)) {
-            String[] row = line.split("-");
-            if (row[0].contains(dataname)) {
-                data = row[1];
-                closeFile();
-                return data;
+        String data = "";
+        if (open) {
+            try {
+                while (((line = this.bufferedreader.readLine()) != null)) {
+                    String[] row = line.split("-");
+                    if (row[0].contains(dataname)) {
+                        data = row[1];
+                        closeFile();
+                        return data;
+                    }
                 }
+            } catch (Exception e) {
+                closeFile();
+                e.printStackTrace();
             }
-        }
-    catch (Exception e){
             closeFile();
-            e.printStackTrace();
         }
-        closeFile();}
         return data;
     }
+
+    /**
+     * Collects all the data of the file in a map {(key, value)}
+     *
+     * @return {@code Map} The data of the file
+     * @see Map
+     */
     public Map<String, String> harvestAll() {
         openFile();
         String line;
@@ -83,8 +106,7 @@ public class DataHarvester {
             }
             data.put("empty", "false");
             closeFile();
-        }
-        else{
+        } else {
             data.put("empty", "true");
         }
 

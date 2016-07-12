@@ -1,8 +1,14 @@
 package core.recursiveData;
 
+/**
+ * This class has a determined number of elements which xpath is the same.<br>
+ * And to avoid redundant information we make them here
+ *
+ * @author otorandell on 10/02/2016
+ */
 public class recursiveXPaths {
     //<editor-fold desc="GLASS">
-    public final static String glass = "//*[contains(@class,'AFModalGlassPane')]";
+    public final static String[] glass = {"glass", "//*[contains(@class,'AFModalGlassPane')]"};
     //</editor-fold>
     //<editor-fold desc="LOV XPATHS">
     public static final String[] lov_b_search = {"lov_b_search", "//*[contains(@id, '_afrLovInternalQueryId::search')]"};

@@ -7,28 +7,33 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by otorandell on 12/02/2016.
+ * @author otorandell on 12/02/2016.
+ * @see HashMap
+ * @see DataHarvester
  */
 public class JiraDetails {
 
-    //<editor-fold desc="ATTRIBUTES">
-    boolean jiraloop = false;
-    Map<String, String> elements = new HashMap<>();
-    String url ="https://agile.hotelbeds.com/jira/login.jsp";
-    String urlcycle1 ="https://agile.tuitravel-ad.com/jira/browse/";
-    String urlcycle2 ="?selectedTab=com.thed.zephyr.je%3Apdb_cycle_panel_section";
-    String urlbrowse ="https://agile.tuitravel-ad.com/jira/browse/";
     public String jiraVersion = "none";
     public String jiraCycle = "AUTOMATIC REGRESSION ";
     public String jiraCycleDate = "";
     public String jiraBuildNumber = "";
     public String jiraCycleFrom = "";
     public String jiraCycleTo = "";
+    //<editor-fold desc="ATTRIBUTES">
+    boolean jiraloop = false;
+    Map<String, String> elements = new HashMap<>();
+    String url = "https://agile.hotelbeds.com/jira/login.jsp";
+    String urlcycle1 = "https://agile.tuitravel-ad.com/jira/browse/";
+    String urlcycle2 = "?selectedTab=com.thed.zephyr.je%3Apdb_cycle_panel_section";
+    String urlbrowse = "https://agile.tuitravel-ad.com/jira/browse/";
     String teststatus = "PASS";
     String project;
     DataHarvester harvester = new DataHarvester("C:/SisVersion.txt");
     //</editor-fold>
 
+    /**
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     */
     public JiraDetails(TestDriver driver) {
         setElements();
         setVersionDetails(driver);
@@ -36,52 +41,112 @@ public class JiraDetails {
         setStatus(driver);
     }
 
+    /**
+     * Gets the variable elements
+     *
+     * @return {@code Map}
+     */
     public Map<String, String> getElements() {
         return elements;
     }
 
+    /**
+     * Gets the url variable
+     *
+     * @return {@code String}
+     */
     public String getUrl() {
         return url;
     }
 
+    /**
+     * Gets the url of the browser
+     *
+     * @return {@code String}
+     */
     public String getUrlbrowse() {
         return urlbrowse;
     }
 
+    /**
+     * Gets the current version of JIRA
+     *
+     * @return {@code String}
+     */
     public String getJiraVersion() {
         return jiraVersion;
     }
 
+    /**
+     * Gets the current cycle of JIRA
+     *
+     * @return {@code String}
+     */
     public String getJiraCycle() {
         return jiraCycle;
     }
 
+    /**
+     * Gets the current date of the JIRA cycle
+     *
+     * @return {@code String}
+     */
     public String getJiraCycleDate() {
         return jiraCycleDate;
     }
 
+    /**
+     * Gets the build number of JIRA
+     *
+     * @return {@code String}
+     */
     public String getJiraBuildNumber() {
         return jiraBuildNumber;
     }
 
+    /**
+     * ToDo
+     *
+     * @return {@code String}
+     */
     public String getJiraCycleFrom() {
         return jiraCycleFrom;
     }
 
+    /**
+     * ToDo
+     *
+     * @return {@code String}
+     */
     public String getJiraCycleTo() {
         return jiraCycleTo;
     }
 
+    /**
+     * Gets the status of the test
+     *
+     * @return {@code String}
+     */
     public String getTeststatus() {
         return teststatus;
     }
 
+    /**
+     * Sets the string variable {@code project}
+     *
+     * @param driver TestDriver - This TestDriver gathers all the info refferent to the current test
+     */
     public void setProject(TestDriver driver) {
-      String[] project = driver.getTestdetails().getIssue().split("-");
+        String[] project = driver.getTestdetails().getIssue().split("-");
         this.project = project[0];
-         }
+    }
 
-    public void setVersionDetails(TestDriver driver){
+    /**
+     * Sets the details of the current version
+     *
+     * @param driver TestDriver - This TestDriver gathers all the info refferent to the current test
+     */
+    public void setVersionDetails(TestDriver driver) {
         this.jiraVersion = harvester.harvest(driver.getTestdetails().getTestname());
         this.jiraCycleDate = harvester.harvest("Date");
         this.jiraBuildNumber = harvester.harvest("Build");
@@ -90,7 +155,10 @@ public class JiraDetails {
 
     }
 
-    public void setElements(){
+    /**
+     * Sets to the var elements all the items we would use
+     */
+    public void setElements() {
         //Attach (is not implemented)
         this.elements.put("component", "components-field");
         this.elements.put("addCross", "//*[contains(@id, 'add-attachments-link')]");
@@ -136,13 +204,15 @@ public class JiraDetails {
         this.elements.put("test_e_dropdown_e_plantestcycle", "//*[@id='zephyr-je.topnav.tests.plan.cycle']");
         this.elements.put("plantestycle_select_version", "//*[@id='select-version2-field']");
         this.elements.put("existingCycles", "versionBanner-name");
-
-
-
     }
 
+    /**
+     * Checks the test status and establishes the var {@code teststatus} as FAIL if it's different from 0
+     *
+     * @param driver TestDriver - This TestDriver gathers all the info refferent to the current test
+     */
     private void setStatus(TestDriver driver) {
-        if(driver.getTeststatus()!=0){
+        if (driver.getTeststatus() != 0) {
             this.teststatus = "FAIL";
         }
     }

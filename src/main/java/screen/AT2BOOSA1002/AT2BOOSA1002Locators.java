@@ -2,17 +2,21 @@ package screen.AT2BOOSA1002;
 
 import java.util.HashMap;
 import java.util.Map;
+
 /**
- * Created by acarrillo on 18/05/2016.
+ * @author acarrillo on 18/05/2016.
  */
 public class AT2BOOSA1002Locators {
     Map<String, String> elements = new HashMap<>();
+
     public AT2BOOSA1002Locators() {
         setElements();
     }
+
     public Map<String, String> getElements() {
         return elements;
     }
+
     public void setElements() {
         //Header
         elements.put("header_add", "//*[contains(@id, 'pcgt1:boton_add')]");
@@ -36,7 +40,6 @@ public class AT2BOOSA1002Locators {
         elements.put("header_add_b_save", "//*[contains(@id, 'pcgt1:boton_commit')]");
 
         elements.put("header_edit_booking_tab", "//*[contains(@id, ':2:tabIndex::disclosureAnchor')]");
-
 
 
         //search
@@ -79,7 +82,7 @@ public class AT2BOOSA1002Locators {
 
         //Consults & History
         elements.put("header_b_consult", "//*[contains(@id, 'pcgm2:dc_m1')]/div/table/tbody/tr/td[3]/div");
-       //CASES
+        //CASES
         elements.put("header_b_consult_b_cases", "//*[contains(@id, '0:pcgm2:dc_cmi3')]/td[2]");
         elements.put("header_b_consult_b_cases_b_close", "//*[contains(@id, ':0:d12::close')]");
         //CANCELLATION
@@ -359,7 +362,7 @@ public class AT2BOOSA1002Locators {
         elements.put("fees_b_fixinfo", "//*[contains(@id, '1:pc1:ctb1::icon')]");
         elements.put("fees_b_query", "//*[contains(@id, '1:pc1:_qbeTbr')]");
 
-    //ADD
+        //ADD
 
         elements.put("fees_b_add_i_startdate", "//*[contains(@id, 'pc1:pcgt12:id4::content')]");
         elements.put("fees_b_add_lov_extra", "//*[contains(@id, '1:pc1:pcgt12:ilov1::lovIconId')]");

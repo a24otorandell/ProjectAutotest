@@ -3,8 +3,8 @@ package screen.AT2ACCOP0025;
 import java.util.HashMap;
 import java.util.Map;
 
-/***
- * Created by ajvirgili on 23/06/2016.
+/**
+ * @author ajvirgili on 23/06/2016.
  */
 public class AT2ACCOP0025Locators {
     Map<String, String> elements = new HashMap<>();
@@ -71,7 +71,7 @@ public class AT2ACCOP0025Locators {
 
         elements.put("record_interaction_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("record_interaction_b_fullPage", "//*[contains(@id, 'pc1:_dchTbr')]/a");
-        elements.put("record_interaction_b_fullPage_b_close", "//*[contains(@id, ':pc1::_afrDetachDialogId::close')]");
+        elements.put("record_interaction_b_fullPage_b_close", "//*[contains(@id, 'pc1::_afrDetachDialogId::close')]");
         /* QBE */
         elements.put("record_interaction_qbe_i_initialDate", "//*[contains(@id, 'pt1:dyntdc:r1:1:pc1:t1:id2::content')]");
         elements.put("record_interaction_qbe_i_endDate", "//*[contains(@id, 'pt1:dyntdc:r1:1:pc1:t1:id1::content')]");

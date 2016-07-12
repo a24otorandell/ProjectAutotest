@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by icastaneira on 17/05/2016.
+ * @author icastaneira on 17/05/2016.
  */
 public class AT2BOOSA0005Data {
     Map<String, String> data = new HashMap<>();
@@ -23,12 +23,12 @@ public class AT2BOOSA0005Data {
 
     public void setData() {
         this.data = harvester.harvestAll();
-        if(data.get("empty").equals("true")){
+        if (data.get("empty").equals("true")) {
             setDefaultData();
         }
     }
 
-    public void setDefaultData(){
+    public void setDefaultData() {
         data.put("booking_number", "3091480");
     }
 }

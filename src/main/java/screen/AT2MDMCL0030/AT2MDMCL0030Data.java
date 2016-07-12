@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by otorandell on 16/02/2016.
+ * @author otorandell on 16/02/2016.
  */
 public class AT2MDMCL0030Data {
     Map<String, String> data = new HashMap<>();
@@ -24,16 +24,17 @@ public class AT2MDMCL0030Data {
 
     public void setData() {
         this.data = harvester.harvestAll();
-        if(data.get("empty").equals("true")){
+        if (data.get("empty").equals("true")) {
             setDefaultData();
         }
     }
-    public void setDefaultData(){
-        data.put("param_name",DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("update_param_name",DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("param_value",DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("update_param_value",DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("age_ext_code",Integer.toString(DataGenerator.random(1, 20)));
-        data.put("update_age_ext_code",Integer.toString(DataGenerator.random(1, 20)));
+
+    public void setDefaultData() {
+        data.put("param_name", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("update_param_name", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("param_value", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("update_param_value", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("age_ext_code", Integer.toString(DataGenerator.random(1, 20)));
+        data.put("update_age_ext_code", Integer.toString(DataGenerator.random(1, 20)));
     }
 }

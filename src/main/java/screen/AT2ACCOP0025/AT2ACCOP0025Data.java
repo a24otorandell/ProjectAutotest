@@ -6,8 +6,8 @@ import core.FileGestor.DataHarvester;
 import java.util.HashMap;
 import java.util.Map;
 
-/***
- * Created by ajvirgili on 23/06/2016.
+/**
+ * @author ajvirgili on 23/06/2016.
  */
 public class AT2ACCOP0025Data {
     Map<String, String> data = new HashMap<>();

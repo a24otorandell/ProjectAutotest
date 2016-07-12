@@ -5,8 +5,8 @@ import screen.AT2Test;
 
 import java.util.Map;
 
-/***
- * Created by ajvirgili on 23/06/2016.
+/**
+ * @author ajvirgili on 23/06/2016.
  */
 @SuppressWarnings({"unused", "RedundantIfStatement"})
 public class AT2ACCOP0025Manager implements AT2Test {
@@ -24,20 +24,20 @@ public class AT2ACCOP0025Manager implements AT2Test {
         return procedure;
     }
 
-    public AT2ACCOP0025Test getTest() {
-        return test;
+    public void setProcedure(String[] procedure) {
+        this.procedure = procedure;
     }
 
-    public Map<String, String> getData() {
-        return this.test.getData().getData();
+    public AT2ACCOP0025Test getTest() {
+        return test;
     }
 
     public void setTest(AT2ACCOP0025Test test) {
         this.test = test;
     }
 
-    public void setProcedure(String[] procedure) {
-        this.procedure = procedure;
+    public Map<String, String> getData() {
+        return this.test.getData().getData();
     }
 
     public boolean start(TestDriver driver) {
@@ -52,26 +52,26 @@ public class AT2ACCOP0025Manager implements AT2Test {
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
-               /* if (getProcedure()[i].equals("c")) {
-                    getTest().enabler(driver);
-                    getTest().recordInteraction(driver, true);
-                    getTest().reset(driver);
-                }
-                if (getProcedure()[i].equals("s")) {
-                    getTest().enabler(driver);
-                    getTest().search(driver);
-                    getTest().reset(driver);
-                }
-                if (getProcedure()[i].equals("e")) {
-                    getTest().enabler(driver);
-                    getTest().recordInteraction(driver, false);
-                    getTest().reset(driver);
-                }
-                if (getProcedure()[i].equals("d")) {
-                    getTest().enabler(driver);
-                    getTest().delete(driver);
-                    getTest().reset(driver);
-                }*/
+            if (getProcedure()[i].equals("c")) {
+                getTest().enabler(driver);
+                getTest().recordInteraction(driver, true);
+                getTest().reset(driver);
+            }
+            if (getProcedure()[i].equals("s")) {
+                getTest().enabler(driver);
+                getTest().search(driver);
+                getTest().reset(driver);
+            }
+            if (getProcedure()[i].equals("e")) {
+                getTest().enabler(driver);
+                getTest().recordInteraction(driver, false);
+                getTest().reset(driver);
+            }
+            if (getProcedure()[i].equals("d")) {
+                getTest().enabler(driver);
+                getTest().delete(driver);
+                getTest().reset(driver);
+            }
             if (getProcedure()[i].equals("x")) {
                 if (!getTest().testCSED(driver)) {
                     return false;

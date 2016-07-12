@@ -11,19 +11,32 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
- * Created by otorandell on 11/02/2016.
+ * This class collects most of the usual procedures<br>
+ *
+ * @author otorandell on 11/02/2016
  */
 public class CommonProcedures {
 
     /**
      * This method is used to log into Atlas2.0, it uses the parameters the current driver has assigned.
-     * @param driver this class manages all the information referent to the current test.
+     *
+     * @param driver TestDriver - This class manages all the information referent to the current test.
+     * @return {@code boolean} to control the process flow
+     * @see Functions
+     * @see WebDriverWait
+     * @see ErrorManager
      */
     public static boolean atlasLogIn(TestDriver driver) {
         if (driver.getCurrentwork().equals("REGRESSION")) {
-            if(!Functions.insertInput(driver, new String[]{"User Input", recursiveXPaths.userinput}, "username", driver.getUserdetails().getUsername(), " on login screen")){return false;}
-            if(!Functions.insertInput(driver, new String[]{"Password Input", recursiveXPaths.passinput}, "password", driver.getUserdetails().getPassword(), " on login screen")){return false;}
-            if(!Functions.checkClick(driver, new String[]{"Login Button", recursiveXPaths.loginbutton}, new String[]{"Logout Button", recursiveXPaths.logout}, " on login screen")){return false;}
+            if (!Functions.insertInput(driver, new String[]{"User Input", recursiveXPaths.userinput}, "username", driver.getUserdetails().getUsername(), " on login screen")) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"Password Input", recursiveXPaths.passinput}, "password", driver.getUserdetails().getPassword(), " on login screen")) {
+                return false;
+            }
+            if (!Functions.checkClick(driver, new String[]{"Login Button", recursiveXPaths.loginbutton}, new String[]{"Logout Button", recursiveXPaths.logout}, " on login screen")) {
+                return false;
+            }
             WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 40, 500);
             wdw.until(ExpectedConditions.elementToBeClickable(By.xpath(recursiveXPaths.logout)));
             if (driver.getDriver().findElements(By.xpath("//*[@id='cblopg1']")).size() > 0) {
@@ -33,25 +46,43 @@ public class CommonProcedures {
 
             }
         } else if (driver.getCurrentwork().equals("JIRA")) {
-            if(!Functions.insertInput(driver, recursiveXPaths.jirauserinput, "username", driver.getUserdetails().getUsername(), " on JIRA login screen")){return false;}
-            if(!Functions.insertInput(driver,recursiveXPaths.jirapassimput, "password", driver.getUserdetails().getPassword(), " on JIRA login screen")){return false;}
-            if(!Functions.checkClick(driver, recursiveXPaths.jiraloginbutton, recursiveXPaths.jiralogoutbutton, " on JIRA login screen")){return false;}
+            if (!Functions.insertInput(driver, recursiveXPaths.jirauserinput, "username", driver.getUserdetails().getUsername(), " on JIRA login screen")) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, recursiveXPaths.jirapassimput, "password", driver.getUserdetails().getPassword(), " on JIRA login screen")) {
+                return false;
+            }
+            if (!Functions.checkClick(driver, recursiveXPaths.jiraloginbutton, recursiveXPaths.jiralogoutbutton, " on JIRA login screen")) {
+                return false;
+            }
             WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 40, 500);
             wdw.until(ExpectedConditions.elementToBeClickable(By.xpath(recursiveXPaths.jiralogoutbutton[1])));
-            }
-        return true;
         }
+        return true;
+    }
 
     /**
      * This method search and click the target component screen to be tested
-     * @param driver this class manages all the information referent to the current test.
+     *
+     * @param driver TestDriver - This class manages all the information referent to the current test.
+     * @return {@code boolean} to control the process flow
+     * @see Functions
+     * @see ErrorManager
      */
     public static boolean goToScreen(TestDriver driver) {
         try {
-            if(!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")){return false;}
-            if(!Functions.insertInput(driver, new String[]{"Component", recursiveXPaths.componentinput}, "Component", driver.getTestdetails().getTestname(), " on main ATLAS page")){return false;}
-            if(!Functions.checkClick(driver, new String[]{"Search component icon", recursiveXPaths.searchcomponent}, new String[]{"Component result", recursiveXPaths.result}, 180, 500, " on main ATLAS page")){return false;}
-            if(!Functions.checkClickByAbsence(driver, new String[]{"Component result", recursiveXPaths.result}, new String[]{"Component result", recursiveXPaths.result}, 360, 500, " on main ATLAS page")){return false;}
+            if (!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"Component", recursiveXPaths.componentinput}, "Component", driver.getTestdetails().getTestname(), " on main ATLAS page")) {
+                return false;
+            }
+            if (!Functions.checkClick(driver, new String[]{"Search component icon", recursiveXPaths.searchcomponent}, new String[]{"Component result", recursiveXPaths.result}, 180, 500, " on main ATLAS page")) {
+                return false;
+            }
+            if (!Functions.checkClickByAbsence(driver, new String[]{"Component result", recursiveXPaths.result}, new String[]{"Component result", recursiveXPaths.result}, 360, 500, " on main ATLAS page")) {
+                return false;
+            }
         } catch (Exception e) {
             String ecode = "--ERROR: goToScreen(): Unable to enter the selected screen, maybe the server is running too slow..";
             e.printStackTrace();
@@ -63,15 +94,17 @@ public class CommonProcedures {
 
     /**
      * This method logs out of Atlas2.0 and checks that it's done correcly, otherwise will notify it.
-     * @param driver this class manages all the information referent to the current test.
+     *
+     * @param driver TestDriver - This class manages all the information referent to the current test.
+     * @see TestDriver
+     * @see Functions
      */
     public static void atlaslogOut(TestDriver driver) {
         if (driver.getDriver().findElements(By.xpath(recursiveXPaths.logout)).size() > 0 && !driver.isLogouterror()) {
             driver.setLogouterror(true); //This flag prevents from looping here forever in case of logout error
             Functions.simpleClick(driver, new String[]{"Logout Button", recursiveXPaths.logout}, " on main ATLAS page.");
             checkAlert(driver);
-        }
-        else {
+        } else {
             driver.getReport().addContent("--WARNING-- Logout Button was not found, it's possible that it was never reached, check the screenshot", "p", "class='warning'");
             Functions.screenshot(driver);
         }
@@ -91,34 +124,38 @@ public class CommonProcedures {
 
     /**
      * This method searches for a possible alert popup and closes it.
-     * @param driver this class manages all the information referent to the current test.
+     *
+     * @param driver TestDriver - This class manages all the information referent to the current test.
+     * @see Thread#sleep(long)
      */
     private static void checkAlert(TestDriver driver) {
         try {
             Thread.sleep(3000);
             Alert alert = driver.getDriver().switchTo().alert();
             //EXIST ALERT??
-            if (alert.getText() != null) ;
-            {
+            if (alert.getText() != null) {
                 driver.getReport().addContent("BROWSER ALERT FOUND: " + alert.getText() + " --ALERT is being accepted.", "p", "warning");
                 alert.accept();
                 driver.getDriver().switchTo().defaultContent();
             }
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
         }
     }
 
     /**
      * This method updates the priority field of the current user for the test.
-     * @param increment integer value that will increment the priority field in the selected row
-     * @param driver this class manages all the information referent to the current test.
+     *
+     * @param increment Integer - Value that will increment the priority field in the selected row
+     * @param driver    TestDriver - This class manages all the information referent to the current test.
+     * @see ConnectionMSSQL
+     * @see DDBBInteractions
      */
     public static void updateDDBBPriority(int increment, TestDriver driver) {
         ConnectionMSSQL connection = new ConnectionMSSQL();
         connection.dbConnect("jdbc:jtds:sqlserver://VS-GORGBLAU;databaseName=Testing;", "betatester", "betatester");
         DDBBInteractions.updateTable(connection, driver.getUserdetails().getUsername(), increment);
-        connection.closeConnection();
+        connection.closeConnection(driver);
     }
     /* IN PROCESS
     public static boolean atlaslogOut(TestDriver driver) {

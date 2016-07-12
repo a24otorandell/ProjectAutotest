@@ -6,7 +6,7 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * Created by otorandell on 04/03/2016.
+ * @author otorandell on 04/03/2016.
  */
 public class AT2MDMCL0030Manager implements AT2Test {
 
@@ -23,19 +23,20 @@ public class AT2MDMCL0030Manager implements AT2Test {
         return procedure;
     }
 
+    public void setProcedure(String[] procedure) {
+        this.procedure = procedure;
+    }
+
     public AT2MDMCL0030Test getTest() {
         return test;
     }
-
-    public Map<String, String> getData() {
-        return this.test.getData().getData();}
 
     public void setTest(AT2MDMCL0030Test test) {
         this.test = test;
     }
 
-    public void setProcedure(String[] procedure) {
-        this.procedure = procedure;
+    public Map<String, String> getData() {
+        return this.test.getData().getData();
     }
 
     public boolean start(TestDriver driver) {
@@ -50,34 +51,34 @@ public class AT2MDMCL0030Manager implements AT2Test {
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
-                if (getProcedure()[i].equals("c")) {
-                    getTest().enabler(driver);
-                    getTest().recordInteraction(driver, true);
-                    getTest().reset(driver);
-                }
-                if (getProcedure()[i].equals("s")) {
-                    getTest().enabler(driver);
-                    getTest().search(driver);
-                    getTest().reset(driver);
-                }
-                if (getProcedure()[i].equals("e")) {
-                    getTest().enabler(driver);
-                    getTest().recordInteraction(driver, false);
-                    getTest().reset(driver);
-                }
-                if (getProcedure()[i].equals("d")) {
-                    getTest().enabler(driver);
-                    getTest().delete(driver);
-                    getTest().reset(driver);
-                }
-                if (getProcedure()[i].equals("x")) {
-                    if (!getTest().testCSED(driver)) {
-                        return false;
-                    }
+            if (getProcedure()[i].equals("c")) {
+                getTest().enabler(driver);
+                getTest().recordInteraction(driver, true);
+                getTest().reset(driver);
+            }
+            if (getProcedure()[i].equals("s")) {
+                getTest().enabler(driver);
+                getTest().search(driver);
+                getTest().reset(driver);
+            }
+            if (getProcedure()[i].equals("e")) {
+                getTest().enabler(driver);
+                getTest().recordInteraction(driver, false);
+                getTest().reset(driver);
+            }
+            if (getProcedure()[i].equals("d")) {
+                getTest().enabler(driver);
+                getTest().delete(driver);
+                getTest().reset(driver);
+            }
+            if (getProcedure()[i].equals("x")) {
+                if (!getTest().testCSED(driver)) {
+                    return false;
                 }
             }
+        }
         return true;
 
     }
 
-    }
+}

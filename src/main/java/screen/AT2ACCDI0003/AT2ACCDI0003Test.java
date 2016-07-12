@@ -8,7 +8,7 @@ import core.recursiveData.recursiveXPaths;
 import org.openqa.selenium.By;
 
 /**
- * Created by otorandell on 29/12/2015.
+ * @author otorandell on 29/12/2015.
  */
 public class AT2ACCDI0003Test {
 
@@ -177,7 +177,7 @@ public class AT2ACCDI0003Test {
 
         if (!Functions.checkClick(driver,
                 new String[]{"boosa1002_b_bookingsearch", getElements("boosa1002_b_bookingsearch")}, //element to click
-                new String[]{"glass", recursiveXPaths.glass}, //element expected to appear
+                recursiveXPaths.glass, //element expected to appear
                 " on AT2BOOSA1002")) {
             return false;}
         if (!Functions.insertInput(driver, new String[]{"boosa1002_b_bookingsearch_i_booking",getElements("boosa1002_b_bookingsearch_i_booking")},
@@ -189,7 +189,7 @@ public class AT2ACCDI0003Test {
             return false;}
         if (!Functions.checkClick(driver,
                 new String[]{"boosa1002_purchasehotels_e_result_b_c", getElements("boosa1002_purchasehotels_e_result_b_c")}, //element to click
-                new String[]{"glass", recursiveXPaths.glass}, //element expected to appear
+                recursiveXPaths.glass, //element expected to appear
                 " on AT2BOOSA1002")) {
             return false;}
         return true;

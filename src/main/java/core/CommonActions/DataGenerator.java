@@ -9,22 +9,35 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.Random;
 
 /**
- * Created by otorandell on 12/02/2016.
+ * This class aids to generate some random data to test
+ *
+ * @author otorandell on 12/02/2016
  */
+@SuppressWarnings({"unused", "UnusedAssignment"})
 public class DataGenerator {
+
     /**
      * Method that generates a random alphanumeric sequence.
-     * @param length length of the returned String
-     * @param lettersNumbers tells if the returned String can include or not numbers into it
-     * @return random alphanumeric value String
+     *
+     * @param length         Integer - Length of the returned String
+     * @param lettersNumbers Boolean - Tells if the returned String can include or not numbers into it
+     * @return random alphanumeric value {@code String}
+     * @see Thread#sleep(long)
+     * @see Random
+     * @see GregorianCalendar#getTimeInMillis()
      */
     public static String getRandomAlphanumericSequence(int length, boolean lettersNumbers) {
         //how to call this method:
-        // SwissKnife.getRandomAlphanumericSequence(3, true);
-        try{Thread.sleep(1);}catch (Exception e){}
+        // DataGenerator.getRandomAlphanumericSequence(3, true);
+        try {
+            Thread.sleep(1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         String sequence = "";
         long milis = new java.util.GregorianCalendar().getTimeInMillis();
         Random r = new Random(milis);
@@ -48,54 +61,65 @@ public class DataGenerator {
 
     /**
      * This method generates a random integer between the chosen range
-     * @param min minimum value the result can adquire
-     * @param max maximum value the result can adquire
-     * @return random integer between min and max
+     *
+     * @param min Integer - minimum value the result can adquire
+     * @param max Integer - maximum value the result can adquire
+     * @return {@code int}
+     * @see Math#floor(double)
+     * @see Math#random()
      */
     public static int random(int min, int max) {
-        try{Thread.sleep(1);}catch (Exception e){}
-        int myrand= (int) (Math.floor((int) (Math.random() * (max - min) + 1))) + min;
-        return myrand;
+        try {
+            Thread.sleep(1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return (int) (Math.floor((int) (Math.random() * (max - min) + 1))) + min;
 
     }
 
     /**
      * This method generates and returns a String referent to the date of today
-     * @param driver this class manages all the information referent to the current test.
-     * @param format defines the date format of the result
-     * @return String that represents the date of today
+     *
+     * @param driver TestDriver - This class manages all the information referent to the current test.
+     * @param format String - Defines the date format of the result
+     * @return {@code String} that represents the date of today
+     * @see DateFormat#format(Date)
+     * @see SimpleDateFormat
      */
-    public static String getToday(TestDriver driver, String format){
-        String today="";
-        try{
+    public static String getToday(TestDriver driver, String format) {
+        String today = "";
+        try {
             DateFormat myformat = new SimpleDateFormat(format);
             today = myformat.format(driver.getTestdate().getTime());
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             String ecode = "--ERROR:getToday(): Unable to convert " + format + " to DateFormat please check that is inserted correctly.";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
         }
-
         return today;
     }
 
     /**
      * This method generates and returns a String referent to a relative date value
-     * @param driver this class manages all the information referent to the current test.
-     * @param originaldate the returned date value is relative to this parameter
-     * @param format defines the date format of the result
-     * @param incrmonth integer that defines the increment of month value
-     * @param incrday integer that defines the increment of month day value
-     * @param incryear integer value that defines the increment of the year value
-     * @return String representing a date value
+     *
+     * @param driver       TestDriver - This class manages all the information referent to the current test.
+     * @param originaldate String - The returned date value is relative to this parameter
+     * @param format       String - Defines the date format of the result
+     * @param incrmonth    Integer - Defines the increment of month value
+     * @param incrday      Integer Defines the increment of month day value
+     * @param incryear     Integer - Value that defines the increment of the year value
+     * @return {@code String} representing a date value
+     * @see DateFormat#format(Date)
+     * @see SimpleDateFormat
+     * @see Calendar
      */
-    public static String getRelativeDate(TestDriver driver, String originaldate, String format, int incrmonth, int incrday, int incryear){
+    public static String getRelativeDate(TestDriver driver, String originaldate, String format, int incrmonth, int incrday, int incryear) {
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.getRelativeDate(driver, "dataname", //dataname
+        /*DataGenerator.getRelativeDate(driver, "dataname", //dataname
                 "01/01/1990", "dd/MM/yyyy",0, 0, 0);*/ // original date // dateformat // increments (month, day, year)
-        String today="";
-        try{
+        String today = "";
+        try {
             Date fecha;
             Calendar cal = Calendar.getInstance();
             DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
@@ -106,8 +130,7 @@ public class DataGenerator {
             cal.add(Calendar.MONTH, incrmonth);
             today = dateFormat.format(cal.getTime());
 
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             String ecode = "--ERROR:getRelativeDate(): Unable to convert " + format + " to DateFormat please check that is inserted correctly.";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
@@ -117,15 +140,19 @@ public class DataGenerator {
 
     /**
      * This method generates and returns a String referent to the date of today
-     * @param format defines the date format of the result
-     * @param incrmonth integer that defines the increment of month value
-     * @param incrday integer that defines the increment of month day value
-     * @param incryear integer value that defines the increment of the year value
-     * @return String representing a date value
+     *
+     * @param format    String - Defines the date format of the result
+     * @param incrmonth Integer - Defines the increment of month value
+     * @param incrday   Integer - Defines the increment of month day value
+     * @param incryear  Integer - Value that defines the increment of the year value
+     * @return {@code String} representing a date value
+     * @see DateFormat#format(Date)
+     * @see SimpleDateFormat
+     * @see Calendar
      */
-    public static String getRelativeDateToday(String format, int incrmonth, int incrday, int incryear){
-        String today="";
-        try{
+    public static String getRelativeDateToday(String format, int incrmonth, int incrday, int incryear) {
+        String today = "";
+        try {
             Calendar fecha = Calendar.getInstance();
             DateFormat myformat = new SimpleDateFormat(format);
             myformat.format(fecha.getTime());
@@ -133,31 +160,33 @@ public class DataGenerator {
             fecha.add(Calendar.YEAR, incryear);
             fecha.add(Calendar.MONTH, incrmonth);
             today = myformat.format(fecha.getTime());
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             String ecode = "--ERROR:getRelativeDateToday(): Unable to convert " + format + " to DateFormat please check that is inserted correctly.";
             today = "01/01/2015";
             e.printStackTrace();
+            //ErrorManager.process(driver, ecode);
         }
         return today;
     }
 
     /**
      * This method generates and returns a String referent to the date of today
-     * @return String that represents the date of today
+     *
+     * @return {@code String} that represents the date of today
+     * @see DateFormat#format(Date)
+     * @see SimpleDateFormat
      */
-    public static String getToday(){
-        String today="";
-        try{
+    public static String getToday() {
+        String today = "";
+        try {
             Date testdate = new Date();
             DateFormat myformat = new SimpleDateFormat("dd/MM/yyyy");
             today = myformat.format(testdate.getTime());
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             String ecode = "--ERROR:getToday(): An unexpected error has ocurred, please check.";
             e.printStackTrace();
+            //ErrorManager.process(driver, ecode);
         }
-
         return today;
     }
 }

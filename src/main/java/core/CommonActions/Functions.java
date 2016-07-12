@@ -1,5 +1,6 @@
 package core.CommonActions;
 
+import com.google.common.base.Function;
 import core.ErrorManager.ErrorManager;
 import core.FileGestor.ReportFile;
 import core.TestDriver.TestDriver;
@@ -13,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -21,17 +23,25 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by otorandell on 08/02/2016.
+ * This class has all the actions commonly used to test a component
+ *
+ * @author otorandell on 08/02/2016
+ * @author ajvirgili on 04/07/2016
  */
+@SuppressWarnings("all")
 public class Functions {
 
     /**
-     * This the basic main operation, just does a click on the desired element, whitouth waitong for any response from driver.
+     * This the basic main operation, just does a click on the desired element, whitout waiting for any response from driver.
      *
-     * @param driver this object gathers all the info refferent to the current test
+     * @param driver TestDriver - This TestDriver gathers all the info refferent to the current test
+     * @param path   String[] - Info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
+     * @param where  String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
      */
     public static boolean simpleClick(TestDriver driver, String path[], String where) {
-//HOW TO CALL THIS METHOD
+        //HOW TO CALL THIS METHOD
         /* if (!Functions.simpleClick(driver,
                 new String[]{"header_add", getElements("header_add")}, //element to click
                 " on CREATION HEADER")){return false;}*/
@@ -49,15 +59,20 @@ public class Functions {
     }
 
     /**
-     * This method clicks an element expecting another element to be visible, otherwise throws an exception.
+     * This method clicks an element expecting another element to be visible, otherwise catches an exception.
      *
-     * @param driver this object gathers all the info refferent to the current test
-     * @param path1  info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
-     * @param path2  info reffered to the path of the expected element [0] reffers to path name and [1] to the value
-     * @param where  String printed on the report to define the general location of the current operation
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     * @param path1  String[] - Info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
+     * @param path2  String[] - Info reffered to the path of the expected element [0] reffers to path name and [1] to the value
+     * @param where  String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see WebDriverWait#until(Function)
+     * @see ExpectedConditions#presenceOfElementLocated(By)
+     * @see ExpectedConditions#elementToBeClickable(By)
+     * @see ErrorManager#process(TestDriver, String)
      */
     public static boolean checkClick(TestDriver driver, String path1[], String path2[], String where) {
-//HOW TO CALL THIS METHOD
+        //HOW TO CALL THIS METHOD
         /* if(!Functions.checkClick(driver,
                 new String[]{"x", getElements("x")}, //element to click
                 new String[]{"y", getElements("x")}, //element expected to appear
@@ -65,7 +80,6 @@ public class Functions {
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 60, 500);
         WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
         try {
-
             breathetime.until(ExpectedConditions.elementToBeClickable(By.xpath(path1[1])));
             driver.getDriver().findElement(By.xpath(path1[1])).click();
         } catch (Exception e) {
@@ -74,13 +88,13 @@ public class Functions {
             ErrorManager.process(driver, ecode);
             return false;
         }
-        try{
+        try {
             //catch
             wdw.until(ExpectedConditions.presenceOfElementLocated(By.xpath(path2[1])));
             driver.getReport().addContent(path1[0] + " clicked " + where);
 
         } catch (Exception e) {
-            String ecode = "--ERROR: checkClick(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "is visible after clicking "+ path1[0] +"("+path1[1]+")";
+            String ecode = "--ERROR: checkClick(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "is visible after clicking " + path1[0] + "(" + path1[1] + ")";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
@@ -89,25 +103,30 @@ public class Functions {
     }
 
     /**
-     * This method clicks an element expecting another element to be visible, otherwise throws an exception.
-     * @param driver this class manages all the information referent to the current test.
-     * @param path1  info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
-     * @param path2  info reffered to the path of the expected element [0] reffers to path name and [1] to the value
-     * @param seconds seconds the WebDriverWait element will wait before an exception is thrown
-     * @param miliseconds time in miliseconds between condition checking
-     * @param where  String printed on the report to define the general location of the current operation
+     * This method clicks an element expecting another element to be visible waiting an amount of time, otherwise catches an exception.
+     *
+     * @param driver      TestDriver - This class manages all the information referent to the current test.
+     * @param path1       String - Info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
+     * @param path2       String[] - Info reffered to the path of the expected element [0] reffers to path name and [1] to the value
+     * @param seconds     Integer - Seconds the WebDriverWait element will wait before an exception is thrown
+     * @param miliseconds Long - Time in miliseconds between condition checking
+     * @param where       String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see WebDriverWait#until(Function)
+     * @see ExpectedConditions#elementToBeClickable(By)
+     * @see ExpectedConditions#presenceOfElementLocated(By)
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean checkClick(TestDriver driver, String path1[], String path2[],int seconds, long miliseconds, String where) {
-//HOW TO CALL THIS METHOD
-        /* SwissKnife.checkClick(driver,
+    public static boolean checkClick(TestDriver driver, String path1[], String path2[], int seconds, long miliseconds, String where) {
+        //HOW TO CALL THIS METHOD
+        /* if(!Functions.checkClick(driver,
                 new String[]{"x", elements.get("x")}, //element to click
                 new String[]{"y", elements.get("x")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
-                " on where");*/
+                " on where")){return false;}*/
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), seconds, miliseconds);
         WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
         try {
-
             breathetime.until(ExpectedConditions.elementToBeClickable(By.xpath(path1[1])));
             driver.getDriver().findElement(By.xpath(path1[1])).click();
         } catch (Exception e) {
@@ -116,13 +135,12 @@ public class Functions {
             ErrorManager.process(driver, ecode);
             return false;
         }
-        try{
-            //catch
+        try {
             wdw.until(ExpectedConditions.presenceOfElementLocated(By.xpath(path2[1])));
             driver.getReport().addContent(path1[0] + " clicked " + where);
 
         } catch (Exception e) {
-            String ecode = "--ERROR: checkClick(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "is visible after clicking "+ path1[0] +"("+path1[1]+")";
+            String ecode = "--ERROR: checkClick(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "is visible after clicking " + path1[0] + "(" + path1[1] + ")";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
@@ -131,11 +149,17 @@ public class Functions {
     }
 
     /**
-     * This method clicks an element expecting another element to disappear, otherwise throws an exception.
-     * @param driver this object gathers all the info refferent to the current test
-     * @param path1  info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
-     * @param path2  info reffered to the path of the expected element [0] reffers to path name and [1] to the value
-     * @param where  String printed on the report to define the general location of the current operation
+     * This method clicks an element expecting another element to disappear, otherwise catches an exception.
+     *
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     * @param path1  String[] - Info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
+     * @param path2  String[] - Info reffered to the path of the expected element [0] reffers to path name and [1] to the value
+     * @param where  String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see WebDriverWait#until(Function)
+     * @see ExpectedConditions#elementToBeClickable(By)
+     * @see ExpectedConditions#invisibilityOfElementLocated(By)
+     * @see ErrorManager#process(TestDriver, String)
      */
     public static boolean checkClickByAbsence(TestDriver driver, String path1[], String path2[], String where) {
         //HOW TO CALL THIS METHOD
@@ -148,7 +172,6 @@ public class Functions {
         WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
 
         try {
-
             breathetime.until(ExpectedConditions.elementToBeClickable(By.xpath(path1[1])));
             driver.getDriver().findElement(By.xpath(path1[1])).click();
         } catch (Exception e) {
@@ -157,12 +180,12 @@ public class Functions {
             ErrorManager.process(driver, ecode);
             return false;
         }
-        try{
+        try {
             wdw.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(path2[1])));
             driver.getReport().addContent(path1[0] + " clicked " + where);
 
-        }catch (Exception e) {
-            String ecode = "--ERROR: checkClickByAbscence(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "has disappeared after clicking "+ path1[0] +"("+path1[1]+")";
+        } catch (Exception e) {
+            String ecode = "--ERROR: checkClickByAbscence(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "has disappeared after clicking " + path1[0] + "(" + path1[1] + ")";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
@@ -171,13 +194,19 @@ public class Functions {
     }
 
     /**
-     * This method clicks an element expecting another element to disappear, otherwise throws an exception.
-     * @param driver this class manages all the information referent to the current test.
-     * @param path1  info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
-     * @param path2  info reffered to the path of the expected element [0] reffers to path name and [1] to the value
-     * @param seconds seconds the WebDriverWait element will wait before an exception is thrown
-     * @param miliseconds time in miliseconds between condition checking
-     * @param where  String printed on the report to define the general location of the current operation
+     * This method clicks an element expecting another element to disappear waiting an amount of time, otherwise catches an exception.
+     *
+     * @param driver      TestDriver - This class manages all the information referent to the current test.
+     * @param path1       String[] - Info reffered to the path of the element to be clicked [0] reffers to path name and [1] to the value
+     * @param path2       String[] - Info reffered to the path of the expected element [0] reffers to path name and [1] to the value
+     * @param seconds     Integer - Seconds the WebDriverWait element will wait before an exception is thrown
+     * @param miliseconds Integer - Time in miliseconds between condition checking
+     * @param where       String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see WebDriverWait#until(Function)
+     * @see ExpectedConditions#elementToBeClickable(By)
+     * @see ExpectedConditions#invisibilityOfElementLocated(By)
+     * @see ErrorManager#process(TestDriver, String)
      */
     public static boolean checkClickByAbsence(TestDriver driver, String path1[], String path2[], int seconds, int miliseconds, String where) {
         //HOW TO CALL THIS METHOD
@@ -191,7 +220,6 @@ public class Functions {
         WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
 
         try {
-
             breathetime.until(ExpectedConditions.elementToBeClickable(By.xpath(path1[1])));
             driver.getDriver().findElement(By.xpath(path1[1])).click();
         } catch (Exception e) {
@@ -200,12 +228,12 @@ public class Functions {
             ErrorManager.process(driver, ecode);
             return false;
         }
-        try{
+        try {
             wdw.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(path2[1])));
             driver.getReport().addContent(path1[0] + " clicked " + where);
 
-        }catch (Exception e) {
-            String ecode = "--ERROR: checkClickByAbscence(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "has disappeared after clicking "+ path1[0] +"("+path1[1]+")";
+        } catch (Exception e) {
+            String ecode = "--ERROR: checkClickByAbscence(): Unable to check that the element " + path2[0] + " with xpath: " + path2[1] + where + "has disappeared after clicking " + path1[0] + "(" + path1[1] + ")";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
@@ -214,13 +242,16 @@ public class Functions {
     }
 
     /**
-     * This method clicks (or not) QbE button if its not deployed yet, otherwise just checkis if its deployed
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_qbe xpath referent to the qbe button, [0] is the data name, [1] is the value
-     * @param qbe_input xpath referent to the qbe input, [0] is the data name, [1] is the value
-     * @param where  String printed on the report to define the general location of the current operation
+     * This method clicks (or not) QbE button if its not deployed yet, otherwise just checks if it's deployed
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param b_qbe     String[] - Xpath referent to the qbe button, [0] is the data name, [1] is the value
+     * @param qbe_input String[] - Xpath referent to the qbe input, [0] is the data name, [1] is the value
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
      */
-    public static boolean clickQbE (TestDriver driver, String[] b_qbe, String[] qbe_input, String where){
+
+    public static boolean clickQbE(TestDriver driver, String[] b_qbe, String[] qbe_input, String where) {
         //HOW TO CALL THIS METHOD
         /*if(!Functions.clickQbE(driver,
                 new String[]{"x", getElements("x")},// query button
@@ -228,48 +259,56 @@ public class Functions {
                 "where")){return false;} // where the operation occurs
                 */
         driver.getReport().addContent("QbE Deployment: ", "h5", "");
-        if(driver.getDriver().findElements(By.xpath(qbe_input[1])).size()>0){
+        if (driver.getDriver().findElements(By.xpath(qbe_input[1])).size() > 0) {
             driver.getReport().addContent("QbE is already deployed");
+        } else {
+            driver.getReport().addContent("QbE is not deployed (" + qbe_input[0] + " is not visible), proceeding to click it.");
+            if (!checkClick(driver, b_qbe, qbe_input, where)) {
+                return false;
+            }
         }
-        else{
-            driver.getReport().addContent("QbE is not deployed ("+qbe_input[0]+" is not visible), proceeding to click it.");
-            if(!checkClick(driver, b_qbe, qbe_input, where)){return false;}
-        }
-        driver.getReport().addContent("","br","");
-    return true;
+        driver.getReport().addContent("", "br", "");
+        return true;
     }
 
     /**
-     * This method is a succesion of a check click and a simple click, intended to do click and search actions which are very common
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_search
-     * @param e_result
-     * @param where
+     * This method does a check click and a simple click, intended to do click and search actions which are very common
+     *
+     * @param driver   TestDriver - This object gathers all the info refferent to the current test
+     * @param b_search String[] - [0] is the data name, [1] is the xpath
+     * @param e_result String[] - [0] is the data name, [1] is the xpath
+     * @param where    String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
      */
-    public static boolean clickSearchAndResult(TestDriver driver, String[] b_search, String[] e_result, String where){
+    public static boolean clickSearchAndResult(TestDriver driver, String[] b_search, String[] e_result, String where) {
         //HOW TO CALL THIS METHOD
         /*if(!Functions.clickSearchAndResult(driver,
                 new String[]{"x", getElements("x")}, //search button
                 new String[]{"y", getElements("y")}, //result element
                 " on SEARCH")){return false;}*/ // where
-        if(!checkClick(driver,b_search, e_result, where)){return false;}
-        try {
-            Thread.sleep(3000);
-        }catch (Exception e){
+        if (!checkClick(driver, b_search, e_result, where)) {
             return false;
         }
-        if(!simpleClick(driver, e_result, where)){return false;}
-return true;
+        sleep(3000);
+        //noinspection RedundantIfStatement
+        if (!simpleClick(driver, e_result, where)) {
+            return false;
+        }
+        return true;
     }
 
     /**
-     * This method is uset to insert strings into the desired input, also checks that is done correctly
+     * This method is used to insert strings into the desired input, also checks that is done correctly
      *
-     * @param driver    this object gathers all the info refferent to the current test
-     * @param path      path of the input to be filled
-     * @param data_name key for the data to be stored
-     * @param value     value for the data to be stored
-     * @param where     Location of the operation
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param path      String[] - Path of the input to be filled
+     * @param data_name String - Key for the data to be stored
+     * @param value     String - Value for the data to be stored
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see WebDriverWait#until(Function)
+     * @see ErrorManager#process(TestDriver, String)
+     * @see ExpectedConditions#elementToBeClickable(By)
      */
     public static boolean insertInput(TestDriver driver, String path[], String data_name, String value, String where) {
         //HOW TO CALL THIS METHOD:
@@ -277,16 +316,18 @@ return true;
         if (!Functions.insertInput(driver, new String[]{"inputname",getElements("inputvalue")},
                 "dataname", getData("")," where")){return false;}
         */
-        driver.getReport().addContent("Insert Input:","h5","");
+        driver.getReport().addContent("Insert Input:", "h5", "");
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
-        try{
+        try {
             wdw.until(ExpectedConditions.elementToBeClickable(By.xpath(path[1])));
-            if(!simpleClick(driver, path, where)){return false;}
+            if (!simpleClick(driver, path, where)) {
+                return false;
+            }
             driver.getDriver().findElement(By.xpath(path[1])).clear();
             driver.getDriver().findElement(By.xpath(path[1])).sendKeys(value);
-            Thread.sleep(1000); //To avoid reset
+            sleep(1000); //To avoid reset
             driver.getTest().getData().put(data_name, driver.getDriver().findElement(By.xpath(path[1])).getAttribute("value"));
-            if (!driver.getTest().getData().get(data_name).equals("") && !driver.getTest().getData().get(data_name).equals(null)) {
+            if (!driver.getTest().getData().get(data_name).equals("") && !(driver.getTest().getData().get(data_name) == null)) {
 
                 if (data_name.contains("password")) {
                     driver.getReport().addContent(data_name + " (******) inserted" + where + ".");
@@ -294,22 +335,27 @@ return true;
                     driver.getReport().addContent(data_name + " (" + value + ") inserted" + where + ".");
                 }
             }
-
-        }
-        catch(Exception e){
-            String ecode = "--ERROR: insertInput(): Unable to insert "+data_name+" with value: \""+value+"\" into " + path[0] + " (xpath " + path[1] + ") on " + where + ".";
+        } catch (Exception e) {
+            String ecode = "--ERROR: insertInput(): Unable to insert " + data_name + " with value: \"" + value + "\" into " + path[0] + " (xpath " + path[1] + ") on " + where + ".";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
         }
-
-        driver.getReport().addContent("","br","");
+        driver.getReport().addContent("", "br", "");
         return true;
     }
 
     /**
      * Takes a screenshot of the web browser current content
-     * @param driver this object gathers all the info refferent to the current test
+     *
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     * @return {@code boolean} to control the process flow
+     * @see WebElement#sendKeys(CharSequence...)
+     * @see Keys#chord(CharSequence...)
+     * @see DateFormat#format(Date)
+     * @see ReportFile#getFilepath()
+     * @see FileUtils#copyFile(File, OutputStream)
+     * @see TakesScreenshot#getScreenshotAs(OutputType)
      */
     public static boolean screenshot(TestDriver driver) {
         //HOW TO CALL THIS METHOD
@@ -319,9 +365,7 @@ return true;
             WebElement html = driver.getDriver().findElement(By.tagName("html"));
             if (driver.getDriverdetails().getBrowser().equals("ff")) {
                 html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
-                try{
-                    Thread.sleep(1000);}
-                catch (Exception e){}
+                sleep(1000);
             } else { //CHROME AND IE HAVE ISSUES WITH ZOOM.
                 driver.getReport().addContent("--WARNING: screenshot - Chrome and IE Web Drivers have issues with zooming. Method WILL NOT ZOOM!!<br>"
                         + "Keep in mind this might cause problems with screenshot area captured.", "p", "class='warning'");
@@ -333,9 +377,8 @@ return true;
             name = name + "_picture_at_" + date + ".png";
             ReportFile reportfile = new ReportFile(driver);
             String path = reportfile.getFilepath();
-            FileUtils.copyFile(scrFile, new File(path+name));
-            driver.getReport().addImage(name,"");
-
+            FileUtils.copyFile(scrFile, new File(path + name));
+            driver.getReport().addImage(name, "");
 
 
         } catch (IOException e) {
@@ -349,13 +392,15 @@ return true;
 
     /**
      * This method does the auditData process entirely, even clicks the actions button first.
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_actions xpath referent to the actions button, [0] is the data name, [1] is the value
-     * @param b_audit xpath referent to the audit button, [0] is the data name, [1] is the value
-     * @param b_ok xpath referent to the pop up ok button, [0] is the data name, [1] is the value
-     * @param where  String printed on the report to define the general location of the current operation
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param b_actions String[] - Xpath referent to the actions button, [0] is the data name, [1] is the value
+     * @param b_audit   String[] - Xpath referent to the audit button, [0] is the data name, [1] is the value
+     * @param b_ok      String[] - Xpath referent to the pop up ok button, [0] is the data name, [1] is the value
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
      */
-    public static boolean auditData(TestDriver driver, String[] b_actions, String[] b_audit, String[] b_ok, String where){
+    public static boolean auditData(TestDriver driver, String[] b_actions, String[] b_audit, String[] b_ok, String where) {
         //HOW TO CALL THIS METHOD
         /* if(!Functions.auditData(driver,
                 new String[]{"x",getElements("x")}, //actions button
@@ -363,27 +408,35 @@ return true;
                 new String[]{"audit_b_ok",recursiveXPaths.audit_b_ok}, //audit_b_ok
                 "where")){return false;}*/ //where this occurs
         driver.getReport().addContent("Audit Data:", "h5", "");
-        String[] glass = {"glass", recursiveXPaths.glass};
-        if(!checkClick(driver, b_actions, b_audit, where)){return false;}
-        if(!checkClick(driver, b_audit, glass, where)){return false;}
+        if (!checkClick(driver, b_actions, b_audit, where)) {
+            return false;
+        }
+        if (!checkClick(driver, b_audit, recursiveXPaths.glass, where)) {
+            return false;
+        }
         screenshot(driver);
-        if(!checkClickByAbsence(driver, b_ok, glass, where)){return false;}
-        driver.getReport().addContent("","br","");
+        if (!checkClickByAbsence(driver, b_ok, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
         return true;
     }
 
     /**
      * this method fills a LoV field by searching in the internal lov search for a value, and saves it into data for a further usage
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_lov xpath referent to the LoV button, [0] is the data name, [1] is the value
-     * @param i_lov xpath referent to the LoV input, [0] is the data name, [1] is the value
-     * @param b_search xpath referent to the LoV internal search button, [0] is the data name, [1] is the value
-     * @param e_result xpath referent to the LoV internal result, [0] is the data name, [1] is the value
-     * @param b_ok xpath referent to the LoV internal ok button, [0] is the data name, [1] is the value
-     * @param data_name xpath referent to the actions button, [0] is the data name, [1] is the value
-     * @param where tells where the operation is taking effect
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param b_lov     String[] - Xpath referent to the LoV button, [0] is the data name, [1] is the value
+     * @param i_lov     String[] - Xpath referent to the LoV input, [0] is the data name, [1] is the value
+     * @param b_search  String[] - Xpath referent to the LoV internal search button, [0] is the data name, [1] is the value
+     * @param e_result  String[] - Xpath referent to the LoV internal result, [0] is the data name, [1] is the value
+     * @param b_ok      String[] - Xpath referent to the LoV internal ok button, [0] is the data name, [1] is the value
+     * @param data_name String - The data name value to search in the lov
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean createLov (TestDriver driver, String[] b_lov, String[] i_lov, String[] b_search, String[] e_result, String[] b_ok, String data_name, String where){
+    public static boolean createLov(TestDriver driver, String[] b_lov, String[] i_lov, String[] b_search, String[] e_result, String[] b_ok, String data_name, String where) {
         // HOW TO CALL THIS METHOD
         /* if(!Functions.createLov(driver,
                 new String[]{"x",getElements("y")}, // b_lov
@@ -393,101 +446,116 @@ return true;
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "", //Data name
                 "")){return false;} */ // where the operation occurs
-        driver.getReport().addContent("LoV Creation: ", "h4", "");
-        String attr ="";
-        if(!simpleClick(driver, i_lov, where)){return false;}
-        if(!checkClick(driver, b_lov, b_search, where)){return false;}
-        if(!clickSearchAndResult(driver, b_search, e_result, where)){return false;}
-        if(!checkClickByAbsence(driver, b_ok, recursiveXPaths.lov_e_result, where)){return false;}
-        try{
+        driver.getReport().addContent("LoV Creation: ", "h5", "");
+        String attr;
+        if (!simpleClick(driver, i_lov, where)) {
+            return false;
+        }
+        if (!checkClick(driver, b_lov, b_search, where)) {
+            return false;
+        }
+        if (!clickSearchAndResult(driver, b_search, e_result, where)) {
+            return false;
+        }
+        if (!checkClickByAbsence(driver, b_ok, recursiveXPaths.lov_e_result, where)) {
+            return false;
+        }
+        try {
             attr = driver.getDriver().findElement(By.xpath(i_lov[1])).getAttribute("value");
-            if(!attr.equals("") && !attr.equals(null)){
+            if (!attr.equals("") && !attr.equals(null)) {
                 driver.getTest().getData().put(data_name, attr);
-            }
-            else{
+            } else {
                 String ecode = "--ERROR: createLov - Unable to check that the correct value was inserted in " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ". Value is blank or null.";
                 ErrorManager.process(driver, ecode);
                 return false;
             }
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             String ecode = "--ERROR: createLov - Unable to get the selected " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ".";
             ErrorManager.process(driver, ecode);
             return false;
         }
 
-        driver.getReport().addContent("","br","");
+        driver.getReport().addContent("", "br", "");
         return true;
 
     }
 
     /**
      * This method catches the value of the attribute "value" from a WebElement and puts it into the data map.
-     * @param driver this object gathers all the info refferent to the current test
-     * @param path xpath referent to the target WebElement, [0] is the data name, [1] is the value
-     * @param data_name name of the data that is included in the data map
-     * @param where tells where the operation is taking effect
+     *
+     * @param driver    TestDriver -Gathers all the info refferent to the current test
+     * @param path      String[] - Xpath referent to the target WebElement, [0] is the data name, [1] is the value
+     * @param data_name String - Name of the data that is included in the data map
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean getValue(TestDriver driver, String[] path, String data_name, String where){
+    public static boolean getValue(TestDriver driver, String[] path, String data_name, String where) {
         //HOW TO CALL THIS METHOD
         /*SwissKnife.getValue(driver,new String[]{"x", elements.get("x")}, // element path
                 "data_name", // key for data value (the name)
                 " where");*/ // whoere this operation occurs
         WebElement element = findElement(driver, path, where);
-        String attr="";
-        try{
-            attr = element.getAttribute("value");}
-        catch (Exception e){
-            String ecode = "--ERROR:getValue(): Unable to get the value of " + path[0] + " with xpath: " + path[1]+" " + where+".";
+        String attr;
+        try {
+            attr = element.getAttribute("value");
+        } catch (Exception e) {
+            String ecode = "--ERROR:getValue(): Unable to get the value of " + path[0] + " with xpath: " + path[1] + " " + where + ".";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
         }
         driver.getTest().getData().put(data_name, attr);
-        driver.getReport().addContent("HTML value ("+attr+") taken from "+path[0]+where);
+        driver.getReport().addContent("HTML value (" + attr + ") taken from " + path[0] + where);
         return true;
 
     }
 
     /**
      * This method catches the text value from a WebElement and puts it into the data map.
-     * @param driver this object gathers all the info refferent to the current test
-     * @param path xpath referent to the target WebElement, [0] is the data name, [1] is the value
-     * @param data_name name of the data that is included in the data map
-     * @param where tells where the operation is taking effect
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param path      String[] - Xpath referent to the target WebElement, [0] is the data name, [1] is the value
+     * @param data_name String - Name of the data that is included in the data map
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean getText(TestDriver driver, String[] path, String data_name, String where){
+    public static boolean getText(TestDriver driver, String[] path, String data_name, String where) {
         //HOW TO CALL THIS METHOD
         /* if(!Functions.getText(driver,new String[]{"x", getElements("x")}, // element path
                 "dataname", // key for data value (the name)
                 " on where")){return false;}*/ // where this operation occurs
         WebElement element = findElement(driver, path, where);
-        String text="";
-        try{
-            text = element.getText();}
-        catch (Exception e){
-            String ecode = "--ERROR:getText(): Unable to get the value of " + path[0] + " with xpath: " + path[1]+" " + where+".";
+        String text;
+        try {
+            text = element.getText();
+        } catch (Exception e) {
+            String ecode = "--ERROR:getText(): Unable to get the value of " + path[0] + " with xpath: " + path[1] + " " + where + ".";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
         }
         driver.getTest().getData().put(data_name, text);
-        driver.getReport().addContent("Content ("+text+") taken from "+path[0]+where);
-    return true;
+        driver.getReport().addContent("Content (" + text + ") taken from " + path[0] + where);
+        return true;
     }
 
     /**
-     * this method fills a LoV field by searching in the internal lov search for a specific value, and saves it into data for a further usage
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_lov xpath referent to the LoV button, [0] is the data name, [1] is the value
-     * @param i_lov xpath referent to the LoV input, [0] is the data name, [1] is the value
-     * @param i_inside_lov xpath referent to the internal LoV input, [0] is the data name, [1] is the value
-     * @param value this is what will be searched into the lov
-     * @param data_name name of the data that is included in the data map
-     * @param where tells where the operation is taking effect
+     * This method fills a LoV field by searching in the internal lov search for a specific value, and saves it into the data map for a further usage
+     *
+     * @param driver       TestDriver - This object gathers all the info refferent to the current test
+     * @param b_lov        String[] - Xpath referent to the LoV button, [0] is the data name, [1] is the value
+     * @param i_lov        String[] - Xpath referent to the LoV input, [0] is the data name, [1] is the value
+     * @param i_inside_lov String[] - Xpath referent to the internal LoV input, [0] is the data name, [1] is the value
+     * @param value        String - This is what will be searched into the lov
+     * @param data_name    String - Name of the data that is included in the data map
+     * @param where        String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean createLovByValue (TestDriver driver, String[] b_lov, String[] i_lov, String[] i_inside_lov, String value, String data_name, String where){
+    public static boolean createLovByValue(TestDriver driver, String[] b_lov, String[] i_lov, String[] i_inside_lov, String value, String data_name, String where) {
         //HOW TO CALL THIS METHOD
         /*if (!Functions.createLovByValue(driver,
                 new String[]{"x", getElements("x")}, //LoV button
@@ -496,80 +564,101 @@ return true;
                 "value", // value to search
                 "data_name", //name of the data
                 " on where")){return false;}*/ //where this operation occurs
-        driver.getReport().addContent("LoV by value Creation: ", "h4", "");
-        String attr ="";
-        if(!simpleClick(driver, i_lov, where)){return false;}
-        if(!checkClick(driver, b_lov, recursiveXPaths.lov_b_search, where)){return false;}
-        if(!insertInput(driver,i_inside_lov,"ref"+data_name, value, where)){return false;}
-        if(!clickSearchAndResult(driver, recursiveXPaths.lov_b_search, recursiveXPaths.lov_e_result, where)){return false;}
-        if(!checkClickByAbsence(driver, recursiveXPaths.lov_b_ok, recursiveXPaths.lov_b_search, where)){return false;}
-        try{
+        driver.getReport().addContent("LoV by value Creation: ", "h5", "");
+        String attr;
+        if (!simpleClick(driver, i_lov, where)) {
+            return false;
+        }
+        if (!checkClick(driver, b_lov, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+        if (!insertInput(driver, i_inside_lov, "ref" + data_name, value, where)) {
+            return false;
+        }
+        if (!clickSearchAndResult(driver, recursiveXPaths.lov_b_search, recursiveXPaths.lov_e_result, where)) {
+            return false;
+        }
+
+        if (!checkClickByAbsence(driver, recursiveXPaths.lov_b_ok, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+        try {
             attr = driver.getDriver().findElement(By.xpath(i_lov[1])).getAttribute("value");
-            if(!attr.equals("") && !attr.equals(null)){
+            if (!attr.equals("") && !attr.equals(null)) {
                 driver.getTest().getData().put(data_name, attr);
-            }
-            else{
+            } else {
                 String ecode = "--ERROR: createLov - Unable to check that the correct value was inserted in " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ". Value is blank or null.";
                 ErrorManager.process(driver, ecode);
                 return false;
 
             }
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             String ecode = "--ERROR: createLov - Unable to get the selected " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ".";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
         }
 
-        driver.getReport().addContent("","br","");
-            return true;
+        driver.getReport().addContent("", "br", "");
+        return true;
     }
 
     /**
-     * this method presses the enter button to do a query search, and then tries to click a result
-     * @param driver this object gathers all the info refferent to the current test
-     * @param qbe_input xpath referent to the query input, [0] is the data name, [1] is the value
-     * @param e_result xpath referent to the result, [0] is the data name, [1] is the value
-     * @param where tells where the operation is taking effect
+     * This method presses the enter button to do a query search, and then tries to click a result
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param qbe_input String[] - Xpath referent to the query input, [0] is the data name, [1] is the value
+     * @param e_result  String[] - Xpath referent to the result, [0] is the data name, [1] is the value
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean enterQueryAndClickResult(TestDriver driver, String[] qbe_input, String[] e_result, String where){
+    public static boolean enterQueryAndClickResult(TestDriver driver, String[] qbe_input, String[] e_result, String where) {
         //HOW TO CALL THIS METHOD
         /*if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"x", getElements("x")}, //any query input
                 new String[]{"y", getElements("y")}, //table result
                 "where")){return false;} // where this operation occurs
                 */
-        if(!simpleClick(driver, qbe_input, where)){return false;}
+        if (!simpleClick(driver, qbe_input, where)) {
+            return false;
+        }
         try {
             driver.getDriver().findElement(By.xpath(qbe_input[1])).sendKeys(Keys.RETURN);
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             String ecode = "--ERROR: enterQueryAndClickResult - Unable to enter the data in the query.";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
         }
-        if(!simpleClick(driver, e_result, where)){return false;}
+        if (!simpleClick(driver, e_result, where)) {
+            return false;
+        }
         return true;
     }
 
     /**
      * This method chooses the wanted option form dropdown menus
-     * @param driver this object gathers all the info refferent to the current test
-     * @param pathselect xpath referent to the select WebElement, [0] is the data name, [1] is the value
-     * @param content value of the element we are searching for
-     * @param dataname name of the data that is included in the data map
-     * @param where tells where the operation is taking effect
+     *
+     * @param driver     TestDriver - This object gathers all the info refferent to the current test
+     * @param pathselect String[] - Xpath referent to the select WebElement, [0] is the data name, [1] is the value
+     * @param content    String - Value of the element we are searching for
+     * @param dataname   String - Name of the data that is included in the data map
+     * @param where      String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
+     * @see Select#getOptions()
+     * @see List
+     * @see WebElement
      */
-    public static boolean selectText(TestDriver driver, String[] pathselect, String content, String dataname, String where){
+    public static boolean selectText(TestDriver driver, String[] pathselect, String content, String dataname, String where) {
         //HOW TO CALL THIS METHOD
         /*if (!Functions.selectText(driver,
                 new String[]{"x",getElements("x")},
                 "content", "dataname", " where")){return false;}*/
         boolean found = false;
         Select e_select;
-        List<WebElement> options = null;
+        List<WebElement> options;
         try {
             e_select = new Select(driver.getDriver().findElement(By.xpath(pathselect[1])));
             options = e_select.getOptions();
@@ -584,14 +673,14 @@ return true;
                 String optiontext = option.getText();
                 if (optiontext.contains(content)) {
                     option.click();
-                    Thread.sleep(2000);
+                    sleep(2000);
                     driver.getReport().addContent("Option (" + content + ") selected on " + pathselect[0] + ".");
                     found = true;
                     driver.getTest().getData().put(dataname, content);
                     break;
                 }
             }
-            if(!found){
+            if (!found) {
                 String ecode = "--ERROR: selectText(): Unable to find the target option into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
                 ErrorManager.process(driver, ecode);
                 return false;
@@ -607,142 +696,193 @@ return true;
 
     /**
      * This method does the process of the detach table testing
-     * @param driver this object gathers all the info refferent to the current test
-     * @param path xpath referent to the detach button, [0] is the data name, [1] is the value
-     * @param screenshot boolean value that indicates if the process has or not to do an screenshot
-     * @param where tells where the operation is taking effect
+     *
+     * @param driver     String - This object gathers all the info refferent to the current test
+     * @param path       String[] - Xpath referent to the detach button, [0] is the data name, [1] is the value
+     * @param screenshot Boolean - Value that indicates if the process has or not to do an screenshot
+     * @param where      String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
      */
-    public static boolean detachTable(TestDriver driver, String[] path, boolean screenshot, String where){
+    public static boolean detachTable(TestDriver driver, String[] path, boolean screenshot, String where) {
         //HOW TO CALL THIS METHOD
         /*if(!Functions.detachTable(driver,
                 new String[]{"x",getElements("x")}, //detach button
                 true/false,     //screenshot??
                 "where")){return false;}*/     //where this occurs
         driver.getReport().addContent("Detach Table:", "h5", "");
-        if(!simpleClick(driver, path, where)){return false;}
-        //if(screenshot){screenshot(driver);}
-        if(!simpleClick(driver, path, where)){return false;}
-        driver.getReport().addContent("","br","");
-return true;
+        if (!simpleClick(driver, path, where)) {
+            return false;
+        }
+        if (screenshot) {
+            screenshot(driver);
+        }
+        if (!simpleClick(driver, path, where)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
     }
 
     /**
-     * This method manages all the delete proces in Atlas 2.0
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_delete xpath referent to the delete button, [0] is the data name, [1] is the value
-     * @param where tells where the operation is taking effect
+     * This method manages all the delete process in Atlas 2.0
+     *
+     * @param driver   TestDriver - This object gathers all the info refferent to the current test
+     * @param b_delete String[] - Xpath referent to the delete button, [0] is the data name, [1] is the value
+     * @param where    String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
      */
-    public static boolean doDelete(TestDriver driver, String[] b_delete, String where){
+    public static boolean doDelete(TestDriver driver, String[] b_delete, String where) {
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.doDelete(driver,
-                new String[]{"b_delete", elements.get("b_delete")},//delete button
-                " on DELETE");*/
+        /*if(!Functions.doDelete(driver,
+                new String[]{"x", elements.get("x")},//delete button
+                "where")){return false;}*/
         driver.getReport().addContent("Deleting Record:", "h5", "");
-        if(!checkClick(driver, b_delete, new String[]{"glass",
-                recursiveXPaths.glass}, where)){return false;}
-        if(!checkClickByAbsence(driver, new String[]{"b_delete_yes",
-                recursiveXPaths.delete_b_yes}, new String[]{"glass",
-                recursiveXPaths.glass}, where)){return false;}
-        driver.getReport().addContent("","br","");
-return true;
+        if (!checkClick(driver, b_delete, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        if (!checkClickByAbsence(driver, new String[]{"b_delete_yes",
+                recursiveXPaths.delete_b_yes}, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
     }
 
     /**
-     * This method manages all the delete proces in Atlas 2.0 overrides with the b_delete_yes param
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_delete xpath referent to the delete button, [0] is the data name, [1] is the value
-     * @param b_delete_yes xpath referent to the confirmation delete button, [0] is the data name, [1] is the value
-     * @param where tells where the operation is taking effect
+     * This method manages all the delete process in Atlas 2.0 overrides with the b_delete_yes param
+     *
+     * @param driver       TestDriver - This object gathers all the info refferent to the current test
+     * @param b_delete     String[] - Xpath referent to the delete button, [0] is the data name, [1] is the value
+     * @param b_delete_yes String[] - Xpath referent to the confirmation delete button, [0] is the data name, [1] is the value
+     * @param where        String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
      */
-    public static boolean doDelete(TestDriver driver, String[] b_delete,String[] b_delete_yes, String where){
+    public static boolean doDelete(TestDriver driver, String[] b_delete, String[] b_delete_yes, String where) {
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.doDelete(driver,
-                new String[]{"b_delete", elements.get("b_delete")},//delete button
-                new String[]{"b_delete_yes", elements.get("b_delete_yes")},//delete button
-                " on DELETE");*/
+        /*if(!Functions.doDelete(driver,
+                new String[]{"x", elements.get("x")},//delete button
+                new String[]{"x", elements.get("x")},//delete button
+                "where")){return false;}*/
         driver.getReport().addContent("Deleting Record:", "h5", "");
-        if(!checkClick(driver, b_delete, new String[]{"glass",
-                recursiveXPaths.glass}, where)){return false;}
-        if(!checkClickByAbsence(driver,
+        if (!checkClick(driver, b_delete, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        if (!checkClickByAbsence(driver,
                 b_delete_yes,
-                new String[]{"glass",
-                        recursiveXPaths.glass}, where)){return false;}
-        driver.getReport().addContent("","br","");
-    return true;
+                recursiveXPaths.glass, where)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
     }
 
     /**
-     * This method manages all the delete proces in Atlas 2.0, also checks the records to check if was successful
-     * @param driver this object gathers all the info refferent to the current test
-     * @param b_delete xpath referent to the delete button, [0] is the data name, [1] is the value
-     * @param n_records xpath referent to the record balues, [0] is the data name, [1] is the value
-     * @param where tells where the operation is taking effect
+     * This method manages all the delete process in Atlas 2.0, also checks the records to check if was successful
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param b_delete  String[] - Xpath referent to the delete button, [0] is the data name, [1] is the value
+     * @param n_records String[] - Xpath referent to the record values, [0] is the data name, [1] is the value
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
      */
-    public static boolean doDeleteNCheck(TestDriver driver, String[] b_delete, String[] n_records, String where){
-        /* Niggas on da hood call da method like this:
-
-        SwissKnife.doDeleteNCheck(driver,
-                new String[]{"b_delete",
-                        elements.get("b_delete")},
-                new String[]{"n_records",
-                        elements.get("n_records")},
-                " where");
+    //TODO check this function|out
+    public static boolean doDeleteNCheck(TestDriver driver, String[] b_delete, String[] n_records, String where) {
+        /*
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"x", elements.get("x")},
+                new String[]{"x", elements.get("x")},
+                " where")){return false;}
          */
 
         driver.getReport().addContent("Deleting Record:", "h5", "");
-        if(!zoomOut(driver)){return false;}
-        int recordsbefore=0;
-        int recordsafter=0;
-        try{
-            recordsbefore = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());}
-        catch(Exception e){
-            String ecode = "--ERROR: doDeleteNCheck(): Unable to find "+n_records[0]+" or cast it to integer before delete was done.";
+        if (!zoomOut(driver)) {
+            return false;
+        }
+        int recordsbefore = 0;
+        int recordsafter = 0;
+        try {
+            recordsbefore = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());
+        } catch (Exception e) {
+            String ecode = "--ERROR: doDeleteNCheck(): Unable to find " + n_records[0] + " or cast it to integer before delete was done.";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
         }
-        if(!checkClick(driver, b_delete, new String[]{"glass",
-                recursiveXPaths.glass}, where)){return false;}
-        if(!checkClickByAbsence(driver, new String[]{"b_delete_yes",
-                recursiveXPaths.delete_b_yes}, new String[]{"glass",
-                recursiveXPaths.glass}, where)){return false;}
-        try{
-            recordsafter = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());}
-        catch(Exception f){
-            String ecode = "--ERROR: doDeleteNCheck(): Unable to find "+n_records[0]+" or cast it to integer after delete was done.";
+        if (!checkClick(driver, b_delete, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        if (!checkClickByAbsence(driver, new String[]{"b_delete_yes",
+                recursiveXPaths.delete_b_yes}, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        try {
+            recordsafter = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());
+        } catch (Exception f) {
+            String ecode = "--ERROR: doDeleteNCheck(): Unable to find " + n_records[0] + " or cast it to integer after delete was done.";
             f.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
         }
-        if((recordsbefore-recordsafter)==1){
-            driver.getReport().addContent("Delete successful, records changed from: "+recordsbefore+" to: "+recordsafter+".");
-        }
-        else if((recordsbefore-recordsafter)!=0){
-            driver.getReport().addContent("Oops seems like mutiple operations occured during test, cannot confirm delete was or not successful, records from: "+recordsbefore+" to: "+recordsafter+".","p","class='warning'");
-        }
-        else if((recordsbefore-recordsafter)==0){
-            String message ="Delete Unsuccessful, records didn't change (from: "+recordsbefore+" to: "+recordsafter+").";
-            ErrorManager.process(driver,message);
+        if ((recordsbefore - recordsafter) == 1) {
+            driver.getReport().addContent("Delete successful, records changed from: " + recordsbefore + " to: " + recordsafter + ".");
+        } else if ((recordsbefore - recordsafter) != 0) {
+            driver.getReport().addContent("Oops seems like mutiple operations occured during test, cannot confirm delete was or not successful, records from: " + recordsbefore + " to: " + recordsafter + ".", "p", "class='warning'");
+        } else if ((recordsbefore - recordsafter) == 0) {
+            String message = "Delete Unsuccessful, records didn't change (from: " + recordsbefore + " to: " + recordsafter + ").";
+            ErrorManager.process(driver, message);
             return false;
         }
-        if(!zoomIn(driver)){return false;}
-        driver.getReport().addContent("","br","");
+        if (!zoomIn(driver)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
         return true;
     }
 
     /**
      * Zooms out the WebDriver
-     * @param driver this object gathers all the info refferent to the current test
+     *
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     * @return {@code boolean} to control the process flow
+     * @see WebElement#sendKeys(CharSequence...)
+     * @see Keys
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean zoomOut(TestDriver driver){
-        try{
+    public static boolean zoomOut(TestDriver driver) {
+        try {
             WebElement html = driver.getDriver().findElement(By.tagName("html"));
             html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
             html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
             html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
             html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
-            driver.getReport().addContent("Screen zoomed out");}
-        catch (Exception e){ // by the way, this error "should never" be shown, zoom cannot fail (unless something really weird happens)
+            driver.getReport().addContent("Screen zoomed out");
+        } catch (Exception e) { // by the way, this error "should never" be shown, zoom cannot fail (unless something really weird happens)
+            String ecode = "--ERROR:zoomOut(): Not possible to zoom out.";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Zooms out the WebDriver an amount of times determined by parmeters
+     *
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     * @param times  Integer - Controls how many times we zoomOut
+     * @return {@code boolean} to control the process flow
+     * @see WebElement#sendKeys(CharSequence...)
+     * @see Keys
+     * @see ErrorManager#process(TestDriver, String)
+     */
+    public static boolean zoomOut(TestDriver driver, int times) {
+        try {
+            WebElement html = driver.getDriver().findElement(By.tagName("html"));
+            for (int i = 0; i < times + 1; i++) {
+                html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
+            }
+            driver.getReport().addContent("Screen zoomed out");
+        } catch (Exception e) { // by the way, this error "should never" be shown, zoom cannot fail (unless something really weird happens)
             String ecode = "--ERROR:zoomOut(): Not possible to zoom out.";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
@@ -753,15 +893,20 @@ return true;
 
     /**
      * Zooms in the WebDriver
-     * @param driver
+     *
+     * @param driver TestDriver - This TestDriver gathers all the info refferent to the current test
+     * @return {@code boolean} to control the process flow
+     * @see WebElement#sendKeys(CharSequence...)
+     * @see Keys
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean zoomIn(TestDriver driver){
-        try{
+    public static boolean zoomIn(TestDriver driver) {
+        try {
             WebElement html = driver.getDriver().findElement(By.tagName("html"));
             html.sendKeys(Keys.chord(Keys.CONTROL, Keys.NUMPAD0));
 
-            driver.getReport().addContent("Screen zoomed in to default");}
-        catch (Exception e){ // by the way, this error "should never" be shown, zoom cannot fail (unless something really weird happens)
+            driver.getReport().addContent("Screen zoomed in to default");
+        } catch (Exception e) { // by the way, this error "should never" be shown, zoom cannot fail (unless something really weird happens)
             String ecode = "--ERROR:zoomIn(): Not possible to zoom in.";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
@@ -771,82 +916,131 @@ return true;
     }
 
     /**
-     *
-     * @param driver this object gathers all the info refferent to the current test
-     * @param value this is what will be searched into the lov
-     * @param dataname name of the data that is included in the data map
-     * @param input xpath referent to the input where the value has to be inserted, [0] is the data name, [1] is the value
-     * @param button xpath referent to the button to be clicked, [0] is the data name, [1] is the value
-     * @param result xpath referent to the expected/unexpected result, [0] is the data name, [1] is the value
-     * @param randtype kind of the random value (integer, string or both)
-     * @param where tells where the operation is taking effect
+     * @param driver   TestDriver - This object gathers all the info refferent to the current test
+     * @param value    String - This is what will be searched into the lov
+     * @param dataname String - Name of the data that is included in the data map
+     * @param input    String[] - Xpath referent to the input where the value has to be inserted, [0] is the data name, [1] is the value
+     * @param button   String[] - Xpath referent to the button to be clicked, [0] is the data name, [1] is the value
+     * @param result   String[] - Xpath referent to the expected/unexpected result, [0] is the data name, [1] is the value
+     * @param randtype String - Kind of the random value (integer, string or both)
+     * @param where    String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
+     * @see DataGenerator
      */
-    public static boolean checkExistence(TestDriver driver, String value, String dataname, String[] input, String button[], String result[], String randtype, String where){
+    public static boolean checkExistence(TestDriver driver, String value, String dataname, String[] input, String button[], String result[], String randtype, String where) {
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.checkExistence(driver, "","x",//data name (x)
+        /*if (!Functions.checkExistence(driver, "","x",//data name (x)
                 new String[]{"y", elements.get("y")},//input
                 new String[]{"z", elements.get("z")},//search button
                 new String[]{"w", elements.get("w")},//expected not found result
                 "integer/string/both",//type of input
-                "");//where
+                "")){return false;}//where
                 */
         driver.getReport().addContent("Check Existence:", "h5", "");
-        String myrand = "";
-        String newvalue ="";
-        String replacement ="";
-        int i =0;
+        String myrand;
+        String newvalue;
+        String replacement = "";
+        int i = 0;
         driver.getReport().addRawText("<!--Start-->");
-        do{
-            if(randtype.toLowerCase().equals("integer")){
-                myrand = Integer.toString(DataGenerator.random(1, 100));}
-            if(randtype.toLowerCase().equals("string")){
-                myrand = DataGenerator.getRandomAlphanumericSequence(5, false);}
-            else{
-                myrand = DataGenerator.getRandomAlphanumericSequence(5, true);
+        do {
+            switch (randtype.toLowerCase()) {
+                case "integer":
+                    myrand = Integer.toString(DataGenerator.random(1, 100));
+                    break;
+                case "string":
+                    myrand = DataGenerator.getRandomAlphanumericSequence(5, false);
+                    break;
+                default:
+                    myrand = DataGenerator.getRandomAlphanumericSequence(5, true);
+                    break;
             }
-            newvalue = value+myrand;
-            if(!insertInput(driver, input, dataname, newvalue, where)){return false;}
-            if(!simpleClick(driver, button, where)){return false;}
+            newvalue = value + myrand;
+            if (!insertInput(driver, input, dataname, newvalue, where)) {
+                return false;
+            }
+            if (!simpleClick(driver, button, where)) {
+                return false;
+            }
             i++;
-        } while(driver.getDriver().findElements(By.xpath(result[1])).size()>0|| i>= 30);
+        } while (driver.getDriver().findElements(By.xpath(result[1])).size() > 0 || i >= 30);
 
         driver.getReport().addRawText("<!--End-->");
-        int startIndex =  driver.getReport().getContent().indexOf("<!--Start-->",0);
-        int endIndex = driver.getReport().getContent().indexOf("<!--End-->",9);
+        int startIndex = driver.getReport().getContent().indexOf("<!--Start-->", 0);
+        int endIndex = driver.getReport().getContent().indexOf("<!--End-->", 9);
         String str = driver.getReport().getContent().substring(startIndex, endIndex);
-        driver.getReport().getContent().replace(str,replacement);
+        driver.getReport().getContent().replace(str, replacement);
 
-        if(i>=30){
-            String message ="--ERROR: checkExistence(): Unable to not overlap other records after "+i+" tries";
+        if (i >= 30) {
+            String message = "--ERROR: checkExistence(): Unable to not overlap other records after " + i + " tries";
             ErrorManager.process(driver, message);
             return false;
-        }
-        else{
+        } else {
             driver.getTest().getData().put(dataname, newvalue);
-            driver.getReport().addContent(newvalue+" choosen to fill "+dataname+"value.");
+            driver.getReport().addContent(newvalue + " choosen to fill " + dataname + "value.");
 
         }
         driver.getReport().addContent("", "br", "");
-    return true;
+        return true;
     }
 
     /**
-     *
-     * @param driver this object gathers all the info refferent to the current test
-     * @param path xpath referent to the input where the value has to be inserted, [0] is the data name, [1] is the value
-     * @param where tells where the operation is taking effect
-     * @return returns the found WebElement
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     * @param path   String[] - Xpath referent to the input where the value has to be inserted, [0] is the data name, [1] is the value
+     * @param where  String - Tells where the operation is taking effect
+     * @return returns the found {@code WebElement}
+     * @see ErrorManager#process(TestDriver, String)
      */
-    public static WebElement findElement(TestDriver driver, String[] path, String where){
+    public static WebElement findElement(TestDriver driver, String[] path, String where) {
         WebElement element = null;
-        try{
+        try {
             element = driver.getDriver().findElement(By.xpath(path[1]));
-        }
-        catch(Exception e){
-            String ecode = "--ERROR:findElement(): Unable to find the element " + path[0] + " with xpath: " + path[1]+" " + where+".";
+        } catch (Exception e) {
+            String ecode = "--ERROR:findElement(): Unable to find the element " + path[0] + " with xpath: " + path[1] + " " + where + ".";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
         }
         return element;
+    }
+
+    // this function was implemented from Swissknife recently(04/07/2016)
+
+    /**
+     * This function finds the element to browse files and sends the path of the file we want to upload
+     *
+     * @param driver       TestDriver - This object gathers all the info refferent to the current test
+     * @param inputPath    String[] - The [0] contains the alias of the component and [1] the xpath reference (the same normally)
+     * @param fileToUpload String[] - The [0] contains the alias of the file and [1] the url
+     * @param where        String - Tells where the operation is taking effect
+     * @return {@code boolean}
+     * @see WebElement#sendKeys(CharSequence...)
+     * @see ErrorManager#process(TestDriver, String)
+     */
+    public static boolean fileUploader(TestDriver driver, String[] inputPath, String[] fileToUpload, String where) {
+        try {
+            WebElement upload = findElement(driver, inputPath, where);
+            upload.sendKeys(fileToUpload[1]);
+            driver.getReport().addContent("File: " + fileToUpload[0] + " with path " + fileToUpload[1] + " inserted in " + inputPath[0] + " on " + where);
+        } catch (Exception e) {
+            String ecode = "--ERROR: fileUploader(): Unable to interact with " + inputPath[0] + " with xPath " + inputPath[1];
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * This function calls Thread.sleep with a try/catch
+     *
+     * @param milisec {@code Integer} - Determines how much the process will sleep
+     * @see Thread#sleep(long)
+     */
+    public static void sleep(int milisec) {
+        try {
+            Thread.sleep(milisec);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

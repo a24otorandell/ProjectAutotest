@@ -6,7 +6,7 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * Created by otorandell on 04/03/2016.
+ * @author otorandell on 04/03/2016.
  */
 public class AT2ACCDI0003Manager implements AT2Test {
 
@@ -23,19 +23,20 @@ public class AT2ACCDI0003Manager implements AT2Test {
         return procedure;
     }
 
+    public void setProcedure(String[] procedure) {
+        this.procedure = procedure;
+    }
+
     public AT2ACCDI0003Test getTest() {
         return test;
     }
-
-    public Map<String, String> getData() {
-        return this.test.getData().getData();}
 
     public void setTest(AT2ACCDI0003Test test) {
         this.test = test;
     }
 
-    public void setProcedure(String[] procedure) {
-        this.procedure = procedure;
+    public Map<String, String> getData() {
+        return this.test.getData().getData();
     }
 
     public boolean start(TestDriver driver) {
@@ -71,14 +72,14 @@ public class AT2ACCDI0003Manager implements AT2Test {
                     getTest().delete(driver);
                     getTest().reset(driver);
                 }*/
-                if (getProcedure()[i].equals("x")) {
-                    if (!getTest().testCSED(driver)) {
-                        return false;
-                    }
+            if (getProcedure()[i].equals("x")) {
+                if (!getTest().testCSED(driver)) {
+                    return false;
                 }
             }
+        }
         return true;
 
     }
 
-    }
+}

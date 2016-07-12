@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by icastaneira on 17/05/2016.
+ * @author icastaneira on 17/05/2016.
  */
 public class AT2BOOSA0005Locators {
     Map<String, String> elements = new HashMap<>();
