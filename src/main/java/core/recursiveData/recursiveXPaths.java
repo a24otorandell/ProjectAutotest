@@ -32,7 +32,7 @@ public class recursiveXPaths {
     public static final String searchicon = "//*[contains(@id, 'pt1:searchminimenu::icon')]";
     public static final String componentinput = "//*[contains(@id, 'j_id__ctru158::content')]";
     public static final String searchcomponent = "//*[contains(@id, 'pt_i2::icon')]";
-    public static final String result = "//*[contains(@id, 'pt_i3:0:cl3')]";
+    public static final String result = "//div[contains(@id, 'j_id__ctru154')]//a[contains(@id, 'cl3')]";// now search an non so specific element within his father
     //</editor-fold>
     //<editor-fold desc="JIRA">
     public static final String[] jirauserinput = {"username", "//*[contains(@id, 'login-form-username')]"};

@@ -516,7 +516,7 @@ public class Functions {
      * This method catches the text value from a WebElement and puts it into the data map.
      *
      * @param driver    TestDriver - This object gathers all the info refferent to the current test
-     * @param path      String[] - Xpath referent to the target WebElement, [0] is the data name, [1] is the value
+     * @param path      String[] - [0] is the data name to asign, [1] is the Xpath referent to the target WebElement
      * @param data_name String - Name of the data that is included in the data map
      * @param where     String - Tells where the operation is taking effect
      * @return {@code boolean} to control the process flow
@@ -881,7 +881,7 @@ public class Functions {
             for (int i = 0; i < times + 1; i++) {
                 html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
             }
-            driver.getReport().addContent("Screen zoomed out");
+            driver.getReport().addContent("Screen zoomed out " + times + " times.");
         } catch (Exception e) { // by the way, this error "should never" be shown, zoom cannot fail (unless something really weird happens)
             String ecode = "--ERROR:zoomOut(): Not possible to zoom out.";
             e.printStackTrace();

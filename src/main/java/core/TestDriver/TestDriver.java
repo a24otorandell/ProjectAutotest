@@ -5,7 +5,10 @@ import core.ErrorManager.ErrorManager;
 import core.HTMLReport.AutoReport;
 import core.Jira.JiraUpdate;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import screen.AT2Test;
 
 import java.io.File;
@@ -283,7 +286,24 @@ public class TestDriver {
     public void testStart() {
         System.out.println("Welcome to Autotest 2.0");
         if (checkExistence(this.getTestdetails().getTestname())) {
-            openFFDriver();
+            switch (driverdetails.getBrowser()) {
+                case "ff":
+                    openFFDriver();
+                    break;
+                case "ie":
+                    openIEDriver();
+                    break;
+                case "eg":
+                    openEdgeDriver();
+                    break;
+                case "ch":
+                    openChromeDriver();
+                    break;
+                default:
+                    driver.quit();
+                    break;
+            }
+
             this.driver.get(this.driverdetails.getUrl());
             this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
             setCurrentwork("REGRESSION");
@@ -329,6 +349,20 @@ public class TestDriver {
         this.driver.manage().window().maximize();
     }
 
+    public void openIEDriver() {
+        this.driver = new InternetExplorerDriver();
+        this.driver.manage().window().maximize();
+    }
+
+    public void openChromeDriver() {
+        this.driver = new ChromeDriver();
+        this.driver.manage().window().maximize();
+    }
+
+    public void openEdgeDriver() {
+        this.driver = new EdgeDriver();
+        this.driver.manage().window().maximize();
+    }
     /**
      * This function tries to make instances of the classes component that you specified on the args
      */
