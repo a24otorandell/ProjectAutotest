@@ -30,10 +30,10 @@ public class AT2BOOSA1003Locators {
     public void setElements() {
         /*elements.put("","//*[contains(@id, '')]");*/
         /* GENERAL */
-        elements.put("general_b_generate_estimation", "//*[contains(@id, 'pt1:dyntdc:r1:1:cl1')]");
-        elements.put("general_b_cancel_estimation", "//*[contains(@id, 'pt1:dyntdc:r1:1:cl2')]");
-        elements.put("general_lov_booking", "//*[contains(@id, 'pt1:dyntdc:r1:1:cb2::icon')]");
-        elements.put("general_i_booking", "//*[contains(@id, 'pt1:dyntdc:r1:1:it4::content')]");
+        elements.put("general_b_generate_estimation", "//*[contains(@id, 'pgl34')]//*[contains(@id, 'cl1')]");
+        elements.put("general_b_cancel_estimation", "//*[contains(@id, 'cl2')]");
+        elements.put("general_lov_booking", "//*[contains(@id, 'cb2::icon')]");
+        elements.put("general_i_booking", "//*[contains(@id, 'it4::content')]");
         elements.put("general_lov_booking_i_receptive", "//*[contains(@id, 'it19::content')]");
         elements.put("general_lov_booking_i_locator", "//*[contains(@id, 'it25::content')]");
         elements.put("general_lov_booking_b_search", "//*[contains(@id, 'cb1')]");
@@ -66,6 +66,7 @@ public class AT2BOOSA1003Locators {
         elements.put("sales_hotel_b_add_i_nights", "//*[contains(@id, ':it1::content')]");
         elements.put("sales_hotel_b_add_i_end_date", "//*[contains(@id, ':id3::content')]");
         elements.put("sales_hotel_b_add_lov_hotel", "//*[contains(@id, ':transNomHotelId::lovIconId')]");
+        elements.put("sales_hotel_b_add_lov_hotel_i_short_name", "//*[contains(@id, ':transNomHotelId::_afrLovInternalQueryId:value00::content')]");
         elements.put("sales_hotel_b_add_i_hotel", "//*[contains(@id, ':transNomHotelId::content')]");
         elements.put("sales_hotel_b_add_i_contract", "//*[contains(@id, ':it3::content')]");
         elements.put("sales_hotel_b_add_b_contract", "//*[contains(@id, ':cb3')]");
@@ -85,7 +86,6 @@ public class AT2BOOSA1003Locators {
 
         elements.put("sales_hotel_b_add_b_add_distribution", "//*[contains(@id, 'ctb1::icon')]");
 
-
         elements.put("sales_hotel_b_remove", "//*[contains(@id, 'pc1:pcgt1:boton_remove')]");
         elements.put("sales_hotel_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
         elements.put("sales_hotel_e_record", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr/td[1]");
@@ -96,6 +96,9 @@ public class AT2BOOSA1003Locators {
         elements.put("sales_hotel_b_detach_table", "//*[contains(@id, 'pc1:_dchTbr')]/a");
         elements.put("sales_hotel_b_detach_table_b_close", "//*[contains(@id, 'pc1::_afrDetachDialogId::close')]");
         elements.put("sales_hotel_b_cancel_changes", "//*[contains(@id, 'cxBeSh1')]");
+
+        /* SALES HOTEL ADD -- CONTRACT 'LOV' */
+        elements.put("sales_hotel_b_add_b_contract_", "//*[contains(@id, '')]");
 
         /* SALES HOTEL QBE */
         elements.put("sales_hotel_b_qbe_i_start_date", "//*[contains(@id, 'pc1:t1:id2::content')]");

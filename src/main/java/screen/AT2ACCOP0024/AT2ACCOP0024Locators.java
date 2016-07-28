@@ -51,7 +51,7 @@ public class AT2ACCOP0024Locators {
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
         /* RECORDS */
         elements.put("record_interaction_b_actions", "//*[contains(@id, 'pc1:menuCustom')]/div/table/tbody/tr/td[3]/div");
-        elements.put("record_interaction_b_export", "//*[contains(@id, 'pc1:commandMenuItem1')]");
+        elements.put("record_interaction_b_export", "//*[contains(@id, '1:pc1:commandMenuItem1')]/td[2]");
         elements.put("record_interaction_b_modify", "//*[contains(@id, 'pc1:acM2Mod')]");
         elements.put("record_interaction_b_modify_b_file", "//*[contains(@id, 'inputFile1::content')]");
         elements.put("record_interaction_b_modify_b_save", "//*[contains(@id, 'cb3')]");

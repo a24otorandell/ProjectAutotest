@@ -262,11 +262,7 @@ public class AT2MSCSU0007Test {
                 return false;
             }
         }
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        Functions.sleep(2000);
         if (!Functions.createLovByValue(driver,
                 new String[]{"available_web_details_b_add_lov_language_code", getElements("available_web_details_b_add_lov_language_code")},
                 new String[]{"available_web_details_b_add_i_language_code", getElements("available_web_details_b_add_i_language_code")},
@@ -342,7 +338,7 @@ public class AT2MSCSU0007Test {
                     " on SEARCH URL COUNTRY")) {
                 return false;
             }
-            Thread.sleep(2800);
+            Functions.sleep(2800);
             if (!Functions.simpleClick(driver,
                     new String[]{"url_country_search_e_result", getElements("url_country_search_e_result")},
                     " on SEARCH URL COUNTRY")) {
@@ -380,7 +376,7 @@ public class AT2MSCSU0007Test {
                     " on SEARCH AVAILABLE WEB")) {
                 return false;
             }
-            Thread.sleep(2800);
+            Functions.sleep(2800);
             if (!Functions.simpleClick(driver,
                     new String[]{"available_web_e_result", getElements("available_web_e_result")},
                     " on SEARCH AVAILABLE WEB")) {
@@ -614,7 +610,7 @@ public class AT2MSCSU0007Test {
                     " on DELETE URL COUNTRY")) {
                 return false;
             }
-            Thread.sleep(2800);
+            Functions.sleep(2800);
             if (!Functions.simpleClick(driver,
                     new String[]{"url_country_pais_url_b_remove_b_ok", getElements("url_country_pais_url_b_remove_b_ok")},
                     " on DELETE URL COUNTRY")) {
@@ -643,12 +639,13 @@ public class AT2MSCSU0007Test {
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
-            Thread.sleep(2800);
+            Functions.sleep(2800);
             if (!Functions.simpleClick(driver,
                     new String[]{"available_web_b_remove_b_ok", getElements("available_web_b_remove_b_ok")},
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
+            Functions.sleep(1500);
             if (!Functions.simpleClick(driver,
                     new String[]{"available_web_b_remove_b_ok_b_ok", getElements("available_web_b_remove_b_ok_b_ok")},
                     " on DELETE AVAILABLE WEB")) {
@@ -677,7 +674,7 @@ public class AT2MSCSU0007Test {
                     " on DELETE AVAILABLE WEB DETAILS")) {
                 return false;
             }
-            Thread.sleep(2800);
+            Functions.sleep(2800);
             if (!Functions.simpleClick(driver,
                     new String[]{"available_web_details_b_remove_b_ok", getElements("available_web_details_b_remove_b_ok")},
                     " on DELETE AVAILABLE WEB DETAILS")) {

@@ -194,6 +194,7 @@ public class AT2ACCOP0024Test {
                 " on export")) {
             return false;
         }
+        Functions.sleep(1500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_export", getElements("record_interaction_b_export")},
                 " on export")) {

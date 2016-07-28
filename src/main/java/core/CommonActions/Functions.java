@@ -7,7 +7,6 @@ import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,10 +16,8 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
 /**
  * This class has all the actions commonly used to test a component
@@ -342,6 +339,7 @@ public class Functions {
             return false;
         }
         driver.getReport().addContent("", "br", "");
+        sleep(1000);
         return true;
     }
 
@@ -490,6 +488,7 @@ public class Functions {
      * @param where     String - Tells where the operation is taking effect
      * @return {@code boolean} to control the process flow
      * @see ErrorManager#process(TestDriver, String)
+     * @deprecated Since 21/07/2016 the use of this function was replaced by{@code getAttr()}
      */
     public static boolean getValue(TestDriver driver, String[] path, String data_name, String where) {
         //HOW TO CALL THIS METHOD
@@ -509,7 +508,38 @@ public class Functions {
         driver.getTest().getData().put(data_name, attr);
         driver.getReport().addContent("HTML value (" + attr + ") taken from " + path[0] + where);
         return true;
+    }
 
+    /**
+     * This method catches the value of the attribute passed by parameters from a WebElement and puts it into the data map.
+     *
+     * @param driver    TestDriver - Gathers all the info refferent to the current test
+     * @param path      String[] - Xpath referent to the target WebElement, [0] is the data name, [1] is the value
+     * @param data_name String - Name of the data that is included in the data map
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
+     */
+    public static boolean getAttr(TestDriver driver, String[] path, String attr, String data_name, String where) {
+        //HOW TO CALL THIS METHOD
+        /*Functions.getAttr(driver,
+                new String[]{"x", elements.get("x")}, // element path
+                "attr", // atribute to get data (class, value, id, style, etc...)
+                "data_name", // key for data value (the name)
+                "where");*/ // where this operation occurs
+        WebElement element = findElement(driver, path, where);
+        String varx;
+        try {
+            varx = element.getAttribute(attr);
+        } catch (Exception e) {
+            String ecode = "--ERROR:getValue(): Unable to get the value of " + path[0] + " with xpath: " + path[1] + " " + where + ".";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        driver.getTest().getData().put(data_name, varx);
+        driver.getReport().addContent("HTML " + attr + " (" + varx + ") taken from " + path[0] + where);
+        return true;
     }
 
     /**

@@ -45,32 +45,34 @@ public class AT2BOOSA1003Data {
      * Sets the hardcoded data in the data Map
      */
     public void setDefaultData() {
-        data.put("booking", "3219229");
+        data.put("booking_receptive", "1");
+        data.put("booking_sales", "3219229");// only to check
+        data.put("booking_transfers", "3219226"); // do not touch
 
-        data.put("sales_start_date", "08/08/2016");
-        data.put("sales_nights", "9");
-        data.put("sales_end_date", "17/08/2016");
-        data.put("sales_hotel", "RIU BRAVO");
-        data.put("sales_contract", "CG-OPAQUEBA");
-        data.put("sales_units", "2");
-        data.put("sales_room", "DBT");
-        data.put("sales_chracteristic", "BL-ST");
+        data.put("sales_start_date", "19/09/2016");
+        data.put("sales_nights", "2");
+        data.put("sales_end_date", "21/09/2016");
+        data.put("sales_hotel", "PALACIO AVENIDA");
+        data.put("sales_contract", "CG-TODOS");
+        data.put("sales_units", "1");
+        data.put("sales_room", "SGL");
+        data.put("sales_chracteristic", "ST");
         data.put("sales_rate", "");
-        data.put("sales_board", "AI");
+        data.put("sales_board", "BB");
         data.put("sales_adult", "1");
-        data.put("sales_child", "1");
+        data.put("sales_child", "0");
         data.put("sales_infant", "0");
         data.put("sales_si", "Yes");
         data.put("sales_pi", "Yes");
-        data.put("sales_date_send_hotel", "20/06/2016");
+        data.put("sales_date_send_hotel", "15/07/2016");
         data.put("sales_cancellation_date", "");
         data.put("sales_transfer", "Both");
         data.put("sales_product_office", "");
         data.put("sales_product", "");
 
-        data.put("distribution_order", "2");
-        data.put("distribution_name", "Mr Jose Ilidio Luis");
-        data.put("distribution_surname", "Luis");
+        data.put("distribution_order", "1");
+        data.put("distribution_name", "Kathyrn");
+        data.put("distribution_surname", "Lamb");
         data.put("distribution_age", "30");
         data.put("distribution_type", "");
         data.put("distribution_room", "1");

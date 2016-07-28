@@ -102,13 +102,16 @@ public class AT2BOOSA1003Test {
      * @return boolean to control the process flow
      */
     protected boolean testCSED(TestDriver driver) {
-        if (!searchBooking(driver)) {
+        if (!searchBooking(driver, false)) {
             return false;
         }
         if (!estimationProcess(driver)) {
             return false;
-        }
+        }/*
         if (!salesQbe(driver)) {
+            return false;
+        }
+        if (!salesEdit(driver)) {
             return false;
         }
         if (!salesDataHistory(driver)) {
@@ -128,11 +131,15 @@ public class AT2BOOSA1003Test {
         }
         if (!changeTab(driver, false)) {
             return false;
-        }
+        }*/
         return false;
     }
 
-    protected boolean searchBooking(TestDriver driver) {
+    protected boolean searchBooking(TestDriver driver, boolean wch) {
+        String bok = "booking_sales";
+        if (wch) {
+            bok = "booking_tranfers";
+        }
         Functions.sleep(3000);
         if (!Functions.simpleClick(driver,
                 new String[]{"general_lov_booking", getElements("general_lov_booking")},
@@ -140,9 +147,16 @@ public class AT2BOOSA1003Test {
             return false;
         }
         if (!Functions.insertInput(driver,
+                new String[]{"general_lov_booking_i_receptive", getElements("general_lov_booking_i_receptive")},
+                "booking_receptive",
+                getData("booking_receptive"),
+                " on SEARCH")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
                 new String[]{"general_lov_booking_i_locator", getElements("general_lov_booking_i_locator")},
                 "booking_locator",
-                getData("booking"),
+                getData(bok),
                 " on SEARCH")) {
             return false;
         }
@@ -156,20 +170,21 @@ public class AT2BOOSA1003Test {
     }
 
     protected boolean estimationProcess(TestDriver driver) {
-        Functions.zoomOut(driver, 2);
         Functions.sleep(3000);
         if (!Functions.simpleClick(driver,
                 new String[]{"general_b_generate_estimation", getElements("general_b_generate_estimation")},
                 " on ESTIMATION")) {
             return false;
         }
+        Functions.zoomOut(driver, 2);
+        Functions.sleep(1000);
         if (!Functions.getText(driver,
                 new String[]{"general_original_booking_e_total", getElements("general_original_booking_e_total")},
                 "booking_total",
                 " on ESTIMATION")) {
             return false;
         }
-        Functions.sleep(7000);
+        Functions.sleep(6000);
         if (!Functions.getText(driver,
                 new String[]{"general_booking_estimation_e_total", getElements("general_booking_estimation_e_total")},
                 "estimation_total",
@@ -181,39 +196,158 @@ public class AT2BOOSA1003Test {
         } else {
             ErrorManager.process(driver, "Incorrect Estimation");
         }
-        if (!Functions.simpleClick(driver,
+        if (!Functions.getAttr(driver,
                 new String[]{"general_b_save_changes_to_booking", getElements("general_b_save_changes_to_booking")},
+                "class",
+                "save_changes_class",
                 " on ESTIMATION")) {
             return false;
-        }
-        try {
-            Functions.sleep(2500);
-            if (driver.getDriver().findElement(By.xpath(getElements("general_b_save_changes_to_booking_e_info"))).isDisplayed()
-                    || driver.getDriver().findElement(By.xpath(getElements("general_b_save_changes_to_booking_b_ok"))).isDisplayed()) {
-                if (!Functions.getText(driver,
-                        new String[]{"general_b_save_changes_to_booking_e_info", getElements("general_b_save_changes_to_booking_e_info")},
-                        "info_text_estimation",
+        }//
+        if (getData("save_changes_class").equals("x7j p_AFTextOnly")) {
+            if (!Functions.simpleClick(driver,
+                    new String[]{"general_b_save_changes_to_booking", getElements("general_b_save_changes_to_booking")},
+                    " on ESTIMATION")) {
+                return false;
+            }
+            try {
+                Functions.sleep(3500);
+                if (!Functions.simpleClick(driver,
+                        new String[]{"general_b_save_changes_to_booking_b_ok", getElements("general_b_save_changes_to_booking_b_ok")},
                         " on ESTIMATION")) {
                     return false;
                 }
-                if (!getData("info_text_estimation").equals("Your changes have been stored successfully.")) {
-                    ErrorManager.process(driver, "Cannot complete the ~Save changes of estimation~");
-                }
-                Functions.simpleClick(driver,
-                        new String[]{"general_b_save_changes_to_booking_b_ok", getElements("general_b_save_changes_to_booking_b_ok")},
-                        " on ESTIMATION");
-                return true;
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-        Functions.sleep(2500);
+        Functions.sleep(1500);
         Functions.zoomIn(driver);
         return true;
     }
 
     //// TODO: 18/07/2016
     protected boolean salesAdd(TestDriver driver) {
+        return true;
+    }
+
+    protected boolean salesDelete(TestDriver driver) {
+        return true;
+    }
+
+    protected boolean salesEdit(TestDriver driver) {
+        Functions.zoomOut(driver, 2);
+        driver.getDriver().findElement(By.tagName("html")).sendKeys(Keys.chord(Keys.CONTROL, Keys.ARROW_DOWN));
+        if (!Functions.simpleClick(driver,
+                new String[]{"sales_hotel_e_record", getElements("sales_hotel_e_record")},
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_contract", getElements("sales_hotel_b_add_i_contract")},
+                "sales_contract",
+                getData("sales_contract"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_start_date", getElements("sales_hotel_b_add_i_start_date")},
+                "sales_start_date",
+                getData("sales_start_date"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_nights", getElements("sales_hotel_b_add_i_nights")},
+                "sales_nights",
+                getData("sales_nights"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_end_date", getElements("sales_hotel_b_add_i_end_date")},
+                "sales_end_date",
+                getData("sales_end_date"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_hotel", getElements("sales_hotel_b_add_i_hotel")},
+                "sales_hotel",
+                getData("sales_hotel"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_units", getElements("sales_hotel_b_add_i_units")},
+                "sales_units",
+                getData("sales_units"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_room", getElements("sales_hotel_b_add_i_room")},
+                "sales_room",
+                getData("sales_room"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_characteristic", getElements("sales_hotel_b_add_i_characteristic")},
+                "sales_chracteristic",
+                getData("sales_chracteristic"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_board", getElements("sales_hotel_b_add_i_board")},
+                "sales_board",
+                getData("sales_board"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_adult", getElements("sales_hotel_b_add_i_adult")},
+                "sales_adult",
+                getData("sales_adult"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_child", getElements("sales_hotel_b_add_i_child")},
+                "sales_child",
+                getData("sales_child"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"sales_hotel_b_add_i_infant", getElements("sales_hotel_b_add_i_infant")},
+                "sales_infant",
+                getData("sales_infant"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+     /*   if (!Functions.selectText(driver,
+                new String[]{"sales_hotel_b_add_i_si", getElements("sales_hotel_b_add_i_si")},
+                "sales_si",
+                getData("sales_si"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.selectText(driver,
+                new String[]{"sales_hotel_b_add_i_pi", getElements("sales_hotel_b_add_i_pi")},
+                "sales_pi",
+                getData("sales_pi"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }
+        if (!Functions.selectText(driver,
+                new String[]{"sales_hotel_b_add_i_transfer", getElements("sales_hotel_b_add_i_transfer")},
+                "sales_transfer",
+                getData("sales_transfer"),
+                " on SALES HOTEL EDIT")) {
+            return false;
+        }*/
+
         return true;
     }
 
