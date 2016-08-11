@@ -1,6 +1,8 @@
 package core.Jira;
 
+import core.CommonActions.DataGenerator;
 import core.FileGestor.DataHarvester;
+import core.TestDriver.TestDetails;
 import core.TestDriver.TestDriver;
 
 import java.util.HashMap;
@@ -19,13 +21,16 @@ public class JiraDetails {
     public String jiraBuildNumber = "";
     public String jiraCycleFrom = "";
     public String jiraCycleTo = "";
+    public String jiratrunk = "";
+    public String environment = "";
+    JiraDriver jiradriver;
     //<editor-fold desc="ATTRIBUTES">
     boolean jiraloop = false;
     Map<String, String> elements = new HashMap<>();
     String url = "https://agile.hotelbeds.com/jira/login.jsp";
-    String urlcycle1 = "https://agile.tuitravel-ad.com/jira/browse/";
-    String urlcycle2 = "?selectedTab=com.thed.zephyr.je%3Apdb_cycle_panel_section";
-    String urlbrowse = "https://agile.tuitravel-ad.com/jira/browse/";
+    String urlcycle1 = "https://agile.hotelbeds.com/jira/projects/";
+    String urlcycle2 = "?selectedItem=com.thed.zephyr.je%3Azephyr-tests-page#test-cycles-tab";
+    String urlbrowse = "https://agile.hotelbeds.com/jira/browse/";
     String teststatus = "PASS";
     String project;
     DataHarvester harvester = new DataHarvester("C:/SisVersion.txt");
@@ -35,12 +40,16 @@ public class JiraDetails {
      * @param driver TestDriver - This object gathers all the info refferent to the current test
      */
     public JiraDetails(TestDriver driver) {
+        this.jiradriver = new JiraDriver(driver);
         setElements();
         setVersionDetails(driver);
         setProject(driver);
         setStatus(driver);
     }
 
+    public TestDriver getDriver() {
+        return this.jiradriver.getDriver();
+    }
     /**
      * Gets the variable elements
      *
@@ -84,6 +93,14 @@ public class JiraDetails {
      */
     public String getJiraCycle() {
         return jiraCycle;
+    }
+    /**
+     * Gets the current cycle of JIRA
+     *
+     * @return {@code String}
+     */
+    public String getEnvironment() {
+        return environment;
     }
 
     /**
@@ -132,6 +149,16 @@ public class JiraDetails {
     }
 
     /**
+     * Gets the status of the test
+     *
+     * @return {@code String}
+     */
+
+    public String getJiratrunk() {
+        return jiratrunk;
+    }
+
+    /**
      * Sets the string variable {@code project}
      *
      * @param driver TestDriver - This TestDriver gathers all the info refferent to the current test
@@ -147,12 +174,14 @@ public class JiraDetails {
      * @param driver TestDriver - This TestDriver gathers all the info refferent to the current test
      */
     public void setVersionDetails(TestDriver driver) {
-        this.jiraVersion = harvester.harvest(driver.getTestdetails().getTestname());
+        this.jiratrunk = harvester.harvest(driver.getTestdetails().getTestname());
+        this.jiraVersion = harvester.harvest("Version");
         this.jiraCycleDate = harvester.harvest("Date");
         this.jiraBuildNumber = harvester.harvest("Build");
         this.jiraCycleFrom = harvester.harvest("From");
         this.jiraCycleTo = harvester.harvest("To");
-
+        this.environment = DataGenerator.caseConversion(getDriver().getTestdetails().getEnvironment(), "uppercase");
+        this.jiraCycle = getJiraCycle() + getEnvironment() + " " + getJiratrunk() + " " + getJiraCycleDate();
     }
 
     /**
@@ -180,6 +209,7 @@ public class JiraDetails {
         this.elements.put("cycleMenuVersionDropDown", "//*[@id='select-version2-field']");
         this.elements.put("cycleName", "//*[@id='cycle_name']");
         this.elements.put("buildNumber", ".//*[@id='cycle_build']");
+        this.elements.put("environment", ".//*[@id='cycle_environment']");
         this.elements.put("dateFrom", ".//*[@id='cycle_startDate']");
         this.elements.put("dateTo", ".//*[@id='cycle_endDate']");
         this.elements.put("saveButtonCreateCycle", "//*[contains(@id, 'cycle-create-form-submit')]");//.//*[@id='cycle-create-form-submit-12601']

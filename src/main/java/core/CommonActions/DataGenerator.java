@@ -189,4 +189,94 @@ public class DataGenerator {
         }
         return today;
     }
+
+    /**
+     * This method change a string in uppercase, lowercase, capitalcase, firstletter string
+     *
+     * @param toConvert String - String to change
+     * @param condition String - values to change: uppercase, lowercase, capitalcase, firstletter
+     * @return {@code String} String change value
+     */
+    public static String caseConversion(String toConvert, String condition) {
+        /*
+        DataGenerator.caseConversion("String_to_convert","uppercase/lowercase/capitalcase/firstletter");
+         */
+
+        String converted = "";
+        switch (condition) {
+            case "uppercase":
+                for (int i = 0; i < toConvert.length(); i++) {
+                    if (toConvert.charAt(i) >= 97 && toConvert.charAt(i) <= 122) {
+                        int value = ((int) toConvert.charAt(i)) - 32;
+                        char character = (char) value;
+                        converted = converted + character;
+
+                    } else {
+                        converted = converted + toConvert.charAt(i);
+                    }
+                }
+                break;
+            case "lowercase":
+                for (int i = 0; i < toConvert.length(); i++) {
+                    if ((int) toConvert.charAt(i) >= 65 && (int) toConvert.charAt(i) <= 90) {
+                        int value = ((int) toConvert.charAt(i)) + 32;
+                        char character = (char) value;
+                        converted = converted + character;
+
+                    } else {
+                        converted = converted + toConvert.charAt(i);
+                    }
+                }
+                break;
+            case "capitalcase":
+                for (int i = 0; i < toConvert.length(); i++) {
+                    if ((i == 0) && ((int) toConvert.charAt(i) >= 97 && (int) toConvert.charAt(i) <= 122)) {
+                        int value = ((int) toConvert.charAt(i)) - 32;
+                        char character = (char) value;
+                        converted = converted + character;
+                    } else if ((i != 0) && ((int) toConvert.charAt(i) >= 97 && (int) toConvert.charAt(i) <= 122)) {
+                        converted = converted + toConvert.charAt(i);
+                    } else if ((i != 0) && ((int) toConvert.charAt(i) >= 65 && (int) toConvert.charAt(i) <= 90)) {
+                        int value = ((int) toConvert.charAt(i)) + 32;
+                        char character = (char) value;
+                        converted = converted + character;
+                    } else {
+                        converted = converted + toConvert.charAt(i);
+                    }
+                }
+                break;
+            case "firstletter":
+                for (int i = 0; i < toConvert.length(); i++) {
+
+                    if ((i == 0) && ((int) toConvert.charAt(i) >= 97 && (int) toConvert.charAt(i) <= 122)) {//SI es el primero y minuscula
+                        int value = ((int) toConvert.charAt(i)) - 32;
+                        char character = (char) value;
+                        converted = converted + character;
+                    } else if ((i != 0) && ((int) toConvert.charAt(i) >= 97 && (int) toConvert.charAt(i) <= 122)) {//Si no es el primero y es minuscula
+                        if (toConvert.charAt(i - 1) == ' ') {
+                            int value = ((int) toConvert.charAt(i)) - 32;
+                            char character = (char) value;
+                            converted = converted + character;
+                        } else {
+                            converted = converted + toConvert.charAt(i);
+                        }
+                    } else if ((i != 0) && ((int) toConvert.charAt(i) >= 65 && (int) toConvert.charAt(i) <= 90)) {//Si no es el primero y es mayuscula
+                        if (toConvert.charAt(i - 1) != ' ') {
+                            int value = ((int) toConvert.charAt(i)) + 32;
+                            char character = (char) value;
+                            converted = converted + character;
+
+                        } else {
+                            converted = converted + toConvert.charAt(i);
+                        }
+                    } else {
+                        converted = converted + toConvert.charAt(i);
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+        return converted;
+    }
 }

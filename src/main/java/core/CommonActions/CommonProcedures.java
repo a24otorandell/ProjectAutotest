@@ -71,6 +71,7 @@ public class CommonProcedures {
      */
     public static boolean goToScreen(TestDriver driver) {
         try {
+            break_time(driver, 10, 500);
             if (!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")) {
                 return false;
             }
@@ -120,6 +121,7 @@ public class CommonProcedures {
             Functions.screenshot(driver);
         }
         driver.setTestend();
+        driver.closeDriver();
     }
 
     /**
@@ -139,7 +141,7 @@ public class CommonProcedures {
                 driver.getDriver().switchTo().defaultContent();
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(e);
         }
     }
 
@@ -157,20 +159,36 @@ public class CommonProcedures {
         DDBBInteractions.updateTable(connection, driver.getUserdetails().getUsername(), increment);
         connection.closeConnection(driver);
     }
-    /* IN PROCESS
-    public static boolean atlaslogOut(TestDriver driver) {
-        if(!Functions.simpleClick(driver, new String[]{"Logout Button", recursiveXPaths.logout}, " on main ATLAS page.")){//forceLogout}
-        checkAlert(driver);
-    }
-        if (driver.getDriver().findElements(By.xpath(recursiveXPaths.userinput)).size() > 0) {
-            driver.getReport().addContent("Logout Correct.", "p", "class='succes'");
-            if (driver.getUserdetails().isDDBBCredentials()) {
-                updateDDBBPriority(-1, driver);
-            }
 
-        } else {
-            driver.getReport().addContent("Logout Failed, user priority was not updated", "p", "class='error'");
-            Functions.screenshot(driver);
-        }*/
+    /**
+     * Este metodo es para generalizar un reporting para las pantallas de testing de guia de estilo y finalmente se
+     * realiza una captura de pantalla.
+     *
+     * @param driver TestDriver - This class manages all the information referent to the current test.
+     */
+    public static void styleGuide(TestDriver driver) {
+        driver.getReport().addContent("", "br", "");
+        driver.getReport().addContent("This screen is a style guide and for this reason, only enters and get out.", "h3", "class='success'");
+        driver.getReport().addContent("", "br", "");
+        Functions.screenshot(driver);
+    }
+
+    public static void break_time(TestDriver driver, int seconds, long miliseconds) {
+        /*
+        SwissKnife.break_time(driver,3,500);
+         */
+        WebDriverWait wdw = new WebDriverWait(driver.getDriver(), seconds, miliseconds);
+        try {
+            if (Functions.displayed(driver, "//*[contains(@id, 'si7')]/img")) {
+                System.out.println("working");
+                wdw.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(@id, 'si7')]/img")));
+                System.out.println("working finished");
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: Timed out after " + seconds + " seconds waiting and the system continue in working. ";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+        }
+    }
 }
 

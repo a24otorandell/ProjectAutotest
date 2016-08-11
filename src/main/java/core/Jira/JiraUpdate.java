@@ -1,11 +1,14 @@
 package core.Jira;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
+import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -58,9 +61,6 @@ public class JiraUpdate {
             return false;
         }
         if (!manageCycle()) {
-            return false;
-        }
-        if (!executeTest()) {
             return false;
         }
         if (!updateStatus()) {
@@ -134,7 +134,6 @@ public class JiraUpdate {
                 return false;
             }
         }
-
         getJiradriver().getDriver().closeDriver();
         return true;
     }
@@ -145,9 +144,9 @@ public class JiraUpdate {
      */
     private String hudsonEnvironment() {
         if (getDriver().getTestdetails().getEnvironment().equals("test")) {
-            return "http://192.168.22.143:8080/view/" + getDriver().getTestdetails().getMenu() + "/job/Test" + getDriver().getTestdetails().getTestname() + "/ws/" + getDriver().getReport().getFile().getFinalpath();
+            return "http://192.168.22.143:8080/view/" + getDriver().getTestdetails().getMenu() + "/job/Test" + getDriver().getTestdetails().getTestname() + "/ws/" + getDriver().getReport().getFile().getFilename();
         } else {
-            return "http://192.168.22.143:8092/view/" + getDriver().getTestdetails().getMenu() + "/job/Sis" + getDriver().getTestdetails().getTestname() + "/ws/" + getDriver().getReport().getFile().getFinalpath();
+            return "http://192.168.22.143:8092/view/" + getDriver().getTestdetails().getMenu() + "/job/Sis" + getDriver().getTestdetails().getTestname() + "/ws/" + getDriver().getReport().getFile().getFilename();
         }
     }
 
@@ -198,7 +197,7 @@ public class JiraUpdate {
         }
         if (!Functions.selectText(getDriver(),
                 new String[]{"add_test_cycle_select", getElements("add_test_cycle_select")},
-                getJiradetails().getJiraCycle() + getJiradetails().getJiraCycleDate(), "jiraVersion", " Jira TestCycle")) {
+                getJiradetails().getJiraCycle(), "jiraVersion", " Jira TestCycle")) {
             return false;
         }
         if (!Functions.checkClickByAbsence(getDriver(),
@@ -226,6 +225,9 @@ public class JiraUpdate {
             if (!createCycle()) {
                 return false;
             }
+            if (!executeTest()) {
+                return false;
+            }
         } else {
             System.out.println("The cycle already exists");
         }
@@ -233,6 +235,8 @@ public class JiraUpdate {
     }
 
     private boolean createCycle() {
+        System.out.println("Create cycle");
+        setJiraURL(getJiradetails().urlcycle1 + getJiradetails().project + getJiradetails().urlcycle2);
         if (!Functions.checkClick(getDriver(),
                 new String[]{"firstCycle", getElements("firstCycle")}, //element to click
                 new String[]{"cycleName", getElements("cycleName")}, //element expected to appear
@@ -245,11 +249,15 @@ public class JiraUpdate {
             return false;
         }
         if (!Functions.insertInput(getDriver(), new String[]{"cycleName", getElements("cycleName")},
-                "cycle", getJiradetails().getJiraCycle() + getJiradetails().getJiraCycleDate(), " Jira TestCycle")) {
+                "cycle", getJiradetails().getJiraCycle(), " Jira TestCycle")) {
             return false;
         }
         if (!Functions.insertInput(getDriver(), new String[]{"buildNumber", getElements("buildNumber")},
                 "build", getJiradetails().getJiraBuildNumber(), " Jira TestCycle")) {
+            return false;
+        }
+        if (!Functions.insertInput(getDriver(), new String[]{"environment", getElements("environment")},
+                "environment", getJiradetails().getEnvironment(), " Jira TestCycle")) {
             return false;
         }
         if (!Functions.insertInput(getDriver(), new String[]{"dateFrom", getElements("dateFrom")},
@@ -260,7 +268,8 @@ public class JiraUpdate {
                 "to", getJiradetails().getJiraCycleTo(), " Jira TestCycle")) {
             return false;
         }
-        if (!Functions.simpleClick(getDriver(),
+        if (!Functions.checkClickByAbsence(getDriver(),
+                new String[]{"saveButtonCreateCycle", getElements("saveButtonCreateCycle")}, //element to click
                 new String[]{"saveButtonCreateCycle", getElements("saveButtonCreateCycle")}, //element to click
                 " Jira TestCycle")) {
             return false;
@@ -269,20 +278,41 @@ public class JiraUpdate {
     }
 
     private boolean cycleExist() {
-        List<WebElement> list = getDriver().getDriver().findElements(By.className(getElements("existingCycles")));
-
         try {
-            for (WebElement we : list) {
-                Thread.sleep(500);
-                if (we.getText().contains(getJiradetails().getJiraCycle() + getJiradetails().getJiraCycleDate()))
-                    return true;
+            if (checkSelectTest(getElements("add_version_select"), getJiradetails().getJiraVersion())) {
+                if (!Functions.selectText(getDriver(),
+                        new String[]{"add_version_select", getElements("add_version_select")},
+                        getJiradetails().getJiraVersion(), "jiraVersion", " Jira TestCycle")) {
+                    return false;
+                }
+                if (checkSelectTest(getElements("add_test_cycle_select"), getJiradetails().getJiraCycle())) {
+                    if (!Functions.selectText(getDriver(),
+                            new String[]{"add_test_cycle_select", getElements("add_test_cycle_select")},
+                            getJiradetails().getJiraCycle(), "jiraVersion", " Jira TestCycle")) {
+                        return false;
+                    }
+                    if (!Functions.checkClickByAbsence(getDriver(),
+                            new String[]{"execute_button_popup_button", getElements("execute_button_popup_button")},
+                            new String[]{"execute_button_popup_button", getElements("execute_button_popup_button")},
+                            " Jira execute Test")) {
+                        return false;
+                    }
+                } else {
+                    System.out.println("The cycle not exist");
+                    return false;
+                }
             }
         } catch (Exception e) {
+            String ecode = "--Error: The version " + getJiradetails().getJiraVersion() + " not exist to the project " + getJiradetails().project;
+            System.out.println(ecode);
+            e.printStackTrace();
+
         }
-        return false;
+        return true;
     }
 
-    private boolean setTestCycle() {
+
+    private boolean setTestCycle() {/*
         if (!Functions.checkClick(getDriver(),
                 new String[]{"test_e_dropdown", getElements("test_e_dropdown")}, //element to click
                 new String[]{"test_e_dropdown_e_plantestcycle", getElements("test_e_dropdown_e_plantestcycle")}, //element to click
@@ -302,6 +332,22 @@ public class JiraUpdate {
                 " on Jira Test Cycles Screen")) {
             return false;
         }
+        getDriver().getDriver().findElement(By.xpath(getElements("plantestycle_select_version"))).sendKeys(Keys.RETURN);
+        return true;*/
+
+        setJiraURL(getJiradetails().getUrlbrowse() + getDriver().getTestdetails().getIssue());
+        if (!Functions.checkClick(getDriver(),
+                new String[]{"execute_button", getElements("execute_button")},
+                new String[]{"add_test_cycle_radio", getElements("add_test_cycle_radio")},
+                " Jira execute Test")) {
+            return false;
+        }
+        if (!Functions.simpleClick(getDriver(),
+                new String[]{"add_test_cycle_radio", getElements("add_test_cycle_radio")},
+                " Jira execute Test")) {
+            return false;
+        }
+
         return true;
     }
 
@@ -317,4 +363,16 @@ public class JiraUpdate {
         return true;
     }
 
+    private boolean checkSelectTest(String pathselect, String content) {
+        List<WebElement> list = getDriver().getDriver().findElements(By.xpath(pathselect));
+        try {
+            for (WebElement we : list) {
+                Thread.sleep(500);
+                if (we.getText().contains(content))
+                    return true;
+            }
+        } catch (Exception e) {
+        }
+        return false;
+    }
 }

@@ -28,17 +28,14 @@ public class DataHarvester {
     public void openFile() {
         try {
             this.file = new File(filepath);
-            if (this.file.exists()) {
+            if (exist_file(this.file)) {
                 this.filereader = new FileReader(file);
                 this.bufferedreader = new BufferedReader(filereader);
                 open = true;
-            } else {
-                System.out.println(filepath + " was not found, please check.");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     /**
@@ -47,7 +44,6 @@ public class DataHarvester {
     public void closeFile() {
         if (open) {
             try {
-
                 this.filereader.close();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -65,10 +61,16 @@ public class DataHarvester {
         openFile();
         String line;
         String data = "";
+        String split_by;
         if (open) {
             try {
+                if (filepath.equals("C:/SisVersion.txt")) {
+                    split_by = "\t";
+                } else {
+                    split_by = "-";
+                }
                 while (((line = this.bufferedreader.readLine()) != null)) {
-                    String[] row = line.split("-");
+                    String[] row = line.split(split_by);
                     if (row[0].contains(dataname)) {
                         data = row[1];
                         closeFile();
@@ -111,5 +113,17 @@ public class DataHarvester {
         }
 
         return data;
+    }
+
+    /**
+     * This function verify if existe o no the file
+     */
+    public Boolean exist_file(File file) {
+        if (file.exists()) {
+            return true;
+        } else {
+            System.out.println(filepath + " was not found, please check.");
+            return false;
+        }
     }
 }

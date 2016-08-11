@@ -46,6 +46,7 @@ public class TestDriver {
     Date testdate;
     AutoReport report;
     WebDriver driver;
+    JiraUpdate jira;
     long teststart = 0;
     long testend;
     int teststatus = 0;
@@ -311,6 +312,7 @@ public class TestDriver {
             if (CommonProcedures.atlasLogIn(this)) {
                 test();
             }
+
             after();
         }
     }
@@ -319,25 +321,24 @@ public class TestDriver {
      *
      */
     public void after() {
-        JiraUpdate jira = null;
+        //JiraUpdate jira;
         switch (getCurrentwork()) {
             case "REGRESSION":
                 CommonProcedures.atlaslogOut(this);
+                getReport().saveReport(this);
                 if (jiraWorkflowStart() && jirastatus) {
                     this.jirastatus = false;
                     jira = new JiraUpdate(this);
                     jira.start();
+                    System.out.println("Test updated sacssefull in Jira.");
                 }
                 break;
             case "JIRA":
                 jira.jiraLogOut();
                 break;
             case "RESET":
-
                 break;
         }
-        getReport().saveReport(this);
-        closeDriver();
         endTheRun();
     }
 
@@ -433,16 +434,10 @@ public class TestDriver {
      * @return {@code boolean}
      */
     public boolean jiraWorkflowStart() {
-
         String fileName = "c:/SisVersion.txt";
         File f = new File(fileName);
 
-        if (!getTestdetails().getIssue().equals("") && f.exists()) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return !getTestdetails().getIssue().equals("") && f.exists();
     }
 
     /**

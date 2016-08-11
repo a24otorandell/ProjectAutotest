@@ -1073,4 +1073,18 @@ public class Functions {
             e.printStackTrace();
         }
     }
+
+    public static boolean displayed(TestDriver driver, String xpath) {
+        try {
+            return (driver.getDriver().findElement(By.xpath(xpath)).isDisplayed());
+        } catch (NoSuchElementException e) {
+            // Returns false because the element is not present in DOM. The
+            // try block checks if the element is present but is invisible.
+            return false;
+        } catch (StaleElementReferenceException e) {
+            // Returns false because stale element reference implies that element
+            // is no longer visible.
+            return false;
+        }
+    }
 }

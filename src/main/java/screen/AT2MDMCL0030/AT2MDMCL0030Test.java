@@ -1,7 +1,6 @@
 package screen.AT2MDMCL0030;
 
 import core.CommonActions.CommonProcedures;
-import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;

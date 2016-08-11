@@ -4,6 +4,8 @@ import core.ConnectionDDBB.ConnectionMSSQL;
 import core.ConnectionDDBB.DDBBInteractions;
 import core.FileGestor.DataHarvester;
 
+import java.io.File;
+
 //import java.util.List;
 
 /**
@@ -139,13 +141,16 @@ public class DetailsAdmin {
         String filepath = "C:/AutotestInfo.txt";
         //AS
         DataHarvester harvester = new DataHarvester(filepath);
-        driverdetails.setBrowser(harvester.harvest("browser"));
-        testdetails.setEnvironment(harvester.harvest("environment"));
-        testdetails.setTestname(harvester.harvest("screen"));
-        testdetails.setIssue(harvester.harvest("issue"));
-        testdetails.setCsedProcedure(harvester.harvest("csed"));
-        userdetails.setUsername(harvester.harvest("user"));
-        userdetails.setPassword(harvester.harvest("password"));
+        File file = new File(filepath);
+        if (harvester.exist_file(file)) {
+            driverdetails.setBrowser(harvester.harvest("browser"));
+            testdetails.setEnvironment(harvester.harvest("environment"));
+            testdetails.setTestname(harvester.harvest("screen"));
+            testdetails.setIssue(harvester.harvest("issue"));
+            testdetails.setCsedProcedure(harvester.harvest("csed"));
+            userdetails.setUsername(harvester.harvest("user"));
+            userdetails.setPassword(harvester.harvest("password"));
+        }
     }
 
     /**
@@ -163,7 +168,7 @@ public class DetailsAdmin {
             String[] user = DDBBInteractions.getOptimalUser(connection);
             userdetails.setUsername(user[0]);
             userdetails.setPassword(user[1]);
-            DDBBInteractions.updateTable(connection, user[1], 1);
+            DDBBInteractions.updateTable(connection, user[0], 1);
             userdetails.setDDBBCredentials(true);
             connection.closeConnection();
         }

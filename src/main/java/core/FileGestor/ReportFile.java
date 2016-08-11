@@ -51,6 +51,15 @@ public class ReportFile {
     }
 
     /**
+     * Gets the string of the filename var
+     *
+     * @return {@code String}
+     */
+    public String getFilename() {
+        return filename;
+    }
+
+    /**
      * Sets the string of filename var with the name of the component and actual system date
      *
      * @param driver TestDriver - This object gathers all the info refferent to the current test

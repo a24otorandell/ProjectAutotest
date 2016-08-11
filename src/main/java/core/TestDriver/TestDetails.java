@@ -17,8 +17,8 @@ public class TestDetails {
     String mainmenu;
     String submenu;
     String screen;
-    String issue;
-    String csedprocedure;
+    String issue = "";
+    String csedprocedure = "";
 
     public TestDetails() {
     }
@@ -158,6 +158,6 @@ public class TestDetails {
      */
     public String getMenu() {
         String[] splitted = getTestname().split("AT2");
-        return splitted[1].substring(0, 2);
+        return splitted[1].substring(0, 3);
     }
 }
