@@ -312,29 +312,7 @@ public class JiraUpdate {
     }
 
 
-    private boolean setTestCycle() {/*
-        if (!Functions.checkClick(getDriver(),
-                new String[]{"test_e_dropdown", getElements("test_e_dropdown")}, //element to click
-                new String[]{"test_e_dropdown_e_plantestcycle", getElements("test_e_dropdown_e_plantestcycle")}, //element to click
-                " on Jira TopBar Nav")) {
-            return false;
-        }
-        if (!Functions.checkClick(getDriver(),
-                new String[]{"test_e_dropdown_e_plantestcycle", getElements("test_e_dropdown_e_plantestcycle")}, //element to click
-                new String[]{"plantestycle_select_version", getElements("plantestycle_select_version")}, //element to click
-                " on Jira TopBar Nav")) {
-            return false;
-        }
-        if (!Functions.insertInput(getDriver(),
-                new String[]{"plantestycle_select_version", getElements("plantestycle_select_version")},
-                "jiravesion",
-                getJiradetails().getJiraVersion(),
-                " on Jira Test Cycles Screen")) {
-            return false;
-        }
-        getDriver().getDriver().findElement(By.xpath(getElements("plantestycle_select_version"))).sendKeys(Keys.RETURN);
-        return true;*/
-
+    private boolean setTestCycle() {
         setJiraURL(getJiradetails().getUrlbrowse() + getDriver().getTestdetails().getIssue());
         if (!Functions.checkClick(getDriver(),
                 new String[]{"execute_button", getElements("execute_button")},
