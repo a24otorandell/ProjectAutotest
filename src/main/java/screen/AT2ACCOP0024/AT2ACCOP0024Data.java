@@ -44,6 +44,6 @@ public class AT2ACCOP0024Data {
      * Sets the hardcoded data in the data Map
      */
     public void setDefaultData() {
-        data.put("file_new", "C:\\ProjectAutotest\\src\\main\\resources\\20151130_Std_GPS_Daily_Tx_Rpt_1886019379.csv");
+        data.put("file_new", "C:\\ProjectAutotest\\src\\main\\resources\\IPS-20160531-0412461-000001_REPRO_1886019379_041246-000001.csv");
     }
 }
