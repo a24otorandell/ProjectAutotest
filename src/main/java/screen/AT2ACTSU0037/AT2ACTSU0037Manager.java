@@ -7,21 +7,23 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * Created by acarrillo on 09/08/2016.
+ * @author acarrillo on 09/08/2016.
  */
 public class AT2ACTSU0037Manager implements AT2Test {
     AT2ACTSU0037Test test;
     AT2ACTSU0037Sis sis;
     String[] procedure;
 
-    public AT2ACTSU0037Manager() {
-        setTest(new AT2ACTSU0037Test());
-        this.test.setData(new AT2ACTSU0037Data());
-        this.test.setLocators(new AT2ACTSU0037Locators());
-
-        setTestSis(new AT2ACTSU0037Sis());
-        this.sis.setData(new AT2ACTSU0037Data());
-        this.sis.setLocators(new AT2ACTSU0037Locators());
+    public AT2ACTSU0037Manager(String enviroment) {
+        if (enviroment.equalsIgnoreCase("test")) {
+            setTest(new AT2ACTSU0037Test());
+            this.test.setData(new AT2ACTSU0037Data());
+            this.test.setLocators(new AT2ACTSU0037Locators());
+        } else {
+            setTestSis(new AT2ACTSU0037Sis());
+            this.sis.setData(new AT2ACTSU0037Data());
+            this.sis.setLocators(new AT2ACTSU0037Locators());
+        }
     }
 
     public String[] getProcedure() {

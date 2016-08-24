@@ -13,6 +13,7 @@ import screen.AT2Test;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
+import java.sql.Array;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -364,6 +365,7 @@ public class TestDriver {
         this.driver = new EdgeDriver();
         this.driver.manage().window().maximize();
     }
+
     /**
      * This function tries to make instances of the classes component that you specified on the args
      */
@@ -371,8 +373,8 @@ public class TestDriver {
         String testname = this.getTestdetails().getTestname();
         try {
             this.clazz = Class.forName("screen." + testname + "." + testname + "Manager");
-            Constructor<?> ctor = this.clazz.getConstructor();
-            this.test = (AT2Test) ctor.newInstance(new Object[]{});
+            Constructor<?> ctor = this.clazz.getConstructor(new Class[]{String.class});
+            this.test = (AT2Test) ctor.newInstance(new Object[]{this.getTestdetails().environment});
         } catch (Exception e) {
             String message = "-- ERROR -- test(); Not able to find the class referent to the current test(" + testname + "), ir it has invalid structure, please check";
             e.printStackTrace();
