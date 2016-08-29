@@ -38,6 +38,7 @@ public class AT2ACTSU0037Sis {
         driver.getTestdetails().setMainmenu("Accommodations");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Suppliers B2B 2.0");
+
     }
 
     protected String getElements(String key) {
