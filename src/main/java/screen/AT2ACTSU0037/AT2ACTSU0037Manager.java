@@ -18,12 +18,12 @@ public class AT2ACTSU0037Manager implements AT2Test {
     public AT2ACTSU0037Manager(String enviroment) {
         if (enviroment.equalsIgnoreCase("test")) {
             setTest(new AT2ACTSU0037Test());
-            this.test.setData(new AT2ACTSU0037Data());
-            this.test.setLocators(new AT2ACTSU0037Locators());
+            this.test.setData(new AT2ACTSU0037Data(enviroment));
+            this.test.setLocators(new AT2ACTSU0037Locators(enviroment));
         } else {
             setTestSis(new AT2ACTSU0037Sis());
-            this.sis.setData(new AT2ACTSU0037Data());
-            this.sis.setLocators(new AT2ACTSU0037Locators());
+            this.sis.setData(new AT2ACTSU0037Data(enviroment));
+            this.sis.setLocators(new AT2ACTSU0037Locators(enviroment));
         }
     }
 

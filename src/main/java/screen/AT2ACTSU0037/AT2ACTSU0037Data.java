@@ -12,7 +12,7 @@ public class AT2ACTSU0037Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2ACTSU0037Data() {
+    public AT2ACTSU0037Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACTSU0037Values.txt");
         setData();
     }
