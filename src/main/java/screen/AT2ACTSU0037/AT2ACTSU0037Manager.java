@@ -9,6 +9,7 @@ import java.util.Map;
 /**
  * @author acarrillo on 09/08/2016.
  */
+@SuppressWarnings({"StatementWithEmptyBody", "AssignmentToCollectionOrArrayFieldFromParameter"})
 public class AT2ACTSU0037Manager implements AT2Test {
     AT2ACTSU0037Test test;
     AT2ACTSU0037Sis sis;
