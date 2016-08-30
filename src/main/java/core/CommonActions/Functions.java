@@ -488,7 +488,6 @@ public class Functions {
      * @param where     String - Tells where the operation is taking effect
      * @return {@code boolean} to control the process flow
      * @see ErrorManager#process(TestDriver, String)
-     * @deprecated Since 21/07/2016 the use of this function was replaced by{@code getAttr()}
      */
     public static boolean getValue(TestDriver driver, String[] path, String data_name, String where) {
         //HOW TO CALL THIS METHOD
@@ -869,6 +868,71 @@ public class Functions {
         return true;
     }
 
+    public static boolean doDeleteNCheck(TestDriver driver, String[] b_delete, String[] n_records, String[] delete_b_yes, String where) {
+        /*
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"x", getElements("x")},
+                new String[]{"x", getElements("x")},
+                new String[]{"delete_b_yes", getElements("delete_b_yes")},
+                " where")){return false;}
+         */
+
+        driver.getReport().addContent("Deleting Record:", "h5", "");
+        if (!zoomOut(driver)) {
+            return false;
+        }
+        int recordsbefore = 0;
+        int recordsafter = 0;
+        int expected = 1;
+        int unexpected = 0;
+        try {
+            if (driver.getDriver().findElement(By.xpath(n_records[1])).getText().contains("Records")) {
+                String algo = driver.getDriver().findElement(By.xpath(n_records[1])).getText();
+                String[] algo3 = driver.getDriver().findElement(By.xpath(n_records[1])).getText().split("Records:");
+                recordsbefore = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText().split("Records:")[1]);
+            } else {
+                recordsbefore = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: doDeleteNCheck(): Unable to find " + n_records[0] + " or cast it to integer before delete was done.";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+        }
+        checkClick(driver, b_delete, recursiveXPaths.glass, where);
+        checkClickByAbsence(driver,
+                new String[]{"b_delete_yes", delete_b_yes[1]},
+                recursiveXPaths.glass,
+                120, 500,
+                where);
+        try {
+            if (driver.getDriver().findElement(By.xpath(n_records[1])).getText().contains("Records")) {
+                recordsafter = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText().split("Records:")[1]);
+            } else {
+                recordsafter = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());
+            }
+        } catch (Exception f) {
+            String ecode = "--ERROR: doDeleteNCheck(): Unable to find " + n_records[0] + " or cast it to integer after delete was done.";
+            f.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        if (recordsbefore - recordsafter == expected) {
+            driver.getReport().addContent("Delete successful, records changed from: " + recordsbefore + " to: " + recordsafter + ".");
+        } else if (recordsbefore - recordsafter != unexpected) {
+            driver.getReport().addContent("Oops seems like mutiple operations happened during test, cannot confirm delete was or not successful, records from: " + recordsbefore + " to: " + recordsafter + ".", "p", "class='warning'");
+        } else if (recordsbefore - recordsafter == unexpected) {
+            String message = "Delete Unsuccessful, records didn't change (from: " + recordsbefore + " to: " + recordsafter + ").";
+            ErrorManager.process(driver, message);
+            return false;
+        }
+        if (!zoomIn(driver)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
+
+    }
+
     /**
      * Zooms out the WebDriver
      *
@@ -1085,6 +1149,62 @@ public class Functions {
             // Returns false because stale element reference implies that element
             // is no longer visible.
             return false;
+        }
+    }
+
+    public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, String where) {
+        /*
+        Functions.checkboxValue(driver,
+                getElements("xpath"),"datanme",true/false," where");
+         */
+        try {
+            boolean checkbox;
+            checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
+            if (checkbox != active) {
+                simpleClick(driver, new String[]{"xpath_checkbox", Xpath}, where);
+                CommonProcedures.break_time(driver, 5, 250);
+                checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
+            }
+            driver.getTest().getData().put(dataname, String.valueOf(checkbox));
+            System.out.println("The checkbox is equals to " + checkbox + " on Xpath " + Xpath);
+        } catch (Exception e) {
+            String ecode = "--ERROR: error to give value in the checkbox in " + where;
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+
+        }
+    }
+
+    public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, boolean convert_yes_no, String where) {
+        /*
+        Functions.checkboxValue(driver,
+                getElements("xpath"),"datanme",true/false,true/false," where"));
+         */
+        try {
+            boolean checkbox;
+            checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
+            if (checkbox != active) {
+                simpleClick(driver, new String[]{"xpath_checkbox", Xpath}, where);
+                CommonProcedures.break_time(driver, 5, 250);
+                checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
+            }
+            if (convert_yes_no) {
+                if (active) {
+                    driver.getTest().getData().put(dataname, String.valueOf("Yes"));
+                } else {
+                    driver.getTest().getData().put(dataname, String.valueOf("No"));
+                }
+                System.out.println("The checbox is equals to " + checkbox + " on Xpath " + Xpath);
+                System.out.println("The system save the checkbox with value " + driver.getTest().getData().get(dataname));
+            } else {
+                driver.getTest().getData().put(dataname, String.valueOf(checkbox));
+                System.out.println("The checbox is equals to " + checkbox + " on Xpath " + Xpath);
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: error to give value in the checkbox in " + where;
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+
         }
     }
 }
