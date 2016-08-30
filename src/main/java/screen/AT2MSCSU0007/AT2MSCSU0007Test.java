@@ -611,7 +611,8 @@ public class AT2MSCSU0007Test {
                 return false;
             }
             Functions.sleep(2800);
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClickByAbsence(driver,
+                    new String[]{"url_country_pais_url_b_remove_b_ok", getElements("url_country_pais_url_b_remove_b_ok")},
                     new String[]{"url_country_pais_url_b_remove_b_ok", getElements("url_country_pais_url_b_remove_b_ok")},
                     " on DELETE URL COUNTRY")) {
                 return false;
