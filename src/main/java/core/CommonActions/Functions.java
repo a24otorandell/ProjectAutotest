@@ -117,8 +117,8 @@ public class Functions {
     public static boolean checkClick(TestDriver driver, String path1[], String path2[], int seconds, long miliseconds, String where) {
         //HOW TO CALL THIS METHOD
         /* if(!Functions.checkClick(driver,
-                new String[]{"x", elements.get("x")}, //element to click
-                new String[]{"y", elements.get("x")}, //element expected to appear
+                new String[]{"x", getElements("x")}, //element to click
+                new String[]{"y", getElements("x")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on where")){return false;}*/
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), seconds, miliseconds);
@@ -160,10 +160,10 @@ public class Functions {
      */
     public static boolean checkClickByAbsence(TestDriver driver, String path1[], String path2[], String where) {
         //HOW TO CALL THIS METHOD
-        /* SwissKnife.checkClickByAbsence(driver,
-                new String[]{"x", elements.get("x")}, //element to click
-                new String[]{"y", elements.get("x")}, //element expected to disappear
-                " on where");*/
+        /*   if (!Functions.checkClickByAbsence(driver,
+                new String[]{"x", getElements("x")}, //element to click
+                new String[]{"y", getElements("x")}, //element expected to disappear
+                " on where"){return false;};*/
 
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
         WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
@@ -320,9 +320,11 @@ public class Functions {
             if (!simpleClick(driver, path, where)) {
                 return false;
             }
+            break_time(driver, 30, 500);
             driver.getDriver().findElement(By.xpath(path[1])).clear();
+            break_time(driver, 30, 500);
             driver.getDriver().findElement(By.xpath(path[1])).sendKeys(value);
-            sleep(1000); //To avoid reset
+            break_time(driver, 30, 500);
             driver.getTest().getData().put(data_name, driver.getDriver().findElement(By.xpath(path[1])).getAttribute("value"));
             if (!driver.getTest().getData().get(data_name).equals("") && !(driver.getTest().getData().get(data_name) == null)) {
 
@@ -497,6 +499,7 @@ public class Functions {
         WebElement element = findElement(driver, path, where);
         String attr;
         try {
+            break_time(driver, 30, 500);
             attr = element.getAttribute("value");
         } catch (Exception e) {
             String ecode = "--ERROR:getValue(): Unable to get the value of " + path[0] + " with xpath: " + path[1] + " " + where + ".";
@@ -953,7 +956,14 @@ public class Functions {
      * @see Keys
      * @see ErrorManager#process(TestDriver, String)
      */
+
+
     public static boolean zoomOut(TestDriver driver) {
+
+        /*
+         if (!Functions.zoomOut(driver )){return false;}
+         */
+
         try {
             WebElement html = driver.getDriver().findElement(By.tagName("html"));
             html.sendKeys(Keys.chord(Keys.CONTROL, Keys.SUBTRACT));
@@ -980,7 +990,13 @@ public class Functions {
      * @see Keys
      * @see ErrorManager#process(TestDriver, String)
      */
+
     public static boolean zoomOut(TestDriver driver, int times) {
+
+        /*
+           if (!Functions.zoomOut(driver, 2)){return false;}
+        */
+
         try {
             WebElement html = driver.getDriver().findElement(By.tagName("html"));
             for (int i = 0; i < times + 1; i++) {
@@ -1006,6 +1022,11 @@ public class Functions {
      * @see ErrorManager#process(TestDriver, String)
      */
     public static boolean zoomIn(TestDriver driver) {
+
+         /*
+         if (!Functions.zoomIn(driver )){return false;}
+         */
+
         try {
             WebElement html = driver.getDriver().findElement(By.tagName("html"));
             html.sendKeys(Keys.chord(Keys.CONTROL, Keys.NUMPAD0));
@@ -1264,7 +1285,7 @@ public class Functions {
      */
     public static void break_time(TestDriver driver, int seconds, long miliseconds) {
         /*
-        SwissKnife.break_time(driver,3,500);
+        Functions.break_time(driver,3,500);
          */
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), seconds, miliseconds);
         try {
