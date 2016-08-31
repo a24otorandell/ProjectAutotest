@@ -514,6 +514,7 @@ public class Functions {
      *
      * @param driver    TestDriver - Gathers all the info refferent to the current test
      * @param path      String[] - Xpath referent to the target WebElement, [0] is the data name, [1] is the value
+     * @param attr      String - name of the attribute that give the value
      * @param data_name String - Name of the data that is included in the data map
      * @param where     String - Tells where the operation is taking effect
      * @return {@code boolean} to control the process flow
@@ -1156,8 +1157,8 @@ public class Functions {
      * This function is to verify that element by xpath appears en the screen
      *
      * @param driver       TestDriver - This object gathers all the info refferent to the current test
-     * @param path   String[] - Xpath referent to the element that verify that appaers, [0] is the data name, [1] is the value
-     * @see Thread#sleep(long)
+     * @param xpath          String - Xpath referent to the element that verify that appaers
+     * @return {@code boolean}
      */
     public static boolean displayed(TestDriver driver, String xpath) {
         try {
