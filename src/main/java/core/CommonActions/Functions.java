@@ -868,6 +868,16 @@ public class Functions {
         return true;
     }
 
+    /**
+     * This method manages all the delete process in Atlas 2.0, also checks the records to check if was successful
+     *
+     * @param driver       TestDriver - This object gathers all the info refferent to the current test
+     * @param b_delete     String[] - Xpath referent to the delete button, [0] is the data name, [1] is the value
+     * @param n_records    String[] - Xpath referent to the record values, [0] is the data name, [1] is the value
+     * @param delete_b_yes String[] - Xpath referent to the yes button (confirmation deletion), [0] is the data name, [1] is the value
+     * @param where        String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     */
     public static boolean doDeleteNCheck(TestDriver driver, String[] b_delete, String[] n_records, String[] delete_b_yes, String where) {
         /*
         if (!Functions.doDeleteNCheck(driver,
@@ -1010,6 +1020,9 @@ public class Functions {
     }
 
     /**
+     * This function insert a value random in a input and search if the value appers in the result table. If appears, change the value inserted and
+     * try again to search the value and stop when the value no exist in the table result.
+     *
      * @param driver   TestDriver - This object gathers all the info refferent to the current test
      * @param value    String - This is what will be searched into the lov
      * @param dataname String - Name of the data that is included in the data map
@@ -1079,6 +1092,7 @@ public class Functions {
     }
 
     /**
+     *
      * @param driver TestDriver - This object gathers all the info refferent to the current test
      * @param path   String[] - Xpath referent to the input where the value has to be inserted, [0] is the data name, [1] is the value
      * @param where  String - Tells where the operation is taking effect
@@ -1138,6 +1152,13 @@ public class Functions {
         }
     }
 
+    /**
+     * This function is to verify that element by xpath appears en the screen
+     *
+     * @param driver       TestDriver - This object gathers all the info refferent to the current test
+     * @param path   String[] - Xpath referent to the element that verify that appaers, [0] is the data name, [1] is the value
+     * @see Thread#sleep(long)
+     */
     public static boolean displayed(TestDriver driver, String xpath) {
         try {
             return (driver.getDriver().findElement(By.xpath(xpath)).isDisplayed());
@@ -1152,6 +1173,18 @@ public class Functions {
         }
     }
 
+    /**
+     * this function verify a checkbox field and active or desactive by @param active value.
+     *
+     * @param driver   TestDriver - This object gathers all the info refferent to the current test
+     * @param Xpath     String[] - Xpath referent to the input where the value has to be inserted
+     * @param dataname String - Name of the data that is included in the data map
+     * @param active boolean - value that we want to have
+     * @param where    String - Tells where the operation is taking effectw
+     * @see ErrorManager#process(TestDriver, String)
+     * @see DataGenerator
+     */
+
     public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, String where) {
         /*
         Functions.checkboxValue(driver,
@@ -1162,7 +1195,7 @@ public class Functions {
             checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
             if (checkbox != active) {
                 simpleClick(driver, new String[]{"xpath_checkbox", Xpath}, where);
-                CommonProcedures.break_time(driver, 5, 250);
+                break_time(driver, 5, 250);
                 checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
             }
             driver.getTest().getData().put(dataname, String.valueOf(checkbox));
@@ -1175,6 +1208,18 @@ public class Functions {
         }
     }
 
+    /**
+     * this function verify a checkbox field and active or desactive by @param active value.
+     *
+     * @param driver   TestDriver - This object gathers all the info refferent to the current test
+     * @param Xpath     String[] - Xpath referent to the input where the value has to be inserted
+     * @param dataname String - Name of the data that is included in the data map
+     * @param active boolean - value that we want to have
+     * @param convert_yes_no - if boolena is true, convernt the values true or false to yes or no and save in the map with dataname
+     * @param where    String - Tells where the operation is taking effectw
+     * @see ErrorManager#process(TestDriver, String)
+     * @see DataGenerator
+     */
     public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, boolean convert_yes_no, String where) {
         /*
         Functions.checkboxValue(driver,
@@ -1185,7 +1230,7 @@ public class Functions {
             checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
             if (checkbox != active) {
                 simpleClick(driver, new String[]{"xpath_checkbox", Xpath}, where);
-                CommonProcedures.break_time(driver, 5, 250);
+                break_time(driver, 5, 250);
                 checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
             }
             if (convert_yes_no) {
@@ -1205,6 +1250,32 @@ public class Functions {
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
 
+        }
+    }
+
+    /**
+     * This function waith that the working image dissapears in the adf screeen
+     *
+     * @param driver      TestDriver - This object gathers all the info refferent to the current test
+     * @param seconds     {@code Integer} - Determines how much the process will wait
+     * @param miliseconds {@code Integer} - verify each miliseconds that working dissapears.
+     * @see Thread#sleep(long)
+     */
+    public static void break_time(TestDriver driver, int seconds, long miliseconds) {
+        /*
+        SwissKnife.break_time(driver,3,500);
+         */
+        WebDriverWait wdw = new WebDriverWait(driver.getDriver(), seconds, miliseconds);
+        try {
+            if (displayed(driver, "//*[contains(@id, 'si7')]/img")) {
+                System.out.println("working");
+                wdw.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(@id, 'si7')]/img")));
+                System.out.println("working finished");
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: Timed out after " + seconds + " seconds waiting and the system continue in working. ";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
         }
     }
 }
