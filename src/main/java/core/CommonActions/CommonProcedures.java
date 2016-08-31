@@ -71,7 +71,7 @@ public class CommonProcedures {
      */
     public static boolean goToScreen(TestDriver driver) {
         try {
-            break_time(driver, 10, 500);
+            Functions.break_time(driver, 10, 500);
             if (!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")) {
                 return false;
             }
@@ -171,24 +171,6 @@ public class CommonProcedures {
         driver.getReport().addContent("This screen is a style guide and for this reason, only enters and get out.", "h3", "class='success'");
         driver.getReport().addContent("", "br", "");
         Functions.screenshot(driver);
-    }
-
-    public static void break_time(TestDriver driver, int seconds, long miliseconds) {
-        /*
-        SwissKnife.break_time(driver,3,500);
-         */
-        WebDriverWait wdw = new WebDriverWait(driver.getDriver(), seconds, miliseconds);
-        try {
-            if (Functions.displayed(driver, "//*[contains(@id, 'si7')]/img")) {
-                System.out.println("working");
-                wdw.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(@id, 'si7')]/img")));
-                System.out.println("working finished");
-            }
-        } catch (Exception e) {
-            String ecode = "--ERROR: Timed out after " + seconds + " seconds waiting and the system continue in working. ";
-            e.printStackTrace();
-            ErrorManager.process(driver, ecode);
-        }
     }
 }
 
