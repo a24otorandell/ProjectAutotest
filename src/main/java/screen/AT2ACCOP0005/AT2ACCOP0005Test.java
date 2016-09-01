@@ -76,8 +76,6 @@ public class AT2ACCOP0005Test {
             }
         }
         return false;
-
-
     }
 
 
@@ -96,7 +94,7 @@ public class AT2ACCOP0005Test {
                     "merchant",//data name (x)
                     new String[]{"search_i_merchant", getElements("search_i_merchant")},//input
                     new String[]{"search_b_search", getElements("search_b_search")},//search button
-                    new String[]{"general_e_result", getElements("wgeneral_e_result")},//expected not found result
+                    new String[]{"general_e_result", getElements("general_e_result")},//expected not found result
                     "both",//type of input
                     8,
                     "on CHECK EXISTENCE")) {

@@ -549,9 +549,9 @@ public class Functions {
      */
     public static boolean getValue(TestDriver driver, String[] path, String data_name, String where) {
         //HOW TO CALL THIS METHOD
-        /*SwissKnife.getValue(driver,new String[]{"x", elements.get("x")}, // element path
-                "data_name", // key for data value (the name)
-                " where");*/ // whoere this operation occurs
+        /* if(!Functions.getValue(driver,new String[]{"x", getElements("x")}, // element path
+                "dataname", // key for data value (the name)
+                " on where")){return false;}*/ // where this operation occurs
         WebElement element = findElement(driver, path, where);
         String attr;
         try {
@@ -1351,9 +1351,10 @@ public class Functions {
      */
 
     public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, String where) {
+        //HOW TO CALL THIS METHOD
         /*
         Functions.checkboxValue(driver,
-                getElements("xpath"),"datanme",true/false," where");
+                getElements("xpath"),"datanme",true/false," where");//where
          */
         try {
             boolean checkbox;
@@ -1386,9 +1387,10 @@ public class Functions {
      * @see DataGenerator
      */
     public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, boolean convert_yes_no, String where) {
+        //HOW TO CALL THIS METHOD
         /*
         Functions.checkboxValue(driver,
-                getElements("xpath"),"datanme",true/false,true/false," where"));
+                getElements("xpath"),"datanme",true/false,true/false" where");//where
          */
         try {
             boolean checkbox;
