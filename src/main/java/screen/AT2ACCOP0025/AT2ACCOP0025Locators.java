@@ -9,7 +9,7 @@ import java.util.Map;
 public class AT2ACCOP0025Locators {
     Map<String, String> elements = new HashMap<>();
 
-    public AT2ACCOP0025Locators() {
+    public AT2ACCOP0025Locators(String enviroment) {
         setElements();
     }
 

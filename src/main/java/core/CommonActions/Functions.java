@@ -1121,7 +1121,8 @@ public class Functions {
 
 
     /**
-     *  This function insert a value random in a input and search if the value appers in the result table. If appears, change the value inserted and
+     * This function insert a value random in a input and search if the value appers in the result table.
+     * If appears, change the value inserted and
      * try again to search the value and stop when the value no exist in the table result.
      *
      * @param driver
@@ -1257,7 +1258,6 @@ public class Functions {
     }
 
     /**
-     *
      * @param driver TestDriver - This object gathers all the info refferent to the current test
      * @param path   String[] - Xpath referent to the input where the value has to be inserted, [0] is the data name, [1] is the value
      * @param where  String - Tells where the operation is taking effect
@@ -1320,8 +1320,8 @@ public class Functions {
     /**
      * This function is to verify that element by xpath appears en the screen
      *
-     * @param driver       TestDriver - This object gathers all the info refferent to the current test
-     * @param xpath          String - Xpath referent to the element that verify that appaers
+     * @param driver TestDriver - This object gathers all the info refferent to the current test
+     * @param xpath  String - Xpath referent to the element that verify that appaers
      * @return {@code boolean}
      */
     public static boolean displayed(TestDriver driver, String xpath) {
@@ -1342,9 +1342,9 @@ public class Functions {
      * this function verify a checkbox field and active or desactive by @param active value.
      *
      * @param driver   TestDriver - This object gathers all the info refferent to the current test
-     * @param Xpath     String[] - Xpath referent to the input where the value has to be inserted
+     * @param Xpath    String[] - Xpath referent to the input where the value has to be inserted
      * @param dataname String - Name of the data that is included in the data map
-     * @param active boolean - value that we want to have
+     * @param active   boolean - value that we want to have
      * @param where    String - Tells where the operation is taking effectw
      * @see ErrorManager#process(TestDriver, String)
      * @see DataGenerator
@@ -1376,12 +1376,12 @@ public class Functions {
     /**
      * this function verify a checkbox field and active or desactive by @param active value.
      *
-     * @param driver   TestDriver - This object gathers all the info refferent to the current test
-     * @param Xpath     String[] - Xpath referent to the input where the value has to be inserted
-     * @param dataname String - Name of the data that is included in the data map
-     * @param active boolean - value that we want to have
-     * @param convert_yes_no - if boolena is true, convernt the values true or false to yes or no and save in the map with dataname
-     * @param where    String - Tells where the operation is taking effectw
+     * @param driver         TestDriver - This object gathers all the info refferent to the current test
+     * @param Xpath          String[] - Xpath referent to the input where the value has to be inserted
+     * @param dataname       String - Name of the data that is included in the data map
+     * @param active         boolean - The value that we want to have
+     * @param convert_yes_no - if is true, convert the values true or false to yes or no and save in the map with dataname
+     * @param where          String - Tells where the operation is taking effectw
      * @see ErrorManager#process(TestDriver, String)
      * @see DataGenerator
      */

@@ -4,20 +4,17 @@ import core.CommonActions.CommonProcedures;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
-import org.openqa.selenium.By;
-
-import java.util.concurrent.TimeUnit;
 
 /**
- * @author ajvirgili on 23/06/2016.
+ * @author ajvirgili on 31/08/2016.
  */
 @SuppressWarnings({"unused", "RedundantIfStatement"})
-public class AT2ACCOP0025Test {
+public class AT2ACCOP0025Sis {
 
     protected AT2ACCOP0025Locators locators;
     protected AT2ACCOP0025Data data;
 
-    public AT2ACCOP0025Test(String enviroment) {
+    public AT2ACCOP0025Sis(String enviroment) {
         setData(new AT2ACCOP0025Data(enviroment));
         setLocators(new AT2ACCOP0025Locators(enviroment));
     }
@@ -49,7 +46,7 @@ public class AT2ACCOP0025Test {
         driver.getTestdetails().setScreen("Commissions Rules 2.0");
     }
 
-    public String getElements(String key) {
+    protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
 
@@ -58,6 +55,7 @@ public class AT2ACCOP0025Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
+        //ToDo Wait until the issue QA-10113 is true resolved
         if (!recordInteraction(driver, true)) {
             return false;
         }
@@ -70,10 +68,10 @@ public class AT2ACCOP0025Test {
         if (!search(driver)) {
             return false;
         }
-        if (!auditDetach(driver)) {
+        if (!reset(driver)) {
             return false;
         }
-        if (!reset(driver)) {
+        if (!auditDetach(driver)) {
             return false;
         }
         if (!qbe(driver)) {
@@ -95,7 +93,6 @@ public class AT2ACCOP0025Test {
         if (type) {
             on = "on ADD";
             driver.getReport().addHeader("RECORD CREATION", 3, true);
-            Functions.break_time(driver, 1, 0);
             if (!Functions.checkClick(driver,
                     new String[]{"record_interaction_b_add", getElements("record_interaction_b_add")},
                     recursiveXPaths.glass, "")) {
@@ -105,7 +102,6 @@ public class AT2ACCOP0025Test {
             update = "update_";
             on = "on EDIT";
             driver.getReport().addHeader("RECORD EDITION:", 3, true);
-            Functions.break_time(driver, 1, 0);
             if (!Functions.checkClick(driver,
                     new String[]{"record_interaction_b_edit", getElements("record_interaction_b_edit")},
                     recursiveXPaths.glass,
@@ -295,7 +291,7 @@ public class AT2ACCOP0025Test {
      */
     protected boolean qbe(TestDriver driver) {
         driver.getReport().addContent("QBE SEARCH RECORD:", "h4", "");
-        Functions.zoomOut(driver, 2);
+        Functions.zoomOut(driver);
         if (!Functions.clickQbE(driver,
                 new String[]{"record_interaction_b_qbe", getElements("record_interaction_b_qbe")},
                 new String[]{"record_interaction_qbe_i_initialDate", getElements("record_interaction_qbe_i_initialDate")},
@@ -443,7 +439,6 @@ public class AT2ACCOP0025Test {
                     " on DELETE")) {
                 return false;
             }
-            Functions.break_time(driver, 1, 0);
         } catch (Exception delete) {
             delete.printStackTrace();
         }
