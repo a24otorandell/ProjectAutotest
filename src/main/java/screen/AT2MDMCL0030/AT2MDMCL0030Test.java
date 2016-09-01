@@ -85,6 +85,7 @@ public class AT2MDMCL0030Test {
                     recursiveXPaths.glass,
                     "")) {
                 return false;
+
             }
             if (!Functions.insertInput(driver,
                     new String[]{"record_interaction_i_param_name", getElements("record_interaction_i_param_name")},
