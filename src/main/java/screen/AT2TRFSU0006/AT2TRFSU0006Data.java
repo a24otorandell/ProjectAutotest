@@ -30,7 +30,6 @@ public class AT2TRFSU0006Data {
     }
 
     public void setDefaultData() {
-
     }
 }
 
