@@ -14,13 +14,16 @@ public class AT2ACTSU0037Manager implements AT2Test {
     AT2ACTSU0037Test test;
     AT2ACTSU0037Sis sis;
     String[] procedure;
+    String enviroment;
 
     public AT2ACTSU0037Manager(String enviroment) {
         if (enviroment.equalsIgnoreCase("test")) {
+            this.enviroment = "test";
             setTest(new AT2ACTSU0037Test());
             this.test.setData(new AT2ACTSU0037Data(enviroment));
             this.test.setLocators(new AT2ACTSU0037Locators(enviroment));
         } else {
+            this.enviroment = "sis";
             setTestSis(new AT2ACTSU0037Sis());
             this.sis.setData(new AT2ACTSU0037Data(enviroment));
             this.sis.setLocators(new AT2ACTSU0037Locators(enviroment));
@@ -52,12 +55,16 @@ public class AT2ACTSU0037Manager implements AT2Test {
     }
 
     public Map<String, String> getData() {
-        return this.test.getData().getData();
+        if (this.enviroment.equals("test")) {
+            return this.test.getData().getData();
+        } else {
+            return this.sis.getData().getData();
+        }
     }
 
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
-        if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("sis")) {
+        if (this.enviroment.equalsIgnoreCase("sis")) {
             getTestSis().start(driver);
         } else {
             getTest().start(driver);
@@ -76,11 +83,11 @@ public class AT2ACTSU0037Manager implements AT2Test {
             }
             if (getProcedure()[i].equals("d")) {
             }
-            if (getProcedure()[i].equals("x") && (driver.getTestdetails().getEnvironment().equalsIgnoreCase("test"))) {
+            if (getProcedure()[i].equals("x") && (this.enviroment.equalsIgnoreCase("test"))) {
                 if (!getTest().testCSED(driver)) {
                     return false;
                 }
-            } else if (getProcedure()[i].equals("x") && (driver.getTestdetails().getEnvironment().equalsIgnoreCase("sis"))) {
+            } else if (getProcedure()[i].equals("x") && (this.enviroment.equalsIgnoreCase("sis"))) {
                 if (!getTestSis().testCSED(driver)) {
                     return false;
                 }
