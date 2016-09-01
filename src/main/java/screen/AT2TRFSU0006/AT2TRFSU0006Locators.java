@@ -82,5 +82,6 @@ public class AT2TRFSU0006Locators {
         //detach tour operator
         elements.put("ttoo_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
         // </editor-fold>
+
     }
 }

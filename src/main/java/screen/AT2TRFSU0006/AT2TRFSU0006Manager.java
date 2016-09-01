@@ -93,4 +93,5 @@ public class AT2TRFSU0006Manager implements AT2Test {
         }
         return true;
     }
+
 }
