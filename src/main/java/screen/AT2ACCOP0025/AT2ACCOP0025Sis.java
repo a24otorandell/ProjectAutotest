@@ -90,6 +90,7 @@ public class AT2ACCOP0025Sis {
      */
     protected boolean recordInteraction(TestDriver driver, boolean type) {
         String on, update = "";
+        Functions.break_time(driver, 2, 0);
         if (type) {
             on = "on ADD";
             driver.getReport().addHeader("RECORD CREATION", 3, true);
