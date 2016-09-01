@@ -19,8 +19,9 @@ public class recursiveXPaths {
     public static final String[] lov_b_ok = {"lov_b_ok", "//*[contains(@id, 'lovDialogId::ok')]"};
     //</editor-fold>
     //<editor-fold desc="DELETE XPATHS">
-    public static final String delete_b_yes = "//*[contains(@id, 'dConfirmDelete::yes')]";
-    public static final String audit_b_ok = "//*[contains(@id, 'd22::ok')]";
+    //public static final String delete_b_yes = "//*[contains(@id, 'dConfirmDelete::yes')]";
+    public static final String delete_b_yes = "//*[contains(@id, ':cbt1')]";
+    public static final String audit_b_ok = "//*[contains(@id, '::ok')]";
     //</editor-fold>
     //<editor-fold desc="LOG IN XPATHS">
     public static final String userinput = "//*[@id='username']";

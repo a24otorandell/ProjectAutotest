@@ -163,7 +163,7 @@ public class Functions {
         /*   if (!Functions.checkClickByAbsence(driver,
                 new String[]{"x", getElements("x")}, //element to click
                 new String[]{"y", getElements("x")}, //element expected to disappear
-                " on where"){return false;};*/
+                " on where"){return false;}*/
 
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
         WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
@@ -357,6 +357,39 @@ public class Functions {
      * @see FileUtils#copyFile(File, OutputStream)
      * @see TakesScreenshot#getScreenshotAs(OutputType)
      */
+    public static boolean screenshot(TestDriver driver, boolean zoom) {
+        //HOW TO CALL THIS METHOD
+        //Functions.screenshot(driver);// where
+        try {
+            String name = driver.getTestdetails().getTestname();
+            WebElement html = driver.getDriver().findElement(By.tagName("html"));
+            if (zoom) {
+                html.sendKeys(Keys.chord(Keys.CONTROL, "0"));
+                sleep(1000);
+            } else { //CHROME AND IE HAVE ISSUES WITH ZOOM.
+                driver.getReport().addContent("--WARNING: screenshot - Chrome and IE Web Drivers have issues with zooming. Method WILL NOT ZOOM!!<br>"
+                        + "Keep in mind this might cause problems with screenshot area captured.", "p", "class='warning'");
+            }
+            Date mydate = new Date();
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
+            String date = dateFormat.format(mydate);
+            File scrFile = ((TakesScreenshot) driver.getDriver()).getScreenshotAs(OutputType.FILE);
+            name = name + "_picture_at_" + date + ".png";
+            ReportFile reportfile = new ReportFile(driver);
+            String path = reportfile.getFilepath();
+            FileUtils.copyFile(scrFile, new File(path + name));
+            driver.getReport().addImage(name, "");
+
+
+        } catch (IOException e) {
+            String message = "--ERROR: screenshot(): Unable to screnshot, probably driver doesent exist anymore or was never created";
+            e.printStackTrace();
+            ErrorManager.process(driver, message);
+            return false;
+        }
+        return true;
+    }
+
     public static boolean screenshot(TestDriver driver) {
         //HOW TO CALL THIS METHOD
         //Functions.screenshot(driver);// where
@@ -400,6 +433,29 @@ public class Functions {
      * @param where     String - Tells where the operation is taking effect
      * @return {@code boolean} to control the process flow
      */
+    public static boolean auditData(TestDriver driver, String[] b_actions, String[] b_audit, String[] b_ok, boolean zoom, String where) {
+        //HOW TO CALL THIS METHOD
+        /* if(!Functions.auditData(driver,
+                new String[]{"x",getElements("x")}, //actions button
+                new String[]{"y",getElements("y")}, //audit button
+                new String[]{"z",getElements(z")}, //audit_b_ok
+                true/false, //zoom in??
+                "where")){return false;}*/ //where this occurs
+        driver.getReport().addContent("Audit Data:", "h5", "");
+        if (!checkClick(driver, b_actions, b_audit, where)) {
+            return false;
+        }
+        if (!checkClick(driver, b_audit, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        screenshot(driver, zoom);
+        if (!checkClickByAbsence(driver, b_ok, recursiveXPaths.glass, where)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
+    }
+
     public static boolean auditData(TestDriver driver, String[] b_actions, String[] b_audit, String[] b_ok, String where) {
         //HOW TO CALL THIS METHOD
         /* if(!Functions.auditData(driver,
@@ -664,6 +720,7 @@ public class Functions {
             ErrorManager.process(driver, ecode);
             return false;
         }
+        break_time(driver, 1, 500);
         if (!simpleClick(driver, e_result, where)) {
             return false;
         }
@@ -736,6 +793,27 @@ public class Functions {
      * @param where      String - Tells where the operation is taking effect
      * @return {@code boolean} to control the process flow
      */
+    public static boolean detachTable(TestDriver driver, String[] path, boolean screenshot, boolean zoom, String where) {
+        //HOW TO CALL THIS METHOD
+        /*if(!Functions.detachTable(driver,
+                new String[]{"x",getElements("x")}, //detach button
+                true/false,     //screenshot??
+                true/false,    //zoom in??
+                "where")){return false;}*/     //where this occurs
+        driver.getReport().addContent("Detach Table:", "h5", "");
+        if (!simpleClick(driver, path, where)) {
+            return false;
+        }
+        if (screenshot) {
+            screenshot(driver, zoom);
+        }
+        if (!simpleClick(driver, path, where)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
+    }
+
     public static boolean detachTable(TestDriver driver, String[] path, boolean screenshot, String where) {
         //HOW TO CALL THIS METHOD
         /*if(!Functions.detachTable(driver,
@@ -885,9 +963,9 @@ public class Functions {
     public static boolean doDeleteNCheck(TestDriver driver, String[] b_delete, String[] n_records, String[] delete_b_yes, String where) {
         /*
         if (!Functions.doDeleteNCheck(driver,
-                new String[]{"x", getElements("x")},
-                new String[]{"x", getElements("x")},
-                new String[]{"delete_b_yes", getElements("delete_b_yes")},
+                new String[]{"x", getElements("x")}, //button delete
+                new String[]{"x", getElements("x")}, // result
+                new String[]{"delete_b_yes", getElements("delete_b_yes")}, //delete button yes
                 " where")){return false;}
          */
 
@@ -1041,28 +1119,93 @@ public class Functions {
         return true;
     }
 
+
     /**
-     * This function insert a value random in a input and search if the value appers in the result table. If appears, change the value inserted and
+     *  This function insert a value random in a input and search if the value appers in the result table. If appears, change the value inserted and
      * try again to search the value and stop when the value no exist in the table result.
      *
-     * @param driver   TestDriver - This object gathers all the info refferent to the current test
-     * @param value    String - This is what will be searched into the lov
-     * @param dataname String - Name of the data that is included in the data map
-     * @param input    String[] - Xpath referent to the input where the value has to be inserted, [0] is the data name, [1] is the value
-     * @param button   String[] - Xpath referent to the button to be clicked, [0] is the data name, [1] is the value
-     * @param result   String[] - Xpath referent to the expected/unexpected result, [0] is the data name, [1] is the value
-     * @param randtype String - Kind of the random value (integer, string or both)
-     * @param where    String - Tells where the operation is taking effect
-     * @return {@code boolean} to control the process flow
-     * @see ErrorManager#process(TestDriver, String)
-     * @see DataGenerator
+     * @param driver
+     * @param value
+     * @param dataname
+     * @param input
+     * @param button
+     * @param result
+     * @param randtype
+     * @param length
+     * @param where
+     * @return
      */
+    public static boolean checkExistence(TestDriver driver, String value, String dataname, String[] input, String button[], String result[], String randtype, int length, String where) {
+        //HOW TO CALL THIS METHOD
+        /*if (!Functions.checkExistence(driver,
+                "", //value
+                "x",//data name (x)
+                new String[]{"y", getelEmenmts("y")},//input
+                new String[]{"z", getelEmenmts("z")},//search button
+                new String[]{"w", getelEmenmts("w")},//expected not found result
+                "integer/string/both",//type of input
+                2, //value length
+                "")){return false;}//where
+                */
+        driver.getReport().addContent("Check Existence:", "h5", "");
+        String myrand;
+        String newvalue;
+        String replacement = "";
+        int i = 0;
+        driver.getReport().addRawText("<!--Start-->");
+        do {
+            switch (randtype.toLowerCase()) {
+                case "integer":
+                    String zeros = "00000000000000000000";
+                    String nines = "99999999999999999999";
+                    int min = Integer.valueOf("1" + zeros.substring(0, length - 1));
+                    int max = Integer.valueOf(nines.substring(0, length));
+                    myrand = Integer.toString(DataGenerator.random(min, max));
+                    break;
+                case "string":
+                    myrand = DataGenerator.getRandomAlphanumericSequence(length, false);
+                    break;
+                default:
+                    myrand = DataGenerator.getRandomAlphanumericSequence(length, true);
+                    break;
+            }
+            newvalue = value + myrand;
+            if (!insertInput(driver, input, dataname, newvalue, where)) {
+                return false;
+            }
+            if (!simpleClick(driver, button, where)) {
+                return false;
+            }
+            i++;
+        } while (driver.getDriver().findElements(By.xpath(result[1])).size() > 0 || i >= 30);
+
+        driver.getReport().addRawText("<!--End-->");
+        int startIndex = driver.getReport().getContent().indexOf("<!--Start-->", 0);
+        int endIndex = driver.getReport().getContent().indexOf("<!--End-->", 9);
+        String str = driver.getReport().getContent().substring(startIndex, endIndex);
+        driver.getReport().getContent().replace(str, replacement);
+
+        if (i >= 30) {
+            String message = "--ERROR: checkExistence(): Unable to not overlap other records after " + i + " tries";
+            ErrorManager.process(driver, message);
+            return false;
+        } else {
+            driver.getTest().getData().put(dataname, newvalue);
+            driver.getReport().addContent(newvalue + " choosen to fill " + dataname + "value.");
+
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
+    }
+
     public static boolean checkExistence(TestDriver driver, String value, String dataname, String[] input, String button[], String result[], String randtype, String where) {
         //HOW TO CALL THIS METHOD
-        /*if (!Functions.checkExistence(driver, "","x",//data name (x)
-                new String[]{"y", elements.get("y")},//input
-                new String[]{"z", elements.get("z")},//search button
-                new String[]{"w", elements.get("w")},//expected not found result
+        /*if (!Functions.checkExistence(driver,
+                "", //value
+                "x",//data name (x)
+                new String[]{"y", getelEmenmts("y")},//input
+                new String[]{"z", getelEmenmts("z")},//search button
+                new String[]{"w", getelEmenmts("w")},//expected not found result
                 "integer/string/both",//type of input
                 "")){return false;}//where
                 */
@@ -1075,7 +1218,7 @@ public class Functions {
         do {
             switch (randtype.toLowerCase()) {
                 case "integer":
-                    myrand = Integer.toString(DataGenerator.random(1, 100));
+                    myrand = Integer.toString(DataGenerator.random(1, 999));
                     break;
                 case "string":
                     myrand = DataGenerator.getRandomAlphanumericSequence(5, false);

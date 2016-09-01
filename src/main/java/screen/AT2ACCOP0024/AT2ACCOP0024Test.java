@@ -182,7 +182,7 @@ public class AT2ACCOP0024Test {
      * @see Functions#checkClick(TestDriver, String[], String[], String)
      * @see Functions#simpleClick(TestDriver, String[], String)
      * @see Functions#sleep(int)
-     * @see Functions#screenshot(TestDriver)
+     * @see Functions#screenshot(TestDriver, boolean)
      * @see Robot#keyPress(int)
      */
     protected boolean exportAction(TestDriver driver) {
@@ -218,7 +218,7 @@ public class AT2ACCOP0024Test {
         }
         try {// pulsamos enter para descargar el archivo con robot de java
             Robot r = new Robot();
-            Functions.screenshot(driver);
+            Functions.screenshot(driver, false);
             r.keyPress(KeyEvent.VK_ENTER);
             driver.getReport().addContent("Enter pressed on export");
             driver.getReport().addContent("File downloaded on export");
@@ -312,7 +312,7 @@ public class AT2ACCOP0024Test {
      * @return boolean to control the process flow
      * @see Functions#checkClick(TestDriver, String[], String[], String)
      * @see Functions#simpleClick(TestDriver, String[], String)
-     * @see Functions#screenshot(TestDriver)
+     * @see Functions#screenshot(TestDriver, boolean)
      */
     protected boolean reprocessAction(TestDriver driver) {
         driver.getReport().addContent("Action Reprocess:", "h4", "");
@@ -353,7 +353,7 @@ public class AT2ACCOP0024Test {
                 return false;
             }
             if (!getData("info_text_reprocess").equals("No such file")) {
-                Functions.screenshot(driver);
+                Functions.screenshot(driver, false);
             }
             if (!Functions.simpleClick(driver,
                     new String[]{"alert_b_ok", getElements("alert_b_ok")},
@@ -668,12 +668,12 @@ public class AT2ACCOP0024Test {
      *
      * @param driver Object that manages the core of the test
      * @return boolean to control the process flow
-     * @see Functions#detachTable(TestDriver, String[], boolean, String)
+     * @see Functions#detachTable(TestDriver, String[], boolean, boolean, String)
      */
     protected boolean detachTable(TestDriver driver) {
         if (!Functions.detachTable(driver,
                 new String[]{"record_interaction_b_detach_table", getElements("record_interaction_b_detach_table")},
-                false, " on Detach table")
+                false, false, " on Detach table")
                 ) {
             return false;
         }
