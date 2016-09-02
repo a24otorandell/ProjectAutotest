@@ -1,4 +1,4 @@
-package screen.AT2ACCCO0052;
+package screen.AT2ACCCO0053;
 
 import core.TestDriver.TestDriver;
 import screen.AT2Test;
@@ -9,20 +9,20 @@ import java.util.Map;
  * @author ajvirgili on 15/07/2016
  */
 @SuppressWarnings({"unused", "RedundantIfStatement", "AssignmentToCollectionOrArrayFieldFromParameter"})
-public class AT2ACCCO0052Manager implements AT2Test {
+public class AT2ACCCO0053Manager implements AT2Test {
 
-    AT2ACCCO0052Test test;
-    AT2ACCCO0052Sis sis;
+    AT2ACCCO0053Test test;
+    AT2ACCCO0053Sis sis;
     String[] procedure;
     String env;
 
 
-    public AT2ACCCO0052Manager(String enviroment) {
+    public AT2ACCCO0053Manager(String enviroment) {
         setEnv(enviroment);
         if (getEnv().equalsIgnoreCase("test")) {
-            setTest(new AT2ACCCO0052Test(enviroment));
+            setTest(new AT2ACCCO0053Test(enviroment));
         } else {
-            setTestSis(new AT2ACCCO0052Sis(enviroment));
+            setTestSis(new AT2ACCCO0053Sis(enviroment));
         }
 
     }
@@ -46,36 +46,36 @@ public class AT2ACCCO0052Manager implements AT2Test {
     }
 
     /**
-     * Gets AT2ACCCO0052Test object
+     * Gets AT2ACCCO0053Test object
      *
-     * @return AT2ACCCO0052Test
+     * @return AT2ACCCO0053Test
      */
-    public AT2ACCCO0052Test getTest() {
+    public AT2ACCCO0053Test getTest() {
         return test;
     }
 
     /**
-     * Sets the object test with a AT2ACCCO0052Test class
+     * Sets the object test with a AT2ACCCO0053Test class
      *
-     * @param test AT2ACCCO0052Test
+     * @param test AT2ACCCO0053Test
      */
-    public void setTest(AT2ACCCO0052Test test) {
+    public void setTest(AT2ACCCO0053Test test) {
         this.test = test;
     }
 
 
-    public AT2ACCCO0052Sis getTestSis() {
+    public AT2ACCCO0053Sis getTestSis() {
         return sis;
     }
 
-    public void setTestSis(AT2ACCCO0052Sis sis) {
+    public void setTestSis(AT2ACCCO0053Sis sis) {
         this.sis = sis;
     }
-    
+
     /**
-     * Gets data of the class AT2ACCCO0052Data
+     * Gets data of the class AT2ACCCO0053Data
      *
-     * @return AT2ACCCO0052Data
+     * @return AT2ACCCO0053Data
      */
     public Map<String, String> getData() {
         if (getEnv().equalsIgnoreCase("test")) {

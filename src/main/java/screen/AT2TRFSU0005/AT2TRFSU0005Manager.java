@@ -11,7 +11,7 @@ import java.util.Map;
 @SuppressWarnings({"unused", "RedundantIfStatement", "AssignmentToCollectionOrArrayFieldFromParameter", "StatementWithEmptyBody"})
 public class AT2TRFSU0005Manager implements AT2Test {
 
-    // Tiene un bug al c
+    // Tiene un bug al editar el registro padre e intentar crear, modificar o eliminar uno hijo
     AT2TRFSU0005Test test;
     AT2TRFSU0005Sis sis;
     String[] procedure;

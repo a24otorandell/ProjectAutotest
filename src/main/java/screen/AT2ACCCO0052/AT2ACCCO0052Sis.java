@@ -1,21 +1,13 @@
 package screen.AT2ACCCO0052;
 
 import core.CommonActions.CommonProcedures;
-import core.CommonActions.Functions;
-import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
-import org.openqa.selenium.By;
-
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.IOException;
 
 /**
  * @author ajvirgili  Created on 29/06/2016.
  */
 @SuppressWarnings({"unused", "RedundantIfStatement", ""})
-public class AT2ACCCO0052Test {
+public class AT2ACCCO0052Sis {
 
     protected AT2ACCCO0052Locators locators;
     protected AT2ACCCO0052Data data;
@@ -24,7 +16,7 @@ public class AT2ACCCO0052Test {
     /**
      * Void constructor
      */
-    public AT2ACCCO0052Test(String enviroment) {
+    public AT2ACCCO0052Sis(String enviroment) {
         setData(new AT2ACCCO0052Data(enviroment));
         setLocators(new AT2ACCCO0052Locators(enviroment));
     }
@@ -80,7 +72,7 @@ public class AT2ACCCO0052Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodations");
         driver.getTestdetails().setSubmenu("Contract");
-        driver.getTestdetails().setScreen("Stop sales 2.0");
+        driver.getTestdetails().setScreen("Stops sales 2.0");
     }
 
     /**

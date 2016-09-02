@@ -13,7 +13,7 @@ public class AT2ACCSU0071Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2ACCSU0071Data() {
+    public AT2ACCSU0071Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCSU0071Values.txt");
         setData();
     }

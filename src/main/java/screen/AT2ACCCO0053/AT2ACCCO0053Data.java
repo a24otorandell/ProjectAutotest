@@ -1,4 +1,4 @@
-package screen.AT2ACCCO0052;
+package screen.AT2ACCCO0053;
 
 import core.FileGestor.DataHarvester;
 
@@ -10,12 +10,12 @@ import java.util.Map;
  *
  * @author ajvirgili on 15/07/2016
  */
-public class AT2ACCCO0052Data {
+public class AT2ACCCO0053Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2ACCCO0052Data(String enviroment) {
-        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCCO0052Values.txt");
+    public AT2ACCCO0053Data(String enviroment) {
+        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCCO0053Values.txt");
         setData();
     }
 

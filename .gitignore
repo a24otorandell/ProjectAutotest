@@ -46,5 +46,29 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-ProjectAutotest_jar3.xml
-workspace.xml
+/src/main/java/screen/AT2ACCSU0071/
+/.idea/workspace.xml
+target/classes/IPS-20160531-0412461-000001_REPRO_1886019379_041246-000001.csv
+target/classes/screen/AT2ACCCO0052/
+target/classes/screen/AT2ACCDI0003/
+target/classes/screen/AT2ACCOP0005/
+target/classes/screen/AT2ACCOP0024/
+target/classes/screen/AT2ACCOP0025/
+target/classes/screen/AT2ACCSU0071/
+target/classes/screen/AT2ACCSU0072/
+target/classes/screen/AT2ACTSU0037/
+target/classes/screen/AT2BOOSA0005/
+target/classes/screen/AT2BOOSA1002/
+target/classes/screen/AT2BOOSA1003/
+target/classes/screen/AT2MDMSP0037/
+target/classes/screen/AT2MSCSU0007/
+target/classes/screen/AT2TRFSU0005/
+target/classes/screen/AT2TRFSU0006/
+target/classes/screen/AT2TRFSU0011/
+target/generated-sources/
+target/generated-test-sources/
+/src/main/java/screen/AT2ACCSU0072/
+/.idea/artifacts/ProjectAutotest_jar3.xml
+.idea/dictionaries/
+target/classes/screen/AT2ACCCO0053/
+target/classes/screen/AT2TRFSU0004/

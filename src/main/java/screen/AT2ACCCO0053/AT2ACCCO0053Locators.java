@@ -1,4 +1,4 @@
-package screen.AT2ACCCO0052;
+package screen.AT2ACCCO0053;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,10 +7,10 @@ import java.util.Map;
  * @author ajvirgili on 15/07/2016
  * @see Map
  */
-public class AT2ACCCO0052Locators {
+public class AT2ACCCO0053Locators {
     Map<String, String> elements = new HashMap<>();
 
-    public AT2ACCCO0052Locators(String enviroment) {
+    public AT2ACCCO0053Locators(String enviroment) {
         setElements();
     }
 

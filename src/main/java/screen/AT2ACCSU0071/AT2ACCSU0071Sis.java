@@ -1,20 +1,18 @@
 package screen.AT2ACCSU0071;
 
 import core.CommonActions.CommonProcedures;
-import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
-import core.recursiveData.recursiveXPaths;
 
 /**
  * @author ajvirgili on 19/07/2016
  */
 @SuppressWarnings({"unused", "RedundantIfStatement"})
-public class AT2ACCSU0071Test {
+public class AT2ACCSU0071Sis {
 
     protected AT2ACCSU0071Locators locators;
     protected AT2ACCSU0071Data data;
 
-    public AT2ACCSU0071Test(String enviroment) {
+    public AT2ACCSU0071Sis(String enviroment) {
         setData(new AT2ACCSU0071Data(enviroment));
         setLocators(new AT2ACCSU0071Locators(enviroment));
     }
