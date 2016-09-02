@@ -110,6 +110,7 @@ public class AT2TRFSU0006Test {
 
     ////////// - TABLE GROUPING CHECK EXISTENCE - //////////
     private boolean grouping_check_existence(TestDriver driver) {
+        driver.getReport().addHeader("TABLE: Grouping Tour Operator, RECORD CHECK EXISTENCE", 3, true);
 
         if (!Functions.checkExistence(driver,
                 "",

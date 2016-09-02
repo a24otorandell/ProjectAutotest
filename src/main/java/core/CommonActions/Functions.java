@@ -693,6 +693,68 @@ public class Functions {
     }
 
     /**
+     * This functions allows you to use createLovByValue specifying whith result to choose from the result list(first, second, etc)
+     * @param driver
+     * @param b_lov
+     * @param i_lov
+     * @param i_inside_lov
+     * @param e_result
+     * @param value
+     * @param dataName
+     * @param where
+     * @return
+     */
+    public static boolean createLovByValue(TestDriver driver, String[] b_lov, String[] i_lov, String[] i_inside_lov, String[] e_result, String value, String dataName, String where) {
+        //HOW TO CALL THIS METHOD
+        /*if (!Functions.createLovByValue(driver,
+                new String[]{"x", getElements("x")}, //LoV button
+                new String[]{"y", getElements("y")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                RecursiveXPaths.lov_e_result, // lov internal result
+                "value", // value to search
+                "data_name", //name of the data
+                " on where")){return false;}*/ //where this operation occurs
+
+        driver.getReport().addContent("LoV by value Creation: ", "h5", "");
+        String attr = "";
+        if (!simpleClick(driver, i_lov, where)) {
+            return false;
+        }
+        if (!checkClick(driver, b_lov, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+        if (!insertInput(driver, i_inside_lov, "ref" + dataName, value, where)) {
+            return false;
+        }
+        Functions.sleep(1000);
+        if (!clickSearchAndResult(driver, recursiveXPaths.lov_b_search, e_result, where)) {
+            return false;
+        }
+        if (!checkClickByAbsence(driver, recursiveXPaths.lov_b_ok, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+
+        try {
+            attr = driver.getDriver().findElement(By.xpath(i_lov[1])).getAttribute("value");
+            if (!attr.equals("") && !attr.equals(null)) {
+                driver.getTest().getData().put(dataName, attr);
+            } else {
+                String ecode = "--ERROR: createLov - Unable to check that the correct value was inserted in " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ". Value is blank or null.";
+                ErrorManager.process(driver, ecode);
+                return false;
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: createLov - Unable to get the selected " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ".";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+
+        driver.getReport().addContent("", "br", "");
+        return true;
+    }
+
+    /**
      * This method presses the enter button to do a query search, and then tries to click a result
      *
      * @param driver    TestDriver - This object gathers all the info refferent to the current test
