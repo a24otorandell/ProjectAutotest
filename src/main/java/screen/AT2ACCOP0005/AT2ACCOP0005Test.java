@@ -58,24 +58,25 @@ public class AT2ACCOP0005Test {
 
     protected boolean testCSED(TestDriver driver) {
         Functions.zoomOut(driver);
-        if (create(driver, true)) {
-            if (search(driver)) {
-                if (create(driver, false)) {
-                    if (qbe(driver)) {
-                        if (otherFunctions(driver)) {
-                            if (history_get_values(driver)) {
-                                if (history_qbe(driver)) {
-                                    if (delete(driver)) {
-                                        return true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        if (!create(driver, true)) {
+            return false;
         }
-        return false;
+        if (!search(driver)) {
+            return false;
+        }
+        if (!create(driver, false)) {
+            return false;
+        }
+        if (!qbe(driver)) {
+            return false;
+        }
+        if (!otherFunctions(driver)) {
+            return false;
+        }
+        if (!delete(driver)) {
+            return false;
+        }
+        return true;
     }
 
 
