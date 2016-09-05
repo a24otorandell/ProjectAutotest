@@ -8,15 +8,37 @@ import java.util.Map;
 /**
  * @author otorandell on 04/03/2016.
  */
+@SuppressWarnings({"AssignmentToCollectionOrArrayFieldFromParameter", "unused"})
 public class AT2MDMCL0030Manager implements AT2Test {
 
     AT2MDMCL0030Test test;
+    AT2MDMCL0030Sis sis;
     String[] procedure;
+    String env;
 
-    public AT2MDMCL0030Manager() {
-        setTest(new AT2MDMCL0030Test());
-        this.test.setData(new AT2MDMCL0030Data());
-        this.test.setLocators(new AT2MDMCL0030Locators());
+    public AT2MDMCL0030Manager(String enviroment) {
+        setEnv(enviroment);
+        if (getEnv().equalsIgnoreCase("test")) {
+            setTest(new AT2MDMCL0030Test(enviroment));
+        } else {
+            setTestSis(new AT2MDMCL0030Sis(enviroment));
+        }
+    }
+
+    public Map<String, String> getData() {
+        if (getEnv().equalsIgnoreCase("test")) {
+            return this.test.getData().getData();
+        } else {
+            return this.sis.getData().getData();
+        }
+    }
+
+    public String getEnv() {
+        return this.env;
+    }
+
+    public void setEnv(String env) {
+        this.env = env;
     }
 
     public String[] getProcedure() {
@@ -35,17 +57,22 @@ public class AT2MDMCL0030Manager implements AT2Test {
         this.test = test;
     }
 
-    public Map<String, String> getData() {
-        return this.test.getData().getData();
+    public AT2MDMCL0030Sis getTestSis() {
+        return sis;
+    }
+
+    public void setTestSis(AT2MDMCL0030Sis sis) {
+        this.sis = sis;
     }
 
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
-        getTest().start(driver);
-        if (!csedIteration(driver)) {
-            return false;
+        if (getEnv().equalsIgnoreCase("sis")) {
+            getTestSis().start(driver);
+        } else {
+            getTest().start(driver);
         }
-        return true;
+        return csedIteration(driver);
     }
 
     private boolean csedIteration(TestDriver driver) {
@@ -72,8 +99,14 @@ public class AT2MDMCL0030Manager implements AT2Test {
                 getTest().reset(driver);
             }
             if (getProcedure()[i].equals("x")) {
-                if (!getTest().testCSED(driver)) {
-                    return false;
+                if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("test")) {
+                    if (!getTest().testCSED(driver)) {
+                        return false;
+                    }
+                } else {
+                    if (!getTestSis().testCSED(driver)) {
+                        return false;
+                    }
                 }
             }
         }

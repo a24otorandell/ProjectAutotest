@@ -9,12 +9,12 @@ import org.openqa.selenium.By;
 /**
  * @author otorandell on 29/12/2015.
  */
-public class AT2MDMCL0030Test {
+public class AT2MDMCL0030Sis {
 
     protected AT2MDMCL0030Locators locators;
     protected AT2MDMCL0030Data data;
 
-    public AT2MDMCL0030Test(String enviroment) {
+    public AT2MDMCL0030Sis(String enviroment) {
         setData(new AT2MDMCL0030Data(enviroment));
         setLocators(new AT2MDMCL0030Locators(enviroment));
     }
@@ -72,7 +72,7 @@ public class AT2MDMCL0030Test {
 
     /**
      * @param driver TestDriver
-     * @param add boolean
+     * @param add    boolean
      * @return boolean
      */
     protected boolean recordInteraction(TestDriver driver, boolean add) {
