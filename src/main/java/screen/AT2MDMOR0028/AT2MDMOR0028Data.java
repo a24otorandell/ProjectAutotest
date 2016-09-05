@@ -13,7 +13,7 @@ public class AT2MDMOR0028Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2MDMOR0028Data() {
+    public AT2MDMOR0028Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2MDMOR0028Values.txt");
         setData();
     }

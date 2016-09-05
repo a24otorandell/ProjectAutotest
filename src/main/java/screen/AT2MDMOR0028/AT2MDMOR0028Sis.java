@@ -11,12 +11,12 @@ import org.openqa.selenium.By;
 /**
  * @author otorandell on 08/04/2016.
  */
-public class AT2MDMOR0028Test {
+public class AT2MDMOR0028Sis {
 
     protected AT2MDMOR0028Locators locators;
     protected AT2MDMOR0028Data data;
 
-    public AT2MDMOR0028Test(String enviroment) {
+    public AT2MDMOR0028Sis(String enviroment) {
         setData(new AT2MDMOR0028Data(enviroment));
         setLocators(new AT2MDMOR0028Locators(enviroment));
     }
@@ -157,6 +157,7 @@ public class AT2MDMOR0028Test {
                 " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE DELETE")) {
             return false;
         }
+        Functions.break_time(driver, 2, 0);
         return true;
     }
 
