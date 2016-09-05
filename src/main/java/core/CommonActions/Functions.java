@@ -286,8 +286,7 @@ public class Functions {
         if (!checkClick(driver, b_search, e_result, where)) {
             return false;
         }
-        break_time(driver, 3, 0);
-        //noinspection RedundantIfStatement
+        break_time(driver, 30, 500);
         if (!simpleClick(driver, e_result, where)) {
             return false;
         }
