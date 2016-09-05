@@ -72,11 +72,11 @@ public class AT2MDMCL0030Test {
 
     /**
      * @param driver TestDriver
-     * @param add boolean
+     * @param add    boolean
      * @return boolean
      */
     protected boolean recordInteraction(TestDriver driver, boolean add) {
-
+        Functions.break_time(driver, 2, 0);
         if (add) {
             driver.getReport().addHeader("RECORD CREATION", 3, true);
             if (!Functions.checkClick(driver,
@@ -218,6 +218,7 @@ public class AT2MDMCL0030Test {
         } catch (Exception delete) {
             delete.printStackTrace();
         }
+        Functions.break_time(driver, 2, 0);
         return true;
     }
 
