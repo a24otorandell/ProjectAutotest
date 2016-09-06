@@ -207,9 +207,9 @@ public class Functions {
      */
     public static boolean checkClickByAbsence(TestDriver driver, String path1[], String path2[], int seconds, int miliseconds, String where) {
         //HOW TO CALL THIS METHOD
-        /* SwissKnife.checkClickByAbsence(driver,
-                new String[]{"x", elements.get("x")}, //element to click
-                new String[]{"y", elements.get("x")}, //element expected to disappear
+        /* Functions.checkClickByAbsence(driver,
+                new String[]{"x", getElements("x")}, //element to click
+                new String[]{"y", getElements("x")}, //element expected to disappear
                 90, 500,
                 " on where");*/
 
@@ -310,7 +310,7 @@ public class Functions {
         //HOW TO CALL THIS METHOD:
         /*
         if (!Functions.insertInput(driver, new String[]{"inputname",getElements("inputvalue")},
-                "dataname", getData("")," where")){return false;}
+                "dataname", ""," where")){return false;}
         */
         driver.getReport().addContent("Insert Input:", "h5", "");
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
