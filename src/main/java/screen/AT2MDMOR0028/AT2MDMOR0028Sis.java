@@ -17,8 +17,8 @@ public class AT2MDMOR0028Sis {
     protected AT2MDMOR0028Data data;
 
     public AT2MDMOR0028Sis(String enviroment) {
-        setData(new AT2MDMOR0028Data(enviroment));
         setLocators(new AT2MDMOR0028Locators(enviroment));
+        setData(new AT2MDMOR0028Data(enviroment));
     }
 
     public AT2MDMOR0028Locators getLocators() {
@@ -59,7 +59,6 @@ public class AT2MDMOR0028Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
-
         if (languageTestCSED(driver)) {
             return true;
         }
@@ -71,12 +70,12 @@ public class AT2MDMOR0028Sis {
 
     private boolean webLabelTestCSED(TestDriver driver) {
         driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE TEST", 2, true);
-
+        Functions.break_time(driver, 2, 0);
         if (!Functions.checkClick(driver,
                 new String[]{"web_label_languages_tab",
                         getElements("web_label_languages_tab")}, //element to click
                 new String[]{"web_label_languages_tab_web_label_languages_table_search_i_language_code",
-                        getElements("web_label_languages_tab_web_label_languages_table_search_i_language_code")}, //element to click
+                        getElements("web_label_languages_tab_web_label_languages_table_search_i_language_code")},
                 " to GO TO \"WEB LABEL LANGUAGES\" TAB")) {
             return false;
         }
@@ -90,12 +89,12 @@ public class AT2MDMOR0028Sis {
         if (!webLabelLanguagesTabWebLabelLanguagesTableRecordInteraction(driver, false)) {
             return false;
         }
-        if (!webLabelLanguagesTabWebLabelLanguagesTableSearch(driver)) {
+        if (!webLabelLanguagesTabWebLabelLanguagesTableQuery(driver)) {
             return false;
-        } // COMMENTED FOR SOME REASON
+        }
         if (!webLabelLanguagesTabWebLabelLanguagesTableExtraActions(driver)) {
             return false;
-        } // COMMENTED FOR SOME REASON
+        }
         if (!webLabelLanguagesTabwebLabelLanguagesDescriptionTableTestCSED(driver)) {
             return false;
         }
@@ -114,7 +113,7 @@ public class AT2MDMOR0028Sis {
         if (!Functions.doDelete(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_table_delete_b_delete",
                         getElements("web_label_languages_tab_web_label_languages_table_delete_b_delete")},//delete button
-                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE DELETE")) {
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE DELETE")) {
             return false;
         }
         return true;
@@ -149,20 +148,19 @@ public class AT2MDMOR0028Sis {
     }
 
     private boolean webLabelLanguagesTabWebLabelLanguagesDescriptionTableDelete(TestDriver driver) {
-        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE DELETE:", 3, false);
+        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE DELETE:", 3, false);
 
         if (!Functions.doDelete(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_description_table_delete_b_delete",
                         getElements("web_label_languages_tab_web_label_languages_description_table_delete_b_delete")},//delete button
-                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE DELETE")) {
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE DELETE")) {
             return false;
         }
-        Functions.break_time(driver, 2, 0);
         return true;
     }
 
     private boolean webLabelLanguagesTabWebLabelLanguagesDescriptionTableExtraActions(TestDriver driver) {
-        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EXTRA ACTIONS:", 3, false);
+        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EXTRA ACTIONS:", 3, false);
         if (!Functions.auditData(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_description_table_audit_b_actions",
                         getElements("web_label_languages_tab_web_label_languages_description_table_audit_b_actions")}, //actions button
@@ -170,21 +168,21 @@ public class AT2MDMOR0028Sis {
                         getElements("web_label_languages_tab_web_label_languages_description_table_audit_b_audit")}, //audit button
                 new String[]{"web_label_languages_tab_web_label_languages_description_table_audit_b_ok",
                         recursiveXPaths.audit_b_ok}, //audit_b_ok
-                " to AUDIT \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE DATA")) {
+                " to AUDIT \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE DATA")) {
             return false;
         }
         if (!Functions.detachTable(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_description_table_detach_b_detach",
                         getElements("web_label_languages_tab_web_label_languages_description_table_detach_b_detach")}, //detach button
                 true,
-                " to DETACH \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE")) {
+                " to DETACH \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE")) {
             return false;
         }
         return true;
     }
 
     private boolean webLabelLanguagesTabWebLabelLanguagesDescriptionTableQuery(TestDriver driver) {
-        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE SEARCH:", 3, false);
+        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE SEARCH:", 3, false);
 
         if (!Functions.clickQbE(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_description_table_query_b_qbe",
@@ -199,7 +197,7 @@ public class AT2MDMOR0028Sis {
                         getElements("web_label_languages_tab_web_label_languages_description_table_query_i_code")},
                 "web_label_languages_tab_web_label_languages_description_table_code",
                 getData("web_label_languages_tab_web_label_languages_description_table_code"),
-                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE SEARCH ")) {
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE SEARCH ")) {
             return false;
         }
         if (!Functions.insertInput(driver,
@@ -207,7 +205,7 @@ public class AT2MDMOR0028Sis {
                         getElements("web_label_languages_tab_web_label_languages_description_table_query_i_description")},
                 "web_label_languages_tab_web_label_languages_description_table_description",
                 getData("web_label_languages_tab_web_label_languages_description_table_description"),
-                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE SEARCH ")) {
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE SEARCH ")) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
@@ -215,7 +213,59 @@ public class AT2MDMOR0028Sis {
                         getElements("web_label_languages_tab_web_label_languages_description_table_query_i_code")}, //any query input
                 new String[]{"web_label_languages_tab_web_label_languages_description_table_query_e_result",
                         getElements("web_label_languages_tab_web_label_languages_description_table_query_e_result")}, //table result
-                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE SEARCH ")) {
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE SEARCH ")) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean webLabelLanguagesTabWebLabelLanguagesTableQuery(TestDriver driver) {
+        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE QUERY:", 3, false);
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"web_label_languages_tab_web_label_languages_table_search_b_reset",
+                        getElements("web_label_languages_tab_web_label_languages_table_search_b_reset")},
+                recursiveXPaths.glass,
+                "")) {
+            return false;
+        }
+        if (!Functions.clickQbE(driver,
+                new String[]{"web_label_languages_tab_web_label_languages_table_query_b_qbe",
+                        getElements("web_label_languages_tab_web_label_languages_table_query_b_qbe")},//any query input
+                new String[]{"web_label_languages_tab_web_label_languages_table_query_i_language_code",
+                        getElements("web_label_languages_tab_web_label_languages_table_query_i_language_code")},// query button
+                " ")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"web_label_languages_tab_web_label_languages_table_query_i_language_code",
+                        getElements("web_label_languages_tab_web_label_languages_table_query_i_language_code")},
+                "web_label_languages_tab_web_label_languages_table_language_code",
+                getData("web_label_languages_tab_web_label_languages_table_language_code"),
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE QUERY ")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"web_label_languages_tab_web_label_languages_table_query_i_language_description",
+                        getElements("web_label_languages_tab_web_label_languages_table_query_i_language_description")},
+                "web_label_languages_tab_web_label_languages_table_description",
+                getData("web_label_languages_tab_web_label_languages_table_description"),
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE QUERY ")) {
+            return false;
+        }
+        if (!Functions.selectText(driver,
+                new String[]{"web_label_languages_tab_web_label_languages_table_query_i_active",
+                        getElements("web_label_languages_tab_web_label_languages_table_query_i_active")},
+                "No",
+                "web_label_languages_tab_web_label_languages_table_active",
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE QUERY ")) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"web_label_languages_tab_web_label_languages_table_query_i_language_code",
+                        getElements("web_label_languages_tab_web_label_languages_table_query_i_language_code")}, //any query input
+                new String[]{"web_label_languages_tab_web_label_languages_table_query_e_result",
+                        getElements("web_label_languages_tab_web_label_languages_table_query_e_result")}, //table result
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE QUERY ")) {
             return false;
         }
         return true;
@@ -224,7 +274,7 @@ public class AT2MDMOR0028Sis {
     private boolean webLabelLanguagesTabWebLabelLanguagesDescriptionTableRecordInteraction(TestDriver driver, boolean add) {
 
         if (add) {
-            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD:", 3, false);
+            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD:", 3, false);
 
             if (!Functions.checkClick(driver,
                     new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_add",
@@ -240,9 +290,9 @@ public class AT2MDMOR0028Sis {
                             getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_i_code")}, //external LoV input
                     new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_code_lov_i_code",
                             getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_code_lov_i_code")}, //internal LoV input
-                    getData("web_label_languages_tab_web_label_languages_table_language_code"),
+                    getData("web_label_languages_tab_web_label_languages_description_table_code"),
                     "web_label_languages_tab_web_label_languages_description_table_code", //name of the data
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD")) {
                 return false;
             }
             if (!Functions.insertInput(driver,
@@ -250,18 +300,18 @@ public class AT2MDMOR0028Sis {
                             getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_i_description")},
                     "web_label_languages_tab_web_label_languages_description_table_description",
                     getData("web_label_languages_tab_web_label_languages_description_table_code") + " ADD",
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD")) {
                 return false;
             }
             if (!Functions.checkClickByAbsence(driver,
                     new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save",
                             getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save")}, //element to click
                     recursiveXPaths.glass,
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD")) {
                 return false;
             }
         } else {
-            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT:", 3, false);
+            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT:", 3, false);
             if (!Functions.checkClick(driver,
                     new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_edit",
                             getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_b_edit")}, //element to click
@@ -278,7 +328,7 @@ public class AT2MDMOR0028Sis {
                     recursiveXPaths.lov_e_result,
                     recursiveXPaths.lov_b_ok,
                     "web_label_languages_tab_web_label_languages_description_table_code",
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT")) {
                 return false;
             }
             if (!Functions.insertInput(driver,
@@ -286,14 +336,14 @@ public class AT2MDMOR0028Sis {
                             getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_i_description")},
                     "web_label_languages_tab_web_label_languages_description_table_description",
                     getData("web_label_languages_tab_web_label_languages_description_table_code") + " EDIT",
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT")) {
                 return false;
             }
             if (!Functions.checkClickByAbsence(driver,
                     new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save",
                             getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save")}, //element to click
                     recursiveXPaths.glass,
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT")) {
                 return false;
             }
         }
@@ -302,22 +352,22 @@ public class AT2MDMOR0028Sis {
     }
 
     private boolean webLabelLanguagesTabWebLabelLanguagesTableExtraActions(TestDriver driver) {
-        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EXTRA ACTIONS:", 3, false);
+        driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EXTRA ACTIONS:", 3, false);
         if (!Functions.auditData(driver,
-                new String[]{"web_label_languages_tab_web_label_languages_description_table_audit_b_actions",
-                        getElements("web_label_languages_tab_web_label_languages_description_table_audit_b_actions")}, //actions button
-                new String[]{"web_label_languages_tab_web_label_languages_description_table_audit_b_audit",
-                        getElements("web_label_languages_tab_web_label_languages_description_table_audit_b_audit")}, //audit button
-                new String[]{"web_label_languages_tab_web_label_languages_description_table_audit_b_ok",
-                        recursiveXPaths.audit_b_ok}, //audit_b_ok
-                " to AUDIT \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE DATA")) {
+                new String[]{"web_label_languages_tab_web_label_languages_table_audit_b_actions",
+                        getElements("web_label_languages_tab_web_label_languages_table_audit_b_actions")}, //actions button
+                new String[]{"web_label_languages_tab_web_label_languages_table_audit_b_audit",
+                        getElements("web_label_languages_tab_web_label_languages_table_audit_b_audit")}, //audit button
+                new String[]{"web_label_languages_tab_web_label_languages_table_audit_b_ok",
+                        getElements("web_label_languages_tab_web_label_languages_table_audit_b_ok")}, //audit ok
+                " to AUDIT \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE DATA")) {
             return false;
         }
         if (!Functions.detachTable(driver,
-                new String[]{"web_label_languages_tab_web_label_languages_description_table_detach_b_detach",
-                        getElements("web_label_languages_tab_web_label_languages_description_table_detach_b_detach")}, //detach button
+                new String[]{"web_label_languages_tab_web_label_languages_table_detach_b_detach",
+                        getElements("web_label_languages_tab_web_label_languages_table_detach_b_detach")}, //detach button
                 true,
-                " to DETACH \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE")) {
+                " to DETACH \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE")) {
             return false;
         }
         return true;
@@ -325,7 +375,6 @@ public class AT2MDMOR0028Sis {
 
     private boolean webLabelLanguagesTabWebLabelLanguagesTableSearch(TestDriver driver) {
         driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE SEARCH:", 3, false);
-
         if (!Functions.insertInput(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_table_search_i_language_code",
                         getElements("web_label_languages_tab_web_label_languages_table_search_i_language_code")},
@@ -338,8 +387,8 @@ public class AT2MDMOR0028Sis {
         if (!Functions.insertInput(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_table_search_i_language_description",
                         getElements("web_label_languages_tab_web_label_languages_table_search_i_language_description")},
-                "web_label_languages_tab_web_label_languages_table_language_description",
-                getData("web_label_languages_tab_web_label_languages_table_language_description"),
+                "web_label_languages_tab_web_label_languages_table_description",
+                getData("web_label_languages_tab_web_label_languages_table_description"),
                 " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE SEARCH ")) {
             return false;
         }
@@ -358,84 +407,92 @@ public class AT2MDMOR0028Sis {
     private boolean webLabelLanguagesTabWebLabelLanguagesTableRecordInteraction(TestDriver driver, boolean add) {
 
         if (add) {
-            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD:", 3, false);
-
+            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD:", 3, false);
+            if (!Functions.checkExistence(driver,
+                    "", //value
+                    "web_label_languages_tab_web_label_languages_table_language_code",//data name (x)
+                    new String[]{"web_label_languages_tab_web_label_languages_table_search_i_language_code",
+                            getElements("web_label_languages_tab_web_label_languages_table_search_i_language_code")},//input
+                    new String[]{"web_label_languages_tab_web_label_languages_table_search_b_search",
+                            getElements("web_label_languages_tab_web_label_languages_table_search_b_search")},//search button
+                    new String[]{"web_label_languages_tab_web_label_languages_table_search_e_result",
+                            getElements("web_label_languages_tab_web_label_languages_table_search_e_result")},//expected not found result
+                    "string",//type of input
+                    3,
+                    "")) {
+                return false;
+            }
             if (!Functions.checkClick(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_add",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_b_add")}, //element to click
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_b_add",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_b_add")}, //element to click
                     recursiveXPaths.glass,
                     "")) {
                 return false;
             }
-            if (!Functions.createLovByValue(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_code_b_lov",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_code_b_lov")}, //LoV button
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_i_code",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_i_code")}, //external LoV input
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_code_lov_i_code",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_code_lov_i_code")}, //internal LoV input
+
+            //          getData("web_label_languages_tab_web_label_languages_table_language_code"),
+            if (!Functions.insertInput(driver,
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_i_language_code",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_i_language_code")},
+                    "web_label_languages_tab_web_label_languages_table_language_code",
                     getData("web_label_languages_tab_web_label_languages_table_language_code"),
-                    "web_label_languages_tab_web_label_languages_description_table_code", //name of the data
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD")) {
                 return false;
             }
             if (!Functions.insertInput(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_i_description",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_i_description")},
-                    "web_label_languages_tab_web_label_languages_description_table_description",
-                    getData("web_label_languages_tab_web_label_languages_description_table_code") + " ADD",
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD")) {
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_i_language_description",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_i_language_description")},
+                    "web_label_languages_tab_web_label_languages_table_description",
+                    getData("web_label_languages_tab_web_label_languages_table_language_code") + " ADD",
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD")) {
                 return false;
             }
             if (!Functions.checkClickByAbsence(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save")}, //element to click
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_b_save",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_b_save")}, //element to click
                     recursiveXPaths.glass,
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE ADD")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD")) {
                 return false;
             }
         } else {
-            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT:", 3, false);
+            driver.getReport().addHeader("\"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT:", 3, false);
 
 
             if (!Functions.simpleClick(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_query_e_result",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_query_e_result")}, //element to click
+                    new String[]{"web_label_languages_tab_web_label_languages_table_search_e_result",
+                            getElements("web_label_languages_tab_web_label_languages_table_search_e_result")}, //element to click
                     "")) {
                 return false;
             }
             if (!Functions.checkClick(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_edit",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_b_edit")}, //element to click
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_b_edit",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_b_edit")}, //element to click
                     recursiveXPaths.glass,
                     "")) {
                 return false;
             }
-            if (!Functions.createLov(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_code_b_lov",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_code_b_lov")},
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_i_code",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_i_code")},
-                    recursiveXPaths.lov_b_search,
-                    recursiveXPaths.lov_e_result,
-                    recursiveXPaths.lov_b_ok,
-                    "web_label_languages_tab_web_label_languages_description_table_code",
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT")) {
+
+            if (!Functions.insertInput(driver,
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_i_language_code",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_i_language_code")},
+                    "web_label_languages_tab_web_label_languages_table_language_code",
+                    getData("web_label_languages_tab_web_label_languages_table_language_code"),
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT")) {
                 return false;
             }
             if (!Functions.insertInput(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_i_description",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_i_description")},
-                    "web_label_languages_tab_web_label_languages_description_table_description",
-                    getData("web_label_languages_tab_web_label_languages_description_table_code") + " EDIT",
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT")) {
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_i_language_description",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_i_language_description")},
+                    "web_label_languages_tab_web_label_languages_table_description",
+                    getData("web_label_languages_tab_web_label_languages_table_language_code") + " EDIT",
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT")) {
                 return false;
             }
             if (!Functions.checkClickByAbsence(driver,
-                    new String[]{"web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save",
-                            getElements("web_label_languages_tab_web_label_languages_description_table_record_interaction_b_save")}, //element to click
+                    new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_b_save",
+                            getElements("web_label_languages_tab_web_label_languages_table_record_interaction_b_save")}, //element to click
                     recursiveXPaths.glass,
-                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES DESCRIPTION\" TABLE EDIT")) {
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT")) {
                 return false;
             }
         }
@@ -462,7 +519,7 @@ public class AT2MDMOR0028Sis {
         if (!languageTabLanguageCodeTableRecordInteraction(driver, false)) {
             return false;
         }
-        if (!languageTabLanguageCodeTableSearch(driver)) {
+        if (!languageTabLanguageCodeTableQuery(driver)) {
             return false;
         }
         if (!languageTabLanguageCodeTableExtraActions(driver)) {
@@ -623,6 +680,67 @@ public class AT2MDMOR0028Sis {
                 new String[]{"language_tab_language_description_table_query_e_result",
                         getElements("language_tab_language_description_table_query_e_result")},
                 " on \"LANGUAGE\" TAB, \"LANGUAGE DESCRIPTION\" TABLE QUERY ")) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean languageTabLanguageCodeTableQuery(TestDriver driver) {
+        driver.getReport().addHeader("\"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE QUERY:", 2, false);
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"language_tab_search_b_reset",
+                        getElements("language_tab_search_b_reset")},
+                recursiveXPaths.glass,
+                "")) {
+            return false;
+        }
+        if (!Functions.clickQbE(driver,
+                new String[]{"language_tab_language_code_table_query_b_qbe",
+                        getElements("language_tab_language_code_table_query_b_qbe")},
+                new String[]{"language_tab_language_code_table_query_i_language_code",
+                        getElements("language_tab_language_code_table_query_i_language_code")},
+                " ")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"language_tab_language_code_table_query_i_language_code",
+                        getElements("language_tab_language_code_table_query_i_language_code")},
+                "language_tab_language_code_table_language_code",
+                getData("language_tab_language_code_table_language_code"),
+                " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE QUERY ")) {
+            return false;
+        }
+        if (!Functions.selectText(driver,
+                new String[]{"language_tab_language_code_table_query_i_status",
+                        getElements("language_tab_language_code_table_query_i_status")},
+                "No",
+                "language_tab_language_code_table_status",
+                " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE QUERY ")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"language_tab_language_code_table_query_i_SAP",
+                        getElements("language_tab_language_code_table_query_i_SAP")},
+                "language_tab_language_code_table_sap_language_code",
+                getData("language_tab_language_code_table_sap_language_code"),
+                " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE QUERY ")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"language_tab_language_code_table_query_i_language_description",
+                        getElements("language_tab_language_code_table_query_i_language_description")},
+                "language_tab_language_code_table_language_description",
+                getData("language_tab_language_code_table_language_description"),
+                " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE QUERY ")) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"language_tab_language_code_table_query_i_language_code",
+                        getElements("language_tab_language_code_table_query_i_language_code")},
+                new String[]{"language_tab_language_code_table_query_e_result",
+                        getElements("language_tab_language_code_table_query_e_result")},
+                " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE QUERY ")) {
             return false;
         }
 

@@ -832,7 +832,7 @@ public class Functions {
                 }
             }
             if (!found) {
-                String ecode = "--ERROR: selectText(): Unable to find the target option into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
+                String ecode = "--ERROR: selectText(): Unable to find the target option " + content + " into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
                 ErrorManager.process(driver, ecode);
                 return false;
             }
@@ -1265,9 +1265,9 @@ public class Functions {
         /*if (!Functions.checkExistence(driver,
                 "", //value
                 "x",//data name (x)
-                new String[]{"y", getelEmenmts("y")},//input
-                new String[]{"z", getelEmenmts("z")},//search button
-                new String[]{"w", getelEmenmts("w")},//expected not found result
+                new String[]{"y", getElements("y")},//input
+                new String[]{"z", getElements("z")},//search button
+                new String[]{"w", getElements("w")},//expected not found result
                 "integer/string/both",//type of input
                 "")){return false;}//where
                 */
