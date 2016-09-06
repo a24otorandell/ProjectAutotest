@@ -583,6 +583,7 @@ public class AT2MDMOR0028Sis {
                 " on \"LANGUAGE\" TAB, \"LANGUAGE DESCRIPTION\" TABLE QUERY ")) {
             return false;
         }
+        Functions.break_time(driver, 2, 0);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"language_tab_language_description_table_query_i_code",
                         getElements("language_tab_language_description_table_query_i_code")},
