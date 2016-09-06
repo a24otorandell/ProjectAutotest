@@ -16,7 +16,9 @@ public class AT2MDMOR0028Test {
     protected AT2MDMOR0028Locators locators;
     protected AT2MDMOR0028Data data;
 
-    public AT2MDMOR0028Test() {
+    public AT2MDMOR0028Test(String enviroment) {
+        setData(new AT2MDMOR0028Data(enviroment));
+        setLocators(new AT2MDMOR0028Locators(enviroment));
     }
 
     public AT2MDMOR0028Locators getLocators() {

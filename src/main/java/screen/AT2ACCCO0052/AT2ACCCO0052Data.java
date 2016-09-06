@@ -14,7 +14,7 @@ public class AT2ACCCO0052Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2ACCCO0052Data() {
+    public AT2ACCCO0052Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCCO0052Values.txt");
         setData();
     }

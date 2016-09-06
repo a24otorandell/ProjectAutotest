@@ -12,13 +12,19 @@ import java.util.Map;
 public class AT2ACCCO0052Manager implements AT2Test {
 
     AT2ACCCO0052Test test;
+    AT2ACCCO0052Sis sis;
     String[] procedure;
+    String env;
 
 
-    public AT2ACCCO0052Manager() {
-        setTest(new AT2ACCCO0052Test());
-        this.test.setData(new AT2ACCCO0052Data());
-        this.test.setLocators(new AT2ACCCO0052Locators());
+    public AT2ACCCO0052Manager(String enviroment) {
+        setEnv(enviroment);
+        if (getEnv().equalsIgnoreCase("test")) {
+            setTest(new AT2ACCCO0052Test(enviroment));
+        } else {
+            setTestSis(new AT2ACCCO0052Sis(enviroment));
+        }
+
     }
 
     /**
@@ -57,13 +63,34 @@ public class AT2ACCCO0052Manager implements AT2Test {
         this.test = test;
     }
 
+
+    public AT2ACCCO0052Sis getTestSis() {
+        return sis;
+    }
+
+    public void setTestSis(AT2ACCCO0052Sis sis) {
+        this.sis = sis;
+    }
+    
     /**
      * Gets data of the class AT2ACCCO0052Data
      *
      * @return AT2ACCCO0052Data
      */
     public Map<String, String> getData() {
-        return this.test.getData().getData();
+        if (getEnv().equalsIgnoreCase("test")) {
+            return this.test.getData().getData();
+        } else {
+            return this.sis.getData().getData();
+        }
+    }
+
+    public String getEnv() {
+        return this.env;
+    }
+
+    public void setEnv(String env) {
+        this.env = env;
     }
 
     /**
@@ -72,11 +99,12 @@ public class AT2ACCCO0052Manager implements AT2Test {
      */
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
-        getTest().start(driver);
-        if (!csedIteration(driver)) {
-            return false;
+        if (getEnv().equalsIgnoreCase("sis")) {
+            getTestSis().start(driver);
+        } else {
+            getTest().start(driver);
         }
-        return true;
+        return csedIteration(driver);
     }
 
     /**
@@ -90,15 +118,23 @@ public class AT2ACCCO0052Manager implements AT2Test {
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
+            if (getProcedure()[i].equals("c")) {
+            }
             if (getProcedure()[i].equals("s")) {
             }
-            if (getProcedure()[i].equals("q")) {
+            if (getProcedure()[i].equals("e")) {
             }
-            if (getProcedure()[i].equals("t")) {
+            if (getProcedure()[i].equals("d")) {
             }
             if (getProcedure()[i].equals("x")) {
-                if (!getTest().testCSED(driver)) {
-                    return false;
+                if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("test")) {
+                    if (!getTest().testCSED(driver)) {
+                        return false;
+                    }
+                } else {
+                    if (!getTestSis().testCSED(driver)) {
+                        return false;
+                    }
                 }
             }
         }

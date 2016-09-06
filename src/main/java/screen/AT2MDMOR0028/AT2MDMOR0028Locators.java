@@ -10,7 +10,7 @@ public class AT2MDMOR0028Locators {
 
     Map<String, String> elements = new HashMap<>();
 
-    public AT2MDMOR0028Locators() {
+    public AT2MDMOR0028Locators(String enviroment) {
         setElements();
     }
 

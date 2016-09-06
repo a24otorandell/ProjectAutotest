@@ -8,16 +8,37 @@ import java.util.Map;
 /**
  * @author ajvirgili on 19/07/2016
  */
-@SuppressWarnings({"unused", "RedundantIfStatement"})
+@SuppressWarnings({"unused", "RedundantIfStatement", "StatementWithEmptyBody", "AssignmentToCollectionOrArrayFieldFromParameter"})
 public class AT2ACCSU0071Manager implements AT2Test {
 
     AT2ACCSU0071Test test;
+    AT2ACCSU0071Sis sis;
     String[] procedure;
+    String env;
 
-    public AT2ACCSU0071Manager() {
-        setTest(new AT2ACCSU0071Test());
-        this.test.setData(new AT2ACCSU0071Data());
-        this.test.setLocators(new AT2ACCSU0071Locators());
+    public AT2ACCSU0071Manager(String enviroment) {
+        setEnv(enviroment);
+        if (getEnv().equalsIgnoreCase("test")) {
+            setTest(new AT2ACCSU0071Test(enviroment));
+        } else {
+            setTestSis(new AT2ACCSU0071Sis(enviroment));
+        }
+    }
+
+    public Map<String, String> getData() {
+        if (getEnv().equalsIgnoreCase("test")) {
+            return this.test.getData().getData();
+        } else {
+            return this.sis.getData().getData();
+        }
+    }
+
+    public String getEnv() {
+        return this.env;
+    }
+
+    public void setEnv(String env) {
+        this.env = env;
     }
 
     public String[] getProcedure() {
@@ -36,17 +57,22 @@ public class AT2ACCSU0071Manager implements AT2Test {
         this.test = test;
     }
 
-    public Map<String, String> getData() {
-        return this.test.getData().getData();
+    public AT2ACCSU0071Sis getTestSis() {
+        return sis;
+    }
+
+    public void setTestSis(AT2ACCSU0071Sis sis) {
+        this.sis = sis;
     }
 
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
-        getTest().start(driver);
-        if (!csedIteration(driver)) {
-            return false;
+        if (getEnv().equalsIgnoreCase("sis")) {
+            getTestSis().start(driver);
+        } else {
+            getTest().start(driver);
         }
-        return true;
+        return csedIteration(driver);
     }
 
     private boolean csedIteration(TestDriver driver) {
@@ -61,13 +87,18 @@ public class AT2ACCSU0071Manager implements AT2Test {
             if (getProcedure()[i].equals("d")) {
             }
             if (getProcedure()[i].equals("x")) {
-                if (!getTest().testCSED(driver)) {
-                    return false;
+                if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("test")) {
+                    if (!getTest().testCSED(driver)) {
+                        return false;
+                    }
+                } else {
+                    if (!getTestSis().testCSED(driver)) {
+                        return false;
+                    }
                 }
             }
         }
         return true;
-
     }
 
 }

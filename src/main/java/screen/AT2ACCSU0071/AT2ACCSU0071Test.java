@@ -14,8 +14,9 @@ public class AT2ACCSU0071Test {
     protected AT2ACCSU0071Locators locators;
     protected AT2ACCSU0071Data data;
 
-    public AT2ACCSU0071Test() {
-
+    public AT2ACCSU0071Test(String enviroment) {
+        setData(new AT2ACCSU0071Data(enviroment));
+        setLocators(new AT2ACCSU0071Locators(enviroment));
     }
 
     public AT2ACCSU0071Locators getLocators() {
@@ -54,7 +55,7 @@ public class AT2ACCSU0071Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
-
+        CommonProcedures.styleGuide(driver);
         return false;
     }
 

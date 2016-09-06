@@ -24,8 +24,9 @@ public class AT2ACCCO0052Test {
     /**
      * Void constructor
      */
-    public AT2ACCCO0052Test() {
-
+    public AT2ACCCO0052Test(String enviroment) {
+        setData(new AT2ACCCO0052Data(enviroment));
+        setLocators(new AT2ACCCO0052Locators(enviroment));
     }
 
     /**
@@ -78,8 +79,8 @@ public class AT2ACCCO0052Test {
      */
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodations");
-        driver.getTestdetails().setSubmenu("");
-        driver.getTestdetails().setScreen(" 2.0");
+        driver.getTestdetails().setSubmenu("Contract");
+        driver.getTestdetails().setScreen("Stop sales 2.0");
     }
 
     /**
@@ -105,6 +106,7 @@ public class AT2ACCCO0052Test {
      * @return boolean to control the process flow
      */
     protected boolean testCSED(TestDriver driver) {
+        CommonProcedures.styleGuide(driver);
         return false;
     }
 

@@ -10,7 +10,7 @@ import java.util.Map;
 public class AT2ACCCO0052Locators {
     Map<String, String> elements = new HashMap<>();
 
-    public AT2ACCCO0052Locators() {
+    public AT2ACCCO0052Locators(String enviroment) {
         setElements();
     }
 

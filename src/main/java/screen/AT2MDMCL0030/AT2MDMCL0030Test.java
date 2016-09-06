@@ -14,8 +14,9 @@ public class AT2MDMCL0030Test {
     protected AT2MDMCL0030Locators locators;
     protected AT2MDMCL0030Data data;
 
-    public AT2MDMCL0030Test() {
-
+    public AT2MDMCL0030Test(String enviroment) {
+        setData(new AT2MDMCL0030Data(enviroment));
+        setLocators(new AT2MDMCL0030Locators(enviroment));
     }
 
     public AT2MDMCL0030Locators getLocators() {
@@ -46,13 +47,11 @@ public class AT2MDMCL0030Test {
     }
 
     protected String getElements(String key) {
-        String value = this.locators.getElements().get(key);
-        return value;
+        return this.locators.getElements().get(key);
     }
 
     protected String getData(String key) {
-        String value = this.data.getData().get(key);
-        return value;
+        return this.data.getData().get(key);
     }
 
     protected boolean testCSED(TestDriver driver) {
@@ -73,11 +72,11 @@ public class AT2MDMCL0030Test {
 
     /**
      * @param driver TestDriver
-     * @param add boolean
+     * @param add    boolean
      * @return boolean
      */
     protected boolean recordInteraction(TestDriver driver, boolean add) {
-
+        Functions.break_time(driver, 2, 0);
         if (add) {
             driver.getReport().addHeader("RECORD CREATION", 3, true);
             if (!Functions.checkClick(driver,
@@ -219,6 +218,7 @@ public class AT2MDMCL0030Test {
         } catch (Exception delete) {
             delete.printStackTrace();
         }
+        Functions.break_time(driver, 2, 0);
         return true;
     }
 
