@@ -143,6 +143,8 @@ public class AT2TFRSU0011Locators {
         elements.put("antela_search_i_description", "//*[contains(@id, 'queryCalidadTiempoAnt:value30::content')]");
         elements.put("antela_search_b_search", "//*[contains(@id, 'queryCalidadTiempoAnt::search')]");
         elements.put("antela_search_t_result", "//*[contains(@id, 'pc2:t6::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("antela_search_lov_i_internal", "//*[contains(@id, 'afrLovInternalTableId::db')]/table/tbody/tr/td[1]");
+        elements.put("antela_search_lov_i_des", "//*[contains(@id, 'afrLovInternalQueryId:value10::content')]");
         //add
         elements.put("antela_cr_b_add", "//*[contains(@id, 'pc2:tgenericbar1:boton_add')]");
         elements.put("antela_cr_b_save", "//*[contains(@id, 'tgenericbar1:btn_commitExit')]");
@@ -168,9 +170,18 @@ public class AT2TFRSU0011Locators {
         elements.put("antela_ed_i_time", "//*[contains(@id, 'tgenericbar1:it9::content')]");
         //detach
         elements.put("antela_detach_b", "//*[contains(@id, 'pc2:_dchTbr')]/a");
+
+        //actions
+        elements.put("antela_b_actions", "//*[contains(@id, 'tgenericMenu2:dc_m1')]/div/table/tbody/tr/td[2]/a");
+        elements.put("antela_b_auditdata", "//*[contains(@id, 'tgenericMenu2:dc_cmi1')]/td[2]");
+        elements.put("antela_b_audit_close", "//*[contains(@id, 'dialog2::close')]");
+
+
+
         //delete
         elements.put("antela_b_delete", "//*[contains(@id, 'tgenericbar1:boton_remove')]");
         elements.put("antela_ss_delete_b_yes", "//*[contains(@id, 'tgenericbar1:cbt1')]");
+
 
 
         //INCOMPATIBILITY OF AREAS
@@ -185,6 +196,9 @@ public class AT2TFRSU0011Locators {
         elements.put("areas_s_i_description2", "//*[contains(@id, 'queryIncompatibility:value30::content')]");
         elements.put("areas_i_b_search", "//*[contains(@id, 'queryIncompatibility::search')]");
         elements.put("areas_i_result", "//*[contains(@id, 'tableIncomp::db')]/table/tbody/tr/td[1]");
+        elements.put("areas_i_lov_transfer", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
+        elements.put("areas_i_lov_transfer2", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
+
 
         //add
         elements.put("areas_ad_b_add", "//*[contains(@id, 'tgenericbar0:boton_add')]");
@@ -226,6 +240,8 @@ public class AT2TFRSU0011Locators {
         //actions
         elements.put("areas_b_actions", "//*[contains(@id, 'tgenericMenu0:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("areas_b_actions_tour", "//*[contains(@id, 'tgenericMenu0:dc_cmi2')]/td[2]");
+        elements.put("areas_b_audit_data", "//*[contains(@id, 'tgenericMenu0:dc_cmi1')]/td[2]");
+        elements.put("areas_b_close", "//*[contains(@id, 'dialog1::close')]");
 
 
         //Exclusive areas
@@ -241,6 +257,7 @@ public class AT2TFRSU0011Locators {
         //search
         elements.put("exclusive_s_lov", "//*[contains(@id, 'queryExclusiveTransArea:value00::lovIconId')]");
         elements.put("exclusive_s_i_transfer", "//*[contains(@id, 'queryExclusiveTransArea:value00::content')]");
+        elements.put("exclusive_s_lov_transfer", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
         elements.put("exclusive_i_b_search", "//*[contains(@id, 'queryExclusiveTransArea::search')]");
         elements.put("exclusive_result", "//*[contains(@id, 't1::db')]/table/tbody/tr/td[1]");
 
@@ -260,6 +277,8 @@ public class AT2TFRSU0011Locators {
 
         //actions
         elements.put("exclusive_b_actions", "//*[contains(@id, 'tgenericMenu0:dc_m1')]");
+        elements.put("exclusive_b_actions_auditdata", "//*[contains(@id, 'tgenericMenu0:dc_cmi1')]/td[2]");
+        elements.put("exclusive_b_actions_b_close", "//*[contains(@id, 'd2::close')]");
         elements.put("exclusive_b_actions_tour", "//*[contains(@id, 'tgenericMenu0:dc_cmi2')]/td[2]");
 
 

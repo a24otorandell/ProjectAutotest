@@ -74,7 +74,7 @@ public class AT2TRFSU0013Test {
         if (!QBE_Grouping_vehicles(driver)) {
             return false;
         }
-
+        //if (!)
 
         return true;
     }
@@ -86,23 +86,23 @@ public class AT2TRFSU0013Test {
         if (!Functions.clickQbE(driver,
                 new String[]{"b_qbe", getElements("b_qbe")},// query button
                 new String[]{"qbe_i_grouping", getElements("qbe_i_grouping")},//any query input
-                " on QBE IN EXCLUSIVE")) {
+                " on QBE IN GROUPING")) {
             return false;
         }
 
         if (!Functions.selectText(driver,
                 new String[]{"qbe_s_active", getElements("qbe_s_active")},
-                "Arrival", "vu_ad", " on ADD IN ANTELA")) {
+                "Yes", "qbe_yes", " on QBE IN GROUPING")) {
             return false;
         }
 
-        if (!Functions.insertInput(driver, new String[]{"exclusive_qbe_i_transfer", getElements("exclusive_qbe_i_transfer")},
-                "ex_tra", "AAA", " on QBE IN EXCLUSIVE")) {
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_grouping", getElements("qbe_i_grouping")},
+                "qbe_gro", "5", " on QBE IN GROUPING")) {
             return false;
         }
 
-        if (!Functions.insertInput(driver, new String[]{"exclusive_qbe_i_description", getElements("exclusive_qbe_i_description")},
-                "ex_des", "CAMPANET", " on QBE IN EXCLUSIVE")) {
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_decription", getElements("qbe_i_decription")},
+                "qbe_des", "VSSED", " on QBE IN GROUPING")) {
             return false;
         }
 

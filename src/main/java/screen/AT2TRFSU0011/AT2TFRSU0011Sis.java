@@ -67,6 +67,8 @@ public class AT2TFRSU0011Sis {
         if (!Temporaly_quality_rules(driver)) {
             return false;
         }
+        /*if (!Calidad_vuelos_tiempo(driver)){
+            return false;}*/
         if (!Calidad_tiempo_antela(driver)) {
             return false;
         }
@@ -89,6 +91,10 @@ public class AT2TFRSU0011Sis {
             return false;
         }
         if (!Maximun_seats_of_a_hotel(driver)) {
+            return false;
+        }
+
+        if (!Delete_qualityRules(driver)) {
             return false;
         }
 
@@ -199,7 +205,6 @@ public class AT2TFRSU0011Sis {
         driver.getReport().closeBlock();
         return true;
     }
-
     private boolean Calidad_tiempo_antela(TestDriver driver) {
         if (!Add_antela(driver)) {
             return false;
@@ -207,10 +212,14 @@ public class AT2TFRSU0011Sis {
         if (!Search_antela(driver)) {
             return false;
         }
-        if (!QBE_antela(driver)) {
+        if (!Edit_antela(driver)) {
             return false;
         }
-        if (!Edit_antela(driver)) {
+        if (!Search2_antela(driver)) {
+            return false;
+        }
+
+        if (!QBE_antela(driver)) {
             return false;
         }
         if (!other_actions_antela(driver)) {
@@ -226,11 +235,12 @@ public class AT2TFRSU0011Sis {
         return true;
     }
 
+
     private boolean Temporaly_quality_rules(TestDriver driver) {
-        //  if (!Creation_temporaly(driver)) {
-        //   return false;
-        //}
-        //driver.getReport().closeBlock();
+        if (!Creation_temporaly(driver)) {
+            return false;
+        }
+        driver.getReport().closeBlock();
         return true;
     }
 
@@ -318,12 +328,16 @@ public class AT2TFRSU0011Sis {
         if (!Search_incompatibility(driver)) {
             return false;
         }
-        if (!QBE_incompatibility(driver)) {
-            return false;
-        }
         if (!Edit_incompatibility(driver)) {
             return false;
         }
+        if (!Search2_incompatibility(driver)) {
+            return false;
+        }
+        if (!QBE_incompatibility(driver)) {
+            return false;
+        }
+
         if (!Other_actions_incompatibility(driver)) {
             return false;
         }
@@ -336,6 +350,41 @@ public class AT2TFRSU0011Sis {
         return true;
     }
 
+    private boolean Search2_incompatibility(TestDriver driver) {
+        driver.getReport().addHeader("SEARCH2 IN INCOMPATIBILITY OF AREAS", 3, false);
+
+
+        if (!Functions.createLovByValue(driver,
+                new String[]{"areas_s_lov", getElements("areas_s_lov")}, //LoV button
+                new String[]{"areas_s_i_code1", getElements("areas_s_i_code1")}, //external LoV input
+                new String[]{"areas_i_lov_transfer", getElements("areas_i_lov_transfer")}, //internal LoV input
+                "ALCUDIA", // value to search
+                "inc_cod2", //name of the data
+                " on where")) {
+            return false;
+        }
+
+
+        if (!Functions.createLovByValue(driver,
+                new String[]{"areas_s_lov2", getElements("areas_s_lov2")}, //LoV button
+                new String[]{"areas_s_i_code2", getElements("areas_s_i_code2")}, //external LoV input
+                new String[]{"areas_i_lov_transfer2", getElements("areas_i_lov_transfer2")}, //internal LoV input
+                "ARENAL", // value to search
+                "inc_cod3", //name of the data
+                " on where")) {
+            return false;
+        }
+
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"areas_i_b_search", getElements("areas_i_b_search")}, //search button
+                new String[]{"areas_i_result", getElements("areas_i_result")}, //Falta crear este resultado por bug
+                " on SEARCH IN INCOMPATIBILITY")) {
+            return false;
+        }
+
+        return true;
+    }
+
     private boolean Exclusive_areas(TestDriver driver) {
         if (!Exclusive_add(driver)) {
             return false;
@@ -343,12 +392,16 @@ public class AT2TFRSU0011Sis {
         if (!Exclusive_search(driver)) {
             return false;
         }
-        if (!QBE_Exclusive(driver)) {
-            return false;
-        }
         if (!Edit_Exclusive(driver)) {
             return false;
         }
+        if (!Exclusive_search2(driver)) {
+            return false;
+        }
+        if (!QBE_Exclusive(driver)) {
+            return false;
+        }
+
         if (!Other_actions_Exclusive(driver)) {
             return false;
         }
@@ -359,6 +412,29 @@ public class AT2TFRSU0011Sis {
             return false;
         }
 
+        return true;
+    }
+
+    private boolean Exclusive_search2(TestDriver driver) {
+
+        driver.getReport().addHeader("SEARCH2 IN EXCLUSIVE AREAS", 3, false);
+        if (!Functions.createLovByValue(driver,
+                new String[]{"exclusive_s_lov", getElements("exclusive_s_lov")}, //LoV button
+                new String[]{"exclusive_s_i_transfer", getElements("exclusive_s_i_transfer")}, //external LoV input
+                new String[]{"exclusive_s_lov_transfer", getElements("exclusive_s_lov_transfer")}, //internal LoV input
+                "ALARO", // value to search
+                "ex_cod2", //name of the data
+                " on where")) {
+            return false;
+        }
+
+
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"exclusive_i_b_search", getElements("exclusive_i_b_search")}, //search button
+                new String[]{"exclusive_result", getElements("exclusive_result")},
+                " on SEARCH IN EXCLUSIVE")) {
+            return false;
+        }
         return true;
     }
 
@@ -400,7 +476,6 @@ public class AT2TFRSU0011Sis {
 
         return false;
     }
-
     private boolean Other_actions_vuelos(TestDriver driver) {
 
         driver.getReport().addHeader("DETACH IN CALIDAD VUELOS TIEMPO", 3, false);
@@ -414,7 +489,6 @@ public class AT2TFRSU0011Sis {
 
         return false;
     }
-
     private boolean Edit_vuelos(TestDriver driver) {
         driver.getReport().addHeader("EDIT IN CALIDAD VUELOS TIEMPO", 3, false);
         if (!Functions.checkClick(driver,
@@ -450,7 +524,6 @@ public class AT2TFRSU0011Sis {
                 " on EDITION IN VUELOS");
         return false;
     }
-
     private boolean QBE_vuelos(TestDriver driver) {
         driver.getReport().addHeader("QBE IN CALIDAD VUELOS TIEMPO", 3, false);
 
@@ -477,9 +550,9 @@ public class AT2TFRSU0011Sis {
                 "vu_des", getData("vu_des"), " on QBE IN VUELOS")) {
             return false;
         }
+
         return false;
     }
-
     private boolean Add_vuelos(TestDriver driver) {
         driver.getReport().addHeader("ADD VUELOS IN CALIDAD VUELOS TIEMPO", 3, false);
 
@@ -516,7 +589,6 @@ public class AT2TFRSU0011Sis {
                 " on ADD IN VUELOS");
         return false;
     }
-
     private boolean Search_vuelos(TestDriver driver) {
         driver.getReport().addHeader("ADVANCED SEARCH IN CALIDAD VUELOS TIEMPO ", 3, false);
 
@@ -577,10 +649,21 @@ public class AT2TFRSU0011Sis {
 
         return true;
     }
-
     private boolean other_actions_antela(TestDriver driver) {
 
-        driver.getReport().addHeader("DETACH IN CALIDAD VUELOS ANTELA", 3, false);
+        driver.getReport().addHeader("OTHER ACTIONS IN CALIDAD VUELOS ANTELA", 3, false);
+
+        if (!Functions.auditData(driver,
+                new String[]{"antela_b_actions", getElements("antela_b_actions")}, //actions button
+                new String[]{"antela_b_auditdata", getElements("antela_b_auditdata")}, //audit button
+                new String[]{"antela_b_audit_close", getElements("antela_b_audit_close")}, //audit_b_ok
+                " on AUDIT DATA")) {
+            return false;
+        }
+
+
+
+
         if (!Functions.detachTable(driver,
                 new String[]{"antela_detach_b", getElements("antela_detach_b")}, //detach button
                 true,     //screenshot??
@@ -591,7 +674,6 @@ public class AT2TFRSU0011Sis {
 
         return true;
     }
-
     private boolean Edit_antela(TestDriver driver) {
         driver.getReport().addHeader("EDIT IN CALIDAD VUELOS ANTELA", 3, false);
         if (!Functions.checkClick(driver,
@@ -602,7 +684,7 @@ public class AT2TFRSU0011Sis {
         }
         if (!Functions.selectText(driver,
                 new String[]{"antela_ed_sel_ad", getElements("antela_ed_sel_ad")},
-                "Departure", "vu_add", " on EDITION IN ANTELA")) {
+                "Departure", "ant_dess", " on EDITION IN ANTELA")) {
             return false;
         }
         if (!Functions.createLov(driver,
@@ -616,7 +698,7 @@ public class AT2TFRSU0011Sis {
             return false;
         }
         Functions.getValue(driver, new String[]{"antela_ed_i_description", getElements("antela_ed_i_description")}, // element path
-                "and_dess", // key for data value (the name)
+                "ant_des", // key for data value (the name)
                 " on ADD IN ANTELA");
         if (!Functions.insertInput(driver,
                 new String[]{"antela_ed_i_time", getElements("antela_ed_i_time")},
@@ -631,6 +713,43 @@ public class AT2TFRSU0011Sis {
         return true;
     }
 
+    private boolean Search2_antela(TestDriver driver) {
+        driver.getReport().addHeader("ADVANCED SEARCH2 IN CALIDAD TIEMPO ANTELA  ", 3, false);
+
+        if (!Functions.selectText(driver,
+                new String[]{"antela_search_sel_ad", getElements("antela_search_sel_ad")},
+                "Departure", "and_dess", " on SEARCH IN ANTELA")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"antela_search_i_time", getElements("antela_search_i_time")},
+                "ant_tii", "26", " on SEARCH IN ANTELA")) {
+            return false;
+        }
+
+        if (!Functions.createLovByValue(driver,
+                new String[]{"antela_search_lov", getElements("antela_search_lov")}, //LoV button
+                new String[]{"antela_search_i_transfer", getElements("antela_search_i_transfer")}, //external LoV input
+                new String[]{"antela_search_lov_i_des", getElements("antela_search_lov_i_des")}, //internal LoV input
+                "Groups", // value to search
+                "ant2_des", //name of the data
+                " on SEARCH2 IN ANTELA")) {
+            return false;
+        }
+
+        if (!Functions.insertInput(driver, new String[]{"antela_search_i_description", getElements("antela_search_i_description")},
+                "ant2_des", "Groups", " on QBE IN ANTELA")) {
+            return false;
+        }
+
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"antela_search_b_search", getElements("antela_search_b_search")}, //search button
+                new String[]{"antela_search_t_result", getElements("antela_search_t_result")}, //Falta crear este resultado por bug
+                " on SEARCH IN ANTELA")) {
+            return false;
+        }
+        Functions.break_time(driver, 3, 500);
+        return true;
+    }
     private boolean QBE_antela(TestDriver driver) {
         driver.getReport().addHeader("QBE  IN CALIDAD VUELOS ANTELA", 3, false);
 
@@ -642,26 +761,33 @@ public class AT2TFRSU0011Sis {
         }
         if (!Functions.selectText(driver,
                 new String[]{"antela_qbe_sel_ad", getElements("antela_qbe_sel_ad")},
-                "Arrival", "vu_ad", " on QBE IN ANTELA")) {
+                "Departure", "and_dess", " on SEARCH IN ANTELA")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"antela_qbe_i_time", getElements("antela_qbe_i_time")},
-                "ant_tim", "25", " on QBE IN ANTELA")) {
+                "ant_tii", "26", " on SEARCH IN ANTELA")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"antela_qbe_i_transfer", getElements("antela_qbe_i_transfer")},
-                "ant_tra", "B", " on QBE IN ANTELA")) {
+                "ant_tra2", "G", " on QBE IN ANTELA")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"antela_qbe_i_description", getElements("antela_qbe_i_description")},
-                "ant_des", "Shared", " on QBE IN ANTELA")) {
+                "ant2_des", "Groups", " on QBE IN ANTELA")) {
             return false;
         }
-        {
-            return true;
-        } // where
-    }
 
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"antela_qbe_i_time", getElements("antela_qbe_i_time")}, //search button
+                new String[]{"antela_search_b_search", getElements("antela_search_b_search")}, //result element
+                " on QBE IN ANTELA")) {
+            return false;
+        }
+
+
+        return true;
+        // where
+    }
     private boolean Add_antela(TestDriver driver) {
         driver.getReport().addHeader("ADD VUELOS IN CALIDAD VUELOS ANTELA", 3, false);
 
@@ -715,7 +841,6 @@ public class AT2TFRSU0011Sis {
         }
         return true;
     }
-
     private boolean Search_antela(TestDriver driver) {
 
         driver.getReport().addHeader("ADVANCED SEARCH IN CALIDAD TIEMPO ANTELA  ", 3, false);
@@ -799,7 +924,20 @@ public class AT2TFRSU0011Sis {
 
     private boolean Other_actions_incompatibility(TestDriver driver) {
 
+
         driver.getReport().addHeader("DETACH IN INCOMPATIBILITY OF AREAS", 3, false);
+
+
+        if (!Functions.auditData(driver,
+                new String[]{"areas_b_actions", getElements("areas_b_actions")}, //actions button
+                new String[]{"areas_b_audit_data", getElements("areas_b_audit_data")}, //audit button
+                new String[]{"areas_b_close", getElements("areas_b_close")}, //audit_b_ok
+                " on AUDIT DATA IN INCOMPATIBILITY OF AREAS")) {
+            return false;
+        }
+
+
+
 
         if (!Functions.detachTable(driver,
                 new String[]{"areas_detach_b", getElements("areas_detach_b")}, //detach button
@@ -858,19 +996,26 @@ public class AT2TFRSU0011Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"areas_qbe_i_code1", getElements("areas_qbe_i_code1")},
-                "inc_cod", "AAA", " on QBE IN INCOMPATIBILITY")) {
+                "inc_cod", "ALCUDIA", " on QBE IN INCOMPATIBILITY")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"areas_qbe_i_description", getElements("areas_qbe_i_description")},
-                "inc_des", "CAMPANET", " on QBE IN INCOMPATIBILITY")) {
+                "inc_des2", "Alcudia", " on QBE IN INCOMPATIBILITY")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"areas_qbe_code2", getElements("areas_qbe_code2")},
-                "inc_cod2", "ALARO", " on QBE IN INCOMPATIBILITY")) {
+                "inc_cod2", "ARENAL", " on QBE IN INCOMPATIBILITY")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"areas_qbe_i_description2", getElements("areas_qbe_i_description2")},
-                "inc_des2", "Alaro", " on QBE IN INCOMPATIBILITY")) {
+                "inc_des3", "El Arenal", " on QBE IN INCOMPATIBILITY")) {
+            return false;
+        }
+
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"areas_qbe_i_code1", getElements("areas_qbe_i_code1")}, //search button
+                new String[]{"areas_i_b_search", getElements("areas_i_b_search")}, //result element
+                " on QBE IN ANTELA")) {
             return false;
         }
 
@@ -925,30 +1070,30 @@ public class AT2TFRSU0011Sis {
 
     private boolean Search_incompatibility(TestDriver driver) {
         driver.getReport().addHeader("SEARCH IN INCOMPATIBILITY OF AREAS", 3, false);
-        if (!Functions.createLov(driver,
-                new String[]{"areas_s_lov", getElements("areas_s_lov")}, // b_lov
-                new String[]{"areas_s_i_code1", getElements("areas_s_i_code1")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "inc_se", //Data name
-                " on SEARCH IN INCOMPATIBILITY")) {
+        if (!Functions.createLovByValue(driver,
+                new String[]{"areas_s_lov", getElements("areas_s_lov")}, //LoV button
+                new String[]{"areas_s_i_code1", getElements("areas_s_i_code1")}, //external LoV input
+                new String[]{"areas_i_lov_transfer", getElements("areas_i_lov_transfer")}, //internal LoV input
+                "AA", // value to search
+                "inc_cod2", //name of the data
+                " on where")) {
             return false;
         }
+
         if (!Functions.insertInput(driver, new String[]{"areas_s_i_description", getElements("areas_s_i_description")},
                 "int_des", "CAMPANET", " on SEARCH IN INCOMPATIBILITY")) {
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"areas_s_lov2", getElements("areas_s_lov2")}, // b_lov
-                new String[]{"areas_s_i_code2", getElements("areas_s_i_code2")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "inc_des", //Data name
-                " on SEARCH IN INCOMPATIBILITY")) {
+        if (!Functions.createLovByValue(driver,
+                new String[]{"areas_s_lov2", getElements("areas_s_lov2")}, //LoV button
+                new String[]{"areas_s_i_code2", getElements("areas_s_i_code2")}, //external LoV input
+                new String[]{"areas_i_lov_transfer2", getElements("areas_i_lov_transfer2")}, //internal LoV input
+                "ALARO", // value to search
+                "inc_cod3", //name of the data
+                " on where")) {
             return false;
         }
+
         if (!Functions.insertInput(driver, new String[]{"areas_s_i_description2", getElements("areas_s_i_description2")},
                 "int_des2", "Alaro", " on SEARCH IN INCOMPATIBILITY")) {
             return false;
@@ -971,19 +1116,20 @@ public class AT2TFRSU0011Sis {
         if (!Search_qualityRules(driver)) {
             return false;
         }
-        // if (!Edit_qualityRules(driver)) {
-        //  return false;
-        // }
-        //  if (!Search_qualityRules(driver)) {
-        //  return false;
-        // }
-        // if (!QBE_qualityRules(driver)) {
-        // return false;
-        // }
-        // if (!Oher_Actions_qualityRules(driver)) {
-        // return false;
-        // }
-        // driver.getReport().closeBlock();
+        if (!Edit_qualityRules(driver)) {
+            return false;
+        }
+        if (!Search_qualityRules(driver)) {
+            return false;
+        }
+        if (!QBE_qualityRules(driver)) {
+            return false;
+        }
+        if (!Oher_Actions_qualityRules(driver)) {
+            return false;
+        }
+
+        driver.getReport().closeBlock();
         return true;
     }
 
@@ -1026,7 +1172,6 @@ public class AT2TFRSU0011Sis {
 
         return true;
     }
-
     private boolean Oher_Actions_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("AUDIT DATA RECORD", 3, false);
         if (!Functions.auditData(driver,
@@ -1046,7 +1191,6 @@ public class AT2TFRSU0011Sis {
 
         return true;
     }
-
     private boolean QBE_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         if (!Functions.clickQbE(driver,
@@ -1076,7 +1220,6 @@ public class AT2TFRSU0011Sis {
         } // where
         return true;
     }
-
     private boolean Edit_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         if (!Functions.checkClick(driver,
@@ -1108,7 +1251,6 @@ public class AT2TFRSU0011Sis {
                 " on EDITION");
         return true;
     }
-
     private boolean Search_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         if (!Functions.selectText(driver,
@@ -1134,7 +1276,6 @@ public class AT2TFRSU0011Sis {
         } // where
         return true;
     }
-
     private boolean Creation_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         Functions.break_time(driver, 10, 500);
@@ -1211,8 +1352,16 @@ public class AT2TFRSU0011Sis {
     }
 
     private boolean Other_actions_Exclusive(TestDriver driver) {
-        driver.getReport().addHeader("DETACH IN EXCLUSIVE AREAS", 3, false);
+        driver.getReport().addHeader("OTHER ACTIONS IN EXCLUSIVE AREAS", 3, false);
 
+        if (!Functions.auditData(driver,
+                new String[]{"exclusive_b_actions", getElements("exclusive_b_actions")}, //actions button
+                new String[]{"exclusive_b_actions_auditdata", getElements("exclusive_b_actions_auditdata")}, //audit button
+                new String[]{"exclusive_b_actions_b_close", getElements("exclusive_b_actions_b_close")}, //audit_b_ok
+                " on AUDIT DATA")) {
+            return false;
+
+        }
         if (!Functions.detachTable(driver,
                 new String[]{"exclusive_detach_b", getElements("exclusive_detach_b")}, //detach button
                 false,     //screenshot??
@@ -1264,26 +1413,30 @@ public class AT2TFRSU0011Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"exclusive_qbe_i_transfer", getElements("exclusive_qbe_i_transfer")},
-                "ex_tra", "AAA", " on QBE IN EXCLUSIVE")) {
+                "ex_tra", "ALARO", " on QBE IN EXCLUSIVE")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"exclusive_qbe_i_description", getElements("exclusive_qbe_i_description")},
-                "ex_des", "CAMPANET", " on QBE IN EXCLUSIVE")) {
+                "ex_des", "Alaro", " on QBE IN EXCLUSIVE")) {
             return false;
         }
-
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"exclusive_qbe_i_transfer", getElements("exclusive_qbe_i_transfer")}, //search button
+                new String[]{"exclusive_i_b_search", getElements("exclusive_i_b_search")}, //result element
+                " on QBE IN EXCLUSIVE")) {
+            return false;
+        }
         return true;
     }
 
     private boolean Exclusive_search(TestDriver driver) {
         driver.getReport().addHeader("BASIC SEARCH IN EXCLUSIVE AREAS", 3, false);
-        if (!Functions.createLov(driver,
-                new String[]{"exclusive_s_lov", getElements("exclusive_s_lov")}, // b_lov
-                new String[]{"exclusive_s_i_transfer", getElements("exclusive_s_i_transfer")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "ex_tra", //Data name
+        if (!Functions.createLovByValue(driver,
+                new String[]{"exclusive_s_lov", getElements("exclusive_s_lov")}, //LoV button
+                new String[]{"exclusive_s_i_transfer", getElements("exclusive_s_i_transfer")}, //external LoV input
+                new String[]{"exclusive_s_lov_transfer", getElements("exclusive_s_lov_transfer")}, //internal LoV input
+                "AA", // value to search
+                "ex_cod", //name of the data
                 " on SEARCH IN EXCLUSIVE")) {
             return false;
         }
