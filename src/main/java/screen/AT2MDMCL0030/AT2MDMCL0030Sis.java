@@ -59,9 +59,11 @@ public class AT2MDMCL0030Sis {
         if (recordInteraction(driver, true)) {
             if (search(driver)) {
                 if (recordInteraction(driver, false)) {
-                    if (search(driver)) {
-                        if (delete(driver)) {
-                            return true;
+                    if (qbe(driver)) {
+                        if (detach(driver)) {
+                            if (delete(driver)) {
+                                return true;
+                            }
                         }
                     }
                 }
@@ -183,7 +185,7 @@ public class AT2MDMCL0030Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Thread.sleep(3000);
+            Functions.break_time(driver, 3, 0);
             if (!Functions.simpleClick(driver,
                     new String[]{"search_e_result", getElements("search_e_result")},
                     " on SEARCH")) {
@@ -209,7 +211,7 @@ public class AT2MDMCL0030Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Thread.sleep(3000);
+            Functions.break_time(driver, 3, 0);
             if (!Functions.simpleClick(driver,
                     new String[]{"delete_b_yes", recursiveXPaths.delete_b_yes},
                     " on SEARCH")) {
@@ -218,7 +220,7 @@ public class AT2MDMCL0030Sis {
         } catch (Exception delete) {
             delete.printStackTrace();
         }
-        Functions.break_time(driver, 1, 0);
+        Functions.break_time(driver, 2, 0);
         return true;
     }
 
@@ -249,6 +251,61 @@ public class AT2MDMCL0030Sis {
         }
         return true;
     }
+
+    protected boolean qbe(TestDriver driver) {
+        this.enabler(driver);
+        driver.getReport().addHeader("QBE SEARCH RECORD:", 4, false);
+        if (!Functions.clickQbE(driver,
+                new String[]{"record_interaction_b_qbe", getElements("record_interaction_b_qbe")},
+                new String[]{"record_interaction_b_qbe_i_param_name", getElements("record_interaction_b_qbe_i_param_name")},
+                " on QBE")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"record_interaction_b_qbe_i_param_name", getElements("record_interaction_b_qbe_i_param_name")},
+                "param_name",
+                getData("param_name"),
+                " on QBE")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"record_interaction_b_qbe_i_param_value", getElements("record_interaction_b_qbe_i_param_value")},
+                "param_value",
+                getData("param_value"),
+                " on QBE")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"record_interaction_b_qbe_i_age_ext_code", getElements("record_interaction_b_qbe_i_age_ext_code")},
+                "age_ext_code",
+                getData("age_ext_code"),
+                " on QBE")) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"record_interaction_b_qbe_i_param_name", getElements("record_interaction_b_qbe_i_param_name")},
+                new String[]{"search_n_records", getElements("search_n_records")},
+                " on QBE")) {
+            return false;
+        }
+        return true;
+    }
+
+    protected boolean detach(TestDriver driver) {
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_n_records", getElements("search_n_records")},
+                " on Data History")) {
+            return false;
+        }
+        if (!Functions.detachTable(driver,
+                new String[]{"record_interaction_b_detach", getElements("record_interaction_b_detach")},
+                true,
+                " on Detach table")) {
+            return false;
+        }
+        return true;
+    }
+
 
     protected boolean enabler(TestDriver driver) {
         if (!Functions.simpleClick(driver,

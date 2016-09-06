@@ -39,13 +39,20 @@ public class AT2MDMCL0030Locators {
         elements.put("record_interaction_b_cancel", "//*[contains(@id, 'pc1:pcgt1:boton_rollbackp')]");
         elements.put("record_interaction_b_cancel_b_ok", "//*[contains(@id, 'pc1:pcgt1:ctbt1')]");
 
-
         elements.put("record_interaction_i_param_name", "//*[contains(@id, 'pcgt1:it3::content')]");
         elements.put("record_interaction_i_param_value", "//*[contains(@id, 'pcgt1:it1::content')]");
         elements.put("record_interaction_i_age_ext_code", "//*[contains(@id, 'pcgt1:it2::content')]");
 
+        elements.put("record_interaction_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
+        elements.put("record_interaction_b_qbe_i_param_name", "//*[contains(@id, 'resId1c1::content')]");
+        elements.put("record_interaction_b_qbe_i_param_value", "//*[contains(@id, 'resId1c2::content')]");
+        elements.put("record_interaction_b_qbe_i_age_ext_code", "//*[contains(@id, 'resId1:it52::content')]");
+
+        elements.put("record_interaction_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
+
         /* DELETE */
         elements.put("delete_b_delete", "//*[contains(@id, 'pc1:pcgt1:boton_remove')]");
+        elements.put("delete_b_delete_b_ok", "//*[contains(@id, 'pcgt1:cbt1')]");
 
         /*DIALOG CANCEL*/
         elements.put("alert_b_ok", "//*[contains(@id, 'msgDlg::cancel')]");
