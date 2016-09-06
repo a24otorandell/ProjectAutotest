@@ -12,7 +12,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java" line="457" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
+    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="Actualización codigo AT2TRFSU0011&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar3/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar3/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" afterPath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/screen/AT2MDMOR0028/AT2MDMOR0028Data.class" afterPath="$PROJECT_DIR$/target/classes/screen/AT2MDMOR0028/AT2MDMOR0028Data.class" />
@@ -1162,7 +1162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473153446405</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Actualización codigo AT2TRFSU0011&#10;">
+      <created>1473153681151</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1473153681151</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1176,14 +1183,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1554" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31673053" sideWeight="0.4974293" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23116219" sideWeight="0.5167336" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23116219" sideWeight="0.5167336" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23116219" sideWeight="0.4832664" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3090677" sideWeight="0.48393574" order="6" side_tool="false" content_ui="tabs" />
