@@ -24,6 +24,7 @@ public class AT2MDMOR0028Locators {
 
         /* LANGUAGE TAB, LANGUAGE CODE TABLE SEARCH */
         elements.put("\"Language\" Tab, \"Language Code\" table: Search button", "//*[contains(@id, 'qryId1::search')]");
+        elements.put("language_tab_search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
         elements.put("language_tab_language_code_table_search_e_result", "//*[contains(@id, 'pc1:gntidio::db')]/table/tbody/tr[1]/td[1]");
         elements.put("language_tab_language_code_table_search_e_result_no_data", "//*[contains(@id, 'pc1:gntidio::db')]");
         elements.put("language_tab_language_code_table_search_n_records", "//*[contains(@id, 'pc1:ot2')]");
@@ -49,6 +50,17 @@ public class AT2MDMOR0028Locators {
         elements.put("language_tab_language_code_table_audit_b_actions", "//*[contains(@id, 'pc1:pcgm1:dc_m1')]");
         elements.put("language_tab_language_code_table_audit_b_audit", "//*[contains(@id, 'pc1:pcgm1:dc_cmi0')]/td[2]");
         elements.put("language_tab_language_code_table_audit_b_ok", "//*[contains(@id, 'pcgm1:d22::ok')]");
+
+        /* LANGUAGE TAB, LANGUAGE CODE TABLE QUERY */
+        elements.put("language_tab_language_code_table_query_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
+        elements.put("language_tab_language_code_table_query_e_result", "//*[contains(@id, 'pc1:gntidio::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("language_tab_language_code_table_query_e_result_no_data", "//*[contains(@id, 'pc1:gntidio::db')]");
+        elements.put("language_tab_language_code_table_query_clear_inputs", "//*[contains(@id, 'pc1:gntidio::ch::t')]/tbody/tr[2]/th/a");
+
+        elements.put("language_tab_language_code_table_query_i_language_code", "//*[contains(@id, 'gntidio_afr_c3::content')]");
+        elements.put("language_tab_language_code_table_query_i_language_description", "//*[contains(@id, 'gntidio_afr_c1::content')]");
+        elements.put("language_tab_language_code_table_query_i_status", "//*[contains(@id, 'gntidio:soc3::content')]");
+        elements.put("language_tab_language_code_table_query_i_SAP", "//*[contains(@id, 'gntidio_afr_c2::content')]");
 
         elements.put("language_tab_language_code_table_detach_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
 
@@ -97,6 +109,7 @@ public class AT2MDMOR0028Locators {
 
         /* WEB LABEL LANGUAGES TAB, WEB LABEL LANGUAGES TABLE SEARCH */
         elements.put("web_label_languages_tab_web_label_languages_table_search_b_search", "//*[contains(@id, 'qryId2::search')]");
+        elements.put("web_label_languages_tab_web_label_languages_table_search_b_reset", "//*[contains(@id, 'qryId2::reset')]");
         elements.put("web_label_languages_tab_web_label_languages_table_search_e_result", "//*[contains(@id, 'pc3:etiweb::db')]/table/tbody/tr[1]/td[1]");
         elements.put("web_label_languages_tab_web_label_languages_table_search_e_result_no_data", "//*[contains(@id, 'pc3:etiweb::db')]");
         elements.put("web_label_languages_tab_web_label_languages_table_search_n_records", "//*[contains(@id, 'pc3:ot6')]");
@@ -121,13 +134,23 @@ public class AT2MDMOR0028Locators {
 
         elements.put("web_label_languages_tab_web_label_languages_table_detach_b_detach", "//*[contains(@id, 'pc3:_dchTbr')]");
 
+        /* WEB LABEL LANGUAGES TAB, WEB LABEL LANGUAGES TABLE QUERY */
+        elements.put("web_label_languages_tab_web_label_languages_table_query_b_qbe", "//*[contains(@id, 'pc3:_qbeTbr')]/a");
+        elements.put("web_label_languages_tab_web_label_languages_table_query_e_result", "//*[contains(@id, 'pc3:etiweb::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("web_label_languages_tab_web_label_languages_table_query_e_result_no_data", "//*[contains(@id, 'pc3:etiweid::db')]");
+        elements.put("web_label_languages_tab_web_label_languages_table_query_n_records", "//*[contains(@id, 'pc4:ot10')]");
+
+        elements.put("web_label_languages_tab_web_label_languages_table_query_i_language_code", "//*[contains(@id, 'pc3_afr_etiweb_afr_c9::content')]");
+        elements.put("web_label_languages_tab_web_label_languages_table_query_i_language_description", "//*[contains(@id, 'pc3_afr_etiweb_afr_c10::content')]");
+        elements.put("web_label_languages_tab_web_label_languages_table_query_i_active", "//*[contains(@id, 'pc3:etiweb:soc1::content')]");
+
         /* WEB LABEL LANGUAGES TAB, WEB LABEL LANGUAGES TABLE DELETE */
         elements.put("web_label_languages_tab_web_label_languages_table_delete_b_delete", "//*[contains(@id, 'pc3:pcgt3:boton_remove')]");
         elements.put("web_label_languages_tab_web_label_languages_table_delete_b_yes", "//*[contains(@id, 'pcgt3:dConfirmDelete::yes')]");
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        /* WEB LABEL LANGUAGES TAB, WEB LABEL LANGUAGES TABLE QUERY */
+        /* WEB LABEL LANGUAGES TAB, WEB LABEL LANGUAGES DESCRIPTION TABLE QUERY */
         elements.put("web_label_languages_tab_web_label_languages_description_table_query_b_qbe", "//*[contains(@id, 'pc4:_qbeTbr')]");
         elements.put("web_label_languages_tab_web_label_languages_description_table_query_e_result", "//*[contains(@id, 'pc4:etiweid::db')]/table/tbody/tr[1]/td[1]");
         elements.put("web_label_languages_tab_web_label_languages_description_table_query_e_result_no_data", "//*[contains(@id, 'pc4:etiweid::db')]");
