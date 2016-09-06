@@ -71,10 +71,120 @@ public class AT2TRFSU0013Test {
         if (!Search_Grouping_vehicles(driver)) {
             return false;
         }
+        if (!Edit_Grouping_vehicles(driver)) {
+            return false;
+        }
+
+        if (!Search2_Grouping_vehicles(driver)) {
+            return false;
+        }
         if (!QBE_Grouping_vehicles(driver)) {
             return false;
         }
-        //if (!)
+        if (!Other_actios_Grouping_vehicles(driver)) {
+            return false;
+        }
+
+        if (!Delete_Grouping_vehicles(driver)) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Delete_Grouping_vehicles(TestDriver driver) {
+        driver.getReport().addHeader("DELETE IN GROUPING VEHICLES", 3, false);
+
+
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"b_delete", getElements("b_delete")},
+                new String[]{"i_records", getElements("i_records")},
+                new String[]{"b_del_yes", getElements("b_del_yes")},
+                " on DELETE IN GROUPING")) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean Other_actios_Grouping_vehicles(TestDriver driver) {
+        driver.getReport().addHeader("OTHER ACTIONS IN GROUPING VEHICLES", 3, false);
+
+        if (!Functions.auditData(driver,
+                new String[]{"o_b_actios", getElements("o_b_actios")}, //actions button
+                new String[]{"o_actios_b_auditdata", getElements("o_actios_b_auditdata")}, //audit button
+                new String[]{"o_b_close", getElements("o_b_close")}, //audit_b_ok
+                " on OTHER ACTIONS")) {
+            return false;
+
+        }
+        if (!Functions.detachTable(driver,
+                new String[]{"o_b_detach", getElements("o_b_detach")}, //detach button
+                true,     //screenshot??
+                " on OTHER ACTIONS")) {
+            return false;
+        }
+
+
+        return true;
+    }
+
+    private boolean Search2_Grouping_vehicles(TestDriver driver) {
+        driver.getReport().addHeader("SEARCH IN GROUPING VEHICLES", 3, false);
+
+        Functions.break_time(driver, 6, 500);
+
+        if (!Functions.insertInput(driver, new String[]{"s_i_grouping", getElements("s_i_grouping")},
+                "add_gro2", "6", " on SEARCH")) {
+            return false;
+        }
+
+        if (!Functions.insertInput(driver, new String[]{"s_i_description", getElements("s_i_description")},
+                "add_des2", "BSSET", " on SEARCH")) {
+            return false;
+        }
+
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"b_search", getElements("b_search")}, //search button
+                new String[]{"s_records", getElements("s_records")},
+                " on SEARCH")) {
+            return false;
+        }
+
+
+        return true;
+    }
+
+    private boolean Edit_Grouping_vehicles(TestDriver driver) {
+        driver.getReport().addHeader("EDIT IN GROUPING VEHICLES", 3, false);
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"b_edit", getElements("b_edit")}, //element to click
+                new String[]{"ed_ss_active", getElements("ed_ss_active")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on EDIT")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+
+        Functions.checkboxValue(driver,
+                getElements("ed_ss_active"), "active", false, true, " on EDIT");
+
+        if (!Functions.insertInput(driver, new String[]{"ed_i_grouping", getElements("ed_i_grouping")},
+                "add_gro2", "6", " on EDIT")) {
+            return false;
+        }
+
+        if (!Functions.insertInput(driver, new String[]{"ed_i_description", getElements("ed_i_description")},
+                "add_des2", "BSSET", " on EDIT")) {
+            return false;
+        }
+
+        Functions.checkClickByAbsence(driver,
+                new String[]{"b_ed_b_save", getElements("b_ed_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                90, 500,
+                " on EDIT");
+
 
         return true;
     }
@@ -92,17 +202,23 @@ public class AT2TRFSU0013Test {
 
         if (!Functions.selectText(driver,
                 new String[]{"qbe_s_active", getElements("qbe_s_active")},
-                "Yes", "qbe_yes", " on QBE IN GROUPING")) {
+                "No", "qbe_yes", " on QBE IN GROUPING")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"qbe_i_grouping", getElements("qbe_i_grouping")},
-                "qbe_gro", "5", " on QBE IN GROUPING")) {
+                "qbe_gro", "6", " on QBE IN GROUPING")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"qbe_i_decription", getElements("qbe_i_decription")},
-                "qbe_des", "VSSED", " on QBE IN GROUPING")) {
+                "qbe_des", "BSSET", " on QBE IN GROUPING")) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_s_active", getElements("qbe_s_active")}, //search button
+                new String[]{"b_search", getElements("b_search")}, //result element
+                " on QBE IN GROUPING")) {
             return false;
         }
 
