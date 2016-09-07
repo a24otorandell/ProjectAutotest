@@ -67,8 +67,9 @@ public class AT2TFRSU0011Sis {
         if (!Temporaly_quality_rules(driver)) {
             return false;
         }
-        /*if (!Calidad_vuelos_tiempo(driver)){
-            return false;}*/
+        if (!Calidad_vuelos_tiempo(driver)) {
+            return false;
+        }
         if (!Calidad_tiempo_antela(driver)) {
             return false;
         }
