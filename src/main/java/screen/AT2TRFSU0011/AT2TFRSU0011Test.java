@@ -71,8 +71,9 @@ public class AT2TFRSU0011Test {
         if (!Temporaly_quality_rules(driver)) {
             return false;
         }
-        /*if (!Calidad_vuelos_tiempo(driver)){
-            return false;}*/
+        if (!Calidad_vuelos_tiempo(driver)) {
+            return false;
+        }
         if (!Calidad_tiempo_antela(driver)) {
             return false;
         }
@@ -1427,7 +1428,7 @@ public class AT2TFRSU0011Test {
         }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"exclusive_qbe_i_transfer", getElements("exclusive_qbe_i_transfer")}, //search button
-                new String[]{"exclusive_i_b_search", getElements("exclusive_i_b_search")}, //result element
+                new String[]{"exclusive_result", getElements("exclusive_result")}, //result element
                 " on QBE IN EXCLUSIVE")) {
             return false;
         }
@@ -1582,7 +1583,12 @@ public class AT2TFRSU0011Test {
             return false;
         }
 
-
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"maximum_qbe_code", getElements("maximum_qbe_code")}, //search button
+                new String[]{"maximum_result", getElements("maximum_result")}, //result element
+                "  on QBE IN MAXIMUM")) {
+            return false;
+        }
         return true;
     }
 
@@ -1656,6 +1662,4 @@ public class AT2TFRSU0011Test {
                 " on ADD IN EXCLUSIVE");
         return true;
     }
-
-
 }
