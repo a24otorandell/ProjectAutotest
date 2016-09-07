@@ -268,12 +268,12 @@ public class AT2TRFSU0013Test {
                 getElements("ad_ss_active"), "active", true, true, " on ADD");
 
         if (!Functions.insertInput(driver, new String[]{"ad_i_grouping", getElements("ad_i_grouping")},
-                "add_gro", "5", " where")) {
+                "add_gro", "5", " on ADD")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"ad_i_description", getElements("ad_i_description")},
-                "add_des", "VSSED", " where")) {
+                "add_des", "VSSED", " on ADD")) {
             return false;
         }
 

@@ -13,7 +13,7 @@ public class AT2TRFSU0012Data {
     DataHarvester harvester;
 
     public AT2TRFSU0012Data(String enviroment) {
-        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources AT2TRFSU0013Values.txt");
+        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources AT2TRFSU0012Values.txt");
         setData();
     }
 

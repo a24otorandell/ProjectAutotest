@@ -1,6 +1,7 @@
 package screen.AT2TRFSU0013;
 
 import core.TestDriver.TestDriver;
+
 import screen.AT2Test;
 
 import java.util.Map;
@@ -13,13 +14,16 @@ public class AT2TRFSU0013Manager implements AT2Test {
     AT2TRFSU0013Test test;
     AT2TRFSU0013Sis sis;
     String[] procedure;
+    String entorno;
 
     public AT2TRFSU0013Manager(String enviroment) {
         if (enviroment.equalsIgnoreCase("test")) {
+            entorno = "test";
             setTest(new AT2TRFSU0013Test());
             this.test.setData(new AT2TRFSU0013Data(enviroment));
             this.test.setLocators(new AT2TRFSU0013Locators(enviroment));
         } else {
+            entorno = "sis";
             setTestSis(new AT2TRFSU0013Sis());
             this.sis.setData(new AT2TRFSU0013Data(enviroment));
             this.sis.setLocators(new AT2TRFSU0013Locators(enviroment));
@@ -51,12 +55,16 @@ public class AT2TRFSU0013Manager implements AT2Test {
     }
 
     public Map<String, String> getData() {
-        return this.test.getData().getData();
+        if (entorno.equalsIgnoreCase("test")) {
+            return this.test.getData().getData();
+        } else {
+            return this.sis.getData().getData();
+        }
     }
 
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
-        if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("sis")) {
+        if (entorno.equalsIgnoreCase("sis")) {
             getTestSis().start(driver);
         } else {
             getTest().start(driver);
