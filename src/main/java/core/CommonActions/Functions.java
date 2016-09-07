@@ -581,7 +581,7 @@ public class Functions {
     public static boolean getAttr(TestDriver driver, String[] path, String attr, String data_name, String where) {
         //HOW TO CALL THIS METHOD
         /*Functions.getAttr(driver,
-                new String[]{"x", elements.get("x")}, // element path
+                new String[]{"x", getElements("x")}, // element path
                 "attr", // atribute to get data (class, value, id, style, etc...)
                 "data_name", // key for data value (the name)
                 "where");*/ // where this operation occurs
@@ -693,6 +693,7 @@ public class Functions {
 
     /**
      * This functions allows you to use createLovByValue specifying whith result to choose from the result list(first, second, etc)
+     *
      * @param driver
      * @param b_lov
      * @param i_lov
@@ -906,7 +907,7 @@ public class Functions {
     public static boolean doDelete(TestDriver driver, String[] b_delete, String where) {
         //HOW TO CALL THIS METHOD
         /*if(!Functions.doDelete(driver,
-                new String[]{"x", elements.get("x")},//delete button
+                new String[]{"x", getElements("x")},//delete button
                 "where")){return false;}*/
         driver.getReport().addContent("Deleting Record:", "h5", "");
         if (!checkClick(driver, b_delete, recursiveXPaths.glass, where)) {
@@ -932,8 +933,8 @@ public class Functions {
     public static boolean doDelete(TestDriver driver, String[] b_delete, String[] b_delete_yes, String where) {
         //HOW TO CALL THIS METHOD
         /*if(!Functions.doDelete(driver,
-                new String[]{"x", elements.get("x")},//delete button
-                new String[]{"x", elements.get("x")},//delete button
+                new String[]{"x", getElements("x")},//delete button
+                new String[]{"x", getElements("x")},//delete button
                 "where")){return false;}*/
         driver.getReport().addContent("Deleting Record:", "h5", "");
         if (!checkClick(driver, b_delete, recursiveXPaths.glass, where)) {
@@ -961,8 +962,8 @@ public class Functions {
     public static boolean doDeleteNCheck(TestDriver driver, String[] b_delete, String[] n_records, String where) {
         /*
         if (!Functions.doDeleteNCheck(driver,
-                new String[]{"x", elements.get("x")},
-                new String[]{"x", elements.get("x")},
+                new String[]{"x", getElements("x")},
+                new String[]{"x", getElements("x")},
                 " where")){return false;}
          */
 
@@ -1202,9 +1203,9 @@ public class Functions {
         /*if (!Functions.checkExistence(driver,
                 "", //value
                 "x",//data name (x)
-                new String[]{"y", getelEmenmts("y")},//input
-                new String[]{"z", getelEmenmts("z")},//search button
-                new String[]{"w", getelEmenmts("w")},//expected not found result
+                new String[]{"y", getElements("y")},//input
+                new String[]{"z", getElements("z")},//search button
+                new String[]{"w", getElements("w")},//expected not found result
                 "integer/string/both",//type of input
                 2, //value length
                 "")){return false;}//where
@@ -1420,11 +1421,12 @@ public class Functions {
         try {
             boolean checkbox;
             checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
-            if (checkbox != active) {
+            while (checkbox != active) {
                 simpleClick(driver, new String[]{"xpath_checkbox", Xpath}, where);
-                break_time(driver, 5, 250);
+                break_time(driver, 5, 1000);
                 checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
             }
+
             driver.getTest().getData().put(dataname, String.valueOf(checkbox));
             System.out.println("The checkbox is equals to " + checkbox + " on Xpath " + Xpath);
         } catch (Exception e) {
@@ -1458,7 +1460,7 @@ public class Functions {
             checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
             if (checkbox != active) {
                 simpleClick(driver, new String[]{"xpath_checkbox", Xpath}, where);
-                break_time(driver, 5, 250);
+                break_time(driver, 5, 500);
                 checkbox = driver.getDriver().findElement(By.xpath(Xpath)).isSelected();
             }
             if (convert_yes_no) {
@@ -1467,11 +1469,11 @@ public class Functions {
                 } else {
                     driver.getTest().getData().put(dataname, String.valueOf("No"));
                 }
-                System.out.println("The checbox is equals to " + checkbox + " on Xpath " + Xpath);
+                System.out.println("The checkbox is equals to " + checkbox + " on Xpath " + Xpath);
                 System.out.println("The system save the checkbox with value " + driver.getTest().getData().get(dataname));
             } else {
                 driver.getTest().getData().put(dataname, String.valueOf(checkbox));
-                System.out.println("The checbox is equals to " + checkbox + " on Xpath " + Xpath);
+                System.out.println("The checkbox is equals to " + checkbox + " on Xpath " + Xpath);
             }
         } catch (Exception e) {
             String ecode = "--ERROR: error to give value in the checkbox in " + where;
@@ -1482,7 +1484,7 @@ public class Functions {
     }
 
     /**
-     * This function waith that the working image dissapears in the adf screeen
+     * This function waits for the working image to dissapear in the adf screeen
      *
      * @param driver      TestDriver - This object gathers all the info refferent to the current test
      * @param seconds     {@code Integer} - Determines how much the process will wait
