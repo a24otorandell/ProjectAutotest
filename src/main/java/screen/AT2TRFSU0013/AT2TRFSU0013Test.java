@@ -1,6 +1,7 @@
 package screen.AT2TRFSU0013;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
@@ -134,12 +135,12 @@ public class AT2TRFSU0013Test {
         Functions.break_time(driver, 6, 500);
 
         if (!Functions.insertInput(driver, new String[]{"s_i_grouping", getElements("s_i_grouping")},
-                "add_gro2", "6", " on SEARCH")) {
+                "se_gro2", data.getData().get("add_gro2"), " on SEARCH")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"s_i_description", getElements("s_i_description")},
-                "add_des2", "BSSET", " on SEARCH")) {
+                "se_des2", data.getData().get("add_des2"), " on SEARCH")) {
             return false;
         }
 
@@ -170,7 +171,7 @@ public class AT2TRFSU0013Test {
                 getElements("ed_ss_active"), "active", false, true, " on EDIT");
 
         if (!Functions.insertInput(driver, new String[]{"ed_i_grouping", getElements("ed_i_grouping")},
-                "add_gro2", "6", " on EDIT")) {
+                "add_gro2", (Integer.toString(DataGenerator.random(1, 9))), " on EDIT")) {
             return false;
         }
 
@@ -202,22 +203,22 @@ public class AT2TRFSU0013Test {
 
         if (!Functions.selectText(driver,
                 new String[]{"qbe_s_active", getElements("qbe_s_active")},
-                "No", "qbe_yes", " on QBE IN GROUPING")) {
+                data.getData().get(""), "qbe_yes", " on QBE IN GROUPING")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"qbe_i_grouping", getElements("qbe_i_grouping")},
-                "qbe_gro", "6", " on QBE IN GROUPING")) {
+                "qbe_gro", data.getData().get("add_gro2"), " on QBE IN GROUPING")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"qbe_i_decription", getElements("qbe_i_decription")},
-                "qbe_des", "BSSET", " on QBE IN GROUPING")) {
+                "qbe_des", data.getData().get("add_des2"), " on QBE IN GROUPING")) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_s_active", getElements("qbe_s_active")}, //search button
-                new String[]{"b_search", getElements("b_search")}, //result element
+                new String[]{"s_records", getElements("s_records")}, //result element
                 " on QBE IN GROUPING")) {
             return false;
         }
@@ -231,12 +232,12 @@ public class AT2TRFSU0013Test {
         Functions.break_time(driver, 6, 500);
 
         if (!Functions.insertInput(driver, new String[]{"s_i_grouping", getElements("s_i_grouping")},
-                "add_gro", "5", " on SEARCH")) {
+                "se_gro", data.getData().get("add_gro"), " on SEARCH")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"s_i_description", getElements("s_i_description")},
-                "add_des", "VSSED", " on SEARCH")) {
+                "se_des", data.getData().get("add_des"), " on SEARCH")) {
             return false;
         }
 
@@ -268,7 +269,7 @@ public class AT2TRFSU0013Test {
                 getElements("ad_ss_active"), "active", true, true, " on ADD");
 
         if (!Functions.insertInput(driver, new String[]{"ad_i_grouping", getElements("ad_i_grouping")},
-                "add_gro", "5", " on ADD")) {
+                "add_gro", (Integer.toString(DataGenerator.random(1, 3))), " on ADD")) {
             return false;
         }
 
