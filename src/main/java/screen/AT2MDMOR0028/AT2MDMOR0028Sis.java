@@ -49,13 +49,11 @@ public class AT2MDMOR0028Sis {
     }
 
     protected String getElements(String key) {
-        String value = this.locators.getElements().get(key);
-        return value;
+        return this.locators.getElements().get(key);
     }
 
     protected String getData(String key) {
-        String value = this.data.getData().get(key);
-        return value;
+        return this.data.getData().get(key);
     }
 
     protected boolean testCSED(TestDriver driver) {
@@ -97,10 +95,10 @@ public class AT2MDMOR0028Sis {
         }
         if (!webLabelLanguagesTabwebLabelLanguagesDescriptionTableTestCSED(driver)) {
             return false;
-        }
+        }/*
         if (!webLabelLanguagesTabWebLabelLanguagesTableSearch(driver)) {
             return false;
-        }
+        }*/
         if (!webLabelLanguagesTabWebLabelLanguagesTableDelete(driver)) {
             return false;
         }
@@ -255,8 +253,8 @@ public class AT2MDMOR0028Sis {
         if (!Functions.selectText(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_table_query_i_active",
                         getElements("web_label_languages_tab_web_label_languages_table_query_i_active")},
-                "No",
-                "web_label_languages_tab_web_label_languages_table_active",
+                getData("web_label_languages_active"),
+                "web_label_languages_active",
                 " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE QUERY ")) {
             return false;
         }
@@ -393,6 +391,12 @@ public class AT2MDMOR0028Sis {
             return false;
         }
 
+        Functions.checkboxValue(driver,
+                getElements("web_label_languages_tab_web_label_languages_table_search_cb_active"),
+                "web_label_languages_active",
+                true,
+                " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE SEARCH ");
+
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"web_label_languages_tab_web_label_languages_table_search_b_search",
                         getElements("web_label_languages_tab_web_label_languages_table_search_b_search")}, //element to click
@@ -429,8 +433,6 @@ public class AT2MDMOR0028Sis {
                     "")) {
                 return false;
             }
-
-            //          getData("web_label_languages_tab_web_label_languages_table_language_code"),
             if (!Functions.insertInput(driver,
                     new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_i_language_code",
                             getElements("web_label_languages_tab_web_label_languages_table_record_interaction_i_language_code")},
@@ -447,6 +449,12 @@ public class AT2MDMOR0028Sis {
                     " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD")) {
                 return false;
             }
+            Functions.checkboxValue(driver,
+                    getElements("web_label_languages_tab_web_label_languages_table_record_interaction_cb_active"),
+                    "web_label_languages_active",
+                    true,
+                    true,
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE ADD ");
             if (!Functions.checkClickByAbsence(driver,
                     new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_b_save",
                             getElements("web_label_languages_tab_web_label_languages_table_record_interaction_b_save")}, //element to click
@@ -488,6 +496,12 @@ public class AT2MDMOR0028Sis {
                     " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT")) {
                 return false;
             }
+            Functions.checkboxValue(driver,
+                    getElements("web_label_languages_tab_web_label_languages_table_record_interaction_cb_active"),
+                    "web_label_languages_active",
+                    false,
+                    true,
+                    " on \"WEB LABEL LANGUAGES\" TAB, \"WEB LABEL LANGUAGES\" TABLE EDIT ");
             if (!Functions.checkClickByAbsence(driver,
                     new String[]{"web_label_languages_tab_web_label_languages_table_record_interaction_b_save",
                             getElements("web_label_languages_tab_web_label_languages_table_record_interaction_b_save")}, //element to click
@@ -527,10 +541,10 @@ public class AT2MDMOR0028Sis {
         }
         if (!languageTabLanguageDescriptionTestCSED(driver)) {
             return false;
-        }
+        }/*
         if (!languageTabLanguageCodeTableSearch(driver)) {
             return false;
-        }
+        }*/
         if (!languageTabLanguageCodeTableDelete(driver)) {
             return false;
         }
@@ -577,13 +591,13 @@ public class AT2MDMOR0028Sis {
     private boolean languageTabLanguageDescriptionTableDelete(TestDriver driver) {
         driver.getReport().addHeader("\"LANGUAGE\" TAB, \"LANGUAGE DESCRIPTION\" TABLE DELETE:", 3, false);
         boolean recordsToDelete = true;
+        Functions.break_time(driver, 1, 0);
         if (!Functions.simpleClick(driver,
                 new String[]{"language_tab_language_description_table_query_clear_inputs",
                         getElements("language_tab_language_description_table_query_clear_inputs")}, //element to click
                 " on \"LANGUAGE\" TAB, \"LANGUAGE DESCRIPTION\" TABLE QUERY ")) {
             return false;
         }
-        Functions.break_time(driver, 2, 0);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"language_tab_language_description_table_query_i_code",
                         getElements("language_tab_language_description_table_query_i_code")},
@@ -621,7 +635,6 @@ public class AT2MDMOR0028Sis {
 
         return true;
     }
-
 
     private boolean languageTabLanguageDescriptionTableExtraActions(TestDriver driver) {
 
@@ -715,8 +728,8 @@ public class AT2MDMOR0028Sis {
         if (!Functions.selectText(driver,
                 new String[]{"language_tab_language_code_table_query_i_status",
                         getElements("language_tab_language_code_table_query_i_status")},
-                "No",
-                "language_tab_language_code_table_status",
+                getData("language_tab_language_code_status"),
+                "language_tab_language_code_status",
                 " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE QUERY ")) {
             return false;
         }
@@ -872,6 +885,14 @@ public class AT2MDMOR0028Sis {
                 " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE SEARCH ")) {
             return false;
         }
+
+        Functions.checkboxValue(driver,
+                getElements("language_tab_language_code_table_search_cb_status"),
+                "language_tab_language_code_status",
+                true,
+                " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE SEARCH");
+
+        Functions.break_time(driver, 2, 1000);
         if (!Functions.insertInput(driver,
                 new String[]{"language_tab_language_code_table_search_i_sap_language_code",
                         getElements("language_tab_language_code_table_search_i_sap_language_code")},
@@ -940,6 +961,12 @@ public class AT2MDMOR0028Sis {
                     " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE ADD")) {
                 return false;
             }
+            Functions.checkboxValue(driver,
+                    getElements("language_tab_language_code_table_record_interaction_cb_status"),
+                    "language_tab_language_code_status",
+                    true,
+                    true,
+                    " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE ADD");
             if (!Functions.insertInput(driver,
                     new String[]{"language_tab_language_code_table_record_interaction_i_language_description_spanish",
                             getElements("language_tab_language_code_table_record_interaction_i_language_description_spanish")},
@@ -998,6 +1025,12 @@ public class AT2MDMOR0028Sis {
                     " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE EDIT")) {
                 return false;
             }
+            Functions.checkboxValue(driver,
+                    getElements("language_tab_language_code_table_record_interaction_cb_status"),
+                    "language_tab_language_code_status",
+                    false,
+                    true,
+                    " on \"LANGUAGE\" TAB, \"LANGUAGE CODE\" TABLE EDIT");
             if (!Functions.checkClickByAbsence(driver,
                     new String[]{"language_tab_language_code_table_record_interaction_b_save",
                             getElements("language_tab_language_code_table_record_interaction_b_save")}, //element to click
