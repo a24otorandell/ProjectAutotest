@@ -185,8 +185,10 @@ public class AT2TRFSU0002Test {
         }
 
 
-        Functions.checkboxValue(driver,
-                getElements("ad_active"), "active", true, true, " on ad_active");
+        if (!Functions.checkboxValue(driver,
+                getElements("ad_active"), "active", true, true, " on ad_active")) {
+            return false;
+        }
 
         if (!Functions.createLov(driver,
                 new String[]{"ad_lov", getElements("ad_lov")}, // b_lov
@@ -317,8 +319,10 @@ public class AT2TRFSU0002Test {
         }
 
 
-        Functions.checkboxValue(driver,
-                getElements("ad_active"), "active", true, true, " on ad_active");
+        if (!Functions.checkboxValue(driver,
+                getElements("ad_active"), "active", true, true, " on ad_active")) {
+            return false;
+        }
 
         if (!Functions.createLov(driver,
                 new String[]{"ad_lov", getElements("ad_lov")}, // b_lov

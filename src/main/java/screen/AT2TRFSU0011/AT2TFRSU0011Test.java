@@ -1234,8 +1234,10 @@ public class AT2TFRSU0011Test {
                 " on EDITION")) {
             return false;
         }
-        Functions.checkboxValue(driver,
-                getElements("ss_edit_cb_active"), "active", false, true, " on EDITION");
+        if (!Functions.checkboxValue(driver,
+                getElements("ss_edit_cb_active"), "active", false, true, " on EDITION")) {
+            return false;
+        }
 
         if (!Functions.createLov(driver,
                 new String[]{"ss_edit_lov_to_group", getElements("ss_edit_lov_to_group")}, // b_lov
@@ -1291,8 +1293,10 @@ public class AT2TFRSU0011Test {
                 " on CREATION")) {
             return false;
         }
-        Functions.checkboxValue(driver,
-                getElements("ss_add_cb_active"), "active", true, true, " on CREATION");
+        if (!Functions.checkboxValue(driver,
+                getElements("ss_add_cb_active"), "active", true, true, " on CREATION")) {
+            return false;
+        }
         if (!Functions.createLov(driver,
                 new String[]{"ss_add_lov_to_group", getElements("ss_add_lov_to_group")}, // b_lov
                 new String[]{"ss_add_i_to_group", getElements("ss_add_i_to_group")}, // i_lov

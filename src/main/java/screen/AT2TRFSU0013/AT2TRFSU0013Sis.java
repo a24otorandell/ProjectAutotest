@@ -165,8 +165,10 @@ public class AT2TRFSU0013Sis {
         }
         Functions.break_time(driver, 6, 500);
 
-        Functions.checkboxValue(driver,
-                getElements("ed_ss_active"), "active", false, true, " on EDIT");
+        if (!Functions.checkboxValue(driver,
+                getElements("ed_ss_active"), "active", false, true, " on EDIT")) {
+            return false;
+        }
 
         if (!Functions.insertInput(driver, new String[]{"ed_i_grouping", getElements("ed_i_grouping")},
                 "add_gro2", (Integer.toString(DataGenerator.random(1, 9))), " on EDIT")) {
@@ -263,8 +265,10 @@ public class AT2TRFSU0013Sis {
         }
 
 
-        Functions.checkboxValue(driver,
-                getElements("ad_ss_active"), "active", true, true, " on ADD");
+        if (!Functions.checkboxValue(driver,
+                getElements("ad_ss_active"), "active", true, true, " on ADD")) {
+            return false;
+        }
 
         if (!Functions.insertInput(driver, new String[]{"ad_i_grouping", getElements("ad_i_grouping")},
                 "add_gro", (Integer.toString(DataGenerator.random(1, 3))), " on ADD")) {

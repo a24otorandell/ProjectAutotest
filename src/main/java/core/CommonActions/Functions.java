@@ -1412,11 +1412,11 @@ public class Functions {
      * @see DataGenerator
      */
 
-    public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, String where) {
+    public static boolean checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, String where) {
         //HOW TO CALL THIS METHOD
         /*
-        Functions.checkboxValue(driver,
-                getElements("xpath"),"datanme",true/false," where");//where
+        if (!Functions.checkboxValue(driver,
+                getElements("xpath"),"datanme",true/false," where")){return false;}//where
          */
         try {
             boolean checkbox;
@@ -1433,8 +1433,9 @@ public class Functions {
             String ecode = "--ERROR: error to give value in the checkbox in " + where;
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
-
+            return false;
         }
+        return true;
     }
 
     /**
@@ -1449,11 +1450,11 @@ public class Functions {
      * @see ErrorManager#process(TestDriver, String)
      * @see DataGenerator
      */
-    public static void checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, boolean convert_yes_no, String where) {
+    public static boolean checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, boolean convert_yes_no, String where) {
         //HOW TO CALL THIS METHOD
         /*
-        Functions.checkboxValue(driver,
-                getElements("xpath"),"datanme",true/false,true/false" where");//where
+        if (!Functions.checkboxValue(driver,
+                getElements("xpath"),"datanme",true/false,true/false" where")){return false;}//where
          */
         try {
             boolean checkbox;
@@ -1479,8 +1480,9 @@ public class Functions {
             String ecode = "--ERROR: error to give value in the checkbox in " + where;
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
-
+            return false;
         }
+        return true;
     }
 
     /**

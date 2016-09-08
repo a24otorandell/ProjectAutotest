@@ -125,8 +125,10 @@ public class AT2TRFSU0004Sis {
             }
         }
 
-        Functions.checkboxValue(driver,
-                getElements("add_cb_active"), "active", checkbox_active, true, where);//where
+        if (!Functions.checkboxValue(driver,
+                getElements("add_cb_active"), "active", checkbox_active, true, where)) {
+            return false;
+        }//where
 
         // En esta lov hay que introducir algún valor al buscar, no busca si está vacía.
         //Este campo falla en modo debugging, si lanzamos la pantalla normal o en manual va bien.

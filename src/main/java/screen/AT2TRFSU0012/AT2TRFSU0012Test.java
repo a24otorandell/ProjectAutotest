@@ -93,8 +93,10 @@ public class AT2TRFSU0012Test {
                 "add_des", "Angel24", " on ADD")) {
             return false;
         }
-        Functions.checkboxValue(driver,
-                getElements("add_cb_terminal"), "false", false, true, " on ADD");
+        if (!Functions.checkboxValue(driver,
+                getElements("add_cb_terminal"), "false", false, true, " on ADD")) {
+            return false;
+        }
 
 
         Functions.checkClickByAbsence(driver,

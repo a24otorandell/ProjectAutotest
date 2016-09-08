@@ -187,8 +187,10 @@ public class AT2TRFSU0006Test {
             return false;
         }
 
-        Functions.checkboxValue(driver,
-                getElements("grouping_add_cb_group"), "group_by_default", checkbox_group_by_default, true, where);//where
+        if (!Functions.checkboxValue(driver,
+                getElements("grouping_add_cb_group"), "group_by_default", checkbox_group_by_default, true, where)) {
+            return false;
+        }
 
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"grouping_add_b_save", getElements("grouping_add_b_save")}, //element to click
