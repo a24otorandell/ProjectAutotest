@@ -205,7 +205,7 @@ public class AT2TRFSU0013Test {
 
         if (!Functions.selectText(driver,
                 new String[]{"qbe_s_active", getElements("qbe_s_active")},
-                data.getData().get(""), "qbe_yes", " on QBE IN GROUPING")) {
+                "Yes", "qbe_yes", " on QBE IN GROUPING")) {
             return false;
         }
 
