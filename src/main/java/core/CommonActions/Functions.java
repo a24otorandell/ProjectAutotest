@@ -163,7 +163,7 @@ public class Functions {
         /*   if (!Functions.checkClickByAbsence(driver,
                 new String[]{"x", getElements("x")}, //element to click
                 new String[]{"y", getElements("x")}, //element expected to disappear
-                " on where"){return false;}*/
+                " on where")){return false;}*/
 
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
         WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
