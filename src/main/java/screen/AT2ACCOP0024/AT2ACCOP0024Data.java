@@ -10,11 +10,12 @@ import java.util.Map;
  *
  * @author ajvirgili on 29/06/2016.
  */
+@SuppressWarnings("UnusedParameters")
 public class AT2ACCOP0024Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2ACCOP0024Data() {
+    public AT2ACCOP0024Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCOP0024Values.txt");
         setData();
     }

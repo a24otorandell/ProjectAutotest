@@ -40,10 +40,12 @@ public class AT2TRFSU0002Locators {
 
         elements.put("s_ss_active", "//*[contains(@id, 'advanceSearchVehiclesSetup:value00::content')]");
         elements.put("s_lov", "//*[contains(@id, 'advanceSearchVehiclesSetup:value10::lovIconId')]");
-        elements.put("s_i_lov_des", "//*[contains(@id, 'advanceSearchVehiclesSetup:value20::content')]");
+        elements.put("s_i_test", "//*[contains(@id, 'advanceSearchVehiclesSetup:value10::content')]");
+        elements.put("s_i_lov_des", "//*[contains(@id, 'afrLovInternalQueryId:value20::content')]");
         elements.put("s_i_suplic", "//*[contains(@id, 'advanceSearchVehiclesSetup:value20::content')]");
         elements.put("s_lov2", "//*[contains(@id, 'advanceSearchVehiclesSetup:value30::lovIconId')]");
-        elements.put("s_i_lov2_des", "//*[contains(@id, 'advanceSearchVehiclesSetup:value20::content')]");
+        elements.put("s_i_lov2_cod", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
+        elements.put("s_i_lov2_des", "//*[contains(@id, 'afrLovInternalQueryId:value10::content')]");
         elements.put("s_i_type", "//*[contains(@id, 'advanceSearchVehiclesSetup:value30::content')]");
         elements.put("s_i_cod", "//*[contains(@id, 'advanceSearchVehiclesSetup:value40::content')]");
         elements.put("s_i_des", "//*[contains(@id, 'advanceSearchVehiclesSetup:value50::content')]");
@@ -53,7 +55,7 @@ public class AT2TRFSU0002Locators {
 
         //edit
 
-        elements.put("b_edit", "//*[contains(@id, 'pcgt1:boton_add')]");
+        elements.put("b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");
         elements.put("ed_active", "//*[contains(@id, 'pcgt1:sbc1::content')]");
         elements.put("ed_lov", "//*[contains(@id, 'pcgt1:nomCortoId::lovIconId')]");
         elements.put("ed_i_supli", "//*[contains(@id, 'pcgt1:nomCortoId::content')]");
@@ -65,11 +67,11 @@ public class AT2TRFSU0002Locators {
         elements.put("ed_i_vdes", "//*[contains(@id, 'pcgt1:it4::content')]");
         elements.put("ed_i_capa", "//*[contains(@id, 'pcgt1:it1::content')]");
         elements.put("ed_i_remarcks", "//*[contains(@id, 'pcgt1:it5::content')]");
-        elements.put("b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
+        elements.put("ed_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
 
         //Qbe
         elements.put("b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
-        elements.put("qbe_active", "//*[contains(@id, 'pc1:tablaVehiclesSetup:soc1::content')]");
+        elements.put("qbe_active", "//*[contains(@id, 'tablaVehiclesSetup:soc1::content')]");
         elements.put("qbe_tes", "//*[contains(@id, 'afr_tablaVehiclesSetup_afr_c4::content')]");
         elements.put("qbe_i_supli", "//*[contains(@id, 'afr_tablaVehiclesSetup_afr_c2::content')]");
         elements.put("qbe_i_type", "//*[contains(@id, 'afr_tablaVehiclesSetup_afr_c1::content')]");
