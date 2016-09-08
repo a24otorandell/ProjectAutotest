@@ -934,7 +934,7 @@ public class AT2MDMOR0028Sis {
 
                     new String[]{"language_tab_language_code_table_search_e_result",
                             getElements("language_tab_language_code_table_search_e_result")},
-                    "both",
+                    "string",
                     "")) {
                 return false;
             }
