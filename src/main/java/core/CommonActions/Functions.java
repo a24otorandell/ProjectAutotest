@@ -670,6 +670,7 @@ public class Functions {
         if (!checkClickByAbsence(driver, recursiveXPaths.lov_b_ok, recursiveXPaths.lov_b_search, where)) {
             return false;
         }
+        break_time(driver, 2, 500);
         try {
             attr = driver.getDriver().findElement(By.xpath(i_lov[1])).getAttribute("value");
             if (!attr.equals("") && !attr.equals(null)) {
