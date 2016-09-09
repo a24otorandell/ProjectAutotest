@@ -8,7 +8,7 @@ import core.recursiveData.recursiveXPaths;
 //import java.util.concurrent.TimeUnit;
 
 /**
- * @author ajvirgili on 30/06/2016.
+ * @author ajvirgili on 08/09/2016
  */
 @SuppressWarnings({"unused", "RedundantIfStatement"})
 public class AT2MSCSU0007Test {
@@ -16,8 +16,9 @@ public class AT2MSCSU0007Test {
     protected AT2MSCSU0007Locators locators;
     protected AT2MSCSU0007Data data;
 
-    public AT2MSCSU0007Test() {
-
+    public AT2MSCSU0007Test(String enviroment) {
+        setLocators(new AT2MSCSU0007Locators(enviroment));
+        setData(new AT2MSCSU0007Data(enviroment));
     }
 
     public AT2MSCSU0007Locators getLocators() {
@@ -59,13 +60,13 @@ public class AT2MSCSU0007Test {
         if (!recordInteractionUrlCountry(driver, true)) { // creamos una url
             return false;
         }
-        if (!auditDetachUrl(driver)) { // data history y detach
-            return false;
-        }
         if (!searchUrlCountry(driver)) { // Buscamos la url creada
             return false;
         }
         if (!recordInteractionUrlCountry(driver, false)) {  // editamos la url creada
+            return false;
+        }
+        if (!auditDetachUrl(driver)) { // data history y detach
             return false;
         }
         if (!changeTab(driver, "tab_available_web")) { // cambiamos de pestaña
@@ -115,6 +116,12 @@ public class AT2MSCSU0007Test {
             return false;
         }
         if (!qbeDetails(driver)) { //mediante la QBE buscamos el language creado, de nuevo
+            return false;
+        }
+        if (!auditDetachWeb(driver)) { // data history y detach
+            return false;
+        }
+        if (!auditDetachWebDetails(driver)) { // data history y detach
             return false;
         }
         if (!deleteWebDetails(driver)) { // borramos el language
@@ -173,7 +180,7 @@ public class AT2MSCSU0007Test {
         }
         if (!Functions.selectText(driver,
                 new String[]{"url_country_pais_url_b_add_type", getElements("url_country_pais_url_b_add_type")},
-                getData("type"),
+                getData(update + "type"),
                 "type",
                 on)) {
             return false;
@@ -262,7 +269,7 @@ public class AT2MSCSU0007Test {
                 return false;
             }
         }
-        Functions.sleep(2000);
+        Functions.break_time(driver, 2, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"available_web_details_b_add_lov_language_code", getElements("available_web_details_b_add_lov_language_code")},
                 new String[]{"available_web_details_b_add_i_language_code", getElements("available_web_details_b_add_i_language_code")},
@@ -333,13 +340,8 @@ public class AT2MSCSU0007Test {
                     " on SEARCH URL COUNTRY")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.clickSearchAndResult(driver,
                     new String[]{"url_country_search_b_search", getElements("url_country_search_b_search")},
-                    " on SEARCH URL COUNTRY")) {
-                return false;
-            }
-            Functions.sleep(2800);
-            if (!Functions.simpleClick(driver,
                     new String[]{"url_country_search_e_result", getElements("url_country_search_e_result")},
                     " on SEARCH URL COUNTRY")) {
                 return false;
@@ -371,13 +373,8 @@ public class AT2MSCSU0007Test {
                     " on SEARCH AVAILABLE WEB")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.clickSearchAndResult(driver,
                     new String[]{"available_web_search_b_search", getElements("available_web_search_b_search")},
-                    " on SEARCH AVAILABLE WEB")) {
-                return false;
-            }
-            Functions.sleep(2800);
-            if (!Functions.simpleClick(driver,
                     new String[]{"available_web_e_result", getElements("available_web_e_result")},
                     " on SEARCH AVAILABLE WEB")) {
                 return false;
@@ -429,8 +426,9 @@ public class AT2MSCSU0007Test {
                 " on QBE URL COUNTRY")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"url_country_search_b_search", getElements("url_country_search_b_search")},
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"url_country_pais_url_qbe_i_country_code", getElements("url_country_pais_url_qbe_i_country_code")},
+                new String[]{"url_country_search_e_result", getElements("url_country_search_e_result")},
                 " on QBE URL COUNTRY")) {
             return false;
         }
@@ -463,12 +461,8 @@ public class AT2MSCSU0007Test {
                 " on QBE AVAILABLE WEB")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"available_web_search_b_search", getElements("available_web_search_b_search")},
-                " on QBE AVAILABLE WEB")) {
-            return false;
-        }
-        if (!Functions.simpleClick(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"available_web_qbe_i_country_code", getElements("available_web_qbe_i_country_code")},
                 new String[]{"available_web_e_result", getElements("available_web_e_result")},
                 " on QBE AVAILABLE WEB")) {
             return false;
@@ -502,12 +496,8 @@ public class AT2MSCSU0007Test {
                 " on QBE AVAILABLE WEB DETAILS")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"available_web_search_b_search", getElements("available_web_search_b_search")},
-                " on QBE AVAILABLE WEB DETAILS")) {
-            return false;
-        }
-        if (!Functions.simpleClick(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"available_web_details_qbe_i_language_code", getElements("available_web_details_qbe_i_language_code")},
                 new String[]{"available_web_details_e_result", getElements("available_web_details_e_result")},
                 " on QBE AVAILABLE WEB DETAILS")) {
             return false;
@@ -528,13 +518,13 @@ public class AT2MSCSU0007Test {
         if (!Functions.auditData(driver,
                 new String[]{"url_country_pais_url_b_actions", getElements("url_country_pais_url_b_actions")},
                 new String[]{"url_country_pais_url_b_data_history", getElements("url_country_pais_url_b_data_history")},
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok},
+                new String[]{"url_country_pais_url_b_data_history_b_ok", getElements("url_country_pais_url_b_data_history_b_ok")},
                 " on DATA HISTORY URL")) {
             return false;
         }
         if (!Functions.detachTable(driver,
                 new String[]{"url_country_pais_url_b_detach_table", getElements("url_country_pais_url_b_detach_table")},
-                false,
+                true,
                 " on DETACH TABLE URL")) {
             return false;
         }
@@ -554,13 +544,13 @@ public class AT2MSCSU0007Test {
         if (!Functions.auditData(driver,
                 new String[]{"available_web_b_actions", getElements("available_web_b_actions")},
                 new String[]{"available_web_b_data_history", getElements("available_web_b_data_history")},
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok},
+                new String[]{"available_web_b_data_history_b_ok", getElements("available_web_b_data_history_b_ok")},
                 " on DATA HISTORY WEB AVAILABLE")) {
             return false;
         }
         if (!Functions.detachTable(driver,
                 new String[]{"available_web_b_detach_table", getElements("available_web_b_detach_table")},
-                false,
+                true,
                 " on DETACH TABLE WEB AVAILABLE")) {
             return false;
         }
@@ -580,13 +570,13 @@ public class AT2MSCSU0007Test {
         if (!Functions.auditData(driver,
                 new String[]{"available_web_details_b_actions", getElements("available_web_details_b_actions")},
                 new String[]{"available_web_details_b_data_history", getElements("available_web_details_b_data_history")},
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok},
+                new String[]{"available_web_details_b_data_history_b_ok", getElements("available_web_details_b_data_history_b_ok")},
                 " on DATA HISTORY WEB AVAILABLE DETAILS")) {
             return false;
         }
         if (!Functions.detachTable(driver,
                 new String[]{"available_web_details_b_detach_table", getElements("available_web_details_b_detach_table")},
-                false,
+                true,
                 " on DETACH TABLE WEB AVAILABLE DETAILS")) {
             return false;
         }
@@ -610,7 +600,7 @@ public class AT2MSCSU0007Test {
                     " on DELETE URL COUNTRY")) {
                 return false;
             }
-            Functions.sleep(2800);
+            Functions.break_time(driver, 2, 800);
             if (!Functions.checkClickByAbsence(driver,
                     new String[]{"url_country_pais_url_b_remove_b_ok", getElements("url_country_pais_url_b_remove_b_ok")},
                     new String[]{"url_country_pais_url_b_remove_b_ok", getElements("url_country_pais_url_b_remove_b_ok")},
@@ -635,20 +625,23 @@ public class AT2MSCSU0007Test {
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClick(driver,
                     new String[]{"available_web_b_remove", getElements("available_web_b_remove")},
+                    recursiveXPaths.glass,
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
-            Functions.sleep(2800);
-            if (!Functions.simpleClick(driver,
+            Functions.break_time(driver, 2, 800);
+            if (!Functions.checkClick(driver,
                     new String[]{"available_web_b_remove_b_ok", getElements("available_web_b_remove_b_ok")},
+                    new String[]{"available_web_b_remove_b_ok_b_ok", getElements("available_web_b_remove_b_ok_b_ok")},
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
-            Functions.sleep(1500);
-            if (!Functions.simpleClick(driver,
+            Functions.break_time(driver, 1, 500);
+            if (!Functions.checkClickByAbsence(driver,
                     new String[]{"available_web_b_remove_b_ok_b_ok", getElements("available_web_b_remove_b_ok_b_ok")},
+                    recursiveXPaths.glass,
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
@@ -675,7 +668,7 @@ public class AT2MSCSU0007Test {
                     " on DELETE AVAILABLE WEB DETAILS")) {
                 return false;
             }
-            Functions.sleep(2800);
+            Functions.break_time(driver, 2, 800);
             if (!Functions.simpleClick(driver,
                     new String[]{"available_web_details_b_remove_b_ok", getElements("available_web_details_b_remove_b_ok")},
                     " on DELETE AVAILABLE WEB DETAILS")) {
