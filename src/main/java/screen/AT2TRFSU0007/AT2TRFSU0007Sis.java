@@ -58,6 +58,16 @@ public class AT2TRFSU0007Sis {
 
     protected boolean testCSED(TestDriver driver) {
 
+        if (!Vehicles(driver)) {
+            return false;
+        }
+
+
+        return false;
+    }
+
+    private boolean Vehicles(TestDriver driver) {
+
         if (!Add_vehicles(driver)) {
             return false;
         }
@@ -82,7 +92,7 @@ public class AT2TRFSU0007Sis {
             return false;
         }
 
-        return false;
+        return true;
     }
 
     private boolean Delete_vehicles(TestDriver driver) {
