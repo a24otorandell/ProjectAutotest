@@ -296,7 +296,7 @@ public class AT2TRFSU0010Test {
     private boolean Other_actions_type(TestDriver driver) {
 
 
-        driver.getReport().addHeader("OTHER ACTIONS IN ADITIONAL SUPLEMENTS", 3, false);
+        driver.getReport().addHeader("OTHER ACTIONS IN SERVICE TYPE", 3, false);
 
         if (!Functions.auditData(driver,
                 new String[]{"service_b_actions", getElements("service_b_actions")}, //actions button
