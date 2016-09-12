@@ -13,7 +13,7 @@ public class AT2MSCSU0007Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2MSCSU0007Data() {
+    public AT2MSCSU0007Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2MSCSU0007Values.txt");
         setData();
     }
@@ -31,16 +31,16 @@ public class AT2MSCSU0007Data {
 
     public void setDefaultData() {
         data.put("country_code_url", "AI");
-        data.put("update_country_code_url", "AL");
+        data.put("update_country_code_url", "ZR");
         data.put("country_description_url", "ANGUILLA");
-        data.put("update_country_description_url", "ALBANIA");
+        data.put("update_country_description_url", "Congo");
         data.put("url_url", DataGenerator.getRandomAlphanumericSequence(12, false));
         data.put("update_url_url", DataGenerator.getRandomAlphanumericSequence(12, false));
         data.put("type", "Secondary");
-        data.put("update_type", "Secondary");
+        data.put("update_type", "Main");
 
-        data.put("country_code_web", DataGenerator.getRandomAlphanumericSequence(2, false));
-        data.put("update_country_code_web", DataGenerator.getRandomAlphanumericSequence(2, false));
+        data.put("country_code_web", DataGenerator.getRandomAlphanumericSequence(3, false));
+        data.put("update_country_code_web", DataGenerator.getRandomAlphanumericSequence(3, false));
         data.put("url_web", DataGenerator.getRandomAlphanumericSequence(12, false));
         data.put("update_url_web", DataGenerator.getRandomAlphanumericSequence(12, false));
 

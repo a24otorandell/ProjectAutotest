@@ -588,13 +588,8 @@ public class AT2ACCOP0024Test {
                     return false;
                 }
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.clickSearchAndResult(driver,
                     new String[]{"search_b_search", getElements("search_b_search")},
-                    " on SEARCH")) {
-                return false;
-            }
-            Functions.break_time(driver, 4, 500);
-            if (!Functions.simpleClick(driver,
                     new String[]{"search_e_result", getElements("search_e_result")},
                     " on SEARCH")) {
                 return false;

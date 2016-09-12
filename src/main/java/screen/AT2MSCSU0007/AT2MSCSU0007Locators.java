@@ -6,10 +6,11 @@ import java.util.Map;
 /**
  * @author ajvirgili on 30/06/2016.
  */
+@SuppressWarnings("UnusedParameters")
 public class AT2MSCSU0007Locators {
     Map<String, String> elements = new HashMap<>();
 
-    public AT2MSCSU0007Locators() {
+    public AT2MSCSU0007Locators(String enviroment) {
         setElements();
     }
 
@@ -56,6 +57,7 @@ public class AT2MSCSU0007Locators {
         elements.put("url_country_pais_url_b_edit", "//*[contains(@id, 'pc1:PCGenericToolbar1:boton_edit')]");
         elements.put("url_country_pais_url_b_actions", "//*[contains(@id, 'pc1:pcgm1:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("url_country_pais_url_b_data_history", "//*[contains(@id, 'pc1:pcgm1:dc_cmi0')]/td[2]");
+        elements.put("url_country_pais_url_b_data_history_b_ok", "//*[contains(@id, 'pc1:pcgm1:d22::ok')]");
         elements.put("url_country_pais_url_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("url_country_pais_url_b_detach_table", "//*[contains(@id, 'pc1:_dchTbr')]/a");
         elements.put("url_country_record_interaction_b_detach_table_b_close", "//*[contains(@id, 'pc1::_afrDetachDialogId::close')]");
@@ -85,11 +87,12 @@ public class AT2MSCSU0007Locators {
         //
         elements.put("available_web_b_remove", "//*[contains(@id, 'pc2:PCGenericToolbar2:boton_remove')]");
         elements.put("available_web_b_remove_b_ok", "//*[contains(@id, 'pc2:PCGenericToolbar2:cbt1')]");
-        elements.put("available_web_b_remove_b_ok_b_ok", "//*[contains(@id, 'd2::yes')]");
+        elements.put("available_web_b_remove_b_ok_b_ok", "//*[contains(@id, ':d2::yes')]");
         //
         elements.put("available_web_b_edit", "//*[contains(@id, 'pc2:PCGenericToolbar2:boton_edit')]");
-        elements.put("available_web_b_actions", "//*[contains(@id, 'pc2:PCGenericMenu1:dc_m1)']/div/table/tbody/tr/td[2]/a");
+        elements.put("available_web_b_actions", "//*[contains(@id, 'pc2:PCGenericMenu1:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("available_web_b_data_history", "//*[contains(@id, 'pc2:PCGenericMenu1:dc_cmi0')]/td[2]");
+        elements.put("available_web_b_data_history_b_ok", "//*[contains(@id, 'pc2:PCGenericMenu1:d22::ok')]");
         elements.put("available_web_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]");
         elements.put("available_web_b_detach_table", "//*[contains(@id, 'pc2:_dchTbr')]");
         elements.put("available_web_b_detach_table_b_close", "//*[contains(@id, 'pc2::_afrDetachDialogId::close')]");
@@ -108,8 +111,9 @@ public class AT2MSCSU0007Locators {
         elements.put("available_web_details_b_remove", "//*[contains(@id, 'pc3:PCGenericToolbar3:boton_remove')]");
         elements.put("available_web_details_b_remove_b_ok", "//*[contains(@id, 'pc3:PCGenericToolbar3:cbt1')]");
         elements.put("available_web_details_b_edit", "//*[contains(@id, 'pc3:PCGenericToolbar3:boton_edit')]");
-        elements.put("available_web_details_b_actions", "//*[contains(@id, 'pc3:PCGenericMenu2:dc_m1)']/div/table/tbody/tr/td[2]/a");
+        elements.put("available_web_details_b_actions", "//*[contains(@id, 'pc3:PCGenericMenu2:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("available_web_details_b_data_history", "//*[contains(@id, 'pc3:PCGenericMenu2:dc_cmi0')]/td[2]");
+        elements.put("available_web_details_b_data_history_b_ok", "//*[contains(@id, 'pc3:PCGenericMenu2:d22::ok')]");
         elements.put("available_web_details_b_qbe", "//*[contains(@id, 'pc3:_qbeTbr')]");
         elements.put("available_web_details_b_detach_table", "//*[contains(@id, 'pc3:_dchTbr')]");
         elements.put("available_web_details_b_detach_table_b_close", "//*[contains(@id, 'pc3::_afrDetachDialogId::close')]");

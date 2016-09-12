@@ -11,12 +11,12 @@ import core.recursiveData.recursiveXPaths;
  * @author ajvirgili on 08/09/2016
  */
 @SuppressWarnings({"unused", "RedundantIfStatement"})
-public class AT2MSCSU0007Test {
+public class AT2MSCSU0007Sis {
 
     protected AT2MSCSU0007Locators locators;
     protected AT2MSCSU0007Data data;
 
-    public AT2MSCSU0007Test(String enviroment) {
+    public AT2MSCSU0007Sis(String enviroment) {
         setLocators(new AT2MSCSU0007Locators(enviroment));
         setData(new AT2MSCSU0007Data(enviroment));
     }
@@ -50,10 +50,6 @@ public class AT2MSCSU0007Test {
 
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
-    }
-
-    protected String getData(String key) {
-        return String.valueOf(this.data.getData().get(key));
     }
 
     protected boolean testCSED(TestDriver driver) {
@@ -103,7 +99,7 @@ public class AT2MSCSU0007Test {
         if (!qbeAvailable(driver)) { //mediante la QBE buscamos la web creada y editada previamente
             return false;
         }
-        if (!recordInteractionAvailableWebDetails(driver, true)) { // creamos un lenguage
+        if (!recordInteractionAvailableWebDetails(driver, true)) { // creamos un language
             return false;
         }
         if (!qbeDetails(driver)) { //mediante la QBE buscamos el language creado
@@ -118,10 +114,10 @@ public class AT2MSCSU0007Test {
         if (!qbeDetails(driver)) { //mediante la QBE buscamos el language creado, de nuevo
             return false;
         }
-        if (!auditDetachWeb(driver)) { // data history y detach
+        if (!auditDetachWeb(driver)) { // data history y detach Web
             return false;
         }
-        if (!auditDetachWebDetails(driver)) { // data history y detach
+        if (!auditDetachWebDetails(driver)) { // data history y detach Language Details
             return false;
         }
         if (!deleteWebDetails(driver)) { // borramos el language
@@ -136,7 +132,6 @@ public class AT2MSCSU0007Test {
 
         return true;
     }
-
 
     /**
      * @param driver TestDriver
@@ -171,6 +166,20 @@ public class AT2MSCSU0007Test {
                 on)) {
             return false;
         }
+        /*
+        No funciona bien la LOV de creación/edición de la tabla Country URL, asi que de momento usamos un Functions.insertInput()
+        if (!Functions.createLovByValue(driver,
+                new String[]{"url_country_pais_url_b_add_lov_country_code",
+                        getElements("url_country_pais_url_b_add_lov_country_code")},
+                new String[]{"url_country_pais_url_b_add_i_country_code",
+                        getElements("url_country_pais_url_b_add_i_country_code")},
+                new String[]{"url_country_pais_url_b_add_lov_country_code_i_country_code",
+                        getElements("url_country_pais_url_b_add_lov_country_code_i_country_code")},
+                getData(update + "country_code_url"),
+                "country_code_url",
+                on)) {
+            return false;
+        }*/
         if (!Functions.insertInput(driver,
                 new String[]{"url_country_pais_url_b_add_i_url", getElements("url_country_pais_url_b_add_i_url")},
                 "url_url",
@@ -192,6 +201,11 @@ public class AT2MSCSU0007Test {
             return false;
         }
         return true;
+    }
+
+
+    protected String getData(String key) {
+        return String.valueOf(this.data.getData().get(key));
     }
 
     /**
@@ -518,13 +532,13 @@ public class AT2MSCSU0007Test {
         if (!Functions.auditData(driver,
                 new String[]{"url_country_pais_url_b_actions", getElements("url_country_pais_url_b_actions")},
                 new String[]{"url_country_pais_url_b_data_history", getElements("url_country_pais_url_b_data_history")},
-                new String[]{"url_country_pais_url_b_data_history_b_ok", getElements("url_country_pais_url_b_data_history_b_ok")},
+                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok},
                 " on DATA HISTORY URL")) {
             return false;
         }
         if (!Functions.detachTable(driver,
                 new String[]{"url_country_pais_url_b_detach_table", getElements("url_country_pais_url_b_detach_table")},
-                true,
+                false,
                 " on DETACH TABLE URL")) {
             return false;
         }
@@ -544,13 +558,13 @@ public class AT2MSCSU0007Test {
         if (!Functions.auditData(driver,
                 new String[]{"available_web_b_actions", getElements("available_web_b_actions")},
                 new String[]{"available_web_b_data_history", getElements("available_web_b_data_history")},
-                new String[]{"available_web_b_data_history_b_ok", getElements("available_web_b_data_history_b_ok")},
+                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok},
                 " on DATA HISTORY WEB AVAILABLE")) {
             return false;
         }
         if (!Functions.detachTable(driver,
                 new String[]{"available_web_b_detach_table", getElements("available_web_b_detach_table")},
-                true,
+                false,
                 " on DETACH TABLE WEB AVAILABLE")) {
             return false;
         }
@@ -570,13 +584,13 @@ public class AT2MSCSU0007Test {
         if (!Functions.auditData(driver,
                 new String[]{"available_web_details_b_actions", getElements("available_web_details_b_actions")},
                 new String[]{"available_web_details_b_data_history", getElements("available_web_details_b_data_history")},
-                new String[]{"available_web_details_b_data_history_b_ok", getElements("available_web_details_b_data_history_b_ok")},
+                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok},
                 " on DATA HISTORY WEB AVAILABLE DETAILS")) {
             return false;
         }
         if (!Functions.detachTable(driver,
                 new String[]{"available_web_details_b_detach_table", getElements("available_web_details_b_detach_table")},
-                true,
+                false,
                 " on DETACH TABLE WEB AVAILABLE DETAILS")) {
             return false;
         }
@@ -618,6 +632,7 @@ public class AT2MSCSU0007Test {
      * @return Boolean
      */
     protected boolean deleteWeb(TestDriver driver) {
+        Functions.break_time(driver, 2, 500);
         driver.getReport().addContent("Delete Web Available Record:", "h4", "");
         try {
             if (!Functions.simpleClick(driver,
@@ -632,13 +647,12 @@ public class AT2MSCSU0007Test {
                 return false;
             }
             Functions.break_time(driver, 2, 800);
-            if (!Functions.checkClick(driver,
+            if (!Functions.simpleClick(driver,
                     new String[]{"available_web_b_remove_b_ok", getElements("available_web_b_remove_b_ok")},
-                    new String[]{"available_web_b_remove_b_ok_b_ok", getElements("available_web_b_remove_b_ok_b_ok")},
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
-            Functions.break_time(driver, 1, 500);
+            Functions.break_time(driver, 3, 500);
             if (!Functions.checkClickByAbsence(driver,
                     new String[]{"available_web_b_remove_b_ok_b_ok", getElements("available_web_b_remove_b_ok_b_ok")},
                     recursiveXPaths.glass,
@@ -663,14 +677,16 @@ public class AT2MSCSU0007Test {
                     " on DELETE AVAILABLE WEB DETAILS")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClick(driver,
                     new String[]{"available_web_details_b_remove", getElements("available_web_details_b_remove")},
+                    recursiveXPaths.glass,
                     " on DELETE AVAILABLE WEB DETAILS")) {
                 return false;
             }
             Functions.break_time(driver, 2, 800);
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClickByAbsence(driver,
                     new String[]{"available_web_details_b_remove_b_ok", getElements("available_web_details_b_remove_b_ok")},
+                    recursiveXPaths.glass,
                     " on DELETE AVAILABLE WEB DETAILS")) {
                 return false;
             }
