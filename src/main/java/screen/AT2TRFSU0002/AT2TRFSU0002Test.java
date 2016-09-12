@@ -79,8 +79,7 @@ public class AT2TRFSU0002Test {
         if (!Edit_vehicles(driver)) {
             return false;
         }
-
-        if (!Search2_vehicles(driver)) {
+        if (!Search_vehicles(driver)) {
             return false;
         }
 
@@ -268,12 +267,12 @@ public class AT2TRFSU0002Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "ad2_ca", //Data name
+                "ad_ca", //Data name
                 " on  ADD IN OPERATIONAL")) {
             return false;
         }
         Functions.getValue(driver, new String[]{"ed_i_des", getElements("ed_i_des")}, // element path
-                "ad2_des", // key for data value (the name)
+                "ad_des", // key for data value (the name)
                 " on ADD IN OPERATIONAL"); // whoere this operation occurs
 
         if (!Functions.createLov(driver,
@@ -282,29 +281,29 @@ public class AT2TRFSU0002Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "ad2_ci", //Data name
+                "ad_ci", //Data name
                 " on ADD IN OPERATIONAL")) {
             return false;
         }
         Functions.getValue(driver, new String[]{"ed_i_des2", getElements("ed_i_des2")}, // element path
-                "ad2_des2", // key for data value (the name)
+                "ad_des2", // key for data value (the name)
                 " on ADD IN OPERATIONAL"); // whoere this operation occurs
 
 
         if (!Functions.insertInput(driver, new String[]{"ed_i_cod", getElements("ed_i_cod")},
-                "in4", (Integer.toString(DataGenerator.random(1, 16))), " on ADD")) {
+                "in1", (Integer.toString(DataGenerator.random(1, 16))), " on ADD")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"ed_i_vdes", getElements("ed_i_vdes")},
-                "in5", "prueba2", " on ADD IN OPERATIONAL")) {
+                "in2", "prueba2", " on ADD IN OPERATIONAL")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"ed_i_capa", getElements("ed_i_capa")},
-                "in6", (Integer.toString(DataGenerator.random(1, 15))), " on ADD IN OPERATIONAL")) {
+                "in3", (Integer.toString(DataGenerator.random(1, 15))), " on ADD IN OPERATIONAL")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"ed_i_remarcks", getElements("ed_i_remarcks")},
-                "in7", "PRUEBA2", " on ADD IN OPERATIONAL")) {
+                "in4", "PRUEBA2", " on ADD IN OPERATIONAL")) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -422,8 +421,12 @@ public class AT2TRFSU0002Test {
                 " on ADD IN OPERATIONAL"); // whoere this operation occurs
 
 
-        if (!Functions.insertInput(driver, new String[]{"ad_i_cod", getElements("ad_i_cod")},
-                "in1", (Integer.toString(DataGenerator.random(1, 16))), " on ADD")) {
+        if (!Functions.insertInput(driver,
+                new String[]{"ad_i_cod",
+                        getElements("ad_i_cod")},
+                "in1",
+                (Integer.toString(DataGenerator.random(1, 16))),
+                " on ADD")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"ad_i_vdes", getElements("ad_i_vdes")},

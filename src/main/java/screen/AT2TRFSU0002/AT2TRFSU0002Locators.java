@@ -22,16 +22,16 @@ public class AT2TRFSU0002Locators {
 
         //Add
 
-        elements.put("b_add", "//*[contains(@id, 'pcgt1:boton_add')]");
-        elements.put("ad_active", "//*[contains(@id, 'pcgt1:sbc1::content')]");
-        elements.put("ad_lov", "//*[contains(@id, 'pcgt1:nomCortoId::lovIconId')]");
-        elements.put("ad_i_supli", "//*[contains(@id, 'pcgt1:nomCortoId::content')]");
-        elements.put("ad_i_des", "//*[contains(@id, 'pcgt1:it2::content')]");
-        elements.put("ad_lov2", "//*[contains(@id, 'pcgt1:codTipoVehicId::lovIconId')]");
-        elements.put("ad_i_type", "//*[contains(@id, 'pcgt1:codTipoVehicId::content')]");
-        elements.put("ad_i_des2", "//*[contains(@id, 'pcgt1:it11::content')]");
-        elements.put("ad_i_cod", "//*[contains(@id, 'pcgt1:it3::content')]");
-        elements.put("ad_i_vdes", "//*[contains(@id, 'pcgt1:it4::content')]");
+        elements.put("operational_b_add", "//*[contains(@id, 'pcgt1:boton_add')]");
+        elements.put("operational_add_active", "//*[contains(@id, 'pcgt1:sbc1::content')]");
+        elements.put("operational_add_lov_suplier_test", "//*[contains(@id, 'pcgt1:nomCortoId::lovIconId')]");
+        elements.put("operational_add_i_suplier_test", "//*[contains(@id, 'pcgt1:nomCortoId::content')]");
+        elements.put("operational_add_i_description_suplier", "//*[contains(@id, 'pcgt1:it2::content')]");
+        elements.put("operational_add_lov2_vehicle_type", "//*[contains(@id, 'pcgt1:codTipoVehicId::lovIconId')]");
+        elements.put("operational_add_i_vehicle_type", "//*[contains(@id, 'pcgt1:codTipoVehicId::content')]");
+        elements.put("operational_add_i_description_vehicle", "//*[contains(@id, 'pcgt1:it11::content')]");
+        elements.put("operational_add_i_vehicle_cod", "//*[contains(@id, 'pcgt1:it3::content')]");
+        elements.put("operational_add_i_", "//*[contains(@id, 'pcgt1:it4::content')]");
         elements.put("ad_i_capa", "//*[contains(@id, 'pcgt1:it1::content')]");
         elements.put("ad_i_remarcks", "//*[contains(@id, 'pcgt1:it5::content')]");
         elements.put("b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
