@@ -11,12 +11,17 @@ import java.util.Map;
 public class AT2ACCDI0003Manager implements AT2Test {
 
     AT2ACCDI0003Test test;
+    AT2ACCDI0003Sis sis;
     String[] procedure;
+    String enviroment;
 
-    public AT2ACCDI0003Manager() {
-        setTest(new AT2ACCDI0003Test());
-        this.test.setData(new AT2ACCDI0003Data());
-        this.test.setLocators(new AT2ACCDI0003Locators());
+    public AT2ACCDI0003Manager(String enviroment) {
+        this.enviroment = enviroment;
+        if (enviroment.equalsIgnoreCase("test")) {
+            setTest(new AT2ACCDI0003Test(enviroment));
+        } else {
+            setTestSis(new AT2ACCDI0003Sis(enviroment));
+        }
     }
 
     public String[] getProcedure() {
@@ -35,17 +40,30 @@ public class AT2ACCDI0003Manager implements AT2Test {
         this.test = test;
     }
 
+    public AT2ACCDI0003Sis getTestSis() {
+        return sis;
+    }
+
+    public void setTestSis(AT2ACCDI0003Sis sis) {
+        this.sis = sis;
+    }
+
     public Map<String, String> getData() {
-        return this.test.getData().getData();
+        if (enviroment.equalsIgnoreCase("test")) {
+            return this.test.getData().getData();
+        } else {
+            return this.sis.getData().getData();
+        }
     }
 
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
-        getTest().start(driver);
-        if (!csedIteration(driver)) {
-            return false;
+        if (enviroment.equalsIgnoreCase("sis")) {
+            getTestSis().start(driver);
+        } else {
+            getTest().start(driver);
         }
-        return true;
+        return csedIteration(driver);
     }
 
     private boolean csedIteration(TestDriver driver) {
@@ -73,8 +91,14 @@ public class AT2ACCDI0003Manager implements AT2Test {
                     getTest().reset(driver);
                 }*/
             if (getProcedure()[i].equals("x")) {
-                if (!getTest().testCSED(driver)) {
-                    return false;
+                if (enviroment.equalsIgnoreCase("test")) {
+                    if (!getTest().testCSED(driver)) {
+                        return false;
+                    }
+                } else {
+                    if (!getTestSis().testCSED(driver)) {
+                        return false;
+                    }
                 }
             }
         }
