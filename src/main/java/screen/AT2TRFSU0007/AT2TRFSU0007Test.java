@@ -185,7 +185,7 @@ public class AT2TRFSU0007Test {
         }
         if (!Functions.selectText(driver,
                 new String[]{"vehicles_qbe_preferred", getElements("vehicles_qbe_preferred")},
-                "No", "qbe_preferred", " on SEARCH")) {
+                "No", "qbe_preferred", " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,

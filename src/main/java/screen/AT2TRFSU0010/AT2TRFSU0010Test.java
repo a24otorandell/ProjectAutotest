@@ -442,7 +442,7 @@ public class AT2TRFSU0010Test {
         }
 
         if (!Functions.checkboxValue(driver,
-                getElements("service_se_check_box_mandatory"), "active", true, true, " on SEARCH")) {
+                getElements("service_se_check_box_mandatory"), "active", Boolean.valueOf(data.getData().get("active")), true, " on SEARCH")) {
             return false;
         }
 
