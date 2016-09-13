@@ -15,8 +15,9 @@ public class AT2ACCDI0003Test {
     protected AT2ACCDI0003Locators locators;
     protected AT2ACCDI0003Data data;
 
-    public AT2ACCDI0003Test() {
-
+    public AT2ACCDI0003Test(String enviroment) {
+        setData(new AT2ACCDI0003Data(enviroment));
+        setLocators(new AT2ACCDI0003Locators(enviroment));
     }
 
     public AT2ACCDI0003Locators getLocators() {
@@ -197,38 +198,41 @@ public class AT2ACCDI0003Test {
 
     private boolean getBookingProcedure(TestDriver driver) {
 
-        driver.getReport().addHeader("GETTING BOOKING REFERENCE",2,true);
+        driver.getReport().addHeader("GETTING BOOKING REFERENCE", 2, true);
         if (!Functions.checkClick(driver,
                 new String[]{"boosa1002_b_searchbook", getElements("boosa1002_b_searchbook")}, //element to click
                 new String[]{"boosa0001_b_search", getElements("boosa0001_b_search")}, //element expected to appear
                 " on AT2BOOSA1002")) {
             return false;
         }
-        int i =0;
+        int i = 0;
         do {
-        Functions.insertInput(driver, new String[]{"boosa0001_i_creationdate",getElements("boosa0001_i_creationdate")},
-                "booking_creation_date", DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,-i,0)," on BOOSA0001");
+            Functions.insertInput(driver, new String[]{"boosa0001_i_creationdate", getElements("boosa0001_i_creationdate")},
+                    "booking_creation_date", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, -i, 0), " on BOOSA0001");
 
-        Functions.simpleClick(driver,
-                new String[]{"boosa0001_b_search", getElements("boosa0001_b_search")}, //element to click
-                " on BOOSA0001");
-        i++;
+            Functions.simpleClick(driver,
+                    new String[]{"boosa0001_b_search", getElements("boosa0001_b_search")}, //element to click
+                    " on BOOSA0001");
+            i++;
             System.out.println("");
             System.out.println(driver.getDriver().findElements(By.xpath("boosa0001_e_result")).size());
             System.out.println("");
-        }while(driver.getDriver().findElements(By.xpath("boosa0001_e_result")).size()<1 && i <10);
+        } while (driver.getDriver().findElements(By.xpath("boosa0001_e_result")).size() < 1 && i < 10);
 
-        if(!Functions.getText(driver,new String[]{"boosa0001_e_result_e_bookreference", getElements("boosa0001_e_result_e_bookreference")}, // element path
+        if (!Functions.getText(driver, new String[]{"boosa0001_e_result_e_bookreference", getElements("boosa0001_e_result_e_bookreference")}, // element path
                 "booking_reference", // key for data value (the name)
-                " on BOOSA0001")){return false;}
+                " on BOOSA0001")) {
+            return false;
+        }
 
-        if(!Functions.checkClickByAbsence(driver,
+        if (!Functions.checkClickByAbsence(driver,
                 new String[]{"boosa0001_b_closetab", getElements("boosa0001_b_closetab")}, //element to click
                 new String[]{"boosa0001_b_search", getElements("boosa0001_b_search")}, //element expected to appear
-                " on BOOSA0001")){return false;}
+                " on BOOSA0001")) {
+            return false;
+        }
 
         return true;
     }
-
 
 }
