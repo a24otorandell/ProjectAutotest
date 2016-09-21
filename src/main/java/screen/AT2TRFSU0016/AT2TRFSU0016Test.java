@@ -185,13 +185,13 @@ public class AT2TRFSU0016Test {
                 "qbe_bb", data.getData().get("adi2_tuu"), " on QBE ")) {
             return false;
         }
-
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_description", getElements("qbe_description")}, //search button
                 new String[]{"result", getElements("result")}, //result element
                 " on QBE")) {
             return false;
         }
+
 
         return true;
     }
@@ -384,7 +384,7 @@ public class AT2TRFSU0016Test {
         }
         if (!Functions.insertInput(driver,
                 new String[]{"s_i_unit", getElements("s_i_unit")},
-                "adi2_tii", data.getData().get("adi_mon"), " SEARCH IN ADITIONAL")) {
+                "adi2_tii", data.getData().get("adi_mon"), " on SEARCH IN ADITIONAL")) {
             return false;
         }
         if (!Functions.createLovByValue(driver,

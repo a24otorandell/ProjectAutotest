@@ -10,18 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Test.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2CCSU0025/AT2CCSU0025Data.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2CCSU0025/AT2CCSU0025Locators.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2CCSU0025/AT2CCSU0025Manager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2CCSU0025/AT2CCSU0025Sis.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2CCSU0025/AT2CCSU0025Test.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Data.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Locators.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Manager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Sis.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -43,92 +38,87 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="AT2ACCSU0026Locators.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Locators.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="102">
+                    <caret line="74" column="54" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="54" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="ProjectAutotest" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Functions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="1498" column="43" selection-start-line="1498" selection-start-column="8" selection-end-line="1498" selection-end-column="43" />
-              <folding>
-                <element signature="method#createLovByValue#0;class#Functions#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AT2ACCSU0025Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Test.java">
+      <file leaf-file-name="AT2ACCSU0026Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="334">
-              <caret line="285" column="5" selection-start-line="56" selection-start-column="3" selection-end-line="285" selection-end-column="5" />
+              <caret line="434" column="5" selection-start-line="55" selection-start-column="2" selection-end-line="434" selection-end-column="5" />
               <folding>
-                <element signature="docComment;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#AT2ACCSU0025Test#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#start#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#getElements#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#getData#1;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#testCSED#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#Delete_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#Other_actions_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#QBE_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#Edit_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#Search_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-                <element signature="method#Add_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
+                <element signature="docComment;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#AT2ACCSU0026Test#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Agreements_users#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Controller_user#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Delete_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Other_actions_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#QBE_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Edit_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Search_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Add_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Kam_user#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Delete_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Other_actions_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#QBE_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Edit_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Search_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+                <element signature="method#Add_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2ACCSU0025Sis.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java">
+      <file leaf-file-name="AT2ACCSU0026Sis.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Sis.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
-              <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+              <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
               <folding>
-                <element signature="method#AT2ACCSU0025Sis#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#start#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#getElements#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#getData#1;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#testCSED#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#Delete_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#Other_actions_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#QBE_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#Edit_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#Search_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-                <element signature="method#Add_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AT2TRFSU0009Sis.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0009/AT2TRFSU0009Sis.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="206" column="72" selection-start-line="206" selection-start-column="8" selection-end-line="206" selection-end-column="72" />
-              <folding>
-                <element signature="docComment;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#AT2TRFSU0009Sis#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#start#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#getElements#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#getData#1;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#testCSED#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#transfer_day#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#Delete_transfer_day#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#Other_actions_transfer_day#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#Qbe_transfer_day#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#Search_transfer_day#0;class#AT2TRFSU0009Sis#0" expanded="false" />
-                <element signature="method#Add_transfer_day#0;class#AT2TRFSU0009Sis#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Agreements_users#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Controller_user#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Delete_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Other_actions_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#QBE_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Edit_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Search_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Add_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Kam_user#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Delete_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Other_actions_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#QBE_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Edit_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Search_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+                <element signature="method#Add_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -173,12 +163,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Sis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Locators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Sis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0028/AT2MDMOR0028Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0028/AT2MDMOR0028Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Sis.java" />
@@ -224,6 +208,12 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Locators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Data.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Manager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Sis.java" />
       </list>
     </option>
   </component>
@@ -300,7 +290,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -403,7 +395,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AT2ACCSU0025" />
+              <option name="myItemId" value="AT2ACCSU0026" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,8 +423,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -441,7 +431,7 @@
     <property name="project.structure.last.edited" value="Problems" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21724138" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/Autotest" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -458,857 +448,6 @@
       <recent name="C:\ProjectAutotest\src\main\java\screen\AT2ACTSU0037" />
       <recent name="C:\ProjectAutotest-main\ProjectAutotest\src\main\java\screen\AT2MDMSP0037" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0028/AT2MDMOR0028Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0028/AT2MDMOR0028Test.java</PATH>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Data.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Manager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0010/AT2TRFSU0010Data.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0010/AT2TRFSU0010Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0010/AT2TRFSU0010Manager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0010/AT2TRFSU0010Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0010/AT2TRFSU0010Test.java</PATH>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-          <FILE-GROUP>
-            <option name="myUpdateName" />
-            <option name="myStatusName" />
-            <option name="mySupportsDeletion" value="false" />
-            <option name="myCanBeAbsent" value="false" />
-            <option name="myId" />
-          </FILE-GROUP>
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" />
-          <option name="myStatusName" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -1335,7 +474,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="core.TestDriver.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-e SIS -t  AT2ACCSU0025 -u u_acarrillo -p 9aO6gg99" />
+      <option name="PROGRAM_PARAMETERS" value="-e SIS -t  AT2ACCSU0026 -u u_acarrillo -p Septiembre2016" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -1650,13 +789,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
-    </task>
-    <task id="LOCAL-00007" summary="jhgsxz">
-      <created>1463484500571</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1463484500571</updated>
     </task>
     <task id="LOCAL-00008" summary="jhgsxz">
       <created>1463484764408</created>
@@ -1994,7 +1126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473765962897</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Actualización código AT2ACCSU0025">
+      <created>1473776395388</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1473776395388</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2023,12 +1162,11 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.251004" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32132965" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17068273" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21966794" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25573066" sideWeight="0.094387755" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21966794" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2037,6 +1175,7 @@
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1692" y="172" width="1256" height="686" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889196" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32056195" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2064,7 +1203,7 @@
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.251004" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32132965" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32056195" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25573066" sideWeight="0.094387755" order="1" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -2125,7 +1264,8 @@
     <MESSAGE value="Actualización código AT2TRFSU0009" />
     <MESSAGE value="Actualización código AT2TRFSU0002" />
     <MESSAGE value="Actualización código AT2TRFSU0008" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código AT2TRFSU0008" />
+    <MESSAGE value="Actualización código AT2ACCSU0025" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código AT2ACCSU0025" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2214,7 +1354,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="853" />
+      <option name="time" value="861" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2223,96 +1363,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0024/AT2ACCOP0024Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0024/AT2ACCOP0024Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MSCSU0007/AT2MSCSU0007Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="38" column="22" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/HTMLReport/HTMLFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/HTMLReport/AutoReport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MSCSU0007/AT2MSCSU0007Locators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#123#160#0" expanded="false" />
-            <element signature="e#409#410#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/AbstractMapEntry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/ImmutableEntry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/CollectPreconditions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/ImmutableMapEntry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/ImmutableMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/By.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1.jar!/org/openqa/selenium/remote/RemoteWebDriver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2324,7 +1374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="101" column="19" selection-start-line="101" selection-start-column="19" selection-end-line="101" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2332,7 +1381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="316" column="0" selection-start-line="316" selection-start-column="0" selection-end-line="316" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2340,7 +1388,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2348,7 +1395,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="33" column="5" selection-start-line="12" selection-start-column="2" selection-end-line="33" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2356,25 +1402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="62" column="5" selection-start-line="12" selection-start-column="2" selection-end-line="62" selection-end-column="5" />
-          <folding>
-            <element signature="method#start#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Transfer_service_type#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Dele_type_description#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Other_actions_type_description#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Edit_service_type_description#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Search_service_type_description#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Add_service_type_description#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Delete_type#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Other_actions_type#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#QBE_service_type#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Edit_service_type#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Search_service_type#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-            <element signature="method#Add_service_type#0;class#AT2TRFSU0010Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2382,9 +1409,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2392,27 +1416,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="31" column="92" selection-start-line="23" selection-start-column="6" selection-end-line="31" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0009.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0009.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="0" selection-start-line="9" selection-start-column="1" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2420,7 +1431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2428,7 +1438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="29" column="82" selection-start-line="23" selection-start-column="8" selection-end-line="29" selection-end-column="82" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2436,7 +1445,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-748">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2444,7 +1452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="51" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2452,7 +1459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="152" column="37" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2460,7 +1466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="34" column="113" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="113" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2468,10 +1473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5848">
           <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
-          <folding>
-            <element signature="method#deleteUrl#0;class#AT2MSCSU0007Sis#0" expanded="false" />
-            <element signature="method#deleteWeb#0;class#AT2MSCSU0007Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2487,18 +1488,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-          <folding>
-            <element signature="method#start#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#Delete_vehicles#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#Other_actions_vehicles#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#Qbe_vehicles#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#Edit_vehicles#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#Search_vehicles#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-            <element signature="method#Add_vehicles#0;class#AT2TRFSU0007Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2506,21 +1495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-614">
           <caret line="101" column="55" selection-start-line="101" selection-start-column="55" selection-end-line="101" selection-end-column="55" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#AT2TRFSU0007Test#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#Vehicles#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#Delete_vehicles#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#Other_actions_vehicles#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#Edit_vehicles#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#Search_vehicles#0;class#AT2TRFSU0007Test#0" expanded="false" />
-            <element signature="method#Add_vehicles#0;class#AT2TRFSU0007Test#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2528,7 +1502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
           <caret line="90" column="42" selection-start-line="90" selection-start-column="22" selection-end-line="90" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2536,22 +1509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="395" column="0" selection-start-line="395" selection-start-column="0" selection-end-line="395" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#AT2TRFSU0002Test#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#Operational_vehicles#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#Delete_vehicles#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#Other_actions_vehicles#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#Qbe_vehicles#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#Edit_vehicles#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#Search_vehicles#0;class#AT2TRFSU0002Test#0" expanded="false" />
-            <element signature="method#Add_vehicles#0;class#AT2TRFSU0002Test#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2559,16 +1516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
           <caret line="188" column="0" selection-start-line="188" selection-start-column="0" selection-end-line="188" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0002Sis#0" expanded="false" />
-            <element signature="method#AT2TRFSU0002Sis#0;class#AT2TRFSU0002Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0002Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0002Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0002Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0002Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0002Sis#0" expanded="false" />
-            <element signature="method#Operational_vehicles#0;class#AT2TRFSU0002Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2576,9 +1523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="655">
           <caret line="75" column="37" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2586,17 +1530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="326" column="5" selection-start-line="326" selection-start-column="5" selection-end-line="326" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#AT2TRFSU0008Sis#0;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#Routes_by_default#0;class#AT2TRFSU0008Sis#0" expanded="false" />
-            <element signature="method#Delete_routes#0;class#AT2TRFSU0008Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2604,32 +1537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="326" column="5" selection-start-line="56" selection-start-column="3" selection-end-line="326" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#AT2TRFSU0008Test#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Routes_by_default#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Delete_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Other_actions#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Qbe_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Edition_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Search_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Add_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="98" selection-start-line="17" selection-start-column="98" selection-end-line="17" selection-end-column="98" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2637,13 +1544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="11" column="51" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="51" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0009Manager#0" expanded="false" />
-            <element signature="method#AT2TRFSU0009Manager#0;class#AT2TRFSU0009Manager#0" expanded="false" />
-            <element signature="method#getData#0;class#AT2TRFSU0009Manager#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0009Manager#0" expanded="false" />
-            <element signature="method#csedIteration#0;class#AT2TRFSU0009Manager#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2651,7 +1551,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2678,35 +1577,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#907#908#0" expanded="false" />
-            <element signature="e#939#940#0" expanded="false" />
-            <element signature="e#991#992#0" expanded="false" />
-            <element signature="e#1033#1034#0" expanded="false" />
-            <element signature="e#1074#1075#0" expanded="false" />
-            <element signature="e#1101#1102#0" expanded="false" />
-            <element signature="e#1151#1152#0" expanded="false" />
-            <element signature="e#1183#1184#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
-            <element signature="e#1252#1253#0" expanded="false" />
-            <element signature="e#1303#1304#0" expanded="false" />
-            <element signature="e#1333#1334#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0009/AT2TRFSU0009Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="27" column="89" selection-start-line="27" selection-start-column="89" selection-end-line="27" selection-end-column="89" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2714,10 +1588,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-          <folding>
-            <element signature="e#496#497#0" expanded="false" />
-            <element signature="e#523#524#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2725,35 +1595,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="444" column="118" selection-start-line="444" selection-start-column="73" selection-end-line="444" selection-end-column="118" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#AT2TRFSU0010Test#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Transfer_service_type#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Dele_type_description#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Other_actions_type_description#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Edit_service_type_description#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Search_service_type_description#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Add_service_type_description#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Delete_type#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#QBE_service_type#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Edit_service_type#0;class#AT2TRFSU0010Test#0" expanded="false" />
-            <element signature="method#Add_service_type#0;class#AT2TRFSU0010Test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="1498" column="43" selection-start-line="1498" selection-start-column="8" selection-end-line="1498" selection-end-column="43" />
-          <folding>
-            <element signature="method#createLovByValue#0;class#Functions#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2779,57 +1620,226 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU26/AT2ACCSU26Data.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="1498" column="43" selection-start-line="1498" selection-start-column="8" selection-end-line="1498" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="34" column="5" selection-start-line="12" selection-start-column="0" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Locators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        <state relative-caret-position="221">
+          <caret line="20" column="31" selection-start-line="10" selection-start-column="3" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#AT2ACCSU0026Test#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Agreements_users#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Controller_user#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Delete_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Other_actions_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#QBE_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Edit_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Search_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Add_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Kam_user#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Delete_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Other_actions_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#QBE_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Edit_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Search_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Add_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="97" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="3" selection-start-line="12" selection-start-column="3" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Locators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0011/AT2TFRSU0011Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="109" selection-end-column="9" />
+          <folding>
+            <element signature="docComment;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#AT2TRFSU0016Test#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#Aditional_suplements#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#Other_actions_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#QBE_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#Search2_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#Edit_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#Search_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
+            <element signature="method#Add_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="13" column="51" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="51" />
+          <folding>
+            <element signature="docComment;class#AT2TRFSU0016Manager#0" expanded="false" />
+            <element signature="method#AT2TRFSU0016Manager#0;class#AT2TRFSU0016Manager#0" expanded="false" />
+            <element signature="method#getData#0;class#AT2TRFSU0016Manager#0" expanded="false" />
+            <element signature="method#start#0;class#AT2TRFSU0016Manager#0" expanded="false" />
+            <element signature="method#csedIteration#0;class#AT2TRFSU0016Manager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="docComment;class#AT2ACCSU0026Manager#0" expanded="false" />
+            <element signature="method#AT2ACCSU0026Manager#0;class#AT2ACCSU0026Manager#0" expanded="false" />
+            <element signature="e#1302#1303#0" expanded="true" />
+            <element signature="e#1332#1333#0" expanded="true" />
+            <element signature="method#getData#0;class#AT2ACCSU0026Manager#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0026Manager#0" expanded="false" />
+            <element signature="method#csedIteration#0;class#AT2ACCSU0026Manager#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Test.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="136" column="9" selection-start-line="132" selection-start-column="7" selection-end-line="136" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Locators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="74" column="54" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Test.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="334">
-          <caret line="285" column="5" selection-start-line="56" selection-start-column="3" selection-end-line="285" selection-end-column="5" />
+          <caret line="434" column="5" selection-start-line="55" selection-start-column="2" selection-end-line="434" selection-end-column="5" />
           <folding>
-            <element signature="docComment;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#AT2ACCSU0025Test#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#Delete_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#Other_actions_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#QBE_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#Edit_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#Search_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
-            <element signature="method#Add_offer_types#0;class#AT2ACCSU0025Test#0" expanded="false" />
+            <element signature="docComment;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#AT2ACCSU0026Test#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Agreements_users#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Controller_user#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Delete_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Other_actions_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#QBE_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Edit_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Search_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Add_controller#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Kam_user#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Delete_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Other_actions_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#QBE_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Edit_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Search_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
+            <element signature="method#Add_kam#0;class#AT2ACCSU0026Test#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Sis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
+          <caret line="262" column="0" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
           <folding>
-            <element signature="method#AT2ACCSU0025Sis#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#Delete_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#Other_actions_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#QBE_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#Edit_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#Search_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#Add_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Agreements_users#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Controller_user#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Delete_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Other_actions_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#QBE_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Edit_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Search_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Add_controller#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Kam_user#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Delete_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Other_actions_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#QBE_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Edit_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Search_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
+            <element signature="method#Add_kam#0;class#AT2ACCSU0026Sis#0" expanded="false" />
           </folding>
         </state>
       </provider>
