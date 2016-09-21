@@ -86,7 +86,6 @@ public class AT2TRFSU0013Sis {
         }
         return true;
     }
-
     private boolean Delete_Grouping_vehicles(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN GROUPING VEHICLES", 3, false);
 
@@ -101,7 +100,6 @@ public class AT2TRFSU0013Sis {
 
         return true;
     }
-
     private boolean Other_actios_Grouping_vehicles(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN GROUPING VEHICLES", 3, false);
 
@@ -123,8 +121,6 @@ public class AT2TRFSU0013Sis {
 
         return true;
     }
-
-
     private boolean Edit_Grouping_vehicles(TestDriver driver) {
         driver.getReport().addHeader("EDIT IN GROUPING VEHICLES", 3, false);
         Functions.break_time(driver, 6, 500);
@@ -161,7 +157,6 @@ public class AT2TRFSU0013Sis {
 
         return true;
     }
-
     private boolean QBE_Grouping_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader("QBE IN GROUPING VEHICLES", 3, false);
@@ -204,7 +199,6 @@ public class AT2TRFSU0013Sis {
 
         return true;
     }
-
     private boolean Search_Grouping_vehicles(TestDriver driver) {
         driver.getReport().addHeader("SEARCH IN GROUPING VEHICLES", 3, false);
 
@@ -229,7 +223,6 @@ public class AT2TRFSU0013Sis {
 
         return true;
     }
-
     private boolean Add_Grouping_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader("ADD IN GROUPING VEHICLES", 3, false);
