@@ -93,7 +93,6 @@ public class AT2ACCOP0011Sis {
         }
         return true;
     }
-
     private boolean Delete_mapping(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN MAPPING DESC ERRORS ", 3, false);
 
@@ -108,7 +107,6 @@ public class AT2ACCOP0011Sis {
 
         return true;
     }
-
     private boolean Other_actions_mapping(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN MAPPING DESC ERRORS", 3, false);
 
@@ -122,7 +120,6 @@ public class AT2ACCOP0011Sis {
 
         return true;
     }
-
     private boolean QBE_mapping(TestDriver driver) {
 
         driver.getReport().addHeader("QBE IN MAPPING DESC ERRORS", 3, false);
@@ -171,7 +168,6 @@ public class AT2ACCOP0011Sis {
 
         return true;
     }
-
     private boolean Edit_mapping(TestDriver driver) {
 
         driver.getReport().addHeader(" EDIT IN MAPPING DESC ERRORS", 3, false);
@@ -215,7 +211,6 @@ public class AT2ACCOP0011Sis {
         }
         return true;
     }
-
     private boolean Search_mapping(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN MAPPING DESC ERRORS", 3, false);
@@ -244,7 +239,6 @@ public class AT2ACCOP0011Sis {
 
         return true;
     }
-
     private boolean Add_mapping(TestDriver driver) {
         driver.getReport().addHeader(" ADD IN MAPPING DESC ERRORS", 3, false);
 

@@ -10,27 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Data.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Data.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Locators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Manager.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0023/AT2ACCSU0023Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Data.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Data.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Manager.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Manager.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0026/AT2ACCSU0026Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0011/AT2TFRSU0011Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0011/AT2TFRSU0011Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0011/AT2TFRSU0011Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0011/AT2TFRSU0011Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Sis.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -83,8 +65,8 @@
       <file leaf-file-name="AT2ACCOP0011Sis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="425">
+              <caret line="240" column="5" selection-start-line="240" selection-start-column="5" selection-end-line="240" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2ACCOP0011Sis#0" expanded="false" />
                 <element signature="method#AT2ACCOP0011Sis#0;class#AT2ACCOP0011Sis#0" expanded="false" />
@@ -125,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="262" column="5" selection-start-line="49" selection-start-column="3" selection-end-line="262" selection-end-column="5" />
+              <caret line="289" column="5" selection-start-line="57" selection-start-column="3" selection-end-line="289" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2ACCOP0011Test#0" expanded="false" />
                 <element signature="method#AT2ACCOP0011Test#0;class#AT2ACCOP0011Test#0" expanded="false" />
@@ -428,36 +410,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AT2TRFSU0011" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AT2ACCOP0011" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -854,13 +806,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00014" summary="jhgsxz">
-      <created>1463485450117</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1463485450117</updated>
-    </task>
     <task id="LOCAL-00015" summary="jhgsxz">
       <created>1463485831351</created>
       <option name="number" value="00015" />
@@ -1197,7 +1142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474554692055</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Actualización código AT2ACCOP0011, AT2ACCSU0025">
+      <created>1474619520502</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1474619520502</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1304,7 +1256,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="AT2BOOSA1002 WIP" />
     <MESSAGE value="Created and started the autotest of BOOSA1003 \n&#10;Changed the recursiveXpath of the result of search component more precise now \n&#10;" />
     <MESSAGE value="Añadida componente AT2ACTSU0037&#10;     -Separacion de codigo para test y para sis&#10;Corrección del Package Jira&#10;Correción de la verificacion de AutotestInfo.txt&#10;Correccions en el Package TestDriver&#10;Añadidas nuevos procedimientos en el package CommonActions&#10;Añadidas nuevas llamadas en el package FileGestor&#10;Actualizar librerías de selenium a 2.53.1" />
     <MESSAGE value="eliminado texto comentado en JiraUpdate" />
@@ -1329,7 +1280,8 @@
     <MESSAGE value="Actualización código AT2TRFSU0013" />
     <MESSAGE value="Actualización código AT2TRFSU0016" />
     <MESSAGE value="Actualización código AT2TRFSU0011" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código AT2TRFSU0011" />
+    <MESSAGE value="Actualización código AT2ACCOP0011, AT2ACCSU0025" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código AT2ACCOP0011, AT2ACCSU0025" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1428,13 +1380,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Sis.java</url>
-          <line>50</line>
+          <line>58</line>
           <properties />
           <option name="timeStamp" value="885" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Sis.java</url>
-          <line>60</line>
+          <line>70</line>
           <properties />
           <option name="timeStamp" value="886" />
         </line-breakpoint>
@@ -2098,7 +2050,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="262" column="5" selection-start-line="49" selection-start-column="3" selection-end-line="262" selection-end-column="5" />
+          <caret line="289" column="5" selection-start-line="57" selection-start-column="3" selection-end-line="289" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2ACCOP0011Test#0" expanded="false" />
             <element signature="method#AT2ACCOP0011Test#0;class#AT2ACCOP0011Test#0" expanded="false" />
@@ -2120,8 +2072,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0011/AT2ACCOP0011Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="425">
+          <caret line="240" column="5" selection-start-line="240" selection-start-column="5" selection-end-line="240" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2ACCOP0011Sis#0" expanded="false" />
             <element signature="method#AT2ACCOP0011Sis#0;class#AT2ACCOP0011Sis#0" expanded="false" />
