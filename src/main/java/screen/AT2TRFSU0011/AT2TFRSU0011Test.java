@@ -218,7 +218,6 @@ public class AT2TFRSU0011Test {
 
         return true;
     }
-
     private boolean Oher_Actions_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("AUDIT DATA RECORD", 3, false);
         if (!Functions.auditData(driver,
@@ -238,7 +237,6 @@ public class AT2TFRSU0011Test {
 
         return true;
     }
-
     private boolean QBE_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         if (!Functions.clickQbE(driver,
@@ -268,7 +266,6 @@ public class AT2TFRSU0011Test {
         } // where
         return true;
     }
-
     private boolean Edit_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         if (!Functions.checkClick(driver,
@@ -302,7 +299,6 @@ public class AT2TFRSU0011Test {
                 " on EDITION");
         return true;
     }
-
     private boolean Search_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         if (!Functions.selectText(driver,
@@ -328,7 +324,6 @@ public class AT2TFRSU0011Test {
         } // where
         return true;
     }
-
     private boolean Creation_qualityRules(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         Functions.break_time(driver, 10, 500);

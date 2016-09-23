@@ -19,40 +19,32 @@ public class AT2ACCSU0026Test {
     public AT2ACCSU0026Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0026Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0026Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0026Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
     }
-
     protected boolean testCSED(TestDriver driver) {
 
 
@@ -77,6 +69,7 @@ public class AT2ACCSU0026Test {
         return true;
     }
 
+    //CONTROLLER
 
     private boolean Controller_user(TestDriver driver) {
 
@@ -118,7 +111,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean Other_actions_controller(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN CONTROLER", 3, false);
@@ -133,7 +125,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean QBE_controller(TestDriver driver) {
         driver.getReport().addHeader("QBE IN CONTROLER", 3, false);
         if (!Functions.simpleClick(driver,
@@ -168,7 +159,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean Edit_controller(TestDriver driver) {
 
         driver.getReport().addHeader("EDIT IN CONTROLER", 3, false);
@@ -201,7 +191,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean Search_controller(TestDriver driver) {
 
         driver.getReport().addHeader(" BASIC SEARCH IN CONTROLER", 3, false);
@@ -225,8 +214,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
-
     private boolean Add_controller(TestDriver driver) {
         driver.getReport().addHeader("ADD IN CONTROLER", 3, false);
 
@@ -259,6 +246,7 @@ public class AT2ACCSU0026Test {
         return true;
     }
 
+    //KAM
 
     private boolean Kam_user(TestDriver driver) {
 
@@ -299,8 +287,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
-
     private boolean Other_actions_kam(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN KAM", 3, false);
@@ -315,7 +301,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean QBE_kam(TestDriver driver) {
 
         driver.getReport().addHeader("QBE IN KAM", 3, false);
@@ -351,7 +336,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean Edit_kam(TestDriver driver) {
 
         driver.getReport().addHeader("EDIT IN KAM", 3, false);
@@ -384,7 +368,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean Search_kam(TestDriver driver) {
 
         driver.getReport().addHeader(" BASIC SEARCH IN KAM", 3, false);
@@ -408,7 +391,6 @@ public class AT2ACCSU0026Test {
 
         return true;
     }
-
     private boolean Add_kam(TestDriver driver) {
 
         driver.getReport().addHeader("ADD IN KAM", 3, false);
