@@ -97,6 +97,7 @@ public class AT2ACCOP0020Test {
         }
         return true;
     }
+
     private boolean Delete_payment(TestDriver driver) {
 
         driver.getReport().addHeader("DELETE IN PAYMENT METHOD MANAGEMENT ", 3, false);
@@ -357,17 +358,17 @@ public class AT2ACCOP0020Test {
             return false;
         }
 
-        if (!Other_actions_maping(driver)) {
+        if (!Other_actions_mapping(driver)) {
             return false;
         }
 
-        if (!Delete_maping(driver)) {
+        if (!Delete_mapping(driver)) {
             return false;
         }
         return true;
     }
 
-    private boolean Delete_maping(TestDriver driver) {
+    private boolean Delete_mapping(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN PAYMENT MAPPING MANAGEMENT ", 3, false);
 
 
@@ -380,7 +381,8 @@ public class AT2ACCOP0020Test {
         }
         return true;
     }
-    private boolean Other_actions_maping(TestDriver driver) {
+
+    private boolean Other_actions_mapping(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN PAYMENT MAPPING MANAGEMENT ", 3, false);
 
         if (!Functions.detachTable(driver,
@@ -414,11 +416,11 @@ public class AT2ACCOP0020Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"payment_method_mapping_qbe_i_ecp_payment_method_code", getElements("payment_method_mapping_qbe_i_ecp_payment_method_code")},
-                "qbe_payment_method", data.getData().get("payment_method"), " on QBE")) {
+                "qbe_payment_method_code", data.getData().get("payment_method"), " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"payment_method_mapping_qbe_i_ecp_payment_method_name", getElements("payment_method_mapping_qbe_i_ecp_payment_method_name")},
-                "", "AliPay", " on QBE")) {
+                "qbe_payment_method_name", "AliPay", " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"payment_method_mapping_qbe_i_psp_payment_method_code", getElements("payment_method_mapping_qbe_i_psp_payment_method_code")},
