@@ -146,26 +146,26 @@ public class AT2ACCOP0024Sis {
      *
      * @param driver Object that manages the core of the test
      * @return boolean to control the process flow
-     * @see Functions#sleep(int)
+     * @see Functions#break_time(TestDriver, int, long)
      * @see Functions#simpleClick(TestDriver, String[], String)
      * @see Functions#getText(TestDriver, String[], String, String)
      * @see core.HTMLReport.AutoReport#addContent(String)
      */
     protected boolean gettingData(TestDriver driver) {
         driver.getReport().addContent("Getting data to test:", "h4", "");
-        Functions.sleep(4500);
+        Functions.break_time(driver, 4, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_search", getElements("search_b_search")},
                 " on Get data")) {
             return false;
         }
-        Functions.sleep(4500);
+        Functions.break_time(driver, 4, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_qbe_financial_status", getElements("record_interaction_b_qbe_financial_status")},
                 " on Get data")) {
             return false;
         }
-        Functions.sleep(4500);
+        Functions.break_time(driver, 4, 500);
         //ToDo optimizsce this
         String[] fields = {"", "report", "file", "type", "financial_date", "financial_status", "merchant", "settelment", "currency", "modification_user", "modification_date"};
         for (int i = 1; i < 4; i++) {
@@ -187,12 +187,12 @@ public class AT2ACCOP0024Sis {
      * @return boolean to control the process flow
      * @see Functions#checkClick(TestDriver, String[], String[], String)
      * @see Functions#simpleClick(TestDriver, String[], String)
-     * @see Functions#sleep(int)
+     * @see Functions#break_time(TestDriver, int, long)
      * @see Functions#screenshot(TestDriver, boolean)
      * @see Robot#keyPress(int)
      */
     protected boolean exportAction(TestDriver driver) {
-        Functions.sleep(3500);
+        Functions.break_time(driver, 3, 500);
         driver.getReport().addContent("Action Export:", "h4", "");
         if (!Functions.checkClick(driver,
                 new String[]{"record_interaction_b_actions", getElements("record_interaction_b_actions")},
@@ -200,13 +200,13 @@ public class AT2ACCOP0024Sis {
                 " on export")) {
             return false;
         }
-        Functions.sleep(1500);
+        Functions.break_time(driver, 1, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_export", getElements("record_interaction_b_export")},
                 " on export")) {
             return false;
         }
-        Functions.sleep(3000);
+        Functions.break_time(driver, 3, 500);
         if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed() || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
             if (!getData("info_text_export").equals("The report will be process in the next execution")) {
                 ErrorManager.process(driver, "Cannot complete the ~Export~ Action");
@@ -240,13 +240,13 @@ public class AT2ACCOP0024Sis {
      * @param driver Object that manages the core of the test
      * @return boolean to control the process flow
      * @see Functions#simpleClick(TestDriver, String[], String)
-     * @see Functions#sleep(int)
+     * @see Functions#break_time(TestDriver, int, long)
      * @see Functions#checkClick(TestDriver, String[], String[], String)
      * @see Functions#fileUploader(TestDriver, String[], String[], String)
      * @see #modifyActionFileCreator(TestDriver)
      */
     protected boolean modifyAction(TestDriver driver) {
-        Functions.sleep(2500);
+        Functions.break_time(driver, 2, 500);
         driver.getReport().addContent("Action Modify:", "h4", "");
         modifyActionFileCreator(driver);
         if (!Functions.checkClick(driver,
@@ -255,7 +255,7 @@ public class AT2ACCOP0024Sis {
                 " on modify")) {
             return false;
         }
-        Functions.sleep(3500);
+        Functions.break_time(driver, 3, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_modify", getElements("record_interaction_b_modify")},
                 " on modify")) {
@@ -267,14 +267,14 @@ public class AT2ACCOP0024Sis {
                 " on modify")) {
             return false;
         }
-        Functions.sleep(2500);
+        Functions.break_time(driver, 2, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_modify_b_save", getElements("record_interaction_b_modify_b_save")},
                 " on modify")) {
             return false;
         }
         try {
-            Functions.sleep(4500);
+            Functions.break_time(driver, 4, 500);
             if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed() || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
                 ErrorManager.process(driver, "Cannot complete the ~Modify~ Action");
                 Functions.simpleClick(driver,
@@ -390,19 +390,19 @@ public class AT2ACCOP0024Sis {
      */
     protected boolean newAction(TestDriver driver) {
         driver.getReport().addContent("Action New:", "h4", "");
-        Functions.sleep(1000);
+        Functions.break_time(driver, 1, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_actions", getElements("record_interaction_b_actions")},
                 " on new")) {
             return false;
         }
-        Functions.sleep(1000);
+        Functions.break_time(driver, 1, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_new", getElements("record_interaction_b_new")},
                 " on new")) {
             return false;
         }
-        Functions.sleep(2000);
+        Functions.break_time(driver, 2, 500);
         if (!Functions.selectText(driver,
                 new String[]{"record_interaction_b_new_i_type", getElements("record_interaction_b_new_i_type")},
                 "IPS",
@@ -417,14 +417,14 @@ public class AT2ACCOP0024Sis {
                 " on new")) {
             return false;
         }
-        Functions.sleep(2500);
+        Functions.break_time(driver, 2, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_new_i_add", getElements("record_interaction_b_new_i_add")},
                 " on new")) {
             return false;
         }
         try {
-            Functions.sleep(2500);
+            Functions.break_time(driver, 30, 500);
             if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed() || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
                 if (!Functions.getText(driver,
                         new String[]{"alert_e_info", getElements("alert_e_info")},
@@ -479,7 +479,7 @@ public class AT2ACCOP0024Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Functions.sleep(4500);
+            Functions.break_time(driver, 4, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"search_i_file", getElements("search_i_file")},
                     "file_2",
@@ -501,7 +501,7 @@ public class AT2ACCOP0024Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Functions.sleep(6500);
+            Functions.break_time(driver, 6, 500);
             if (!Functions.selectText(driver,
                     new String[]{"search_i_type", getElements("search_i_type")},
                     getData("type_2"),
@@ -523,7 +523,7 @@ public class AT2ACCOP0024Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Functions.sleep(4500);
+            Functions.break_time(driver, 4, 500);
             if (!getData("currency_2").equals(" ")) {
                 if (!Functions.createLovByValue(driver,
                         new String[]{"search_lov_currency", getElements("search_lov_currency")},
@@ -554,7 +554,7 @@ public class AT2ACCOP0024Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Functions.sleep(4500);
+            Functions.break_time(driver, 4, 500);
             if (!Functions.simpleClick(driver,
                     new String[]{"search_e_result", getElements("search_e_result")},
                     " on SEARCH")) {
@@ -660,7 +660,7 @@ public class AT2ACCOP0024Sis {
                 " on QBE")) {
             return false;
         }
-        Functions.sleep(4500);
+        Functions.break_time(driver, 4, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"search_e_result", getElements("search_e_result")},
                 " on QBE")) {

@@ -381,7 +381,6 @@ public class AT2ACCOP0020Test {
         }
         return true;
     }
-
     private boolean Other_actions_mapping(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN PAYMENT MAPPING MANAGEMENT ", 3, false);
 
