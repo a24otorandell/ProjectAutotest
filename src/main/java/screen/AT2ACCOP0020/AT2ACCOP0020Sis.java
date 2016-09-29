@@ -95,7 +95,6 @@ public class AT2ACCOP0020Sis {
         }
         return true;
     }
-
     private boolean Delete_payment(TestDriver driver) {
 
         driver.getReport().addHeader("DELETE IN PAYMENT METHOD MANAGEMENT ", 3, false);
@@ -112,7 +111,6 @@ public class AT2ACCOP0020Sis {
 
         return true;
     }
-
     private boolean Other_actions_payment(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN PAYMENT METHOD MANAGEMENT ", 3, false);
@@ -127,7 +125,6 @@ public class AT2ACCOP0020Sis {
 
         return true;
     }
-
     private boolean QBE_payment(TestDriver driver) {
 
         driver.getReport().addHeader("QBE IN PAYMENT METHOD MANAGEMENT ", 3, false);
@@ -173,16 +170,15 @@ public class AT2ACCOP0020Sis {
                 "No", "qbe_enabled", " on QBE")) {
             return false;
         }
+
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"payment_method_qbe_i_type", getElements("payment_method_qbe_i_type")}, //search button
                 new String[]{"payment_method_se_e_result", getElements("payment_method_se_e_result")}, //result element
                 " on QBE")) {
             return false;
         }
-
         return true;
     }
-
     private boolean Edit_payment(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN PAYMENT METHOD MANAGEMENT", 3, false);
 
@@ -232,7 +228,6 @@ public class AT2ACCOP0020Sis {
 
         return true;
     }
-
     private boolean Search_payment(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN PAYMENT METHOD MANAGEMENT", 3, false);
@@ -275,7 +270,6 @@ public class AT2ACCOP0020Sis {
         }
         return true;
     }
-
     private boolean Add_payment(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN PAYMENT METHOD MANAGEMENT", 3, false);
@@ -370,7 +364,6 @@ public class AT2ACCOP0020Sis {
         }
         return true;
     }
-
     private boolean Delete_maping(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN PAYMENT MAPPING MANAGEMENT ", 3, false);
 
@@ -384,7 +377,6 @@ public class AT2ACCOP0020Sis {
         }
         return true;
     }
-
     private boolean Other_actions_maping(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN PAYMENT MAPPING MANAGEMENT ", 3, false);
 
@@ -396,7 +388,6 @@ public class AT2ACCOP0020Sis {
         }
         return true;
     }
-
     private boolean QBE_mapping(TestDriver driver) {
 
         driver.getReport().addHeader("QBE IN PAYMENT MAPPING MANAGEMENT ", 3, false);
@@ -454,7 +445,6 @@ public class AT2ACCOP0020Sis {
         }
         return true;
     }
-
     private boolean Edit_mapping(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN PAYMENT MAPPING MANAGEMENT", 3, false);
 
@@ -519,7 +509,6 @@ public class AT2ACCOP0020Sis {
 
         return true;
     }
-
     private boolean Search_mapping(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN PAYMENT MAPPING MANAGEMENT", 3, false);
@@ -575,7 +564,6 @@ public class AT2ACCOP0020Sis {
 
         return true;
     }
-
     private boolean Add_mapping(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN PAYMENT MAPPING MANAGEMENT", 3, false);
