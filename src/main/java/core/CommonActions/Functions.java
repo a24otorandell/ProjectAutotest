@@ -1455,7 +1455,7 @@ public class Functions {
         //HOW TO CALL THIS METHOD
         /*
         if (!Functions.checkboxValue(driver,
-                getElements("xpath"),"datanme",true/false,true/false" where")){return false;}//where
+                getElements("xpath"),"datanme",true/false,true/false," where")){return false;}//where
          */
         try {
             boolean checkbox;
