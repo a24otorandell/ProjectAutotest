@@ -9,8 +9,6 @@ import java.util.Map;
  * Created by vsolis on 13/09/2016.
  */
 public class AT2ACCSU0025Manager implements AT2Test {
-
-
     AT2ACCSU0025Test test;
     AT2ACCSU0025Sis sis;
     String[] procedure;
@@ -29,31 +27,24 @@ public class AT2ACCSU0025Manager implements AT2Test {
             this.sis.setLocators(new AT2ACCSU0025Locators(enviroment));
         }
     }
-
     public String[] getProcedure() {
         return procedure;
     }
-
     public void setProcedure(String[] procedure) {
         this.procedure = procedure;
     }
-
     public AT2ACCSU0025Test getTest() {
         return test;
     }
-
     public void setTest(AT2ACCSU0025Test test) {
         this.test = test;
     }
-
     public AT2ACCSU0025Sis getTestSis() {
         return sis;
     }
-
     public void setTestSis(AT2ACCSU0025Sis sis) {
         this.sis = sis;
     }
-
     public Map<String, String> getData() {
         if (entorno.equalsIgnoreCase("test")) {
             return this.test.getData().getData();
@@ -61,7 +52,6 @@ public class AT2ACCSU0025Manager implements AT2Test {
             return this.sis.getData().getData();
         }
     }
-
     public boolean start(TestDriver driver) {
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
         if (entorno.equalsIgnoreCase("sis")) {
@@ -71,7 +61,6 @@ public class AT2ACCSU0025Manager implements AT2Test {
         }
         return csedIteration(driver);
     }
-
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {

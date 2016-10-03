@@ -1,6 +1,5 @@
 package screen.AT2BOOSA1003;
 
-import core.CommonActions.DataGenerator;
 import core.FileGestor.DataHarvester;
 
 import java.util.HashMap;
@@ -15,7 +14,7 @@ public class AT2BOOSA1003Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2BOOSA1003Data() {
+    public AT2BOOSA1003Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2BOOSA1003Values.txt");
         setData();
     }
@@ -46,7 +45,7 @@ public class AT2BOOSA1003Data {
      */
     public void setDefaultData() {
         data.put("booking_receptive", "1");
-        data.put("booking_sales", "3219229");// only to check
+        data.put("booking_sales", "3096393");// only to check
         data.put("booking_transfers", "3219226"); // do not touch
 
         data.put("sales_start_date", "19/09/2016");

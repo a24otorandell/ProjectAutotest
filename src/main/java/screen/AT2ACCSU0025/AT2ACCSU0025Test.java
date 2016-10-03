@@ -16,44 +16,35 @@ public class AT2ACCSU0025Test {
     public AT2ACCSU0025Test() {
 
     }
-
     public AT2ACCSU0025Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0025Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0025Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0025Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
     }
-
     protected boolean testCSED(TestDriver driver) {
 
         if (!offer_types(driver)) {
@@ -108,9 +99,7 @@ public class AT2ACCSU0025Test {
 
         return true;
     }
-
     private boolean Other_actions_types(TestDriver driver) {
-
 
         driver.getReport().addHeader("OTHER ACTIONS IN OFFER TYPES AND AGREEMENTS DISCOUNTS", 3, false);
 
@@ -124,7 +113,6 @@ public class AT2ACCSU0025Test {
 
         return true;
     }
-
     private boolean QBE_offer_types(TestDriver driver) {
 
 
@@ -172,7 +160,6 @@ public class AT2ACCSU0025Test {
 
         return true;
     }
-
     private boolean Edit_offer_types(TestDriver driver) {
 
         driver.getReport().addHeader(" EDIT IN TOFFER TYPES AND AGREEMENTS DISCOUNTS", 3, false);
@@ -217,20 +204,19 @@ public class AT2ACCSU0025Test {
 
         return true;
     }
-
     private boolean Search_offer_types(TestDriver driver) {
         boolean check_box_notes = false;
         boolean check_box_percentage = false;
         driver.getReport().addHeader(" SEARCH IN TRANSFRE DAR", 3, false);
 
         if (!Functions.insertInput(driver, new String[]{"Offer_types_se_i_discount", getElements("Offer_types_se_i_discount")},
-                "input_discount", "PB", " on ADD")) {
+                "input_discount", data.getData().get("input_discount"), " on ADD")) {
             return false;
         }
 
 
         if (!Functions.insertInput(driver, new String[]{"Offer_types_se_i_discount_description", getElements("Offer_types_se_i_discount_description")},
-                "input_description", "Prueba1", " on ADD")) {
+                "input_description", data.getData().get("input_description"), " on ADD")) {
             return false;
         }
 
@@ -261,7 +247,6 @@ public class AT2ACCSU0025Test {
 
         return true;
     }
-
     private boolean Add_offer_types(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN OFFER TYPES AND AGREEMENTS DISCOUNTS", 3, false);

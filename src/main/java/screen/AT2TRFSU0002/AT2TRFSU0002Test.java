@@ -185,8 +185,6 @@ public class AT2TRFSU0002Test {
         return true;
     }
 
-
-
     private boolean Edit_vehicles(TestDriver driver) {
         driver.getReport().addHeader(" ADD IN OPERATIONAL VEHICLES", 3, false);
 
@@ -262,7 +260,6 @@ public class AT2TRFSU0002Test {
 
         return true;
     }
-
 
     private boolean Search_vehicles(TestDriver driver) {
 
