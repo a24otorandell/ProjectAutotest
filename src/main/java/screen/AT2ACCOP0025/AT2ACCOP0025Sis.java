@@ -18,38 +18,30 @@ public class AT2ACCOP0025Sis {
         setData(new AT2ACCOP0025Data(enviroment));
         setLocators(new AT2ACCOP0025Locators(enviroment));
     }
-
     public AT2ACCOP0025Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0025Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0025Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0025Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodations");
         driver.getTestdetails().setSubmenu("Operations");
         driver.getTestdetails().setScreen("Commissions Rules 2.0");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -82,7 +74,6 @@ public class AT2ACCOP0025Sis {
         }
         return false;
     }
-
     /**
      * @param driver TestDriver
      * @param type   boolean que controla el flujo inicial para saber si creamos o modificamos el registro
@@ -182,7 +173,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -285,7 +275,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -390,7 +379,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return boolean
@@ -416,7 +404,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -445,7 +432,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -458,7 +444,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -476,5 +461,4 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
 }

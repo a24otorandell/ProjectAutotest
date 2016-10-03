@@ -13,46 +13,36 @@ public class AT2ACCOP0020Sis {
     protected AT2ACCOP0020Data data;
 
     public AT2ACCOP0020Sis() {
-
     }
-
     public AT2ACCOP0020Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0020Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0020Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0020Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
     }
-
     protected boolean testCSED(TestDriver driver) {
 
         if (!Payment_method_management(driver)) {
@@ -70,9 +60,7 @@ public class AT2ACCOP0020Sis {
         return false;
     }
 
-
     //PAYMENT METHOD MANAGEMENT
-
     private boolean Payment_method_management(TestDriver driver) {
 
         if (!Add_payment(driver)) {
@@ -321,7 +309,6 @@ public class AT2ACCOP0020Sis {
     }
 
     //GO TO
-
     private boolean Go_to_Payment_method_mapping_management(TestDriver driver) {
 
         driver.getReport().addHeader("GO TO IN PAYMENT METHOD MANAGEMENT ", 3, false);
@@ -336,7 +323,6 @@ public class AT2ACCOP0020Sis {
     }
 
     //PAYMENT METHOD MAPPING MANAGEMENT
-
     private boolean Payment_method_mapping_management(TestDriver driver) {
 
         if (!Add_mapping(driver)) {
@@ -629,5 +615,4 @@ public class AT2ACCOP0020Sis {
 
         return true;
     }
-
 }
