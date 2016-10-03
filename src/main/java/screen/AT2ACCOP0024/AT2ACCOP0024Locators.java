@@ -81,7 +81,7 @@ public class AT2ACCOP0024Locators {
         elements.put("record_interaction_b_new_i_type", "//*[contains(@id, 'soc1::content')]");
         elements.put("record_interaction_b_new_b_close", "//*[contains(@id, 'd3::close')]");
         elements.put("record_interaction_b_new_b_file", "//input[contains(@id, 'if1::content')]");
-        elements.put("record_interaction_b_new_i_add", "//*[contains(@id, 'cb1')]");
+        elements.put("record_interaction_b_new_i_add", "//*[contains(@id, '1:cb1')]");
         /* QBE */
         elements.put("record_interaction_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
         elements.put("record_interaction_b_qbe_i_report", "//*[contains(@id, 'resId1_afr_c9::content')]");
@@ -161,7 +161,7 @@ public class AT2ACCOP0024Locators {
         elements.put("record_interaction_b_new_i_type", "//*[contains(@id, 'soc1::content')]");
         elements.put("record_interaction_b_new_b_close", "//*[contains(@id, 'd3::close')]");
         elements.put("record_interaction_b_new_b_file", "//input[contains(@id, 'if1::content')]");
-        elements.put("record_interaction_b_new_i_add", "//*[contains(@id, 'cb1')]");
+        elements.put("record_interaction_b_new_i_add", "//*[contains(@id, '1:cb1')]");
         /* QBE */
         elements.put("record_interaction_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
         elements.put("record_interaction_b_qbe_i_report", "/*//*[contains(@id, 'resId1_afr_resId1c1::content')]");
