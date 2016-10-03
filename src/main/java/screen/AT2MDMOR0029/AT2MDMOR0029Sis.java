@@ -19,38 +19,30 @@ public class AT2MDMOR0029Sis {
         setData(new AT2MDMOR0029Data(enviroment));
         setLocators(new AT2MDMOR0029Locators(enviroment));
     }
-
     public AT2MDMOR0029Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMOR0029Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMOR0029Data getData() {
         return data;
     }
-
     public void setData(AT2MDMOR0029Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Operations");
         driver.getTestdetails().setScreen("2.0");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -92,7 +84,6 @@ public class AT2MDMOR0029Sis {
         }
         return true;
     }
-
     private boolean Delete_service(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN SERVICE AUTORIZATION", 3, false);
 
@@ -106,7 +97,6 @@ public class AT2MDMOR0029Sis {
         }
         return true;
     }
-
     private boolean Other_actions_service(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN SERVICE AUTORIZATION", 3, false);
@@ -121,7 +111,6 @@ public class AT2MDMOR0029Sis {
 
         return true;
     }
-
     private boolean QBE_service(TestDriver driver) {
 
         driver.getReport().addHeader(" QBE IN SERVICE AUTORIZATION", 3, false);
@@ -183,7 +172,6 @@ public class AT2MDMOR0029Sis {
         }
         return true;
     }
-
     private boolean Edit_service(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN SERVICE AUTORIZATION", 3, false);
 
@@ -262,7 +250,6 @@ public class AT2MDMOR0029Sis {
         }
         return true;
     }
-
     private boolean Search_service(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN SERVICE AUTORIZATION", 3, false);
@@ -322,7 +309,6 @@ public class AT2MDMOR0029Sis {
 
         return true;
     }
-
     private boolean Add_service(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN SERVICE AUTORIZATION", 3, false);

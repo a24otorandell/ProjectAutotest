@@ -51,7 +51,6 @@ public class AT2ACCSU0025Test {
             return false;
         }
 
-
         return false;
     }
 
@@ -83,7 +82,6 @@ public class AT2ACCSU0025Test {
 
         return true;
     }
-
     private boolean Delete_types(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN OFFER TYPES AND AGREEMENTS DISCOUNTS", 3, false);
 
@@ -291,5 +289,4 @@ public class AT2ACCSU0025Test {
 
         return true;
     }
-
 }
