@@ -9,11 +9,9 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java" line="457" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="    quitar espacios innecesarios de la at2trfsu0006">
+    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="    quitar espacios innecesarios de la at2trfsu0007">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Test.java" />
     </list>
     <ignored path="ProjectAutotest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Sis.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.5597609">
-              <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#AT2TRFSU0007Sis#0" expanded="false" />
                 <element signature="method#AT2TRFSU0007Sis#0;class#AT2TRFSU0007Sis#0" expanded="false" />
@@ -779,12 +777,6 @@
       <option name="number" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00017" summary="Arreglo">
-      <created>1463486087265</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1463486087265</updated>
-    </task>
     <task id="LOCAL-00018" summary="AT2ACCDI0003 añadida">
       <created>1464602120641</created>
       <option name="number" value="00018" />
@@ -1073,7 +1065,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475510757176</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="    quitar espacios innecesarios de la at2trfsu0007">
+      <created>1475511181004</created>
+      <option name="number" value="00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1475511181004</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1162,7 +1160,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Created and started the autotest of BOOSA1003 \n&#10;Changed the recursiveXpath of the result of search component more precise now \n&#10;" />
     <MESSAGE value="Añadida componente AT2ACTSU0037&#10;     -Separacion de codigo para test y para sis&#10;Corrección del Package Jira&#10;Correción de la verificacion de AutotestInfo.txt&#10;Correccions en el Package TestDriver&#10;Añadidas nuevos procedimientos en el package CommonActions&#10;Añadidas nuevas llamadas en el package FileGestor&#10;Actualizar librerías de selenium a 2.53.1" />
     <MESSAGE value="eliminado texto comentado en JiraUpdate" />
     <MESSAGE value="Añadida la version dual de AT2ACCOP0025, falta SYS porque esta re-bug" />
@@ -1187,7 +1184,8 @@
     <MESSAGE value="corregir codigo at2trfsu0004" />
     <MESSAGE value="    quitar espacios innecesarios de la at2trfsu0005" />
     <MESSAGE value="    quitar espacios innecesarios de la at2trfsu0006" />
-    <option name="LAST_COMMIT_MESSAGE" value="    quitar espacios innecesarios de la at2trfsu0006" />
+    <MESSAGE value="    quitar espacios innecesarios de la at2trfsu0007" />
+    <option name="LAST_COMMIT_MESSAGE" value="    quitar espacios innecesarios de la at2trfsu0007" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2074,7 +2072,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Sis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5597609">
-          <caret line="53" column="4" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#AT2TRFSU0007Sis#0" expanded="false" />
             <element signature="method#AT2TRFSU0007Sis#0;class#AT2TRFSU0007Sis#0" expanded="false" />
