@@ -9,11 +9,10 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java" line="457" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="corregir codigo at2trfsu0004">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
+    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="    quitar espacios innecesarios de la at2trfsu0005">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Test.java" />
     </list>
     <ignored path="ProjectAutotest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,52 +40,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AT2TRFSU0005Sis.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Sis.java">
+      <file leaf-file-name="AT2TRFSU0006Sis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Sis.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
+              <caret line="314" column="5" selection-start-line="314" selection-start-column="5" selection-end-line="314" selection-end-column="5" />
               <folding>
-                <element signature="docComment;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#AT2TRFSU0005Sis#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#start#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#testCSED#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#recordInteractionGA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#searchGA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#qbeGA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#auditDetachGA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#deleteGA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#recordInteractionA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#qbeA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#auditDetachA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#deleteA#0;class#AT2TRFSU0005Sis#0" expanded="false" />
-                <element signature="method#enabler#0;class#AT2TRFSU0005Sis#0" expanded="false" />
+                <element signature="docComment;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#AT2TRFSU0006Sis#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#start#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#grouping_testCSED#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#grouping_check_existence#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#grouping_create#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#grouping_search#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#grouping_qbe#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#grouping_otherFunctions#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#grouping_delete#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#ttoo_testCSED#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#ttoo_create#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#ttoo_qbe#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#ttoo_otherFunctions#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+                <element signature="method#ttoo_delete#0;class#AT2TRFSU0006Sis#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2TRFSU0005Test.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Test.java">
+      <file leaf-file-name="AT2TRFSU0006Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2219874">
-              <caret line="374" column="5" selection-start-line="374" selection-start-column="5" selection-end-line="374" selection-end-column="5" />
+            <state vertical-scroll-proportion="1.5199203">
+              <caret line="399" column="5" selection-start-line="399" selection-start-column="5" selection-end-line="399" selection-end-column="5" />
               <folding>
-                <element signature="method#AT2TRFSU0005Test#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#start#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#testCSED#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#recordInteractionGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#searchGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#qbeGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#auditDetachGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#deleteGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#recordInteractionA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#qbeA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#auditDetachA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#deleteA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-                <element signature="method#enabler#0;class#AT2TRFSU0005Test#0" expanded="false" />
+                <element signature="docComment;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#AT2TRFSU0006Test#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#grouping_testCSED#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#ttoo_testCSED#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#grouping_check_existence#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#grouping_create#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#grouping_search#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#grouping_qbe#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#grouping_otherFunctions#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#grouping_delete#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#ttoo_create#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#ttoo_qbe#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#ttoo_otherFunctions#0;class#AT2TRFSU0006Test#0" expanded="false" />
+                <element signature="method#ttoo_delete#0;class#AT2TRFSU0006Test#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -132,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0028/AT2MDMOR0028Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0028/AT2MDMOR0028Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMCL0030/AT2MDMCL0030Sis.java" />
@@ -183,6 +185,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0004/AT2TRFSU0004Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Test.java" />
       </list>
     </option>
   </component>
@@ -363,6 +367,36 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AT2TRFSU0006" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -423,7 +457,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-e test  -t AT2TRFSU0005 -u u_acarrillo -p Septiembre2016" />
+      <option name="PROGRAM_PARAMETERS" value="-e sis  -t AT2TRFSU0006 -u u_acarrillo -p Septiembre2016" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -750,12 +784,6 @@
       <option name="number" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00015" summary="jhgsxz">
-      <created>1463485831351</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1463485831351</updated>
-    </task>
     <task id="LOCAL-00016" summary="jhgsxz">
       <created>1463485974033</created>
       <option name="number" value="00016" />
@@ -1044,7 +1072,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475509601146</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="    quitar espacios innecesarios de la at2trfsu0005">
+      <created>1475510391611</created>
+      <option name="number" value="00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1475510391611</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1133,7 +1167,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="AT2ACCDI0003 añadida" />
     <MESSAGE value="AT2BOOSA1002 WIP" />
     <MESSAGE value="Created and started the autotest of BOOSA1003 \n&#10;Changed the recursiveXpath of the result of search component more precise now \n&#10;" />
     <MESSAGE value="Añadida componente AT2ACTSU0037&#10;     -Separacion de codigo para test y para sis&#10;Corrección del Package Jira&#10;Correción de la verificacion de AutotestInfo.txt&#10;Correccions en el Package TestDriver&#10;Añadidas nuevos procedimientos en el package CommonActions&#10;Añadidas nuevas llamadas en el package FileGestor&#10;Actualizar librerías de selenium a 2.53.1" />
@@ -1158,7 +1191,8 @@
     <MESSAGE value="actualizar workspace" />
     <MESSAGE value="quitar espacios innecesarios de la at2mdmor0029" />
     <MESSAGE value="corregir codigo at2trfsu0004" />
-    <option name="LAST_COMMIT_MESSAGE" value="corregir codigo at2trfsu0004" />
+    <MESSAGE value="    quitar espacios innecesarios de la at2trfsu0005" />
+    <option name="LAST_COMMIT_MESSAGE" value="    quitar espacios innecesarios de la at2trfsu0005" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1232,20 +1266,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/ImmutableMapEntry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.185185">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/com/google/common/collect/ImmutableMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.296296">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/By.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.296296">
@@ -1617,7 +1637,6 @@
             <element signature="method#Other_actions_mapping#0;class#AT2ACCOP0021Test#0" expanded="false" />
             <element signature="method#Qbe_mapping#0;class#AT2ACCOP0021Test#0" expanded="false" />
             <element signature="method#Edit_mapping#0;class#AT2ACCOP0021Test#0" expanded="false" />
-            <element signature="method#Search_mapping#0;class#AT2ACCOP0021Test#0" expanded="false" />
             <element signature="method#Add_mapping#0;class#AT2ACCOP0021Test#0" expanded="false" />
           </folding>
         </state>
@@ -1797,16 +1816,6 @@
         <state vertical-scroll-proportion="0.62749004">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <element signature="docComment;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#AT2ACCSU0025Sis#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#Delete_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
-            <element signature="method#Other_actions_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
             <element signature="method#QBE_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
             <element signature="method#Edit_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
             <element signature="method#Search_offer_types#0;class#AT2ACCSU0025Sis#0" expanded="false" />
@@ -1959,9 +1968,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2219874">
+          <caret line="374" column="5" selection-start-line="374" selection-start-column="5" selection-end-line="374" selection-end-column="5" />
+          <folding>
+            <element signature="method#AT2TRFSU0005Test#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#recordInteractionGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#searchGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#qbeGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#auditDetachGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#deleteGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#recordInteractionA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#qbeA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#auditDetachA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#deleteA#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="method#enabler#0;class#AT2TRFSU0005Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.96613544">
           <caret line="391" column="0" selection-start-line="391" selection-start-column="0" selection-end-line="391" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#AT2TRFSU0005Sis#0" expanded="false" />
@@ -1983,25 +2015,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0005/AT2TRFSU0005Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2219874">
-          <caret line="374" column="5" selection-start-line="374" selection-start-column="5" selection-end-line="374" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="314" column="5" selection-start-line="314" selection-start-column="5" selection-end-line="314" selection-end-column="5" />
           <folding>
-            <element signature="method#AT2TRFSU0005Test#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#recordInteractionGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#searchGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#qbeGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#auditDetachGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#deleteGA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#recordInteractionA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#qbeA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#auditDetachA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#deleteA#0;class#AT2TRFSU0005Test#0" expanded="false" />
-            <element signature="method#enabler#0;class#AT2TRFSU0005Test#0" expanded="false" />
+            <element signature="docComment;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#AT2TRFSU0006Sis#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#grouping_testCSED#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#grouping_check_existence#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#grouping_create#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#grouping_search#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#grouping_qbe#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#grouping_otherFunctions#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#grouping_delete#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#ttoo_testCSED#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#ttoo_create#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#ttoo_qbe#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#ttoo_otherFunctions#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+            <element signature="method#ttoo_delete#0;class#AT2TRFSU0006Sis#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0006/AT2TRFSU0006Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5199203">
+          <caret line="399" column="5" selection-start-line="399" selection-start-column="5" selection-end-line="399" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#AT2TRFSU0006Test#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#grouping_testCSED#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#ttoo_testCSED#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#grouping_check_existence#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#grouping_create#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#grouping_search#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#grouping_qbe#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#grouping_otherFunctions#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#grouping_delete#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#ttoo_create#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#ttoo_qbe#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#ttoo_otherFunctions#0;class#AT2TRFSU0006Test#0" expanded="false" />
+            <element signature="method#ttoo_delete#0;class#AT2TRFSU0006Test#0" expanded="false" />
           </folding>
         </state>
       </provider>
