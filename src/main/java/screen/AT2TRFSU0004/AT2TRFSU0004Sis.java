@@ -15,45 +15,36 @@ import org.openqa.selenium.By;
    - BUG 2: Las fechas en el popup de creación tienen formato dd/mm/aaa,
    pero en el motor de búsqueda el formato es ddmmaaa conlo que falla al buscar*/
 
-
 public class AT2TRFSU0004Sis {
     protected AT2TRFSU0004Locators locators;
     protected AT2TRFSU0004Data data;
 
     public AT2TRFSU0004Sis() {
     }
-
     public AT2TRFSU0004Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0004Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0004Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0004Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfer");
         driver.getTestdetails().setSubmenu("Set up");
         driver.getTestdetails().setScreen("Drivers");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -84,8 +75,6 @@ public class AT2TRFSU0004Sis {
         }
         return true;
     }
-
-
     /////////////// - ADD & EDIT - ///////////////
     private boolean create(TestDriver driver, boolean add) {
         String where;
@@ -274,8 +263,6 @@ public class AT2TRFSU0004Sis {
         }
         return true;
     }
-
-
     /////////////// - SEARCH - ///////////////
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("RECORD SEARCH", 3, true);
@@ -417,8 +404,6 @@ public class AT2TRFSU0004Sis {
         }
         return true;
     }
-
-
     /////////////// - QBE - ///////////////
     private boolean qbe(TestDriver driver) {
         driver.getReport().addHeader("RECORD QBE", 3, true);
@@ -585,7 +570,6 @@ public class AT2TRFSU0004Sis {
 
         return true;
     }
-
     private boolean otherFunctions(TestDriver driver) {
         driver.getReport().addHeader("RECORD OTHER FUNCTIONS", 3, true);
 
@@ -607,8 +591,6 @@ public class AT2TRFSU0004Sis {
         }    //where this occurs
         return true;
     }
-
-
     private boolean delete(TestDriver driver) {
         driver.getReport().addHeader("RECORD DELETE", 3, true);
 

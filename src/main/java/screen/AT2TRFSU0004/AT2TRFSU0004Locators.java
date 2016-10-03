@@ -48,8 +48,8 @@ public class AT2TRFSU0004Locators {
         elements.put("search_i_driver_id", "//*[contains(@id, 'value110::content')]");
         elements.put("search_i_passport", "//*[contains(@id, 'value120::content')]");
 
-        elements.put("search_i_country", "//*[contains(@id, 'value30::content')]");
-        elements.put("serach_lov_country", "//*[contains(@id, 'value30::lovIconId')]");
+        elements.put("search_i_country", "//*[contains(@id, 'value130::content')]");
+        elements.put("search_lov_country", "//*[contains(@id, 'value130::lovIconId')]");
         elements.put("search_lov_country_i_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
 
         elements.put("search_i_cancellation_date", "//*[contains(@id, 'value140::content')]");

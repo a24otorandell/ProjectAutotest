@@ -11,48 +11,36 @@ import org.openqa.selenium.By;
  * Created by lchacartegui on 02/09/2016.
  */
 
-/* - BUG 1: la lov country en popup de creacion no funciona
-   - BUG 2: Las fechas en el popup de creación tienen formato dd/mm/aaa,
-   pero en el motor de búsqueda el formato es ddmmaaa conlo que falla al buscar*/
-
 public class AT2TRFSU0004Test {
     protected AT2TRFSU0004Locators locators;
     protected AT2TRFSU0004Data data;
 
     public AT2TRFSU0004Test() {
     }
-
     public AT2TRFSU0004Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0004Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0004Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0004Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfer");
         driver.getTestdetails().setSubmenu("Set up");
         driver.getTestdetails().setScreen("Drivers");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -83,7 +71,6 @@ public class AT2TRFSU0004Test {
         }
         return true;
     }
-
 
     /////////////// - ADD & EDIT - ///////////////
     private boolean create(TestDriver driver, boolean add) {
@@ -278,12 +265,9 @@ public class AT2TRFSU0004Test {
         }
         return true;
     }
-
-
     /////////////// - SEARCH - ///////////////
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("RECORD SEARCH", 3, true);
-
         if (!Functions.selectText(driver,
                 new String[]{"serach_sel_active", getElements("serach_sel_active")},
                 getData("active"),
@@ -291,7 +275,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_supplier", getElements("search_lov_supplier")}, //LoV button
                 new String[]{"search_i_supplier", getElements("search_i_supplier")}, //external LoV input
@@ -301,7 +284,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         } //where this operation occurs
-
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_language", getElements("search_lov_language")}, //LoV button
                 new String[]{"search_i_language", getElements("search_i_language")}, //external LoV input
@@ -311,7 +293,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         } //where this operation occurs
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_incoming_driver_code", getElements("search_i_incoming_driver_code")},
                 "incoming_driver_code",
@@ -319,7 +300,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_name", getElements("search_i_name")},
                 "name",
@@ -327,7 +307,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_first_name", getElements("search_i_first_name")},
                 "first_name",
@@ -335,7 +314,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_last_name", getElements("search_i_last_name")},
                 "last_name",
@@ -343,7 +321,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         //El formato de fecha es diferente en creacion y falla
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_birthday_date", getElements("search_i_birthday_date")},
@@ -352,7 +329,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         //El formato de fecha es diferente en creacion y falla
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_driver_license_date", getElements("search_i_driver_license_date")},
@@ -361,7 +337,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_driver_id", getElements("search_i_driver_id")},
                 "driver_id",
@@ -369,7 +344,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_passport", getElements("search_i_passport")},
                 "passport",
@@ -377,7 +351,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_country", getElements("search_lov_country")}, //LoV button
                 new String[]{"search_i_country", getElements("search_i_country")}, //external LoV input
@@ -387,7 +360,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         //El formato de fecha es diferente en creacion y falla
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_cancellation_date", getElements("search_i_cancellation_date")},
@@ -396,7 +368,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_remarks", getElements("search_i_remarks")},
                 "remarks",
@@ -404,7 +375,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_coun_des", getElements("search_i_coun_des")},
                 "country_des",
@@ -412,7 +382,6 @@ public class AT2TRFSU0004Test {
                 " on SEARCH ")) {
             return false;
         }
-
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"search_e_result", getElements("search_e_result")}, //result element
@@ -421,8 +390,6 @@ public class AT2TRFSU0004Test {
         }
         return true;
     }
-
-
     /////////////// - QBE - ///////////////
     private boolean qbe(TestDriver driver) {
         driver.getReport().addHeader("RECORD QBE", 3, true);
@@ -589,7 +556,6 @@ public class AT2TRFSU0004Test {
 
         return true;
     }
-
     private boolean otherFunctions(TestDriver driver) {
         driver.getReport().addHeader("RECORD OTHER FUNCTIONS", 3, true);
 
@@ -611,8 +577,6 @@ public class AT2TRFSU0004Test {
         }    //where this occurs
         return true;
     }
-
-
     private boolean delete(TestDriver driver) {
         driver.getReport().addHeader("RECORD DELETE", 3, true);
 
