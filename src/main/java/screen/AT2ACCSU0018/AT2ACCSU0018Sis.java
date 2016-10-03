@@ -179,7 +179,7 @@ public class AT2ACCSU0018Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"hotel_comments_qbe_hotel_description", getElements("hotel_comments_qbe_hotel_description")},
-                "qbe_hotel_description", data.getData().get("hotel_description"), " on QBE")) {
+                "qbe_hotel_description", "%" + data.getData().get("hotel_description"), " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"hotel_comments_qbe_chain", getElements("hotel_comments_qbe_chain")},
@@ -483,7 +483,11 @@ public class AT2ACCSU0018Sis {
     private boolean Delete_multi(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN HOTEL COMMENTS", 3, false);
 
-
+        if (!Functions.simpleClick(driver,
+                new String[]{"multi_lenguaje_se_e_result", getElements("multi_lenguaje_se_e_result")}, //element to click
+                " on DELETE")) {
+            return false;
+        }
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"multi_lenguaje_del_b_delete", getElements("multi_lenguaje_del_b_delete")},
                 new String[]{"multi_lenguaje_del_e_records", getElements("multi_lenguaje_del_e_records")},
@@ -519,6 +523,11 @@ public class AT2ACCSU0018Sis {
     private boolean Edit_multi(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN HOTEL COMMENTS", 3, false);
 
+        if (!Functions.simpleClick(driver,
+                new String[]{"multi_lenguaje_se_e_result", getElements("multi_lenguaje_se_e_result")}, //element to click
+                " on EDIT")) {
+            return false;
+        }
         Functions.break_time(driver, 6, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"multi_lenguaje_ed_b_edit", getElements("multi_lenguaje_ed_b_edit")}, //element to click
@@ -547,6 +556,7 @@ public class AT2ACCSU0018Sis {
 
     private boolean Search_multi(TestDriver driver) {
 
+        driver.getReport().addHeader(" SEARCH IN HOTEL COMMENTS", 3, false);
 
         if (!Functions.clickQbE(driver,
                 new String[]{"multi_lenguaje_se_b_qbe", getElements("multi_lenguaje_se_b_qbe")},// query button
@@ -562,7 +572,12 @@ public class AT2ACCSU0018Sis {
                 "se_castellano", data.getData().get("castellano"), " on SEARCH")) {
             return false;
         }
-
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"multi_lenguaje_se_i_remarks", getElements("multi_lenguaje_se_i_remarks")}, //search button
+                new String[]{"multi_lenguaje_se_e_result", getElements("multi_lenguaje_se_e_result")}, //result element
+                " on SEARCH")) {
+            return false;
+        }
         return true;
     }
 
