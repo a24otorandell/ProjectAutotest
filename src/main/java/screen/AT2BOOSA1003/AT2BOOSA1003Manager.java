@@ -8,17 +8,41 @@ import java.util.Map;
 /**
  * @author ajvirgili on 15/07/2016
  */
-@SuppressWarnings({"unused", "RedundantIfStatement", "AssignmentToCollectionOrArrayFieldFromParameter"})
+@SuppressWarnings({"unused", "RedundantIfStatement", "AssignmentToCollectionOrArrayFieldFromParameter", "StatementWithEmptyBody"})
 public class AT2BOOSA1003Manager implements AT2Test {
+    /**
+     * ToDo Falta gestionar la busqueda previa de una reserva para después generar las estimaciones
+     */
 
     AT2BOOSA1003Test test;
+    AT2BOOSA1003Sis sis;
     String[] procedure;
+    String env;
 
 
-    public AT2BOOSA1003Manager() {
-        setTest(new AT2BOOSA1003Test());
-        this.test.setData(new AT2BOOSA1003Data());
-        this.test.setLocators(new AT2BOOSA1003Locators());
+    public AT2BOOSA1003Manager(String enviroment) {
+        setEnv(enviroment);
+        if (getEnv().equalsIgnoreCase("test")) {
+            setTest(new AT2BOOSA1003Test(enviroment));
+        } else {
+            setTestSis(new AT2BOOSA1003Sis(enviroment));
+        }
+    }
+
+    public AT2BOOSA1003Sis getTestSis() {
+        return sis;
+    }
+
+    public void setTestSis(AT2BOOSA1003Sis sis) {
+        this.sis = sis;
+    }
+
+    public String getEnv() {
+        return this.env;
+    }
+
+    public void setEnv(String env) {
+        this.env = env;
     }
 
     /**
@@ -63,7 +87,11 @@ public class AT2BOOSA1003Manager implements AT2Test {
      * @return AT2BOOSA1003Data
      */
     public Map<String, String> getData() {
-        return this.test.getData().getData();
+        if (getEnv().equalsIgnoreCase("test")) {
+            return this.test.getData().getData();
+        } else {
+            return this.sis.getData().getData();
+        }
     }
 
     /**
@@ -90,15 +118,23 @@ public class AT2BOOSA1003Manager implements AT2Test {
     private boolean csedIteration(TestDriver driver) {
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
+            if (getProcedure()[i].equals("c")) {
+            }
             if (getProcedure()[i].equals("s")) {
             }
-            if (getProcedure()[i].equals("q")) {
+            if (getProcedure()[i].equals("e")) {
             }
-            if (getProcedure()[i].equals("t")) {
+            if (getProcedure()[i].equals("d")) {
             }
             if (getProcedure()[i].equals("x")) {
-                if (!getTest().testCSED(driver)) {
-                    return false;
+                if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("test")) {
+                    if (!getTest().testCSED(driver)) {
+                        return false;
+                    }
+                } else {
+                    if (!getTestSis().testCSED(driver)) {
+                        return false;
+                    }
                 }
             }
         }

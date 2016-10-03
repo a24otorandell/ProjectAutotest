@@ -783,7 +783,7 @@ public class Functions {
             ErrorManager.process(driver, ecode);
             return false;
         }
-        break_time(driver, 1, 500);
+        break_time(driver, 30, 500);
         if (!simpleClick(driver, e_result, where)) {
             return false;
         }
@@ -1411,6 +1411,7 @@ public class Functions {
      * @param where    String - Tells where the operation is taking effectw
      * @see ErrorManager#process(TestDriver, String)
      * @see DataGenerator
+     * @return {@code boolean}
      */
 
     public static boolean checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, String where) {
@@ -1450,6 +1451,7 @@ public class Functions {
      * @param where          String - Tells where the operation is taking effectw
      * @see ErrorManager#process(TestDriver, String)
      * @see DataGenerator
+     * @return {@code boolean}
      */
     public static boolean checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, boolean convert_yes_no, String where) {
         //HOW TO CALL THIS METHOD
@@ -1510,5 +1512,36 @@ public class Functions {
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
         }
+    }
+
+    /**
+     * @param driver     {@code TestDriver} This object gathers and provides all the info refferent to the current test
+     * @param columns    {@code String[]} The names of the columns of the table to get
+     * @param xpathBegin {@code String} First part of the xpath of the table until the number of the row
+     * @param xpathMid   {@code String} Mid part of the xpath from the number of the row until the number of the column
+     * @param xpathEnd   {@code String} End of the xpath normally a simple ']'
+     * @param rows       {@code Integer} Rows that you want to be stored
+     * @return {@code boolean}
+     */
+    public static boolean collectTableData(TestDriver driver, String[] columns, String xpathBegin, String xpathMid, String xpathEnd, int rows, String on) {
+        /*
+        Xpath completo de ejemplo: //*[contains(@id,  'pc1:resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
+                                el primer num (tbody/tr[n]) es la fila y el ultimo (tr/td[n]) la columna
+
+        - String[] columns = {"", "column1", "column2"...}  El primero vacío
+        - xpathBegin "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr["
+        - xpathMid   "]/td[2]/div/table/tbody/tr/td["
+        - xpathEnd   "]"
+
+        Functions.collectTableData(driver, columns, xpathBegin, xpathMid, xpathEnd, 1, "where");
+         */
+        for (int i = 1; i < rows + 1; i++) {
+            for (int j = 1; j < columns.length; j++) {
+                Functions.getText(driver,
+                        new String[]{columns[j], xpathBegin + i + xpathMid + j + xpathEnd},
+                        columns[j] + "_" + Integer.toString(i), on);
+            }
+        }
+        return true;
     }
 }

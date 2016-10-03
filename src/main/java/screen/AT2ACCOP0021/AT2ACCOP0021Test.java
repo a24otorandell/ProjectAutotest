@@ -24,39 +24,31 @@ public class AT2ACCOP0021Test {
     public AT2ACCOP0021Test() {
 
     }
-
     public AT2ACCOP0021Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0021Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0021Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0021Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -64,24 +56,13 @@ public class AT2ACCOP0021Test {
 
     protected boolean testCSED(TestDriver driver) {
 
-        if (!Template_management(driver)) {
-            return false;
-        }
-
-        if (!Go_to_template_mapping_management(driver)) {
-            return false;
-        }
-
-        if (!Template_mapping_management(driver)) {
-            return false;
-        }
-
+        if (!Template_management(driver)) return false;
+        if (!Go_to_template_mapping_management(driver)) return false;
+        if (!Template_mapping_management(driver)) return false;
         return false;
     }
 
-
     //TEMPLATE MANAGEMENT
-
     private boolean Template_management(TestDriver driver) {
 
         if (!Add_management(driver)) {
@@ -110,7 +91,6 @@ public class AT2ACCOP0021Test {
 
         return true;
     }
-
     private boolean Delete_management(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN TEMPLATE MANAGEMENT ", 3, false);
 
@@ -124,7 +104,6 @@ public class AT2ACCOP0021Test {
         }
         return true;
     }
-
     private boolean Other_actions_management(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN TEMPLATE MANAGEMENT ", 3, false);
@@ -138,7 +117,6 @@ public class AT2ACCOP0021Test {
 
         return true;
     }
-
     private boolean Qbe_management(TestDriver driver) {
 
         driver.getReport().addHeader("QBE IN TEMPLATE MANAGEMENT ", 3, false);
@@ -177,7 +155,6 @@ public class AT2ACCOP0021Test {
         return true;
 
     }
-
     private boolean Edit_management(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN TEMPLATE MANAGEMENT", 3, false);
 
@@ -217,7 +194,6 @@ public class AT2ACCOP0021Test {
         }
         return true;
     }
-
     private boolean Search_management(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN TEMPLATE MANAGEMENT", 3, false);
@@ -251,7 +227,6 @@ public class AT2ACCOP0021Test {
 
         return true;
     }
-
     private boolean Add_management(TestDriver driver) {
         driver.getReport().addHeader(" ADD IN TEMPLATE MANAGEMENT", 3, false);
 
@@ -288,7 +263,6 @@ public class AT2ACCOP0021Test {
     }
 
     //GO TO
-
     private boolean Go_to_template_mapping_management(TestDriver driver) {
 
 
@@ -305,39 +279,18 @@ public class AT2ACCOP0021Test {
     }
 
     //TEMPLATE  MAPPING MANAGEMENT
-
     private boolean Template_mapping_management(TestDriver driver) {
 
-        if (!Add_mapping(driver)) {
-            return false;
-        }
-
-        if (!Search_mapping(driver)) {
-            return false;
-        }
-
-        if (!Edit_mapping(driver)) {
-            return false;
-        }
-
-        if (!Qbe_mapping(driver)) {
-            return false;
-        }
-
-        if (!Other_actions_mapping(driver)) {
-            return false;
-        }
-
-        if (!Delete_mapping(driver)) {
-            return false;
-        }
+        if (!Add_mapping(driver)) return false;
+        if (!Search_mapping(driver)) return false;
+        if (!Edit_mapping(driver)) return false;
+        if (!Qbe_mapping(driver)) return false;
+        if (!Other_actions_mapping(driver)) return false;
+        if (!Delete_mapping(driver)) return false;
         return true;
     }
-
     private boolean Delete_mapping(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN TEMPLATE MAPPING MANAGEMENT ", 3, false);
-
-
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"template_mapping_del_b_delete", getElements("template_mapping_del_b_delete")},
                 new String[]{"template_mapping_del_e_record", getElements("template_mapping_del_e_record")},
@@ -347,7 +300,6 @@ public class AT2ACCOP0021Test {
         }
         return true;
     }
-
     private boolean Other_actions_mapping(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN TEMPLATE MAPPING MANAGEMENT ", 3, false);
 
@@ -359,7 +311,6 @@ public class AT2ACCOP0021Test {
         }
         return true;
     }
-
     private boolean Qbe_mapping(TestDriver driver) {
         driver.getReport().addHeader("QBE IN TEMPLATE MAPPING MANAGEMENT ", 3, false);
 
@@ -411,7 +362,6 @@ public class AT2ACCOP0021Test {
 
         return true;
     }
-
     private boolean Edit_mapping(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN TEMPLATE MAPPING MANAGEMENT", 3, false);
 
@@ -470,7 +420,6 @@ public class AT2ACCOP0021Test {
 
         return true;
     }
-
     private boolean Search_mapping(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN PAYMENT MAPPING MANAGEMENT", 3, false);
@@ -519,7 +468,6 @@ public class AT2ACCOP0021Test {
 
         return true;
     }
-
     private boolean Add_mapping(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN TEMPLATE MAPPING MANAGEMENT", 3, false);

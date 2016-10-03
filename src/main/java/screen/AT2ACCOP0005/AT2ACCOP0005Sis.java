@@ -18,38 +18,30 @@ public class AT2ACCOP0005Sis {
 
     public AT2ACCOP0005Sis() {
     }
-
     public AT2ACCOP0005Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0005Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0005Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0005Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodations");
         driver.getTestdetails().setSubmenu("Operations");
         driver.getTestdetails().setScreen("Merchant procedence country");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -74,10 +66,10 @@ public class AT2ACCOP0005Sis {
         if (!delete(driver)) {
             return false;
         }
+        if (!history_get_values(driver)) return false;
+        if (!history_qbe(driver)) return false;
         return true;
     }
-
-
     ////////// - CREATE/EDIT - //////////
     private boolean create(TestDriver driver, boolean add) {
         String where;
@@ -147,8 +139,6 @@ public class AT2ACCOP0005Sis {
         }
         return true;
     }
-
-
     ////////// - SEARCH - //////////
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("RECORD SEARCH", 3, true);
@@ -180,7 +170,6 @@ public class AT2ACCOP0005Sis {
 
         return true;
     }
-
     ////////// - QBE - //////////
     private boolean qbe(TestDriver driver) {
         driver.getReport().addHeader("RECORD QBE", 3, true);
@@ -223,8 +212,6 @@ public class AT2ACCOP0005Sis {
 
         return true;
     }
-
-
     ////////// - OTHER FUNCTIONS - //////////
     private boolean otherFunctions(TestDriver driver) {
         driver.getReport().addHeader("RECORD OTHER FUNCTIONS", 3, true);
@@ -248,8 +235,6 @@ public class AT2ACCOP0005Sis {
 
         return true;
     }
-
-
     ////////// - HISTORY GET VALUES - //////////
     private boolean history_get_values(TestDriver driver) {
         driver.getReport().addHeader("RECORD HISTORY: GET VALUES", 3, true);
@@ -319,8 +304,6 @@ public class AT2ACCOP0005Sis {
 
         return true;
     }
-
-
     ////////// - HISTORY QBE - //////////
     private boolean history_qbe(TestDriver driver) {
         driver.getReport().addHeader("RECORD HISTORY: QBE", 3, true);
@@ -404,8 +387,6 @@ public class AT2ACCOP0005Sis {
 
         return true;
     }
-
-
     private boolean delete(TestDriver driver) {
         driver.getReport().addHeader("RECORD DELETE", 3, true);
 

@@ -58,7 +58,6 @@ public class AT2ACCOP0011Test {
     }
 
     //Mapping
-
     private boolean Mapping_errors(TestDriver driver) {
 
         if (!Add_mapping(driver)) {
@@ -274,6 +273,4 @@ public class AT2ACCOP0011Test {
         }
         return true;
     }
-
-
 }

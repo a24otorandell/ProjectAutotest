@@ -16,39 +16,31 @@ public class AT2ACCOP0011Sis {
     public AT2ACCOP0011Sis() {
 
     }
-
     public AT2ACCOP0011Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0011Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0011Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0011Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -65,7 +57,6 @@ public class AT2ACCOP0011Sis {
     }
 
     //Mapping
-
     private boolean Mapping_errors(TestDriver driver) {
 
         if (!Add_mapping(driver)) {
