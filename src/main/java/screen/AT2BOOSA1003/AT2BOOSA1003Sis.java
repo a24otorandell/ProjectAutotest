@@ -10,11 +10,11 @@ import org.openqa.selenium.Keys;
 
 /**
  * @author ajvirgili  Created on 29/06/2016
- *
- * Necesita cambiarse para que busque una reserva actual en boosa0001 y después vaya a la boosa1003 para generar la estimación
+ *         <p>
+ *         Necesita cambiarse para que busque una reserva actual en boosa0001 y después vaya a la boosa1003 para generar la estimación
  */
 @SuppressWarnings({"unused", "RedundantIfStatement", ""})
-public class AT2BOOSA1003Test {
+public class AT2BOOSA1003Sis {
 
     protected AT2BOOSA1003Locators locators;
     protected AT2BOOSA1003Data data;
@@ -23,7 +23,7 @@ public class AT2BOOSA1003Test {
     /**
      * Constructor
      */
-    public AT2BOOSA1003Test(String enviroment) {
+    public AT2BOOSA1003Sis(String enviroment) {
         setData(new AT2BOOSA1003Data(enviroment));
         setLocators(new AT2BOOSA1003Locators(enviroment));
     }

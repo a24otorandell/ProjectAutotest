@@ -166,17 +166,15 @@ public class AT2ACCOP0024Sis {
             return false;
         }
         Functions.break_time(driver, 4, 500);
-        //ToDo optimizsce this
-        String[] fields = {"", "report", "file", "type", "financial_date", "financial_status", "merchant", "settelment", "currency", "modification_user", "modification_date"};
-        for (int i = 1; i < 4; i++) {
-            for (int j = 1; j < 11; j++) {
-                //'pc1:resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
-                //el primer num (tbody/tr[n]) es la fila y el ultimo (tr/td[n]) la columna
-                Functions.getText(driver,
-                        new String[]{fields[j], "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[" + i + "]/td[2]/div/table/tbody/tr/td[" + j + "]"},
-                        fields[j] + "_" + Integer.toString(i), " on Getting Data");
-            }
-        }
+        String[] fields = {"", "report", "file", "type", "financial_date_from", "financial_status",
+                "merchant", "settelment", "currency", "modification_user", "modification_date_from",
+                "batchID", "total_amount", "submerchant"};
+
+        Functions.collectTableData(driver,
+                fields,
+                "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[", "]/td[2]/div/table/tbody/tr/td[", "]",
+                3,
+                " on Getting Data");
         return true;
     }
 

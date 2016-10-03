@@ -2,8 +2,6 @@ package core.CommonActions;
 
 import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -75,6 +73,24 @@ public class DataGenerator {
             e.printStackTrace();
         }
         return (int) (Math.floor((int) (Math.random() * (max - min) + 1))) + min;
+
+    }
+
+    /**
+     * This method generates a random double between the chosen range
+     *
+     * @param min Integer - minimum value the result can adquire
+     * @param max Integer - maximum value the result can adquire
+     * @return {@code double}
+     * @see Math#random()
+     */
+    public static double randomFloat(int min, int max) {
+        try {
+            Thread.sleep(1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return Math.random() < 0.5 ? ((1 - Math.random()) * (max - min) + min) : (Math.random() * (max - min) + min);
 
     }
 

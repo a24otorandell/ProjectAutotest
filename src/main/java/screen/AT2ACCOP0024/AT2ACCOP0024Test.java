@@ -176,7 +176,15 @@ public class AT2ACCOP0024Test {
         String[] fields = {"", "report", "file", "type", "financial_date_from", "financial_status",
                 "merchant", "settelment", "currency", "modification_user", "modification_date_from",
                 "batchID", "total_amount", "submerchant"};
-        for (int i = 1; i < 4; i++) {
+
+        Functions.collectTableData(driver,
+                fields,
+                "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[", "]/td[2]/div/table/tbody/tr/td[", "]",
+                3,
+                " on Getting Data");
+
+       /*
+          for (int i = 1; i < 4; i++) {
             for (int j = 1; j < 14; j++) {
                 //'pc1:resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
                 //el primer num (tbody/tr[n]) es la fila y el ultimo (tr/td[n]) la columna
@@ -184,7 +192,7 @@ public class AT2ACCOP0024Test {
                         new String[]{fields[j], "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[" + i + "]/td[2]/div/table/tbody/tr/td[" + j + "]"},
                         fields[j] + "_" + Integer.toString(i), " on Getting Data");
             }
-        }
+        }*/
         return true;
     }
 
