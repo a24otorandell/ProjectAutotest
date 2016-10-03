@@ -85,9 +85,9 @@ public class AT2ACCOP0021Test {
             return false;
         }
 
-        if (!Delete_management(driver)) {
+     /*   if (!Delete_management(driver)) {
             return false;
-        }
+        }*/
 
         return true;
     }
@@ -503,11 +503,11 @@ public class AT2ACCOP0021Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"template_mapping_add_i_psp_template_code", getElements("template_mapping_add_i_psp_template_code")},
-                "psp_code", "PB1", " on ADD")) {
+                "psp_code", "PB2", " on ADD")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"template_mapping_add_i_psp_template_name", getElements("template_mapping_add_i_psp_template_name")},
-                "psp_name", "Prueba1", " on ADD")) {
+                "psp_name", "Prueba2", " on ADD")) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
