@@ -310,7 +310,7 @@ public class Functions {
         //HOW TO CALL THIS METHOD:
         /*
         if (!Functions.insertInput(driver, new String[]{"inputname",getElements("inputvalue")},
-                "dataname", ""," where")){return false;}
+                "dataname", ""," on where")){return false;}
         */
         driver.getReport().addContent("Insert Input:", "h5", "");
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), 30, 1000);
@@ -808,7 +808,7 @@ public class Functions {
         //HOW TO CALL THIS METHOD
         /*if (!Functions.selectText(driver,
                 new String[]{"x",getElements("x")},
-                "content", "dataname", " where")){return false;}*/
+                "content", "dataname", " on where")){return false;}*/
         boolean found = false;
         Select e_select;
         List<WebElement> options;
