@@ -18,38 +18,30 @@ public class AT2TRFSU0005Sis {
         setData(new AT2TRFSU0005Data(enviroment));
         setLocators(new AT2TRFSU0005Locators(enviroment));
     }
-
     public AT2TRFSU0005Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0005Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0005Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0005Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfer");
         driver.getTestdetails().setSubmenu("Set Up");
         driver.getTestdetails().setScreen("Grouping transfers areas only for contracts 2.0");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -144,7 +136,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean searchGA(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD:", 3, true);
         try {
@@ -179,7 +170,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean qbeGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - QBE SEARCH RECORD:", 4, false);
         if (!Functions.clickQbE(driver,
@@ -210,7 +200,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean auditDetachGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - Data History & Detach table:", 4, false);
         if (!Functions.checkClickByAbsence(driver,
@@ -234,7 +223,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean deleteGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - DELETE RECORD:", 4, true);
         try {
@@ -260,7 +248,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     ////////////\\\\\\\\\\\\\\
     protected boolean recordInteractionA(TestDriver driver, boolean type) {
         String on, update = "";
@@ -303,7 +290,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean qbeA(TestDriver driver, boolean run) {
         String update = "";
         if (run) {
@@ -338,7 +324,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean auditDetachA(TestDriver driver) {
         driver.getReport().addHeader("Data History & Detach table:", 4, false);
         if (!Functions.checkClickByAbsence(driver,
@@ -362,7 +347,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean deleteA(TestDriver driver) {
         driver.getReport().addHeader("Areas - DELETE RECORD:", 4, true);
         try {
@@ -389,7 +373,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean enabler(TestDriver driver) {
         Functions.break_time(driver, 1, 0);
         if (!Functions.checkClickByAbsence(driver,
@@ -406,6 +389,4 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
-
 }
