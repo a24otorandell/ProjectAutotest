@@ -9,9 +9,12 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java" line="457" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="&#10;">
+    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="actualizar workspace">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java" />
     </list>
     <ignored path="ProjectAutotest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,12 +42,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="codeStyleSettings.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/codeStyleSettings.xml">
+      <file leaf-file-name="AT2MDMOR0029Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="390" column="5" selection-start-line="390" selection-start-column="5" selection-end-line="390" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#AT2MDMOR0029Test#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#Service_authorization#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#Delete_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#Other_actions_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#QBE_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#Edit_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#Search_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+                <element signature="method#Add_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2MDMOR0029Sis.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9482072">
+              <caret line="310" column="5" selection-start-line="310" selection-start-column="5" selection-end-line="310" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#AT2MDMOR0029Sis#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#start#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#Service_authorization#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#Delete_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#Other_actions_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#QBE_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#Edit_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#Search_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#Add_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,11 +152,9 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0024/AT2ACCOP0024Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2ACCOP0025Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2ACCOP0025Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Locators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1003/AT2BOOSA1003Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1003/AT2BOOSA1003Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1003/AT2BOOSA1003Sis.java" />
@@ -139,6 +176,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0025/AT2ACCOP0025Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
       </list>
     </option>
   </component>
@@ -319,6 +358,36 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AT2MDMOR0029" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -379,7 +448,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MainTest" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-e test  -t AT2MDMOR0029 -u u_acarrillo -p Septiembre2016" />
+      <option name="PROGRAM_PARAMETERS" value="-e sis  -t AT2MDMOR0029 -u u_acarrillo -p Septiembre2016" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -706,12 +775,6 @@
       <option name="number" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00011" summary="jhgsxz">
-      <created>1463485209731</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1463485209731</updated>
-    </task>
     <task id="LOCAL-00012" summary="jhgsxz">
       <created>1463485354884</created>
       <option name="number" value="00012" />
@@ -1000,7 +1063,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475503375270</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="actualizar workspace">
+      <created>1475503528814</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1475503528814</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1014,7 +1083,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1022,8 +1091,8 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3492696" sideWeight="0.52077365" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2679083" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3625498" sideWeight="0.47922635" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29614875" sideWeight="0.48393574" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3625498" sideWeight="0.47922635" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29614875" sideWeight="0.48393574" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2299427" sideWeight="0.90561223" order="3" side_tool="false" content_ui="combo" />
@@ -1089,7 +1158,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="He quitado el package que sobraba, y he añadido algo en juraDetails" />
     <MESSAGE value="jhgsxz" />
     <MESSAGE value="Arreglo" />
     <MESSAGE value="AT2ACCDI0003 añadida" />
@@ -1114,7 +1182,8 @@
     <MESSAGE value="quitar espacios y lineas en blanco innecesarias en at2accop0011&#10;" />
     <MESSAGE value="quitar espacios y lineas en blanco innecesarias en AT2ACCOP0020&#10;" />
     <MESSAGE value="&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;" />
+    <MESSAGE value="actualizar workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizar workspace" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1323,20 +1392,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.26945245">
           <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36743516">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -1835,11 +1890,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/codeStyleSettings.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="390" column="5" selection-start-line="390" selection-start-column="5" selection-end-line="390" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#AT2MDMOR0029Test#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#Service_authorization#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#Delete_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#Other_actions_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#QBE_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#Edit_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#Search_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+            <element signature="method#Add_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9482072">
+          <caret line="310" column="5" selection-start-line="310" selection-start-column="5" selection-end-line="310" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#AT2MDMOR0029Sis#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#Service_authorization#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#Delete_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#Other_actions_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#QBE_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#Edit_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#Search_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#Add_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
