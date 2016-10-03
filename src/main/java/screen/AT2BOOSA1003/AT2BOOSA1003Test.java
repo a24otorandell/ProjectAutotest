@@ -105,12 +105,17 @@ public class AT2BOOSA1003Test {
      * @return boolean to control the process flow
      */
     protected boolean testCSED(TestDriver driver) {
+
+        if (!Search_booking(driver)) {
+            return false;
+        }
         if (!searchBooking(driver, false)) {
             return false;
         }
         if (!estimationProcess(driver)) {
             return false;
-        }/*
+        }
+        /*
         if (!salesQbe(driver)) {
             return false;
         }
@@ -136,6 +141,12 @@ public class AT2BOOSA1003Test {
             return false;
         }*/
         return false;
+    }
+
+    private boolean Search_booking(TestDriver driver) {
+
+
+        return true;
     }
 
     protected boolean searchBooking(TestDriver driver, boolean wch) {

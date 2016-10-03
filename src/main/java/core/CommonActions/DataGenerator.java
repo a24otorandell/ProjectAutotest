@@ -132,8 +132,8 @@ public class DataGenerator {
      */
     public static String getRelativeDate(TestDriver driver, String originaldate, String format, int incrmonth, int incrday, int incryear) {
         //HOW TO CALL THIS METHOD
-        /*DataGenerator.getRelativeDate(driver, "dataname", //dataname
-                "01/01/1990", "dd/MM/yyyy",0, 0, 0);*/ // original date // dateformat // increments (month, day, year)
+        /*DataGenerator.getRelativeDatedd/MM/yyyy(driver, "dataname", //dataname
+                "01/01/1990", "",0, 0, 0);*/ // original date // dateformat // increments (month, day, year)
         String today = "";
         try {
             Date fecha;

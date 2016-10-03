@@ -167,35 +167,35 @@ public class AT2ACCSU0025Test {
                 new String[]{"Offer_types_ed_b_edit", getElements("Offer_types_ed_b_edit")}, //element to click
                 new String[]{"Offer_types_ed_i_discount", getElements("Offer_types_ed_i_discount")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
-                " on ADD")) {
+                " on EDIT")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"Offer_types_ed_i_discount", getElements("Offer_types_ed_i_discount")},
-                "input_discount", "PB2", " on ADD")) {
+                "input_discount", "PB2", " on EDIT")) {
             return false;
         }
 
 
         if (!Functions.insertInput(driver, new String[]{"Offer_types_ed_i_discount_description", getElements("Offer_types_ed_i_discount_description")},
-                "input_description", "Prueba2", " on ADD")) {
+                "input_description", "Prueba2", " on EDIT")) {
             return false;
         }
 
 
         if (!Functions.checkboxValue(driver,
-                getElements("Offer_types_ed_check_box_notes"), "Notes", false, true, " on ADD")) {
+                getElements("Offer_types_ed_check_box_notes"), "Notes", false, true, " on EDIT")) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
-                getElements("Offer_types_ed_check_box_percentage"), "percentage", false, true, " on ADD")) {
+                getElements("Offer_types_ed_check_box_percentage"), "percentage", false, true, " on EDIT")) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"Offer_types_ed_b_save", getElements("Offer_types_ed_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
                 30, 500,
-                " on ADD")) {
+                " on EDIT")) {
             return false;
         }
 
