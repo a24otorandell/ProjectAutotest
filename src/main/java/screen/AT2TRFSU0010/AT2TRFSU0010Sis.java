@@ -14,41 +14,32 @@ public class AT2TRFSU0010Sis {
     protected AT2TRFSU0010Data data;
 
     public AT2TRFSU0010Sis() {
-
     }
-
     public AT2TRFSU0010Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0010Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0010Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0010Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -61,7 +52,6 @@ public class AT2TRFSU0010Sis {
         }
         return false;
     }
-
     private boolean Transfer_service_type(TestDriver driver) {
 
 
@@ -130,7 +120,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean Other_actions_type_description(TestDriver driver) {
 
 
@@ -162,7 +151,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean Edit_service_type_description(TestDriver driver) {
         driver.getReport().addHeader("EDIT IN SERVICE TYPE DESCRIPTION", 3, false);
 
@@ -193,7 +181,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean Search_service_type_description(TestDriver driver) {
         driver.getReport().addHeader("QBE  IN SERVICE TYPE DESCRIPTION", 3, false);
 
@@ -230,7 +217,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean Add_service_type_description(TestDriver driver) {
 
         driver.getReport().addHeader("ADD IN SERVICE TYPE DESCRIPTION", 3, false);
@@ -292,7 +278,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean Other_actions_type(TestDriver driver) {
 
 
@@ -316,7 +301,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean QBE_service_type(TestDriver driver) {
 
         driver.getReport().addHeader("QBE  IN ADITIONAL SUPLEMENTS", 3, false);
@@ -366,7 +350,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean Edit_service_type(TestDriver driver) {
 
         driver.getReport().addHeader("EDIT IN SERVICE TYPE", 3, false);
@@ -419,7 +402,6 @@ public class AT2TRFSU0010Sis {
         return true;
 
     }
-
     private boolean Search_service_type(TestDriver driver) {
 
         driver.getReport().addHeader(" BASIC SEARCH IN SERVICE TYPE", 3, false);
@@ -460,7 +442,6 @@ public class AT2TRFSU0010Sis {
 
         return true;
     }
-
     private boolean Add_service_type(TestDriver driver) {
 
 

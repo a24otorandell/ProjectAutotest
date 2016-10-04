@@ -1371,7 +1371,6 @@ public class AT2TFRSU0011Test {
 
     }
 
-
     //Maximun
     private boolean Maximun_seats_of_a_hotel(TestDriver driver) {
         if (!Add_Maximum(driver)) {
@@ -1398,7 +1397,6 @@ public class AT2TFRSU0011Test {
 
         return true;
     }
-
 
     private boolean Skip_Maximum(TestDriver driver) {
 
