@@ -98,12 +98,12 @@ public class AT2TRFSU0008Test {
                 new String[]{"create_route_e_route_maintence_b_add", getElements("create_route_e_route_maintence_b_add")}, //element to click
                 new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
-                " on ADD")) {
+                " on CREATE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")},
-                "area_code", "PB2", " on ")) {
+                "area_code", "PB2", " on CREATE")) {
             return false;
         }
 
@@ -114,25 +114,25 @@ public class AT2TRFSU0008Test {
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "terminal_area", //Data name
-                " on ADD")) {
+                " on CREATE")) {
             return false;
         }
 
         if (!Functions.checkboxValue(driver,
-                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " where")) {
+                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " on CREATE")) {
             return false;
         }//where
 
         if (!Functions.insertInput(driver,
                 new String[]{"create_route_e_route_maintence_i_remarks", getElements("create_route_e_route_maintence_i_remarks")},
-                "remarks", "Esto es la segunda prueba", " on ")) {
+                "remarks", "Esto es la segunda prueba", " on CREATE")) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"create_route_e_route_maintence_b_save", getElements("create_route_e_route_maintence_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
                 30, 500,
-                " on ADD")) {
+                " on CREATE")) {
             return false;
         }
 
@@ -143,37 +143,11 @@ public class AT2TRFSU0008Test {
     private boolean Go_to_routes_by_default(TestDriver driver) {
 
         driver.getReport().addHeader("GO TO IN ROUTES BY DEFAULT", 3, false);
-
-        if (!Functions.checkClick(driver,
-                new String[]{"create_route_lov_search_first", getElements("create_route_lov_search_first")}, //element to click
-                new String[]{"create_route_i_search", getElements("create_route_i_search")}, //element expected to appear
-                30, 500, //seconds/miliseconds (driver wait)
-                " on ")) {
-            return false;
-        }
-
-        if (!Functions.insertInput(driver,
-                new String[]{"create_route_i_search", getElements("create_route_i_search")},
-                "route", "AT2TRFSU0001", " on ")) {
-            return false;
-        }
-
-        if (!Functions.simpleClick(driver,
-                new String[]{"create_route_lov_search", getElements("create_route_lov_search")}, //element to click
-                " on ")) {
-            return false;
-        }
-
-        if (!Functions.checkClick(driver,
-                new String[]{"create_route_e_route_maintenance", getElements("create_route_e_route_maintenance")}, //element to click
-                new String[]{"create_route_e_route_maintence_b_add", getElements("create_route_e_route_maintence_b_add")}, //element expected to appear
-                30, 500, //seconds/miliseconds (driver wait)
-                " on ")) {
-            return false;
-        }
+        driver.getTestdetails().setTestname("AT2TRFSU0001");
+        CommonProcedures.goToScreen(driver, 1);
+        driver.getTestdetails().setTestname("AT2TRFSU0008");
         return true;
     }
-
 
     private boolean Create_in_route(TestDriver driver) {
         driver.getReport().addHeader("ADD IN ROUTES BY DEFAULT", 3, false);
@@ -183,12 +157,12 @@ public class AT2TRFSU0008Test {
                 new String[]{"create_route_e_route_maintence_b_add", getElements("create_route_e_route_maintence_b_add")}, //element to click
                 new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
-                " on ADD")) {
+                " on CREATE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")},
-                "area_code", "PB1", " on ")) {
+                "area_code", "PB1", " on CREATE")) {
             return false;
         }
 
@@ -199,25 +173,25 @@ public class AT2TRFSU0008Test {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "terminal_area", //Data name
-                " on ADD")) {
+                " on CREATE")) {
             return false;
         }
 
         if (!Functions.checkboxValue(driver,
-                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " where")) {
+                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " on CREATE")) {
             return false;
         }//where
 
         if (!Functions.insertInput(driver,
                 new String[]{"create_route_e_route_maintence_i_remarks", getElements("create_route_e_route_maintence_i_remarks")},
-                "remarks", "Esto es una prueba", " on ")) {
+                "remarks", "Esto es una prueba", " on CREATE")) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"create_route_e_route_maintence_b_save", getElements("create_route_e_route_maintence_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
                 30, 500,
-                " on ADD")) {
+                " on CREATE")) {
             return false;
         }
         return true;
@@ -229,7 +203,7 @@ public class AT2TRFSU0008Test {
                 new String[]{"create_route_e_routes_by_default", getElements("create_route_e_routes_by_default")}, //element to click
                 new String[]{"route_b_add", getElements("route_b_add")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
-                " on ADD")) {
+                " on GO TO")) {
             return false;
         }
         return true;

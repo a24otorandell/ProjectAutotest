@@ -92,8 +92,9 @@ public class CommonProcedures {
         }
         return true;
     }
-   /* public static void goToScreen(TestDriver driver, int number_screens_open) {
-        try {
+
+    public static boolean goToScreen(TestDriver driver, int number_screens_open) {
+        /*try {
             String componentinput;
             String searchicon = "//*[contains(@id, 'pt1:searchminimenu::icon')]";
             if (driver.getTestdetails().getEnvironment().equals("sis")) {
@@ -111,9 +112,31 @@ public class CommonProcedures {
         } catch (Exception e) {
             String ecode = "--ERROR: goToScreen(): Unable to enter the selected screen, maybe the server is running too slow..";
             e.printStackTrace();
+            ErrorManager.process(driver, ecode);*/
+
+        try {
+            String result = "//*[contains(@id, 'pt_i3:" + number_screens_open + ":cl3')]";
+            Functions.break_time(driver, 10, 500);
+            if (!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"Component", recursiveXPaths.componentinput}, "Component", driver.getTestdetails().getTestname(), " on main ATLAS page")) {
+                return false;
+            }
+            if (!Functions.checkClick(driver, new String[]{"Search component icon", recursiveXPaths.searchcomponent}, new String[]{"Component result", result}, 180, 500, " on main ATLAS page")) {
+                return false;
+            }
+            if (!Functions.checkClickByAbsence(driver, new String[]{"Component result", result}, new String[]{"Component result", result}, 360, 500, " on main ATLAS page")) {
+                return false;
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: goToScreen(): Unable to enter the selected screen, maybe the server is running too slow..";
+            e.printStackTrace();
             ErrorManager.process(driver, ecode);
+            return false;
         }
-    }*/
+        return true;
+    }
     /**
      * This method logs out of Atlas2.0 and checks that it's done correcly, otherwise will notify it.
      *

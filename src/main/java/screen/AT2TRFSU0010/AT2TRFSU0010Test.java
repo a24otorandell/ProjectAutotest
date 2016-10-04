@@ -51,6 +51,7 @@ public class AT2TRFSU0010Test {
         }
         return false;
     }
+
     private boolean Transfer_service_type(TestDriver driver) {
 
         if (!Add_service_type(driver)) {
@@ -100,6 +101,8 @@ public class AT2TRFSU0010Test {
 
         return true;
     }
+
+    //SERVICE TYPE DESCRIPTION
 
     private boolean Dele_type_description(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN SERVICE TYPE DESCRIPTION", 3, false);
@@ -236,6 +239,9 @@ public class AT2TRFSU0010Test {
         return true;
     }
 
+
+    //SERVICE TYPE
+
     private boolean Delete_type(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN SERVICE TYPE", 3, false);
         if (!Functions.doDeleteNCheck(driver,
@@ -367,7 +373,7 @@ public class AT2TRFSU0010Test {
             return false;
         }
         if (!Functions.checkboxValue(driver,
-                getElements("service_se_check_box_mandatory"), "active", Boolean.valueOf(data.getData().get("active")), true, " on SEARCH")) {
+                getElements("service_se_check_box_mandatory"), "active", true, true, " on SEARCH")) {
             return false;
         }
         if (!Functions.insertInput(driver,
