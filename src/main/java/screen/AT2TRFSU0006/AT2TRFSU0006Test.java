@@ -19,44 +19,35 @@ public class AT2TRFSU0006Test {
     public AT2TRFSU0006Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0006Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0006Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0006Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfer");
         driver.getTestdetails().setSubmenu("Set up");
         driver.getTestdetails().setScreen("TO groups");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
-
     protected boolean testCSED(TestDriver driver) {
         grouping_testCSED(driver);
         ttoo_testCSED(driver);
         return false;
     }
-
     protected boolean grouping_testCSED(TestDriver driver) {
         Functions.zoomOut(driver);
         if (!grouping_check_existence(driver)) {
@@ -83,7 +74,6 @@ public class AT2TRFSU0006Test {
         return false;
     }
 
-
     protected boolean ttoo_testCSED(TestDriver driver) {
         if (!ttoo_create(driver)) {
             return false;
@@ -103,11 +93,9 @@ public class AT2TRFSU0006Test {
         return false;
     }
 
-
     ///////////////////////////////////////////////////////////
     /////////// - TABLE: GROUPING TOUR OPERATOR - /////////////
     ///////////////////////////////////////////////////////////
-
     ////////// - TABLE GROUPING CHECK EXISTENCE - //////////
     private boolean grouping_check_existence(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Grouping Tour Operator, RECORD CHECK EXISTENCE", 3, true);
@@ -137,8 +125,6 @@ public class AT2TRFSU0006Test {
         }
         return true;
     }
-
-
     ////////// - TABLE GROUPING CREATE/EDIT - //////////
     private boolean grouping_create(TestDriver driver, boolean add) {
         String where;
@@ -201,8 +187,6 @@ public class AT2TRFSU0006Test {
 
         return true;
     }
-
-
     ////////// - TABLE GROUPING SEARCH - //////////
     private boolean grouping_search(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Grouping Tour Operator, SEARCH RECORD", 3, true);
@@ -240,8 +224,6 @@ public class AT2TRFSU0006Test {
 
         return true;
     }
-
-
     ////////// - TABLE GROUPING QBE - //////////
     private boolean grouping_qbe(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Grouping Tour Operator, RECORD QBE", 3, true);
@@ -292,8 +274,6 @@ public class AT2TRFSU0006Test {
 
         return true;
     }
-
-
     ////////// - TABLE GROUPING OTHER FUNCTIONS - //////////
     private boolean grouping_otherFunctions(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Grouping Tour Operator, OTHER FUNCTIONS", 3, true);
@@ -317,8 +297,6 @@ public class AT2TRFSU0006Test {
 
         return true;
     }
-
-
     ////////// - TABLE GROUPING DELETE - //////////
     private boolean grouping_delete(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Grouping Tour Operator, RECORD DELETE", 3, true);
@@ -332,13 +310,10 @@ public class AT2TRFSU0006Test {
         }
         return true;
     }
-
     //////////////////////////////////////////////////////////////
     /////////////// - TABLE: TOUR OPERATOR - /////////////////////
     //////////////////////////////////////////////////////////////
-
     /////////////// - TABLE: TOUR OPERATOR, CREATION- //////////////
-
     private boolean ttoo_create(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Tour Operator, RECORD CREATION", 3, true);
 
@@ -376,8 +351,6 @@ public class AT2TRFSU0006Test {
 
         return true;
     }
-
-
     private boolean ttoo_qbe(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Tour Operator, RECORD QBE", 3, true);
 
@@ -412,8 +385,6 @@ public class AT2TRFSU0006Test {
         } // where this operation occurs
         return true;
     }
-
-
     private boolean ttoo_otherFunctions(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Tour Operator, OTHER FUNCTIONS", 3, true);
 
@@ -427,8 +398,6 @@ public class AT2TRFSU0006Test {
 
         return true;
     }
-
-
     private boolean ttoo_delete(TestDriver driver) {
         driver.getReport().addHeader("TABLE: Tour Operator, RECORD DELETE", 3, true);
 
