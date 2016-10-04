@@ -71,9 +71,9 @@ public class AT2TFRSU0011Test {
         if (!Temporaly_quality_rules(driver)) {
             return false;
         }
-        if (!Calidad_vuelos_tiempo(driver)) {
+     /*   if (!Calidad_vuelos_tiempo(driver)) {
             return false;
-        }
+        }*/
         if (!Calidad_tiempo_antela(driver)) {
             return false;
         }
@@ -361,7 +361,7 @@ public class AT2TFRSU0011Test {
     }
 
     // Calidad, Temporaly
-    private boolean Calidad_vuelos_tiempo(TestDriver driver) {
+   /* private boolean Calidad_vuelos_tiempo(TestDriver driver) {
         driver.getReport().addHeader("MODIFY VALUES IN TEMPORARY QUALITY RULES", 3, false);
         driver.getReport().addContent("", "br", "");
         driver.getReport().addContent("This block is a style guide and for this reason, only enters and get out, for more information see QA-10978.", "h3", "class='success'");
@@ -390,7 +390,13 @@ public class AT2TFRSU0011Test {
         }
         driver.getReport().closeBlock();
         return true;
-    }
+    }*/
+
+    /**
+     * BUG REPORTADO EN JIRA QA-10978
+     */
+
+
     private boolean Calidad_tiempo_antela(TestDriver driver) {
         if (!Add_antela(driver)) {
             return false;
