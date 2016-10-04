@@ -123,6 +123,7 @@ public class AT2ACCSU0018Locators {
         elements.put("multi_lenguaje_se_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]/a");
         elements.put("multi_lenguaje_se_i_lenaguage", "//*[contains(@id, 'afr_resId2_afr_c13::content')]");
         elements.put("multi_lenguaje_se_i_remarks", "//*[contains(@id, 'afr_resId2_afr_c12::content')]");
+        elements.put("multi_lenguaje_se_e_result", "//*[contains(@id, 'pc2:resId2::db')]/table/tbody/tr[1]/td[1]");
 
         //EDIT
 
