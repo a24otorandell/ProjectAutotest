@@ -14,56 +14,44 @@ public class AT2TRFSU0010Test {
     protected AT2TRFSU0010Data data;
 
     public AT2TRFSU0010Test() {
-
     }
-
     public AT2TRFSU0010Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0010Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0010Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0010Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
     }
 
     protected boolean testCSED(TestDriver driver) {
-
         if (!Transfer_service_type(driver)) {
             return false;
         }
         return false;
     }
-
     private boolean Transfer_service_type(TestDriver driver) {
-
 
         if (!Add_service_type(driver)) {
             return false;
@@ -114,11 +102,7 @@ public class AT2TRFSU0010Test {
     }
 
     private boolean Dele_type_description(TestDriver driver) {
-
-
         driver.getReport().addHeader("DELETE IN SERVICE TYPE DESCRIPTION", 3, false);
-
-
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"description_b_delete", getElements("description_b_delete")},
                 new String[]{"description_a_records", getElements("description_a_records")},
@@ -126,24 +110,15 @@ public class AT2TRFSU0010Test {
                 " on DELETE IN DESCRIPTION")) {
             return false;
         }
-
-
         return true;
     }
-
     private boolean Other_actions_type_description(TestDriver driver) {
-
-
         driver.getReport().addHeader("OTHER ACTIONS IN SERVICE TYPE DESCRIPTION", 3, false);
-
-
         if (!Functions.simpleClick(driver,
                 new String[]{"description_qbe_result", getElements("description_qbe_result")}, //element to click
                 " on OTHER ACTIONS IN DESCRIPTION")) {
             return false;
         }
-
-
         if (!Functions.auditData(driver,
                 new String[]{"description_b_actions", getElements("description_b_actions")}, //actions button
                 new String[]{"description_ac_auditdata", getElements("description_ac_auditdata")}, //audit button
@@ -158,15 +133,10 @@ public class AT2TRFSU0010Test {
                 " on OTHER ACTIONS IN DESCRIPTION")) {
             return false;
         }
-
-
         return true;
     }
-
     private boolean Edit_service_type_description(TestDriver driver) {
         driver.getReport().addHeader("EDIT IN SERVICE TYPE DESCRIPTION", 3, false);
-
-
         if (!Functions.checkClick(driver,
                 new String[]{"description_b_edit", getElements("description_b_edit")}, //element to click
                 new String[]{"description_ed_i_description", getElements("description_ed_i_description")}, //element expected to appear
@@ -193,10 +163,8 @@ public class AT2TRFSU0010Test {
 
         return true;
     }
-
     private boolean Search_service_type_description(TestDriver driver) {
         driver.getReport().addHeader("QBE  IN SERVICE TYPE DESCRIPTION", 3, false);
-
         if (!Functions.clickQbE(driver,
                 new String[]{"description_b_qbe", getElements("description_b_qbe")},// query button
                 new String[]{"description_qbe_i_code_lenguaje", getElements("description_qbe_i_code_lenguaje")},//any query input
@@ -208,8 +176,6 @@ public class AT2TRFSU0010Test {
                 "des_qbe_lenguaje", data.getData().get("des_lov_lenguaje"), " on QBE IN DESCRIPTION")) {
             return false;
         }
-
-
         if (!Functions.insertInput(driver,
                 new String[]{"description_qbe_i_lenguaje_description", getElements("description_qbe_i_lenguaje_description")},
                 "des_qbe_description", data.getData().get("des_description"), " on QBE IN DESCRIPTION")) {
@@ -227,15 +193,10 @@ public class AT2TRFSU0010Test {
                 " on QBE IN DESCRIPTION")) {
             return false;
         }
-
         return true;
     }
-
     private boolean Add_service_type_description(TestDriver driver) {
-
         driver.getReport().addHeader("ADD IN SERVICE TYPE DESCRIPTION", 3, false);
-
-
         if (!Functions.checkClick(driver,
                 new String[]{"description_b_add", getElements("description_b_add")}, //element to click
                 new String[]{"description_add_lov", getElements("description_add_lov")}, //element expected to appear
@@ -276,11 +237,7 @@ public class AT2TRFSU0010Test {
     }
 
     private boolean Delete_type(TestDriver driver) {
-
-
         driver.getReport().addHeader("DELETE IN SERVICE TYPE", 3, false);
-
-
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"service_b_delete", getElements("service_b_delete")},
                 new String[]{"service_a_records", getElements("service_a_records")},
@@ -288,23 +245,16 @@ public class AT2TRFSU0010Test {
                 " on DELETE")) {
             return false;
         }
-
-
         return true;
     }
-
     private boolean Other_actions_type(TestDriver driver) {
-
-
         driver.getReport().addHeader("OTHER ACTIONS IN SERVICE TYPE", 3, false);
-
         if (!Functions.auditData(driver,
                 new String[]{"service_b_actions", getElements("service_b_actions")}, //actions button
                 new String[]{"service_a_auditdata", getElements("service_a_auditdata")}, //audit button
                 new String[]{"service_a_b_ok", getElements("service_a_b_ok")}, //audit_b_ok
                 " on OTHER ACTIONS")) {
             return false;
-
         }
         if (!Functions.detachTable(driver,
                 new String[]{"service_detach", getElements("service_detach")}, //detach button
@@ -312,24 +262,16 @@ public class AT2TRFSU0010Test {
                 " on OTHER ACTIONS")) {
             return false;
         }
-
-
         return true;
     }
-
     private boolean QBE_service_type(TestDriver driver) {
-
         driver.getReport().addHeader("QBE  IN ADITIONAL SUPLEMENTS", 3, false);
         Functions.break_time(driver, 6, 500);
-
-
         if (!Functions.simpleClick(driver,
                 new String[]{"service_b_reset", getElements("service_b_reset")}, //element to click
                 " on QBE")) {
             return false;
         }
-
-
         if (!Functions.clickQbE(driver,
                 new String[]{"service_b_qbe", getElements("service_b_qbe")},// query button
                 new String[]{"service_qbe_i_service", getElements("service_qbe_i_service")},//any query input
@@ -363,15 +305,10 @@ public class AT2TRFSU0010Test {
                 " on QBE")) {
             return false;
         }
-
         return true;
     }
-
     private boolean Edit_service_type(TestDriver driver) {
-
         driver.getReport().addHeader("EDIT IN SERVICE TYPE", 3, false);
-
-
         Functions.break_time(driver, 6, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"service_b_edit", getElements("service_b_edit")}, //element to click
@@ -380,12 +317,10 @@ public class AT2TRFSU0010Test {
                 " on ADD")) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"service_ed_i_service", getElements("service_ed_i_service")},
                 "add_service", (Integer.toString(DataGenerator.random(1, 9))), " on EDIT")) {
             return false;
         }
-
         if (!Functions.createLov(driver,
                 new String[]{"service_ed_lov", getElements("service_ed_lov")}, // b_lov
                 new String[]{"service_ed_i_vehicle", getElements("service_ed_i_vehicle")}, // i_lov
@@ -399,8 +334,6 @@ public class AT2TRFSU0010Test {
         Functions.getValue(driver, new String[]{"service_ed_i_description", getElements("service_ed_i_description")}, // element path
                 "add_descript", // key for data value (the name)
                 " on EDIT");
-
-
         if (!Functions.checkboxValue(driver,
                 getElements("service_ed_check_box_mandatory"), "active", false, true, " on EDIT")) {
             return false;
@@ -408,7 +341,6 @@ public class AT2TRFSU0010Test {
         Functions.getValue(driver, new String[]{"service_ed_check_box_mandatory", getElements("service_ed_check_box_mandatory")}, // element path
                 "add_active", // key for data value (the name)
                 " on EDIT");
-
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"service_ed_b_save", getElements("service_ed_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -417,20 +349,14 @@ public class AT2TRFSU0010Test {
             return false;
         }
         return true;
-
     }
-
     private boolean Search_service_type(TestDriver driver) {
-
         driver.getReport().addHeader(" BASIC SEARCH IN SERVICE TYPE", 3, false);
-
-
         if (!Functions.insertInput(driver,
                 new String[]{"service_se_i_service", getElements("service_se_i_service")},
                 "se_i_servi", data.getData().get("add_service"), " SEARCH IN ADITIONAL")) {
             return false;
         }
-
         if (!Functions.createLovByValue(driver,
                 new String[]{"service_se_lov", getElements("service_se_lov")}, //LoV button
                 new String[]{"service_se_i_vehicle", getElements("service_se_i_vehicle")}, //external LoV input
@@ -440,12 +366,10 @@ public class AT2TRFSU0010Test {
                 " on SEARCH")) {
             return false;
         }
-
         if (!Functions.checkboxValue(driver,
                 getElements("service_se_check_box_mandatory"), "active", Boolean.valueOf(data.getData().get("active")), true, " on SEARCH")) {
             return false;
         }
-
         if (!Functions.insertInput(driver,
                 new String[]{"service_se_i_description", getElements("service_se_i_description")},
                 "se_vehicle_description", data.getData().get("add_descript"), " on SEARCH")) {
@@ -457,16 +381,10 @@ public class AT2TRFSU0010Test {
                 " on SEARCH")) {
             return false;
         }
-
         return true;
     }
-
     private boolean Add_service_type(TestDriver driver) {
-
-
         driver.getReport().addHeader("ADD IN SERVICE TYPE", 3, false);
-
-
         Functions.break_time(driver, 6, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"service_b_add", getElements("service_b_add")}, //element to click
@@ -475,12 +393,10 @@ public class AT2TRFSU0010Test {
                 " on ADD")) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"service_add_i_service", getElements("service_add_i_service")},
                 "add_service", (Integer.toString(DataGenerator.random(1, 15))), " on ADD")) {
             return false;
         }
-
         if (!Functions.createLov(driver,
                 new String[]{"service_add_lov", getElements("service_add_lov")}, // b_lov
                 new String[]{"service_add_i_vehicle", getElements("service_add_i_vehicle")}, // i_lov
@@ -503,7 +419,6 @@ public class AT2TRFSU0010Test {
         Functions.getValue(driver, new String[]{"service_add_check_box_mandatory", getElements("service_add_check_box_mandatory")}, // element path
                 "add_active", // key for data value (the name)
                 " on ADD");
-
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"service_b_save", getElements("service_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -511,7 +426,6 @@ public class AT2TRFSU0010Test {
                 " on ADD")) {
             return false;
         }
-
         return true;
     }
 }
