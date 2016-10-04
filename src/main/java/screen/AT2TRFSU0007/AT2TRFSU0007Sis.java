@@ -58,15 +58,18 @@ public class AT2TRFSU0007Sis {
 
     protected boolean testCSED(TestDriver driver) {
 
+
         if (!Vehicles(driver)) {
             return false;
         }
+
 
 
         return false;
     }
 
     private boolean Vehicles(TestDriver driver) {
+
 
         if (!Add_vehicles(driver)) {
             return false;
@@ -149,12 +152,12 @@ public class AT2TRFSU0007Sis {
 
         if (!Functions.clickQbE(driver,
                 new String[]{"vehicles_qbe_b_qbe", getElements("vehicles_qbe_b_qbe")},// query button
-                new String[]{"vehicles_qbe_active", getElements("vehicles_qbe_active")},//any query input
+                new String[]{"vehicles_qbe_sl_active", getElements("vehicles_qbe_sl_active")},//any query input
                 " on QBE")) {
             return false;
         }
         if (!Functions.selectText(driver,
-                new String[]{"vehicles_qbe_active", getElements("")},
+                new String[]{"vehicles_qbe_sl_active", getElements("vehicles_qbe_sl_active")},
                 "No", "qbe_active", " on SEARCH")) {
             return false;
         }
@@ -181,7 +184,7 @@ public class AT2TRFSU0007Sis {
         }
         if (!Functions.selectText(driver,
                 new String[]{"vehicles_qbe_preferred", getElements("vehicles_qbe_preferred")},
-                "No", "qbe_preferred", " on SEARCH")) {
+                "No", "qbe_preferred", " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
@@ -217,24 +220,24 @@ public class AT2TRFSU0007Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"vehicles_ed_vehicle_type", getElements("vehicles_ed_vehicle_type")},
-                "add_vehicle_type", (Integer.toString(DataGenerator.random(1, 15))), " on EDIT")) {
+                "add_vehicle_type", "$", " on EDIT")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"vehicles_ed_vehicle_type_description", getElements("vehicles_ed_vehicle_type_description")},
-                "add_vehicles_type_description", "Prueba1", " on EDIT")) {
+                "add_vehicles_type_description", "Prueba2", " on EDIT")) {
             return false;
         }
         if (!Functions.createLov(driver,
                 new String[]{"vehicles_ed_lov_group", getElements("vehicles_ed_lov_group")}, // b_lov
                 new String[]{"vehicles_ed_i_group", getElements("vehicles_ed_i_group")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "add_group", //Data name
                 " on EDIT")) {
             return false;
         }
-        Functions.getValue(driver, new String[]{"vehicles_ed_i_group_description", getElements("vehicles_ed_i_group_description")}, // element path
+        Functions.getText(driver, new String[]{"vehicles_ed_i_group_description", getElements("vehicles_ed_i_group_description")}, // element path
                 "add_group_description", // key for data value (the name)
                 " on EDIT");
 
@@ -286,7 +289,7 @@ public class AT2TRFSU0007Sis {
         }
         if (!Functions.selectText(driver,
                 new String[]{"vehicles_se_select_text_preferred", getElements("vehicles_se_select_text_preferred")},
-                "Yes", "se_prefered", " on")) {
+                data.getData().get("active"), "se_prefered", " on SEARCH")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"vehicles_se_i_capacity", getElements("vehicles_se_i_capacity")},
@@ -322,7 +325,7 @@ public class AT2TRFSU0007Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"vehicles_ad_vehicle_type", getElements("vehicles_ad_vehicle_type")},
-                "add_vehicle_type", (Integer.toString(DataGenerator.random(1, 15))), " on ADD")) {
+                "add_vehicle_type", "Ñ", " on ADD")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"vehicles_ad_vehicle_type_description", getElements("vehicles_ad_vehicle_type_description")},
@@ -339,12 +342,12 @@ public class AT2TRFSU0007Sis {
                 " on ADD")) {
             return false;
         }
-        Functions.getValue(driver, new String[]{"vehicles_ad_i_group_description", getElements("vehicles_ad_i_group_description")}, // element path
+        Functions.getText(driver, new String[]{"vehicles_ad_i_group_description", getElements("vehicles_ad_i_group_description")}, // element path
                 "add_group_description", // key for data value (the name)
                 " on ADD");
 
         if (!Functions.checkboxValue(driver,
-                getElements("vehicles_ad_check_box_preferred"), "active", true, true, " on ADD")) {
+                getElements("vehicles_ad_check_box_preferred"), "active", false, true, " on ADD")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"vehicles_ad_i_capacity", getElements("vehicles_ad_i_capacity")},
