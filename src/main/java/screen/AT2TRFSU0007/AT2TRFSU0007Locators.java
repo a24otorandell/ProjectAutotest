@@ -52,7 +52,7 @@ public class AT2TRFSU0007Locators {
         elements.put("vehicles_ed_check_box_active", "//*[contains(@id, 'pcgt1:sbc4::content')]");
         elements.put("vehicles_ed_vehicle_type", "//*[contains(@id, 'pcgt1:it2::content')]");
         elements.put("vehicles_ed_vehicle_type_description", "//*[contains(@id, 'pcgt1:it1::content')]");
-        elements.put("vehicles_ed_lov_group", "//*[contains(@id, 'tpcgt1:grveCodGrupoVehicId::lovIconId')]");
+        elements.put("vehicles_ed_lov_group", "//*[contains(@id, 'grveCodGrupoVehicId::lovIconId')]");
         elements.put("vehicles_ed_i_group", "//*[contains(@id, 'pcgt1:grveCodGrupoVehicId::content')]");
         elements.put("vehicles_ed_i_group_description", "//*[contains(@id, 'pcgt1:it3::content')]");
         elements.put("vehicles_ed_check_box_preferred", "//*[contains(@id, 'pcgt1:sbc5::content')]");
@@ -61,7 +61,7 @@ public class AT2TRFSU0007Locators {
 
         //QBE
         elements.put("vehicles_qbe_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
-        elements.put("vehicles_qbe_active", "//*[contains(@id, 'tablaVehiclesTypesSetup:soc5::content')]");
+        elements.put("vehicles_qbe_sl_active", "//*[contains(@id, 'pc1:tablaVehiclesTypesSetup:soc5::content')]");
         elements.put("vehicles_qbe_i_vehicle_type", "//*[contains(@id, 'afr_tablaVehiclesTypesSetup_afr_c1::content')]");
         elements.put("vehicles_qbe_i_vehicle_type_description", "//*[contains(@id, 'afr_tablaVehiclesTypesSetup_afr_c3::content')]");
         elements.put("vehicles_qbe_i_group", "//*[contains(@id, 'afr_tablaVehiclesTypesSetup_afr_c4::content')]");

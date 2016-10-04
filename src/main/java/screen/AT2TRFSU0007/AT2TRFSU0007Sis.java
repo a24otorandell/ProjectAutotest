@@ -16,65 +16,90 @@ public class AT2TRFSU0007Sis {
     protected AT2TRFSU0007Data data;
 
     public AT2TRFSU0007Sis() {
+
     }
+
     public AT2TRFSU0007Locators getLocators() {
         return locators;
     }
+
     public void setLocators(AT2TRFSU0007Locators locators) {
         this.locators = locators;
     }
+
     public AT2TRFSU0007Data getData() {
         return data;
     }
+
     public void setData(AT2TRFSU0007Data data) {
         this.data = data;
     }
+
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
+
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
+
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
+
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
     }
 
     protected boolean testCSED(TestDriver driver) {
-        if (!Vehicles(driver)) return false;
+
+        if (!Vehicles(driver)) {
+            return false;
+        }
+
+
         return false;
     }
 
     private boolean Vehicles(TestDriver driver) {
+
         if (!Add_vehicles(driver)) {
             return false;
         }
+
         if (!Search_vehicles(driver)) {
             return false;
         }
+
         if (!Edit_vehicles(driver)) {
             return false;
         }
+
         if (!Qbe_vehicles(driver)) {
             return false;
         }
+
         if (!Other_actions_vehicles(driver)) {
             return false;
         }
+
         if (!Delete_vehicles(driver)) {
             return false;
         }
+
         return true;
     }
+
     private boolean Delete_vehicles(TestDriver driver) {
+
         driver.getReport().addHeader("DELETE IN VEHICLES", 3, false);
+
+
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"vehicles_delete_b_delete", getElements("vehicles_delete_b_delete")},
                 new String[]{"vehicles_delete_records", getElements("vehicles_delete_records")},
@@ -82,16 +107,23 @@ public class AT2TRFSU0007Sis {
                 " on DELETE")) {
             return false;
         }
+
+
         return true;
     }
+
     private boolean Other_actions_vehicles(TestDriver driver) {
+
+
         driver.getReport().addHeader("OTHER ACTIONS VEHICLES", 3, false);
+
         if (!Functions.auditData(driver,
                 new String[]{"vehicles_actions_b_actions", getElements("vehicles_actions_b_actions")}, //actions button
                 new String[]{"vehicles_actions_b_auditdata", getElements("vehicles_actions_b_auditdata")}, //audit button
                 new String[]{"vehicles_actions_b_ok", getElements("vehicles_actions_b_ok")}, //audit_b_ok
                 " on OTHER ACTIONS")) {
             return false;
+
         }
         if (!Functions.detachTable(driver,
                 new String[]{"vehicles_dtacj_b_detach", getElements("vehicles_dtacj_b_detach")}, //detach button
@@ -99,15 +131,22 @@ public class AT2TRFSU0007Sis {
                 " on OTHER ACTIONS")) {
             return false;
         }
+
+
         return true;
     }
+
     private boolean Qbe_vehicles(TestDriver driver) {
+
         driver.getReport().addHeader(" QBE IN VEHICLES", 3, false);
+
         if (!Functions.simpleClick(driver,
                 new String[]{"vehicles_se_b_reset", getElements("vehicles_se_b_reset")}, //element to click
                 " on QBE")) {
             return false;
         }
+
+
         if (!Functions.clickQbE(driver,
                 new String[]{"vehicles_qbe_b_qbe", getElements("vehicles_qbe_b_qbe")},// query button
                 new String[]{"vehicles_qbe_active", getElements("vehicles_qbe_active")},//any query input
@@ -156,10 +195,16 @@ public class AT2TRFSU0007Sis {
                 " on QBE")) {
             return false;
         }
+
         return true;
     }
+
     private boolean Edit_vehicles(TestDriver driver) {
+
+
         driver.getReport().addHeader(" EDIT IN VEHICLES", 3, false);
+
+
         if (!Functions.checkClick(driver,
                 new String[]{"vehicles_b_edit", getElements("vehicles_b_edit")}, //element to click
                 new String[]{"vehicles_ed_check_box_active", getElements("vehicles_ed_check_box_active")}, //element expected to appear
@@ -208,15 +253,21 @@ public class AT2TRFSU0007Sis {
                 " on EDIT")) {
             return false;
         }
+
+
         return true;
     }
+
     private boolean Search_vehicles(TestDriver driver) {
+
         driver.getReport().addHeader(" BASIC SEARCH IN VEHICLES", 3, false);
+
         if (!Functions.selectText(driver,
                 new String[]{"vehicles_se_select_text_active", getElements("vehicles_se_select_text_active")},
                 "Yes", "se_active", " on SEARCH")) {
             return false;
         }
+
         if (!Functions.insertInput(driver, new String[]{"vehicles_se_i_vehicle_type", getElements("vehicles_se_i_vehicle_type")},
                 "se_vehicle_type", data.getData().get("add_vehicle_type"), " on SEARCH")) {
             return false;
@@ -248,10 +299,17 @@ public class AT2TRFSU0007Sis {
                 " on SEARCH")) {
             return false;
         }
+
+
         return true;
     }
+
     private boolean Add_vehicles(TestDriver driver) {
+
+
         driver.getReport().addHeader(" ADD IN VEHICLES", 3, false);
+
+
         if (!Functions.checkClick(driver,
                 new String[]{"vehicles_b_add", getElements("vehicles_b_add")}, //element to click
                 new String[]{"vehicles_ad_check_box_active", getElements("vehicles_ad_check_box_active")}, //element expected to appear
@@ -300,6 +358,7 @@ public class AT2TRFSU0007Sis {
                 " on ADD")) {
             return false;
         }
+
         return true;
     }
 }

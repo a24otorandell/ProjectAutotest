@@ -41,7 +41,7 @@ public class AT2TRFSU0002Locators {
         elements.put("operational_se_select_text_active", "//*[contains(@id, 'advanceSearchVehiclesSetup:value00::content')]");
         elements.put("operational_se_lov_suplier_test", "//*[contains(@id, 'advanceSearchVehiclesSetup:value10::lovIconId')]");
         elements.put("operational_se_i_suplier_test", "//*[contains(@id, 'advanceSearchVehiclesSetup:value10::content')]");
-        elements.put("operational_se_i_lov_description", "//*[contains(@id, 'afrLovInternalQueryId:value20::content')]");
+        elements.put("operational_se_i_lov_suplier", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
         elements.put("operational_se_i_suplic", "//*[contains(@id, 'advanceSearchVehiclesSetup:value20::content')]");
         elements.put("operational_se_lov2_vehicle_type", "//*[contains(@id, 'advanceSearchVehiclesSetup:value30::lovIconId')]");
         elements.put("operational_se_i_lov2_cod", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
@@ -51,6 +51,7 @@ public class AT2TRFSU0002Locators {
         elements.put("operational_se_i_vehicle_decription", "//*[contains(@id, 'advanceSearchVehiclesSetup:value50::content')]");
         elements.put("operational_se_i_remarks", "//*[contains(@id, 'advanceSearchVehiclesSetup:value60::content')]");
         elements.put("operational_se_b_search", "//*[contains(@id, 'advanceSearchVehiclesSetup::search')]");
+        elements.put("operational_se_b_reset", "//*[contains(@id, 'advanceSearchVehiclesSetup::reset')]");
         elements.put("operational_se_result", "//*[contains(@id, 'tablaVehiclesSetup::db')]/table/tbody/tr/td[1]");
 
         //edit

@@ -136,6 +136,13 @@ public class AT2TRFSU0002Test {
     private boolean Qbe_vehicles(TestDriver driver) {
         driver.getReport().addHeader("QBE IN OPERATIONAL VEHICLES", 3, false);
 
+        if (!Functions.simpleClick(driver,
+                new String[]{"operational_se_b_reset", getElements("operational_se_b_reset")}, //element to click
+                " on QBE IN OPERATIONAL")) {
+            return false;
+        }
+
+
         if (!Functions.clickQbE(driver,
                 new String[]{"operational_b_qbe", getElements("operational_b_qbe")},// query button
                 new String[]{"operational_qbe_select_text_active", getElements("operational_qbe_select_text_active")},//any query input
@@ -176,7 +183,7 @@ public class AT2TRFSU0002Test {
         }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"operational_qbe_i_capacity", getElements("operational_qbe_i_capacity")}, //search button
-                new String[]{"reoperational_se_resultsult", getElements("operational_se_result")}, //result element
+                new String[]{"operational_se_result", getElements("operational_se_result")}, //result element
                 " on QBE IN OPERATIONAL")) {
             return false;
         }
@@ -273,7 +280,7 @@ public class AT2TRFSU0002Test {
         if (!Functions.createLovByValue(driver,
                 new String[]{"operational_se_lov_suplier_test", getElements("operational_se_lov_suplier_test")}, //LoV button
                 new String[]{"operational_se_i_suplier_test", getElements("operational_se_i_suplier_test")}, //external LoV input
-                new String[]{"operational_se_i_lov_description", getElements("operational_se_i_lov_description")}, //internal LoV input
+                new String[]{"operational_se_i_lov_suplier", getElements("operational_se_i_lov_suplier")}, //internal LoV input
                 data.getData().get("lov_suplier_tes"), // value to search
                 "se_lov_test", //name of the data
                 " on SEARCH IN OPERATIONAL")) {
@@ -283,7 +290,7 @@ public class AT2TRFSU0002Test {
         if (!Functions.createLovByValue(driver,
                 new String[]{"operational_se_lov2_vehicle_type", getElements("operational_se_lov2_vehicle_type")}, //LoV button
                 new String[]{"operational_se_i_vehicle_type", getElements("operational_se_i_vehicle_type")}, //external LoV input
-                new String[]{"operational_se_i_lov2_description", getElements("operational_se_i_lov2_description")}, //internal LoV input
+                new String[]{"operational_se_i_lov2_cod", getElements("operational_se_i_lov2_cod")}, //internal LoV input
                 data.getData().get("lov_vehicle_type"), // value to search
                 "se_lov2_vehicle_type", //name of the data
                 " on SEARCH IN OPERATIONAL")) {
