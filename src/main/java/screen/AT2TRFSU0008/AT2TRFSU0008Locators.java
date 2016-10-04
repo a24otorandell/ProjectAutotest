@@ -20,6 +20,28 @@ public class AT2TRFSU0008Locators {
     public void setElements() {
 
 
+        //CREATE ROUTE
+
+
+        elements.put("create_route_lov_search_first", "//*[contains(@id, 'pt1:searchminimenu::icon')]");
+        elements.put("create_route_i_search", "//*[contains(@id, 'j_id__ctru158::content')]");
+        elements.put("create_route_lov_search", "//*[contains(@id, 'pt_i2::icon')]");
+        elements.put("create_route_e_route_maintenance", "//*[contains(@id, 'j_id__ctru154')]//a[contains(@id, 'cl3')]");
+        elements.put("create_route_e_route_maintence_b_add", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:boton_add')]");
+        elements.put("create_route_e_route_maintence_i_area_code", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:ReTTrRutaTuiVODetailCodRuta::content')]");
+        elements.put("create_route_e_route_maintence_lov_terminal_area", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:ReTTrRutaTuiVODetailZonaOri::lovIconId')]");
+        elements.put("create_route_e_route_maintence_i_terminal_area", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:ReTTrRutaTuiVODetailZonaOri::content')]");
+        elements.put("create_route_e_route_maintence_ch_default_route", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:ReTTrRutaTuiVODetailIndDefault::content')]");
+        elements.put("create_route_e_route_maintence_i_remarks", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:ReTTrRutaTuiVODetailObservaciones::content')]");
+        elements.put("create_route_e_route_maintence_b_save", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:btn_commitExit')]");
+        elements.put("create_route_e_routes_by_default", "//*[contains(@id, 'dynTabsPane:1:tabIndex::disclosureAnchor')]");
+        elements.put("create_route_e_route_maintence_b_delete", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:boton_remove')]");
+        elements.put("create_route_e_route_maintence_e_recods", "//*[contains(@id, 'ReTTrRutaTuiVOPC:ot20')]");
+        elements.put("create_route_e_route_maintence_b_delete_b_ok", "//*[contains(@id, 'ReTTrRutaTuiVOPC:tgenericbar0:cbt1')]");
+        elements.put("Go_to_route_maintenance", "//*[contains(@id, 'dyntdc:dynTabsPane:2:tabIndex::disclosureAnchor')]");
+
+
+
         //Add
         elements.put("route_b_add", "//*[contains(@id, 'tgenericbar0:boton_add')]");
         elements.put("route_add_lov_to_group", "//*[contains(@id, 'tgenericbar0:codTtooGroupId::lovIconId')]");
@@ -33,7 +55,7 @@ public class AT2TRFSU0008Locators {
 
         //Search
         elements.put("route_se_lov_to_group", "//*[contains(@id, 'queryRoutesDef:value00::lovIconId')]");
-        elements.put("route_se_i_lov_description", "//*[contains(@id, 'afrLovInternalQueryId:value10::content')]");
+        elements.put("route_se_i_lov_to_group_i_name", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
         elements.put("route_se_i_to_group", "//*[contains(@id, 'queryRoutesDef:value00::content')]");
         elements.put("route_se_i_description", "//*[contains(@id, 'queryRoutesDef:value10::content')]");
         elements.put("route_se_lov2_route", "//*[contains(@id, 'queryRoutesDef:value20::lovIconId')]");
@@ -41,6 +63,7 @@ public class AT2TRFSU0008Locators {
         elements.put("route_se_i_route", "//*[contains(@id, 'queryRoutesDef:value20::content')]");
         elements.put("route_se_i_terminal_area", "//*[contains(@id, 'queryRoutesDef:value30::content')]");
         elements.put("route_b_search", "//*[contains(@id, 'queryRoutesDef::search')]");
+        elements.put("route_b_reset", "//*[contains(@id, 'queryRoutesDef::reset')]");
         elements.put("route_result", "//*[contains(@id, 'pc1:tablaRoutes::db')]/table/tbody/tr/td[1]");
 
         //Edit

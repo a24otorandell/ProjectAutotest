@@ -56,13 +56,187 @@ public class AT2TRFSU0008Test {
 
     protected boolean testCSED(TestDriver driver) {
 
-        if (!Routes_by_default(driver)) {
+        if (!Create_route(driver)) {
             return false;
         }
 
 
+        if (!Routes_by_default(driver)) {
+            return false;
+        }
+
         return false;
     }
+
+
+    //CREATE ROUTE
+
+    private boolean Create_route(TestDriver driver) {
+
+        if (!Go_to_routes_by_default(driver)) {
+            return false;
+        }
+        if (!Create_in_route(driver)) {
+            return false;
+        }
+        if (!Create_in_route_second_time(driver)) {
+            return false;
+        }
+        if (!Go_to_create_route(driver)) {
+            return false;
+        }
+
+
+        return true;
+    }
+
+    private boolean Create_in_route_second_time(TestDriver driver) {
+        driver.getReport().addHeader("ADD IN ROUTES BY DEFAULT", 3, false);
+
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"create_route_e_route_maintence_b_add", getElements("create_route_e_route_maintence_b_add")}, //element to click
+                new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")},
+                "area_code", "PB2", " on ")) {
+            return false;
+        }
+
+        if (!Functions.createLov(driver,
+                new String[]{"create_route_e_route_maintence_lov_terminal_area", getElements("create_route_e_route_maintence_lov_terminal_area")}, // b_lov
+                new String[]{"create_route_e_route_maintence_i_terminal_area", getElements("create_route_e_route_maintence_i_terminal_area")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "terminal_area", //Data name
+                " on ADD")) {
+            return false;
+        }
+
+        if (!Functions.checkboxValue(driver,
+                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " where")) {
+            return false;
+        }//where
+
+        if (!Functions.insertInput(driver,
+                new String[]{"create_route_e_route_maintence_i_remarks", getElements("create_route_e_route_maintence_i_remarks")},
+                "remarks", "Esto es la segunda prueba", " on ")) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"create_route_e_route_maintence_b_save", getElements("create_route_e_route_maintence_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                30, 500,
+                " on ADD")) {
+            return false;
+        }
+
+
+        return true;
+    }
+
+    private boolean Go_to_routes_by_default(TestDriver driver) {
+
+        driver.getReport().addHeader("GO TO IN ROUTES BY DEFAULT", 3, false);
+
+        if (!Functions.checkClick(driver,
+                new String[]{"create_route_lov_search_first", getElements("create_route_lov_search_first")}, //element to click
+                new String[]{"create_route_i_search", getElements("create_route_i_search")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ")) {
+            return false;
+        }
+
+        if (!Functions.insertInput(driver,
+                new String[]{"create_route_i_search", getElements("create_route_i_search")},
+                "route", "AT2TRFSU0001", " on ")) {
+            return false;
+        }
+
+        if (!Functions.simpleClick(driver,
+                new String[]{"create_route_lov_search", getElements("create_route_lov_search")}, //element to click
+                " on ")) {
+            return false;
+        }
+
+        if (!Functions.checkClick(driver,
+                new String[]{"create_route_e_route_maintenance", getElements("create_route_e_route_maintenance")}, //element to click
+                new String[]{"create_route_e_route_maintence_b_add", getElements("create_route_e_route_maintence_b_add")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ")) {
+            return false;
+        }
+        return true;
+    }
+
+
+    private boolean Create_in_route(TestDriver driver) {
+        driver.getReport().addHeader("ADD IN ROUTES BY DEFAULT", 3, false);
+
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"create_route_e_route_maintence_b_add", getElements("create_route_e_route_maintence_b_add")}, //element to click
+                new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver,
+                new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")},
+                "area_code", "PB1", " on ")) {
+            return false;
+        }
+
+        if (!Functions.createLov(driver,
+                new String[]{"create_route_e_route_maintence_lov_terminal_area", getElements("create_route_e_route_maintence_lov_terminal_area")}, // b_lov
+                new String[]{"create_route_e_route_maintence_i_terminal_area", getElements("create_route_e_route_maintence_i_terminal_area")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "terminal_area", //Data name
+                " on ADD")) {
+            return false;
+        }
+
+        if (!Functions.checkboxValue(driver,
+                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " where")) {
+            return false;
+        }//where
+
+        if (!Functions.insertInput(driver,
+                new String[]{"create_route_e_route_maintence_i_remarks", getElements("create_route_e_route_maintence_i_remarks")},
+                "remarks", "Esto es una prueba", " on ")) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"create_route_e_route_maintence_b_save", getElements("create_route_e_route_maintence_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                30, 500,
+                " on ADD")) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Go_to_create_route(TestDriver driver) {
+
+        if (!Functions.checkClick(driver,
+                new String[]{"create_route_e_routes_by_default", getElements("create_route_e_routes_by_default")}, //element to click
+                new String[]{"route_b_add", getElements("route_b_add")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD")) {
+            return false;
+        }
+        return true;
+    }
+
+
+    //ROUTES BY DEFAULT
 
     private boolean Routes_by_default(TestDriver driver) {
 
@@ -134,6 +308,14 @@ public class AT2TRFSU0008Test {
     private boolean Qbe_routes(TestDriver driver) {
 
         driver.getReport().addHeader("QBE  IN ROUTES BY DEFAULT", 3, false);
+
+
+        if (!Functions.simpleClick(driver,
+                new String[]{"route_b_reset", getElements("route_b_reset")}, //element to click
+                " on  QBE")) {
+            return false;
+        }
+
 
         if (!Functions.clickQbE(driver,
                 new String[]{"route_b_qbe", getElements("route_b_qbe")},// query button
@@ -241,9 +423,9 @@ public class AT2TRFSU0008Test {
         if (!Functions.createLovByValue(driver,
                 new String[]{"route_se_lov_to_group", getElements("route_se_lov_to_group")}, //LoV button
                 new String[]{"route_se_i_to_group", getElements("route_se_i_to_group")}, //external LoV input
-                new String[]{"route_se_i_lov_description", getElements("route_se_i_lov_description")}, //internal LoV input
-                data.getData().get(""), // value to search
-                "", //name of the data
+                new String[]{"route_se_i_lov_to_group_i_name", getElements("route_se_i_lov_to_group_i_name")}, //internal LoV input
+                data.getData().get("lov_to_group"), // value to search
+                "se_lov_to_group", //name of the data
                 " on SEARCH")) {
             return false;
         }
@@ -253,8 +435,8 @@ public class AT2TRFSU0008Test {
                 new String[]{"route_se_lov2_route", getElements("route_se_lov2_route")}, //LoV button
                 new String[]{"route_se_i_route", getElements("route_se_i_route")}, //external LoV input
                 new String[]{"route_se_lov2_i_route", getElements("route_se_lov2_i_route")}, //internal LoV input
-                data.getData().get(""), // value to search
-                "", //name of the data
+                data.getData().get("lov_route"), // value to search
+                "se_lov_route", //name of the data
                 " on SEARCH")) {
             return false;
         }
