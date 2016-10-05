@@ -56,33 +56,17 @@ public class AT2TRFSU0013Test {
 
     private boolean Grouping_vehicles(TestDriver driver) {
 
-        if (!Add_Grouping_vehicles(driver)) {
-            return false;
-        }
-        if (!Search_Grouping_vehicles(driver)) {
-            return false;
-        }
-        if (!Edit_Grouping_vehicles(driver)) {
-            return false;
-        }
+        if (!Add_Grouping_vehicles(driver)) return false;
+        if (!Search_Grouping_vehicles(driver)) return false;
+        if (!Edit_Grouping_vehicles(driver)) return false;
+        if (!QBE_Grouping_vehicles(driver)) return false;
+        if (!Other_actios_Grouping_vehicles(driver)) return false;
+        if (!Delete_Grouping_vehicles(driver)) return false;
 
-        if (!QBE_Grouping_vehicles(driver)) {
-            return false;
-        }
-        if (!Other_actios_Grouping_vehicles(driver)) {
-            return false;
-        }
-
-        if (!Delete_Grouping_vehicles(driver)) {
-            return false;
-        }
         return true;
     }
-
     private boolean Delete_Grouping_vehicles(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN GROUPING VEHICLES", 3, false);
-
-
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"grouping_del_b_delete", getElements("grouping_del_b_delete")},
                 new String[]{"grouping_del_records", getElements("grouping_del_records")},
@@ -90,12 +74,10 @@ public class AT2TRFSU0013Test {
                 " on DELETE IN GROUPING")) {
             return false;
         }
-
         return true;
     }
     private boolean Other_actios_Grouping_vehicles(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN GROUPING VEHICLES", 3, false);
-
         if (!Functions.auditData(driver,
                 new String[]{"grouping_oc_b_actions", getElements("grouping_oc_b_actions")}, //actions button
                 new String[]{"grouping_oc_b_audit_data", getElements("grouping_oc_b_audit_data")}, //audit button

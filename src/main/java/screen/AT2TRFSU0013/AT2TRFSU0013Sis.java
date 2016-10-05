@@ -46,39 +46,22 @@ public class AT2TRFSU0013Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
-        if (!Grouping_vehicles(driver)) {
-            return false;
-        }
+        if (!Grouping_vehicles(driver)) return false;
         return false;
     }
 
     private boolean Grouping_vehicles(TestDriver driver) {
 
-        if (!Add_Grouping_vehicles(driver)) {
-            return false;
-        }
-        if (!Search_Grouping_vehicles(driver)) {
-            return false;
-        }
-        if (!Edit_Grouping_vehicles(driver)) {
-            return false;
-        }
-
-        if (!QBE_Grouping_vehicles(driver)) {
-            return false;
-        }
-        if (!Other_actios_Grouping_vehicles(driver)) {
-            return false;
-        }
-        if (!Delete_Grouping_vehicles(driver)) {
-            return false;
-        }
+        if (!Add_Grouping_vehicles(driver)) return false;
+        if (!Search_Grouping_vehicles(driver)) return false;
+        if (!Edit_Grouping_vehicles(driver)) return false;
+        if (!QBE_Grouping_vehicles(driver)) return false;
+        if (!Other_actios_Grouping_vehicles(driver)) return false;
+        if (!Delete_Grouping_vehicles(driver)) return false;
         return true;
     }
     private boolean Delete_Grouping_vehicles(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN GROUPING VEHICLES", 3, false);
-
-
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"grouping_del_b_delete", getElements("grouping_del_b_delete")},
                 new String[]{"grouping_del_records", getElements("grouping_del_records")},
