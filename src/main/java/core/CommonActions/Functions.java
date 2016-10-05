@@ -711,7 +711,7 @@ public class Functions {
                 new String[]{"x", getElements("x")}, //LoV button
                 new String[]{"y", getElements("y")}, //external LoV input
                 new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                RecursiveXPaths.lov_e_result, // lov internal result
+                recursiveXPaths.lov_e_result, // lov internal result
                 "value", // value to search
                 "data_name", //name of the data
                 " on where")){return false;}*/ //where this operation occurs

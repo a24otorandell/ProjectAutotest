@@ -185,44 +185,43 @@ public class AT2MDMOR0029Sis {
         }
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_ed_ch_atlas_company", getElements("service_authorization_ed_ch_atlas_company")}, //element to click
-                new String[]{"service_authorization_ed_sl_atlas_company_e_company", getElements("service_authorization_ed_sl_atlas_company_e_company")}, //element expected to appear
+                new String[]{"service_authorization_ed_lov_atlas_company", getElements("service_authorization_ed_lov_atlas_company")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on EDIT")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"service_authorization_ed_sl_atlas_company_e_company", getElements("service_authorization_ed_sl_atlas_company_e_company")}, //element to click
-                " on EDIT")) {
+        if (!Functions.createLov(driver,
+                new String[]{"service_authorization_ed_lov_atlas_company", getElements("service_authorization_ed_lov_atlas_company")}, // b_lov
+                new String[]{"service_authorization_ed_i_atlas_company", getElements("service_authorization_ed_i_atlas_company")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "atlas_company", //Data name
+                " on ADD")) {
             return false;
-        }
+        }  // where the operation occurs
 
-        if (!Functions.getValue(driver, new String[]{"service_authorization_ed_i_atlas_company", getElements("service_authorization_ed_i_atlas_company")}, // element path
-                "atlas_company", // key for data value (the name)
-                " on EDIT")) {
-            return false;
-        }
-        Functions.break_time(driver, 6, 500);
+
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_ed_ch_receptive", getElements("service_authorization_ed_ch_receptive")}, //element to click
-                new String[]{"service_authorization_ed_sl_receptive_e_code", getElements("service_authorization_ed_sl_receptive_e_code")}, //element expected to appear
+                new String[]{"service_authorization_ed_lov_receptive", getElements("service_authorization_ed_lov_receptive")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on EDIT")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"service_authorization_ed_sl_receptive_e_code", getElements("service_authorization_ed_sl_receptive_e_code")}, //element to click
-                " on EDIT")) {
+        if (!Functions.createLov(driver,
+                new String[]{"service_authorization_ed_lov_receptive", getElements("service_authorization_ed_lov_receptive")}, // b_lov
+                new String[]{"service_authorization_ed_i_receptive", getElements("service_authorization_ed_i_receptive")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "receptive", //Data name
+                " on ADD")) {
             return false;
-        }
-
-        if (!Functions.getValue(driver, new String[]{"service_authorization_ed_i_receptive", getElements("service_authorization_ed_i_receptive")}, // element path
-                "receptive", // key for data value (the name)
-                " on EDIT")) {
-            return false;
-        }
+        }  // where the operation occurs
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_text", getElements("service_authorization_ed_i_text")},
-                "text", "Prueba2", "on EDIT")) {
+                "text", DataGenerator.getRandomAlphanumericSequence(8, true), "on EDIT")) {
             return false;
         }
 
@@ -255,13 +254,18 @@ public class AT2MDMOR0029Sis {
         driver.getReport().addHeader(" SEARCH IN SERVICE AUTORIZATION", 3, false);
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_se_se_company_atlas", getElements("service_authorization_se_se_company_atlas")}, //element to click
-                new String[]{"service_authorization_se_se_ompany_atlas_e_code", getElements("service_authorization_se_se_ompany_atlas_e_code")}, //element expected to appear
+                new String[]{"service_authorization_se_lov_company_atlas", getElements("service_authorization_se_lov_company_atlas")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on SEARCH")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"service_authorization_se_se_ompany_atlas_e_code", getElements("service_authorization_se_se_ompany_atlas_e_code")}, //element to click
+
+        if (!Functions.createLovByValue(driver,
+                new String[]{"service_authorization_se_lov_company_atlas", getElements("service_authorization_se_lov_company_atlas")}, //LoV button
+                new String[]{"service_authorization_se_i_company_atlas", getElements("service_authorization_se_i_company_atlas")}, //external LoV input
+                new String[]{"service_authorization_se_lov_company_atlas_i_code", getElements("service_authorization_se_lov_company_atlas_i_code")}, //internal LoV input
+                data.getData().get("atlas_company"), // value to search
+                "se_atlas_company", //name of the data
                 " on SEARCH")) {
             return false;
         }
@@ -269,17 +273,20 @@ public class AT2MDMOR0029Sis {
 
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_se_sl_receptive", getElements("service_authorization_se_sl_receptive")}, //element to click
-                new String[]{"service_authorization_se_sl_receptive_e_code", getElements("service_authorization_se_sl_receptive_e_code")}, //element expected to appear
+                new String[]{"service_authorization_se_lov_receptive", getElements("service_authorization_se_lov_receptive")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on SEARCH")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"service_authorization_se_sl_receptive_e_code", getElements("service_authorization_se_sl_receptive_e_code")}, //element to click
+        if (!Functions.createLovByValue(driver,
+                new String[]{"service_authorization_se_lov_receptive", getElements("service_authorization_se_lov_receptive")}, //LoV button
+                new String[]{"service_authorization_se_i_receptive", getElements("service_authorization_se_i_receptive")}, //external LoV input
+                new String[]{"service_authorization_se_lov_receptive_i_code", getElements("service_authorization_se_lov_receptive_i_code")}, //internal LoV input
+                data.getData().get("receptive"), // value to search
+                "se_receptive", //name of the data
                 " on SEARCH")) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"service_authorization_se_i_text", getElements("service_authorization_se_i_text")},
                 "se_text", data.getData().get("text"), "on SEARCH")) {
             return false;
@@ -317,51 +324,48 @@ public class AT2MDMOR0029Sis {
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_add_b_add", getElements("service_authorization_add_b_add")}, //element to click
                 new String[]{"service_authorization_add_ch_atlas_company", getElements("service_authorization_add_ch_atlas_company")}, //element expected to appear
-                60, 500, //seconds/miliseconds (driver wait)
+                30, 500, //seconds/miliseconds (driver wait)
                 " on ADD")) {
             return false;
         }
-        Functions.break_time(driver, 6, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_add_ch_atlas_company", getElements("service_authorization_add_ch_atlas_company")}, //element to click
-                new String[]{"service_authorization_add_sl_atlas_company_e_company", getElements("service_authorization_add_sl_atlas_company_e_company")}, //element expected to appear
+                new String[]{"service_authorization_add_lov_atlas_company", getElements("service_authorization_add_lov_atlas_company")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on ADD")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"service_authorization_add_sl_atlas_company_e_company", getElements("service_authorization_add_sl_atlas_company_e_company")}, //element to click
+        if (!Functions.createLov(driver,
+                new String[]{"service_authorization_add_lov_atlas_company", getElements("service_authorization_add_lov_atlas_company")}, // b_lov
+                new String[]{"service_authorization_add_i_atlas_company", getElements("service_authorization_add_i_atlas_company")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "atlas_company", //Data name
                 " on ADD")) {
             return false;
-        }
+        }  // where the operation occurs
 
-        if (!Functions.getValue(driver, new String[]{"service_authorization_add_i_atlas_company", getElements("service_authorization_add_i_atlas_company")}, // element path
-                "atlas_company", // key for data value (the name)
-                " on ADD")) {
-            return false;
-        }
-        Functions.break_time(driver, 6, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_add_ch_receptive", getElements("service_authorization_add_ch_receptive")}, //element to click
-                new String[]{"service_authorization_add_sl_receptive_e_code", getElements("service_authorization_add_sl_receptive_e_code")}, //element expected to appear
+                new String[]{"service_authorization_add_lov_receptive", getElements("service_authorization_add_lov_receptive")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on ADD")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"service_authorization_add_sl_receptive_e_code", getElements("service_authorization_add_sl_receptive_e_code")}, //element to click
+        if (!Functions.createLov(driver,
+                new String[]{"service_authorization_add_lov_receptive", getElements("service_authorization_add_lov_receptive")}, // b_lov
+                new String[]{"service_authorization_add_i_receptive", getElements("service_authorization_add_i_receptive")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "receptive", //Data name
                 " on ADD")) {
             return false;
-        }
-
-        if (!Functions.getValue(driver, new String[]{"service_authorization_add_i_receptive", getElements("service_authorization_add_i_receptive")}, // element path
-                "receptive", // key for data value (the name)
-                " on ADD")) {
-            return false;
-        }
+        }  // where the operation occurs
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_add_i_text", getElements("service_authorization_add_i_text")},
-                "text", "prueba1", "on ADD")) {
+                "text", DataGenerator.getRandomAlphanumericSequence(8, true), "on ADD")) {
             return false;
         }
 

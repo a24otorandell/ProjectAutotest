@@ -22,10 +22,10 @@ public class AT2MDMOR0029Locators {
 
         elements.put("service_authorization_add_b_add", "//*[contains(@id, 'pcgt1:boton_add')]");
         elements.put("service_authorization_add_ch_atlas_company", "//*[contains(@id, 'pcgt1:codEmpId1::lovIconId')]");
-        elements.put("service_authorization_add_sl_atlas_company_e_company", "//*[contains(@id, 'pcgt1:codEmpId1::dropdownPopup::dropDownContent::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("service_authorization_add_lov_atlas_company", "//*[contains(@id, 'pcgt1:codEmpId1::dropdownPopup::popupsearch')]");
         elements.put("service_authorization_add_i_atlas_company", "//*[contains(@id, 'pcgt1:codEmpId1::content')]");
         elements.put("service_authorization_add_ch_receptive", "//*[contains(@id, 'pcgt1:seqRecId1::lovIconId')]");
-        elements.put("service_authorization_add_sl_receptive_e_code", "//*[contains(@id, 'pcgt1:seqRecId1::dropdownPopup::dropDownContent::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("service_authorization_add_lov_receptive", "//*[contains(@id, 'pcgt1:seqRecId1::dropdownPopup::popupsearch')]");
         elements.put("service_authorization_add_i_receptive", "//*[contains(@id, 'pcgt1:seqRecId1::content')]");
         elements.put("service_authorization_add_i_text", "//*[contains(@id, 'pcgt1:it1::content')]");
         elements.put("service_authorization_add_i_apply_date_from", "//*[contains(@id, 'pcgt1:id6::content')]");
@@ -37,9 +37,13 @@ public class AT2MDMOR0029Locators {
         //SEARCH
 
         elements.put("service_authorization_se_se_company_atlas", "//*[contains(@id, 'codEmp2Id::lovIconId')]");
-        elements.put("service_authorization_se_se_ompany_atlas_e_code", "//*[contains(@id, 'dyntdc:r1:1:codEmp2Id::dropdownPopup::dropDownContent::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("service_authorization_se_lov_company_atlas", "//*[contains(@id, 'codEmp2Id::dropdownPopup::popupsearch')]");
+        elements.put("service_authorization_se_lov_company_atlas_i_code", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
+        elements.put("service_authorization_se_i_company_atlas", "//*[contains(@id, 'codEmp2Id::content')]");
         elements.put("service_authorization_se_sl_receptive", "//*[contains(@id, 'seqRec2Id::lovIconId')]");
-        elements.put("service_authorization_se_sl_receptive_e_code", "//*[contains(@id, 'seqRec2Id::dropdownPopup::dropDownContent::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("service_authorization_se_lov_receptive", "//*[contains(@id, 'seqRec2Id::dropdownPopup::popupsearch')]");
+        elements.put("service_authorization_se_lov_receptive_i_code", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
+        elements.put("service_authorization_se_i_receptive", "//*[contains(@id, 'seqRec2Id::content')]");
         elements.put("service_authorization_se_i_text", "//*[contains(@id, 'it4::content')]");
         elements.put("service_authorization_se_i_apply_date_from", "//*[contains(@id, 'id2::content')]");
         elements.put("service_authorization_se_i_apply_date_to", "//*[contains(@id, 'id1::content')]");
@@ -52,16 +56,17 @@ public class AT2MDMOR0029Locators {
 
         elements.put("service_authorization_ed_b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");
         elements.put("service_authorization_ed_ch_atlas_company", "//*[contains(@id, 'pcgt1:codEmpId1::lovIconId')]");
-        elements.put("service_authorization_ed_sl_atlas_company_e_company", "//*[contains(@id, 'pcgt1:codEmpId1::dropdownPopup::dropDownContent::db')]/table/tbody/tr[3]/td[1]");
+        elements.put("service_authorization_ed_lov_atlas_company", "//*[contains(@id, 'pcgt1:codEmpId1::dropdownPopup::popupsearch')]");
         elements.put("service_authorization_ed_i_atlas_company", "//*[contains(@id, 'pcgt1:codEmpId1::content')]");
         elements.put("service_authorization_ed_ch_receptive", "//*[contains(@id, 'pcgt1:seqRecId1::lovIconId')]");
-        elements.put("service_authorization_ed_sl_receptive_e_code", "//*[contains(@id, 'pcgt1:seqRecId1::dropdownPopup::dropDownContent::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("service_authorization_ed_lov_receptive", "//*[contains(@id, 'pcgt1:seqRecId1::dropdownPopup::popupsearch')]");
         elements.put("service_authorization_ed_i_receptive", "//*[contains(@id, 'pcgt1:seqRecId1::content')]");
         elements.put("service_authorization_ed_i_text", "//*[contains(@id, 'pcgt1:it1::content')]");
         elements.put("service_authorization_ed_i_apply_date_from", "//*[contains(@id, 'pcgt1:id6::content')]");
         elements.put("service_authorization_ed_i_apply_fate_to", "//*[contains(@id, 'pcgt1:id5::content')]");
         elements.put("service_authorization_ed_sl_cod_division", "//*[contains(@id, 'pcgt1:soc1::content')]");
         elements.put("service_authorization_ed_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
+        elements.put("service_authorization_ed_lov_atlas_company", "//*[contains(@id, 'pcgt1:codEmpId1::dropdownPopup::popupsearch')]");
 
 
         //QBE
