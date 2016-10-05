@@ -60,6 +60,10 @@ public class AT2ACCOP0019Locators {
         elements.put("mercant_add_lov_currenzy_b_search", "//*[contains(@id, 'msilov1:dc_q1::search')]");
         elements.put("mercant_add_lov_payment_method_i_payment_methood", "//*[contains(@id, 'msilov2:dc_q1:value10::content')]");
         elements.put("mercant_add_lov_payment_method_b_search", "//*[contains(@id, 'msilov2:dc_q1::search')]");
+        elements.put("mercant_add_b_delete_currenzy_and_payment_method", "//*[contains(@id, 'pcgt3:boton_remove')]");
+        elements.put("mercant_add_b_delete_currenzy_and_payment_method_yes", "//*[contains(@id, 'commandButton1')]");
+        elements.put("mercant_add_b_rollback_currenzy_and_payment_method", "//*[contains(@id, 'pcgt4:boton_rollback')]");
+        elements.put("mercant_add_b_rollback_currenzy_and_payment_method_yes", "//*[contains(@id, 'dyntdc:r1:1:ctbt1')]");
 
         //SEARCH
 
@@ -109,6 +113,10 @@ public class AT2ACCOP0019Locators {
         elements.put("mercant_ed_b_save_currency_and_payment_methods", "//*[contains(@id, 'pcgt4:boton_commit')]");
         elements.put("mercant_ed_b_save", "//*[contains(@id, 'pcgt2:boton_commit')]");
         elements.put("mercant_ed_e_currency_table", "//*[contains(@id, 'tCurr::db')]/table/tbody/tr[1]/td");
+        elements.put("mercant_ed_b_save_currenzy_and_payment_method", "//*[contains(@id, 'pcgt3:boton_commit')]");
+
+
+
 
         //QBE
 

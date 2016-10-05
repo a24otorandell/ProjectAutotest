@@ -93,6 +93,12 @@ public class CommonProcedures {
         return true;
     }
 
+    /**
+     * @param driver              TestDriver - This class manages all the information referent to the current test.
+     * @param number_screens_open - This variable is an integer that works depending on the number of tabs have open
+     * @see Functions
+     * @see ErrorManager
+     */
     public static boolean goToScreen(TestDriver driver, int number_screens_open) {
         /*try {
             String componentinput;
