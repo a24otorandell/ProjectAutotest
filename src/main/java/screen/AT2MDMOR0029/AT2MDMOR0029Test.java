@@ -283,7 +283,7 @@ public class AT2MDMOR0029Test {
                 new String[]{"service_authorization_se_lov_receptive", getElements("service_authorization_se_lov_receptive")}, //LoV button
                 new String[]{"service_authorization_se_i_receptive", getElements("service_authorization_se_i_receptive")}, //external LoV input
                 new String[]{"service_authorization_se_lov_receptive_i_code", getElements("service_authorization_se_lov_receptive_i_code")}, //internal LoV input
-                data.getData().get("receptive"), // value to search
+                getData("receptive"), // value to search
                 "se_receptive", //name of the data
                 " on SEARCH")) {
             return false;
