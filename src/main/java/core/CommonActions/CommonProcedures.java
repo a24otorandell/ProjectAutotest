@@ -94,6 +94,8 @@ public class CommonProcedures {
     }
 
     /**
+     * This method search and click the target component screen keeping on mind how many screens are open
+     *
      * @param driver              TestDriver - This class manages all the information referent to the current test.
      * @param number_screens_open - This variable is an integer that works depending on the number of tabs have open
      * @see Functions
