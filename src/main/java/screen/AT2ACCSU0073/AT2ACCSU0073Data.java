@@ -1,4 +1,4 @@
-package screen.AT2ACCSU0025;
+package screen.AT2ACCSU0073;
 
 import core.FileGestor.DataHarvester;
 
@@ -6,16 +6,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by vsolis on 13/09/2016.
+ * Created by vsolis on 06/10/2016.
  */
-public class AT2ACCSU0025Data {
-
-
+public class AT2ACCSU0073Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2ACCSU0025Data(String enviroment) {
-        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resourcesAT2CCSU0025Values.txt");
+    public AT2ACCSU0073Data(String enviroment) {
+        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resourcesAT2CCSU0073Values.txt");
         setData();
     }
 
