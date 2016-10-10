@@ -256,7 +256,6 @@ public class AT2MSCSU0007Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @param type   boolean que controla el flujo inicial para saber si creamos o modificamos el registro
@@ -308,7 +307,6 @@ public class AT2MSCSU0007Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @param tab    String[] element del tab en cuestion
@@ -584,7 +582,7 @@ public class AT2MSCSU0007Sis {
         if (!Functions.auditData(driver,
                 new String[]{"available_web_details_b_actions", getElements("available_web_details_b_actions")},
                 new String[]{"available_web_details_b_data_history", getElements("available_web_details_b_data_history")},
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok},
+                new String[]{"available_web_details_b_data_history_b_ok", getElements("available_web_details_b_data_history_b_ok")},
                 " on DATA HISTORY WEB AVAILABLE DETAILS")) {
             return false;
         }

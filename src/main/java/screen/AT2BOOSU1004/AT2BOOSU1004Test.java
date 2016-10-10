@@ -55,7 +55,7 @@ public class AT2BOOSU1004Test {
         return value;
     }
 
-    private boolean Reconfirmation_clients(TestDriver driver) {
+    public boolean Reconfirmation_clients(TestDriver driver) {
 
         if (!Add_cofiguration_by_tto(driver)) {
             return false;

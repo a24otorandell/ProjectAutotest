@@ -464,7 +464,7 @@ public class AT2ACCOP0024Sis {
                 return false;
             }
             if (!Functions.selectText(driver,
-                    new String[]{"search_financial_status", getElements("search_financial_status")},
+                    new String[]{"search_l_financial_status", getElements("search_l_financial_status")},
                     getData("financial_status_2"),//ToDo financial status list not equal to results fields, so...
                     "financial_status_2",
                     " on SEARCH")) {

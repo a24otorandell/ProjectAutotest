@@ -113,7 +113,7 @@ public class AT2MSCSU0007Locators {
         elements.put("available_web_details_b_edit", "//*[contains(@id, 'pc3:PCGenericToolbar3:boton_edit')]");
         elements.put("available_web_details_b_actions", "//*[contains(@id, 'pc3:PCGenericMenu2:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("available_web_details_b_data_history", "//*[contains(@id, 'pc3:PCGenericMenu2:dc_cmi0')]/td[2]");
-        elements.put("available_web_details_b_data_history_b_ok", "//*[contains(@id, 'pc3:PCGenericMenu2:d22::ok')]");
+        elements.put("available_web_details_b_data_history_b_ok", "//*[contains(@id, 'PCGenericMenu2:d22::ok')]");
         elements.put("available_web_details_b_qbe", "//*[contains(@id, 'pc3:_qbeTbr')]");
         elements.put("available_web_details_b_detach_table", "//*[contains(@id, 'pc3:_dchTbr')]");
         elements.put("available_web_details_b_detach_table_b_close", "//*[contains(@id, 'pc3::_afrDetachDialogId::close')]");

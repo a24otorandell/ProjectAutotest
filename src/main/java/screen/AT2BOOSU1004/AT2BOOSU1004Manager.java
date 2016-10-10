@@ -83,7 +83,7 @@ public class AT2BOOSU1004Manager implements AT2Test {
             if (getProcedure()[i].equals("d")) {
             }
             if (getProcedure()[i].equals("x") && (driver.getTestdetails().getEnvironment().equalsIgnoreCase("test"))) {
-                if (!getTest().testCSED(driver)) {
+                if (!getTest().Reconfirmation_clients(driver)){
                     return false;
                 }
             } else if (getProcedure()[i].equals("x") && (driver.getTestdetails().getEnvironment().equalsIgnoreCase("sis"))) {
