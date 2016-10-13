@@ -71,7 +71,7 @@ public class CommonProcedures {
      */
     public static boolean goToScreen(TestDriver driver) {
         try {
-            Functions.break_time(driver, 10, 500);
+            Functions.break_time(driver, 30, 500);
             if (!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")) {
                 return false;
             }
