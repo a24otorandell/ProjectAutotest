@@ -106,5 +106,6 @@ public class AT2TRFSU0016Locators {
         elements.put("aditional_del_b_delete_ok", "//*[contains(@id, 'pcgt2:cbt1')]");
         elements.put("aditional_del_records", "//*[contains(@id, 'pc1:ot2')]");
 
+
     }
 }

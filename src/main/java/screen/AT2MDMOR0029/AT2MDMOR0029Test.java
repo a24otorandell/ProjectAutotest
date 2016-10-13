@@ -158,7 +158,7 @@ public class AT2MDMOR0029Test {
                 "qbe_to", data.getData().get("to"), "on QBE")) {
             return false;
         }
-        Functions.break_time(driver, 6, 500);
+
         if (!Functions.selectText(driver,
                 new String[]{"service_authorization_qbe_sl_cod_division", getElements("service_authorization_qbe_sl_cod_division")},
                 data.getData().get("cod_division"), "qbe_cod_division", " on QBE")) {
@@ -184,6 +184,8 @@ public class AT2MDMOR0029Test {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver, 5, 500);
+
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_ed_ch_atlas_company", getElements("service_authorization_ed_ch_atlas_company")}, //element to click
                 new String[]{"service_authorization_ed_lov_atlas_company", getElements("service_authorization_ed_lov_atlas_company")}, //element expected to appear
@@ -227,7 +229,7 @@ public class AT2MDMOR0029Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
-                "from", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1, 10), 0), "on EDIT")) {
+                "from", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6, 10), 0), "on EDIT")) {
             return false;
         }
 
@@ -283,7 +285,7 @@ public class AT2MDMOR0029Test {
                 new String[]{"service_authorization_se_lov_receptive", getElements("service_authorization_se_lov_receptive")}, //LoV button
                 new String[]{"service_authorization_se_i_receptive", getElements("service_authorization_se_i_receptive")}, //external LoV input
                 new String[]{"service_authorization_se_lov_receptive_i_code", getElements("service_authorization_se_lov_receptive_i_code")}, //internal LoV input
-                getData("receptive"), // value to search
+                data.getData().get("receptive"), // value to search
                 "se_receptive", //name of the data
                 " on SEARCH")) {
             return false;

@@ -183,6 +183,7 @@ public class AT2MDMOR0029Sis {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver, 5, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_ed_ch_atlas_company", getElements("service_authorization_ed_ch_atlas_company")}, //element to click
                 new String[]{"service_authorization_ed_lov_atlas_company", getElements("service_authorization_ed_lov_atlas_company")}, //element expected to appear
@@ -226,7 +227,7 @@ public class AT2MDMOR0029Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
-                "from", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1, 10), 0), "on EDIT")) {
+                "from", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6, 10), 0), "on EDIT")) {
             return false;
         }
 

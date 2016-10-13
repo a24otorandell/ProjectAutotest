@@ -23,6 +23,7 @@ public class AT2BOOSU1004Locators {
     public void setElements() {
 
         //ADD
+
         elements.put("configuration_by_ttoo_add_b_add", "//*[contains(@id, 'tConfigurationByTtoo:boton_add')]");
         elements.put("configuration_by_ttoo_add_lov_tto", "//*[contains(@id, '0:seqTtooId::lovIconId')]");
         elements.put("configuration_by_ttoo_add_i_tto", "//*[contains(@id, '0:seqTtooId::content')]");
@@ -181,6 +182,169 @@ public class AT2BOOSU1004Locators {
         elements.put("configuration_by_ttoo_b_delete", "//*[contains(@id, 'tConfigurationByTtoo:boton_remove')]");
         elements.put("configuration_by_ttoo_b_delete_b_ok", "//*[contains(@id, 'r1:0:d5::yes')]");
         elements.put("configuration_by_ttoo_e_record", "//*[contains(@id, '0:pc1:outputText4')]");
+
+
+        //CONFIGURATION BY CLIENT RATING
+
+        //ADD
+
+        elements.put("configuration_by_clients_rating_add_b_add", "//*[contains(@id, 'tConfByClientRateId:boton_add')]");
+        elements.put("configuration_by_clients_rating_add_lov_client_rating", "//*[contains(@id, 'codSegmentoId::lovIconId')]");
+        elements.put("configuration_by_clients_rating_add_i_client_rating", "//*[contains(@id, 'codSegmentoId::content')]");
+        elements.put("configuration_by_clients_rating_add_i_arrival_date_from", "//*[contains(@id, '0:id21::content')]");
+        elements.put("configuration_by_clients_rating_add_i_stay_date_from", "//*[contains(@id, '0:id23::content')]");
+        elements.put("configuration_by_clients_rating_add_i_chase_from", "//*[contains(@id, '0:it11::content')]");
+        elements.put("configuration_by_clients_rating_add_i_rechase_days", "//*[contains(@id, '0:it7::content')]");
+        elements.put("configuration_by_clients_rating_add_sl_include_bms", "//*[contains(@id, '0:soc2::content')]");
+        elements.put("configuration_by_clients_rating_add_ch_include_dns_hotels", "//*[contains(@id, '0:sbc24::content')]");
+        elements.put("configuration_by_clients_rating_add_ch_include_ref_to_client", "//*[contains(@id, '0:sbc25::content')]");
+        elements.put("configuration_by_clients_rating_add_i_project_name", "//*[contains(@id, '0:it10::content')]");
+        elements.put("configuration_by_clients_rating_add_ch_active", "//*[contains(@id, '0:sbc23::content')]");
+        elements.put("configuration_by_clients_rating_add_i_sale_value", "//*[contains(@id, '0:it8::content')]");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_co", "//*[contains(@id, '0:msilovCodEmp:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_add_atlas_co_e_company_name_tb1", "//*[contains(@id, '0:msilovCodEmp:dc_t2::db')]/table/tbody/tr[1]/td[2]");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_co_b_pass", "//*[contains(@id, '0:msilovCodEmp:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_co_e_company_name_tb2", "//*[contains(@id, '0:msilovCodEmp:dc_t1::db')]/table/tbody/tr/td[2]");
+        elements.put("configuration_by_clients_rating_add_atlas_co_b_ok", "//*[contains(@id, '0:msilovCodEmp:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_add_i_atlas_co", "//*[contains(@id, '0:msilovCodEmp:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_office", "//*[contains(@id, '0:msilovCodOfi:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_office_e_office_code_tb1", "//*[contains(@id, '0:msilovCodOfi:dc_t2::db')]/table/tbody/tr/td[4]");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_office_b_pass", "//*[contains(@id, '0:msilovCodOfi:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_office_e_office_code_tb2", "//*[contains(@id, '0:msilovCodOfi:dc_t1::db')]/table/tbody/tr/td[3]");
+        elements.put("configuration_by_clients_rating_add_lov_atlas_office_b_ok", "//*[contains(@id, '0:msilovCodOfi:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_add_i_atalas_office", "//*[contains(@id, '0:msilovCodOfi:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_add_lov_destination", "//*[contains(@id, '0:msilovCodDestino:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_destination_e_destination_name_tb1", "//*[contains(@id, '0:msilovCodDestino:dc_t2::db')]/table/tbody/tr[1]/td[2]");
+        elements.put("configuration_by_clients_rating_add_lov_destination_b_pass", "//*[contains(@id, '0:msilovCodDestino:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_add_destination_e_destination_name_tb2", "//*[contains(@id, '0:msilovCodDestino:dc_t1::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("configuration_by_clients_rating_add_destination_b_ok", "//*[contains(@id, '0:msilovCodDestino:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_add_i_destination", "//*[contains(@id, '0:msilovCodDestino:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_add_lov_destination_zone", "//*[contains(@id, '0:msilovSeqZonaGe:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_destination_zone_e_zone_description_tb1", "//*[contains(@id, '0:msilovSeqZonaGe:dc_t2::db')]/table/tbody/tr/td[3]");
+        elements.put("configuration_by_clients_rating_add_lov_destination_zone_b_pass", "//*[contains(@id, '0:msilovSeqZonaGe:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_destination_zone_e_zone_description_tb2", "//*[contains(@id, '0:msilovSeqZonaGe:dc_t1::db')]/table/tbody/tr/td[3]");
+        elements.put("configuration_by_clients_rating_add_lov_destination_zone_b_ok", "//*[contains(@id, '0:msilovSeqZonaGe:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_add_i_destination_zone", "//*[contains(@id, '0:msilovSeqZonaGe:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_add_lov_hotel_category", "//*[contains(@id, '0:msilovCodCateg:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_hotel_category_hotel_category_code_tb1", "//*[contains(@id, '0:msilovCodCateg:dc_t2::db')]/table/tbody/tr[1]/td");
+        elements.put("configuration_by_clients_rating_add_lov_hotel_category_b_pass", "//*[contains(@id, '0:msilovCodCateg:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_add_lov_hotel_category_hotel_category_code_tb2", "//*[contains(@id, '0:msilovCodCateg:dc_t1::db')]/table/tbody/tr[1]/td");
+        elements.put("configuration_by_clients_rating_add_lov_hotel_category_b_ok", "//*[contains(@id, '0:msilovCodCateg:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_add_i_hotel_category", "//*[contains(@id, '0:msilovCodCateg:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_add_i_arrival_date_to", "//*[contains(@id, '0:id24::content')]");
+        elements.put("configuration_by_clients_rating_add_i_stay_date_to", "//*[contains(@id, '0:id22::content')]");
+        elements.put("configuration_by_clients_rating_add_i_chase_to", "//*[contains(@id, '0:it4::content')]");
+        elements.put("configuration_by_clients_rating_add_i_last_minute_day", "//*[contains(@id, '0:it3::content')]");
+        elements.put("configuration_by_clients_rating_add_sl_include_integrations", "//*[contains(@id, '0:soc1::content')]");
+        elements.put("configuration_by_clients_rating_add_ch_client_confirmation", "//*[contains(@id, '0:sbc22::content')]");
+        elements.put("configuration_by_clients_rating_add_ch_send_copy_kam", "//*[contains(@id, '0:sbc21::content')]");
+        elements.put("configuration_by_clients_rating_add_b_save", "//*[contains(@id, '0:pcgt45:boton_commit')]");
+
+
+        //SEARCH
+
+        elements.put("configuration_by_clients_rating_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]/a");
+        elements.put("configuration_by_clients_rating_i_client_rating", "//*[contains(@id, 'tCbcr_afr_c31::content')]");
+        elements.put("configuration_by_clients_rating_i_sale_value", "//*[contains(@id, 'tCbcr_afr_c27::content')]");
+        elements.put("configuration_by_clients_rating_i_arrival_date_from", "//*[contains(@id, 'tCbcr:inputDate1::content')]");
+        elements.put("configuration_by_clients_rating_i_arrival_date_to", "//*[contains(@id, 'tCbcr:id5::content')]");
+        elements.put("configuration_by_clients_rating_i_stay_date_to", "//*[contains(@id, 'tCbcr:id8::content')]");
+        elements.put("configuration_by_clients_rating_i_stay_date_from", "//*[contains(@id, 'tCbcr:id7::content')]");
+        elements.put("configuration_by_clients_rating_i_chase_from", "//*[contains(@id, 'tCbcr:inputText5::content')]");
+        elements.put("configuration_by_clients_rating_i_chase_until", "//*[contains(@id, 'tCbcr:inputText6::content')]");
+        elements.put("configuration_by_clients_rating_i_rechase_days", "//*[contains(@id, 'tCbcr:inputText8::content')]");
+        elements.put("configuration_by_clients_rating_i_atlas_co", "//*[contains(@id, 'tCbcr_afr_c36::content')]");
+        elements.put("configuration_by_clients_rating_i_atlas_office", "//*[contains(@id, 'tCbcr_afr_c40::content')]");
+        elements.put("configuration_by_clients_rating_i_destination", "//*[contains(@id, 'tCbcr_afr_c38::content')]");
+        elements.put("configuration_by_clients_rating_i_destination_zone", "//*[contains(@id, 'tCbcr_afr_c42::content')]");
+        elements.put("configuration_by_clients_rating_i_hotel_category", "//*[contains(@id, 'tCbcr_afr_c29::content')]");
+        elements.put("configuration_by_clients_rating_i_last_minute_days", "//*[contains(@id, 'tCbcr_afr_c26::content')]");
+        elements.put("configuration_by_clients_rating_i_project_name", "//*[contains(@id, 'tCbcr_afr_c20::content')]");
+        elements.put("configuration_by_clients_rating_sl_include_dnd_hotels", "//*[contains(@id, 'tCbcr:soc7::content')]");
+        elements.put("configuration_by_clients_rating_sl_include_bms", "//*[contains(@id, 'tCbcr:selectOneChoice6::content')]");
+        elements.put("configuration_by_clients_rating_sl_include_integrations", "//*[contains(@id, 'tCbcr:selectOneChoice7::content')]");
+        elements.put("configuration_by_clients_rating_sl_include_ref_to_client", "//*[contains(@id, 'tCbcr:selectOneChoice8::content')]");
+        elements.put("configuration_by_clients_rating_sl_send_copy_kam", "//*[contains(@id, 'tCbcr:soc11::content')]");
+        elements.put("configuration_by_clients_rating_sl_client_confirmation", "//*[contains(@id, 'tCbcr:soc9::content')]");
+        elements.put("configuration_by_clients_rating_sl_active", "//*[contains(@id, 'tCbcr:soc10::content')]");
+        elements.put("configuration_by_clients_rating_e_result", "//*[contains(@id, 'tCbcr::db')]/table/tbody/tr/td[1]");
+
+
+        //EDIT
+
+        elements.put("configuration_by_clients_rating_ed_b_edit", "//*[contains(@id, 'tConfByClientRateId:boton_edit')]");
+        elements.put("configuration_by_clients_rating_ed_lov_client_rating", "//*[contains(@id, 'codSegmentoId::lovIconId')]");
+        elements.put("configuration_by_clients_rating_ed_i_client_rating", "//*[contains(@id, 'codSegmentoId::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_arrival_date_from", "//*[contains(@id, '0:id21::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_stay_date_from", "//*[contains(@id, '0:id23::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_chase_from", "//*[contains(@id, '0:it11::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_rechase_days", "//*[contains(@id, '0:it7::content')]");
+        elements.put("configuration_by_clients_rating_ed_sl_include_bms", "//*[contains(@id, '0:soc2::content')]");
+        elements.put("configuration_by_clients_rating_ed_ch_include_dns_hotels", "//*[contains(@id, '0:sbc24::content')]");
+        elements.put("configuration_by_clients_rating_ed_ch_include_ref_to_client", "//*[contains(@id, '0:sbc25::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_project_name", "//*[contains(@id, '0:it10::content')]");
+        elements.put("configuration_by_clients_rating_ed_ch_active", "//*[contains(@id, '0:sbc23::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_sale_value", "//*[contains(@id, '0:it8::content')]");
+        elements.put("configuration_by_clients_rating_ed_lov_atlas_co", "//*[contains(@id, '0:msilovCodEmp:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_atlas_co_e_company_name_tb1", "//*[contains(@id, '0:msilovCodEmp:dc_t2::db')]/table/tbody/tr[2]/td[2]");
+        elements.put("configuration_by_clients_rating_ed_lov_atlas_co_b_pass", "//*[contains(@id, '0:msilovCodEmp:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_atlas_co_e_company_name_tb2", "//*[contains(@id, '0:msilovCodEmp:dc_t1::db')]/table/tbody/tr/td[2]");
+        elements.put("configuration_by_clients_rating_ed_lov_atlas_co_b_ok", "//*[contains(@id, '0:msilovCodEmp:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_ed_i_atlas_co", "//*[contains(@id, '0:msilovCodEmp:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_lov_atlas_office", "//*[contains(@id, '0:msilovCodOfi:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_lov_atlas_office_e_office_code_tb1", "//*[contains(@id, '0:msilovCodOfi:dc_t2::db')]/table/tbody/tr/td[4]");
+        elements.put("configuration_by_clients_rating_lov_atlas_office_b_pass", "//*[contains(@id, '0:msilovCodOfi:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_lov_atlas_office_e_office_code_tb2", "//*[contains(@id, '0:msilovCodOfi:dc_t1::db')]/table/tbody/tr/td[2]");
+        elements.put("configuration_by_clients_rating_ed_lov_atlas_office_b_ok", "//*[contains(@id, '0:msilovCodOfi:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_ed_i_atalas_office", "//*[contains(@id, '0:msilovCodOfi:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_ed_lov_destination", "//*[contains(@id, '0:msilovCodDestino:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_e_destination_name_tb1", "//*[contains(@id, '0:msilovCodDestino:dc_t2::db')]/table/tbody/tr[2]/td[2]");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_b_pass", "//*[contains(@id, '0:msilovCodDestino:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_e_destination_name_tb2", "//*[contains(@id, '0:msilovCodDestino:dc_t1::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_b_ok", "//*[contains(@id, '0:msilovCodDestino:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_ed_i_destination", "//*[contains(@id, '0:msilovCodDestino:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_zone", "//*[contains(@id, '0:msilovSeqZonaGe:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_zone_e_zone_description_tb1", "//*[contains(@id, '0:msilovSeqZonaGe:dc_t2::db')]/table/tbody/tr/td[3]");
+        elements.put("configuration_by_clients_rating_lov_destination_zone_b_pass", "//*[contains(@id, '0:msilovSeqZonaGe:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_zone_e_zone_description_tb2", "//*[contains(@id, '0:msilovSeqZonaGe:dc_t1::db')]/table/tbody/tr/td[3]");
+        elements.put("configuration_by_clients_rating_ed_lov_destination_zone_b_ok", "//*[contains(@id, '0:msilovSeqZonaGe:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_ed_i_destination_zone", "//*[contains(@id, '0:msilovSeqZonaGe:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_lov_hotel_category", "//*[contains(@id, '0:msilovCodCateg:dc_ctb1::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_hotel_category_hotel_category_code_tb1", "//*[contains(@id, '0:msilovCodCateg:dc_t2::db')]/table/tbody/tr[2]/td");
+        elements.put("configuration_by_clients_rating_ed_lov_hotel_category_b_pass", "//*[contains(@id, '0:msilovCodCateg:dc_ctb4::icon')]");
+        elements.put("configuration_by_clients_rating_ed_lov_hotel_category_hotel_category_code_tb2", "//*[contains(@id, '0:msilovCodCateg:dc_t1::db')]/table/tbody/tr[1]/td");
+        elements.put("configuration_by_clients_rating_ed_lov_hotel_category_b_ok", "//*[contains(@id, '0:msilovCodCateg:dc_ctb5')]");
+        elements.put("configuration_by_clients_rating_ed_i_hotel_category", "//*[contains(@id, '0:msilovCodCateg:dc_pgl4')]/div");
+        elements.put("configuration_by_clients_rating_ed_i_arrival_date_to", "//*[contains(@id, '0:id24::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_stay_date_to", "//*[contains(@id, '0:id22::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_chase_to", "//*[contains(@id, '0:it4::content')]");
+        elements.put("configuration_by_clients_rating_ed_i_last_minute_day", "//*[contains(@id, '0:it3::content')]");
+        elements.put("configuration_by_clients_rating_ed_sl_include_integrations", "//*[contains(@id, '0:soc1::content')]");
+        elements.put("configuration_by_clients_rating_ed_ch_client_confirmation", "//*[contains(@id, '0:sbc22::content')]");
+        elements.put("configuration_by_clients_rating_ed_ch_send_copy_kam", "//*[contains(@id, '0:sbc21::content')]");
+        elements.put("configuration_by_clients_rating_ed_b_save", "//*[contains(@id, '0:pcgt45:boton_commit')]");
+        elements.put("configuration_by_clients_rating_ed_b_delete_atlas_co", "//*[contains(@id, '0:msilovCodEmp:dc_ctb3::icon')]");
+        elements.put("configuration_by_clients_rating_ed_b_delete_atlas_office", "//*[contains(@id, '0:msilovCodOfi:dc_ctb3::icon')]");
+        elements.put("configuration_by_clients_rating_ed_b_delete_destination", "//*[contains(@id, '0:msilovCodDestino:dc_ctb3::icon')]");
+        elements.put("configuration_by_clients_rating_ed_b_delete_destination_zone", "//*[contains(@id, '0:msilovSeqZonaGe:dc_ctb3::icon')]");
+        elements.put("configuration_by_clients_rating_ed_b_delete_hotel_category", "//*[contains(@id, '0:msilovCodCateg:dc_ctb3::icon')]");
+
+
+        //OTHER ACTIONS
+        elements.put("configuration_by_clients_rating_b_actions", "//*[contains(@id, 'PCGenericMenu1:dc_m1')]/div/table/tbody/tr/td[2]/a");
+        elements.put("configuration_by_clients_rating_b_actions_b_data_history", "//*[contains(@id, 'PCGenericMenu1:dc_cmi0')]/td[2]");
+        elements.put("configuration_by_clients_rating_b_actions_b_data_history_b_ok", "//*[contains(@id, 'PCGenericMenu1:d22::ok')]");
+        elements.put("configuration_by_clients_rating_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]/a");
+
+
+        //DELETE
+
+        elements.put("configuration_by_clients_rating_b_delete", "//*[contains(@id, 'tConfByClientRateId:boton_remove')]");
+        elements.put("configuration_by_clients_rating_b_delete_b_ok", "//*[contains(@id, '0:d5::yes')]");
+        elements.put("configuration_by_clients_rating_e_record", "//*[contains(@id, '0:pc2:outputText6')]");
+
+
+        //SUPLIER/HOTEL EXCLUSIONS
 
 
 
