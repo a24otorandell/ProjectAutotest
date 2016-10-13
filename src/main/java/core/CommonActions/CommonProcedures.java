@@ -102,25 +102,6 @@ public class CommonProcedures {
      * @see ErrorManager
      */
     public static boolean goToScreen(TestDriver driver, int number_screens_open) {
-        /*try {
-            String componentinput;
-            String searchicon = "//*[contains(@id, 'pt1:searchminimenu::icon')]";
-            if (driver.getTestdetails().getEnvironment().equals("sis")) {
-                componentinput = "//*[contains(@id, 'j_id__ctru158::content')]";
-            } else {
-                componentinput = "//*[contains(@id, 'j_id__ctru158::content')]";
-            }
-            String searchcomponent = "//*[contains(@id, 'pt_i2::icon')]";
-            String result = "//*[contains(@id, 'pt_i3:"+number_screens_open+":cl3')]";
-            Functions.checkClick(driver, new String[]{"Search icon", searchicon}, new String[]{"Component input", componentinput}, 180, 500, " on main ATLAS page");
-            Functions.insertInput(driver, new String[]{"Component", componentinput}, "Component", driver.getTestdetails().getTestname(), " on main ATLAS page");
-            Functions.checkClick(driver, new String[]{"Search component icon", searchcomponent}, new String[]{"Component result", result}, 180, 500, " on main ATLAS page");
-
-            Functions.checkClickByAbsence(driver, new String[]{"Component result", result}, new String[]{"Component result", result}, 360, 500, " on main ATLAS page");
-        } catch (Exception e) {
-            String ecode = "--ERROR: goToScreen(): Unable to enter the selected screen, maybe the server is running too slow..";
-            e.printStackTrace();
-            ErrorManager.process(driver, ecode);*/
 
         try {
             String result = "//*[contains(@id, 'pt_i3:" + number_screens_open + ":cl3')]";
