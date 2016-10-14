@@ -57,11 +57,11 @@ public class AT2ACCSU0035Locators {
         elements.put("qbe_i_fiscal_code", "//*[contains(@id, 'afr_resId1c5::content')]");
         elements.put("qbe_i_description2", "//*[contains(@id, 'afr_resId1c6::content')]");
         elements.put("qbe_i_purchase_percentage", "//*[contains(@id, 'afr_resId1c7::content')]");
-        elements.put("qbe_i_purchase_amount", "//*[contains(@id, 'afr_resId1c8::content::content')]");
-        elements.put("qbe_i_sale_percentage", "//*[contains(@id, 'afr_resId1c9::content::content')]");
-        elements.put("qbe_i_sale_amount", "//*[contains(@id, 'afr_resId1c10::content::content')]");
+        elements.put("qbe_i_purchase_amount", "//*[contains(@id, 'afr_resId1c8::content')]");
+        elements.put("qbe_i_sale_percentage", "//*[contains(@id, 'afr_resId1c9::content')]");
+        elements.put("qbe_i_sale_amount", "//*[contains(@id, 'afr_resId1c10::content')]");
         elements.put("qbe_sl_application_type", "//*[contains(@id, 'resId1:soc5::content')]");
-        elements.put("qbe_i_currency", "//*[contains(@id, 'afr_resId1c12::content::content')]");
+        elements.put("qbe_i_currency", "//*[contains(@id, 'afr_resId1c12::content')]");
         //ADD
         elements.put("add_i_company_code", "//*[contains(@id, 'pcgt2:codempId::content')]");
         elements.put("add_lov_company_code", "//*[contains(@id, 'pcgt2:codempId::lovIconId')]");
