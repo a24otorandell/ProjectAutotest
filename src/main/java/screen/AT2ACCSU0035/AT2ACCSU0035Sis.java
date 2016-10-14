@@ -14,6 +14,7 @@ public class AT2ACCSU0035Sis {
     protected AT2ACCSU0035Data data;
 
     public AT2ACCSU0035Sis() {
+
     }
 
     public AT2ACCSU0035Locators getLocators() {

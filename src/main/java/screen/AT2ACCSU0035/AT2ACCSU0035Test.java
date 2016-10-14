@@ -24,6 +24,7 @@ public class AT2ACCSU0035Test {
     protected AT2ACCSU0035Data data;
 
     public AT2ACCSU0035Test() {
+
     }
 
     public AT2ACCSU0035Locators getLocators() {

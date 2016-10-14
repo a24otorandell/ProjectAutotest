@@ -13,6 +13,7 @@ public class AT2ACCSU0035Locators {
         setElements();
     }
 
+
     public Map<String, String> getElements() {
         return elements;
     }
