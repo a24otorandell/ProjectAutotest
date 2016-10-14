@@ -346,7 +346,81 @@ public class AT2BOOSU1004Locators {
 
         //SUPLIER/HOTEL EXCLUSIONS
 
+        //GO TO
+        elements.put("go_to_suplier_hotel_exclusions", "//*[contains(@id, 'sdi2::disAcr')]");
 
+
+        //ADD
+
+        elements.put("suplier_hotel_exclusions_add_b_add", "//*[contains(@id, 'pcgt1:boton_add')]");
+        elements.put("suplier_hotel_exclusions_add_lov_company", "//*[contains(@id, 'pcgt1:companyId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_add_i_company", "//*[contains(@id, 'pcgt1:companyId::content')]");
+        elements.put("suplier_hotel_exclusions_add_lov_suplier_code", "//*[contains(@id, 'pcgt1:codProveId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_add_i_suplier_code", "//*[contains(@id, 'pcgt1:codProveId::content')]");
+        elements.put("suplier_hotel_exclusions_add_lov_hotel_code", "//*[contains(@id, 'pcgt1:cId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_add_i_hotel_code", "//*[contains(@id, 'pcgt1:cId::content')]");
+        elements.put("suplier_hotel_exclusions_add_lov_chain", "//*[contains(@id, 'pcgt1:codCadenaId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_add_i_chain", "//*[contains(@id, 'pcgt1:codCadenaId::content')]");
+        elements.put("suplier_hotel_exclusions_add_lov_office", "//*[contains(@id, 'pcgt1:officeId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_add_i_office", "//*[contains(@id, 'pcgt1:officeId::content')]");
+        elements.put("suplier_hotel_exclusions_add_e_suplier_name", "//*[contains(@id, 'pcgt1:it3::content')]");
+        elements.put("suplier_hotel_exclusions_add_e_hotel_name", "//*[contains(@id, 'pcgt1:it2::content')]");
+        elements.put("suplier_hotel_exclusions_add_e_chain_name", "//*[contains(@id, 'pcgt1:it7::content')]");
+        elements.put("suplier_hotel_exclusions_add_e_description", "//*[contains(@id, 'pcgt1:it4::content')]");
+        elements.put("suplier_hotel_exclusions_add_suplier_short_name", "//*[contains(@id, 'pcgt1:it1::content')]");
+        elements.put("suplier_hotel_exclusions_add_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
+        elements.put("suplier_hotel_exclusions_add_b_save_b_ok", "//*[contains(@id, '0:d2::yes')]");
+        elements.put("suplier_hotel_exclusions_add_b_save_b_ok_sl_status", "//*[contains(@id, '0:soc3::content')]");
+        elements.put("suplier_hotel_exclusions_add_b_save_b_ok_b_status_ok", "//*[contains(@id, '0:cb1')]");
+
+
+        //SEARCH
+
+        elements.put("suplier_hotel_exclusions_se_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
+        elements.put("suplier_hotel_exclusions_se_i_suplier_code", "//*[contains(@id, 'afr_c3::content')]");
+        elements.put("suplier_hotel_exclusions_se_i_suplier_name", "//*[contains(@id, 'afr_c5::content')]");
+        elements.put("suplier_hotel_exclusions_se_i_chain", "//*[contains(@id, 'afr_c4::content')]");
+        elements.put("suplier_hotel_exclusions_se_i_hotel_code", "//*[contains(@id, 't1:inputText7::content')]");
+        elements.put("suplier_hotel_exclusions_se_i_hotel_name", "//*[contains(@id, 'afr_c2::content')]");
+        elements.put("suplier_hotel_exclusions_se_e_result", "//*[contains(@id, 't1::db')]/table/tbody/tr[1]/td[1]");
+
+
+        //EDIT
+
+        elements.put("suplier_hotel_exclusions_ed_b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");
+        elements.put("suplier_hotel_exclusions_ed_lov_company", "//*[contains(@id, 'pcgt1:companyId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_ed_i_company", "//*[contains(@id, 'pcgt1:companyId::content')]");
+        elements.put("suplier_hotel_exclusions_ed_lov_suplier_code", "//*[contains(@id, 'pcgt1:codProveId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_ed_i_suplier_code", "//*[contains(@id, 'pcgt1:codProveId::content')]");
+        elements.put("suplier_hotel_exclusions_ed_lov_hotel_code", "//*[contains(@id, 'pcgt1:cId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_ed_i_hotel_code", "//*[contains(@id, 'pcgt1:cId::content')]");
+        elements.put("suplier_hotel_exclusions_ed_lov_chain", "//*[contains(@id, 'pcgt1:codCadenaId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_ed_i_chain", "//*[contains(@id, 'pcgt1:codCadenaId::content')]");
+        elements.put("suplier_hotel_exclusions_ed_lov_office", "//*[contains(@id, 'pcgt1:officeId::lovIconId')]");
+        elements.put("suplier_hotel_exclusions_ed_i_office", "//*[contains(@id, 'pcgt1:officeId::content')]");
+        elements.put("suplier_hotel_exclusions_ed_e_suplier_name", "//*[contains(@id, 'pcgt1:it3::content')]");
+        elements.put("suplier_hotel_exclusions_ed_e_hotel_name", "//*[contains(@id, 'pcgt1:it2::content')]");
+        elements.put("suplier_hotel_exclusions_ed_e_chain_name", "//*[contains(@id, 'pcgt1:it7::content')]");
+        elements.put("suplier_hotel_exclusions_ed_e_description", "//*[contains(@id, 'pcgt1:it4::content')]");
+        elements.put("suplier_hotel_exclusions_ed_suplier_short_name", "//*[contains(@id, 'pcgt1:it1::content')]");
+        elements.put("suplier_hotel_exclusions_ed_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
+        elements.put("suplier_hotel_exclusions_ed_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
+        elements.put("suplier_hotel_exclusions_ed_b_save_b_ok", "//*[contains(@id, '0:d2::yes')]");
+        elements.put("suplier_hotel_exclusions_ed_b_save_b_ok_sl_status", "//*[contains(@id, '0:soc3::content')]");
+        elements.put("suplier_hotel_exclusions_ed_b_save_b_ok_b_status_ok", "//*[contains(@id, '1:r2:0:cb1')]");
+
+        //OTHER ACTIONS
+        elements.put("suplier_hotel_exclusions_b_actions", "//*[contains(@id, 'pdm12:dc_m1')]/div/table/tbody/tr/td[2]/a");
+        elements.put("suplier_hotel_exclusions_b_actions_b_data_history", "//*[contains(@id, 'pdm12:dc_cmi0')]/td[2]");
+        elements.put("suplier_hotel_exclusions_b_actions_b_data_history_b_ok", "//*[contains(@id, 'pdm12:d22::ok')]");
+        elements.put("suplier_hotel_exclusions_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
+
+
+        //DELETE
+
+        elements.put("suplier_hotel_exclusions_b_delete", "//*[contains(@id, 'pcgt1:boton_remove')]");
+        elements.put("suplier_hotel_exclusions_b_delete_ok", "//*[contains(@id, 'outputText4')]");
+        elements.put("suplier_hotel_exclusions_e_records", "//*[contains(@id, 'pcgt1:cbt1')]");
 
 
     }

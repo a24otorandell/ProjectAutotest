@@ -10,6 +10,8 @@ import core.recursiveData.recursiveXPaths;
 
 /**
  * Created by vsolis on 05/10/2016.
+ *
+ * A la espera de solucion de bug, falta programar tres tablas Historic
  */
 public class AT2BOOSU1004Sis {
     protected AT2BOOSU1004Locators locators;
@@ -41,9 +43,9 @@ public class AT2BOOSU1004Sis {
     }
 
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Transfers");
+        driver.getTestdetails().setMainmenu("Bookings");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setScreen("Reconfirmations set up 2.0");
     }
 
     protected String getElements(String key) {
@@ -61,10 +63,396 @@ public class AT2BOOSU1004Sis {
         if (!Reconfirmation_clients(driver)) {
             return false;
         }
-
+        if (!Suplier_hotel_exclusions(driver)) {
+            return false;
+        }
 
         return false;
     }
+
+
+    //SUPLIER HOTEL EXCLUSIONS
+
+    private boolean Suplier_hotel_exclusions(TestDriver driver) {
+
+        if (!Go_to_suplier_hotel_exclusions(driver)) {
+            return false;
+        }
+
+        if (!Add_suplier_hotel_exclusions(driver)) {
+            return false;
+        }
+
+        if (!Search_suplier_hotel_exclusions(driver)) {
+            return false;
+        }
+
+        if (!Edit_suplier_hotel_exclusions(driver)) {
+            return false;
+        }
+
+        if (!Search_suplier_hotel_exclusions(driver)) {
+            return false;
+        }
+
+        if (!Other_actions_suplier_hotel_exclusions(driver)) {
+            return false;
+        }
+
+        if (!Delete_supler_hotel_exclusions(driver)) {
+            return false;
+        }
+
+        return true;
+
+
+    }
+
+    private boolean Delete_supler_hotel_exclusions(TestDriver driver) {
+
+        driver.getReport().addHeader("DELETE IN SUPLIER HOTEL EXCLUSIONS", 3, false);
+
+
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"suplier_hotel_exclusions_b_delete", getElements("suplier_hotel_exclusions_b_delete")},
+                new String[]{"suplier_hotel_exclusions_e_records", getElements("suplier_hotel_exclusions_e_records")},
+                new String[]{"suplier_hotel_exclusions_b_delete_ok", getElements("suplier_hotel_exclusions_b_delete_ok")},
+                " on DELETE IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Other_actions_suplier_hotel_exclusions(TestDriver driver) {
+
+        driver.getReport().addHeader("OTHER ACTIONS IN SUPLIER HOTEL EXCLUSIONS", 3, false);
+
+
+        if (!Functions.auditData(driver,
+                new String[]{"suplier_hotel_exclusions_b_actions", getElements("suplier_hotel_exclusions_b_actions")}, //actions button
+                new String[]{"suplier_hotel_exclusions_b_actions_b_data_history", getElements("suplier_hotel_exclusions_b_actions_b_data_history")}, //audit button
+                new String[]{"suplier_hotel_exclusions_b_actions_b_data_history_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
+                " on OTHER ACTIONS IN HOTEL EXCLUSIONS")) {
+            return false;
+
+        }
+
+        if (!Functions.detachTable(driver,
+                new String[]{"suplier_hotel_exclusions_b_detach", getElements("suplier_hotel_exclusions_b_detach")}, //detach button
+                true,     //screenshot??
+                " on OTHER ACTIONS IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean Edit_suplier_hotel_exclusions(TestDriver driver) {
+
+        driver.getReport().addHeader(" EDIT IN SUPLIER HOTEL EXCLUSIONS", 3, false);
+
+        Functions.break_time(driver, 6, 500);
+
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_ed_b_edit", getElements("suplier_hotel_exclusions_ed_b_edit")}, //element to click
+                new String[]{"suplier_hotel_exclusions_ed_lov_company", getElements("suplier_hotel_exclusions_ed_lov_company")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_ed_lov_company", getElements("suplier_hotel_exclusions_ed_lov_company")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_ed_i_company", getElements("suplier_hotel_exclusions_ed_i_company")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "company", //Data name
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_ed_lov_suplier_code", getElements("suplier_hotel_exclusions_ed_lov_suplier_code")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_ed_i_suplier_code", getElements("suplier_hotel_exclusions_ed_i_suplier_code")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "suplier_code", //Data name
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_ed_lov_hotel_code", getElements("suplier_hotel_exclusions_ed_lov_hotel_code")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_ed_i_hotel_code", getElements("suplier_hotel_exclusions_ed_i_hotel_code")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "hotel_code", //Data name
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_ed_lov_chain", getElements("suplier_hotel_exclusions_ed_lov_chain")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_ed_i_chain", getElements("suplier_hotel_exclusions_ed_i_chain")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "chain", //Data name
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_ed_lov_office", getElements("suplier_hotel_exclusions_ed_lov_office")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_ed_i_office", getElements("suplier_hotel_exclusions_ed_i_office")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "office", //Data name
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_ed_e_suplier_name", getElements("suplier_hotel_exclusions_ed_e_suplier_name")}, // element path
+                "suplier_name", // key for data value (the name)
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_ed_e_hotel_name", getElements("suplier_hotel_exclusions_ed_e_hotel_name")}, // element path
+                "hotel_name", // key for data value (the name)
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_ed_e_chain_name", getElements("suplier_hotel_exclusions_ed_e_chain_name")}, // element path
+                "chain_name", // key for data value (the name)
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_ed_e_description", getElements("suplier_hotel_exclusions_ed_e_description")}, // element path
+                "description", // key for data value (the name)
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_ed_suplier_short_name", getElements("suplier_hotel_exclusions_ed_suplier_short_name")}, // element path
+                "short_name", // key for data value (the name)
+                " on EDIT HOTEL EXCLUSIONS")) {
+            return false;
+        }
+
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save", getElements("suplier_hotel_exclusions_add_b_save")}, //element to click
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok", getElements("suplier_hotel_exclusions_add_b_save_b_ok")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok", getElements("suplier_hotel_exclusions_add_b_save_b_ok")}, //element to click
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok_sl_status", getElements("suplier_hotel_exclusions_add_b_save_b_ok_sl_status")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.selectText(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok_sl_status", getElements("suplier_hotel_exclusions_add_b_save_b_ok_sl_status")},
+                "Not Confirmed", "confirmed", " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok_b_status_ok", getElements("suplier_hotel_exclusions_add_b_save_b_ok_b_status_ok")}, //element to click
+                new String[]{"suplier_hotel_exclusions_b_actions", getElements("suplier_hotel_exclusions_b_actions")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+
+
+        return true;
+    }
+
+    private boolean Search_suplier_hotel_exclusions(TestDriver driver) {
+
+        driver.getReport().addHeader(" SEARCH IN SUPLIER HOTEL EXCLUSIONS", 3, false);
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.clickQbE(driver,
+                new String[]{"suplier_hotel_exclusions_se_b_qbe", getElements("suplier_hotel_exclusions_se_b_qbe")},// query button
+                new String[]{"suplier_hotel_exclusions_se_i_suplier_code", getElements("suplier_hotel_exclusions_se_i_suplier_code")},//any query input
+                " on SEARCH IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.insertInput(driver, new String[]{"suplier_hotel_exclusions_se_i_suplier_code", getElements("suplier_hotel_exclusions_se_i_suplier_code")},
+                "se_suplier_code", data.getData().get("suplier_code"), "on SEARCH IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"suplier_hotel_exclusions_se_i_suplier_name", getElements("suplier_hotel_exclusions_se_i_suplier_name")},
+                "se_suplier_name", data.getData().get("suplier_name"), "on SEARCH IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"suplier_hotel_exclusions_se_i_chain", getElements("suplier_hotel_exclusions_se_i_chain")},
+                "se_chain", data.getData().get("chain"), "on SEARCH IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"suplier_hotel_exclusions_se_i_hotel_code", getElements("suplier_hotel_exclusions_se_i_hotel_code")},
+                "se_hotel_code", data.getData().get("hotel_code"), "on SEARCH IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"suplier_hotel_exclusions_se_i_hotel_name", getElements("suplier_hotel_exclusions_se_i_hotel_name")},
+                "se_hotel_name", "%" + data.getData().get("hotel_name"), "on SEARCH IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"suplier_hotel_exclusions_se_i_suplier_code", getElements("suplier_hotel_exclusions_se_i_suplier_code")}, //search button
+                new String[]{"suplier_hotel_exclusions_se_e_result", getElements("suplier_hotel_exclusions_se_e_result")}, //result element
+                " on SEARCH IN HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Add_suplier_hotel_exclusions(TestDriver driver) {
+
+
+        driver.getReport().addHeader(" ADD IN SUPLIER HOTEL EXCLUSIONS", 3, false);
+
+        Functions.break_time(driver, 6, 500);
+
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_add", getElements("suplier_hotel_exclusions_add_b_add")}, //element to click
+                new String[]{"suplier_hotel_exclusions_add_lov_company", getElements("suplier_hotel_exclusions_add_lov_company")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_add_lov_company", getElements("suplier_hotel_exclusions_add_lov_company")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_add_i_company", getElements("suplier_hotel_exclusions_add_i_company")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "company", //Data name
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_add_lov_suplier_code", getElements("suplier_hotel_exclusions_add_lov_suplier_code")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_add_i_suplier_code", getElements("suplier_hotel_exclusions_add_i_suplier_code")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "suplier_code", //Data name
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_add_lov_hotel_code", getElements("suplier_hotel_exclusions_add_lov_hotel_code")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_add_i_hotel_code", getElements("suplier_hotel_exclusions_add_i_hotel_code")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "hotel_code", //Data name
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_add_lov_chain", getElements("suplier_hotel_exclusions_add_lov_chain")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_add_i_chain", getElements("suplier_hotel_exclusions_add_i_chain")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "chain", //Data name
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"suplier_hotel_exclusions_add_lov_office", getElements("suplier_hotel_exclusions_add_lov_office")}, // b_lov
+                new String[]{"suplier_hotel_exclusions_add_i_office", getElements("suplier_hotel_exclusions_add_i_office")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "office", //Data name
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_add_e_suplier_name", getElements("suplier_hotel_exclusions_add_e_suplier_name")}, // element path
+                "suplier_name", // key for data value (the name)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_add_e_hotel_name", getElements("suplier_hotel_exclusions_add_e_hotel_name")}, // element path
+                "hotel_name", // key for data value (the name)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_add_e_chain_name", getElements("suplier_hotel_exclusions_add_e_chain_name")}, // element path
+                "chain_name", // key for data value (the name)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_add_e_description", getElements("suplier_hotel_exclusions_add_e_description")}, // element path
+                "descripion", // key for data value (the name)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"suplier_hotel_exclusions_add_suplier_short_name", getElements("suplier_hotel_exclusions_add_suplier_short_name")}, // element path
+                "short_name", // key for data value (the name)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save", getElements("suplier_hotel_exclusions_add_b_save")}, //element to click
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok", getElements("suplier_hotel_exclusions_add_b_save_b_ok")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok", getElements("suplier_hotel_exclusions_add_b_save_b_ok")}, //element to click
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok_sl_status", getElements("suplier_hotel_exclusions_add_b_save_b_ok_sl_status")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+        if (!Functions.selectText(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok_sl_status", getElements("suplier_hotel_exclusions_add_b_save_b_ok_sl_status")},
+                "Confirmed", "confirmed", " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        Functions.break_time(driver, 6, 500);
+
+        if (!Functions.checkClick(driver,
+                new String[]{"suplier_hotel_exclusions_add_b_save_b_ok_b_status_ok", getElements("suplier_hotel_exclusions_add_b_save_b_ok_b_status_ok")}, //element to click
+                new String[]{"suplier_hotel_exclusions_b_actions", getElements("suplier_hotel_exclusions_b_actions")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on ADD HOTEL EXCLUSIONS")) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Go_to_suplier_hotel_exclusions(TestDriver driver) {
+        if (!Functions.checkClick(driver,
+                new String[]{"go_to_suplier_hotel_exclusions", getElements("go_to_suplier_hotel_exclusions")}, //element to click
+                new String[]{"suplier_hotel_exclusions_add_b_add", getElements("suplier_hotel_exclusions_add_b_add")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                " on GO TO")) {
+            return false;
+        }
+        return true;
+    }
+
+
+
+
 
     private boolean Reconfirmation_clients(TestDriver driver) {
 
@@ -114,12 +502,10 @@ public class AT2BOOSU1004Sis {
             return false;
         }
         return true;
-
-
     }
 
+    // CONFIGURATION BY CLIENT
 
-    //CONFIGURATION BY CLIENT
 
     private boolean Delete_configuration_by_clients(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN CONFIGURATION BY CLIENTS", 3, false);
@@ -134,7 +520,7 @@ public class AT2BOOSU1004Sis {
         }
 
         return true;
-    }
+        }
 
     private boolean Other_actions_configuration_by_clients(TestDriver driver) {
         driver.getReport().addHeader(" OTHER ACTIONS IN CONFIGURATION BY CLIENTS", 3, false);
@@ -1271,7 +1657,7 @@ public class AT2BOOSU1004Sis {
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"configuration_by_ttoo_se_i_ttoo", getElements("configuration_by_ttoo_se_i_ttoo")}, //search button
                 new String[]{"configuration_by_ttoo_se_e_result", getElements("configuration_by_ttoo_se_e_result")}, //result element
-                " on QBE")) {
+                " on SEARCH")) {
             return false;
         }
 
@@ -2107,6 +2493,7 @@ public class AT2BOOSU1004Sis {
 
         return true;
     }
+
 }
 
 

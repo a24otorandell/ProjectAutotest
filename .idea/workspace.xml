@@ -9,14 +9,14 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1002/AT2BOOSA1002Test.java" line="457" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="Actualización código  AT2BOOSU1004,">
+    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/CommonActions/CommonProcedures.class" afterPath="$PROJECT_DIR$/target/classes/core/CommonActions/CommonProcedures.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Locators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Manager.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Manager.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Locators.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -47,7 +47,7 @@
               <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Locators.java">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="626">
-                    <caret line="350" column="34" selection-start-line="350" selection-start-column="34" selection-end-line="350" selection-end-column="34" />
+                    <caret line="406" column="49" selection-start-line="406" selection-start-column="49" selection-end-line="406" selection-end-column="49" />
                     <folding />
                   </state>
                 </provider>
@@ -67,8 +67,8 @@
       <file leaf-file-name="Functions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
+            <state relative-caret-position="317">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,8 +77,8 @@
       <file leaf-file-name="AT2BOOSU1004Sis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="66" column="5" selection-start-line="58" selection-start-column="4" selection-end-line="66" selection-end-column="5" />
+            <state relative-caret-position="1144">
+              <caret line="2471" column="5" selection-start-line="60" selection-start-column="3" selection-end-line="2471" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#AT2BOOSU1004Sis#0;class#AT2BOOSU1004Sis#0" expanded="false" />
@@ -87,23 +87,58 @@
                 <element signature="method#getElements#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+                <element signature="method#Suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+                <element signature="method#Delete_supler_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+                <element signature="method#Other_actions_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+                <element signature="method#Edit_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+                <element signature="method#Search_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+                <element signature="method#Add_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+                <element signature="method#Go_to_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Reconfirmation_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Delete_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Other_actions_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Search_edit_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Edit_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-                <element signature="e#19467#19477#0" expanded="false" />
+                <element signature="e#40163#40173#0" expanded="false" />
                 <element signature="method#Search_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Add_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-                <element signature="e#48833#48843#0" expanded="false" />
+                <element signature="e#69554#69564#0" expanded="false" />
                 <element signature="method#Delete_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Other_actions_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Search_edit_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Edit_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-                <element signature="e#77727#77737#0" expanded="false" />
+                <element signature="e#98451#98461#0" expanded="false" />
                 <element signature="method#Search_configuratons_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
                 <element signature="method#Add_cofiguration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-                <element signature="e#105036#105046#0" expanded="false" />
+                <element signature="e#125760#125770#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2TRFSU0008Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
+              <folding>
+                <element signature="docComment;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#AT2TRFSU0008Test#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Create_in_route_second_time#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Create_in_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Go_to_create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Routes_by_default#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Delete_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Other_actions#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Qbe_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Edition_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Search_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Add_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -112,7 +147,7 @@
       <file leaf-file-name="DataGenerator.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/DataGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
+            <state relative-caret-position="1020">
               <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
               <folding />
             </state>
@@ -122,8 +157,8 @@
       <file leaf-file-name="AT2BOOSU1004Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+            <state relative-caret-position="442">
+              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#AT2BOOSU1004Test#0;class#AT2BOOSU1004Test#0" expanded="false" />
@@ -132,23 +167,30 @@
                 <element signature="method#getElements#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2BOOSU1004Test#0" expanded="false" />
+                <element signature="method#Suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+                <element signature="method#Delete_supler_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+                <element signature="method#Other_actions_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+                <element signature="method#Edit_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+                <element signature="method#Search_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+                <element signature="method#Add_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+                <element signature="method#Go_to_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Reconfirmation_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Delete_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Other_actions_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Search_edit_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Edit_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
-                <element signature="e#19365#19375#0" expanded="false" />
+                <element signature="e#39934#39944#0" expanded="false" />
                 <element signature="method#Search_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Add_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
-                <element signature="e#48731#48741#0" expanded="false" />
+                <element signature="e#69325#69335#0" expanded="false" />
                 <element signature="method#Delete_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Other_actions_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Search_edit_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Edit_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
-                <element signature="e#77625#77635#0" expanded="false" />
+                <element signature="e#98222#98232#0" expanded="false" />
                 <element signature="method#Search_configuratons_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
                 <element signature="method#Add_cofiguration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
-                <element signature="e#104934#104944#0" expanded="false" />
+                <element signature="e#125531#125541#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -230,7 +272,6 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0025/AT2ACCSU0025Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Data.java" />
@@ -241,6 +282,7 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Test.java" />
@@ -320,7 +362,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -451,8 +495,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -493,10 +535,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/core/CommonActions/CommonProcedures.class</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -504,11 +542,11 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0011/AT2MDMDE0011Data.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0011/AT2MDMDE0011Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0011/AT2MDMDE0011Manager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0011/AT2MDMDE0011Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0011/AT2MDMDE0011Test.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0035/AT2ACCSU0035Data.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0035/AT2ACCSU0035Locators.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0035/AT2ACCSU0035Manager.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0035/AT2ACCSU0035Sis.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0035/AT2ACCSU0035Test.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -938,13 +976,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00036" summary="eliminado texto comentado en JiraUpdate">
-      <created>1470994498904</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1470994498904</updated>
-    </task>
     <task id="LOCAL-00037" summary="eliminado texto comentado en JiraUpdate">
       <created>1472469638813</created>
       <option name="number" value="00037" />
@@ -1281,7 +1312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475829596489</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="Actualización código  AT2BOOSU1004,">
+      <created>1476367533252</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1476367533252</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1305,17 +1343,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22860792" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21839081" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908547" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21839081" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694763" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20614693" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32056195" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3658171" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3005997" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30140486" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30140486" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25573066" sideWeight="0.094387755" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1324,6 +1360,8 @@
       <window_info id="PMD" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1692" y="172" width="1256" height="686" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889196" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908547" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32056195" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1335,10 +1373,10 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26611695" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1191904" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28480205" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30140486" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31673053" sideWeight="0.4892905" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1348,10 +1386,10 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889196" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22860792" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21839081" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295129" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908547" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694763" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29385307" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32056195" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20614693" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32056195" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25573066" sideWeight="0.094387755" order="1" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1650,19 +1688,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java</url>
-          <line>151</line>
+          <line>525</line>
           <properties />
           <option name="timeStamp" value="1240" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java</url>
-          <line>177</line>
+          <line>551</line>
           <properties />
           <option name="timeStamp" value="1307" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java</url>
-          <line>1131</line>
+          <line>1507</line>
           <properties />
           <option name="timeStamp" value="1308" />
         </line-breakpoint>
@@ -1670,7 +1708,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1309" />
+      <option name="time" value="1337" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1679,14 +1717,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Locators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="45" column="58" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Data.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1737,7 +1767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2746">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1801,7 +1830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2020,7 +2048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="220" column="33" selection-start-line="220" selection-start-column="33" selection-end-line="220" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2028,68 +2055,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="1488" column="52" selection-start-line="1488" selection-start-column="52" selection-end-line="1488" selection-end-column="52" />
-          <folding>
-            <element signature="docComment;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="docComment;field#locators#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#AT2TFRSU0011Sis#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Go_to_maximun_seats_of_a_hotel#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Go_to_exclusive_areas#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Go_to_incompatibiliy_of_areas#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Go_to_temporaly_rules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Quality_rules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Delete_qualityRules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Oher_Actions_qualityRules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#QBE_qualityRules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Edit_qualityRules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Search_qualityRules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Creation_qualityRules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="docComment;method#Calidad_tiempo_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Calidad_tiempo_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Temporaly_quality_rules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Creation_temporaly#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Skip_quality_rules#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Delete_vuelos#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Other_actions_vuelos#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Edit_vuelos#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#QBE_vuelos#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Add_vuelos#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Search_vuelos#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Delete_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#other_actions_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Edit_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#QBE_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Add_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Search_antela#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Incompatibility_of_areas#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Skip_incompatibilty_of_areas#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Delete_incompatibility#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Other_actions_incompatibility#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Edit_incompatibility#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#QBE_incompatibility#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#add_incompatibility#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Search_incompatibility#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Exclusive_areas#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Skip_Exclusive#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Delete_Exclusive#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Other_actions_Exclusive#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Edit_Exclusive#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#QBE_Exclusive#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Exclusive_search#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Exclusive_add#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Maximun_seats_of_a_hotel#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Skip_Maximum#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Delete_Maximum#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Other_actions_Maximum#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#QBE_Maximum#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Edit_Maximum#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Search_Maximum#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-            <element signature="method#Add_Maximum#0;class#AT2TFRSU0011Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2097,7 +2062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-512">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2105,7 +2069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="15" column="100" selection-start-line="15" selection-start-column="82" selection-end-line="15" selection-end-column="100" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2183,7 +2146,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2191,7 +2153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="15" column="94" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2199,7 +2160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2228,21 +2188,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11">
           <caret line="352" column="31" selection-start-line="352" selection-start-column="31" selection-end-line="352" selection-end-column="31" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#AT2TRFSU0016Sis#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#Aditional_suplements#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#Delete_aditional#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#Other_actions_aditional#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#QBE_aditional#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#Edit_aditional#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-            <element signature="method#Search_aditional#0;class#AT2TRFSU0016Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2250,15 +2195,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
           <caret line="25" column="84" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="85" column="37" selection-start-line="85" selection-start-column="37" selection-end-line="85" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2266,7 +2202,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2274,13 +2209,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
           <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/DataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
+        <state relative-caret-position="1020">
           <caret line="68" column="22" selection-start-line="68" selection-start-column="22" selection-end-line="68" selection-end-column="22" />
           <folding />
         </state>
@@ -2290,13 +2224,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="184" column="25" selection-start-line="184" selection-start-column="25" selection-end-line="184" selection-end-column="25" />
-          <folding>
-            <element signature="docComment;class#AT2MDMOR0029Test#0" expanded="false" />
-            <element signature="method#AT2MDMOR0029Test#0;class#AT2MDMOR0029Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2MDMOR0029Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2MDMOR0029Test#0" expanded="false" />
-            <element signature="method#Add_service#0;class#AT2MDMOR0029Test#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2321,10 +2248,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="142" column="54" selection-start-line="142" selection-start-column="54" selection-end-line="142" selection-end-column="54" />
+          <folding>
+            <element signature="docComment;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#AT2TRFSU0008Test#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Create_in_route_second_time#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Create_in_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Go_to_create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Routes_by_default#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Delete_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Other_actions#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Qbe_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Edition_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Search_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Add_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2332,15 +2293,15 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
-          <caret line="350" column="34" selection-start-line="350" selection-start-column="34" selection-end-line="350" selection-end-column="34" />
+          <caret line="406" column="49" selection-start-line="406" selection-start-column="49" selection-end-line="406" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="66" column="5" selection-start-line="58" selection-start-column="4" selection-end-line="66" selection-end-column="5" />
+        <state relative-caret-position="1144">
+          <caret line="2471" column="5" selection-start-line="60" selection-start-column="3" selection-end-line="2471" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#AT2BOOSU1004Sis#0;class#AT2BOOSU1004Sis#0" expanded="false" />
@@ -2349,31 +2310,38 @@
             <element signature="method#getElements#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#getData#1;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#testCSED#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+            <element signature="method#Suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+            <element signature="method#Delete_supler_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+            <element signature="method#Other_actions_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+            <element signature="method#Edit_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+            <element signature="method#Search_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+            <element signature="method#Add_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
+            <element signature="method#Go_to_suplier_hotel_exclusions#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Reconfirmation_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Delete_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Other_actions_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Search_edit_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Edit_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-            <element signature="e#19467#19477#0" expanded="false" />
+            <element signature="e#40163#40173#0" expanded="false" />
             <element signature="method#Search_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Add_configuration_by_clients#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-            <element signature="e#48833#48843#0" expanded="false" />
+            <element signature="e#69554#69564#0" expanded="false" />
             <element signature="method#Delete_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Other_actions_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Search_edit_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Edit_configuration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-            <element signature="e#77727#77737#0" expanded="false" />
+            <element signature="e#98451#98461#0" expanded="false" />
             <element signature="method#Search_configuratons_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
             <element signature="method#Add_cofiguration_by_tto#0;class#AT2BOOSU1004Sis#0" expanded="false" />
-            <element signature="e#105036#105046#0" expanded="false" />
+            <element signature="e#125760#125770#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+        <state relative-caret-position="442">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#AT2BOOSU1004Test#0;class#AT2BOOSU1004Test#0" expanded="false" />
@@ -2382,23 +2350,30 @@
             <element signature="method#getElements#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#getData#1;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#testCSED#0;class#AT2BOOSU1004Test#0" expanded="false" />
+            <element signature="method#Suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+            <element signature="method#Delete_supler_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+            <element signature="method#Other_actions_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+            <element signature="method#Edit_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+            <element signature="method#Search_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+            <element signature="method#Add_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
+            <element signature="method#Go_to_suplier_hotel_exclusions#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Reconfirmation_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Delete_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Other_actions_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Search_edit_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Edit_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
-            <element signature="e#19365#19375#0" expanded="false" />
+            <element signature="e#39934#39944#0" expanded="false" />
             <element signature="method#Search_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Add_configuration_by_clients#0;class#AT2BOOSU1004Test#0" expanded="false" />
-            <element signature="e#48731#48741#0" expanded="false" />
+            <element signature="e#69325#69335#0" expanded="false" />
             <element signature="method#Delete_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Other_actions_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Search_edit_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Edit_configuration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
-            <element signature="e#77625#77635#0" expanded="false" />
+            <element signature="e#98222#98232#0" expanded="false" />
             <element signature="method#Search_configuratons_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
             <element signature="method#Add_cofiguration_by_tto#0;class#AT2BOOSU1004Test#0" expanded="false" />
-            <element signature="e#104934#104944#0" expanded="false" />
+            <element signature="e#125531#125541#0" expanded="false" />
           </folding>
         </state>
       </provider>
