@@ -13,7 +13,7 @@ public class AT2ACCSU0035Data {
     DataHarvester harvester;
 
     public AT2ACCSU0035Data(String enviroment) {
-        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2MDMDE0011Values.txt");
+        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCSU0035Values.txt");
         setData();
     }
 
