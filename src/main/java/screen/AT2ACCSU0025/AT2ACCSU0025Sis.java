@@ -101,17 +101,13 @@ public class AT2ACCSU0025Sis {
         return true;
     }
     private boolean Other_actions_types(TestDriver driver) {
-
         driver.getReport().addHeader("OTHER ACTIONS IN OFFER TYPES AND AGREEMENTS DISCOUNTS", 3, false);
-
-
         if (!Functions.detachTable(driver,
                 new String[]{"Offer_types_detach", getElements("Offer_types_detach")}, //detach button
                 true,     //screenshot??
                 " on OTHER ACTIONS")) {
             return false;
         }
-
         return true;
     }
     private boolean QBE_offer_types(TestDriver driver) {
