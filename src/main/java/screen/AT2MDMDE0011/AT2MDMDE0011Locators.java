@@ -59,7 +59,6 @@ public class AT2MDMDE0011Locators {
         elements.put("add_lov_zone_code", "//*[contains(@id, 'pcgt2:codZonaId::lovIconId')]");
         elements.put("add_i_zone_description", "//*[contains(@id, 'pcgt2:it2::content')]");
         elements.put("add_b_save", "//*[contains(@id, 'pcgt2:btn_commitExit')]");
-
         //MODIFY
         elements.put("modify_i_destination", "//*[contains(@id, 'pcgt2:codDestinoId::content')]");
         elements.put("modify_lov_destination", "//*[contains(@id, 'pcgt2:codDestinoId::lovIconId')]");
