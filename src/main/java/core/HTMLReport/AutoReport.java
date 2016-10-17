@@ -93,7 +93,7 @@ public class AutoReport extends HTMLFactory {
                 " Screen: " + driver.getTestdetails().getScreen() +
                 " </span>" +
                 " <span class='header'>" +
-                " Web Browser: firefox 23.0.1" + //ADJUST HERE
+                " Web Browser: firefox 43.0.1" + //ADJUST HERE
                 " </span>" +
                 " <span class='header'>" +
                 " Environment: " + driver.getTestdetails().getEnvironment() +

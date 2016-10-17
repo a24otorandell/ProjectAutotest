@@ -173,7 +173,7 @@ public class AT2ACCOP0024Test {
             return false;
         }
         Functions.break_time(driver, 4, 500);
-        String[] fields = {"", "report", "file", "type", "financial_date_from", "financial_status",
+        String[] fields = {"report", "file", "type", "financial_date_from", "financial_status",
                 "merchant", "settelment", "currency", "modification_user", "modification_date_from",
                 "batchID", "total_amount", "submerchant"};
 

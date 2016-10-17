@@ -1097,8 +1097,6 @@ public class Functions {
      * @see Keys
      * @see ErrorManager#process(TestDriver, String)
      */
-
-
     public static boolean zoomOut(TestDriver driver) {
 
         /*
@@ -1409,11 +1407,10 @@ public class Functions {
      * @param dataname String - Name of the data that is included in the data map
      * @param active   boolean - value that we want to have
      * @param where    String - Tells where the operation is taking effectw
+     * @return {@code boolean}
      * @see ErrorManager#process(TestDriver, String)
      * @see DataGenerator
-     * @return {@code boolean}
      */
-
     public static boolean checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, String where) {
         //HOW TO CALL THIS METHOD
         /*
@@ -1449,9 +1446,9 @@ public class Functions {
      * @param active         boolean - The value that we want to have
      * @param convert_yes_no - if is true, convert the values true or false to yes or no and save in the map with dataname
      * @param where          String - Tells where the operation is taking effectw
+     * @return {@code boolean}
      * @see ErrorManager#process(TestDriver, String)
      * @see DataGenerator
-     * @return {@code boolean}
      */
     public static boolean checkboxValue(TestDriver driver, String Xpath, String dataname, boolean active, boolean convert_yes_no, String where) {
         //HOW TO CALL THIS METHOD
@@ -1523,25 +1520,123 @@ public class Functions {
      * @param rows       {@code Integer} Rows that you want to be stored
      * @return {@code boolean}
      */
-    public static boolean collectTableData(TestDriver driver, String[] columns, String xpathBegin, String xpathMid, String xpathEnd, int rows, String on) {
+    public static boolean collectTableData(TestDriver driver, String[] columns, String xpathBegin, String xpathMid, String xpathEnd, int rows, String where) {
         /*
         Xpath completo de ejemplo: //*[contains(@id,  'pc1:resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
                                 el primer num (tbody/tr[n]) es la fila y el ultimo (tr/td[n]) la columna
 
-        - String[] columns = {"", "column1", "column2"...}  El primero vacío
+        - String[] columns = {"column1", "column2"...}
         - xpathBegin "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr["
         - xpathMid   "]/td[2]/div/table/tbody/tr/td["
         - xpathEnd   "]"
 
-        Functions.collectTableData(driver, columns, xpathBegin, xpathMid, xpathEnd, 1, "where");
+        Functions.collectTableData(driver,
+            columns, //array with the names of the columns
+            xpathBegin,
+            xpathMid,
+            xpathEnd,
+            1, //number of rows to retrieve
+            "where");
          */
-        for (int i = 1; i < rows + 1; i++) {
-            for (int j = 1; j < columns.length; j++) {
-                Functions.getText(driver,
-                        new String[]{columns[j], xpathBegin + i + xpathMid + j + xpathEnd},
-                        columns[j] + "_" + Integer.toString(i), on);
+        try {
+            for (int i = 1; i < rows + 1; i++) {
+                for (int j = 1; j < columns.length + 1; j++) {
+                    getText(driver,
+                            new String[]{columns[j - 1], xpathBegin + i + xpathMid + j + xpathEnd},
+                            columns[j] + "_" + Integer.toString(i), where);
+                }
             }
+        } catch (Exception e) {
+            String ecode = "--ERROR: error to retrieve values " + where;
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
         }
         return true;
     }
+
+    /**
+     * This function works with multiselection value lovs and searches and select the first or second record depending of a boolean
+     *
+     * @param driver      {@code TestDriver} - This TestDriver gathers all the info refferent to the current test
+     * @param b_lov       {@code String[]} - Xpath referent to the LoV button, [0] is the data name, [1] is the value
+     * @param altreresult {@code boolean} - Switches to select between the first and second record
+     * @param where       {@code String} - Tells where the operation is taking effect
+     * @return {@code boolean}
+     */
+    public static boolean lovMultiSelection(TestDriver driver, String[] b_lov, boolean altreresult, String where) {
+        /*
+          if(!Functions.lovMultiSelection(driver,
+            new String[]{"", getElements("")},
+            false, //like this selects the 1º record
+            "where")){
+                return false
+            }
+         */
+
+        driver.getReport().addContent("Lov with Multiselection values:", "h5", "");
+        try {
+            checkClick(driver, b_lov, recursiveXPaths.msilov_b_arrow, 4, 500, where);
+            checkClick(driver, recursiveXPaths.msilov_b_search, recursiveXPaths.msilov_e_result, 4, 500, where);
+            if (altreresult) {
+                simpleClick(driver, recursiveXPaths.msilov_e_altresult, where);
+            } else {
+                simpleClick(driver, recursiveXPaths.msilov_e_result, where);
+            }
+            checkClick(driver, recursiveXPaths.msilov_b_arrow, recursiveXPaths.msilov_e_result_2, 1, 500, where);
+            checkClickByAbsence(driver, recursiveXPaths.msilov_b_ok, recursiveXPaths.glass, 2, 500, where);
+        } catch (Exception e) {
+            String message = "--ERROR: to select values in multiselection lov on" + where;
+            e.printStackTrace();
+            ErrorManager.process(driver, message);
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * This function searches on a lov of multiselection a record by 1(code) or 2(code and description) values.
+     *
+     * @param driver         {@code TestDriver} - This TestDriver gathers all the info refferent to the current test
+     * @param b_lov          {@code String[]} - Xpath referent to the LoV button, [0] is the data name, [1] is the value
+     * @param data_name      {@code String} - Name of the data that will be included in the data map
+     * @param value          {@code String} - This is the code that will be searched into the lov
+     * @param data_name_desc {@code String} - Name of the data that will be included in the data map
+     * @param value_desc     {@code String} - This is the description that will be searched into the lov
+     * @param where          {@code String} - Tells where the operation is taking effect
+     * @return {@code boolean}
+     */
+    public static boolean lovMultiSelectionByValue(TestDriver driver, String[] b_lov, String data_name, String value,
+                                                   String data_name_desc, String value_desc, String where) {
+        driver.getReport().addContent("Lov with Multiselection values:", "h5", "");
+        /*
+        if (!Functions.lovMultiSelectionByValue(driver,
+                new String[]{"", getElements("")},
+                "dataname_code", "value_code",
+                "dataname_desc", "value_desc", //if you leave this empty it will escape it
+                "where")) {
+            return false;
+        }
+         */
+        try {
+            checkClick(driver, b_lov, recursiveXPaths.msilov_b_arrow, 2, 500, where);
+            insertInput(driver, recursiveXPaths.msilov_i_genericinput, data_name, value, where);
+            if (!data_name_desc.isEmpty() && !value_desc.isEmpty()) {
+                insertInput(driver, recursiveXPaths.msilov_i_genericinput2, data_name_desc, value_desc, where);
+            }
+            checkClick(driver, recursiveXPaths.msilov_b_search, recursiveXPaths.msilov_e_result, 5, 500, where);
+            simpleClick(driver, recursiveXPaths.msilov_e_result, where);
+            checkClick(driver, recursiveXPaths.msilov_b_arrow, recursiveXPaths.msilov_e_result_2, 1, 500, where);
+            checkClickByAbsence(driver, recursiveXPaths.msilov_b_ok, recursiveXPaths.glass, 2, 500, where);
+        } catch (Exception e) {
+            String message = "--ERROR: to select values in multiselection lov on" + where;
+            e.printStackTrace();
+            ErrorManager.process(driver, message);
+            return false;
+        }
+
+        return true;
+    }
+
 }
