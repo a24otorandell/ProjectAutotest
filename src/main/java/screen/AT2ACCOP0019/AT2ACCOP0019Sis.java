@@ -23,39 +23,31 @@ public class AT2ACCOP0019Sis {
     public AT2ACCOP0019Sis() {
 
     }
-
     public AT2ACCOP0019Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0019Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0019Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0019Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -66,8 +58,6 @@ public class AT2ACCOP0019Sis {
         if (!Create_merchant(driver)) {
             return false;
         }
-
-
         return false;
     }
 
@@ -95,7 +85,6 @@ public class AT2ACCOP0019Sis {
         }
         return true;
     }
-
     private boolean Give_elements_merchant(TestDriver driver) {
 
         driver.getReport().addHeader("GIVE ELEMENTS IN CREATE MERCHANT", 3, false);
@@ -173,7 +162,6 @@ public class AT2ACCOP0019Sis {
 
         return true;
     }
-
     private boolean Delete_merchant(TestDriver driver) {
 
         driver.getReport().addHeader("DELETE IN CREATE MERCHANT", 3, false);
@@ -213,7 +201,6 @@ public class AT2ACCOP0019Sis {
 
         return true;
     }
-
     private boolean Other_actions_merchant(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN CREATE MERCHANT", 3, false);
@@ -236,7 +223,6 @@ public class AT2ACCOP0019Sis {
 
         return true;
     }
-
     private boolean Qbe_merchant(TestDriver driver) {
         driver.getReport().addHeader("QBE IN CREATE MERCHANT", 3, false);
 
@@ -289,7 +275,6 @@ public class AT2ACCOP0019Sis {
         }
         return true;
     }
-
     private boolean Edit_merchant(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN CREATE MERCHANT", 3, false);
 
@@ -350,7 +335,6 @@ public class AT2ACCOP0019Sis {
         }
         return true;
     }
-
     private boolean Search_merchant(TestDriver driver) {
         driver.getReport().addHeader(" SEARCH IN CREATE MERCHANT", 3, false);
 
@@ -399,7 +383,6 @@ public class AT2ACCOP0019Sis {
         }
         return true;
     }
-
     private boolean Add_merchant(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN CREATE MERCHANT", 3, false);
@@ -689,5 +672,4 @@ public class AT2ACCOP0019Sis {
 
         return true;
     }
-
 }

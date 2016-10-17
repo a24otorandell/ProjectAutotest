@@ -17,43 +17,34 @@ public class AT2ACCSU0014Sis {
     public AT2ACCSU0014Sis() {
 
     }
-
     public AT2ACCSU0014Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0014Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0014Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0014Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Taxes");
 
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
-
 
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_edit_hotel_card(driver)) return false;
