@@ -9,7 +9,6 @@ import core.recursiveData.recursiveXPaths;
  * Created by vsolis on 13/09/2016.
  */
 public class AT2ACCSU0025Test {
-
     protected AT2ACCSU0025Locators locators;
     protected AT2ACCSU0025Data data;
 
