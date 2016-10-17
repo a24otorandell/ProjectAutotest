@@ -40,6 +40,7 @@ public class AT2ACCOP0004Locators {
         elements.put("search_i_amount", "//*[contains(@id, 'r1:1:it7::content')]");
         elements.put("search_i_general_name", "//*[contains(@id, ':r1:1:it4::content')]");
         elements.put("search_i_partner", "//*[contains(@id, 'r1:1:nomPartnerId::content')]");
+        elements.put("search_lov_partner", "//*[contains(@id, 'r1:1:nomPartnerId::lovIconId')]");
         elements.put("search_i_creation_date_from", "//*[contains(@id, 'r1:1:id2::content')]");
         elements.put("search_i_creation_date_to", "//*[contains(@id, 'r1:1:id4::content')]");
         elements.put("search_i_service_date_from", "//*[contains(@id, 'r1:1:id3::content')]");
@@ -49,6 +50,7 @@ public class AT2ACCOP0004Locators {
         elements.put("search_e_general_name_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[4]");
         elements.put("search_e_TO_reference_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[5]/div/table/tbody/tr/td[1]");
         elements.put("search_e_partner_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[5]/div/table/tbody/tr/td[2]");
+        elements.put("search_e_hotel_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[5]/div/table/tbody/tr/td[3]");
         elements.put("search_e_destination_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[5]/div/table/tbody/tr/td[4]");
         elements.put("search_e_ip_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[5]/div/table/tbody/tr/td[5]");
         elements.put("search_e_creation_user_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[5]/div/table/tbody/tr/td[6]");

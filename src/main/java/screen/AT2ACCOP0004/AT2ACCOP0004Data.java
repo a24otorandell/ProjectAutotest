@@ -30,9 +30,5 @@ public class AT2ACCOP0004Data {
     }
 
     public void setDefaultData() {
-
-        data.put("date", DataGenerator.getRelativeDateToday("17/10,2016", 1, 1, 0));
-        data.put("date2", DataGenerator.getRelativeDateToday("17/10,2016", 2, 2, 0));
-
     }
 }
