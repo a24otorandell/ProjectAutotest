@@ -5,13 +5,14 @@ import screen.AT2ACCSU0014.AT2ACCSU0014Data;
 import screen.AT2ACCSU0014.AT2ACCSU0014Locators;
 import screen.AT2ACCSU0014.AT2ACCSU0014Sis;
 import screen.AT2ACCSU0014.AT2ACCSU0014Test;
+import screen.AT2Test;
 
 import java.util.Map;
 
 /**
  * Created by aibanez on 14/10/2016.
  */
-public class AT2ACCSU0014Manager {
+public class AT2ACCSU0014Manager implements AT2Test {
     AT2ACCSU0014Sis sis;
     AT2ACCSU0014Test test;
     String[] procedure;

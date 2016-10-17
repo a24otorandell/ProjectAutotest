@@ -48,24 +48,16 @@ public class AT2ACCSU0014Locators {
         elements.put("qbe_i_country", "//*[contains(@id, 'afr_c4::content')]");
         elements.put("qbe_i_country_name", "//*[contains(@id, 'afr_c7::content')]");
         elements.put("qbe_i_area", "//*[contains(@id, 'afr_c1::content')]");
-        elements.put("qbe_ck_visible", "//*[contains(@id, 'soc4::content')]");
-        //ADD
-        elements.put("add_i_company_code", "//*[contains(@id, 'pcgt2:codempId::content')]");
-        elements.put("add_lov_company_code", "//*[contains(@id, 'pcgt2:codempId::lovIconId')]");
-        elements.put("add_i_office", "//*[contains(@id, 'pcgt2:officeId::content')]");
-        elements.put("add_lov_office", "//*[contains(@id, 'pcgt2:officeId::lovIconId')]");
-        elements.put("add_i_description", "//*[contains(@id, 'pcgt2:plam1')]/td[2]");
-        elements.put("add_i_from_date", "//*[contains(@id, 'pcgt2:id2::content')]");
-        elements.put("add_i_fiscal_zone", "//*[contains(@id, 'pcgt2:codZonfisId::content')]");
-        elements.put("add_lov_fiscal_zone", "//*[contains(@id, 'pcgt2:codZonfisId::lovIconId')]");
-        elements.put("add_i_description2", "//*[contains(@id, ''pcgt2:plam2')]/td[2]");
-        elements.put("add_i_purchase_percentage", "//*[contains(@id, 'pcgt2:it6::content')]");
-        elements.put("add_i_purchase_amount", "//*[contains(@id, 'pcgt2:it3::content')]");
-        elements.put("add_i_sale_percentage", "//*[contains(@id, 'pcgt2:it4::content')]");
-        elements.put("add_i_sale_amount", "//*[contains(@id, 'pcgt2:it2::content')]");
-        elements.put("add_sl_application_type", "//*[contains(@id, 'pcgt2:soc1::content')]");
-        elements.put("add_i_currency", "//*[contains(@id, 'pcgt2:codDivisaId::content')]");
-        elements.put("add_lov_currency", "//*[contains(@id, 'pcgt2:codDivisaId::lovIconId')]");
-        elements.put("add_b_save", "//*[contains(@id, 'pcgt2:btn_commitExit')]");
+        elements.put("qbe_sl_visible", "//*[contains(@id, 'soc4::content')]");
+        //EDIT
+        elements.put("edit_i_hotel_code", "//*[contains(@id, 'pcgt1:it10::content')]");
+        elements.put("edit_i_hotel", "//*[contains(@id, 'pcgt1:it12::content')]");
+        elements.put("edit_i_destination", "//*[contains(@id, 'pcgt1:it9::content')]");
+        elements.put("edit_i_destination_name", "//*[contains(@id, 'pcgt1:it8::content')]");
+        elements.put("edit_i_country", "//*[contains(@id, 'pcgt1:it11::content')]");
+        elements.put("edit_i_country_name", "//*[contains(@id, 'pcgt1:it14::content')]");
+        elements.put("edit_i_area", "//*[contains(@id, 'pcgt1:it13::content')]");
+        elements.put("edit_ck_visible", "//*[contains(@id, ':pcgt1:sbc2::content')]");
+        elements.put("edit_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
     }
 }
