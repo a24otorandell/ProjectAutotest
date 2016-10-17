@@ -16,39 +16,31 @@ public class AT2ACCSU0018Sis {
     public AT2ACCSU0018Sis() {
 
     }
-
     public AT2ACCSU0018Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0018Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0018Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0018Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -71,7 +63,6 @@ public class AT2ACCSU0018Sis {
     }
 
     //HOTEL COMMENTS
-
     private boolean Hotel_coments(TestDriver driver) {
 
         if (!Add_hotel_coments(driver)) {
@@ -97,7 +88,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Delete_actions_hotel(TestDriver driver) {
 
         driver.getReport().addHeader("DELETE IN HOTEL COMMENTS", 3, false);
@@ -113,7 +103,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Other_actions_hotel_coments(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN HOTEL COMMENTS", 3, false);
 
@@ -135,7 +124,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Qbe_hotel_coments(TestDriver driver) {
 
         driver.getReport().addHeader("QBE IN HOTEL COMMENTS", 3, false);
@@ -209,7 +197,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Edit_hotel_coments(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN HOTEL COMMENTS", 3, false);
 
@@ -311,7 +298,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Search_hotel_coments(TestDriver driver) {
 
         driver.getReport().addHeader("SEARCH IN HOTEL COMMENTS", 3, false);
@@ -376,7 +362,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Add_hotel_coments(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN HOTEL COMMENTS", 3, false);
@@ -456,7 +441,6 @@ public class AT2ACCSU0018Sis {
     }
 
     //MULTI LENGUAGE
-
     private boolean Multi_lenguage(TestDriver driver) {
         if (!Add_multi(driver)) {
             return false;
@@ -479,7 +463,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Delete_multi(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN HOTEL COMMENTS", 3, false);
 
@@ -497,7 +480,6 @@ public class AT2ACCSU0018Sis {
         }
         return true;
     }
-
     private boolean Other_actions_multi(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS IN HOTEL COMMENTS", 3, false);
 
@@ -519,7 +501,6 @@ public class AT2ACCSU0018Sis {
 
         return true;
     }
-
     private boolean Edit_multi(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN HOTEL COMMENTS", 3, false);
 
@@ -553,7 +534,6 @@ public class AT2ACCSU0018Sis {
         }
         return true;
     }
-
     private boolean Search_multi(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN HOTEL COMMENTS", 3, false);
@@ -580,7 +560,6 @@ public class AT2ACCSU0018Sis {
         }
         return true;
     }
-
     private boolean Add_multi(TestDriver driver) {
         driver.getReport().addHeader(" ADD IN HOTEL COMMENTS", 3, false);
 
