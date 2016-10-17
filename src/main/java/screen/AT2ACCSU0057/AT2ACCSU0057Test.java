@@ -16,38 +16,30 @@ public class AT2ACCSU0057Test {
 
     public AT2ACCSU0057Test() {
     }
-
     public AT2ACCSU0057Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0057Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0057Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0057Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Plugin Properties");
         driver.getTestdetails().setSubmenu("Accommodation");
         driver.getTestdetails().setScreen("Setup");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -95,7 +87,6 @@ public class AT2ACCSU0057Test {
         }
         return true;
     }
-
     private boolean search_accommodation(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         Functions.break_time(driver, 30, 500);
@@ -129,7 +120,6 @@ public class AT2ACCSU0057Test {
         return true;
 
     }
-
     private boolean interaction_edit_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -163,7 +153,6 @@ public class AT2ACCSU0057Test {
         }
         return true;
     }
-
     private boolean qbe_accommodation(TestDriver driver) {
 
         driver.getReport().addHeader("QBE RECORD", 3, false);
@@ -199,7 +188,6 @@ public class AT2ACCSU0057Test {
         }
         return true;
     }
-
     private boolean others_actions_accommodation(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS - DETACH", 3, false);
@@ -212,7 +200,6 @@ public class AT2ACCSU0057Test {
         }
         return true;
     }
-
     private boolean delete_accommodation(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
@@ -224,5 +211,4 @@ public class AT2ACCSU0057Test {
         }
         return true;
     }
-
 }
