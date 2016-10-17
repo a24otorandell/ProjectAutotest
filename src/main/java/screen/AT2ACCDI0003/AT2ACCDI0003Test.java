@@ -11,7 +11,6 @@ import org.openqa.selenium.By;
  * @author otorandell on 29/12/2015.
  */
 public class AT2ACCDI0003Test {
-
     protected AT2ACCDI0003Locators locators;
     protected AT2ACCDI0003Data data;
 
@@ -19,23 +18,18 @@ public class AT2ACCDI0003Test {
         setData(new AT2ACCDI0003Data(enviroment));
         setLocators(new AT2ACCDI0003Locators(enviroment));
     }
-
     public AT2ACCDI0003Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCDI0003Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCDI0003Data getData() {
         return data;
     }
-
     public void setData(AT2ACCDI0003Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         driver.getTestdetails().setTestname("AT2BOOSA1002");
@@ -56,6 +50,7 @@ public class AT2ACCDI0003Test {
         String value = this.data.getData().get(key);
         return value;
     }
+
     protected boolean testCSED(TestDriver driver) {
 //3091401
            if(!getBookingProcedure(driver)){return false;}
@@ -76,7 +71,6 @@ public class AT2ACCDI0003Test {
                 " on AT2ACCDI0003")){return false;}
         return true;
     }
-
     private boolean query(TestDriver driver) {
         if(!Functions.clickQbE(driver,
                 new String[]{"x", getElements("x")},// query button
@@ -113,7 +107,6 @@ public class AT2ACCDI0003Test {
                 " where")){return false;};
       return true;
     }
-
     private boolean search(TestDriver driver) {
         if(!Functions.createLov(driver,
                 new String[]{"accdi0003_lov_destination",getElements("accdi0003_lov_destination")}, // b_lov
@@ -172,7 +165,6 @@ public class AT2ACCDI0003Test {
 
         return true;
     }
-
     private boolean goToScreen(TestDriver driver) {
 
 
@@ -195,7 +187,6 @@ public class AT2ACCDI0003Test {
             return false;}
         return true;
     }
-
     private boolean getBookingProcedure(TestDriver driver) {
 
         driver.getReport().addHeader("GETTING BOOKING REFERENCE", 2, true);
@@ -234,5 +225,4 @@ public class AT2ACCDI0003Test {
 
         return true;
     }
-
 }
