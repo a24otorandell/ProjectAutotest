@@ -164,7 +164,6 @@ public class AT2ACCOP0004Test {
         } //where this operation occurs
         return true;
     }
-
     private boolean search_accommodation(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         Functions.break_time(driver, 30, 500);
@@ -393,6 +392,5 @@ public class AT2ACCOP0004Test {
         }
         return true;
     }
-
 }
 
