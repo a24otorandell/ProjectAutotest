@@ -12,46 +12,37 @@ import core.recursiveData.recursiveXPaths;
  */
 public class AT2TRFSU0007Test {
 
-
     protected AT2TRFSU0007Locators locators;
     protected AT2TRFSU0007Data data;
 
     public AT2TRFSU0007Test() {
 
     }
-
     public AT2TRFSU0007Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0007Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0007Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0007Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -98,7 +89,6 @@ public class AT2TRFSU0007Test {
 
         return true;
     }
-
     private boolean Delete_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader("DELETE IN VEHICLES", 3, false);
@@ -115,7 +105,6 @@ public class AT2TRFSU0007Test {
 
         return true;
     }
-
     private boolean Other_actions_vehicles(TestDriver driver) {
 
 
@@ -139,7 +128,6 @@ public class AT2TRFSU0007Test {
 
         return true;
     }
-
     private boolean Qbe_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader(" QBE IN VEHICLES", 3, false);
@@ -202,7 +190,6 @@ public class AT2TRFSU0007Test {
 
         return true;
     }
-
     private boolean Edit_vehicles(TestDriver driver) {
 
 
@@ -261,7 +248,6 @@ public class AT2TRFSU0007Test {
 
         return true;
     }
-
     private boolean Search_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader(" BASIC SEARCH IN VEHICLES", 3, false);
@@ -307,7 +293,6 @@ public class AT2TRFSU0007Test {
 
         return true;
     }
-
     private boolean Add_vehicles(TestDriver driver) {
 
 

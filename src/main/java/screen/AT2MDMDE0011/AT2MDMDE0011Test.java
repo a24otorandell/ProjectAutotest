@@ -14,38 +14,30 @@ public class AT2MDMDE0011Test {
 
     public AT2MDMDE0011Test() {
     }
-
     public AT2MDMDE0011Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMDE0011Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMDE0011Data getData() {
         return data;
     }
-
     public void setData(AT2MDMDE0011Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master data Management");
         driver.getTestdetails().setSubmenu("Destination");
         driver.getTestdetails().setScreen("HB Destinations By zone");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -103,7 +95,6 @@ public class AT2MDMDE0011Test {
         }
         return true;
     }
-
     private boolean interaction_record_destination(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATON";
@@ -171,7 +162,6 @@ public class AT2MDMDE0011Test {
         }
         return true;
     }
-
     private boolean interaction_edit_destination(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -241,7 +231,6 @@ public class AT2MDMDE0011Test {
         return true;
 
     }
-
     private boolean qbe_destination(TestDriver driver) {
 
         driver.getReport().addHeader("QBE RECORD", 3, false);
@@ -289,7 +278,6 @@ public class AT2MDMDE0011Test {
         }
         return true;
     }
-
     private boolean others_actions_destination(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA";
@@ -311,7 +299,6 @@ public class AT2MDMDE0011Test {
         }
         return true;
     }
-
     private boolean delete_destination(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";

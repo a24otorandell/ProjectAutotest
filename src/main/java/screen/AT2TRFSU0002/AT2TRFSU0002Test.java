@@ -18,39 +18,31 @@ public class AT2TRFSU0002Test {
     public AT2TRFSU0002Test() {
 
     }
-
     public AT2TRFSU0002Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0002Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0002Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0002Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -94,7 +86,6 @@ public class AT2TRFSU0002Test {
 
         return true;
     }
-
     private boolean Delete_vehicles(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN OPERATIONAL VEHICLES", 3, false);
 
@@ -111,7 +102,6 @@ public class AT2TRFSU0002Test {
 
         return true;
     }
-
     private boolean Other_actions_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN OPERATIONAL VEHICLES", 3, false);
@@ -132,7 +122,6 @@ public class AT2TRFSU0002Test {
         }
         return true;
     }
-
     private boolean Qbe_vehicles(TestDriver driver) {
         driver.getReport().addHeader("QBE IN OPERATIONAL VEHICLES", 3, false);
 
@@ -191,7 +180,6 @@ public class AT2TRFSU0002Test {
 
         return true;
     }
-
     private boolean Edit_vehicles(TestDriver driver) {
         driver.getReport().addHeader(" ADD IN OPERATIONAL VEHICLES", 3, false);
 
@@ -267,7 +255,6 @@ public class AT2TRFSU0002Test {
 
         return true;
     }
-
     private boolean Search_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader("ADVANCED SEARCH IN OPERATIONAL VEHICLES  ", 3, false);
@@ -321,7 +308,6 @@ public class AT2TRFSU0002Test {
 
         return true;
     }
-
     private boolean Add_vehicles(TestDriver driver) {
         driver.getReport().addHeader(" ADD IN OPERATIONAL VEHICLES", 3, false);
 
@@ -397,6 +383,4 @@ public class AT2TRFSU0002Test {
 
         return true;
     }
-
-
 }

@@ -103,7 +103,6 @@ public class AT2TRFSU0010Test {
     }
 
     //SERVICE TYPE DESCRIPTION
-
     private boolean Dele_type_description(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN SERVICE TYPE DESCRIPTION", 3, false);
         if (!Functions.doDeleteNCheck(driver,
@@ -239,9 +238,7 @@ public class AT2TRFSU0010Test {
         return true;
     }
 
-
     //SERVICE TYPE
-
     private boolean Delete_type(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN SERVICE TYPE", 3, false);
         if (!Functions.doDeleteNCheck(driver,
