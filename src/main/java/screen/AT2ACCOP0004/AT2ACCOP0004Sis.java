@@ -12,34 +12,27 @@ public class AT2ACCOP0004Sis {
 
     public AT2ACCOP0004Sis() {
     }
-
     public AT2ACCOP0004Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0004Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0004Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0004Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("BIBIT Blacklist query");
         driver.getTestdetails().setSubmenu("Accommodation");
         driver.getTestdetails().setScreen("Operations");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }

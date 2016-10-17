@@ -18,23 +18,18 @@ public class AT2ACCDI0003Sis {
         setData(new AT2ACCDI0003Data(enviroment));
         setLocators(new AT2ACCDI0003Locators(enviroment));
     }
-
     public AT2ACCDI0003Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCDI0003Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCDI0003Data getData() {
         return data;
     }
-
     public void setData(AT2ACCDI0003Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         driver.getTestdetails().setTestname("AT2BOOSA1002");
@@ -42,18 +37,15 @@ public class AT2ACCDI0003Sis {
         driver.getTestdetails().setTestname("AT2ACCDI0003");
 
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Distribution");
         driver.getTestdetails().setScreen("Availability General");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -91,7 +83,6 @@ public class AT2ACCDI0003Sis {
         }
         return true;
     }
-
     private boolean query(TestDriver driver) {
         if (!Functions.clickQbE(driver,
                 new String[]{"x", getElements("x")},// query button
@@ -157,7 +148,6 @@ public class AT2ACCDI0003Sis {
         ;
         return true;
     }
-
     private boolean search(TestDriver driver) {
         if (!Functions.createLov(driver,
                 new String[]{"accdi0003_lov_destination", getElements("accdi0003_lov_destination")}, // b_lov
@@ -232,7 +222,6 @@ public class AT2ACCDI0003Sis {
 
         return true;
     }
-
     private boolean goToScreen(TestDriver driver) {
 
 
@@ -269,7 +258,6 @@ public class AT2ACCDI0003Sis {
         }
         return true;
     }
-
     private boolean getBookingProcedure(TestDriver driver) {
 
         driver.getReport().addHeader("GETTING BOOKING REFERENCE", 2, true);
