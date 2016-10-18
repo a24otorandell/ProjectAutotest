@@ -51,19 +51,56 @@ public class AT2TRFSU0010Test {
         }
         return false;
     }
+
     private boolean Transfer_service_type(TestDriver driver) {
 
-        if (!Add_service_type(driver)) return false;
-        if (!Search_service_type(driver)) return false;
-        if (!Edit_service_type(driver)) return false;
-        if (!QBE_service_type(driver)) return false;
-        if (!Other_actions_type(driver)) return false;
-        if (!Add_service_type_description(driver)) return false;
-        if (!Search_service_type_description(driver)) return false;
-        if (!Edit_service_type_description(driver)) return false;
-        if (!Other_actions_type_description(driver)) return false;
-        if (!Dele_type_description(driver)) return false;
-        if (!Delete_type(driver)) return false;
+        if(!Add_service_type(driver)){
+            return false;
+        }
+
+        if(!Search_service_type(driver)){
+            return false;
+        }
+
+        if(!Edit_service_type(driver)){
+            return false;
+        }
+
+        if(!QBE_service_type(driver)){
+            return false;
+        }
+
+        if(!Other_actions_type(driver)){
+            return false;
+        }
+
+        if(!Add_service_type_description(driver)){
+            return false;
+        }
+
+        if(!Search_service_type_description(driver)){
+            return false;
+        }
+
+        if(!Edit_service_type_description(driver)){
+            return false;
+        }
+        if(!Search_service_type_description(driver)){
+            return false;
+        }
+        if(!Other_actions_type_description(driver)){
+            return false;
+        }
+
+        if(!Dele_type_description(driver)){
+            return false;
+        }
+
+
+        if(!Delete_type(driver)){
+            return false;
+        }
+
         return true;
     }
 
@@ -143,6 +180,12 @@ public class AT2TRFSU0010Test {
                 "des_qbe_lenguaje", data.getData().get("des_lov_lenguaje"), " on QBE IN DESCRIPTION")) {
             return false;
         }
+        if(!Functions.insertInput(driver,
+                new String[]{"description_qbe_i_lenguaje",getElements("description_qbe_i_lenguaje")},
+                "des_qbe_description_lenguaje",data.getData().get("des_description_lenguaje")," on QBE IN DESCRIPTION")){
+            return false;
+        }
+
         if (!Functions.insertInput(driver,
                 new String[]{"description_qbe_i_lenguaje_description", getElements("description_qbe_i_lenguaje_description")},
                 "des_qbe_description", data.getData().get("des_description"), " on QBE IN DESCRIPTION")) {
