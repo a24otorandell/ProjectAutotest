@@ -102,7 +102,7 @@ public class AT2ACCSU0056Test {
         }
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_creation_user", getElements("search_i_creation_user")},
-                "creation_user", data.getData().get("creation_user"), where)) {
+                "creation_user", driver.getUserdetails().getUsername(), where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,
