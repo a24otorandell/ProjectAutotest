@@ -157,7 +157,7 @@ public class AT2MDMOR0029Sis {
                 "qbe_to", data.getData().get("to"), "on QBE")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"service_authorization_qbe_sl_cod_division", getElements("service_authorization_qbe_sl_cod_division")},
                 data.getData().get("cod_division"), "qbe_cod_division", " on QBE")) {

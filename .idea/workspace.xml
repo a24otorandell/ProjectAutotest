@@ -10,11 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Locators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
@@ -46,7 +43,7 @@
               <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Locators.java">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="1904">
-                    <caret line="159" column="109" selection-start-line="159" selection-start-column="109" selection-end-line="159" selection-end-column="109" />
+                    <caret line="157" column="108" selection-start-line="157" selection-start-column="108" selection-end-line="157" selection-end-column="108" />
                     <folding />
                   </state>
                 </provider>
@@ -86,8 +83,8 @@
       <file leaf-file-name="AT2MDMOR0029Sis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="239" column="95" selection-start-line="239" selection-start-column="95" selection-end-line="239" selection-end-column="95" />
+            <state relative-caret-position="281">
+              <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
               <folding>
                 <element signature="docComment;class#AT2MDMOR0029Sis#0" expanded="false" />
                 <element signature="method#AT2MDMOR0029Sis#0;class#AT2MDMOR0029Sis#0" expanded="false" />
@@ -97,7 +94,7 @@
                 <element signature="method#Service_authorization#0;class#AT2MDMOR0029Sis#0" expanded="false" />
                 <element signature="method#Delete_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
                 <element signature="method#Other_actions_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#QBE_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="method#Edit_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
                 <element signature="method#Search_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
                 <element signature="method#Add_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
               </folding>
@@ -952,13 +949,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00038" summary="eliminado texto comentado en JiraUpdate">
-      <created>1472471879209</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1472471879209</updated>
-    </task>
     <task id="LOCAL-00039" summary="eliminado texto comentado en JiraUpdate">
       <created>1472472470294</created>
       <option name="number" value="00039" />
@@ -1295,7 +1285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476438898630</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Actualización código  AT2ACCSU0073,AT2MDMOR0029">
+      <created>1476780892245</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1476780892245</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1318,8 +1315,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22860792" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21839081" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22860792" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21839081" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32694763" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1402,7 +1399,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Actualización código AT2TRFSU0009" />
     <MESSAGE value="Actualización código AT2TRFSU0002" />
     <MESSAGE value="Actualización código AT2TRFSU0008" />
     <MESSAGE value="Actualización código AT2ACCSU0025" />
@@ -1427,7 +1423,8 @@
     <MESSAGE value="Actualización código  AT2TRFSU0019," />
     <MESSAGE value="Actualización código  AT2MDMOR0029," />
     <MESSAGE value="Actualización código  AT2BOOSU1004," />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  AT2BOOSU1004," />
+    <MESSAGE value="Actualización código  AT2ACCSU0073,AT2MDMOR0029" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  AT2ACCSU0073,AT2MDMOR0029" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1688,31 +1685,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java</url>
-          <line>63</line>
+          <line>65</line>
           <properties />
           <option name="timeStamp" value="1379" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java</url>
-          <line>65</line>
+          <line>69</line>
           <properties />
           <option name="timeStamp" value="1380" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java</url>
-          <line>68</line>
+          <line>74</line>
           <properties />
           <option name="timeStamp" value="1381" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java</url>
-          <line>72</line>
+          <line>78</line>
           <properties />
           <option name="timeStamp" value="1382" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java</url>
-          <line>150</line>
+          <line>158</line>
           <properties />
           <option name="timeStamp" value="1385" />
         </line-breakpoint>
@@ -1730,7 +1727,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java</url>
-          <line>76</line>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="1388" />
         </line-breakpoint>
@@ -2367,7 +2364,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1904">
-          <caret line="159" column="109" selection-start-line="159" selection-start-column="109" selection-end-line="159" selection-end-column="109" />
+          <caret line="157" column="108" selection-start-line="157" selection-start-column="108" selection-end-line="157" selection-end-column="108" />
           <folding />
         </state>
       </provider>
@@ -2405,7 +2402,7 @@
             <element signature="method#Edit_reason#0;class#AT2ACCSU0073Test#0" expanded="false" />
             <element signature="method#Search_reason#0;class#AT2ACCSU0073Test#0" expanded="false" />
             <element signature="method#Add_reason#0;class#AT2ACCSU0073Test#0" expanded="false" />
-            <marker date="1476780821800" expanded="false" signature="1060:1254" ph="{...}" />
+            <marker date="1476780891103" expanded="false" signature="1060:1254" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2450,8 +2447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="239" column="95" selection-start-line="239" selection-start-column="95" selection-end-line="239" selection-end-column="95" />
+        <state relative-caret-position="281">
+          <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
           <folding>
             <element signature="docComment;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#AT2MDMOR0029Sis#0;class#AT2MDMOR0029Sis#0" expanded="false" />
@@ -2461,7 +2458,7 @@
             <element signature="method#Service_authorization#0;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#Delete_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#Other_actions_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-            <element signature="method#QBE_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+            <element signature="method#Edit_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#Search_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#Add_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
           </folding>
