@@ -112,7 +112,7 @@ public class AT2ACCOP0019Locators {
         elements.put("mercant_ed_lov_payment_method_b_ok", "//*[contains(@id, 'msilov2:dc_ctb5')]");
         elements.put("mercant_ed_b_save_currency_and_payment_methods", "//*[contains(@id, 'pcgt4:boton_commit')]");
         elements.put("mercant_ed_b_save", "//*[contains(@id, 'pcgt2:boton_commit')]");
-        elements.put("mercant_ed_e_currency_table", "//*[contains(@id, 'tCurr::db')]/table/tbody/tr[1]/td");
+        elements.put("mercant_ed_e_currency_table","//*[contains(@id, 'tCurr::db')]/table/tbody/tr/td");
         elements.put("mercant_ed_b_save_currenzy_and_payment_method", "//*[contains(@id, 'pcgt3:boton_commit')]");
 
 

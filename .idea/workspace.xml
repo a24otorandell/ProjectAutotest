@@ -10,9 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Locators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -80,24 +81,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2MDMOR0029Sis.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java">
+      <file leaf-file-name="AT2ACCOP0019Sis.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+            <state relative-caret-position="-215">
+              <caret line="196" column="47" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
               <folding>
-                <element signature="docComment;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#AT2MDMOR0029Sis#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#start#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#testCSED#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#Service_authorization#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#Delete_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#Other_actions_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#Edit_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#Search_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
-                <element signature="method#Add_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+                <element signature="docComment;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#AT2ACCOP0019Sis#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#Give_elements_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#Other_actions_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+                <element signature="method#Qbe_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCOP0019Locators.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Locators.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="173">
+              <caret line="114" column="79" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,9 +182,7 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0021/AT2ACCOP0021Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
@@ -192,6 +199,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0073/AT2ACCSU0073Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Locators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java" />
       </list>
     </option>
   </component>
@@ -403,7 +412,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AT2MDMOR0029" />
+              <option name="myItemId" value="AT2ACCOP0019" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,7 +642,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="core.TestDriver.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-e SIS -t  AT2MDMOR0029 -u vsolis -p Hola1234" />
+      <option name="PROGRAM_PARAMETERS" value="-e SIS -t  AT2ACCOP0019 -u vsolis -p Hola1234" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -948,13 +957,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
-    </task>
-    <task id="LOCAL-00039" summary="eliminado texto comentado en JiraUpdate">
-      <created>1472472470294</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1472472470294</updated>
     </task>
     <task id="LOCAL-00040" summary="Añadida la version dual de AT2ACCOP0025, falta SYS porque esta re-bug">
       <created>1472728633049</created>
@@ -1292,7 +1294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476780892245</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Actualización código AT2MDMOR0029">
+      <created>1476781133916</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1476781133916</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1399,8 +1408,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Actualización código AT2TRFSU0002" />
-    <MESSAGE value="Actualización código AT2TRFSU0008" />
     <MESSAGE value="Actualización código AT2ACCSU0025" />
     <MESSAGE value="Actualización código AT2ACCSU0026" />
     <MESSAGE value="Actualización código AT2ACCSU0027" />
@@ -1424,7 +1431,9 @@
     <MESSAGE value="Actualización código  AT2MDMOR0029," />
     <MESSAGE value="Actualización código  AT2BOOSU1004," />
     <MESSAGE value="Actualización código  AT2ACCSU0073,AT2MDMOR0029" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  AT2ACCSU0073,AT2MDMOR0029" />
+    <MESSAGE value="Actualización código AT2MDMOR0029" />
+    <MESSAGE value="Actualización código AT2ACCOP0019" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código AT2ACCOP0019" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1731,11 +1740,17 @@
           <properties />
           <option name="timeStamp" value="1388" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java</url>
+          <line>578</line>
+          <properties />
+          <option name="timeStamp" value="1392" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1390" />
+      <option name="time" value="1393" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1752,33 +1767,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Locators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="24" column="99" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="94" column="5" selection-start-line="10" selection-start-column="0" selection-end-line="94" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="8" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Give_elements_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
-            <element signature="method#Delete_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
-            <element signature="method#Qbe_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
-            <element signature="method#Edit_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
-            <element signature="method#Search_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
-            <element signature="method#Add_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2262,14 +2254,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/DataGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-509">
@@ -2288,14 +2272,6 @@
             <element signature="method#Edit_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
             <element signature="method#Add_aditional#0;class#AT2TRFSU0016Test#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="43" column="54" selection-start-line="41" selection-start-column="11" selection-end-line="43" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2447,8 +2423,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="163" column="25" selection-start-line="163" selection-start-column="25" selection-end-line="163" selection-end-column="25" />
+        <state relative-caret-position="366">
+          <caret line="168" column="33" selection-start-line="168" selection-start-column="33" selection-end-line="168" selection-end-column="33" />
           <folding>
             <element signature="docComment;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#AT2MDMOR0029Sis#0;class#AT2MDMOR0029Sis#0" expanded="false" />
@@ -2461,6 +2437,48 @@
             <element signature="method#Edit_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#Search_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
             <element signature="method#Add_service#0;class#AT2MDMOR0029Sis#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Locators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="114" column="79" selection-start-line="114" selection-start-column="79" selection-end-line="114" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="43" column="54" selection-start-line="41" selection-start-column="11" selection-end-line="43" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/DataGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="196" column="47" selection-start-line="196" selection-start-column="47" selection-end-line="196" selection-end-column="47" />
+          <folding>
+            <element signature="docComment;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#AT2ACCOP0019Sis#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#Give_elements_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#Other_actions_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
+            <element signature="method#Qbe_merchant#0;class#AT2ACCOP0019Sis#0" expanded="false" />
           </folding>
         </state>
       </provider>
