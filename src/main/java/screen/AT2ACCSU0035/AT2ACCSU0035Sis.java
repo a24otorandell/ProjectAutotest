@@ -9,6 +9,15 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 13/10/2016.
  */
+
+/**
+ * No todas las company_code tienen office, y algunas que tienen, no tienen fiscal_zone
+ * Probado MANUALMENTE con los siguientes valores:
+ * COMPANY CODE: E10
+ * OFFICE: 859
+ * Autotest configurado con valores por defecto para que no falle.
+ */
+
 public class AT2ACCSU0035Sis {
     protected AT2ACCSU0035Locators locators;
     protected AT2ACCSU0035Data data;
@@ -88,11 +97,11 @@ public class AT2ACCSU0035Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_description", getElements("search_i_description")},
-                "description", data.getData().get("description"), where)) {
+                "description", getData("description"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_from_date", getElements("search_i_from_date")},
-                "from_date", data.getData().get("from_date"), where)) {
+                "from_date", getData("from_date"), where)) {
             return false;
         }
         if (!Functions.createLovByValue(driver,
@@ -104,29 +113,29 @@ public class AT2ACCSU0035Sis {
                 where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"search_i_description2", getElements("search_i_description2")},
-                "description2", data.getData().get("description2"), where)) {
+        /*if (!Functions.insertInput(driver, new String[]{"search_i_description2", getElements("search_i_description2")},
+                "description2", getData("description2"), where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"search_i_purchase_percentage", getElements("search_i_purchase_percentage")},
-                "purchase_percentage", data.getData().get("purchase_percentage"), where)) {
+                "purchase_percentage", getData("purchase_percentage"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_purchase_amount", getElements("search_i_purchase_amount")},
-                "purchase_amount", data.getData().get("purchase_amount"), where)) {
+                "purchase_amount", getData("purchase_amount"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_sale_percentage", getElements("search_i_sale_percentage")},
-                "sale_percentage", data.getData().get("sale_percentage"), where)) {
+                "sale_percentage", getData("sale_percentage"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_sale_amount", getElements("search_i_sale_amount")},
-                "sale_amount", data.getData().get("sale_amount"), where)) {
+                "sale_amount", getData("sale_amount"), where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_application_type", getElements("search_sl_application_type")},
-                getData("application_type"), "appication_type", where)) {
+                getData("application_type"), "application_type", where)) {
             return false;
         }
         if (!Functions.createLovByValue(driver,
@@ -157,7 +166,27 @@ public class AT2ACCSU0035Sis {
                 where)) {
             return false;
         }
-        if (!Functions.createLov(driver,
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_company_code", getElements("add_lov_company_code")}, //LoV button
+                new String[]{"add_i_company_code", getElements("add_i_company_code")}, //external LoV input
+                new String[]{"add_lov_company_code_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result,
+                "E10", // value to search
+                "company_code", //name of the data
+                where)) {
+            return false;
+        }
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_office", getElements("add_lov_office")}, //LoV button
+                new String[]{"add_i_office", getElements("add_i_office")}, //external LoV input
+                new String[]{"add_lov_office_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result,
+                "859", // value to search
+                "office", //name of the data
+                where)) {
+            return false;
+        }
+        /*if (!Functions.createLov(driver,
                 new String[]{"add_lov_company_code", getElements("add_lov_company_code")}, // b_lov
                 new String[]{"add_i_company_code", getElements("add_i_company_code")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
@@ -176,7 +205,7 @@ public class AT2ACCSU0035Sis {
                 "office", //Data name
                 where)) {
             return false;
-        }
+        }*/
         if (!Functions.getText(driver, new String[]{"add_i_description", getElements("add_i_description")}, // element path
                 "description", // key for data value (the name)
                 where)){
@@ -196,29 +225,29 @@ public class AT2ACCSU0035Sis {
                 where)){
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_description2", getElements("add_i_description2")},
-                "description2", "description2", where)) {
+        /*if (!Functions.insertInput(driver, new String[]{"add_i_description2", getElements("add_i_description2")},
+                "description2", " ", where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"add_i_purchase_percentage", getElements("add_i_purchase_percentage")},
-                "purchase_percentage", "purchase_percentage", where)) {
+                "purchase_percentage", "1", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_purchase_amount", getElements("add_i_purchase_amount")},
-                "purchase_amount", "purchase_amount", where)) {
+                "purchase_amount", "1", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_sale_percentage", getElements("add_i_sale_percentage")},
-                "sale_percentage", "sale_percentage", where)) {
+                "sale_percentage", "1", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_sale_amount", getElements("add_i_sale_amount")},
-                "sale_amount", "sale_amount", where)) {
+                "sale_amount", "1", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_application_type", getElements("add_sl_application_type")},
-                "Unit", "appication_type", where)) {
+                "Unit", "application_type", where)) {
             return false;
         }
         if (!Functions.createLov(driver,
@@ -228,7 +257,7 @@ public class AT2ACCSU0035Sis {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "currency", //Data name
-                where)){
+                where)) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -244,28 +273,28 @@ public class AT2ACCSU0035Sis {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
         if (!Functions.checkClick(driver,
-                new String[]{"destination_b_edit", getElements("destination_b_edit")}, //element to click
+                new String[]{"taxes_b_edit", getElements("taxes_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
                 where)){
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"add_lov_company_code", getElements("add_lov_company_code")}, // b_lov
-                new String[]{"add_i_company_code", getElements("add_i_company_code")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "company_code", //Data name
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_company_code", getElements("add_lov_company_code")}, //LoV button
+                new String[]{"add_i_company_code", getElements("add_i_company_code")}, //external LoV input
+                new String[]{"add_lov_company_code_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result,
+                "E10", // value to search
+                "company_code", //name of the data
                 where)) {
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
-                new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "office", //Data name
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_office", getElements("add_lov_office")}, //LoV button
+                new String[]{"add_i_office", getElements("add_i_office")}, //external LoV input
+                new String[]{"add_lov_office_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result,
+                "859", // value to search
+                "office", //name of the data
                 where)) {
             return false;
         }
@@ -282,42 +311,42 @@ public class AT2ACCSU0035Sis {
                 new String[]{"add_lov_fiscal_zone", getElements("add_lov_fiscal_zone")}, // b_lov
                 new String[]{"add_i_fiscal_zone", getElements("add_i_fiscal_zone")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "fiscal_zone", //Data name
                 where)){
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_description2", getElements("add_i_description2")},
+ /*       if (!Functions.insertInput(driver, new String[]{"add_i_description2", getElements("add_i_description2")},
                 "description2", "description2", where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"add_i_purchase_percentage", getElements("add_i_purchase_percentage")},
-                "purchase_percentage", "purchase_percentage", where)) {
+                "purchase_percentage", "2", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_purchase_amount", getElements("add_i_purchase_amount")},
-                "purchase_amount", "purchase_amount", where)) {
+                "purchase_amount", "2", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_sale_percentage", getElements("add_i_sale_percentage")},
-                "sale_percentage", "sale_percentage", where)) {
+                "sale_percentage", "2", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_sale_amount", getElements("add_i_sale_amount")},
-                "sale_amount", "sale_amount", where)) {
+                "sale_amount", "2", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_application_type", getElements("add_sl_application_type")},
-                "Unit", "appication_type", where)) {
+                "Unit", "application_type", where)) {
             return false;
         }
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_currency", getElements("add_lov_currency")}, // b_lov
                 new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "currency", //Data name
                 where)){
@@ -338,7 +367,12 @@ public class AT2ACCSU0035Sis {
 
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
+                new String[]{"taxes_e_result", getElements("taxes_e_result")}, //result element
+                where)) {
+            return false;
+        }
         if (!Functions.clickQbE(driver,
                 new String[]{"taxes_b_qbe", getElements("taxes_b_qbe")},// query button
                 new String[]{"qbe_i_company_code", getElements("qbe_i_company_code")},//any query input
@@ -350,7 +384,7 @@ public class AT2ACCSU0035Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_office", getElements("qbe_i_office")},
-                "office", getData("office"), where)){
+                "office", getData("office"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_description", getElements("qbe_i_description")},
@@ -361,14 +395,14 @@ public class AT2ACCSU0035Sis {
                 "from_date", getData("from_date"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_fiscal_code", getElements("qbe_i_fiscal_code")},
-                "fiscal_code", getData("fiscal_code"), where)) {
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_fiscal_zone", getElements("qbe_i_fiscal_zone")},
+                "fiscal_zone", getData("fiscal_zone"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_description2", getElements("qbe_i_description2")},
+       /* if (!Functions.insertInput(driver, new String[]{"qbe_i_description2", getElements("qbe_i_description2")},
                 "description2", getData("description2"), where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"qbe_i_purchase_percentage", getElements("qbe_i_purchase_percentage")},
                 "purchase_percentage", getData("purchase_percentage"), where)) {
             return false;
@@ -387,7 +421,7 @@ public class AT2ACCSU0035Sis {
         }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_application_type", getElements("qbe_sl_application_type")},
-                getData("application_type"), "aplication_type", where)) {
+                "Unit", "application_type", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_currency", getElements("qbe_i_currency")},
