@@ -33,9 +33,9 @@ public class AT2ACCSU0018Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Transfers");
+        driver.getTestdetails().setMainmenu("Acomodation");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setScreen("Hotel comments 2.0");
     }
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
@@ -210,11 +210,11 @@ public class AT2ACCSU0018Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"hotel_comments_ed_i_from", getElements("hotel_comments_ed_i_from")},
-                "from", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(-8, -3), 0), " on EDIT")) {
+                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(3,3),0)," on EDIT")){
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"hotel_comments_ed_i_to", getElements("hotel_comments_ed_i_to")},
-                "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(-3, -3), 0), " on EDIT")) {
+                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(10,3),0)," on EDIT")){
             return false;
         }
         if (!Functions.selectText(driver,
@@ -324,6 +324,15 @@ public class AT2ACCSU0018Sis {
                 data.getData().get("date_type"), "se_date_type", " on SEARCH")) {
             return false;
         }
+        if(!Functions.createLovByValue(driver,
+                new String[]{"hotel_comments_se_lov_chain",getElements("hotel_comments_se_lov_chain")}, //LoV button
+                new String[]{"hotel_comments_se_i_chain",getElements("hotel_comments_se_i_chain")}, //external LoV input
+                new String[]{"hotel_comments_se_lov_chain_i_code",getElements("hotel_comments_se_lov_chain_i_code")}, //internal LoV input
+                data.getData().get("chain"), // value to search
+                "se_chain", //name of the data
+                " on SEARCH")){
+            return false;
+        }
 
         if (!Functions.createLovByValue(driver,
                 new String[]{"hotel_comments_se_lov_hotel", getElements("hotel_comments_se_lov_hotel")}, //LoV button
@@ -334,15 +343,7 @@ public class AT2ACCSU0018Sis {
                 " on SEARCH")) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
-                new String[]{"hotel_comments_se_lov_chain", getElements("hotel_comments_se_lov_chain")}, //LoV button
-                new String[]{"hotel_comments_se_i_chain", getElements("hotel_comments_se_i_chain")}, //external LoV input
-                new String[]{"hotel_comments_se_lov_chain_i_code", getElements("hotel_comments_se_lov_chain_i_code")}, //internal LoV input
-                data.getData().get("chain"), // value to search
-                "se_chain", //name of the data
-                " on SEARCH")) {
-            return false;
-        }
+
         if (!Functions.checkboxValue(driver,
 
                 getElements("hotel_comments_se_ch_send_hotel"), "se_send_hotel", check_box_send_hotel, " on SEARCH")) {
@@ -397,25 +398,23 @@ public class AT2ACCSU0018Sis {
                 " on ADD")) {
             return false;
         }
-
         if (!Functions.createLov(driver,
-                new String[]{"hotel_comments_add_lov_hotel", getElements("hotel_comments_add_lov_hotel")}, // b_lov
-                new String[]{"hotel_comments_add_i_hotel", getElements("hotel_comments_add_i_hotel")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "hotel", //Data name
-                " on ADD")) {
-            return false;
-        }
-
-        if (!Functions.createLov(driver,
-                new String[]{"hotel_comments_add_lov_chain", getElements("hotel_comments_add_lov_chain")}, // b_lov
-                new String[]{"hotel_comments_add_i_chain", getElements("hotel_comments_add_i_chain")}, // i_lov
+                new String[]{"hotel_comments_add_lov_chain",getElements("hotel_comments_add_lov_chain")}, // b_lov
+                new String[]{"hotel_comments_add_i_chain",getElements("hotel_comments_add_i_chain")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "chain", //Data name
+                " on ADD")) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"hotel_comments_add_lov_hotel",getElements("hotel_comments_add_lov_hotel")}, // b_lov
+                new String[]{"hotel_comments_add_i_hotel",getElements("hotel_comments_add_i_hotel")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "hotel", //Data name
                 " on ADD")) {
             return false;
         }
