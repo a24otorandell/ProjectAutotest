@@ -276,91 +276,91 @@ public class AT2ACCOP0004Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_interface", getElements("qbe_i_interface")},
-                "interface", getData("interface_result"), where)) {
+                "interface_result", getData("interface_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_TO", getElements("qbe_i_TO")},
-                "TO", getData("TO_result"), where)) {
+                "TO_result", getData("TO_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_general_name", getElements("qbe_i_general_name")},
-                "general_name", getData("general_name_result"), where)) {
+                "general_name_result", getData("general_name_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_TO_reference", getElements("qbe_i_TO_reference")},
-                "TO_reference", getData("TO_reference_result"), where)) {
+                "TO_reference_result", getData("TO_reference_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_partner", getElements("qbe_i_partner")},
-                "partner", getData("partner_result"), where)) {
+                "partner_result", getData("partner_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_hotel", getElements("qbe_i_hotel")},
-                "hotel", getData("hotel_result"), where)) {
+                "hotel_result", getData("hotel_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_destination", getElements("qbe_i_destination")},
-                "destination", getData("destination_result"), where)) {
+                "destination_result", getData("destination_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_ip", getElements("qbe_i_ip")},
-                "ip", getData("ip_result"), where)) {
+                "ip_result", getData("ip_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_creation_user", getElements("qbe_i_creation_user")},
-                "creation_user", getData("creation_user_result"), where)) {
+                "creation_user_result", getData("creation_user_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_creation_date", getElements("qbe_i_creation_date")},
-                "creation_date", getData("creation_date_result"), where)) {
+                "creation_date_result", getData("creation_date_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_from", getElements("qbe_i_from")},
-                "from", getData("from_date_result"), where)) {
+                "from_date_result", getData("from_date_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_to", getElements("qbe_i_to")},
-                "to", getData("to_date_result"), where)) {
+                "to_date_result", getData("to_date_result"), where)) {
             return false;
         }
         //El código funciona pero por alguna razón el campo "Telephone" o el campo "Email", dependiendo de algún factor
         //desconocido, se borran después de autocompletarse y antes de saltar al siguiente campo
         if (!Functions.insertInput(driver, new String[]{"qbe_i_telephone", getElements("qbe_i_telephone")},
-                "telephone", getData("telephone_result"), where)) {
+                "telephone_result", getData("telephone_result"), where)) {
             return false;
         }
         Functions.break_time(driver, 30, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_email", getElements("qbe_i_email")},
-                "email", getData("email_result"), where)) {
+                "email_result", getData("email_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_hash", getElements("qbe_i_hash")},
-                "hash", getData("hash_result"), where)) {
+                "hash_result", getData("hash_result"), where)) {
             return false;
         }
         Functions.break_time(driver, 30, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_expiry_date", getElements("qbe_i_expiry_date")},
-                "expiry_date", getData("expiry_date_result"), where)) {
+                "expiry_date_result", getData("expiry_date_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_card_type", getElements("qbe_i_card_type")},
-                "card_type", getData("card_type_result"), where)) {
+                "card_type_result", getData("card_type_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_card_holder_name", getElements("qbe_i_card_holder_name")},
-                "card_holder_name", getData("card_holder_name_result"), where)) {
+                "card_holder_name_result", getData("card_holder_name_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_confirmation_date", getElements("qbe_i_confirmation_date")},
-                "confirmation_date", getData("confirmation_date_result"), where)) {
+                "confirmation_date_result", getData("confirmation_date_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_amount", getElements("qbe_i_amount")},
-                "amount", getData("amount_result"), where)) {
+                "amount_result", getData("amount_result"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_currency", getElements("qbe_i_currency")},
-                "currency", getData("currency_result"), where)) {
+                "currency_result", getData("currency_result"), where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,

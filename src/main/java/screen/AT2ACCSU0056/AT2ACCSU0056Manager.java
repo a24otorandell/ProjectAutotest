@@ -1,29 +1,31 @@
-package screen.AT2ACCOP0004;
+package screen.AT2ACCSU0056;
 
 import core.TestDriver.TestDriver;
 import screen.AT2Test;
+
 import java.util.Map;
 
 /**
- * Created by jmrios on 17/10/2016.
+ * Created by jmrios on 18/10/2016.
  */
-public class AT2ACCOP0004Manager implements AT2Test {
-    AT2ACCOP0004Sis sis;
-    AT2ACCOP0004Test test;
+public class AT2ACCSU0056Manager implements AT2Test {
+
+    AT2ACCSU0056Sis sis;
+    AT2ACCSU0056Test test;
     String[] procedure;
     String entorno;
 
-    public AT2ACCOP0004Manager(String enviroment) {
+    public AT2ACCSU0056Manager(String enviroment) {
         if (enviroment.equalsIgnoreCase("test")) {
             entorno = "test";
-            setTest(new AT2ACCOP0004Test());
-            this.test.setData(new AT2ACCOP0004Data(enviroment));
-            this.test.setLocators(new AT2ACCOP0004Locators(enviroment));
+            setTest(new AT2ACCSU0056Test());
+            this.test.setData(new AT2ACCSU0056Data(enviroment));
+            this.test.setLocators(new AT2ACCSU0056Locators(enviroment));
         } else {
             entorno = "sis";
-            setTestSis(new AT2ACCOP0004Sis());
-            this.sis.setData(new AT2ACCOP0004Data(enviroment));
-            this.sis.setLocators(new AT2ACCOP0004Locators(enviroment));
+            setTestSis(new AT2ACCSU0056Sis());
+            this.sis.setData(new AT2ACCSU0056Data(enviroment));
+            this.sis.setLocators(new AT2ACCSU0056Locators(enviroment));
         }
     }
 
@@ -35,19 +37,19 @@ public class AT2ACCOP0004Manager implements AT2Test {
         this.procedure = procedure;
     }
 
-    public AT2ACCOP0004Test getTest() {
+    public AT2ACCSU0056Test getTest() {
         return test;
     }
 
-    public void setTest(AT2ACCOP0004Test test) {
+    public void setTest(AT2ACCSU0056Test test) {
         this.test = test;
     }
 
-    public AT2ACCOP0004Sis getTestSis() {
+    public AT2ACCSU0056Sis getTestSis() {
         return sis;
     }
 
-    public void setTestSis(AT2ACCOP0004Sis sis) {
+    public void setTestSis(AT2ACCSU0056Sis sis) {
         this.sis = sis;
     }
 
