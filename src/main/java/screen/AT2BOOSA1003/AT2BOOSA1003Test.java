@@ -22,6 +22,7 @@ public class AT2BOOSA1003Test {
 
     /**
      * Constructor
+     * @param enviroment String
      */
     public AT2BOOSA1003Test(String enviroment) {
         setData(new AT2BOOSA1003Data(enviroment));

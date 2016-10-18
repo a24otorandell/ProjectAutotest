@@ -9,11 +9,11 @@ import core.recursiveData.recursiveXPaths;
 
 /**
  * Created by vsolis on 28/09/2016.
- * <p>
- * <p>
+ *
+ *
  * XPATH DIFERENTES QUE LOS DE SIS
- * <p>
- * ERRORES GRÁFICOS QUE HARAN QUE EL CODIGO FALLE.
+ *
+ * ERRORES GRAFICOS QUE HARAN QUE EL CODIGO FALLE.
  */
 public class AT2ACCOP0019Test {
     protected AT2ACCOP0019Locators locators;

@@ -51,6 +51,7 @@ public class AT2ACCSU0070Locators {
         //<editor-fold desc="records">
         elements.put("hotel_desc_e_record", "//*[contains(@id, 'pc1:tt1::db')]/table/tbody/tr/td[1]");
         elements.put("hotel_desc_e_plus_first", "//*[contains(@id, 'pc1:tt1:0::di')]");
+        elements.put("hotel_desc_e_plus_second", "//*[contains(@id, 'pc1:tt1:1::di')]");
         elements.put("hotel_desc_e_atlas_hotel_code",
                 "//*[contains(@id, 'pc1:tt1::db')]/table/tbody/tr[2]/td[2]/div/table/tbody/tr/td[3]");
         elements.put("hotel_desc_e_atlas_hotel_name",
