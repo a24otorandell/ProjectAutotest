@@ -164,12 +164,12 @@ public class AT2ACCSU0035Sis {
                 where)) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_office", getElements("add_lov_office")}, //LoV button
                 new String[]{"add_i_office", getElements("add_i_office")}, //external LoV input
-                new String[]{"add_lov_office_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result,
-                "859", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok,
                 "office", //name of the data
                 where)) {
             return false;
@@ -270,17 +270,17 @@ public class AT2ACCSU0035Sis {
                 new String[]{"add_i_company_code", getElements("add_i_company_code")}, //external LoV input
                 new String[]{"add_lov_company_code_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result,
-                "E10", // value to search
+                "P01", // value to search
                 "company_code", //name of the data
                 where)) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_office", getElements("add_lov_office")}, //LoV button
                 new String[]{"add_i_office", getElements("add_i_office")}, //external LoV input
-                new String[]{"add_lov_office_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result,
-                "859", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok,
                 "office", //name of the data
                 where)) {
             return false;
