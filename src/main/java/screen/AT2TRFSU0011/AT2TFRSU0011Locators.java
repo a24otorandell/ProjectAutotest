@@ -21,18 +21,12 @@ public class AT2TFRSU0011Locators {
     public void setElements() {
 
         //QUALTIY RULES
-
-
         //qbe
-
         elements.put("quality_rules_qbe_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("quality_rules_qbe_sl_active", "//*[contains(@id, 'pc1:table1:soc4::content')]");
         elements.put("quality_rules_qbe_i_to_or_group", "//*[contains(@id, 'pc1_afr_table1_afr_c2::content')]");
         elements.put("quality_rules_qbe_i_to_or_group_description", "//*[contains(@id, 'pc1_afr_table1_afr_c1::content')]");
-
-
         // other actions
-
         elements.put("quality_rules_oa_b_actions", "//*[contains(@id, 'pc1:tgenericMenu0:dc_mb1')]/div[1]");
         elements.put("quality_rules_oa_b_actions_b_audit", "//*[contains(@id, 'pc1:tgenericMenu0:dc_cmi1')]/td[2]");
         elements.put("quality_rules_oa_b_actions_b_close", "//*[contains(@id, 'dialog1::close')]");
@@ -41,7 +35,6 @@ public class AT2TFRSU0011Locators {
         elements.put("quality_rules_oa_b_actions_b_exclusive", "//*[contains(@id, 'tgenericMenu0:dc_cmi4')]/td[2]");
         elements.put("quality_rules_oa_b_actions_b_maximum", "//*[contains(@id, 'tgenericMenu0:dc_cmi6')]/td[2]");
         elements.put("quality_rules_oa_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
-
         //search
         elements.put("quality_rules_se_records", "//*[contains(@id, 'pc1:ot2')]"); //number of records retrieved
         elements.put("quality_rules_se_b_search", "//*[contains(@id, 'queryQualityNormas::search')]");
@@ -76,7 +69,6 @@ public class AT2TFRSU0011Locators {
         elements.put("quality_rules_records", "//*[contains(@id, 'pc1:ot2')]");
 
         //TEMPORALY RULES
-
         //Temporary Quality Rules
         elements.put("rules_b_save", "//*[contains(@id, ':detailToolbar:boton_commit')]");
         elements.put("rules_b_save_b_ok", "//*[contains(@id, 'dyntdc:r1:2:d3::ok')]");
@@ -94,8 +86,6 @@ public class AT2TFRSU0011Locators {
         elements.put("rules_b_actions_toperator", "//*[contains(@id, 'tgenericMenu0:dc_cmi2')]/td[2]");
 
         //CALIDAD_VUELOS_TIEMPO
-
-
         //actions
         elements.put("tiempo_b_actions", "//*[contains(@id, 'tgenericMenu1:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("tiempo_b_actions_tour", "//*[contains(@id, 'tgenericMenu1:dc_cmi2')]/td[2]");
@@ -136,7 +126,6 @@ public class AT2TFRSU0011Locators {
         elements.put("tiempo_ss_delete_b_yes", "//*[contains(@id, 'pc1:tgenericbar1:cbt1')]");
 
         //CALIDAD_TIEMPO_ANTELA
-
         //search
         elements.put("antela_se_records", "//*[contains(@id, 'pc2:ot20')]"); //number of records retrieved
         elements.put("antela_b_advanced", "//*[contains(@id, ':quickQueryCalidadTiempoAnt:cl2')]");
@@ -173,21 +162,15 @@ public class AT2TFRSU0011Locators {
         elements.put("antela_add_i_time", "//*[contains(@id, 'tgenericbar1:it9::content')]");
         //detach
         elements.put("antela_detach_b", "//*[contains(@id, 'pc2:_dchTbr')]/a");
-
         //actions
         elements.put("antela_b_actions", "//*[contains(@id, 'tgenericMenu2:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("antela_b_audit_data", "//*[contains(@id, 'tgenericMenu2:dc_cmi1')]/td[2]");
         elements.put("antela_b_audit_close", "//*[contains(@id, 'dialog2::close')]");
-
         //delete
         elements.put("antela_b_delete", "//*[contains(@id, 'tgenericbar1:boton_remove')]");
         elements.put("antela_del_b_yes", "//*[contains(@id, 'tgenericbar1:cbt1')]");
 
-
-
         //INCOMPATIBILITY OF AREAS
-
-
         //search
         elements.put("areas_s_lov_code1", "//*[contains(@id, 'queryIncompatibility:value00::lovIconId')]");
         elements.put("areas_s_i_code1", "//*[contains(@id, 'queryIncompatibility:value00::content')]");
@@ -197,8 +180,6 @@ public class AT2TFRSU0011Locators {
         elements.put("areas_i_result", "//*[contains(@id, 'tableIncomp::db')]/table/tbody/tr/td[1]");
         elements.put("areas_lov_i_code1_transfer", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
         elements.put("areas_lov_i_code2_transfer", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
-
-
         //add
         elements.put("areas_ad_b_add", "//*[contains(@id, 'tgenericbar0:boton_add')]");
         elements.put("areas_ad_lov_code1", "//*[contains(@id, 'tgenericbar0:codZona1Id::lovIconId')]");
@@ -208,15 +189,12 @@ public class AT2TFRSU0011Locators {
         elements.put("areas_ad_i_code2", "//*[contains(@id, 'tgenericbar0:codZona2Id::content')]");
         elements.put("areas_ad_i_code2_description", "//*[contains(@id, 'tgenericbar0:it1::content')]");
         elements.put("areas_ad_b_save", "//*[contains(@id, 'tgenericbar0:btn_commitExit')]");
-
-
         //QBE
         elements.put("areas_qbe_b_qbe", "//*[contains(@id, '_qbeTbr')]/a");
         elements.put("areas_qbe_i_code1", "//*[contains(@id, 'tableIncomp_afr_c8::content')]");
         elements.put("areas_qbe_i_code1_description", "//*[contains(@id, 'tableIncomp_afr_c12::content')]");
         elements.put("areas_qbe_code2", "//*[contains(@id, 'tableIncomp_afr_c6::content')]");
         elements.put("areas_qbe_i_code2_description", "//*[contains(@id, 'tableIncomp_afr_c2::content')]");
-
         //edit
         elements.put("areas_ed_b_edit", "//*[contains(@id, 'tgenericbar0:boton_edit')]");
         elements.put("areas_ed_lov_code1", "//*[contains(@id, 'tgenericbar0:codZona1Id::lovIconId')]");
@@ -228,72 +206,54 @@ public class AT2TFRSU0011Locators {
         elements.put("areas_ed_b_save", "//*[contains(@id, 'tgenericbar0:btn_commitExit')]");
         elements.put("areas_ed_lov_code1_result3", "//*[contains(@id, 'pc1:tgenericbar0:codZona1Id_afrLovInternalTableId::db')]/table/tbody/tr[3]/td[1]");
         elements.put("areas_ed_lov_code2_result4", "//*[contains(@id, 'tgenericbar0:codZona2Id_afrLovInternalTableId::db')]/table/tbody/tr[4]/td[1]");
-
         //detach
         elements.put("areas_detach_b", "//*[contains(@id, 'pc1:_dchTbr')]/a");
-
-
         //delete
         elements.put("areas_b_delete", "//*[contains(@id, 'tgenericbar0:boton_remove')]");
         elements.put("areas_ss_delete_b_yes", "//*[contains(@id, 'tgenericbar0:cbt1')]");
         elements.put("areas_records", "//*[contains(@id, 'pc1:ot3')]");
-
         //actions
         elements.put("areas_b_actions", "//*[contains(@id, 'tgenericMenu0:dc_m1')]/div/table/tbody/tr/td[2]/a");
         elements.put("areas_b_actions_tour", "//*[contains(@id, 'tgenericMenu0:dc_cmi2')]/td[2]");
         elements.put("areas_b_audit_data", "//*[contains(@id, 'tgenericMenu0:dc_cmi1')]/td[2]");
         elements.put("areas_b_close", "//*[contains(@id, 'dialog1::close')]");
 
-
         //Exclusive areas
-
         //add
         elements.put("exclusive_ad_b_add", "//*[contains(@id, 'tgenericbar0:boton_add')]");
         elements.put("exclusive_ad_lov_transfer_area", "//*[contains(@id, 'tgenericbar0:codZonaId::lovIconId')]");
         elements.put("exclusive_ad_i_transfer_area", "//*[contains(@id, 'tgenericbar0:codZonaId::content')]");
         elements.put("exclusive_ad_i_transfer_area_description", "//*[contains(@id, 'tgenericbar0:it1::content')]");
         elements.put("exclusive_ad_b_save", "//*[contains(@id, 'tgenericbar0:btn_commitExit')]");
-
-
         //search
         elements.put("exclusive_se_lov_transfer_area", "//*[contains(@id, 'queryExclusiveTransArea:value00::lovIconId')]");
         elements.put("exclusive_se_i_transfer_area", "//*[contains(@id, 'queryExclusiveTransArea:value00::content')]");
         elements.put("exclusive_se_lov_transfer_area_i_transfer_area", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
         elements.put("exclusive_se_b_search", "//*[contains(@id, 'queryExclusiveTransArea::search')]");
         elements.put("exclusive_result", "//*[contains(@id, 't1::db')]/table/tbody/tr/td[1]");
-
-
         //qbe
         elements.put("exclusive_qbe_b_qbe", "//*[contains(@id, '_qbeTbr')]/a");
         elements.put("exclusive_qbe_i_transfer", "//*[contains(@id, '_afr_t1_afr_c1::content')]");
         elements.put("exclusive_qbe_i_description", "//*[contains(@id, '_afr_t1_afr_c2::content')]");
-
         //edit
-
         elements.put("exclusive_ed_b_edit", "//*[contains(@id, 'tgenericbar0:boton_edit')]");
         elements.put("exclusive_ed_b_save", "//*[contains(@id, 'tgenericbar0:btn_commitExit')]");
         elements.put("exclusive_ed_lov_transfer_area", "//*[contains(@id, 'tgenericbar0:codZonaId::lovIconId')]");
         elements.put("exclusive_ed_i_transfer_area", "//*[contains(@id, 'tgenericbar0:codZonaId::content')]");
         elements.put("exclusive_ed_i_description", "//*[contains(@id, 'tgenericbar0:it1::content')]");
-
         //actions
         elements.put("exclusive_b_actions", "//*[contains(@id, 'tgenericMenu0:dc_m1')]");
         elements.put("exclusive_b_actions_auditdata", "//*[contains(@id, 'tgenericMenu0:dc_cmi1')]/td[2]");
         elements.put("exclusive_b_actions_b_close", "//*[contains(@id, 'd2::close')]");
         elements.put("exclusive_b_actions_tour", "//*[contains(@id, 'tgenericMenu0:dc_cmi2')]/td[2]");
-
-
         //detach
         elements.put("exclusive_detach_b", "//*[contains(@id, 'pc1:_dchTbr')]/a");
-
         //delete
         elements.put("exclusive_b_delete", "//*[contains(@id, 'tgenericbar0:boton_remove')]");
         elements.put("exclusive_ss_delete_b_yes", "//*[contains(@id, 'tgenericbar0:cbt1')]");
         elements.put("exclusive_records", "//*[contains(@id, 'pc1:ot6')]");
 
-
         //MAXIMUM SEATS OF A HOTEL
-
         //add
         elements.put("maximum_ad_b_add", "//*[contains(@id, 'tgenericbar0:boton_add')]");
         elements.put("maximum_ad_lov_hotel_name", "//*[contains(@id, 'tgenericbar0:nomcortoId::lovIconId')]");
@@ -303,15 +263,13 @@ public class AT2TFRSU0011Locators {
         elements.put("maximum_ad_i_number_seats", "//*[contains(@id, 'tgenericbar0:it1::content')]");
         elements.put("maximum_ad_b_save", "//*[contains(@id, 'tgenericbar0:btn_commitExit')]");
         elements.put("maximum_ad_i_code", "//*[contains(@id, 'tablaSeats::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]");
-
-
         //search
         elements.put("maximum_se_i_number_stops", "//*[contains(@id, 'queryMaximumSeats:value00::content')]");
         elements.put("maximum_se_i_number_seats", "//*[contains(@id, 'queryMaximumSeats:value10::content')]");
         elements.put("maximum_b_search", "//*[contains(@id, 'queryMaximumSeats::search')]");
+        elements.put("maximum_b_reset", "//*[contains(@id, 'queryMaximumSeats::reset')]");
         elements.put("maximum_result", "//*[contains(@id, 'tablaSeats::db')]/table/tbody/tr/td[1]");
-
-
+        elements.put("maximum_result_e_code", "//*[contains(@id, 'tablaSeats::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]");
         //edit
         elements.put("maximum_ed_b_edit", "//*[contains(@id, 'tgenericbar0:boton_edit')]");
         elements.put("maximum_ed_lov_hotel_name", "//*[contains(@id, 'tgenericbar0:nomcortoId::lovIconId')]");
@@ -321,24 +279,18 @@ public class AT2TFRSU0011Locators {
         elements.put("maximum_ed_i_number_seats", "//*[contains(@id, 'tgenericbar0:it1::content')]");
         elements.put("maximum_ed_b_save", "//*[contains(@id, 'tgenericbar0:btn_commitExit')]");
         elements.put("maximum_ed_i_code", "//*[contains(@id, 'tablaSeats::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]");
-
         //qbe
-
         elements.put("maximum_qbe_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
         elements.put("maximum_qbe_i_code", "//*[contains(@id, '_afr_tablaSeats_afr_c4::content')]");
         elements.put("maximum_qbe_i_hotel_name", "//*[contains(@id, '_afr_tablaSeats_afr_c3::content')]");
         elements.put("maximum_qbe_i_hotel_name_description", "//*[contains(@id, '_afr_tablaSeats_afr_c2::content')]");
         elements.put("maximum_qbe_i_number_stops", "//*[contains(@id, '_afr_tablaSeats_afr_c1::content')]");
         elements.put("maximum_qbe_i_number_seats", "//*[contains(@id, '_afr_tablaSeats_afr_c5::content')]");
-
         //actions
-        elements.put("maximum_b_actions", "//*[contains(@id, '_afr_tablaSeats_afr_c5::content')]");
+        elements.put("maximum_b_actions", "//*[contains(@id, 'pc1:tgenericMenu0:dc_m1')]");
         elements.put("maximum_b_actions_tour", "//*[contains(@id, 'tgenericMenu0:dc_cmi2')]/td[2]");
-
-
         //detach
         elements.put("maximum_detach_b", "//*[contains(@id, 'pc1:_dchTbr')]/a");
-
         //delete
         elements.put("maximum_b_delete", "//*[contains(@id, 'tgenericbar0:boton_remove')]");
         elements.put("maximum_ss_delete_b_yes", "//*[contains(@id, 'tgenericbar0:cbt1')]");

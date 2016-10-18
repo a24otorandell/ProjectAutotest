@@ -5,24 +5,19 @@ import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import screen.AT2MDMCL0030.AT2MDMCL0030Data;
-import screen.AT2MDMCL0030.AT2MDMCL0030Locators;
 
 /**
  * Created by vsolis on 29/08/2016.
  */
 
-
-public class AT2TFRSU0011Test {
-
-
-    /**
+    /*
      * Bugs encontrados 2
      * Boton añadir Calidad Tiempos Vuelos no funciona
      * Dentro del boton añadir de Maximum Seats of a Hotel no se rellena el campo descripcion
+     *  --> esto pasa porque el hotel ya está siendo usado
      */
+
+public class AT2TFRSU0011Test {
 
     protected AT2TFRSU0011Locators locators;
     protected AT2TFRSU0011Data data;
@@ -30,7 +25,6 @@ public class AT2TFRSU0011Test {
     public AT2TFRSU0011Test() {
 
     }
-
     public AT2TFRSU0011Locators getLocators() {
         return locators;
     }
@@ -62,47 +56,18 @@ public class AT2TFRSU0011Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
-        if (!Quality_rules(driver)) {
-            return false;
-        }
-        if (!Go_to_temporaly_rules(driver)) {
-            return false;
-        }
-        if (!Temporaly_quality_rules(driver)) {
-            return false;
-        }
-     /*   if (!Calidad_vuelos_tiempo(driver)) {
-            return false;
-        }*/
-        if (!Calidad_tiempo_antela(driver)) {
-            return false;
-        }
-        if (!Go_to_incompatibiliy_of_areas(driver)) {
-            return false;
-        }
-        if (!Incompatibility_of_areas(driver)) {
-            return false;
-        }
-
-        if (!Go_to_exclusive_areas(driver)) {
-            return false;
-        }
-
-        if (!Exclusive_areas(driver)) {
-            return false;
-        }
-
-        if (!Go_to_maximun_seats_of_a_hotel(driver)) {
-            return false;
-        }
-        if (!Maximun_seats_of_a_hotel(driver)) {
-            return false;
-        }
-
-        if (!Delete_qualityRules(driver)) {
-            return false;
-        }
-
+        if (!Quality_rules(driver)) return false;
+        if (!Go_to_temporaly_rules(driver)) return false;
+        if (!Temporaly_quality_rules(driver)) return false;
+        if (!Calidad_vuelos_tiempo(driver)) return false;
+        if (!Calidad_tiempo_antela(driver)) return false;
+        if (!Go_to_incompatibiliy_of_areas(driver)) return false;
+        if (!Incompatibility_of_areas(driver)) return false;
+        if (!Go_to_exclusive_areas(driver)) return false;
+        if (!Exclusive_areas(driver)) return false;
+        if (!Go_to_maximun_seats_of_a_hotel(driver)) return false;
+        if (!Maximun_seats_of_a_hotel(driver)) return false;
+        if (!Delete_qualityRules(driver)) return false;
         return false;
     }
 
@@ -361,41 +326,26 @@ public class AT2TFRSU0011Test {
     }
 
     // Calidad, Temporaly
-   /* private boolean Calidad_vuelos_tiempo(TestDriver driver) {
+    private boolean Calidad_vuelos_tiempo(TestDriver driver) {
         driver.getReport().addHeader("MODIFY VALUES IN TEMPORARY QUALITY RULES", 3, false);
         driver.getReport().addContent("", "br", "");
         driver.getReport().addContent("This block is a style guide and for this reason, only enters and get out, for more information see QA-10978.", "h3", "class='success'");
         driver.getReport().addContent("", "br", "");
-
-        if (!Add_vuelos(driver)) {
-            return false;
-        }
-        if (!Search_vuelos(driver)) {
-            return false;
-        }
-        if (!Edit_vuelos(driver)) {
-            return false;
-        }
-        if (!Search_vuelos(driver)) {
-            return false;
-        }
-        if (!QBE_vuelos(driver)) {
-            return false;
-        }
-        if (!Other_actions_vuelos(driver)) {
-            return false;
-        }
-        if (!Delete_vuelos(driver)) {
-            return false;
-        }
+        /*
+        if (!Add_vuelos(driver)) return false;
+        if (!Search_vuelos(driver)) return false;
+        if (!Edit_vuelos(driver)) return false;
+        if (!Search_vuelos(driver)) return false;
+        if (!QBE_vuelos(driver)) return false;
+        if (!Other_actions_vuelos(driver)) return false;
+        if (!Delete_vuelos(driver)) return false;
+        */
         driver.getReport().closeBlock();
         return true;
-    }*/
-
+    }
     /**
      * BUG REPORTADO EN JIRA QA-10978
      */
-
 
     private boolean Calidad_tiempo_antela(TestDriver driver) {
         if (!Add_antela(driver)) {
@@ -420,7 +370,7 @@ public class AT2TFRSU0011Test {
         if (!Skip_quality_rules(driver)) {
             return false;
         }
-
+        driver.getReport().closeBlock();
         return true;
     }
     private boolean Temporaly_quality_rules(TestDriver driver) {
@@ -437,8 +387,6 @@ public class AT2TFRSU0011Test {
         if (!Functions.zoomOut(driver, 2)) {
             return false;
         }
-
-
         if (!Functions.insertInput(driver,
                 new String[]{"rules_gr_add_i_arrivals", getElements("rules_gr_add_i_arrivals")},
                 "gr_arrivals",
@@ -446,17 +394,14 @@ public class AT2TFRSU0011Test {
                 " on CREATE TEMPORALY")) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"rules_gr_add_i_departures", getElements("rules_gr_add_i_departures")},
                 "gr_departures", (Integer.toString(DataGenerator.random(1, 100))), " on CREATE TEMPORALY")) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"rules_nu_add_i_arrivals", getElements("rules_nu_add_i_arrivals")},
                 "nu_arrivals", (Integer.toString(DataGenerator.random(1, 100))), " on CREATE TEMPORALY ")) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"rules_nu_add_i_departures", getElements("rules_nu_add_i_departures")},
                 "nu_departures", (Integer.toString(DataGenerator.random(1, 100))), " on CREATE TEMPORALY")) {
             return false;
@@ -932,7 +877,6 @@ public class AT2TFRSU0011Test {
         if (!QBE_incompatibility(driver)) {
             return false;
         }
-
         if (!Other_actions_incompatibility(driver)) {
             return false;
         }
@@ -942,6 +886,7 @@ public class AT2TFRSU0011Test {
         if (!Skip_incompatibilty_of_areas(driver)) {
             return false;
         }
+        driver.getReport().closeBlock();
         return true;
     }
 
@@ -1187,7 +1132,6 @@ public class AT2TFRSU0011Test {
         if (!QBE_Exclusive(driver)) {
             return false;
         }
-
         if (!Other_actions_Exclusive(driver)) {
             return false;
         }
@@ -1197,7 +1141,7 @@ public class AT2TFRSU0011Test {
         if (!Skip_Exclusive(driver)) {
             return false;
         }
-
+        driver.getReport().closeBlock();
         return true;
     }
 
@@ -1378,6 +1322,9 @@ public class AT2TFRSU0011Test {
     }
 
     //Maximun
+    /*
+    Al crear un registro si el hotel ya ha sido creado te deja seleccionarlo pero no te deje gaurdar el registro
+     */
     private boolean Maximun_seats_of_a_hotel(TestDriver driver) {
         if (!Add_Maximum(driver)) {
             return false;
@@ -1400,13 +1347,13 @@ public class AT2TFRSU0011Test {
         if (!Skip_Maximum(driver)) {
             return false;
         }
-
+        driver.getReport().closeBlock();
         return true;
     }
 
     private boolean Skip_Maximum(TestDriver driver) {
-
         driver.getReport().addHeader("SKIP TO MAXIMUM SEATS OF A HOTEL", 3, false);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"maximum_b_actions", getElements("maximum_b_actions")}, //element to click
                 new String[]{"maximum_b_actions_tour", getElements("maximum_b_actions_tour")}, //element expected to appear
@@ -1414,7 +1361,6 @@ public class AT2TFRSU0011Test {
                 " on MAXIMUM")) {
             return false;
         }
-
         if (!Functions.checkClick(driver,
                 new String[]{"maximum_b_actions_tour", getElements("maximum_b_actions_tour")}, //element to click
                 new String[]{"quality_rules_oa_b_actions", getElements("quality_rules_oa_b_actions")}, //element expected to appear
@@ -1432,8 +1378,6 @@ public class AT2TFRSU0011Test {
     }
     private boolean Delete_Maximum(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN MAXIMUM SEATS OF A HOTEL", 3, false);
-
-
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"maximum_b_delete", getElements("maximum_b_delete")},
                 new String[]{"maximum_records", getElements("maximum_records")},
@@ -1458,18 +1402,17 @@ public class AT2TFRSU0011Test {
     }
     private boolean QBE_Maximum(TestDriver driver) {
         driver.getReport().addHeader("QBE IN MAXIMUM SEATS OF A HOTEL", 3, false);
-
+        if (!Functions.simpleClick(driver, new String[]{"maximum_b_reset", getElements("maximum_b_reset")},
+                " on QBE IN MAXIMUN")) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"maximum_qbe_b_qbe", getElements("maximum_qbe_b_qbe")},// query button
                 new String[]{"maximum_qbe_i_hotel_name", getElements("maximum_qbe_i_hotel_name")},//any query input
                 " on QBE IN MAXIMUM")) {
             return false;
         }
-
-        if (!Functions.insertInput(driver, new String[]{"maximum_qbe_i_code", getElements("maximum_qbe_i_code")},
-                "", "", " on QBE IN MAXIMUM")) {
-            return false;
-        }// No hay funcion migrada para poder rellenar este campo.
         if (!Functions.insertInput(driver, new String[]{"maximum_qbe_i_hotel_name", getElements("maximum_qbe_i_hotel_name")},
                 "qbe_hotel_name", data.getData().get("hotel_name"), " on QBE IN MAXIMUM")) {
             return false;
@@ -1486,7 +1429,21 @@ public class AT2TFRSU0011Test {
                 "qbe_number_seats", data.getData().get("number_seats"), " on QBE IN MAXIMUM")) {
             return false;
         }
-
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"maximum_qbe_i_number_stops", getElements("maximum_qbe_i_number_stops")}, //search button
+                new String[]{"maximum_result", getElements("maximum_result")}, //result element
+                "  on QBE IN MAXIMUM")) {
+            return false;
+        }
+        if (!Functions.getText(driver, new String[]{"maximum_result_e_code", getElements("maximum_result_e_code")}, // element path
+                "maximun_code_hotel", // key for data value (the name)
+                "  on QBE IN MAXIMUM")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"maximum_qbe_i_code", getElements("maximum_qbe_i_code")},
+                "maximun_code_hotel", data.getData().get("maximun_code_hotel"), " on QBE IN MAXIMUM")) {
+            return false;
+        }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"maximum_qbe_i_number_stops", getElements("maximum_qbe_i_number_stops")}, //search button
                 new String[]{"maximum_result", getElements("maximum_result")}, //result element
@@ -1495,12 +1452,9 @@ public class AT2TFRSU0011Test {
         }
         return true;
     }
-
     private boolean Edit_Maximum(TestDriver driver) {
         driver.getReport().addHeader("EDIT IN MAXIMUM SEATS OF A HOTEL", 3, false);
-
-        Functions.break_time(driver, 3, 500);
-
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"maximum_ed_b_edit", getElements("maximum_ed_b_edit")}, //element to click
                 new String[]{"maximum_ed_lov_hotel_name", getElements("maximum_ed_lov_hotel_name")}, //element expected to appear
@@ -1518,17 +1472,15 @@ public class AT2TFRSU0011Test {
                 " on EDIT IN MAXIMUM")) {
             return false;
         }
-
-
-        Functions.getValue(driver, new String[]{"maximum_ed_e_hotel_name_description", getElements("maximum_ed_e_hotel_name_description")}, // element path
-                "", // key for data value (the name)
-                " on EDIT IN EXCLUSIVE");
+        Functions.getValue(driver, new String[]{"maximum_ad_e_hotel_name_description", getElements("maximum_ad_e_hotel_name_description")}, // element path
+                "hotel_name_description", // key for data value (the name)
+                " on EDIT IN MAXIMUM");
         if (!Functions.insertInput(driver, new String[]{"maximum_ed_i_number_stops", getElements("maximum_ed_i_number_stops")},
-                "number_stops", (Integer.toString(DataGenerator.random(1, 100))), " on ADD IN MAXIMUM")) {
+                "number_stops", (Integer.toString(DataGenerator.random(1, 100))), " on EDIT IN MAXIMUM")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"maximum_ed_i_number_seats", getElements("maximum_ed_i_number_seats")},
-                "number_seats", (Integer.toString(DataGenerator.random(1, 100))), " on ADD IN MAXIMUM")) {
+                "number_seats", (Integer.toString(DataGenerator.random(1, 100))), " on EDIT IN MAXIMUM")) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -1564,9 +1516,7 @@ public class AT2TFRSU0011Test {
     }
     private boolean Add_Maximum(TestDriver driver) {
         driver.getReport().addHeader("ADD IN MAXIMUM SEATS OF A HOTEL", 3, false);
-
         Functions.break_time(driver, 3, 500);
-
         if (!Functions.checkClick(driver,
                 new String[]{"maximum_ad_b_add", getElements("maximum_ad_b_add")}, //element to click
                 new String[]{"maximum_ad_lov_hotel_name", getElements("maximum_ad_lov_hotel_name")}, //element expected to appear
@@ -1584,8 +1534,6 @@ public class AT2TFRSU0011Test {
                 " on ADD IN MAXIMUM")) {
             return false;
         }
-
-
         Functions.getValue(driver, new String[]{"maximum_ad_e_hotel_name_description", getElements("maximum_ad_e_hotel_name_description")}, // element path
                 "hotel_name_description", // key for data value (the name)
                 " on ADD IN EXCLUSIVE");
@@ -1597,6 +1545,7 @@ public class AT2TFRSU0011Test {
                 "number_seats", (Integer.toString(DataGenerator.random(1, 100))), " on ADD IN MAXIMUM")) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"maximum_ad_b_save", getElements("maximum_ad_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
