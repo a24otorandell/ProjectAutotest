@@ -345,9 +345,7 @@ public class AT2ACCSU0035Sis {
                 where)){
             return false;
         }
-
         return true;
-
     }
     private boolean qbe_taxes(TestDriver driver) {
 

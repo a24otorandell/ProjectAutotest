@@ -347,9 +347,7 @@ public class AT2ACCSU0035Test {
                 where)){
             return false;
         }
-
         return true;
-
     }
     private boolean qbe_taxes(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
