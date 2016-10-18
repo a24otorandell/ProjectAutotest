@@ -40,5 +40,4 @@ public class AT2ACCCO0049Data {
         data.put("contract_type_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("calendar_order_edit", Integer.toString(DataGenerator.random(0, 99)));
     }
-
 }

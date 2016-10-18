@@ -4,8 +4,6 @@ import core.CommonActions.CommonProcedures;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
-import screen.AT2ACCSU0058.AT2ACCSU0058Data;
-import screen.AT2ACCSU0058.AT2ACCSU0058Locators;
 
 /**
  * Created by jmrios on 18/10/2016.
