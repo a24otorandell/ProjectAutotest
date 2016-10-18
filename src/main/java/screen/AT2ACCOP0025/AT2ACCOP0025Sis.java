@@ -18,30 +18,38 @@ public class AT2ACCOP0025Sis {
         setData(new AT2ACCOP0025Data(enviroment));
         setLocators(new AT2ACCOP0025Locators(enviroment));
     }
+
     public AT2ACCOP0025Locators getLocators() {
         return locators;
     }
+
     public void setLocators(AT2ACCOP0025Locators locators) {
         this.locators = locators;
     }
+
     public AT2ACCOP0025Data getData() {
         return data;
     }
+
     public void setData(AT2ACCOP0025Data data) {
         this.data = data;
     }
+
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
+
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodations");
         driver.getTestdetails().setSubmenu("Operations");
         driver.getTestdetails().setScreen("Commissions Rules 2.0");
     }
+
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
+
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -74,6 +82,7 @@ public class AT2ACCOP0025Sis {
         }
         return false;
     }
+
     /**
      * @param driver TestDriver
      * @param type   boolean que controla el flujo inicial para saber si creamos o modificamos el registro
@@ -124,12 +133,13 @@ public class AT2ACCOP0025Sis {
                 on)) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"record_interaction_b_add_lov_merchant", getElements("record_interaction_b_add_lov_merchant")},
                 new String[]{"record_interaction_b_add_i_merchant", getElements("record_interaction_b_add_i_merchant")},
-                new String[]{"record_interaction_b_add_lov_merchant_i_merchant", getElements("record_interaction_b_add_lov_merchant_i_merchant")},
-                getData(update + "merchant"),
-                "merchant",
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "merchant", //Data name
                 on)) {
             return false;
         }
@@ -173,6 +183,7 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
+
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -275,6 +286,7 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
+
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -379,6 +391,7 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
+
     /**
      * @param driver TestDriver
      * @return boolean
@@ -404,6 +417,7 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
+
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -413,25 +427,22 @@ public class AT2ACCOP0025Sis {
         try {
             if (!Functions.simpleClick(driver,
                     new String[]{"search_e_result", getElements("search_e_result")},
-                    " on DELETE")) {
+                    " on Delete")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.doDelete(driver,
                     new String[]{"record_interaction_b_remove", getElements("record_interaction_b_remove")},
-                    " on DELETE")) {
-                return false;
-            }
-            Thread.sleep(2800);
-            if (!Functions.simpleClick(driver,
                     new String[]{"record_interaction_b_remove_b_ok", getElements("record_interaction_b_remove_b_ok")},
                     " on DELETE")) {
                 return false;
             }
+            Functions.break_time(driver, 4, 500);
         } catch (Exception delete) {
             delete.printStackTrace();
         }
         return true;
     }
+
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -444,6 +455,7 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
+
     /**
      * @param driver TestDriver
      * @return Boolean

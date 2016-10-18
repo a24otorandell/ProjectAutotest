@@ -645,8 +645,9 @@ public class AT2MSCSU0007Sis {
                 return false;
             }
             Functions.break_time(driver, 2, 800);
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClick(driver,
                     new String[]{"available_web_b_remove_b_ok", getElements("available_web_b_remove_b_ok")},
+                    new String[]{"available_web_b_remove_b_ok_b_ok", getElements("available_web_b_remove_b_ok_b_ok")},
                     " on DELETE AVAILABLE WEB")) {
                 return false;
             }
