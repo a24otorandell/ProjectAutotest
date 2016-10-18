@@ -57,7 +57,7 @@ public class AT2TRFSU0002Locators {
         //edit
 
         elements.put("operational_ed_b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");
-        elements.put("operational_ed_check_box_active", "//*[contains(@id, 'pcgt1:sbc1::content')]");
+        elements.put("operational_ed_check_box_active","//*[contains(@id, 'pc1:pcgt1:sbc1::content')]");
         elements.put("operational_ed_lov_suplier_test", "//*[contains(@id, 'pcgt1:nomCortoId::lovIconId')]");
         elements.put("operational_ed_i_suplier_test", "//*[contains(@id, 'pcgt1:nomCortoId::content')]");
         elements.put("operational_ed_i_suplier_test_description", "//*[contains(@id, 'pcgt1:it2::content')]");
