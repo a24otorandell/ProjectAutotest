@@ -51,54 +51,19 @@ public class AT2TRFSU0010Test {
         }
         return false;
     }
-
     private boolean Transfer_service_type(TestDriver driver) {
 
-        if (!Add_service_type(driver)) {
-            return false;
-        }
-
-        if (!Search_service_type(driver)) {
-            return false;
-        }
-
-        if (!Edit_service_type(driver)) {
-            return false;
-        }
-
-        if (!QBE_service_type(driver)) {
-            return false;
-        }
-
-        if (!Other_actions_type(driver)) {
-            return false;
-        }
-
-        if (!Add_service_type_description(driver)) {
-            return false;
-        }
-
-        if (!Search_service_type_description(driver)) {
-            return false;
-        }
-
-        if (!Edit_service_type_description(driver)) {
-            return false;
-        }
-
-        if (!Other_actions_type_description(driver)) {
-            return false;
-        }
-
-        if (!Dele_type_description(driver)) {
-            return false;
-        }
-
-
-        if (!Delete_type(driver)) {
-            return false;
-        }
-
+        if (!Add_service_type(driver)) return false;
+        if (!Search_service_type(driver)) return false;
+        if (!Edit_service_type(driver)) return false;
+        if (!QBE_service_type(driver)) return false;
+        if (!Other_actions_type(driver)) return false;
+        if (!Add_service_type_description(driver)) return false;
+        if (!Search_service_type_description(driver)) return false;
+        if (!Edit_service_type_description(driver)) return false;
+        if (!Other_actions_type_description(driver)) return false;
+        if (!Dele_type_description(driver)) return false;
+        if (!Delete_type(driver)) return false;
         return true;
     }
 
