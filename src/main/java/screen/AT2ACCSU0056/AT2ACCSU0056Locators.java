@@ -27,7 +27,6 @@ public class AT2ACCSU0056Locators {
         elements.put("accommodation_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("accommodation_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("accommodation_e_result", "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[1]/td[1]");
-        //elements.put("accommodation_e_result_sis","//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr/td[1]");
         elements.put("accommodation_e_records", "//*[contains(@id, 'pc1:ot2')]");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");

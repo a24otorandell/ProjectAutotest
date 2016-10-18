@@ -82,7 +82,7 @@ public class AT2ACCOP0004Locators {
         elements.put("qbe_i_to", "//*[contains(@id, 'pc1:t1:id6::content')]");
         elements.put("qbe_i_telephone", "//*[contains(@id, 'afr_c17::content')]");
         elements.put("qbe_i_email", "//*[contains(@id, 'afr_c21::content')]");
-        elements.put("qbe_i_hash", "//*[contains(@id, 'afr_c21::content')]");
+        elements.put("qbe_i_hash", "//*[contains(@id, 'afr_c15::content')]");
         elements.put("qbe_i_expiry_date", "//*[contains(@id, 'afr_c3::content')]");
         elements.put("qbe_i_card_type", "//*[contains(@id, 'afr_c16::content')]");
         elements.put("qbe_i_card_holder_name", "//*[contains(@id, 'afr_c7::content')]");

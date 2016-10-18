@@ -62,43 +62,13 @@ public class AT2ACCOP0004Test {
             return false;
         }
         Functions.zoomOut(driver, 3);
-        if (!Functions.getText(driver, new String[]{"search_e_TO_result", getElements("search_e_TO_result")}, // element path
-                "TO_result", // key for data value (the name)
-                where)) {
-            return false;
-        } // where this operation occurs
         if (!Functions.getText(driver, new String[]{"search_e_interface_result", getElements("search_e_interface_result")}, // element path
                 "interface_result", // key for data value (the name)
                 where)) {
             return false;
         } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_email_result", getElements("search_e_email_result")}, // element path
-                "email_result", // key for data value (the name)
-                where)) {
-            return false;
-        } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_telephone_result", getElements("search_e_telephone_result")}, // element path
-                "telephone_result", // key for data value (the name)
-                where)) {
-            return false;
-        } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_ip_result", getElements("search_e_ip_result")}, // element path
-                "ip_result", // key for data value (the name)
-                where)) {
-            return false;
-        } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_hash_result", getElements("search_e_hash_result")}, // element path
-                "hash_result", // key for data value (the name)
-                where)) {
-            return false;
-        } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_card_holder_name_result", getElements("search_e_card_holder_name_result")}, // element path
-                "card_holder_name_result", // key for data value (the name)
-                where)) {
-            return false;
-        } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_amount_result", getElements("search_e_amount_result")}, // element path
-                "amount_result", // key for data value (the name)
+        if (!Functions.getText(driver, new String[]{"search_e_TO_result", getElements("search_e_TO_result")}, // element path
+                "TO_result", // key for data value (the name)
                 where)) {
             return false;
         } // where this operation occurs
@@ -107,18 +77,38 @@ public class AT2ACCOP0004Test {
                 where)) {
             return false;
         } // where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_TO_reference_result", getElements("search_e_TO_reference_result")}, // element path
+                "TO_reference_result", // key for data value (the name)
+                where)) {
+            return false;
+        } // where this operation occurs
         if (!Functions.getText(driver, new String[]{"search_e_partner_result", getElements("search_e_partner_result")}, // element path
                 "partner_result", // key for data value (the name)
                 where)) {
             return false;
         } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_creation_date_result", getElements("search_e_creation_date_result")}, // element path
-                "creation_date_result", // key for data value (the name)
+        if (!Functions.getText(driver, new String[]{"search_e_hotel_result", getElements("search_e_hotel_result")}, // element path
+                "hotel_result", // key for data value (the name)
+                where)) {
+            return false;
+        } //where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_destination_result", getElements("search_e_destination_result")}, // element path
+                "destination_result", // key for data value (the name)
+                where)) {
+            return false;
+        } //where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_ip_result", getElements("search_e_ip_result")}, // element path
+                "ip_result", // key for data value (the name)
                 where)) {
             return false;
         } // where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_confirmation_date_result", getElements("search_e_confirmation_date_result")}, // element path
-                "confirmation_date_result", // key for data value (the name)
+        if (!Functions.getText(driver, new String[]{"search_e_creation_user_result", getElements("search_e_creation_user_result")}, // element path
+                "creation_user_result", // key for data value (the name)
+                where)) {
+            return false;
+        } //where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_creation_date_result", getElements("search_e_creation_date_result")}, // element path
+                "creation_date_result", // key for data value (the name)
                 where)) {
             return false;
         } // where this operation occurs
@@ -132,21 +122,21 @@ public class AT2ACCOP0004Test {
                 where)) {
             return false;
         } //where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_hotel_result", getElements("search_e_hotel_result")}, // element path
-                "hotel_result", // key for data value (the name)
+        if (!Functions.getText(driver, new String[]{"search_e_telephone_result", getElements("search_e_telephone_result")}, // element path
+                "telephone_result", // key for data value (the name)
                 where)) {
             return false;
-        } //where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_destination_result", getElements("search_e_destination_result")}, // element path
-                "destination_result", // key for data value (the name)
+        } // where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_email_result", getElements("search_e_email_result")}, // element path
+                "email_result", // key for data value (the name)
                 where)) {
             return false;
-        } //where this operation occurs
-        if (!Functions.getText(driver, new String[]{"search_e_creation_user_result", getElements("search_e_creation_user_result")}, // element path
-                "creation_user_result", // key for data value (the name)
+        } // where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_hash_result", getElements("search_e_hash_result")}, // element path
+                "hash_result", // key for data value (the name)
                 where)) {
             return false;
-        } //where this operation occurs
+        } // where this operation occurs
         if (!Functions.getText(driver, new String[]{"search_e_expiry_date_result", getElements("search_e_expiry_date_result")}, // element path
                 "expiry_date_result", // key for data value (the name)
                 where)) {
@@ -157,6 +147,21 @@ public class AT2ACCOP0004Test {
                 where)) {
             return false;
         } //where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_card_holder_name_result", getElements("search_e_card_holder_name_result")}, // element path
+                "card_holder_name_result", // key for data value (the name)
+                where)) {
+            return false;
+        } // where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_confirmation_date_result", getElements("search_e_confirmation_date_result")}, // element path
+                "confirmation_date_result", // key for data value (the name)
+                where)) {
+            return false;
+        } // where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_e_amount_result", getElements("search_e_amount_result")}, // element path
+                "amount_result", // key for data value (the name)
+                where)) {
+            return false;
+        } // where this operation occurs
         if (!Functions.getText(driver, new String[]{"search_e_currency_result", getElements("search_e_currency_result")}, // element path
                 "currency_result", // key for data value (the name)
                 where)) {
@@ -323,8 +328,6 @@ public class AT2ACCOP0004Test {
                 "to_date_result", getData("to_date_result"), where)) {
             return false;
         }
-        //El código funciona pero por alguna razón el campo "Telephone" o el campo "Email", dependiendo de algún factor
-        //desconocido, se borran después de autocompletarse y antes de saltar al siguiente campo
         if (!Functions.insertInput(driver, new String[]{"qbe_i_telephone", getElements("qbe_i_telephone")},
                 "telephone_result", getData("telephone_result"), where)) {
             return false;
