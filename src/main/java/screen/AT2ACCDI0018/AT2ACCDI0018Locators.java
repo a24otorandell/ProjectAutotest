@@ -84,6 +84,7 @@ public class AT2ACCDI0018Locators {
         elements.put("add_ck_net_amount", "//*[contains(@id, 'pcgt2:sbc1::content')]");
         elements.put("add_b_save", "//*[contains(@id, 'pcgt2:btn_commitExit')]");
         //QBE
+        elements.put("qbe_b_reset", "//*[contains(@id, 't1::ch::t')]");
         elements.put("qbe_i_company", "//*[contains(@id, 'afr_c17::content')]");
         elements.put("qbe_i_office", "//*[contains(@id, 'afr_c18::content')]");
         elements.put("qbe_i_to", "//*[contains(@id, 't1:it27::content')]");
