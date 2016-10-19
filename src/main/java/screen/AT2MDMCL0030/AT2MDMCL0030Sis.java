@@ -10,7 +10,6 @@ import org.openqa.selenium.By;
  * @author otorandell on 29/12/2015.
  */
 public class AT2MDMCL0030Sis {
-
     protected AT2MDMCL0030Locators locators;
     protected AT2MDMCL0030Data data;
 
@@ -18,38 +17,30 @@ public class AT2MDMCL0030Sis {
         setData(new AT2MDMCL0030Data(enviroment));
         setLocators(new AT2MDMCL0030Locators(enviroment));
     }
-
     public AT2MDMCL0030Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMCL0030Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMCL0030Data getData() {
         return data;
     }
-
     public void setData(AT2MDMCL0030Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Client");
         driver.getTestdetails().setScreen("Partner agency parameters 2.0");
     }
-
     protected String getElements(String key) {
         return this.locators.getElements().get(key);
     }
-
     protected String getData(String key) {
         return this.data.getData().get(key);
     }
@@ -155,7 +146,6 @@ public class AT2MDMCL0030Sis {
         }
         return true;
     }
-
     protected boolean search(TestDriver driver) {
 
         try {
@@ -197,7 +187,6 @@ public class AT2MDMCL0030Sis {
         }
         return true;
     }
-
     protected boolean delete(TestDriver driver) {
 
         try {
@@ -223,7 +212,6 @@ public class AT2MDMCL0030Sis {
         Functions.break_time(driver, 2, 0);
         return true;
     }
-
     protected boolean reset(TestDriver driver) {
         if (driver.getDriver().findElements(By.xpath(recursiveXPaths.glass[1])).size() > 0) {
             if (driver.getDriver().findElements(By.xpath(getElements("alert_b_ok"))).size() > 0) {
@@ -251,7 +239,6 @@ public class AT2MDMCL0030Sis {
         }
         return true;
     }
-
     protected boolean qbe(TestDriver driver) {
         this.enabler(driver);
         driver.getReport().addHeader("QBE SEARCH RECORD:", 4, false);
@@ -290,7 +277,6 @@ public class AT2MDMCL0030Sis {
         }
         return true;
     }
-
     protected boolean detach(TestDriver driver) {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_n_records", getElements("search_n_records")},
@@ -305,8 +291,6 @@ public class AT2MDMCL0030Sis {
         }
         return true;
     }
-
-
     protected boolean enabler(TestDriver driver) {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")},
