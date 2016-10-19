@@ -61,7 +61,7 @@ public class AT2ACCSU0070Test {
         if (!searchFull(driver)) {
             return false;
         }
-        if (!checkRecord(driver, getData("ex_hotel_code"))) {
+        if (!checkRecord(driver)) {
             return false;
         }
         if (!cleanSearch(driver)) {
@@ -73,7 +73,7 @@ public class AT2ACCSU0070Test {
             return false;
         }
         Functions.break_time(driver, 10, 1000);
-        if (!checkRecord(driver, getData("hotel_code"))) {
+        if (!checkRecord(driver)) {
             return false;
         }
         if (!cleanSearch(driver)) {
@@ -85,7 +85,7 @@ public class AT2ACCSU0070Test {
             return false;
         }
         Functions.break_time(driver, 10, 1000);
-        if (!checkRecord(driver, "1")) {
+        if (!checkRecord(driver)) {
             return false;
         }
         if (!cleanSearch(driver)) {
@@ -97,7 +97,7 @@ public class AT2ACCSU0070Test {
             return false;
         }
         Functions.break_time(driver, 10, 1000);
-        if (!checkRecord(driver, getData("hotel_code"))) {
+        if (!checkRecord(driver)) {
             return false;
         }
         if (!cleanSearch(driver)) {
@@ -109,7 +109,7 @@ public class AT2ACCSU0070Test {
             return false;
         }
         Functions.break_time(driver, 10, 1000);
-        if (!checkRecord(driver, getData("hotel_code"))) {
+        if (!checkRecord(driver)) {
             return false;
         }
         if (!cleanSearch(driver)) {
@@ -125,7 +125,7 @@ public class AT2ACCSU0070Test {
             return false;
         }
         Functions.break_time(driver, 10, 1000);
-        if (!checkRecord(driver, "1")) {
+        if (!checkRecord(driver)) {
             return false;
         }
         //</editor-fold>
@@ -177,8 +177,8 @@ public class AT2ACCSU0070Test {
         String on = " On: Search by Hotel";
         if (!Functions.lovMultiSelectionByValue(driver,
                 new String[]{"search_lov_hotel", getElements("search_lov_hotel")},
-                "hotel_code", "472",
-                "hotel_desc", "VINCCI BOSC DE MAR",
+                "hotel_code", "1100",
+                "hotel_desc", "ESCORSO",
                 on)) {
             return false;
         }
@@ -196,8 +196,8 @@ public class AT2ACCSU0070Test {
         String on = " On: Search by Brand";
         if (!Functions.lovMultiSelectionByValue(driver,
                 new String[]{"search_lov_brand", getElements("search_lov_brand")},
-                "brand_code", "INDEPEND",
-                "brand_desc", "INDEPEND",
+                "brand_code", "MELHOT",
+                "brand_desc", "Melia Hotels Urbano",
                 on)) {
             return false;
         }
@@ -215,8 +215,8 @@ public class AT2ACCSU0070Test {
         String on = " On: Search by Cadena Hotel";
         if (!Functions.lovMultiSelectionByValue(driver,
                 new String[]{"search_lov_cadena_hotel", getElements("search_lov_cadena_hotel")},
-                "chain_code", "VINCC",
-                "chain_desc", "VINCCI HOTELES",
+                "chain_code", "CATA",
+                "chain_desc", "CATALONIA HOTELS",
                 on)) {
             return false;
         }
@@ -234,8 +234,8 @@ public class AT2ACCSU0070Test {
         String on = " On: Search by Exernal Hotel";
         if (!Functions.lovMultiSelectionByValue(driver,
                 new String[]{"search_lov_external_hotel", getElements("search_lov_external_hotel")},
-                "ex_hotel_code", "472",
-                "ex_hotel_desc", "Vincci Bosc de Mar",
+                "ex_hotel_code", "66512",
+                "ex_hotel_desc", "St Olaves",
                 on)) {
             return false;
         }
@@ -280,7 +280,7 @@ public class AT2ACCSU0070Test {
         return true;
     }
 
-    protected boolean checkRecord(TestDriver driver, String value) {
+    protected boolean checkRecord(TestDriver driver) {
         String on = " On: Check record";
         if (!Functions.getText(driver,
                 new String[]{"hotel_desc_e_num_records", getElements("hotel_desc_e_num_records")},
