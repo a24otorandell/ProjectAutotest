@@ -14,40 +14,31 @@ public class AT2ACCSU0003Test {
     protected AT2ACCSU0003Data data;
 
     public AT2ACCSU0003Test() {
-
     }
-
     public AT2ACCSU0003Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0003Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0003Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0003Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Commissions");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -161,7 +152,6 @@ public class AT2ACCSU0003Test {
         }
         return true;
     }
-
     private boolean search_commisions(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -250,7 +240,6 @@ public class AT2ACCSU0003Test {
         }
         return true;
     }
-
     private boolean interaction_edit_commisions(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDITION";
@@ -350,7 +339,6 @@ public class AT2ACCSU0003Test {
         }
         return true;
     }
-
     private boolean qbe_commisions(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -420,7 +408,6 @@ public class AT2ACCSU0003Test {
         }
         return true;
     }
-
     private boolean others_actions_commisions(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA";
@@ -442,7 +429,6 @@ public class AT2ACCSU0003Test {
         }
         return true;
     }
-
     private boolean delete_commisions(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
