@@ -1,32 +1,31 @@
-package screen.AT2ACTSU0037;
+package screen.AT2ACCDI0029;
 
 import core.TestDriver.TestDriver;
-import org.openqa.selenium.WebDriver;
 import screen.AT2Test;
 
 import java.util.Map;
 
 /**
- * Created by aibanez on 19/10/2016.
+ * Created by aibanez on 18/10/2016.
  */
-@SuppressWarnings({"StatementWithEmptyBody", "AssignmentToCollectionOrArrayFieldFromParameter"})
-public class AT2ACTSU0037Manager implements AT2Test {
-    AT2ACTSU0037Test test;
-    AT2ACTSU0037Sis sis;
+public class AT2ACCDI0029Manager implements AT2Test {
+    AT2ACCDI0029Sis sis;
+    AT2ACCDI0029Test test;
     String[] procedure;
     String entorno;
 
-    public AT2ACTSU0037Manager(String enviroment) {
+
+    public AT2ACCDI0029Manager(String enviroment) {
         if (enviroment.equalsIgnoreCase("test")) {
-            entorno="test";
-            setTest(new AT2ACTSU0037Test());
-            this.test.setData(new AT2ACTSU0037Data(enviroment));
-            this.test.setLocators(new AT2ACTSU0037Locators(enviroment));
+            entorno = "test";
+            setTest(new AT2ACCDI0029Test());
+            this.test.setData(new AT2ACCDI0029Data(enviroment));
+            this.test.setLocators(new AT2ACCDI0029Locators(enviroment));
         } else {
-            entorno="sis";
-            setTestSis(new AT2ACTSU0037Sis());
-            this.sis.setData(new AT2ACTSU0037Data(enviroment));
-            this.sis.setLocators(new AT2ACTSU0037Locators(enviroment));
+            entorno = "sis";
+            setTestSis(new AT2ACCDI0029Sis());
+            this.sis.setData(new AT2ACCDI0029Data(enviroment));
+            this.sis.setLocators(new AT2ACCDI0029Locators(enviroment));
         }
     }
 
@@ -38,27 +37,27 @@ public class AT2ACTSU0037Manager implements AT2Test {
         this.procedure = procedure;
     }
 
-    public AT2ACTSU0037Test getTest() {
+    public AT2ACCDI0029Test getTest() {
         return test;
     }
 
-    public void setTest(AT2ACTSU0037Test test) {
+    public void setTest(AT2ACCDI0029Test test) {
         this.test = test;
     }
 
-    public AT2ACTSU0037Sis getTestSis() {
+    public AT2ACCDI0029Sis getTestSis() {
         return sis;
     }
 
-    public void setTestSis(AT2ACTSU0037Sis sis) {
+    public void setTestSis(AT2ACCDI0029Sis sis) {
         this.sis = sis;
     }
 
 
     public Map<String, String> getData() {
-        if(entorno.equalsIgnoreCase("test")){
+        if (entorno.equalsIgnoreCase("test")) {
             return this.test.getData().getData();
-        }else{
+        } else {
             return this.sis.getData().getData();
         }
     }
