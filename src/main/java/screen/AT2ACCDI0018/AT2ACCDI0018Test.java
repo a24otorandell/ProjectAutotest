@@ -217,7 +217,6 @@ public class AT2ACCDI0018Test {
         }
         return true;
     }
-
     private boolean search_cancellation(TestDriver driver, boolean check) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
