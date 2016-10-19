@@ -436,7 +436,7 @@ public class AT2ACCDI0018Sis {
                 "time", "" + 2, where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 800);
+        Functions.break_time(driver, 30, 1200);
         if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
                 "amount_cost", "" + 2, where)) {
             return false;
