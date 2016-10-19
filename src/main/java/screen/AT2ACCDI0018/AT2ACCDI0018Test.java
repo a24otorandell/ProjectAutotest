@@ -24,47 +24,41 @@ public class AT2ACCDI0018Test {
     public AT2ACCDI0018Test() {
 
     }
-
     public AT2ACCDI0018Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCDI0018Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCDI0018Data getData() {
         return data;
     }
-
     public void setData(AT2ACCDI0018Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodation");
         driver.getTestdetails().setSubmenu("Distribution");
         driver.getTestdetails().setScreen("Cancellation Policies");
 
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
 
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_record_cancellation(driver)) return false;
-        if (!search_cancellation(driver)) return false;
+        if (!search_cancellation(driver, true)) return false;
+        if (!qbe_cancellation(driver)) return false;
         if (!interaction_edit_cancellation(driver)) return false;
+        if (!search_cancellation(driver, false)) return false;
         if (!qbe_cancellation(driver)) return false;
         if (!others_actions_cancellation(driver)) return false;
         if (!delete_cancellation(driver)) return false;
@@ -95,16 +89,6 @@ public class AT2ACCDI0018Test {
                 where)) {
             return false;
         }
-      /*  if (!Functions.createLov(driver,
-                new String[]{"add_lov_company", getElements("add_lov_company")}, // b_lov
-                new String[]{"add_i_company", getElements("add_i_company")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "company", //Data name
-                where)) {
-            return false;
-        }*/
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
                 new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
@@ -170,7 +154,12 @@ public class AT2ACCDI0018Test {
                 "cost", "" + 1, where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
+        if (!Functions.getText(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")}, // element path
+                "amount_cost", // key for data value (the name)
+                where)) {
+            return false;
+        }
+        /*if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
                 "amount_cost", ""+1, where)) {
             return false;
         }*/
@@ -178,11 +167,16 @@ public class AT2ACCDI0018Test {
                 "extra", "" + 1, where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
+        /*if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
                 "amount_extra", ""+1, where)) {
             return false;
         }*/
-/*        if (!Functions.createLov(driver,
+        if (!Functions.getText(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")}, // element path
+                "amount_extra", // key for data value (the name)
+                where)) {
+            return false;
+        }
+        /*if (!Functions.createLov(driver,
                 new String[]{"add_lov_currency", getElements("add_lov_currency")}, // b_lov
                 new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
@@ -192,6 +186,11 @@ public class AT2ACCDI0018Test {
                 where)) {
             return false;
         }*/
+        if (!Functions.getText(driver, new String[]{"add_i_currency", getElements("add_i_currency")}, // element path
+                "currency", // key for data value (the name)
+                where)) {
+            return false;
+        }
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_application_type", getElements("add_sl_application_type")},
                 "Stay", "application_type", where)) {
@@ -202,8 +201,12 @@ public class AT2ACCDI0018Test {
                 "Only Generic.", "application_cost", where)) {
             return false;
         }
-        if (!Functions.checkboxValue(driver,
+        /*if (!Functions.checkboxValue(driver,
                 getElements("add_ck_net_amount"), "visible", true, where)) {
+            return false;
+        }*/
+        if (!Functions.checkboxValue(driver,
+                getElements("add_ck_net_amount"), "net_amount", true, true, where)) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -215,10 +218,16 @@ public class AT2ACCDI0018Test {
         return true;
     }
 
-    private boolean search_cancellation(TestDriver driver) {
+    private boolean search_cancellation(TestDriver driver, boolean check) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
         Functions.break_time(driver, 30, 500);
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"qbe_b_reset", getElements("qbe_b_reset")}, //search button
+                new String[]{"cancellation_e_result", getElements("cancellation_e_result")}, //result element
+                where)) {
+            return false;
+        }
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_company", getElements("search_lov_company")}, //LoV button
                 new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
@@ -288,19 +297,23 @@ public class AT2ACCDI0018Test {
                 "cost", getData("cost"), where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"search_i_amount_cost", getElements("search_i_amount_cost")},
+        if (!Functions.insertInput(driver, new String[]{"search_i_amount_cost", getElements("search_i_amount_cost")},
                 "amount_cost", getData("amount_cost"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.insertInput(driver, new String[]{"search_i_extra", getElements("search_i_extra")},
                 "extra", getData("extra"), where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"search_i_amount_extra", getElements("search_i_amount_extra")},
+        if (!Functions.insertInput(driver, new String[]{"search_i_amount_extra", getElements("search_i_amount_extra")},
                 "amount_extra", getData("amount_extra"), where)) {
             return false;
-        }*/
-/*        if (!Functions.createLovByValue(driver,
+        }
+        if (!Functions.insertInput(driver, new String[]{"search_i_currency", getElements("search_i_currency")},
+                "currency", getData("currency"), where)) {
+            return false;
+        }
+        /*if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_currency", getElements("search_lov_currency")}, //LoV button
                 new String[]{"search_i_currency", getElements("search_i_currency")}, //external LoV input
                 new String[]{"search_lov_currency_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
@@ -320,7 +333,7 @@ public class AT2ACCDI0018Test {
             return false;
         }
         if (!Functions.checkboxValue(driver,
-                getElements("search_ck_net_amount"), getData("net_amount"), true, where)) {
+                getElements("search_ck_net_amount"), getData("net_amount"), check, where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,
@@ -331,7 +344,6 @@ public class AT2ACCDI0018Test {
         }
         return true;
     }
-
     private boolean interaction_edit_cancellation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -345,9 +357,9 @@ public class AT2ACCDI0018Test {
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_company", getElements("add_lov_company")}, //LoV button
                 new String[]{"add_i_companyy", getElements("add_i_company")}, //external LoV input
-                new String[]{"search_lov_company_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"edit_lov_company_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
-                "BG0", // value to search
+                "CL1", // value to search
                 "company", //name of the data
                 where)) {
             return false;
@@ -356,7 +368,7 @@ public class AT2ACCDI0018Test {
                 new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
                 new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "office", //Data name
                 where)) {
@@ -366,9 +378,14 @@ public class AT2ACCDI0018Test {
                 new String[]{"add_lov_to", getElements("add_lov_to")}, // b_lov
                 new String[]{"add_i_to", getElements("add_i_to")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "to", //Data name
+                where)) {
+            return false;
+        }
+        if (!Functions.getText(driver, new String[]{"add_i_to_desc", getElements("add_i_to_desc")}, // element path
+                "to_desc", // key for data value (the name)
                 where)) {
             return false;
         }
@@ -401,30 +418,31 @@ public class AT2ACCDI0018Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_days", getElements("add_i_days")},
-                "days", "2", where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"add_i_time", getElements("add_i_time")},
-                "time", "2", where)) {
+                "days", "" + 2, where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_cost", getElements("add_i_cost")},
-                "cost", "2", where)) {
+                "cost", "", where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
-                "amount_cost", "amount_cost", where)) {
-            return false;
-        }*/
         if (!Functions.insertInput(driver, new String[]{"add_i_extra", getElements("add_i_extra")},
-                "extra", "2", where)) {
+                "extra", "", where)) {
             return false;
         }
-       /* if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
-                "amount_extra", "amount_extra", where)) {
+        if (!Functions.insertInput(driver, new String[]{"add_i_time", getElements("add_i_time")},
+                "time", "" + 2, where)) {
             return false;
-        }*/
-        /*if (!Functions.createLov(driver,
+        }
+        Functions.break_time(driver, 30, 800);
+        if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
+                "amount_cost", "" + 2, where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
+                "amount_extra", "" + 2, where)) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_currency", getElements("add_lov_currency")}, // b_lov
                 new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
@@ -433,21 +451,25 @@ public class AT2ACCDI0018Test {
                 "currency", //Data name
                 where)) {
             return false;
-        }*/
+        }
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_application_type", getElements("add_sl_application_type")},
-                "Stay", "appication_type", where)) {
+                "First night", "application_type", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_application_cost", getElements("add_sl_application_cost")},
-                "Only Generic.", "appication_cost", where)) {
+                "Contract+Generic.", "application_cost", where)) {
             return false;
         }
+        /*if (!Functions.checkboxValue(driver,
+                getElements("add_ck_net_amount"), "net_amount", false, where)) {
+            return false;
+        }*/
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_net_amount"), "net_amount", true, where)) {
+                getElements("add_ck_net_amount"), "net_amount", false, true, where)) {
             return false;
-        }
+        }//where
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -456,7 +478,6 @@ public class AT2ACCDI0018Test {
         }
         return true;
     }
-
     private boolean qbe_cancellation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -519,35 +540,35 @@ public class AT2ACCDI0018Test {
                 "cost", getData("cost"), where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"qbe_i_amount_cost", getElements("qbe_i_amount_cost")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_amount_cost", getElements("qbe_i_amount_cost")},
                 "amount_cost", getData("amount_cost"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_extra", getElements("qbe_i_extra")},
                 "extra", getData("extra"), where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"qbe_i_amount_extra", getElements("qbe_i_amount_extra")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_amount_extra", getElements("qbe_i_amount_extra")},
                 "amount_extra", getData("amount_extra"), where)) {
             return false;
-        }*/
-        /*if (!Functions.insertInput(driver, new String[]{"qbe_i_currency", getElements("qbe_i_currency")},
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_currency", getElements("qbe_i_currency")},
                 "currency", getData("currency"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_application_type", getElements("qbe_sl_application_type")},
-                "Stay", "application_type", where)) {
+                getData("application_type"), "application_type", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_application_cost", getElements("qbe_sl_application_cost")},
-                "Only Generic.", "application_cost", where)) {
+                getData("application_cost"), "application_cost", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_net_amount", getElements("qbe_sl_net_amount")},
-                "Yes", "net_amount", where)) {
+                getData("net_amount"), "net_amount", where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,
@@ -556,9 +577,14 @@ public class AT2ACCDI0018Test {
                 where)) {
             return false;
         }
+/*        if (!Functions.checkClick(driver,
+                new String[]{"cancellation_b_qbe", getElements("cancellation_b_qbe")}, //element to click
+                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //element expected to appear
+                where)) {
+            return false;
+        }*/
         return true;
     }
-
     private boolean others_actions_cancellation(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA";
@@ -580,7 +606,6 @@ public class AT2ACCDI0018Test {
         }
         return true;
     }
-
     private boolean delete_cancellation(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
@@ -592,5 +617,4 @@ public class AT2ACCDI0018Test {
         }
         return true;
     }
-
 }
