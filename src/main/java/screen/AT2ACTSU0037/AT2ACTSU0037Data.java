@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by acarrillo on 09/08/2016.
+ * Created by aibanez on 19/10/2016.
  */
 public class AT2ACTSU0037Data {
     Map<String, String> data = new HashMap<>();

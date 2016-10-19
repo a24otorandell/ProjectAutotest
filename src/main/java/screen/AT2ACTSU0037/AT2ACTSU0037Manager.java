@@ -7,7 +7,7 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * @author acarrillo on 09/08/2016.
+ * Created by aibanez on 19/10/2016.
  */
 @SuppressWarnings({"StatementWithEmptyBody", "AssignmentToCollectionOrArrayFieldFromParameter"})
 public class AT2ACTSU0037Manager implements AT2Test {
