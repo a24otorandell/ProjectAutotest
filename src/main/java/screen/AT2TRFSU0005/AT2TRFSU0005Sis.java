@@ -136,7 +136,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean searchGA(TestDriver driver) {
         driver.getReport().addHeader("On Grouping Area - SEARCH RECORD: ", 3, true);
         try {
@@ -171,7 +170,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean qbeGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - QBE SEARCH RECORD:", 4, false);
         if (!Functions.clickQbE(driver,
@@ -202,7 +200,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean auditDetachGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - Data History & Detach table:", 4, false);
         if (!Functions.checkClickByAbsence(driver,
@@ -226,7 +223,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean deleteGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - DELETE RECORD:", 4, true);
         try {
@@ -254,7 +250,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     //</editor-fold>
     //<editor-fold desc="Area Block">
     protected boolean recordInteractionA(TestDriver driver, boolean type) {
@@ -298,7 +293,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean qbeA(TestDriver driver, boolean run) {
         String update = "";
         if (run) {
@@ -333,7 +327,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean auditDetachA(TestDriver driver) {
         driver.getReport().addHeader("Data History & Detach table:", 4, false);
         if (!Functions.checkClickByAbsence(driver,
@@ -357,7 +350,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     protected boolean deleteA(TestDriver driver) {
         driver.getReport().addHeader("Areas - DELETE RECORD:", 4, true);
         try {
@@ -385,7 +377,6 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-
     //</editor-fold>
     protected boolean enabler(TestDriver driver) {
         Functions.break_time(driver, 1, 0);
