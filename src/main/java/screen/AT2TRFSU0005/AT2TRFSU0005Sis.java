@@ -45,25 +45,12 @@ public class AT2TRFSU0005Sis {
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
-
     protected boolean testCSED(TestDriver driver) {
-        Functions.zoomOut(driver);
+        Functions.zoomOut(driver, 2);
         if (!recordInteractionGA(driver, true)) {
             return false;
         }
         if (!searchGA(driver)) {
-            return false;
-        }
-        if (!recordInteractionGA(driver, false)) {
-            return false;
-        }
-        if (!enabler(driver)) {
-            return false;
-        }
-        if (!qbeGA(driver)) {
-            return false;
-        }
-        if (!auditDetachGA(driver)) {
             return false;
         }
         if (!recordInteractionA(driver, true)) {
@@ -84,12 +71,25 @@ public class AT2TRFSU0005Sis {
         if (!deleteA(driver)) {
             return false;
         }
+        if (!recordInteractionGA(driver, false)) {
+            return false;
+        }
+        if (!enabler(driver)) {
+            return false;
+        }
+        if (!qbeGA(driver)) {
+            return false;
+        }
+        if (!auditDetachGA(driver)) {
+            return false;
+        }
         if (!deleteGA(driver)) {
             return false;
         }
         return false;
     }
 
+    //<editor-fold desc="Grouping Area">
     protected boolean recordInteractionGA(TestDriver driver, boolean type) {
         String on, update = "";
         if (type) {
@@ -128,7 +128,7 @@ public class AT2TRFSU0005Sis {
                 on)) {
             return false;
         }
-        if (!Functions.checkClick(driver,
+        if (!Functions.checkClickByAbsence(driver,
                 new String[]{"ga_records_b_add_b_save", getElements("ga_records_b_add_b_save")},
                 recursiveXPaths.glass,
                 on)) {
@@ -136,8 +136,9 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
+
     protected boolean searchGA(TestDriver driver) {
-        driver.getReport().addHeader("SEARCH RECORD:", 3, true);
+        driver.getReport().addHeader("On Grouping Area - SEARCH RECORD: ", 3, true);
         try {
             Functions.break_time(driver, 1, 0);
             if (!Functions.insertInput(driver,
@@ -170,6 +171,7 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
+
     protected boolean qbeGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - QBE SEARCH RECORD:", 4, false);
         if (!Functions.clickQbE(driver,
@@ -200,6 +202,7 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
+
     protected boolean auditDetachGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - Data History & Detach table:", 4, false);
         if (!Functions.checkClickByAbsence(driver,
@@ -217,28 +220,31 @@ public class AT2TRFSU0005Sis {
         }
         if (!Functions.detachTable(driver,
                 new String[]{"ga_records_b_detach", getElements("ga_records_b_detach")},
-                true,
+                false,
                 " on Detach table")) {
             return false;
         }
         return true;
     }
+
     protected boolean deleteGA(TestDriver driver) {
         driver.getReport().addHeader("Grouping area - DELETE RECORD:", 4, true);
         try {
             if (!Functions.simpleClick(driver,
-                    new String[]{"search_e_result", getElements("search_e_result")},
+                    new String[]{"ga_records_e_record", getElements("ga_records_e_record")},
                     " on DELETE")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClick(driver,
                     new String[]{"ga_records_b_delete", getElements("ga_records_b_delete")},
+                    new String[]{"ga_records_b_delete_b_ok", getElements("ga_records_b_delete_b_ok")},
                     " on DELETE")) {
                 return false;
             }
             Functions.break_time(driver, 1, 0);
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClickByAbsence(driver,
                     new String[]{"ga_records_b_delete_b_ok", getElements("ga_records_b_delete_b_ok")},
+                    recursiveXPaths.glass,
                     " on DELETE")) {
                 return false;
             }
@@ -248,7 +254,9 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
-    ////////////\\\\\\\\\\\\\\
+
+    //</editor-fold>
+    //<editor-fold desc="Area Block">
     protected boolean recordInteractionA(TestDriver driver, boolean type) {
         String on, update = "";
         if (type) {
@@ -290,6 +298,7 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
+
     protected boolean qbeA(TestDriver driver, boolean run) {
         String update = "";
         if (run) {
@@ -324,6 +333,7 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
+
     protected boolean auditDetachA(TestDriver driver) {
         driver.getReport().addHeader("Data History & Detach table:", 4, false);
         if (!Functions.checkClickByAbsence(driver,
@@ -347,6 +357,7 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
+
     protected boolean deleteA(TestDriver driver) {
         driver.getReport().addHeader("Areas - DELETE RECORD:", 4, true);
         try {
@@ -355,13 +366,14 @@ public class AT2TRFSU0005Sis {
                     " on DELETE")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.checkClick(driver,
                     new String[]{"area_records_b_delete", getElements("area_records_b_delete")},
+                    new String[]{"area_records_b_delete_b_ok", getElements("area_records_b_delete_b_ok")},
                     " on DELETE")) {
                 return false;
             }
             Functions.break_time(driver, 1, 0);
-            if (!Functions.checkClick(driver,
+            if (!Functions.checkClickByAbsence(driver,
                     new String[]{"area_records_b_delete_b_ok", getElements("area_records_b_delete_b_ok")},
                     recursiveXPaths.glass,
                     " on DELETE")) {
@@ -373,6 +385,8 @@ public class AT2TRFSU0005Sis {
         }
         return true;
     }
+
+    //</editor-fold>
     protected boolean enabler(TestDriver driver) {
         Functions.break_time(driver, 1, 0);
         if (!Functions.checkClickByAbsence(driver,
