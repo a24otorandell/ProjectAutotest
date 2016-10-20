@@ -14,7 +14,6 @@ import java.util.Random;
 public class AT2MDMCL0024Sis {
     protected AT2MDMCL0024Locators locators;
     protected AT2MDMCL0024Data data;
-    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
     public AT2MDMCL0024Sis() {
     }
     public AT2MDMCL0024Locators getLocators() {
@@ -64,7 +63,6 @@ public class AT2MDMCL0024Sis {
                 where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_short", getElements("add_lov_short")}, // b_lov
                 new String[]{"add_i_short", getElements("add_i_short")}, // i_lov
@@ -109,7 +107,7 @@ public class AT2MDMCL0024Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commision_margin", getElements("add_i_commision_margin")},
-                "commision_margin", "" + randomNumber, where)) {
+                "commision_margin", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -251,7 +249,7 @@ public class AT2MDMCL0024Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commision_margin", getElements("add_i_commision_margin")},
-                "commision_margin", "" + randomNumber, where)) {
+                "commision_margin", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -359,7 +357,6 @@ public class AT2MDMCL0024Sis {
                 where)) {
             return false;
         }
-
         driver.getReport().addHeader("OTHER DETACH", 3, false);
         where = " on OTHER DETACH";
         if (!Functions.detachTable(driver,

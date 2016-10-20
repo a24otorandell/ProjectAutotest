@@ -22,49 +22,35 @@ import java.util.Random;
 public class AT2ACCDI0018Test {
     protected AT2ACCDI0018Locators locators;
     protected AT2ACCDI0018Data data;
-    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
-    double randomNumber2 = (double) (new Random().nextInt(1001)) / 100;
+
     public AT2ACCDI0018Test() {
 
     }
-
-    public static double getRandom(Double valorMinimo, Double valorMaximo) {
-        Random rand = new Random();
-        return valorMinimo + (valorMaximo - valorMinimo) * rand.nextDouble();
-    }
-
     public AT2ACCDI0018Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCDI0018Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCDI0018Data getData() {
         return data;
     }
-
     public void setData(AT2ACCDI0018Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodation");
         driver.getTestdetails().setSubmenu("Distribution");
         driver.getTestdetails().setScreen("Cancellation Policies");
 
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -167,7 +153,7 @@ public class AT2ACCDI0018Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_cost", getElements("add_i_cost")},
-                "cost", "" + randomNumber, where)) {
+                "cost", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
         if (!Functions.getText(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")}, // element path
@@ -181,7 +167,7 @@ public class AT2ACCDI0018Test {
         }*/
 
         if (!Functions.insertInput(driver, new String[]{"add_i_extra", getElements("add_i_extra")},
-                "extra", "" + randomNumber2, where)) {
+                "extra", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
         /*if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
@@ -450,15 +436,23 @@ public class AT2ACCDI0018Test {
                 "time", "" + 2, where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 800);
+        Functions.break_time(driver, 30, 1200);
         if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
+                "amount_cost", DataGenerator.randomFloat(1,2), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
+                "amount_extra", DataGenerator.randomFloat(1,2), where)) {
+            return false;
+        }
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
                 "amount_cost", "" + randomNumber, where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
                 "amount_extra", "" + randomNumber2, where)) {
             return false;
-        }
+        }*/
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_currency", getElements("add_lov_currency")}, // b_lov
                 new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov

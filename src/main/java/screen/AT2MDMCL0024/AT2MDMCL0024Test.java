@@ -16,7 +16,7 @@ import java.util.Random;
 public class AT2MDMCL0024Test {
     protected AT2MDMCL0024Locators locators;
     protected AT2MDMCL0024Data data;
-    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
+
     public AT2MDMCL0024Test() {
     }
     public AT2MDMCL0024Locators getLocators() {
@@ -110,7 +110,7 @@ public class AT2MDMCL0024Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commision_margin", getElements("add_i_commision_margin")},
-                "commision_margin", "" + randomNumber, where)) {
+                "commision_margin", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -252,7 +252,7 @@ public class AT2MDMCL0024Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commision_margin", getElements("add_i_commision_margin")},
-                "commision_margin", "" + randomNumber, where)) {
+                "commision_margin", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
