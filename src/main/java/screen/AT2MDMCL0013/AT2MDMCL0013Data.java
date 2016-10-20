@@ -14,7 +14,7 @@ public class AT2MDMCL0013Data {
     DataHarvester harvester;
 
     public AT2MDMCL0013Data(String enviroment) {
-        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCSU0075DataValues.txt");
+        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2MDMCL0013DataValues.txt");
         setData();
     }
 
