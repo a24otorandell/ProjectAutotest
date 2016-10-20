@@ -134,6 +134,7 @@ public class AT2ACCSU0005Sis {
                 " on EDIT")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.createLov(driver,
                 new String[]{"multi_lenguaje_ed_lov_lenguaje_code",getElements("multi_lenguaje_ed_lov_lenguaje_code")}, // b_lov
                 new String[]{"multi_lenguaje_ed_i_lenguaje_code",getElements("multi_lenguaje_ed_i_lenguaje_code")}, // i_lov

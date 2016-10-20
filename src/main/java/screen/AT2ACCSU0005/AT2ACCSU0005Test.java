@@ -126,7 +126,7 @@ public class AT2ACCSU0005Test {
     private boolean Multi_lenguaje_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN SERVICE AUTORIZATION",3,false);
 
-        Functions.break_time(driver,6,500);
+        Functions.break_time(driver,10,500);
         if(!Functions.checkClick(driver,
                 new String[]{"multi_lenguaje_ed_b_edit",getElements("multi_lenguaje_ed_b_edit")}, //element to click
                 new String[]{"multi_lenguaje_ed_lov_lenguaje_code",getElements("multi_lenguaje_ed_lov_lenguaje_code")}, //element expected to appear
@@ -134,6 +134,7 @@ public class AT2ACCSU0005Test {
                 " on EDIT")){
             return false;
         }
+        Functions.break_time(driver,10,500);
         if(!Functions.createLov(driver,
                 new String[]{"multi_lenguaje_ed_lov_lenguaje_code",getElements("multi_lenguaje_ed_lov_lenguaje_code")}, // b_lov
                 new String[]{"multi_lenguaje_ed_i_lenguaje_code",getElements("multi_lenguaje_ed_i_lenguaje_code")}, // i_lov
