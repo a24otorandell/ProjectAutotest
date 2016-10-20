@@ -213,10 +213,11 @@ public class AT2ACCSU0035Sis {
                 where)){
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"add_i_description2", getElements("add_i_description2")},
-                "description2", " ", where)) {
+        if (!Functions.getText(driver, new String[]{"add_i_description2", getElements("add_i_description2")}, // element path
+                "description2", // key for data value (the name)
+                where)) {
             return false;
-        }*/
+        }
         if (!Functions.insertInput(driver, new String[]{"add_i_purchase_percentage", getElements("add_i_purchase_percentage")},
                 "purchase_percentage", "1", where)) {
             return false;
@@ -304,10 +305,11 @@ public class AT2ACCSU0035Sis {
                 where)){
             return false;
         }
- /*       if (!Functions.insertInput(driver, new String[]{"add_i_description2", getElements("add_i_description2")},
-                "description2", "description2", where)) {
+        if (!Functions.getText(driver, new String[]{"add_i_description2", getElements("add_i_description2")}, // element path
+                "description2", // key for data value (the name)
+                where)) {
             return false;
-        }*/
+        }
         if (!Functions.insertInput(driver, new String[]{"add_i_purchase_percentage", getElements("add_i_purchase_percentage")},
                 "purchase_percentage", "2", where)) {
             return false;
@@ -348,7 +350,6 @@ public class AT2ACCSU0035Sis {
         return true;
     }
     private boolean qbe_taxes(TestDriver driver) {
-
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         if (!Functions.clickSearchAndResult(driver,
@@ -383,10 +384,10 @@ public class AT2ACCSU0035Sis {
                 "fiscal_zone", getData("fiscal_zone"), where)) {
             return false;
         }
-       /* if (!Functions.insertInput(driver, new String[]{"qbe_i_description2", getElements("qbe_i_description2")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_description2", getElements("qbe_i_description2")},
                 "description2", getData("description2"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_purchase_percentage", getElements("qbe_i_purchase_percentage")},
                 "purchase_percentage", getData("purchase_percentage"), where)) {
             return false;
