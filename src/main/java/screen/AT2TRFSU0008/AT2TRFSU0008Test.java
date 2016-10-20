@@ -255,7 +255,6 @@ public class AT2TRFSU0008Test {
         }
         return true;
     }
-
     private boolean Other_actions(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN ROUTES BY DEFAULT", 3, false);
@@ -278,7 +277,6 @@ public class AT2TRFSU0008Test {
 
         return true;
     }
-
     private boolean Qbe_routes(TestDriver driver) {
 
         driver.getReport().addHeader("QBE  IN ROUTES BY DEFAULT", 3, false);
@@ -334,7 +332,6 @@ public class AT2TRFSU0008Test {
         }
         return true;
     }
-
     private boolean Edition_routes(TestDriver driver) {
 
         driver.getReport().addHeader("EDITION IN ROUTES BY DEFAULT", 3, false);
@@ -390,7 +387,6 @@ public class AT2TRFSU0008Test {
 
         return true;
     }
-
     private boolean Search_routes(TestDriver driver) {
 
         driver.getReport().addHeader("ADVANCED SEARCH IN OPERATIONAL VEHICLES  ", 3, false);
@@ -424,7 +420,6 @@ public class AT2TRFSU0008Test {
 
         return true;
     }
-
     private boolean Add_routes(TestDriver driver) {
 
         driver.getReport().addHeader("ADD IN ROUTES BY DEFAULT", 3, false);

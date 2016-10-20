@@ -227,12 +227,12 @@ public class AT2MDMOR0029Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
-                "from",DataGenerator.getRelativeDateToday("MM/dd/yyyy",0,DataGenerator.random(6,5),0),"on EDIT")){
+                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(6,5),0),"on EDIT")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_fate_to", getElements("service_authorization_ed_i_apply_fate_to")},
-                "to",DataGenerator.getRelativeDateToday("MM/dd/yyyy",0,DataGenerator.random(6,10),0),"on EDIT")){
+                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(6,10),0),"on EDIT")){
             return false;
         }
 
@@ -371,12 +371,12 @@ public class AT2MDMOR0029Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_add_i_apply_date_from", getElements("service_authorization_add_i_apply_date_from")},
-                "from",DataGenerator.getToday(driver,"MM/dd/yyyy"),"on ADD")){
+                "from",DataGenerator.getToday(driver,"dd/MM/yyyy"),"on ADD")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_add_i_apply_fate_to", getElements("service_authorization_add_i_apply_fate_to")},
-                "to",DataGenerator.getToday(driver,"MM/dd/yyyy"),"on ADD")){
+                "to",DataGenerator.getToday(driver,"dd/MM/yyyy"),"on ADD")){
             return false;
         }
 

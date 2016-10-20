@@ -348,6 +348,7 @@ public class AT2TRFSU0016Sis {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,8,500);
         if (!Functions.createLov(driver,
                 new String[]{"aditional_add_lov_suplements_type", getElements("aditional_add_lov_suplements_type")}, // b_lov
                 new String[]{"aditional_add_i_suplements_type", getElements("aditional_add_i_suplements_type")}, // i_lov
