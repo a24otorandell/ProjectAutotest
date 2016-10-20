@@ -17,39 +17,31 @@ public class AT2MDMOR0012Test {
     public AT2MDMOR0012Test (){
 
     }
-
     public AT2MDMOR0012Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2MDMOR0012Locators locators){
         this.locators = locators;
     }
-
     public AT2MDMOR0012Data getData (){
         return data;
     }
-
     public void setData (AT2MDMOR0012Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -101,7 +93,6 @@ public class AT2MDMOR0012Test {
 
         return true;
     }
-
     private boolean Multi_lenguaje_delete (TestDriver driver){
         driver.getReport().addHeader("DELETE IN MULTI LENGUAJES",3,false);
 
@@ -116,7 +107,6 @@ public class AT2MDMOR0012Test {
 
         return true;
     }
-
     private boolean Multi_lenguaje_other_actions (TestDriver driver){
         driver.getReport().addHeader("OTHER ACTIONS IN MULTI LENGUAJE",3,false);
 
@@ -129,7 +119,6 @@ public class AT2MDMOR0012Test {
 
         return true;
     }
-
     private boolean Multi_legunaje_edit (TestDriver driver){
         driver.getReport().addHeader("EDIT IN MULTI LENGUAJE",3,false);
         Functions.break_time(driver,6,500);
@@ -159,7 +148,6 @@ public class AT2MDMOR0012Test {
 
         return true;
     }
-
     private boolean Multi_lenguaje_search (TestDriver driver){
         driver.getReport().addHeader("SEARCH IN DEPARTMENTS",3,false);
 
@@ -192,7 +180,6 @@ public class AT2MDMOR0012Test {
         }
         return true;
     }
-
     private boolean Multi_lenguaje_add (TestDriver driver){
 
         driver.getReport().addHeader("ADD IN MULTI LENGUAJE",3,false);
@@ -255,7 +242,6 @@ public class AT2MDMOR0012Test {
         }
         return true;
     }
-
     private boolean Departments_delete (TestDriver driver){
 
         driver.getReport().addHeader("DELETE IN DEPARTMENTS",3,false);
@@ -272,7 +258,6 @@ public class AT2MDMOR0012Test {
 
         return true;
     }
-
     private boolean Departments_other_actions (TestDriver driver){
 
         driver.getReport().addHeader("OTHER ACTIONS IN DEPARTMENTS",3,false);
@@ -287,7 +272,6 @@ public class AT2MDMOR0012Test {
 
         return true;
     }
-
     private boolean Departments_qbe (TestDriver driver){
         driver.getReport().addHeader("QBE IN DEPARTMENTS",3,false);
 
@@ -318,7 +302,6 @@ public class AT2MDMOR0012Test {
 
         return true;
     }
-
     private boolean Departments_search (TestDriver driver){
         driver.getReport().addHeader("SEARCH IN DEPARTMENT",3,false);
 
@@ -335,7 +318,6 @@ public class AT2MDMOR0012Test {
         }
         return true;
     }
-
     private boolean Departments_add (TestDriver driver){
 
         driver.getReport().addHeader("ADD IN DEPARTMENTS",3,false);

@@ -32,27 +32,21 @@ public class AT2MDMOR0012Manager implements AT2Test {
     public String[] getProcedure (){
         return procedure;
     }
-
     public void setProcedure (String[] procedure){
         this.procedure = procedure;
     }
-
     public AT2MDMOR0012Test getTest (){
         return test;
     }
-
     public void setTest (AT2MDMOR0012Test test){
         this.test = test;
     }
-
     public AT2MDMOR0012Sis getTestSis (){
         return sis;
     }
-
     public void setTestSis (AT2MDMOR0012Sis sis){
         this.sis = sis;
     }
-
     public Map<String, String> getData (){
         if(entorno.equalsIgnoreCase("test")){
             return this.test.getData().getData();
@@ -60,7 +54,6 @@ public class AT2MDMOR0012Manager implements AT2Test {
             return this.sis.getData().getData();
         }
     }
-
     public boolean start (TestDriver driver){
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
         if(entorno.equalsIgnoreCase("sis")){
@@ -70,7 +63,6 @@ public class AT2MDMOR0012Manager implements AT2Test {
         }
         return csedIteration(driver);
     }
-
     private boolean csedIteration (TestDriver driver){
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
