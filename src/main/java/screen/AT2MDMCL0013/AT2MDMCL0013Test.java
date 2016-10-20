@@ -5,6 +5,8 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by jmrios on 19/10/2016.
  */
@@ -18,34 +20,27 @@ public class AT2MDMCL0013Test {
     public AT2MDMCL0013Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMCL0013Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMCL0013Data getData() {
         return data;
     }
-
     public void setData(AT2MDMCL0013Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Limited availability");
         driver.getTestdetails().setSubmenu("Master Data Management");
         driver.getTestdetails().setScreen("Clients");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -96,7 +91,6 @@ public class AT2MDMCL0013Test {
         } // where this operation occurs
         return true;
     }
-
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         Functions.break_time(driver, 30, 500);
@@ -134,7 +128,6 @@ public class AT2MDMCL0013Test {
         }
         return true;
     }
-
     private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -150,9 +143,11 @@ public class AT2MDMCL0013Test {
             return false;
         }
         //ESTE PASO GENERA UN ERROR EN LA BASE DE DATOS AL INTENTAR CAMBIAR EL CAMPO "Availability disp"
+        String list_options[] = {"", "Clasification", "Hotel", "Hotel-Contract", "Price"};
+        String option = (list_options[new Random().nextInt(list_options.length)]);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_availability_disp", getElements("add_sl_availability_disp")},
-                "Hotel", "add_sl_availability_disp", where)) {
+                option, "availability_disp", where)) {
             return false;
         }
         //A PARTIR DE AQUÍ EL CÓDIGO VUELVE A FUNCIONAR CON NORMALIDAD
@@ -168,7 +163,6 @@ public class AT2MDMCL0013Test {
         }
         return true;
     }
-
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -192,7 +186,7 @@ public class AT2MDMCL0013Test {
         }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_availability_disp", getElements("qbe_sl_availability_disp")},
-                "Hotel", "availability_disp", where)) {
+                getData("availability_disp"), "availability_disp", where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_availability_iteration_number", getElements("qbe_i_availability_iteration_number")},
@@ -207,7 +201,6 @@ public class AT2MDMCL0013Test {
         }
         return true;
     }
-
     private boolean others_actions_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
