@@ -9,7 +9,6 @@ import java.util.Map;
  * Created by jmrios on 13/10/2016.
  */
 public class AT2ACCCO0049Manager implements AT2Test {
-
     AT2ACCCO0049Sis sis;
     AT2ACCCO0049Test test;
     String[] procedure;
@@ -52,7 +51,6 @@ public class AT2ACCCO0049Manager implements AT2Test {
     public void setTestSis(AT2ACCCO0049Sis sis) {
         this.sis = sis;
     }
-
 
     public Map<String, String> getData() {
         if (entorno.equalsIgnoreCase("test")){
