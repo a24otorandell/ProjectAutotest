@@ -94,5 +94,4 @@ public class AT2MDMCL0013Manager implements AT2Test {
         }
         return true;
     }
-
 }
