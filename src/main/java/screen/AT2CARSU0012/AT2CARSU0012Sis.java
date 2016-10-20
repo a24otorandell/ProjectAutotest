@@ -15,38 +15,30 @@ public class AT2CARSU0012Sis {
     public AT2CARSU0012Sis() {
 
     }
-
     public AT2CARSU0012Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2CARSU0012Locators locators) {
         this.locators = locators;
     }
-
     public AT2CARSU0012Data getData() {
         return data;
     }
-
     public void setData(AT2CARSU0012Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Car Hire");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Language Mapping");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -112,7 +104,6 @@ public class AT2CARSU0012Sis {
         }
         return true;
     }
-
     private boolean search_commision(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -133,7 +124,6 @@ public class AT2CARSU0012Sis {
         }
         return true;
     }
-
     private boolean interaction_edit_commision(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDIT";
@@ -185,7 +175,6 @@ public class AT2CARSU0012Sis {
         }
         return true;
     }
-
     private boolean qbe_languaje(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -229,7 +218,6 @@ public class AT2CARSU0012Sis {
         }
         return true;
     }
-
     private boolean others_actions_languaje(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA";
@@ -251,7 +239,6 @@ public class AT2CARSU0012Sis {
         }
         return true;
     }
-
     private boolean delete_languaje(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
