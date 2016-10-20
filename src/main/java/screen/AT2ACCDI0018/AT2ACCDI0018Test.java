@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Random;
+
 /**
  * Created by aibanez on 17/10/2016.
  */
@@ -20,35 +22,49 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class AT2ACCDI0018Test {
     protected AT2ACCDI0018Locators locators;
     protected AT2ACCDI0018Data data;
-
+    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
+    double randomNumber2 = (double) (new Random().nextInt(1001)) / 100;
     public AT2ACCDI0018Test() {
 
     }
+
+    public static double getRandom(Double valorMinimo, Double valorMaximo) {
+        Random rand = new Random();
+        return valorMinimo + (valorMaximo - valorMinimo) * rand.nextDouble();
+    }
+
     public AT2ACCDI0018Locators getLocators() {
         return locators;
     }
+
     public void setLocators(AT2ACCDI0018Locators locators) {
         this.locators = locators;
     }
+
     public AT2ACCDI0018Data getData() {
         return data;
     }
+
     public void setData(AT2ACCDI0018Data data) {
         this.data = data;
     }
+
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
+
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodation");
         driver.getTestdetails().setSubmenu("Distribution");
         driver.getTestdetails().setScreen("Cancellation Policies");
 
     }
+
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
+
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -84,7 +100,7 @@ public class AT2ACCDI0018Test {
                 new String[]{"add_i_companyy", getElements("add_i_company")}, //external LoV input
                 new String[]{"search_lov_company_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
-                "BG0", // value to search
+                "BG1", // value to search
                 "company", //name of the data
                 where)) {
             return false;
@@ -151,7 +167,7 @@ public class AT2ACCDI0018Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_cost", getElements("add_i_cost")},
-                "cost", "" + 1, where)) {
+                "cost", "" + randomNumber, where)) {
             return false;
         }
         if (!Functions.getText(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")}, // element path
@@ -163,8 +179,9 @@ public class AT2ACCDI0018Test {
                 "amount_cost", ""+1, where)) {
             return false;
         }*/
+
         if (!Functions.insertInput(driver, new String[]{"add_i_extra", getElements("add_i_extra")},
-                "extra", "" + 1, where)) {
+                "extra", "" + randomNumber2, where)) {
             return false;
         }
         /*if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
@@ -217,6 +234,7 @@ public class AT2ACCDI0018Test {
         }
         return true;
     }
+
     private boolean search_cancellation(TestDriver driver, boolean check) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -434,11 +452,11 @@ public class AT2ACCDI0018Test {
         }
         Functions.break_time(driver, 30, 800);
         if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
-                "amount_cost", "" + 2, where)) {
+                "amount_cost", "" + randomNumber, where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
-                "amount_extra", "" + 2, where)) {
+                "amount_extra", "" + randomNumber2, where)) {
             return false;
         }
         if (!Functions.createLov(driver,

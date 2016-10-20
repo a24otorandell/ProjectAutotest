@@ -6,48 +6,41 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by aibanez on 19/10/2016.
  */
 public class AT2MDMCL0024Sis {
     protected AT2MDMCL0024Locators locators;
     protected AT2MDMCL0024Data data;
-
+    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
     public AT2MDMCL0024Sis() {
-
     }
-
     public AT2MDMCL0024Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMCL0024Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMCL0024Data getData() {
         return data;
     }
-
     public void setData(AT2MDMCL0024Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Clients");
         driver.getTestdetails().setScreen("Commision");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -71,6 +64,7 @@ public class AT2MDMCL0024Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_short", getElements("add_lov_short")}, // b_lov
                 new String[]{"add_i_short", getElements("add_i_short")}, // i_lov
@@ -115,7 +109,7 @@ public class AT2MDMCL0024Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commision_margin", getElements("add_i_commision_margin")},
-                "commision_margin", "" + 3, where)) {
+                "commision_margin", "" + randomNumber, where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -138,7 +132,6 @@ public class AT2MDMCL0024Sis {
         }
         return true;
     }
-
     private boolean search_commision(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -205,7 +198,6 @@ public class AT2MDMCL0024Sis {
         }
         return true;
     }
-
     private boolean interaction_edit_commision(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDITTION";
@@ -259,7 +251,7 @@ public class AT2MDMCL0024Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commision_margin", getElements("add_i_commision_margin")},
-                "commision_margin", "" + 7, where)) {
+                "commision_margin", "" + randomNumber, where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -282,7 +274,6 @@ public class AT2MDMCL0024Sis {
         }
         return true;
     }
-
     private boolean qbe_commision(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -358,7 +349,6 @@ public class AT2MDMCL0024Sis {
         }
         return true;
     }
-
     private boolean others_actions_commision(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA";
@@ -380,7 +370,6 @@ public class AT2MDMCL0024Sis {
         }
         return true;
     }
-
     private boolean delete_commision(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
