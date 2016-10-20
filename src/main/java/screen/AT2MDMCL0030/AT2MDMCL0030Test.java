@@ -1,6 +1,7 @@
 package screen.AT2MDMCL0030;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
@@ -46,7 +47,6 @@ public class AT2MDMCL0030Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
-
         if (recordInteraction(driver, true)) {
             if (search(driver)) {
                 if (recordInteraction(driver, false)) {

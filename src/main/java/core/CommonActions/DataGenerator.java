@@ -4,6 +4,7 @@ import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -84,13 +85,16 @@ public class DataGenerator {
      * @return {@code double}
      * @see Math#random()
      */
-    public static double randomFloat(int min, int max) {
+    public static String randomFloat(int min, int max) {
+        Double random;
         try {
             Thread.sleep(1);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return Math.random() < 0.5 ? ((1 - Math.random()) * (max - min) + min) : (Math.random() * (max - min) + min);
+        random = Math.random() < 0.5 ? ((1 - Math.random()) * (max - min) + min) : (Math.random() * (max - min) + min);
+
+        return String.format("%.2f", random);
 
     }
 
