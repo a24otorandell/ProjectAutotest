@@ -14,39 +14,31 @@ public class AT2ACTSU0037Sis {
 
     public AT2ACTSU0037Sis() {
     }
-
     public AT2ACTSU0037Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACTSU0037Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACTSU0037Data getData() {
         return data;
     }
-
     public void setData(AT2ACTSU0037Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodations");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Suppliers B2B 2.0");
 
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -109,6 +101,7 @@ public class AT2ACTSU0037Sis {
                 "days", "" + 4, where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -117,7 +110,6 @@ public class AT2ACTSU0037Sis {
         }
         return true;
     }
-
     private boolean search_supplier(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -156,7 +148,6 @@ public class AT2ACTSU0037Sis {
         }
         return true;
     }
-
     private boolean interaction_edit_supplier(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDITTION";
@@ -213,7 +204,6 @@ public class AT2ACTSU0037Sis {
         }
         return true;
     }
-
     private boolean qbe_supplier(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -262,7 +252,6 @@ public class AT2ACTSU0037Sis {
         }
         return true;
     }
-
     private boolean others_actions_supplier(TestDriver driver) {
         // driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = "";
@@ -276,7 +265,6 @@ public class AT2ACTSU0037Sis {
         }
         return true;
     }
-
     private boolean delete_supplier(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
