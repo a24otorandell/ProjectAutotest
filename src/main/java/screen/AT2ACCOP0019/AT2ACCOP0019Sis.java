@@ -188,7 +188,7 @@ public class AT2ACCOP0019Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"mercant_se_i_delete_date", getElements("mercant_se_i_delete_date")},
-                "del_gettoday",DataGenerator.getToday(driver,"MM/dd/yyyy")," on DELETE")){
+                "del_gettoday",DataGenerator.getToday(driver,"dd/MM/yyyy")," on DELETE")){
             return false;
         }
 
@@ -371,7 +371,7 @@ public class AT2ACCOP0019Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"mercant_se_i_creation_date", getElements("mercant_se_i_creation_date")},
-                "se_gettoday",DataGenerator.getToday(driver,"MM/dd/yyyy")," on SEARCH")){
+                "se_gettoday",DataGenerator.getToday(driver,"dd/MM/yyyy")," on SEARCH")){
             return false;
         }
 
