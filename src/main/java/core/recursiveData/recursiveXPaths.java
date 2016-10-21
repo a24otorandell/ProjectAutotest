@@ -15,7 +15,7 @@ public class recursiveXPaths {
     public static final String[] lov_b_search = {"lov_b_search", "//*[contains(@id, '_afrLovInternalQueryId::search')]"};
     public static final String lov_i_genericinput = "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]";
     public static final String lov_i_altgenericinput = "//*[contains(@id, '_afrLovInternalQueryId:value10::content')]";
-    public static final String lov_i_altgenericinput2 = "//*[contains(@id, '_afrLovInternalQueryId:value30::content')]";
+    public static final String lov_i_altgenericinput2 = "//*[contains(@id, '_afrLovInternalQueryId:value20::content')]";
     public static final String[] lov_e_result = {"lov_e_result", "//*[contains(@id, '_afrLovInternalTableId::db')]/table/tbody/tr[1]/td[1]"};
     public static final String[] lov_e_altresult = {"lov_e_altresult", "//*[contains(@id, '_afrLovInternalTableId::db')]/table/tbody/tr[2]/td[1]"};
     public static final String[] lov_e_altresult2 = {"lov_e_altresult2", "//*[contains(@id, '_afrLovInternalTableId::db')]/table/tbody/tr[3]/td[1]"};
