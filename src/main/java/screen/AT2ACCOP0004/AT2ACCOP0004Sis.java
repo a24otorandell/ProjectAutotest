@@ -225,7 +225,7 @@ public class AT2ACCOP0004Sis {
         }
         if (!Functions.insertInput(driver,
                 new String[]{"search_i_amount", getElements("search_i_amount")},
-                "amount", data.getData().get("amount_result").substring(0, getData("amount_result").length() - 3), where)) {
+                "amount", data.getData().get("amount_result").replace(".", ","), where)) {
             return false;
         }
         if (!Functions.insertInput(driver,
