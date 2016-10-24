@@ -175,7 +175,9 @@ public class AT2BOOSU1004Locators {
         elements.put("configuration_by_ttoo_b_actions_b_data_history", "//*[contains(@id, 'pdm12:dc_cmi0')]/td[2]");
         elements.put("configuration_by_ttoo_b_actions_b_data_history_b_ok", "//*[contains(@id, ':pdm12:d22::ok']");
         elements.put("configuration_by_ttoo_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
-
+        elements.put("configuration_by_ttoo_b_detach_b_historic","//*[contains(@id, 'pc1:pdm12:dc_cmi1')]/td[2]");
+        elements.put("configuration_by_ttoo_b_detach_b_historic_b_qbe","//*[contains(@id, 'pc4:_qbeTbr')]/a");
+        elements.put("configuration_by_ttoo_b_detach_b_historic_qbe_ttoo","//*[contains(@id, 'pc4_afr_t6_afr_c101::content')]");
 
         //DELETE
 

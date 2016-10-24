@@ -474,6 +474,10 @@ public class AT2BOOSU1004Sis {
             return false;
         }
 
+        if(!Historic_table_configuration_by_tto(driver)){
+            return false;
+        }
+
         if (!Delete_configuration_by_tto(driver)) {
             return false;
         }
@@ -503,6 +507,7 @@ public class AT2BOOSU1004Sis {
         }
         return true;
     }
+
 
     // CONFIGURATION BY CLIENT
 
@@ -1502,6 +1507,43 @@ public class AT2BOOSU1004Sis {
 
     }
 
+    private boolean Historic_table_configuration_by_tto (TestDriver driver){
+        driver.getReport().addHeader(" HISTORIC TABLE IN CONFIGURATION BY TTO",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"configuration_by_ttoo_b_actions",getElements("configuration_by_ttoo_b_actions")}, //element to click
+                new String[]{"configuration_by_ttoo_b_detach_b_historic",getElements("configuration_by_ttoo_b_detach_b_historic")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on HISTORIC")){
+            return false;
+        }
+        if(!Functions.checkClick(driver,
+                new String[]{"configuration_by_ttoo_b_detach_b_historic",getElements("configuration_by_ttoo_b_detach_b_historic")}, //element to click
+                new String[]{"configuration_by_ttoo_b_detach_b_historic_b_qbe",getElements("configuration_by_ttoo_b_detach_b_historic_b_qbe")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on HISTORIC")){
+            return false;
+        }
+        if(!Functions.clickQbE(driver,
+                new String[]{"configuration_by_ttoo_b_detach_b_historic_b_qbe",getElements("configuration_by_ttoo_b_detach_b_historic_b_qbe")},// query button
+                new String[]{"configuration_by_ttoo_b_detach_b_historic_qbe_ttoo",getElements("configuration_by_ttoo_b_detach_b_historic_qbe_ttoo")},//any query input
+                " on HISTORIC")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"configuration_by_ttoo_b_detach_b_historic_qbe_ttoo",getElements("configuration_by_ttoo_b_detach_b_historic_qbe_ttoo")},
+                "hi_ttoo",data.getData().get("tto"),"on HISTORIC")){
+            return false;
+        }
+        if(!Functions.enterQueryAndClickResult(driver,
+                new String[]{"",getElements("")}, //search button
+                new String[]{"",getElements("")}, //result element
+                " on HISTORIC")){
+            return false;
+        }
+
+        return true;
+    }
+
     private boolean Other_actions_configuration_by_tto(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN CONFIGURATION BY TTO", 3, false);
@@ -1690,12 +1732,12 @@ public class AT2BOOSU1004Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_ed_i_arrival_date_from", getElements("configuration_by_ttoo_ed_i_arrival_date_from")},
-                "arrival_from", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(2, 2), 0), " on EDIT")) {
+                "arrival_from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(2,2),0)," on EDIT")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_ed_i_stay_date_from", getElements("configuration_by_ttoo_ed_i_stay_date_from")},
-                "Stay_from", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(2, 2), 0), " on EDIT")) {
+                "Stay_from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(2,2),0)," on EDIT")){
             return false;
         }
 
@@ -1748,12 +1790,12 @@ public class AT2BOOSU1004Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_ed_i_arrival_date_to", getElements("configuration_by_ttoo_ed_i_arrival_date_to")},
-                "arrival_to", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(2, 2), 0), " on EDIT")) {
+                "arrival_to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(2,2),0)," on EDIT")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_ed_i_stay_date_to", getElements("configuration_by_ttoo_ed_i_stay_date_to")},
-                "stay_to", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(2, 2), 0), " on EDIT")) {
+                "stay_to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(2,2),0)," on EDIT")){
             return false;
         }
 
@@ -2187,12 +2229,12 @@ public class AT2BOOSU1004Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_add_i_arrival_date_from", getElements("configuration_by_ttoo_add_i_arrival_date_from")},
-                "arrival_from", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(1, 1), 0), " on ADD")) {
+                "arrival_from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(1,1),0)," on ADD")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_add_i_stay_date_from", getElements("configuration_by_ttoo_add_i_stay_date_from")},
-                "Stay_from", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(1, 1), 0), " on ADD")) {
+                "Stay_from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(1,1),0)," on ADD")){
             return false;
         }
 
@@ -2245,12 +2287,12 @@ public class AT2BOOSU1004Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_add_i_arrival_date_to", getElements("configuration_by_ttoo_add_i_arrival_date_to")},
-                "arrival_to", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(2, 1), 0), " on ADD")) {
+                "arrival_to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(2,1),0)," on ADD")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_add_i_stay_date_to", getElements("configuration_by_ttoo_add_i_stay_date_to")},
-                "stay_to", DataGenerator.getRelativeDateToday("MM/dd/yyyy", 0, DataGenerator.random(2, 1), 0), " on ADD")) {
+                "stay_to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(2,1),0)," on ADD")){
             return false;
         }
 
