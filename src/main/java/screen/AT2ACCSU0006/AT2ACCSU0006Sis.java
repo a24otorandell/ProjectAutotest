@@ -67,10 +67,12 @@ public class AT2ACCSU0006Sis {
         if(!Multi_lenguaje(driver)){
             return false;
         }
+        if(!Rates_maintenance_delete(driver)){
+            return false;
+        }
 
         return false;
     }
-
 
     /*Multi Lenguaje*/
     private boolean Multi_lenguaje (TestDriver driver){
@@ -175,18 +177,20 @@ public class AT2ACCSU0006Sis {
                 "se_leguaje_code",data.getData().get("leguaje_code")," on QBE")){
             return false;
         }
-        if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_lenguage",getElements("multi_lenguaje_se_i_lenguage")},
-                "se_lenguaje_code_desc",data.getData().get("lenguaje_code_desc")," on QBE")){
-            return false;
-        }
+
         if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_description",getElements("multi_lenguaje_se_i_description")},
                 "se_descriptions",data.getData().get("descriptions")," on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.enterQueryAndClickResult(driver,
                 new String[]{"multi_lenguaje_se_i_code",getElements("multi_lenguaje_se_i_code")}, //search button
                 new String[]{"multi_lenguaje_se_e_result",getElements("multi_lenguaje_se_e_result")}, //result element
+                " on QBE")){
+            return false;
+        }
+        if(!Functions.simpleClick(driver,
+                new String[]{"multi_lenguaje_se_e_result",getElements("multi_lenguaje_se_e_result")}, //element to click
                 " on QBE")){
             return false;
         }
@@ -321,7 +325,7 @@ public class AT2ACCSU0006Sis {
             return false;
         }
         if(!Functions.getValue(driver,new String[]{"incoming_fiels_ed_e_incoming_office",getElements("incoming_fiels_ed_e_incoming_office")}, // element path
-                "office", // key for data value (the name)
+                "incoming_office", // key for data value (the name)
                 " on EDIT")){
             return false;
         }
@@ -431,9 +435,7 @@ public class AT2ACCSU0006Sis {
         if(!Rates_maintenance_other_actions(driver)){
             return false;
         }
-        if(!Rates_maintenance_delete(driver)){
-            return false;
-        }
+
 
         return true;
     }
@@ -530,7 +532,7 @@ public class AT2ACCSU0006Sis {
                 " on EDIT")){
             return false;
         }
-        if(!Functions.getValue(driver,new String[]{"rates_maintenance_ed_i_code",getElements("rates_maintenance_ed_i_code")}, // element path
+        if(!Functions.getText(driver,new String[]{"rates_maintenance_ed_i_code",getElements("rates_maintenance_ed_i_code")}, // element path
                 "code", // key for data value (the name)
                 " on EDIT")){
             return false;
