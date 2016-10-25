@@ -104,7 +104,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean search_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -135,7 +134,6 @@ public class AT2ACCSU0055Test {
         return true;
 
     }
-
     private boolean interaction_edit_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -177,7 +175,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean qbe_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -212,7 +209,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean others_actions_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -233,26 +229,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
-    private boolean delete_chains_accommodation(TestDriver driver) {
-        driver.getReport().addHeader("DELETE DATA", 3, false);
-        String where = " on DELETE DATA";
-      /*  if (!Functions.doDeleteNCheck(driver,
-                new String[]{"accommodation_b_chains_delete", getElements("accommodation_b_chains_delete")},
-                new String[]{"accommodation_e_chains_records", getElements("accommodation_e_chains_records")},
-                where)){
-            return false;
-        }*/
-        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"accommodation_b_chains_delete", getElements("accommodation_b_chains_delete")}, //button delete
-                new String[]{"accommodation_e_chains_records", getElements("accommodation_e_chains_records")}, // result
-                new String[]{"accommodation_b_chains_delete_ok", getElements("accommodation_b_chains_delete_ok")}, //delete button yes
-                " where")) {
-            return false;
-        }
-        return true;
-    }
-
     private boolean interaction_record_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
@@ -285,7 +261,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean search_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -312,7 +287,6 @@ public class AT2ACCSU0055Test {
         return true;
 
     }
-
     private boolean interaction_edit_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -346,7 +320,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean qbe_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -377,7 +350,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean others_actions_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -398,7 +370,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean delete_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
@@ -406,6 +377,25 @@ public class AT2ACCSU0055Test {
                 new String[]{"accommodation_b_brands_delete", getElements("accommodation_b_brands_delete")},
                 new String[]{"accommodation_e_brands_records", getElements("accommodation_e_brands_records")},
                 where)) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean delete_chains_accommodation(TestDriver driver) {
+        driver.getReport().addHeader("DELETE DATA", 3, false);
+        String where = " on DELETE DATA";
+      /*  if (!Functions.doDeleteNCheck(driver,
+                new String[]{"accommodation_b_chains_delete", getElements("accommodation_b_chains_delete")},
+                new String[]{"accommodation_e_chains_records", getElements("accommodation_e_chains_records")},
+                where)){
+            return false;
+        }*/
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"accommodation_b_chains_delete", getElements("accommodation_b_chains_delete")}, //button delete
+                new String[]{"accommodation_e_chains_records", getElements("accommodation_e_chains_records")}, // result
+                new String[]{"accommodation_b_chains_delete_ok", getElements("accommodation_b_chains_delete_ok")}, //delete button yes
+                " where")) {
             return false;
         }
         return true;
