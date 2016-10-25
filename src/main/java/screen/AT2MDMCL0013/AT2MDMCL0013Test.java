@@ -143,7 +143,7 @@ public class AT2MDMCL0013Test {
             return false;
         }
         //ESTE PASO GENERA UN ERROR EN LA BASE DE DATOS AL INTENTAR CAMBIAR EL CAMPO "Availability disp"
-        String list_options[] = {"", "Clasification", "Hotel", "Hotel-Contract", "Price"};
+        String list_options[] = {"Clasification", "Hotel", "Hotel – Contract", "Price"};
         String option = (list_options[new Random().nextInt(list_options.length)]);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_availability_disp", getElements("add_sl_availability_disp")},
