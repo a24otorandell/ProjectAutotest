@@ -1543,7 +1543,7 @@ public class Functions {
                 for (int j = 1; j < columns.length + 1; j++) {
                     getText(driver,
                             new String[]{columns[j - 1], xpathBegin + i + xpathMid + j + xpathEnd},
-                            columns[j] + "_" + Integer.toString(i), where);
+                            columns[j - 1] + "_" + Integer.toString(i), where);
                 }
             }
         } catch (Exception e) {

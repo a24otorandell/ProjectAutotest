@@ -501,7 +501,7 @@ public class AT2ACCOP0024Sis {
             }
             Functions.break_time(driver, 6, 500);
             if (!Functions.selectText(driver,
-                    new String[]{"search_i_type", getElements("search_i_type")},
+                    new String[]{"search_l_type", getElements("search_l_type")},
                     getData("type_2"),
                     "type_2",
                     " on SEARCH")) {
