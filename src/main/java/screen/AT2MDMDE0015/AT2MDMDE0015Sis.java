@@ -101,7 +101,7 @@ public class AT2MDMDE0015Sis {
                 "b2b", //name of the data
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_info_b2b", getElements("add_i_info_b2b")}, // element path
-                "info_des", // key for data value (the name)
+                "info_b2b", // key for data value (the name)
                 where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_zone",getElements("add_i_zone")},
                 "zone", "1", where)) {
