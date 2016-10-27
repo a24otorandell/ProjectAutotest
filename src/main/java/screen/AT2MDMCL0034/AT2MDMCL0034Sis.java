@@ -107,7 +107,6 @@ public class AT2MDMCL0034Sis {
         }
         return true;
     }
-
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         Functions.break_time(driver, 30, 500);
@@ -157,7 +156,6 @@ public class AT2MDMCL0034Sis {
         return true;
 
     }
-
     private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -233,7 +231,6 @@ public class AT2MDMCL0034Sis {
         }
         return true;
     }
-
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -294,7 +291,6 @@ public class AT2MDMCL0034Sis {
         }
         return true;
     }
-
     private boolean others_actions_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -315,7 +311,6 @@ public class AT2MDMCL0034Sis {
         }
         return true;
     }
-
     private boolean delete_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
