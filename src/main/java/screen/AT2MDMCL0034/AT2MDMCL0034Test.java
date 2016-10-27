@@ -14,53 +14,45 @@ public class AT2MDMCL0034Test {
 
     public AT2MDMCL0034Test() {
     }
-
     public AT2MDMCL0034Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMCL0034Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMCL0034Data getData() {
         return data;
     }
-
     public void setData(AT2MDMCL0034Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Currency Exchange");
         driver.getTestdetails().setSubmenu("Master Data Management");
         driver.getTestdetails().setScreen("Clients");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
 
     protected boolean testCSED(TestDriver driver) {
-        if (!interaction_record_accommodation(driver)) return false;
-        if (!search_accommodation(driver)) return false;
-        if (!interaction_edit_accommodation(driver)) return false;
-        if (!qbe_accommodation(driver)) return false;
-        if (!others_actions_accommodation(driver)) return false;
-        if (!delete_accommodation(driver)) return false;
+        if (!interaction_record_MDM(driver)) return false;
+        if (!search_MDM(driver)) return false;
+        if (!interaction_edit_MDM(driver)) return false;
+        if (!qbe_MDM(driver)) return false;
+        if (!others_actions_MDM(driver)) return false;
+        if (!delete_MDM(driver)) return false;
         return false;
     }
 
-    private boolean interaction_record_accommodation(TestDriver driver) {
+    private boolean interaction_record_MDM(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
         if (!Functions.checkClick(driver,
@@ -115,8 +107,7 @@ public class AT2MDMCL0034Test {
         }
         return true;
     }
-
-    private boolean search_accommodation(TestDriver driver) {
+    private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         Functions.break_time(driver, 30, 500);
         String where = " on SEARCH";
@@ -165,8 +156,7 @@ public class AT2MDMCL0034Test {
         return true;
 
     }
-
-    private boolean interaction_edit_accommodation(TestDriver driver) {
+    private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
         if (!Functions.simpleClick(driver,
@@ -241,8 +231,7 @@ public class AT2MDMCL0034Test {
         }
         return true;
     }
-
-    private boolean qbe_accommodation(TestDriver driver) {
+    private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         if (!Functions.clickQbE(driver,
@@ -302,8 +291,7 @@ public class AT2MDMCL0034Test {
         }
         return true;
     }
-
-    private boolean others_actions_accommodation(TestDriver driver) {
+    private boolean others_actions_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
         if (!Functions.auditData(driver,
@@ -323,8 +311,7 @@ public class AT2MDMCL0034Test {
         }
         return true;
     }
-
-    private boolean delete_accommodation(TestDriver driver) {
+    private boolean delete_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
         if (!Functions.doDeleteNCheck(driver,

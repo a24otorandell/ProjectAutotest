@@ -91,11 +91,11 @@ public class AT2ACCSU0006Locators {
         //ADD
 
         elements.put("incoming_fiels_add_b_add","//*[contains(@id, 'pc2:pcgt1:boton_add')]");
-        elements.put("incoming_fiels_add_lov_office","//*[contains(@id, 'pc1:pcgt5:it3::content')]");
-        elements.put("incoming_fiels_add_i_office","//*[contains(@id, 'pc1:pcgt5:it2::content')]");
-        elements.put("incoming_fiels_add_e_company","//*[contains(@id, 'pc1:pcgt5:sbc2::content')]");
-        elements.put("incoming_fiels_add_e_incoming_office","//*[contains(@id, 'pc1:pcgt5:sbc1::content')]");
-        elements.put("incoming_fiels_add_b_save","//*[contains(@id, 'pc1:pcgt5:businessLineId::lovIconId')]");
+        elements.put("incoming_fiels_add_lov_office","//*[contains(@id, 'pc2:pcgt1:sofiCodOfi1Id::lovIconId')]");
+        elements.put("incoming_fiels_add_i_office","//*[contains(@id, 'pc2:pcgt1:sofiCodOfi1Id::content')]");
+        elements.put("incoming_fiels_add_e_company","//*[contains(@id, 'pc2:pcgt1:it4::content')]");
+        elements.put("incoming_fiels_add_e_incoming_office","//*[contains(@id, 'pc2:pcgt1:it8::content')]");
+        elements.put("incoming_fiels_add_b_save","//*[contains(@id, 'pc2:pcgt1:btn_commitExit')]");
 
 
         //SEARCH
@@ -109,11 +109,11 @@ public class AT2ACCSU0006Locators {
 
         //EDIT
         elements.put("incoming_fiels_ed_b_edit","//*[contains(@id, 'pc2:pcgt1:boton_edit')]");
-        elements.put("incoming_fiels_ed_lov_office","//*[contains(@id, 'pc1:pcgt5:it3::content')]");
-        elements.put("incoming_fiels_ed_i_office","//*[contains(@id, 'pc1:pcgt5:it2::content')]");
-        elements.put("incoming_fiels_ed_e_company","//*[contains(@id, 'pc1:pcgt5:sbc2::content')]");
-        elements.put("incoming_fiels_ed_e_incoming_office","//*[contains(@id, 'pc1:pcgt5:sbc1::content')]");
-        elements.put("incoming_fiels_ed_b_save","//*[contains(@id, 'pc1:pcgt5:businessLineId::lovIconId')]");
+        elements.put("incoming_fiels_ed_lov_office","//*[contains(@id, 'pc2:pcgt1:sofiCodOfi1Id::lovIconId')]");
+        elements.put("incoming_fiels_ed_i_office","//*[contains(@id, 'pc2:pcgt1:sofiCodOfi1Id::content')]");
+        elements.put("incoming_fiels_ed_e_company","//*[contains(@id, 'pc2:pcgt1:it4::content')]");
+        elements.put("incoming_fiels_ed_e_incoming_office","//*[contains(@id, 'pc2:pcgt1:it8::content')]");
+        elements.put("incoming_fiels_ed_b_save","//*[contains(@id, 'pc2:pcgt1:btn_commitExit')]");
 
 
         //OTHER ACTIONS
@@ -152,7 +152,7 @@ public class AT2ACCSU0006Locators {
         elements.put("multi_lenguaje_se_e_result","//*[contains(@id, 'pc3:wfgkl::db')]/table/tbody/tr[1]/td[1]");
 
         //EDIT
-        elements.put("multi_lenguaje_ed_b_edit","//*[contains(@id, 'pc2:pcgt1:boton_edit')]");
+        elements.put("multi_lenguaje_ed_b_edit","//*[contains(@id, 'pc3:pcgt6:boton_edit')]");
         elements.put("multi_lenguaje_ed_e_code","//*[contains(@id, 'pc3:pcgt6:it5::content')]");
         elements.put("multi_lenguaje_ed_lov_lenguaje","//*[contains(@id, 'pc3:pcgt6:codIdiomaId::lovIconId')]");
         elements.put("multi_lenguaje_ed_i_lenguaje","//*[contains(@id, 'pc3:pcgt6:codIdiomaId::content')]");
