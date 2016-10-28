@@ -62,15 +62,15 @@ public class AT2MDMOR0011Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_code",getElements("add_i_code")},
-                "code", DataGenerator.getRandomAlphanumericSequence(2, true), where)){return false;}
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_department",getElements("add_lov_department")}, // b_lov
-                new String[]{"add_i_department", getElements("add_i_department")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "department", //Data name
-                where)){return false;}*/
+                "code", "ZZ", where)){return false;}
+//        if(!Functions.createLov(driver,
+//                new String[]{"add_lov_department",getElements("add_lov_department")}, // b_lov
+//                new String[]{"add_i_department", getElements("add_i_department")}, // i_lov
+//                recursiveXPaths.lov_b_search, // lov b search
+//                recursiveXPaths.lov_e_altresult, // lov result
+//                recursiveXPaths.lov_b_ok, //lov b ok
+//                "department", //Data name
+//                where)){return false;}
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_department", getElements("add_lov_department")}, //LoV button
                 new String[]{"add_i_department", getElements("add_i_department")}, //external LoV input
@@ -83,11 +83,11 @@ public class AT2MDMOR0011Sis {
                 "department_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_activity",getElements("add_i_activity")},
-                "activity", DataGenerator.getRandomAlphanumericSequence(2, false), where)){return false;}
+                "activity", "MI", where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_group"),"group",true,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_internet"),"internet",true,true,where)){return false;}
+                getElements("add_ck_internet"),"internet",false,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_excursions"),"excursions",true,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
@@ -105,26 +105,22 @@ public class AT2MDMOR0011Sis {
         String where = " on SEARCH";
         if (!Functions.insertInput(driver, new String[]{"search_i_code",getElements("search_i_code")},
                 "code", getData("code"), where)){return false;}
-        if (!Functions.createLovByValue(driver,
-                new String[]{"search_lov_department", getElements("search_lov_department")}, //LoV button
-                new String[]{"search_i_department", getElements("search_i_department")}, //external LoV input
-                new String[]{"search_lov_department_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                getData("department"), // value to search
-                "department", //name of the data
-                where)){return false;}
+//        if (!Functions.createLovByValue(driver,
+//                new String[]{"search_lov_department", getElements("search_lov_department")}, //LoV button
+//                new String[]{"search_i_department", getElements("search_i_department")}, //external LoV input
+//                new String[]{"search_lov_department_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+//                recursiveXPaths.lov_e_result, // lov internal result
+//                getData("department"), // value to search
+//                "department", //name of the data
+//                where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_activity",getElements("search_i_activity")},
                 "activity", getData("activity"), where)){return false;}
-        if (!Functions.checkboxValue(driver,
-                getElements("search_ck_group"), "search_ck_group", true, where)) {
-            return false;
-        }
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_group"), "group", true, where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
-                getElements("search_ck_internet"), "internet", true, where)) {
+                getElements("search_ck_internet"), "internet", false, where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -153,7 +149,7 @@ public class AT2MDMOR0011Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_activity",getElements("add_i_activity")},
-                "activity", DataGenerator.getRandomAlphanumericSequence(2, false), where)){return false;}
+                "activity", "TO", where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_group"),"group",false,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
@@ -189,32 +185,32 @@ public class AT2MDMOR0011Sis {
                 "code", getData("code"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_department", getElements("qbe_i_department")},
-                "department", getData("department"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_department_des", getElements("qbe_i_department_des")},
-                "department_des", getData("department_des"), where)) {
-            return false;
-        }
+//        if (!Functions.insertInput(driver, new String[]{"qbe_i_department", getElements("qbe_i_department")},
+//                "department", getData("department"), where)) {
+//            return false;
+//        }
+//        if (!Functions.insertInput(driver, new String[]{"qbe_i_department_des", getElements("qbe_i_department_des")},
+//                "department_des", getData("department_des"), where)) {
+//            return false;
+//        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_activity", getElements("qbe_i_activity")},
                 "activity", getData("activity"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_sl_group", getElements("qbe_sl_group")},
-                "group", getData("group"), where)) {
+        if (!Functions.selectText(driver, new String[]{"qbe_sl_group", getElements("qbe_sl_group")},
+                getData("group"), "group", where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_sl_internet", getElements("qbe_sl_internet")},
-                "internet", getData("internet"), where)) {
+        if (!Functions.selectText(driver, new String[]{"qbe_sl_internet", getElements("qbe_sl_internet")},
+                getData("internet"),"internet", where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_sl_excursions", getElements("qbe_sl_excursions")},
-                "excursions", getData("excursions"), where)) {
+        if (!Functions.selectText(driver, new String[]{"qbe_sl_excursions", getElements("qbe_sl_excursions")},
+                getData("excursions"),"excursions", where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_sl_active", getElements("qbe_sl_active")},
-                "active", getData("active"), where)) {
+        if (!Functions.selectText(driver, new String[]{"qbe_sl_active", getElements("qbe_sl_active")},
+                getData("active"), "active", where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,

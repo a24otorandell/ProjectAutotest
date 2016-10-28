@@ -14,7 +14,6 @@ import java.util.Random;
 public class AT2MDMCL0032Sis {
     protected AT2MDMCL0032Locators locators;
     protected AT2MDMCL0032Data data;
-    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
     public AT2MDMCL0032Sis() {
     }
     public AT2MDMCL0032Locators getLocators() {
