@@ -285,7 +285,6 @@ public class AT2MDMOR0016Test {
 //                "CEE", // value to search
 //                "location", //name of the data
 //                where)) {return false;}
-
         if(!Functions.getText(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
                 "des", // key for data value (the name)
                 where)){return false;}
@@ -332,6 +331,7 @@ public class AT2MDMOR0016Test {
     private boolean qbe_transfers(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        Functions.zoomOut(driver);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
                 new String[]{"transfers_e_result", getElements("transfers_e_result")}, //result element

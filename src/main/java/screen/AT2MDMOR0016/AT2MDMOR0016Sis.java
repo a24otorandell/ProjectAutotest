@@ -332,6 +332,7 @@ public class AT2MDMOR0016Sis {
     private boolean qbe_transfers(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        Functions.zoomOut(driver);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
                 new String[]{"transfers_e_result", getElements("transfers_e_result")}, //result element
