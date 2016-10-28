@@ -36,7 +36,7 @@ public class AT2MDMOR0011Locators {
         elements.put("search_lov_department", "//*[contains(@id, 'qryId1:value10::lovIconId')]");
         elements.put("search_i_department", "//*[contains(@id, 'qryId1:value10::content')]");
         elements.put("search_i_activity", "//*[contains(@id, 'qryId1:value20::content')]");
-        elements.put("search_ck_group", "//*[contains(@id, 'qryId1:value30::lovIconId')]");
+        elements.put("search_ck_group", "//*[contains(@id, 'qryId1:value30::content')]");
         elements.put("search_ck_internet", "//*[contains(@id, 'qryId1:value40::content')]");
         elements.put("search_ck_excursions", "//*[contains(@id, 'qryId1:value50::content')]");
         elements.put("search_ck_active", "//*[contains(@id, 'qryId1:value60::content')]");
