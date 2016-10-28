@@ -381,7 +381,6 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean delete_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
