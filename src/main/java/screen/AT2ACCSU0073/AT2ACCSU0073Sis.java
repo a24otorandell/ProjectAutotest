@@ -254,14 +254,14 @@ public class AT2ACCSU0073Sis {
         driver.getReport().addHeader("OTHER ACTIONS IN REASON DEPARTMENT",3,false);
 
 
-   /*     if(!Functions.auditData(driver,
+        if(!Functions.auditData(driver,
                 new String[]{"reason_department_oa_b_actions",getElements("reason_department_oa_b_actions")}, //actions button
                 new String[]{"reason_department_oa_b_actions_b_data_history",getElements("reason_department_oa_b_actions_b_data_history")}, //audit button
                 new String[]{"reason_department_oa_b_actions_b_data_history_b_ok",recursiveXPaths.audit_b_ok}, //audit_b_ok
                 " on OTHER ACTIONS")){
             return false;
 
-        }*/
+        }
 
         if(!Functions.detachTable(driver,
                 new String[]{"reason_department_oa_b_detach",getElements("reason_department_oa_b_detach")}, //detach button
@@ -453,14 +453,14 @@ public class AT2ACCSU0073Sis {
         driver.getReport().addHeader("OTHER ACTIONS IN SUBREASON",3,false);
 
 
-    /*    if(!Functions.auditData(driver,
+        if(!Functions.auditData(driver,
                 new String[]{"subreason_oa_b_actions",getElements("subreason_oa_b_actions")}, //actions button
                 new String[]{"subreason_oa_b_actions_b_data_history",getElements("subreason_oa_b_actions_b_data_history")}, //audit button
                 new String[]{"subreason_oa_b_actions_b_data_history_b_ok",recursiveXPaths.audit_b_ok}, //audit_b_ok
                 " on OTHER ACTIONS")){
             return false;
 
-        }*/
+        }
 
         if(!Functions.detachTable(driver,
                 new String[]{"subreason_oa_b_detach",getElements("subreason_oa_b_detach")}, //detach button
@@ -637,14 +637,14 @@ public class AT2ACCSU0073Sis {
         driver.getReport().addHeader("OTHER ACTIONS IN REASON",3,false);
 
 
-   /*     if(!Functions.auditData(driver,
+        if(!Functions.auditData(driver,
                 new String[]{"reason_oa_b_actions",getElements("reason_oa_b_actions")}, //actions button
                 new String[]{"reason_oa_b_actions_b_data_history",getElements("reason_oa_b_actions_b_data_history")}, //audit button
                 new String[]{"reason_oa_b_actions_b_data_history_b_ok",recursiveXPaths.audit_b_ok}, //audit_b_ok
                 " on OTHER ACTIONS")){
             return false;
 
-        }*/
+        }
 
         if(!Functions.detachTable(driver,
                 new String[]{"reason_oa_b_detach",getElements("reason_oa_b_detach")}, //detach button
