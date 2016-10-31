@@ -143,7 +143,7 @@ public class AT2ACCSU0074Test {
                 "ALE","lenguaje"," on ADD")){
             return false;
         }
-      /*  if(!Functions.checkClick(driver,
+        if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_add",getElements("template_descriptions_add_lenguaje_text_b_add")}, //element to click
                 new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element expected to appear
                 30,500, //seconds/miliseconds (driver wait)
@@ -159,18 +159,22 @@ public class AT2ACCSU0074Test {
                 new String[]{"template_descriptions_add_lenguaje_text_del_lenguaje",getElements("template_descriptions_add_lenguaje_text_del_lenguaje")},
                 "CAT","lenguaje_del"," on ADD")){
             return false;
-        }*/
-    /*    if (!Functions.doDeleteNCheck(driver,
+        }
+        if(!Functions.doDeleteNCheck(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_delete", getElements("template_descriptions_add_lenguaje_text_b_delete")}, //button delete
                 new String[]{"template_descriptions_add_lenguaje_text_e_record", getElements("template_descriptions_add_lenguaje_text_e_record")}, // result
                 new String[]{"template_descriptions_add_lenguaje_text_b_delete_b_ok", getElements("template_descriptions_add_lenguaje_text_b_delete_b_ok")}, //delete button yes
-                " on ADD")){return false;}*/
+                " on ADD")){
+            return false;
+        }
 
-  /*      if(!Functions.detachTable(driver,
+        if(!Functions.detachTable(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_detach",getElements("template_descriptions_add_lenguaje_text_b_detach")}, //detach button
                 true,     //screenshot??
-                " on ADD")){return false;}*/
-    /*    if(!Functions.checkClick(driver,
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_add",getElements("template_descriptions_add_lenguaje_text_b_add")}, //element to click
                 new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element expected to appear
                 30,500, //seconds/miliseconds (driver wait)
@@ -186,7 +190,7 @@ public class AT2ACCSU0074Test {
                 new String[]{"template_descriptions_add_lenguaje_text_sl_lenguaje",getElements("template_descriptions_add_lenguaje_text_sl_lenguaje")},
                 "ALE","lenguaje"," on ADD")){
             return false;
-        }*/
+        }
 
         /*Text*/
         Functions.break_time(driver,5,500);
