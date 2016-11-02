@@ -33,7 +33,7 @@ public class AT2MDMRM0005Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Market");
-        driver.getTestdetails().setScreen("Time confirmation maintenance 2.0");
+        driver.getTestdetails().setScreen("Products 2.0");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
