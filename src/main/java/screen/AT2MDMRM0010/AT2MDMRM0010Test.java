@@ -31,9 +31,9 @@ public class AT2MDMRM0010Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Master Data");
-        driver.getTestdetails().setSubmenu("Destination");
-        driver.getTestdetails().setScreen("Set Up Web Prepayment 2.0");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Market");
+        driver.getTestdetails().setScreen("Time confirmation maintenance 2.0");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -43,9 +43,9 @@ public class AT2MDMRM0010Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
-       // if (!first_search_time(driver)) return false;
-        if (!search_time(driver)) return false;
+        if (!first_search_time(driver)) return false;
         if (!interaction_edit_time(driver)) return false;
+        if (!search_time(driver)) return false;
         if (!qbe_time(driver)) return false;
         if (!others_actions_time(driver)) return false;
         return true;
@@ -54,36 +54,15 @@ public class AT2MDMRM0010Test {
     public boolean first_search_time (TestDriver driver) {
         driver.getReport().addHeader("FIRST SEARCH", 3, false);
         String where = " FIRST SEARH";
+        if (!Functions.insertInput(driver, new String[]{"search_i_to_code",getElements("search_i_to_code")},
+                "code", "42732", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_to_name",getElements("search_i_to_name")},
+                "name", "PERFECTTOU", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_to_desc",getElements("search_i_to_desc")},
+                "desc", "PERFECT TOUR", where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"time_e_result", getElements("time_e_result")}, //result element
-                where)) {
-            return false;
-        }
-        if (!Functions.checkClick(driver,
-                new String[]{"time_b_edit", getElements("time_b_edit")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
-                where)) {
-            return false;
-        }
-        if(!Functions.getText(driver,new String[]{"edit_i_to_code", getElements("edit_i_to_code")}, // element path
-                "code", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"edit_i_to_name", getElements("edit_i_to_name")}, // element path
-                "name", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"edit_i_to_desc", getElements("edit_i_to_desc")}, // element path
-                "desc", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"edit_i_cancel", getElements("edit_i_cancel")}, // element path
-                "cancel", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"edit_i_time", getElements("edit_i_time")}, // element path
-                "time", // key for data value (the name)
-                where)){return false;}
-        if (!Functions.checkClickByAbsence(driver,
-                new String[]{"add_b_save", getElements("add_b_save")}, //element to click
-                recursiveXPaths.glass, //element expected to disappear
                 where)) {
             return false;
         }
@@ -93,15 +72,15 @@ public class AT2MDMRM0010Test {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
         if (!Functions.insertInput(driver, new String[]{"search_i_to_code",getElements("search_i_to_code")},
-                "code", "42732", where)){return false;}
+                "code", getData("code"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_to_name",getElements("search_i_to_name")},
-                "name", "PERFECTTOU", where)){return false;}
+                "name", getData("name"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_to_desc",getElements("search_i_to_desc")},
-                "desc", "PERFECT TOUR", where)){return false;}
+                "desc", getData("desc"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_cancel",getElements("search_i_cancel")},
-                "cancel", "18", where)){return false;}
+                "cancel", getData("cancel"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_time",getElements("search_i_time")},
-                "time", "5", where)){return false;}
+                "time", getData("time"), where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"time_e_result", getElements("time_e_result")}, //result element
