@@ -16,38 +16,30 @@ public class AT2MDMSP0025Sis {
 
     public AT2MDMSP0025Sis() {
     }
-
     public AT2MDMSP0025Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMSP0025Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMSP0025Data getData() {
         return data;
     }
-
     public void setData(AT2MDMSP0025Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Markets");
         driver.getTestdetails().setSubmenu("Master Data Management");
         driver.getTestdetails().setScreen("Supplier");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -101,7 +93,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -123,7 +114,6 @@ public class AT2MDMSP0025Sis {
         return true;
 
     }
-
     private boolean interaction_edit_market_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -150,7 +140,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean qbe_market_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -176,7 +165,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean others_actions_market_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -223,7 +211,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean interaction_record_marketc_MDM(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
@@ -256,7 +243,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean qbe_marketc_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -284,7 +270,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean others_actions_marketc_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -305,7 +290,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean delete_marketc_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
@@ -318,7 +302,6 @@ public class AT2MDMSP0025Sis {
         }
         return true;
     }
-
     private boolean delete_market_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
