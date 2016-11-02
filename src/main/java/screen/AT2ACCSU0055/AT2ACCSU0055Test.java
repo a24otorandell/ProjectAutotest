@@ -16,38 +16,30 @@ public class AT2ACCSU0055Test {
 
     public AT2ACCSU0055Test() {
     }
-
     public AT2ACCSU0055Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0055Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0055Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0055Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Chains Brands");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Clients");
+        driver.getTestdetails().setSubmenu("Accommodation");
+        driver.getTestdetails().setScreen("Setup");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -381,21 +373,14 @@ public class AT2ACCSU0055Test {
         }
         return true;
     }
-
     private boolean delete_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
-      /*  if (!Functions.doDeleteNCheck(driver,
-                new String[]{"accommodation_b_chains_delete", getElements("accommodation_b_chains_delete")},
-                new String[]{"accommodation_e_chains_records", getElements("accommodation_e_chains_records")},
-                where)){
-            return false;
-        }*/
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"accommodation_b_chains_delete", getElements("accommodation_b_chains_delete")}, //button delete
                 new String[]{"accommodation_e_chains_records", getElements("accommodation_e_chains_records")}, // result
                 new String[]{"accommodation_b_chains_delete_ok", getElements("accommodation_b_chains_delete_ok")}, //delete button yes
-                " where")) {
+                where)) {
             return false;
         }
         return true;

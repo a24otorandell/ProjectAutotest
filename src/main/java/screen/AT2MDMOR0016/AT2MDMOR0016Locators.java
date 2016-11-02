@@ -73,7 +73,7 @@ public class AT2MDMOR0016Locators {
         elements.put("qbe_i_contracting", "//*[contains(@id, 'afr_resId1c5::content')]");
         elements.put("qbe_sl_service", "//*[contains(@id, 'pc1:resId1:socc4::content')]");
         elements.put("qbe_sl_allotment", "//*[contains(@id, 'pc1:resId1:socc44::content')]");
-        elements.put("qbe_i_p_contracting", "//*[contains(@id, afr_resId1c9::content')]");
+        elements.put("qbe_i_p_contracting", "//*[contains(@id, 'afr_resId1c9::content')]");
         elements.put("qbe_i_p_billing", "//*[contains(@id, 'afr_resId1c10::content')]");
         elements.put("qbe_i_p_allotment", "//*[contains(@id, 'afr_resId1c11::content')]");
         elements.put("qbe_i_p_extra", "//*[contains(@id, 'afr_resId1c12::content')]");

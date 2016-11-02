@@ -16,38 +16,30 @@ public class AT2ACCSU0055Sis {
 
     public AT2ACCSU0055Sis() {
     }
-
     public AT2ACCSU0055Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0055Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0055Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0055Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Chains Brands");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Clients");
+        driver.getTestdetails().setSubmenu("Accommodation");
+        driver.getTestdetails().setScreen("Setup");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -104,7 +96,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean search_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -135,7 +126,6 @@ public class AT2ACCSU0055Sis {
         return true;
 
     }
-
     private boolean interaction_edit_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -177,7 +167,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean qbe_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -212,7 +201,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean others_actions_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -233,7 +221,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean delete_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
@@ -252,7 +239,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean interaction_record_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
@@ -285,7 +271,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean search_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -310,9 +295,7 @@ public class AT2ACCSU0055Sis {
             return false;
         }
         return true;
-
     }
-
     private boolean interaction_edit_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -346,7 +329,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean qbe_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -377,7 +359,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean others_actions_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -398,7 +379,6 @@ public class AT2ACCSU0055Sis {
         }
         return true;
     }
-
     private boolean delete_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";

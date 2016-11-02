@@ -75,6 +75,7 @@ public class AT2ACCSU0006Sis {
     }
 
     /*Multi Lenguaje*/
+
     private boolean Multi_lenguaje (TestDriver driver){
         if(!Multi_lenguaje_add(driver)){
             return true;

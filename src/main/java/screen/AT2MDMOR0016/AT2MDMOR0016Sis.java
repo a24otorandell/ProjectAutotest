@@ -138,11 +138,11 @@ public class AT2MDMOR0016Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_p_contracting",getElements("add_i_p_contracting")},
-                "p_contracting",String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "p_contracting",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_p_billing",getElements("add_p_billing")},
-                "p_billing",String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "p_billing",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_p_allotment",getElements("add_p_allotment")},
-                "p_allotment",String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "p_allotment",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_extra",getElements("add_lov_extra")}, // b_lov
                 new String[]{"add_i_extra", getElements("add_i_extra")}, // i_lov
@@ -285,7 +285,6 @@ public class AT2MDMOR0016Sis {
 //                "CEE", // value to search
 //                "location", //name of the data
 //                where)) {return false;}
-
         if(!Functions.getText(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
                 "des", // key for data value (the name)
                 where)){return false;}
@@ -308,11 +307,11 @@ public class AT2MDMOR0016Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_p_contracting",getElements("add_i_p_contracting")},
-                "p_contracting",String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "p_contracting",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_p_billing",getElements("add_p_billing")},
-                "p_billing",String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "p_billing",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_p_allotment",getElements("add_p_allotment")},
-                "p_allotment",String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "p_allotment",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
 /*        if(!Functions.createLov(driver,
                 new String[]{"add_lov_extra",getElements("add_lov_extra")}, // b_lov
                 new String[]{"add_i_extra", getElements("add_i_extra")}, // i_lov
@@ -332,6 +331,7 @@ public class AT2MDMOR0016Sis {
     private boolean qbe_transfers(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        Functions.zoomOut(driver);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
                 new String[]{"transfers_e_result", getElements("transfers_e_result")}, //result element
