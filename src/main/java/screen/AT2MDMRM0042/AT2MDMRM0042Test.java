@@ -14,38 +14,30 @@ public class AT2MDMRM0042Test {
 
     public AT2MDMRM0042Test() {
     }
-
     public AT2MDMRM0042Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMRM0042Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMRM0042Data getData() {
         return data;
     }
-
     public void setData(AT2MDMRM0042Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Marketing Provisions");
         driver.getTestdetails().setSubmenu("Master Data Management");
         driver.getTestdetails().setScreen("Market");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -108,7 +100,6 @@ public class AT2MDMRM0042Test {
         }
         return true;
     }
-
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -152,7 +143,6 @@ public class AT2MDMRM0042Test {
         }
         return true;
     }
-
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -190,7 +180,6 @@ public class AT2MDMRM0042Test {
         }
         return true;
     }
-
     private boolean others_actions_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
