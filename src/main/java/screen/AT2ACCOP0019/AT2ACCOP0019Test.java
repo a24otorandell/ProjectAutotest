@@ -38,9 +38,9 @@ public class AT2ACCOP0019Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Transfers");
-        driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setMainmenu("Acomodation");
+        driver.getTestdetails().setSubmenu("Operations");
+        driver.getTestdetails().setScreen("Create Merchant");
     }
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);

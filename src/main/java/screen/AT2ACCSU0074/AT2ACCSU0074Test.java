@@ -101,6 +101,12 @@ public class AT2ACCSU0074Test {
                 getElements("template_descriptions_se_ch_legend"),"legend",true,true," on SEARCH")){
             return false;
         }//where
+        if(!Functions.clickSearchAndResult(driver,
+                new String[]{"template_descriptions_se_b_search",getElements("template_descriptions_se_b_search")}, //search button
+                new String[]{"template_descriptions_se_e_result",getElements("template_descriptions_se_e_result")}, //result element
+                " on SEARCH")){
+            return false;
+        }
         return true;
     }
 
