@@ -46,6 +46,7 @@ public class AT2MDMCL0013Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
+
         if (!data_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
         if (!interaction_edit_MDM(driver)) return false;
@@ -142,7 +143,7 @@ public class AT2MDMCL0013Sis {
                 where)) {
             return false;
         }
-        String list_options[] = {"Clasification", "Hotel", "Hotel – Contract", "Price"};
+        String list_options[] = {"Clasification", "Hotel", "Price"};
         String option = (list_options[new Random().nextInt(list_options.length)]);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_availability_disp", getElements("add_sl_availability_disp")},

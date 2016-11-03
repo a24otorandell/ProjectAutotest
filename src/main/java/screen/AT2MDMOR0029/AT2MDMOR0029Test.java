@@ -4,14 +4,8 @@ import com.gargoylesoftware.htmlunit.javascript.host.idb.IDBFactory;
 import core.CommonActions.CommonProcedures;
 import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
-import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
 
 /**
  * @author ajvirgili on 23/06/2016.
@@ -144,11 +138,7 @@ public class AT2MDMOR0029Test {
                 "qbe_atlas_company", data.getData().get("atlas_company"), "on QBE")) {
             return false;
         }
-        if(!Functions.selectText(driver,
-                new String[]{"service_authorization_qbe_sl_cod_division",getElements("service_authorization_qbe_sl_cod_division")},
-                data.getData().get("cod_division"),"qbe_cod_division"," on QBE")){
-            return false;
-        }
+
         if (!Functions.insertInput(driver, new String[]{"service_authorization_qbe_i_receptive", getElements("service_authorization_qbe_i_receptive")},
                 "qbe_receptive", data.getData().get("receptive"), "on QBE")) {
             return false;
@@ -169,6 +159,11 @@ public class AT2MDMOR0029Test {
             return false;
         }
 
+        if (!Functions.selectText(driver,
+                new String[]{"service_authorization_qbe_sl_cod_division", getElements("service_authorization_qbe_sl_cod_division")},
+                data.getData().get("cod_division"), "qbe_cod_division", " on QBE")) {
+            return false;
+        }
         Functions.break_time(driver, 6, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"service_authorization_qbe_i_text", getElements("service_authorization_qbe_i_text")}, //search button
@@ -234,21 +229,20 @@ public class AT2MDMOR0029Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
-                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(0,1),0),"on EDIT")){
+                "from", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6, 10), 0), "on EDIT")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_fate_to", getElements("service_authorization_ed_i_apply_fate_to")},
-                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(0,1),0),"on EDIT")){
+                "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6, 10), 0), "on EDIT")) {
             return false;
         }
-        Functions.break_time(driver,90,600);
+
         if (!Functions.selectText(driver,
                 new String[]{"service_authorization_ed_sl_cod_division", getElements("service_authorization_ed_sl_cod_division")},
                 "DS", "cod_division", " on EDIT")) {
             return false;
         }
-        Functions.break_time(driver,90,600);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"service_authorization_ed_b_save", getElements("service_authorization_ed_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -402,45 +396,4 @@ public class AT2MDMOR0029Test {
         }
         return true;
     }
-
-    /*public static boolean selectText(TestDriver driver, String[] pathselect, String content, String dataname, String where) {
-
-        boolean found = false;
-        Select e_select;
-        List<WebElement> options;
-        try {
-            e_select = new Select(driver.getDriver().findElement(By.xpath(pathselect[1])));
-            options = e_select.getOptions();
-        } catch (Exception f) {
-            String ecode = "--ERROR: selectText(): Unable to find the element " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
-            f.printStackTrace();
-            ErrorManager.process(driver, ecode);
-            return false;
-        }
-        try {
-            for (WebElement option : options) {
-                String optiontext = option.getText();
-                if (optiontext.contains(content)) {
-                    //sleep(1000);
-                    option.click();
-                    Functions.break_time(driver,10,100);
-                    driver.getReport().addContent("Option (" + content + ") selected on " + pathselect[0] + ".");
-                    found = true;
-                    driver.getTest().getData().put(dataname, content);
-                    break;
-                }
-            }
-            if (!found) {
-                String ecode = "--ERROR: selectText(): Unable to find the target option " + content + " into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
-                ErrorManager.process(driver, ecode);
-                return false;
-            }
-        } catch (Exception e) {
-            String ecode = "--ERROR: selectText(): Unable to find the target option into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
-            e.printStackTrace();
-            ErrorManager.process(driver, ecode);
-            return false;
-        }
-        return true;
-    }*/
 }

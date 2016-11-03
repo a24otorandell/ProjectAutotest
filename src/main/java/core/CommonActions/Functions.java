@@ -825,9 +825,8 @@ public class Functions {
             for (WebElement option : options) {
                 String optiontext = option.getText();
                 if (optiontext.contains(content)) {
-                    //sleep(1000);
                     option.click();
-                    break_time(driver,10,100);
+                    sleep(2000);
                     driver.getReport().addContent("Option (" + content + ") selected on " + pathselect[0] + ".");
                     found = true;
                     driver.getTest().getData().put(dataname, content);
@@ -1500,9 +1499,9 @@ public class Functions {
          */
         WebDriverWait wdw = new WebDriverWait(driver.getDriver(), seconds, miliseconds);
         try {
-            if(displayed(driver,".//*[@id='si7']/img")){
+            if (displayed(driver, "//*[contains(@id, 'si7')]/img")) {
                 System.out.println("working");
-                wdw.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(".//*[@id='si7']/img")));
+                wdw.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[contains(@id, 'si7')]/img")));
                 System.out.println("working finished");
             }
         } catch (Exception e) {
