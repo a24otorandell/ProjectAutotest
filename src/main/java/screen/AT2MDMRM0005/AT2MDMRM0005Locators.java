@@ -33,7 +33,7 @@ public class AT2MDMRM0005Locators {
         elements.put("product_e_records", "//*[contains(@id, 'pc1:ot2')]");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
-        elements.put("search_b_reset", "//*[contains(@id, '1:qryId1::reset')]");
+        elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
         elements.put("search_i_code", "//*[contains(@id, 'qryId1:value00::content')]");
         elements.put("search_sl_system", "//*[contains(@id, 'qryId1:value10::content')]");
         elements.put("search_i_product", "//*[contains(@id, 'qryId1:value20::content')]");
