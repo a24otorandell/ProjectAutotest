@@ -19,38 +19,30 @@ public class AT2ACCDI0029Test {
     public AT2ACCDI0029Test() {
 
     }
-
     public AT2ACCDI0029Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCDI0029Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCDI0029Data getData() {
         return data;
     }
-
     public void setData(AT2ACCDI0029Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodation");
         driver.getTestdetails().setSubmenu("Distribution");
-        driver.getTestdetails().setScreen("");
+        driver.getTestdetails().setScreen("Opaque maintenance 2.0");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -146,7 +138,6 @@ public class AT2ACCDI0029Test {
         }
         return true;
     }
-
     private boolean search_opaque(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -216,7 +207,6 @@ public class AT2ACCDI0029Test {
         }
         return true;
     }
-
     private boolean interaction_edit_opaque(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -298,7 +288,6 @@ public class AT2ACCDI0029Test {
         }
         return true;
     }
-
     private boolean qbe_opaque(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -359,7 +348,6 @@ public class AT2ACCDI0029Test {
         }
         return true;
     }
-
     private boolean others_actions_opaque(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA";
@@ -381,7 +369,6 @@ public class AT2ACCDI0029Test {
         }
         return true;
     }
-
     private boolean delete_opaque(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";

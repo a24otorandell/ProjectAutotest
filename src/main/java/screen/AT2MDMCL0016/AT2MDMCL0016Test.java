@@ -32,8 +32,8 @@ public class AT2MDMCL0016Test {
     }
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
-        driver.getTestdetails().setSubmenu("Suppliers");
-        driver.getTestdetails().setScreen("SWS Profiles 2.0");
+        driver.getTestdetails().setSubmenu("Clients");
+        driver.getTestdetails().setScreen("Generic TO groups 2.0");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
