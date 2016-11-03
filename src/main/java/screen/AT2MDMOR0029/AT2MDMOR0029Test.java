@@ -39,7 +39,7 @@ public class AT2MDMOR0029Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Operations");
-        driver.getTestdetails().setScreen(" 2.0");
+        driver.getTestdetails().setScreen("Service authorization");
     }
     public String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

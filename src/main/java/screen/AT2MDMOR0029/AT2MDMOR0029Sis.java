@@ -38,7 +38,7 @@ public class AT2MDMOR0029Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Operations");
-        driver.getTestdetails().setScreen("2.0");
+        driver.getTestdetails().setScreen("Service authorization");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -157,7 +157,7 @@ public class AT2MDMOR0029Sis {
                 "qbe_to", data.getData().get("to"), "on QBE")) {
             return false;
         }
-        Functions.break_time(driver,6,500);
+        Functions.break_time(driver,10,500);
         if (!Functions.selectText(driver,
                 new String[]{"service_authorization_qbe_sl_cod_division", getElements("service_authorization_qbe_sl_cod_division")},
                 data.getData().get("cod_division"), "qbe_cod_division", " on QBE")) {
