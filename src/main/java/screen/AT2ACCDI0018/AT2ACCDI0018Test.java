@@ -359,7 +359,7 @@ public class AT2ACCDI0018Test {
         }
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_company", getElements("add_lov_company")}, //LoV button
-                new String[]{"add_i_companyy", getElements("add_i_company")}, //external LoV input
+                new String[]{"add_i_company", getElements("add_i_company")}, //external LoV input
                 new String[]{"edit_lov_company_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 "CL1", // value to search
@@ -548,19 +548,19 @@ public class AT2ACCDI0018Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_cost", getElements("qbe_i_cost")},
-                "cost", getData("cost"), where)) {
+                "cost", getData("cost").replace(",","."), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_amount_cost", getElements("qbe_i_amount_cost")},
-                "amount_cost", getData("amount_cost"), where)) {
+                "amount_cost", getData("amount_cost").replace(",","."), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_extra", getElements("qbe_i_extra")},
-                "extra", getData("extra"), where)) {
+                "extra", getData("extra").replace(",","."), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_amount_extra", getElements("qbe_i_amount_extra")},
-                "amount_extra", getData("amount_extra"), where)) {
+                "amount_extra", getData("amount_extra").replace(",","."), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_currency", getElements("qbe_i_currency")},
