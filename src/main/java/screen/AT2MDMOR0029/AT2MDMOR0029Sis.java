@@ -137,6 +137,12 @@ public class AT2MDMOR0029Sis {
                 "qbe_atlas_company", data.getData().get("atlas_company"), "on QBE")) {
             return false;
         }
+        Functions.break_time(driver,10,500);
+        if(!Functions.selectText(driver,
+                new String[]{"service_authorization_qbe_sl_cod_division",getElements("service_authorization_qbe_sl_cod_division")},
+                data.getData().get("cod_division"),"qbe_cod_division"," on QBE")){
+            return false;
+        }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_qbe_i_receptive", getElements("service_authorization_qbe_i_receptive")},
                 "qbe_receptive", data.getData().get("receptive"), "on QBE")) {
@@ -157,12 +163,8 @@ public class AT2MDMOR0029Sis {
                 "qbe_to", data.getData().get("to"), "on QBE")) {
             return false;
         }
-        Functions.break_time(driver,10,500);
-        if (!Functions.selectText(driver,
-                new String[]{"service_authorization_qbe_sl_cod_division", getElements("service_authorization_qbe_sl_cod_division")},
-                data.getData().get("cod_division"), "qbe_cod_division", " on QBE")) {
-            return false;
-        }
+
+
         Functions.break_time(driver, 6, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"service_authorization_qbe_i_text", getElements("service_authorization_qbe_i_text")}, //search button
@@ -227,12 +229,12 @@ public class AT2MDMOR0029Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
-                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(6,5),0),"on EDIT")){
+                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(0,1),0),"on EDIT")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_fate_to", getElements("service_authorization_ed_i_apply_fate_to")},
-                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(6,10),0),"on EDIT")){
+                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(0,1),0),"on EDIT")){
             return false;
         }
 
