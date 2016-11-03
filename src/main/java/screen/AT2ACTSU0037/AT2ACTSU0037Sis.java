@@ -35,7 +35,6 @@ public class AT2ACTSU0037Sis {
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Disney days 2.0");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
