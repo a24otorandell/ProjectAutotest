@@ -38,7 +38,7 @@ public class AT2MDMCL0024Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Clients");
-        driver.getTestdetails().setScreen("Commision");
+        driver.getTestdetails().setScreen("Commision maintenance");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
