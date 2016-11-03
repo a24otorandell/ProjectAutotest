@@ -33,9 +33,9 @@ public class AT2ACTSU0037Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Accommodations");
+        driver.getTestdetails().setMainmenu("Disney Connectivity");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Suppliers B2B 2.0");
+        driver.getTestdetails().setScreen("Disney days 2.0");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
