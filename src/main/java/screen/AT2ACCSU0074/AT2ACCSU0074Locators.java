@@ -32,6 +32,7 @@ public class AT2ACCSU0074Locators {
         elements.put("template_descriptions_add_template_i_condition_second","//*[contains(@id, '1:it12::content')]");
         elements.put("template_descriptions_add_template_b_and","//*[contains(@id, '1:bAnd')]");
         elements.put("template_descriptions_add_template_b_or","//*[contains(@id, '1:bOr')]");
+        elements.put("template_descriptions_add_i_result","//*[contains(@id, 'it11::content')]");
         elements.put("template_descriptions_add_template_sl_active","//*[contains(@id, '1:sbc8::content')]");
         elements.put("template_descriptions_add_template_sl_main","//*[contains(@id, '1:sbc6::content')]");
         elements.put("template_descriptions_add_template_sl_legend","//*[contains(@id, '1:sbc7::content')]");
@@ -49,6 +50,7 @@ public class AT2ACCSU0074Locators {
         elements.put("template_descriptions_add_text_sl_button","//*[contains(@id, '1:smc1::drop')]");
         elements.put("template_descriptions_add_text_sl_check_box","//*[contains(@id, '1:smc1::drop')]");
         elements.put("template_descriptions_add_text_b_add","//*[contains(@id, '1:bAddText')]");
+        elements.put("template_descriptions_add_text_i_description_text","//*[contains(@id, '1:it10::content')]");
         // Final Text
         elements.put("template_descriptions_add_sl_active_final_text","//*[contains(@id, '1:sbc9::content')]");
         elements.put("template_descriptions_add_final_text_lov_template","//*[contains(@id, '1:legendId::lovIconId')]");
@@ -67,7 +69,30 @@ public class AT2ACCSU0074Locators {
         elements.put("template_descriptions_add_b_save","//*[contains(@id, '1:btn_commitExit')]");
 
 
-        //Search
+        //SEARCH
+        elements.put("template_descriptions_se_i_code","//*[contains(@id, 'qryId1:value00::content')]");
+        elements.put("template_descriptions_se_i_description","//*[contains(@id, 'qryId1:value10::content')]");
+        elements.put("template_descriptions_se_i_creation_date_from","//*[contains(@id, 'qryId1:value20::content')]");
+        elements.put("template_descriptions_se_i_creation_date_to","//*[contains(@id, 'qryId1:value21::content')]");
+        elements.put("template_descriptions_se_i_modification_date_from","//*[contains(@id, 'qryId1:value30::content')]");
+        elements.put("template_descriptions_se_i_modification_date_to","//*[contains(@id, 'qryId1:value31::content']");
+        elements.put("template_descriptions_se_i_condition","//*[contains(@id, 'qryId1:value40::content')]");
+        elements.put("template_descriptions_se_lov_alias","//*[contains(@id, 'qryId1:value21::content')]");
+        elements.put("template_descriptions_se_i_alias","//*[contains(@id, 'qryId1:value50::content')]");
+        elements.put("template_descriptions_se_i_text","//*[contains(@id, 'qryId1:value60::content')]");
+        elements.put("template_descriptions_se_ch_active","//*[contains(@id, 'qryId1:value70::content')]");
+        elements.put("template_descriptions_se_ch_main","//*[contains(@id, 'qryId1:value80::content')]");
+        elements.put("template_descriptions_se_ch_legend","//*[contains(@id, 'qryId1:value90::content')]");
+        elements.put("template_descriptions_se_lov_creation_user","//*[contains(@id, 'qryId1:value100::lovIconId')]");
+        elements.put("template_descriptions_se_i_creation_user","//*[contains(@id, 'qryId1:value100::content')]");
+        elements.put("template_descriptions_se_lov_modification_user","//*[contains(@id, 'qryId1:value110::lovIconId')]");
+        elements.put("template_descriptions_se_i_modification_user","//*[contains(@id, 'qryId1:value110::content')]");
+        elements.put("template_descriptions_se_ch_lenguaje","//*[contains(@id, 'qryId1:value120::drop')]");
+        elements.put("template_descriptions_se_i_lenguaje","//*[contains(@id, 'qryId1:value120::content')]");
+        elements.put("template_descriptions_se_b_search","//*[contains(@id, 'qryId1::search')]");
+        elements.put("template_descriptions_se_b_reset","//*[contains(@id, 'qryId1::reset')]");
+        elements.put("template_descriptions_se_e_result","//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
+
 
     }
 }
