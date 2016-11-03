@@ -162,7 +162,7 @@ public class AT2MDMSP0023Sis {
             return false;
         } // where the operation occurs
         if (!Functions.insertInput(driver, new String[]{"qbe_i_suppliers", getElements("qbe_i_suppliers")},
-                "supplieR", getData("supplier"), where)) {
+                "supplier", getData("supplier"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_description", getElements("qbe_i_description")},
