@@ -1,6 +1,7 @@
 package screen.AT2ACCOP0005;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
@@ -10,9 +11,6 @@ import screen.AT2ACCOP0005.AT2ACCOP0005Locators;
 /**
  * Created by lchacartegui on 31/08/2016.
  */
-
-/* TODO BUG: Fallan todos los campos fecha en la qbe del history */
-
 
 public class AT2ACCOP0005Test {
     protected AT2ACCOP0005Locators locators;
@@ -50,25 +48,12 @@ public class AT2ACCOP0005Test {
 
     protected boolean testCSED(TestDriver driver) {
         Functions.zoomOut(driver);
-        if (!create(driver, true)) {
-            return false;
-        }
-        if (!search(driver)) {
-            return false;
-        }
-        if (!create(driver, false)) {
-            return false;
-        }
-        if (!qbe(driver)) {
-            return false;
-        }
-        if (!otherFunctions(driver)) {
-            return false;
-        }
-        if (!delete(driver)) {
-            return false;
-        }
-        if (!history_get_values(driver)) return false;
+        if (!create(driver, true)) return false;
+        if (!search(driver)) return false;
+        if (!create(driver, false)) return false;
+        if (!qbe(driver)) return false;
+        if (!otherFunctions(driver)) return false;
+        if (!delete(driver)) return false;
         if (!history_qbe(driver)) return false;
         return true;
     }
@@ -237,78 +222,21 @@ public class AT2ACCOP0005Test {
 
         return true;
     }
-    ////////// - HISTORY GET VALUES - //////////
-    private boolean history_get_values(TestDriver driver) {
-        driver.getReport().addHeader("RECORD HISTORY: GET VALUES", 3, true);
-
+    ////////// - HISTORY QBE - //////////
+    private boolean history_qbe(TestDriver driver) {
+        driver.getReport().addHeader("RECORD HISTORY: QBE", 3, true);
         if (!Functions.checkClick(driver,
                 new String[]{"general_b_actions", getElements("general_b_actions")}, //element to click
                 new String[]{"actions_b_history", getElements("actions_b_history")}, //element expected to appear
                 " on HISTORY GET VALUES ")) {
             return false;
         }
-
         if (!Functions.checkClick(driver,
                 new String[]{"actions_b_history", getElements("actions_b_history")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
                 " on HISTORY GET VALUES ")) {
             return false;
         }
-
-        if (!Functions.getText(driver,
-                new String[]{"history_e_fec_iniv", getElements("history_e_fec_iniv")}, // element path
-                "fec_iniv", // key for data value (the name)
-                " on HISTORY GET VALUES ")) {
-            return false;
-        } // where this operation occurs
-
-        if (!Functions.getText(driver,
-                new String[]{"history_e_fec_finv", getElements("history_e_fec_finv")}, // element path
-                "fec_finv", // key for data value (the name)
-                " on HISTORY GET VALUES ")) {
-            return false;
-        } // where this operation occurs
-
-        if (!Functions.getText(driver,
-                new String[]{"history_e_office_time_from", getElements("history_e_office_time_from")}, // element path
-                "office_time_from", // key for data value (the name)
-                " on HISTORY GET VALUES ")) {
-            return false;
-        } // where this operation occurs
-
-        if (!Functions.getText(driver,
-                new String[]{"history_e_office_time_to", getElements("history_e_office_time_to")}, // element path
-                "office_time_to", // key for data value (the name)
-                " on HISTORY GET VALUES ")) {
-            return false;
-        } // where this operation occurs
-
-        if (!Functions.getText(driver,
-                new String[]{"history_e_usu_finv", getElements("history_e_usu_finv")}, // element path
-                "usu_finv", // key for data value (the name)
-                " on HISTORY GET VALUES ")) {
-            return false;
-        } // where this operation occurs
-
-        if (!Functions.getText(driver,
-                new String[]{"history_e_bibit_merchant", getElements("history_e_bibit_merchant")}, // element path
-                "bibit_merchant", // key for data value (the name)
-                " on HISTORY GET VALUES ")) {
-            return false;
-        } // where this operation occurs
-
-        if (!Functions.getText(driver,
-                new String[]{"history_e_cod_pais", getElements("history_e_cod_pais")}, // element path
-                "cod_pais", // key for data value (the name)
-                " on HISTORY GET VALUES ")) {
-            return false;
-        } // where this operation occurs
-
-        return true;
-    }
-    ////////// - HISTORY QBE - //////////
-    private boolean history_qbe(TestDriver driver) {
-        driver.getReport().addHeader("RECORD HISTORY: QBE", 3, true);
 
         if (!Functions.clickQbE(driver,
                 new String[]{"history_b_qbe", getElements("history_b_qbe")},// query button
@@ -320,7 +248,8 @@ public class AT2ACCOP0005Test {
         if (!Functions.insertInput(driver,
                 new String[]{"history_qbe_i_fec_iniv", getElements("history_qbe_i_fec_iniv")},
                 "fec_iniv",
-                getData("fec_iniv"),
+                //getData("fec_iniv"),
+                DataGenerator.getToday(driver, "dd/MM/yyyy"),
                 " on HISTORY QBE ")) {
             return false;
         }
@@ -328,7 +257,8 @@ public class AT2ACCOP0005Test {
         if (!Functions.insertInput(driver,
                 new String[]{"history_qbe_i_fec_finv", getElements("history_qbe_i_fec_finv")},
                 "fec_finv",
-                getData("fec_finv"),
+                //getData("fec_finv"),
+                DataGenerator.getToday(driver, "dd/MM/yyyy"),
                 " on HISTORY QBE ")) {
             return false;
         }
@@ -336,7 +266,8 @@ public class AT2ACCOP0005Test {
         if (!Functions.insertInput(driver,
                 new String[]{"history_qbe_i_office_time_from", getElements("history_qbe_i_office_time_from")},
                 "office_time_from",
-                getData("office_time_from"),
+                //getData("office_time_from"),
+                DataGenerator.getToday(driver, "dd/MM/yyyy"),
                 " on HISTORY QBE ")) {
             return false;
         }
@@ -344,7 +275,8 @@ public class AT2ACCOP0005Test {
         if (!Functions.insertInput(driver,
                 new String[]{"history_qbe_i_office_time_to", getElements("history_qbe_i_office_time_to")},
                 "office_time_to",
-                getData("office_time_to"),
+                //getData("office_time_to"),
+                DataGenerator.getToday(driver, "dd/MM/yyyy"),
                 " on HISTORY QBE ")) {
             return false;
         }
@@ -352,23 +284,26 @@ public class AT2ACCOP0005Test {
         if (!Functions.insertInput(driver,
                 new String[]{"history_qbe_i_usu_finv", getElements("history_qbe_i_usu_finv")},
                 "usu_finv",
-                getData("usu_finv"),
+                //getData("usu_finv"),
+                "RECEPTIVO",
                 " on HISTORY QBE ")) {
             return false;
         }
 
         if (!Functions.insertInput(driver,
                 new String[]{"history_qbe_i_bibit_merchant", getElements("history_qbe_i_bibit_merchant")},
-                "bibit_merchant",
-                getData("bibit_merchant"),
+                "merchant",
+                //getData("merchant"),
+                getData("merchant"),
                 " on HISTORY QBE ")) {
             return false;
         }
 
         if (!Functions.insertInput(driver,
                 new String[]{"history_qbe_i_cod_pais", getElements("history_qbe_i_cod_pais")},
-                "cod_pais",
-                getData("cod_pais"),
+                "country_code",
+                //getData("country_code"),
+                getData("country_code"),
                 " on HISTORY QBE ")) {
             return false;
         }
