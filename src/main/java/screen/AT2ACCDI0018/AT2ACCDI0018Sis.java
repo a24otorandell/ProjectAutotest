@@ -20,10 +20,6 @@ public class AT2ACCDI0018Sis {
     protected AT2ACCDI0018Data data;
     public AT2ACCDI0018Sis() {
     }
-    public static double getRandom(Double valorMinimo, Double valorMaximo) {
-        Random rand = new Random();
-        return valorMinimo + (valorMaximo - valorMinimo) * rand.nextDouble();
-    }
     public AT2ACCDI0018Locators getLocators() {
         return locators;
     }
