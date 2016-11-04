@@ -42,7 +42,7 @@ public class AT2TRFSU0008Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setScreen("Routes by default");
     }
 
     protected String getElements(String key) {

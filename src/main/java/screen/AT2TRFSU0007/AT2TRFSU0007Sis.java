@@ -37,7 +37,7 @@ public class AT2TRFSU0007Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setScreen("Vehicle types 2.0");
     }
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
