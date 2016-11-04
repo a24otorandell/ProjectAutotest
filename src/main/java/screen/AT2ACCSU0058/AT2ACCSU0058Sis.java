@@ -31,9 +31,9 @@ public class AT2ACCSU0058Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Maintenance HSI mapping");
-        driver.getTestdetails().setSubmenu("Accommodation");
-        driver.getTestdetails().setScreen("Setup");
+        driver.getTestdetails().setMainmenu("Accommodation");
+        driver.getTestdetails().setSubmenu("Setup");
+        driver.getTestdetails().setScreen("Maintenance HSI mapping");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

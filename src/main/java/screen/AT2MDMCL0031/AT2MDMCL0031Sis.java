@@ -32,9 +32,9 @@ public class AT2MDMCL0031Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Hotelopia Partners Group");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Clients");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Clients");
+        driver.getTestdetails().setScreen("Hotelopia Partners Group");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

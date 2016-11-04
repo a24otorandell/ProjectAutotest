@@ -31,9 +31,9 @@ public class AT2ACCOP0004Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("BIBIT Blacklist query");
-        driver.getTestdetails().setSubmenu("Accommodation");
-        driver.getTestdetails().setScreen("Operations");
+        driver.getTestdetails().setMainmenu("Accommodation");
+        driver.getTestdetails().setSubmenu("Operations");
+        driver.getTestdetails().setScreen("BIBIT Blacklist query");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

@@ -32,9 +32,9 @@ public class AT2ACCCO0049Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Disney Mapping");
-        driver.getTestdetails().setSubmenu("Accommodation");
-        driver.getTestdetails().setScreen("Contracting");
+        driver.getTestdetails().setMainmenu("Accommodation");
+        driver.getTestdetails().setSubmenu("Contracting");
+        driver.getTestdetails().setScreen("Disney Mapping");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

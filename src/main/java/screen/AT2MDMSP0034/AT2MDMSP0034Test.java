@@ -31,9 +31,9 @@ public class AT2MDMSP0034Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("SP Profiles");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Supplier");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Supplier");
+        driver.getTestdetails().setScreen("SP Profiles");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

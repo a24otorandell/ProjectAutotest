@@ -14,38 +14,30 @@ public class AT2ACTSU1005Sis {
 
     public AT2ACTSU1005Sis() {
     }
-
     public AT2ACTSU1005Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACTSU1005Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACTSU1005Data getData() {
         return data;
     }
-
     public void setData(AT2ACTSU1005Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Setup Barcodes Loro park integration");
-        driver.getTestdetails().setSubmenu("Activities");
-        driver.getTestdetails().setScreen("Setup");
+        driver.getTestdetails().setMainmenu("Activities");
+        driver.getTestdetails().setSubmenu("Setup");
+        driver.getTestdetails().setScreen("Setup Barcodes Loro park integration");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -85,7 +77,6 @@ public class AT2ACTSU1005Sis {
         }
         return true;
     }
-
     private boolean search_activities(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         Functions.break_time(driver, 30, 500);
@@ -119,7 +110,6 @@ public class AT2ACTSU1005Sis {
         }
         return true;
     }
-
     private boolean interaction_edit_activities(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -145,7 +135,6 @@ public class AT2ACTSU1005Sis {
         }
         return true;
     }
-
     private boolean qbe_activities(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -176,7 +165,6 @@ public class AT2ACTSU1005Sis {
         }
         return true;
     }
-
     private boolean others_actions_activities(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -197,7 +185,6 @@ public class AT2ACTSU1005Sis {
         }
         return true;
     }
-
     private boolean delete_activities(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";

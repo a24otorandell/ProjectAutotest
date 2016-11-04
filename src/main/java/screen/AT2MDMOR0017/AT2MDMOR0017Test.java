@@ -14,38 +14,30 @@ public class AT2MDMOR0017Test {
 
     public AT2MDMOR0017Test() {
     }
-
     public AT2MDMOR0017Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMOR0017Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMOR0017Data getData() {
         return data;
     }
-
     public void setData(AT2MDMOR0017Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Labels Reports Maintenance");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Organization");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Organization");
+        driver.getTestdetails().setScreen("Labels Reports Maintenance");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
@@ -170,7 +162,6 @@ public class AT2MDMOR0017Test {
         }
         return true;
     }
-
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -276,7 +267,6 @@ public class AT2MDMOR0017Test {
         }
         return true;
     }
-
     private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -392,7 +382,6 @@ public class AT2MDMOR0017Test {
         }
         return true;
     }
-
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -456,7 +445,6 @@ public class AT2MDMOR0017Test {
         }
         return true;
     }
-
     private boolean others_actions_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -477,7 +465,6 @@ public class AT2MDMOR0017Test {
         }
         return true;
     }
-
     private boolean delete_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";

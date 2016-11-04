@@ -37,9 +37,9 @@ public class AT2ACCSU0075Test {
     }
 
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Atributos plantillas");
+        driver.getTestdetails().setMainmenu("Setup");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Setup");
+        driver.getTestdetails().setScreen("Atributos plantillas");
     }
 
     protected String getElements(String key) {

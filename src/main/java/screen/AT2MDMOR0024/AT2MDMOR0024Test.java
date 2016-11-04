@@ -14,7 +14,6 @@ public class AT2MDMOR0024Test {
 
     public AT2MDMOR0024Test() {
     }
-
     public AT2MDMOR0024Locators getLocators() {
         return locators;
     }
@@ -32,9 +31,9 @@ public class AT2MDMOR0024Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Zones");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Organization");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Organization");
+        driver.getTestdetails().setScreen("Zones");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

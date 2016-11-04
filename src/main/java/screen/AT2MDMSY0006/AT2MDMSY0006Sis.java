@@ -31,9 +31,9 @@ public class AT2MDMSY0006Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Printing");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("System");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("System");
+        driver.getTestdetails().setScreen("Printing");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
