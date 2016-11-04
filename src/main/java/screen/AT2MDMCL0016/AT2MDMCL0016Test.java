@@ -33,7 +33,7 @@ public class AT2MDMCL0016Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Clients");
-        driver.getTestdetails().setScreen("Generic TO groups 2.0");
+        driver.getTestdetails().setScreen("Tour Operators Groups");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -182,15 +182,27 @@ public class AT2MDMCL0016Test {
         return true;
     }
 
-    private boolean qbe_to(TestDriver driver) {
+    private boolean qbe_hard (TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
-        String where = " on QBE";
+        String where = " on QBE HARD";
+        if (!Functions.simpleClick(driver,
+                new String[]{"qbe_reset", getElements("qbe_reset")}, //element to click
+                where)){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"group_b_qbe", getElements("group_b_qbe")}, //element to click
+                where)){return false;}
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
+                new String[]{"group_e_result", getElements("group_e_result")}, //result element
+                where)) {
+            return false;
+        }
         if (!Functions.clickQbE(driver,
                 new String[]{"group_b_qbe", getElements("group_b_qbe")},// query button
                 new String[]{"qbe_i_group_code", getElements("qbe_i_group_code")},//any query input
                 where)) {
             return false;
-        } // where the operation occurs
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_group_code", getElements("qbe_i_group_code")},
                 "code", "6TOUR", where)) {
             return false;
@@ -199,12 +211,16 @@ public class AT2MDMCL0016Test {
                 "name", "6 TOUR", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_group_code", getElements("qbe_i_group_code")}, //search button
-                new String[]{"group_e_result", getElements("group_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_group_name", getElements("qbe_i_group_name")}, //any query input
+                new String[]{"group_e_result", getElements("group_e_result")}, //table result
+                where)){return false;}
+        return true;
+    }
+    private boolean qbe_to(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE";
+        qbe_hard(driver);
         Functions.zoomOut(driver);
         if (!Functions.clickQbE(driver,
                 new String[]{"to_b_qbe", getElements("to_b_qbe")},// query button

@@ -42,6 +42,7 @@ public class AT2MDMCL0016Locators {
         elements.put("add_i_group_name", "//*[contains(@id, 'pcgt2:it8::content')]");
         elements.put("add_ck_hotelextras_group", "//*[contains(@id, 'pcgt2:sbc1::content')]");
         //QBE
+        elements.put("qbe_reset", "//*[contains(@id, 't1::ch::t')]");
         elements.put("qbe_i_group_code", "//*[contains(@id, '_afr_c2::content')]");
         elements.put("qbe_i_group_name", "//*[contains(@id, '_afr_c1::content')]");
         elements.put("qbe_i_hotelextras_group", "//*[contains(@id, '_afr_c6::content')]");
