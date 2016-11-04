@@ -3,6 +3,7 @@ package screen.AT2ACCOP0021;
 import com.gargoylesoftware.htmlunit.javascript.host.idb.IDBFactory;
 import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
@@ -41,9 +42,9 @@ public class AT2ACCOP0021Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Transfers");
-        driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setMainmenu("Accomodation");
+        driver.getTestdetails().setSubmenu("Operation");
+        driver.getTestdetails().setScreen("Payment Service Provider Template Configuration");
     }
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
@@ -59,7 +60,28 @@ public class AT2ACCOP0021Test {
         if (!Template_management(driver)) return false;
         if (!Go_to_template_mapping_management(driver)) return false;
         if (!Template_mapping_management(driver)) return false;
+        if(!Return_template_management(driver)){
+            return false;
+        }
+        if(!Delete_management(driver)){
+            return false;
+        }
         return false;
+    }
+
+    private boolean Return_template_management (TestDriver driver){
+        driver.getReport().addHeader("GO TO IN TEMPLATE MANAGEMENT ",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"go_to_template_management",getElements("go_to_template_management")}, //element to click
+                new String[]{"template_management_del_b_delete",getElements("template_management_del_b_delete")}, //element expected to appear
+                " on Go to")){
+            return false;
+        }
+
+        return true;
+
+
     }
 
     //TEMPLATE MANAGEMENT
@@ -85,9 +107,6 @@ public class AT2ACCOP0021Test {
             return false;
         }
 
-        if (!Delete_management(driver)) {
-            return false;
-        }
 
         return true;
     }
@@ -167,11 +186,11 @@ public class AT2ACCOP0021Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"template_management_ed_i_template_code", getElements("template_management_ed_i_template_code")},
-                "code", "PB2", " on EDIT")) {
+                "code",DataGenerator.getRandomAlphanumericSequence(4,true)," on EDIT")){
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"template_management_ed_i_template_name", getElements("template_management_ed_i_template_name")},
-                "name", "Prueba2", " on EDIT")) {
+                "name",DataGenerator.getRandomAlphanumericSequence(6,true)," on EDIT")){
             return false;
         }
         Functions.break_time(driver, 6, 500);
@@ -208,10 +227,6 @@ public class AT2ACCOP0021Test {
             return false;
         }
 
-        if (!Functions.insertInput(driver, new String[]{"template_management_se_i_template_name", getElements("template_management_se_i_template_name")},
-                "se_name", data.getData().get("name"), " on ADD")) {
-            return false;
-        }
         if (!Functions.selectText(driver,
                 new String[]{"template_management_se_sl_enabled", getElements("template_management_se_sl_enabled")},
                 "No", "se_enabled", " on SEARCH")) {
@@ -239,17 +254,20 @@ public class AT2ACCOP0021Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"template_management_add_i_template_code", getElements("template_management_add_i_template_code")},
-                "code", "PB1", " on ADD")) {
+                "code",DataGenerator.getRandomAlphanumericSequence(4,true)," on ADD")){
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"template_management_add_i_template_name", getElements("template_management_add_i_template_name")},
-                "name", "Prueba1", " on ADD")) {
-            return false;
-        }
+        Functions.break_time(driver,7,500);
         if (!Functions.checkboxValue(driver,
                 getElements("template_management_add_cb_enabled"), "enabled", false, true, " on ADD")) {
             return false;
         }
+        if(!Functions.insertInput(driver,new String[]{"template_management_add_i_template_name",getElements("template_management_add_i_template_name")},
+                "name",DataGenerator.getRandomAlphanumericSequence(6,true)," on ADD")){
+            return false;
+        }
+        Functions.break_time(driver,6,500);
+
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"template_management_add_b_save", getElements("template_management_add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -332,11 +350,12 @@ public class AT2ACCOP0021Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"template_mapping_qbe_i_pc_template_code", getElements("template_mapping_qbe_i_pc_template_code")},
-                "qbe_code", data.getData().get("code"), " on QBE")) {
+                "qbe_code",data.getData().get("code_mapping")," on QBE")){
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"template_mapping_qbe_i_template_name", getElements("template_mapping_qbe_i_template_name")},
-                "qbe_name", " ", " on QBE")) {
+        if(!Functions.getText(driver,new String[]{"template_mapping_qbe_e_template_name_result",getElements("template_mapping_qbe_e_template_name_result")}, // element path
+                "template_name", // key for data value (the name)
+                " on QBE")){
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"template_mapping_qbe_i_psp_template_code", getElements("template_mapping_qbe_i_psp_template_code")},
@@ -350,6 +369,10 @@ public class AT2ACCOP0021Test {
         if (!Functions.selectText(driver,
                 new String[]{"template_mapping_qbe_sl_enabled", getElements("template_mapping_qbe_sl_enabled")},
                 "No", "qbe_enabled", " on QBE")) {
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"template_mapping_qbe_i_template_name",getElements("template_mapping_qbe_i_template_name")},
+                "qbe_name",getData("template_name")," on QBE")){
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
@@ -380,7 +403,7 @@ public class AT2ACCOP0021Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "code", //Data name
+                "code_mapping", //Data name
                 " on EDIT")) {
             return false;
         }
@@ -391,17 +414,17 @@ public class AT2ACCOP0021Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "provider", //Data name
+                "provider_mapping", //Data name
                 " on EDIT")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"template_mapping_ed_i_psp_template_code", getElements("template_mapping_ed_i_psp_template_code")},
-                "psp_code", "PB2", " on EDIT")) {
+                "psp_code",getData("code")," on EDIT")){
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"template_mapping_ed_i_psp_template_name", getElements("template_mapping_ed_i_psp_template_name")},
-                "psp_name", "Prueba2", " on EDIT")) {
+                "psp_name",getData("name")," on EDIT")){
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -428,7 +451,7 @@ public class AT2ACCOP0021Test {
                 new String[]{"template_mapping_se_lov_pc_template_code", getElements("template_mapping_se_lov_pc_template_code")}, //LoV button
                 new String[]{"template_mapping_se_i_pc_template_code", getElements("template_mapping_se_i_pc_template_code")}, //external LoV input
                 new String[]{"template_mapping_se_lov_pc_template_code_i_template", getElements("template_mapping_se_lov_pc_template_code_i_template")}, //internal LoV input
-                data.getData().get("code"), // value to search
+                data.getData().get("code_mapping"), // value to search
                 "se_code", //name of the data
                 " on SEARCH")) {
             return false;
@@ -486,7 +509,7 @@ public class AT2ACCOP0021Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "code", //Data name
+                "code_mapping", //Data name
                 " on ADD")) {
             return false;
         }
@@ -497,17 +520,17 @@ public class AT2ACCOP0021Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "provider", //Data name
+                "provider_mapping", //Data name
                 " on ADD")) {
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"template_mapping_add_i_psp_template_code", getElements("template_mapping_add_i_psp_template_code")},
-                "psp_code", "PB2", " on ADD")) {
+                "psp_code",getData("code")," on ADD")){
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"template_mapping_add_i_psp_template_name", getElements("template_mapping_add_i_psp_template_name")},
-                "psp_name", "Prueba2", " on ADD")) {
+                "psp_name",getData("name")," on ADD")){
             return false;
         }
         if (!Functions.checkboxValue(driver,

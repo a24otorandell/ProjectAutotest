@@ -71,8 +71,9 @@ public class AT2ACCOP0021Locators {
 
 
         //GO TO
-
         elements.put("go_to_template_mapping_management", "//*[contains(@id, '1:sdi1::disAcr')]");
+        elements.put("go_to_template_management","//*[contains(@id, '1:sdi8::disAcr')]");
+
 
 
         //TEMPLATE MAPPING MANAGEMENT
@@ -127,6 +128,7 @@ public class AT2ACCOP0021Locators {
         elements.put("template_mapping_qbe_i_psp_template_code", "//*[contains(@id, 't2_afr_c5::content')]");
         elements.put("template_mapping_qbe_i_psp_template_name", "//*[contains(@id, 't2_afr_c8::content')]");
         elements.put("template_mapping_qbe_sl_enabled", "//*[contains(@id, 't2:soc2::content')]");
+        elements.put("template_mapping_qbe_e_template_name_result","//*[contains(@id, 'pc2:t2::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[3]");
 
         //OTHER ACTIONS
 
