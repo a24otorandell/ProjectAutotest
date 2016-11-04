@@ -14,44 +14,35 @@ public class AT2MDMRM0006Test {
 
     public AT2MDMRM0006Test() {
     }
-
     public AT2MDMRM0006Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2MDMRM0006Locators locators) {
         this.locators = locators;
     }
-
     public AT2MDMRM0006Data getData() {
         return data;
     }
-
     public void setData(AT2MDMRM0006Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Channel");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Market");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Market");
+        driver.getTestdetails().setScreen("Channel");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
 
     protected boolean testCSED(TestDriver driver) {
-
         if (!channel_interaction_record_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
         if (!channel_qbe_MDM(driver)) return false;
@@ -86,7 +77,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         Functions.break_time(driver, 30, 500);
@@ -104,7 +94,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -126,7 +115,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_other_actions_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
@@ -147,7 +135,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_description_interaction_record_MDM(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
@@ -179,7 +166,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_description_interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
@@ -216,7 +202,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_description_qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
@@ -251,7 +236,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_description_other_actions_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - DETACH", 3, false);
         String where = " on DETACH";
@@ -263,7 +247,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_description_delete_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
@@ -275,7 +258,6 @@ public class AT2MDMRM0006Test {
         }
         return true;
     }
-
     private boolean channel_delete_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";

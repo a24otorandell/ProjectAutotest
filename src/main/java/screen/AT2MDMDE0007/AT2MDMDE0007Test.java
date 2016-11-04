@@ -31,9 +31,9 @@ public class AT2MDMDE0007Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Interest Points");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Destination");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Destination");
+        driver.getTestdetails().setScreen("Interest Points");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

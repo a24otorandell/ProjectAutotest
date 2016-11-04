@@ -31,9 +31,9 @@ public class AT2MDMCL0034Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Currency Exchange");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Clients");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Clients");
+        driver.getTestdetails().setScreen("Currency Exchange");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

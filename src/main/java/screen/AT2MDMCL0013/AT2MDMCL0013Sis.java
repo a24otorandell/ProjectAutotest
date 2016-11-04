@@ -34,9 +34,9 @@ public class AT2MDMCL0013Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Limited availability");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Clients");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Clients");
+        driver.getTestdetails().setScreen("Limited availability");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

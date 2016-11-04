@@ -33,9 +33,9 @@ public class AT2ACCSU0057Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Plugin Properties");
-        driver.getTestdetails().setSubmenu("Accommodation");
-        driver.getTestdetails().setScreen("Setup");
+        driver.getTestdetails().setMainmenu("Plugin Accommodation");
+        driver.getTestdetails().setSubmenu("Setup");
+        driver.getTestdetails().setScreen("Plugin Properties");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

@@ -31,9 +31,9 @@ public class AT2MDMDE0012Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("SP Roles");
-        driver.getTestdetails().setSubmenu("Master Data Management");
-        driver.getTestdetails().setScreen("Supplier");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Destination");
+        driver.getTestdetails().setScreen("Destinations web contents");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
