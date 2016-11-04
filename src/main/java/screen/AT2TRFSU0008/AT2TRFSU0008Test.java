@@ -1,6 +1,7 @@
 package screen.AT2TRFSU0008;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
@@ -89,7 +90,6 @@ public class AT2TRFSU0008Test {
 
         return true;
     }
-
     private boolean Create_in_route_second_time(TestDriver driver) {
         driver.getReport().addHeader("ADD IN ROUTES BY DEFAULT", 3, false);
 
@@ -103,7 +103,7 @@ public class AT2TRFSU0008Test {
         }
         if (!Functions.insertInput(driver,
                 new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")},
-                "area_code", "PB2", " on CREATE")) {
+                "area_code",DataGenerator.getRandomAlphanumericSequence(3,true)," on CREATE")){
             return false;
         }
 
@@ -119,7 +119,7 @@ public class AT2TRFSU0008Test {
         }
 
         if (!Functions.checkboxValue(driver,
-                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " on CREATE")) {
+                getElements("create_route_e_route_maintence_ch_default_route"),"default_route",false,true," on CREATE")){
             return false;
         }//where
 
@@ -139,7 +139,6 @@ public class AT2TRFSU0008Test {
 
         return true;
     }
-
     private boolean Go_to_routes_by_default(TestDriver driver) {
 
         driver.getReport().addHeader("GO TO IN ROUTES BY DEFAULT", 3, false);
@@ -148,7 +147,6 @@ public class AT2TRFSU0008Test {
         driver.getTestdetails().setTestname("AT2TRFSU0008");
         return true;
     }
-
     private boolean Create_in_route(TestDriver driver) {
         driver.getReport().addHeader("ADD IN ROUTES BY DEFAULT", 3, false);
 
@@ -162,7 +160,7 @@ public class AT2TRFSU0008Test {
         }
         if (!Functions.insertInput(driver,
                 new String[]{"create_route_e_route_maintence_i_area_code", getElements("create_route_e_route_maintence_i_area_code")},
-                "area_code", "PB1", " on CREATE")) {
+                "area_code",DataGenerator.getRandomAlphanumericSequence(3,true)," on CREATE")){
             return false;
         }
 
@@ -178,7 +176,7 @@ public class AT2TRFSU0008Test {
         }
 
         if (!Functions.checkboxValue(driver,
-                getElements("create_route_e_route_maintence_ch_default_route"), "default_route", true, true, " on CREATE")) {
+                getElements("create_route_e_route_maintence_ch_default_route"),"default_route",false,true," on CREATE")){
             return false;
         }//where
 
@@ -196,7 +194,6 @@ public class AT2TRFSU0008Test {
         }
         return true;
     }
-
     private boolean Go_to_create_route(TestDriver driver) {
 
         if (!Functions.checkClick(driver,
