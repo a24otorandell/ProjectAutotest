@@ -40,9 +40,9 @@ public class AT2ACCSU0027Sis {
     }
 
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Transfers");
+        driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setScreen("Office Sending Configuration");
     }
 
     protected String getElements(String key) {

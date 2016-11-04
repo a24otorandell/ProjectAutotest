@@ -11,13 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0007/AT2TRFSU0007Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -68,13 +64,12 @@
       <file leaf-file-name="AT2ACCSU0027Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="324" column="5" selection-start-line="56" selection-start-column="4" selection-end-line="324" selection-end-column="5" />
+            <state relative-caret-position="364">
+              <caret line="67" column="56" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
               <folding>
                 <element signature="docComment;class#AT2ACCSU0027Test#0" expanded="false" />
                 <element signature="method#AT2ACCSU0027Test#0;class#AT2ACCSU0027Test#0" expanded="false" />
                 <element signature="method#start#0;class#AT2ACCSU0027Test#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2ACCSU0027Test#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2ACCSU0027Test#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2ACCSU0027Test#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2ACCSU0027Test#0" expanded="false" />
@@ -92,13 +87,12 @@
       <file leaf-file-name="AT2ACCSU0027Sis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+            <state relative-caret-position="338">
+              <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
               <folding>
                 <element signature="docComment;class#AT2ACCSU0027Sis#0" expanded="false" />
                 <element signature="method#AT2ACCSU0027Sis#0;class#AT2ACCSU0027Sis#0" expanded="false" />
                 <element signature="method#start#0;class#AT2ACCSU0027Sis#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2ACCSU0027Sis#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2ACCSU0027Sis#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2ACCSU0027Sis#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2ACCSU0027Sis#0" expanded="false" />
@@ -933,13 +927,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00060" summary="Actualización código AT2TRFSU0016">
-      <created>1474534350416</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1474534350447</updated>
-    </task>
     <task id="LOCAL-00061" summary="Actualización código AT2TRFSU0011">
       <created>1474554654672</created>
       <option name="number" value="00061" />
@@ -1276,7 +1263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478244394223</updated>
     </task>
-    <option name="localTasksCounter" value="109" />
+    <task id="LOCAL-00109" summary="Actualización código  ACCSU0027">
+      <created>1478245740413</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1478245740414</updated>
+    </task>
+    <option name="localTasksCounter" value="110" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1354,7 +1348,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Actualización código AT2AACCSU0018," />
     <MESSAGE value="Actualización código AT2TRFSU002 Y AT2TRFSU0007," />
     <MESSAGE value="Actualización código  AT2TRFSU0007," />
     <MESSAGE value="Actualización código  AT2TRFSU0011," />
@@ -1379,7 +1372,8 @@
     <MESSAGE value="Actualización código  AT2ACCSU0074" />
     <MESSAGE value="Actualización código  AT2MDMOR0029" />
     <MESSAGE value="Actualización código  TRFSU0008" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  TRFSU0008" />
+    <MESSAGE value="Actualización código  ACCSU0027" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  ACCSU0027" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2141,13 +2135,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="324" column="5" selection-start-line="56" selection-start-column="4" selection-end-line="324" selection-end-column="5" />
+        <state relative-caret-position="364">
+          <caret line="67" column="56" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
           <folding>
             <element signature="docComment;class#AT2ACCSU0027Test#0" expanded="false" />
             <element signature="method#AT2ACCSU0027Test#0;class#AT2ACCSU0027Test#0" expanded="false" />
             <element signature="method#start#0;class#AT2ACCSU0027Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0027Test#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2ACCSU0027Test#0" expanded="false" />
             <element signature="method#getData#1;class#AT2ACCSU0027Test#0" expanded="false" />
             <element signature="method#testCSED#0;class#AT2ACCSU0027Test#0" expanded="false" />
@@ -2163,13 +2156,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0027/AT2ACCSU0027Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+        <state relative-caret-position="338">
+          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
           <folding>
             <element signature="docComment;class#AT2ACCSU0027Sis#0" expanded="false" />
             <element signature="method#AT2ACCSU0027Sis#0;class#AT2ACCSU0027Sis#0" expanded="false" />
             <element signature="method#start#0;class#AT2ACCSU0027Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0027Sis#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2ACCSU0027Sis#0" expanded="false" />
             <element signature="method#getData#1;class#AT2ACCSU0027Sis#0" expanded="false" />
             <element signature="method#testCSED#0;class#AT2ACCSU0027Sis#0" expanded="false" />
