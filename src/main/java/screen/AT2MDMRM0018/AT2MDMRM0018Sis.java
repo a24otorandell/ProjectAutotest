@@ -46,43 +46,53 @@ public class AT2MDMRM0018Sis {
 
     protected boolean testCSED(TestDriver driver) {
         //TABS SCREEN
+        //TABS TABLE
         if (!interaction_record_tabs_MDM(driver)) return false;
         if (!search_tabs_MDM(driver)) return false;
         if (!interaction_edit_tabs_MDM(driver)) return false;
         if (!qbe_tabs_MDM(driver)) return false;
         if (!others_actions_tabs_MDM(driver)) return false;
+        //LANGUAGES TABLE
         if (!interaction_record_lang_MDM(driver)) return false;
         if (!interaction_edit_lang_MDM(driver)) return false;
         if (!qbe_lang_MDM(driver)) return false;
         if (!others_actions_lang_MDM(driver)) return false;
+        //COUNTRIES TABLE
         if (!interaction_record_cntrs_MDM(driver)) return false;
         if (!delete_dstn_MDM(driver)) return false;
         if (!interaction_edit_cntrs_MDM(driver)) return false;
         if (!qbe_cntrs_MDM(driver)) return false;
         if (!others_actions_cntrs_MDM(driver)) return false;
+        //DESTINATION TABLE
         if (!interaction_record_dstn_MDM(driver)) return false;
         if (!interaction_edit_dstn_MDM(driver)) return false;
         if (!qbe_dstn_MDM(driver)) return false;
         if (!others_actions_dstn_MDM(driver)) return false;
         if (!delete_dstn_MDM(driver)) return false;
+        //COUNTRIES TABLE
         if (!delete_cntrs_MDM(driver)) return false;
+        //LANGUAGE TABLE
         if (!delete_lang_MDM(driver)) return false;
         //CHANGE TAB
         if (!first_change_tab(driver)) return false;
         //CONFIGURATION SCREEN
+        //CONFIGURATION TABLE
         if (!interaction_record_config_MDM(driver)) return false;
         if (!search_config_MDM(driver)) return false;
         if (!interaction_edit_config_MDM(driver)) return false;
         if (!qbe_config_MDM(driver)) return false;
         if (!others_actions_config_MDM(driver)) return false;
+        //CONFIGURATIONS PER TABLE TABLE
         if (!interaction_record_tabconfig_MDM(driver)) return false;
         if (!interaction_edit_tabconfig_MDM(driver)) return false;
         if (!qbe_tabconfig_MDM(driver)) return false;
         if (!others_actions_tabconfig_MDM(driver)) return false;
         if (!delete_tabconfig_MDM(driver)) return false;
+        //CONFIGURATION TABLE
         if (!delete_config_MDM(driver)) return false;
         //CHANGE TAB
         if (!second_change_tab(driver)) return false;
+        //TABS TABLE
         if (!delete_tabs_MDM(driver)) return false;
         return false;
     }
