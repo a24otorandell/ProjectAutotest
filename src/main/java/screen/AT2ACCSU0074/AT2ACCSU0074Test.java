@@ -148,7 +148,7 @@ public class AT2ACCSU0074Test {
             return false;
         }
 
-       /* if(!Functions.insertInput(driver,new String[]{"template_descriptions_add_template_i_condition_second",getElements("template_descriptions_add_template_i_condition_second")},
+     /*   if(!Functions.insertInput(driver,new String[]{"template_descriptions_add_template_i_condition_second",getElements("template_descriptions_add_template_i_condition_second")},
                 "text",DataGenerator.getRandomAlphanumericSequence(3,true)," on ADD")){
             return false;
         }*/
@@ -251,7 +251,7 @@ public class AT2ACCSU0074Test {
                 "description_text",DataGenerator.getRandomAlphanumericSequence(7,true)," on ADD")){
             return false;
         }
-      /*  if(!Functions.selectText(driver,
+        if(!Functions.selectText(driver,
                 new String[]{"template_descriptions_add_text_sl_secuencial",getElements("template_descriptions_add_text_sl_secuencial")},
                 "Secuencial","option"," on ADD")){
             return false;
@@ -273,7 +273,7 @@ public class AT2ACCSU0074Test {
                 new String[]{"template_descriptions_add_text_b_add",getElements("template_descriptions_add_text_b_add")}, //element to click
                 " on ADD")){
             return false;
-        }*/
+        }
         /*Template Preview*/
 
     /*    if(!Functions.createLov(driver,
