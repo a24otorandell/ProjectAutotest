@@ -284,7 +284,7 @@ public class AT2ACCSU0010Test {
     }
 
     private boolean Room_characteristics_delete (TestDriver driver){
-        driver.getReport().addHeader(" DELETE IN RATES MAINTENANCE",3,false);
+        driver.getReport().addHeader(" DELETE IN ROOM CHARACTERISTICS",3,false);
 
         if(!Functions.doDeleteNCheck(driver,
                 new String[]{"room_characteristics_del_b_delete",getElements("room_characteristics_del_b_delete")},
@@ -335,12 +335,12 @@ public class AT2ACCSU0010Test {
         }
 
         if(!Functions.insertInput(driver,new String[]{"room_characteristics_qbe_i_code",getElements("room_characteristics_qbe_i_code")},
-                "code",getData("code"),"on EDIT")){
+                "code",getData("code"),"on QBE")){
             return false;
         }
         if(!Functions.selectText(driver,
                 new String[]{"room_characteristics_qbe_sl_active",getElements("room_characteristics_qbe_sl_active")},
-                "No","qbe_active"," on SEARCH")){
+                "No","qbe_active"," on QBE")){
             return false;
         }
 
