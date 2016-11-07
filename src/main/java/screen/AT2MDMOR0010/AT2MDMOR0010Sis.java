@@ -30,9 +30,9 @@ public class AT2MDMOR0010Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Master Data");
-        driver.getTestdetails().setSubmenu("Destination");
-        driver.getTestdetails().setScreen("Set Up Web Prepayment 2.0");
+        driver.getTestdetails().setMainmenu("Master Data Management");
+        driver.getTestdetails().setSubmenu("Organization");
+        driver.getTestdetails().setScreen("Departments per company");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
