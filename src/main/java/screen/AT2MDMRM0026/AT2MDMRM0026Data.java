@@ -28,6 +28,5 @@ public class AT2MDMRM0026Data {
         }
     }
 
-    public void setDefaultData() {
-    }
+    public void setDefaultData() {}
 }

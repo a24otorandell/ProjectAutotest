@@ -69,3 +69,4 @@ public class AT2MDMRM0026Locators {
         elements.put("qbe_i_lang_des", "//*[contains(@id, 'afr_c4::content')]");
     }
 }
+

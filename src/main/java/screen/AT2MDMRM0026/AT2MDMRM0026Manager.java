@@ -52,7 +52,6 @@ public class AT2MDMRM0026Manager implements AT2Test{
         this.sis = sis;
     }
 
-
     public Map<String, String> getData() {
         if (entorno.equalsIgnoreCase("test")) {
             return this.test.getData().getData();
