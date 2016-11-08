@@ -177,10 +177,10 @@ public class AT2ACCSU0017Sis {
                 "se_leguaje_code",data.getData().get("leguaje_code")," on QBE")){
             return false;
         }
-    /*    if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_lenguaje_description",getElements("multi_lenguaje_se_i_lenguaje_description")},
+        if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_lenguaje_description",getElements("multi_lenguaje_se_i_lenguaje_description")},
                 "se_leguaje_description",data.getData().get("lenguaje_code_desc")," on QBE")){
             return false;
-        }*/
+        }
         if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_season_description",getElements("multi_lenguaje_se_i_season_description")},
                 "se_descriptions",data.getData().get("descriptions")," on QBE")){
             return false;
@@ -303,7 +303,7 @@ public class AT2ACCSU0017Sis {
                 " on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.clickQbE(driver,
                 new String[]{"hotel_categories_qbe_b_qbe",getElements("hotel_categories_qbe_b_qbe")},// query button
                 new String[]{"hotel_categories_qbe_i_categori",getElements("hotel_categories_qbe_i_categori")},//any query input
@@ -331,12 +331,12 @@ public class AT2ACCSU0017Sis {
                 "No","sws"," on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"hotel_categories_qbe_i_category_code",getElements("hotel_categories_qbe_i_category_code")},
                 "category_code",getData("category_code"),"on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"hotel_categories_qbe_i_establishment_type",getElements("hotel_categories_qbe_i_establishment_type")},
                 "establishment_type",getData("establishment_type"),"on QBE")){
             return false;
@@ -364,11 +364,12 @@ public class AT2ACCSU0017Sis {
                 " on EDIT")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.checkboxValue(driver,
                 getElements("hotel_categories_ed_ch_active"),"active",false,true," on EDIT")){
             return false;
         }//where
+        Functions.break_time(driver,6,500);
         if(!Functions.checkboxValue(driver,
                 getElements("hotel_categories_ed_ch_sws"),"sws",false,true," on EDIT")){
             return false;
@@ -452,16 +453,18 @@ public class AT2ACCSU0017Sis {
                 " on ADD")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"hotel_categories_add_i_catregori",getElements("hotel_categories_add_i_catregori")},
                 "category",DataGenerator.getRandomAlphanumericSequence(5,true),"on ADD")){
             return false;
         }
+        Functions.break_time(driver,6,500);
 
         if(!Functions.insertInput(driver,new String[]{"hotel_categories_add_i_number",getElements("hotel_categories_add_i_number")},
                 "number",(Integer.toString(DataGenerator.random(1,100))),"on ADD")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.checkboxValue(driver,
                 getElements("hotel_categories_add_ch_active"),"active",true,true," on ADD")){
             return false;
@@ -470,7 +473,7 @@ public class AT2ACCSU0017Sis {
                 getElements("hotel_categories_add_ch_sws"),"sws",true,true," on ADD")){
             return false;
         }//where
-
+        Functions.break_time(driver,6,500);
         if(!Functions.createLov(driver,
                 new String[]{"hotel_categories_add_lov_category_code",getElements("hotel_categories_add_lov_category_code")}, // b_lov
                 new String[]{"hotel_categories_add_i_category_code",getElements("hotel_categories_add_i_category_code")}, // i_lov

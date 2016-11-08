@@ -11,13 +11,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -67,23 +63,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AT2ACCSU0017Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AT2ACCSU0017Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="456" column="5" selection-start-line="57" selection-start-column="4" selection-end-line="456" selection-end-column="5" />
+            <state relative-caret-position="206">
+              <caret line="172" column="84" selection-start-line="172" selection-start-column="84" selection-end-line="172" selection-end-column="84" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#AT2ACCSU0017Test#0;class#AT2ACCSU0017Test#0" expanded="false" />
-                <element signature="e#517#518#0" expanded="false" />
-                <element signature="e#548#549#0" expanded="false" />
-                <element signature="e#610#611#0" expanded="false" />
-                <element signature="e#650#651#0" expanded="false" />
-                <element signature="e#691#692#0" expanded="false" />
-                <element signature="e#718#719#0" expanded="false" />
-                <element signature="e#768#769#0" expanded="false" />
-                <element signature="e#800#801#0" expanded="false" />
                 <element signature="method#start#0;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#setScreenInfo#0;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2ACCSU0017Test#0" expanded="false" />
@@ -93,7 +80,6 @@
                 <element signature="method#Multi_lenguaje_other_actions#0;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#Multi_lenguaje_delete#0;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#Multi_lenguaje_edit#0;class#AT2ACCSU0017Test#0" expanded="false" />
-                <element signature="method#Multi_lenguaje_search#0;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#Multi_lenguaje_add#0;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#Hotel_categories#0;class#AT2ACCSU0017Test#0" expanded="false" />
                 <element signature="method#Hotel_categories_delete#0;class#AT2ACCSU0017Test#0" expanded="false" />
@@ -107,13 +93,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2ACCSU0017Sis.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AT2ACCSU0017Sis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+            <state relative-caret-position="263">
+              <caret line="182" column="9" selection-start-line="182" selection-start-column="9" selection-end-line="182" selection-end-column="9" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#AT2ACCSU0017Sis#0" expanded="false" />
+                <element signature="method#AT2ACCSU0017Sis#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#start#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#setScreenInfo#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2ACCSU0017Sis#0" expanded="false" />
@@ -123,7 +110,6 @@
                 <element signature="method#Multi_lenguaje_other_actions#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#Multi_lenguaje_delete#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#Multi_lenguaje_edit#0;class#AT2ACCSU0017Sis#0" expanded="false" />
-                <element signature="method#Multi_lenguaje_search#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#Multi_lenguaje_add#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#Hotel_categories#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#Hotel_categories_delete#0;class#AT2ACCSU0017Sis#0" expanded="false" />
@@ -315,8 +301,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Locators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" />
       </list>
     </option>
   </component>
@@ -347,9 +333,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1592" />
     <option name="y" value="-8" />
-    <option name="width" value="1554" />
+    <option name="width" value="1394" />
     <option name="height" value="916" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -1066,13 +1052,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00068" summary="Actualización código AT2ACCOP0019,">
-      <created>1475160816984</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1475160816986</updated>
-    </task>
     <task id="LOCAL-00069" summary="Actualización código AT2ACCSU0018,">
       <created>1475236645674</created>
       <option name="number" value="00069" />
@@ -1409,7 +1388,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478601867027</updated>
     </task>
-    <option name="localTasksCounter" value="117" />
+    <task id="LOCAL-00117" summary="Actualización código  ACCSU0017">
+      <created>1478619999957</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1478619999957</updated>
+    </task>
+    <option name="localTasksCounter" value="118" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1422,21 +1408,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1554" height="916" extended-state="6" />
-    <editor active="false" />
+    <frame x="1592" y="-8" width="1394" height="916" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.050064184" sideWeight="0.4892905" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29528537" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07279693" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29501915" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.07279693" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32684824" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26238286" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29385307" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19790106" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1446,7 +1433,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.050064184" sideWeight="0.4892905" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PMD" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1692" y="172" width="1256" height="686" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889196" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1516,7 +1502,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Actualización código  AT2TRFSU0019," />
     <MESSAGE value="Actualización código  AT2MDMOR0029," />
     <MESSAGE value="Actualización código  AT2BOOSU1004," />
     <MESSAGE value="Actualización código  AT2ACCSU0073,AT2MDMOR0029" />
@@ -1541,7 +1526,8 @@
     <MESSAGE value="Actualización código  ACCSU0010" />
     <MESSAGE value="Actualización código  ACCSU0011" />
     <MESSAGE value="Actualización código  ACCSU0015" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  ACCSU0015" />
+    <MESSAGE value="Actualización código  ACCSU0017" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  ACCSU0017" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1838,7 +1824,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java</url>
-          <line>161</line>
+          <line>170</line>
           <properties />
           <option name="timeStamp" value="1538" />
         </line-breakpoint>
@@ -2376,50 +2362,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Locators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="456" column="5" selection-start-line="57" selection-start-column="4" selection-end-line="456" selection-end-column="5" />
+        <state relative-caret-position="265">
+          <caret line="80" column="56" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="56" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#AT2ACCSU0017Test#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="e#517#518#0" expanded="false" />
-            <element signature="e#548#549#0" expanded="false" />
-            <element signature="e#610#611#0" expanded="false" />
-            <element signature="e#650#651#0" expanded="false" />
-            <element signature="e#691#692#0" expanded="false" />
-            <element signature="e#718#719#0" expanded="false" />
-            <element signature="e#768#769#0" expanded="false" />
-            <element signature="e#800#801#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Multi_lenguaje#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Multi_lenguaje_other_actions#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Multi_lenguaje_delete#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Multi_lenguaje_edit#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Multi_lenguaje_search#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Multi_lenguaje_add#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Hotel_categories#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Hotel_categories_delete#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Hotel_categories_other_actions#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Hotel_categories_qbe#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Hotel_categories_edit#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Hotel_categories_search#0;class#AT2ACCSU0017Test#0" expanded="false" />
-            <element signature="method#Hotel_categories_add#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="235" column="0" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+        <state relative-caret-position="263">
+          <caret line="182" column="9" selection-start-line="182" selection-start-column="9" selection-end-line="182" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AT2ACCSU0017Sis#0" expanded="false" />
+            <element signature="method#AT2ACCSU0017Sis#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#start#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#setScreenInfo#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2ACCSU0017Sis#0" expanded="false" />
@@ -2429,7 +2388,6 @@
             <element signature="method#Multi_lenguaje_other_actions#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#Multi_lenguaje_delete#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#Multi_lenguaje_edit#0;class#AT2ACCSU0017Sis#0" expanded="false" />
-            <element signature="method#Multi_lenguaje_search#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#Multi_lenguaje_add#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#Hotel_categories#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#Hotel_categories_delete#0;class#AT2ACCSU0017Sis#0" expanded="false" />
@@ -2442,12 +2400,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Locators.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="80" column="56" selection-start-line="80" selection-start-column="22" selection-end-line="80" selection-end-column="56" />
+        <state relative-caret-position="206">
+          <caret line="172" column="84" selection-start-line="172" selection-start-column="84" selection-end-line="172" selection-end-column="84" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#AT2ACCSU0017Test#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Multi_lenguaje#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Multi_lenguaje_other_actions#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Multi_lenguaje_delete#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Multi_lenguaje_edit#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Multi_lenguaje_add#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Hotel_categories#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Hotel_categories_delete#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Hotel_categories_other_actions#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Hotel_categories_qbe#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Hotel_categories_edit#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Hotel_categories_search#0;class#AT2ACCSU0017Test#0" expanded="false" />
+            <element signature="method#Hotel_categories_add#0;class#AT2ACCSU0017Test#0" expanded="false" />
           </folding>
         </state>
       </provider>

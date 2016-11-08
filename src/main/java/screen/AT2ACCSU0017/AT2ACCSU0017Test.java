@@ -178,10 +178,10 @@ public class AT2ACCSU0017Test {
                 "se_leguaje_code",data.getData().get("leguaje_code")," on QBE")){
             return false;
         }
-    /*    if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_lenguaje_description",getElements("multi_lenguaje_se_i_lenguaje_description")},
+        if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_lenguaje_description",getElements("multi_lenguaje_se_i_lenguaje_description")},
                 "se_leguaje_description",data.getData().get("lenguaje_code_desc")," on QBE")){
             return false;
-        }*/
+        }
         if(!Functions.insertInput(driver,new String[]{"multi_lenguaje_se_i_season_description",getElements("multi_lenguaje_se_i_season_description")},
                 "se_descriptions",data.getData().get("descriptions")," on QBE")){
             return false;
