@@ -178,7 +178,7 @@ public class AT2ACCSU0074Test {
         Functions.break_time(driver,8,500);
         /*Lenguaje Text*/
 
-        if(!Functions.checkClick(driver,
+        /*if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_add",getElements("template_descriptions_add_lenguaje_text_b_add")}, //element to click
                 new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element expected to appear
                 30,500, //seconds/miliseconds (driver wait)
@@ -194,7 +194,7 @@ public class AT2ACCSU0074Test {
                 new String[]{"template_descriptions_add_lenguaje_text_sl_lenguaje",getElements("template_descriptions_add_lenguaje_text_sl_lenguaje")},
                 "ALE","lenguaje"," on ADD")){
             return false;
-        }
+        }*/
     /*    if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_add",getElements("template_descriptions_add_lenguaje_text_b_add")}, //element to click
                 new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element expected to appear
@@ -247,15 +247,11 @@ public class AT2ACCSU0074Test {
 
         /*Text*/
         Functions.break_time(driver,15,500);
-        if(!Functions.insertInput(driver,new String[]{"template_descriptions_add_text_i_description_text",getElements("template_descriptions_add_text_i_description_text")},
-                "description_text",DataGenerator.getRandomAlphanumericSequence(7,true)," on ADD")){
+        /*if(!Functions.insertInput(driver,new String[]{"template_descriptions_add_text_i_description_text",getElements("template_descriptions_add_text_i_description_text")},
+                "description_text","{7015-TDAOP_4,7015-TDAOP_6_1}"," on ADD")){
             return false;
-        }
-        if(!Functions.selectText(driver,
-                new String[]{"template_descriptions_add_text_sl_secuencial",getElements("template_descriptions_add_text_sl_secuencial")},
-                "Secuencial","option"," on ADD")){
-            return false;
-        }
+        }*/
+
         Functions.break_time(driver,5,500);
         if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_text_sl_button",getElements("template_descriptions_add_text_sl_button")}, //element to click
@@ -267,6 +263,11 @@ public class AT2ACCSU0074Test {
         if(!Functions.simpleClick(driver,
                 new String[]{"template_descriptions_add_text_sl_check_box",getElements("template_descriptions_add_text_sl_check_box")}, //element to click
                 " on ADD")){
+            return false;
+        }
+        if(!Functions.selectText(driver,
+                new String[]{"template_descriptions_add_text_sl_secuencial",getElements("template_descriptions_add_text_sl_secuencial")},
+                "Secuencial {,}","option"," on ADD")){
             return false;
         }
         if(!Functions.simpleClick(driver,

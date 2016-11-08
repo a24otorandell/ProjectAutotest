@@ -41,7 +41,7 @@ public class AT2ACCSU0011Test {
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Room descriptions");
+        driver.getTestdetails().setScreen("General room descriptions 2.0");
     }
 
     protected String getElements (String key){

@@ -106,16 +106,24 @@ public class CommonProcedures {
         try {
             String result = "//*[contains(@id, 'pt_i3:" + number_screens_open + ":cl3')]";
             Functions.break_time(driver, 10, 500);
-            if (!Functions.checkClick(driver, new String[]{"Search icon", recursiveXPaths.searchicon}, new String[]{"Component input", recursiveXPaths.componentinput}, 180, 500, " on main ATLAS page")) {
+            if(!Functions.checkClick(driver,
+                    new String[]{"Search icon",recursiveXPaths.searchicon},
+                    new String[]{"Component input",recursiveXPaths.componentinput},180,500," on main ATLAS page")){
                 return false;
             }
-            if (!Functions.insertInput(driver, new String[]{"Component", recursiveXPaths.componentinput}, "Component", driver.getTestdetails().getTestname(), " on main ATLAS page")) {
+            if(!Functions.insertInput(driver,
+                    new String[]{"Component",recursiveXPaths.componentinput},
+                    "Component",driver.getTestdetails().getTestname()," on main ATLAS page")){
                 return false;
             }
-            if (!Functions.checkClick(driver, new String[]{"Search component icon", recursiveXPaths.searchcomponent}, new String[]{"Component result", result}, 180, 500, " on main ATLAS page")) {
+            if(!Functions.checkClick(driver,
+                    new String[]{"Search component icon",recursiveXPaths.searchcomponent},
+                    new String[]{"Component result",result},180,500," on main ATLAS page")){
                 return false;
             }
-            if (!Functions.checkClickByAbsence(driver, new String[]{"Component result", result}, new String[]{"Component result", result}, 360, 500, " on main ATLAS page")) {
+            if(!Functions.checkClickByAbsence(driver,
+                    new String[]{"Component result",result},
+                    new String[]{"Component result",result},360,500," on main ATLAS page")){
                 return false;
             }
         } catch (Exception e) {

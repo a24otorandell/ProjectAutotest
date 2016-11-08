@@ -24,7 +24,7 @@ public class AT2ACCSU0015Locators {
 
         //ADD
         elements.put("hotel_chain_description_add_b_add","//*[contains(@id, 'pc1:pcgt2:boton_add')]");
-        elements.put("hotel_chain_description_add_i_chain","//*[contains(@id, 'pc1:pcgt2:it3::content)']");
+        elements.put("hotel_chain_description_add_i_chain","//*[contains(@id, 'pc1:pcgt2:it3::content')]");
         elements.put("hotel_chain_description_add_i_description","//*[contains(@id, 'pc1:pcgt2:it4::content')]");
         elements.put("hotel_chain_description_add_b_save","//*[contains(@id, 'pc1:pcgt2:btn_commitExit')]");
 
@@ -38,7 +38,7 @@ public class AT2ACCSU0015Locators {
 
         //EDIT
         elements.put("hotel_chain_description_ed_b_edit","//*[contains(@id, 'pc1:pcgt2:boton_edit')]");
-        elements.put("hotel_chain_description_ed_i_chain","//*[contains(@id, 'pc1:pcgt2:it3::content)']");
+        elements.put("hotel_chain_description_ed_i_chain","//*[contains(@id, 'pc1:pcgt2:it3::content')]");
         elements.put("hotel_chain_description_ed_i_description","//*[contains(@id, 'pc1:pcgt2:it4::content')]");
         elements.put("hotel_chain_description_ed_b_save","//*[contains(@id, 'pc1:pcgt2:btn_commitExit')]");
 
@@ -66,7 +66,7 @@ public class AT2ACCSU0015Locators {
 
         //ADD
         elements.put("cadena_hotel_description_add_b_add","//*[contains(@id, 'pc3:pcgt4:boton_add')]");
-        elements.put("cadena_hotel_description_add_e_code","//*[contains(@id, 'pc3:pcgt4:it14::content']");
+        elements.put("cadena_hotel_description_add_e_code","//*[contains(@id, 'pc3:pcgt4:it14::content')]");
         elements.put("cadena_hotel_description_add_lov_lenguage","//*[contains(@id, 'pc3:pcgt4:codIdiomaId::lovIconId')]");
         elements.put("cadena_hotel_description_add_i_lenguage","//*[contains(@id, 'pc3:pcgt4:codIdiomaId::content')]");
         elements.put("cadena_hotel_description_add_i_description","//*[contains(@id, 'pc3:pcgt4:it15::content')]");
@@ -74,15 +74,15 @@ public class AT2ACCSU0015Locators {
 
 
         //SEARCH
-        elements.put("cadena_hotel_description_se_i_chain","//*[contains(@id, 'pc3:_qbeTbr')]/a");
-        elements.put("cadena_hotel_description_se_i_description","//*[contains(@id, 'qryId1:value10::content')]");
-        elements.put("cadena_hotel_description_se_b_search","//*[contains(@id, 'qryId1::search')]");
-        elements.put("cadena_hotel_description_se_b_reset","//*[contains(@id, 'qryId1::reset')]");
-        elements.put("cadena_hotel_description_se_e_result","//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("cadena_hotel_description_se_b_qbe","//*[contains(@id, 'pc3:_qbeTbr')]/a");
+        elements.put("cadena_hotel_description_se_i_code","//*[contains(@id, 'pc3_afr_hccdt1_afr_c9::content')]");
+        elements.put("cadena_hotel_description_se_i_lenguage","//*[contains(@id, 'pc3_afr_hccdt1_afr_c8::content')]");
+        elements.put("cadena_hotel_description_se_i_description","//*[contains(@id, 'pc3_afr_hccdt1_afr_c7::content')]");
+        elements.put("cadena_hotel_description_se_e_result","//*[contains(@id, 'pc3:hccdt1::db')]/table/tbody/tr[1]/td[1]");
 
         //EDIT
-        elements.put("cadena_hotel_description_ed_b_edit","//*[contains(@id, 'pc1:pcgt2:boton_edit')]");
-        elements.put("cadena_hotel_description_ed_e_code","//*[contains(@id, 'pc3:pcgt4:it14::content']");
+        elements.put("cadena_hotel_description_ed_b_edit","//*[contains(@id, 'pc3:pcgt4:boton_edit')]");
+        elements.put("cadena_hotel_description_ed_e_code","//*[contains(@id, 'pc3:pcgt4:it14::content')]");
         elements.put("cadena_hotel_description_ed_lov_lenguage","//*[contains(@id, 'pc3:pcgt4:codIdiomaId::lovIconId')]");
         elements.put("cadena_hotel_description_ed_i_lenguage","//*[contains(@id, 'pc3:pcgt4:codIdiomaId::content')]");
         elements.put("cadena_hotel_description_ed_i_description","//*[contains(@id, 'pc3:pcgt4:it15::content')]");
@@ -104,39 +104,39 @@ public class AT2ACCSU0015Locators {
 
         //ADD
         elements.put("hotel_brand_add_b_add","//*[contains(@id, 'pc2:pcgt3:boton_add')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:it1::content')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:it2::content')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:btn_commitExit')]");
+        elements.put("hotel_brand_add_i_brand","//*[contains(@id, 'pc2:pcgt3:it1::content')]");
+        elements.put("hotel_brand_add_i_user_description","//*[contains(@id, 'pc2:pcgt3:it2::content')]");
+        elements.put("hotel_brand_b_save","//*[contains(@id, 'pc2:pcgt3:btn_commitExit')]");
 
 
         //SEARCH
-        elements.put("hotel_brand_","//*[contains(@id, 'qryId2:value00::content')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'qryId2:value10::content')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'qryId2::search')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'qryId2::reset')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:resId2::db')]/table/tbody/tr/td[1]");
+        elements.put("hotel_brand_se_i_brand","//*[contains(@id, 'qryId2:value00::content')]");
+        elements.put("hotel_brand_se_i_user_description","//*[contains(@id, 'qryId2:value10::content')]");
+        elements.put("hotel_brand_se_b_search","//*[contains(@id, 'qryId2::search')]");
+        elements.put("hotel_brand_se_b_reset","//*[contains(@id, 'qryId2::reset')]");
+        elements.put("hotel_brand_se_e_result","//*[contains(@id, 'pc2:resId2::db')]/table/tbody/tr/td[1]");
 
         //EDIT
-        elements.put("hotel_brand_","//*[contains(@id, '");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:it1::content')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:it2::content')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:btn_commitExit')]");
+        elements.put("hotel_brand_ed_b_edit","//*[contains(@id, 'pc2:pcgt3:boton_edit')]");
+        elements.put("hotel_brand_ed_i_brand","//*[contains(@id, 'pc2:pcgt3:it1::content')]");
+        elements.put("hotel_brand_ed_i_user_description","//*[contains(@id, 'pc2:pcgt3:it2::content')]");
+        elements.put("hotel_brand_ed_b_save","//*[contains(@id, 'pc2:pcgt3:btn_commitExit')]");
 
         //QBE
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:_qbeTbr')]/a");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2_afr_resId2_afr_c4::content')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2_afr_resId2_afr_c3::content')]");
+        elements.put("hotel_brand_qbe_b_qbe","//*[contains(@id, 'pc2:_qbeTbr')]/a");
+        elements.put("hotel_brand_qbe_i_brand","//*[contains(@id, 'pc2_afr_resId2_afr_c4::content')]");
+        elements.put("hotel_brand_qbe_i_user_description","//*[contains(@id, 'pc2_afr_resId2_afr_c3::content')]");
 
         //OTHER ACTIONS
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgm2:dc_m1')]/div/table/tbody/tr/td[2]/a");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgm2:dc_cmi1')]/td[2]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:d6::ok')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:_dchTbr')]/a");
+        elements.put("hotel_brand_oa_b_actions","//*[contains(@id, 'pc2:pcgm2:dc_m1')]/div/table/tbody/tr/td[2]/a");
+        elements.put("hotel_brand_oa_b_actions_b_audit_data","//*[contains(@id, 'pc2:pcgm2:dc_cmi1')]/td[2]");
+        elements.put("hotel_brand_oa_b_actions_b_audit_data_b_ok","//*[contains(@id, 'pc2:d6::ok')]");
+        elements.put("hotel_brand_oa_b_detach","//*[contains(@id, 'pc2:_dchTbr')]/a");
 
         //DELETE
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:boton_remove')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:ot7')]");
-        elements.put("hotel_brand_","//*[contains(@id, 'pc2:pcgt3:boton_remove')]");
+        elements.put("hotel_brand_del_b_delete","//*[contains(@id, 'pc2:pcgt3:boton_remove')]");
+        elements.put("hotel_brand_del_e_record","//*[contains(@id, 'pc2:ot7')]");
+        elements.put("hotel_brand_del_b_delete_b_ok","//*[contains(@id, 'pc2:pcgt3:cbt1')]");
 
 
     }

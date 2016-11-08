@@ -11,14 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java" afterPath="$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Locators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
@@ -49,8 +47,8 @@
             <file leaf-file-name="AT2ACCSU0015Locators.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Locators.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1079">
-                    <caret line="100" column="106" selection-start-line="100" selection-start-column="106" selection-end-line="100" selection-end-column="106" />
+                  <state relative-caret-position="478">
+                    <caret line="138" column="89" selection-start-line="138" selection-start-column="89" selection-end-line="138" selection-end-column="89" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -69,16 +67,153 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AT2ACCSU0015Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AT2TRFSU0008Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="144" column="38" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="38" />
+              <folding>
+                <element signature="docComment;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#AT2TRFSU0008Test#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Create_in_route_second_time#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Go_to_create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Routes_by_default#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Delete_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Other_actions#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Qbe_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Edition_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Search_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+                <element signature="method#Add_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Functions.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="269">
+              <caret line="827" column="20" selection-start-line="827" selection-start-column="20" selection-end-line="827" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonProcedures.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="103" column="79" selection-start-line="103" selection-start-column="79" selection-end-line="103" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCSU0015Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+            <state relative-caret-position="370">
+              <caret line="576" column="5" selection-start-line="56" selection-start-column="4" selection-end-line="576" selection-end-column="5" />
               <folding>
+                <element signature="docComment;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#AT2ACCSU0015Test#0;class#AT2ACCSU0015Test#0" expanded="false" />
                 <element signature="method#start#0;class#AT2ACCSU0015Test#0" expanded="false" />
                 <element signature="method#setScreenInfo#0;class#AT2ACCSU0015Test#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2ACCSU0015Test#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#hotel_brand#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_brand_qbe#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_brand_delete#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_brand_other_actions#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_brand_edit#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_brand_search#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_brand_add#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_delete#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_other_actions#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_edit#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_search#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_add#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_chain_description#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_delete#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_other_actions#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_qbe#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_edit#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_search#0;class#AT2ACCSU0015Test#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_add#0;class#AT2ACCSU0015Test#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCSU0015Sis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+              <folding>
+                <element signature="docComment;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#AT2ACCSU0015Sis#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#hotel_brand#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_brand_qbe#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_brand_delete#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_brand_other_actions#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_brand_edit#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_brand_search#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_brand_add#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_delete#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_other_actions#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Cadena_hotel_id_search#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_chain_description#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_delete#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_other_actions#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_qbe#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_edit#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_search#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <element signature="method#Hotel_chain_description_add#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+                <marker date="1478594119519" expanded="false" signature="938:1117" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCSU0074Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="270" column="25" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
+              <folding>
+                <element signature="docComment;class#AT2ACCSU0074Test#0" expanded="false" />
+                <element signature="method#AT2ACCSU0074Test#0;class#AT2ACCSU0074Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCSU0074Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2ACCSU0074Test#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCSU0074Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCSU0074Test#0" expanded="false" />
+                <element signature="method#Template_search_search#0;class#AT2ACCSU0074Test#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCSU0074Locators.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Locators.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="48" column="106" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="106" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,17 +222,17 @@
       <file leaf-file-name="AT2ACCSU0011Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="110" column="9" selection-start-line="102" selection-start-column="6" selection-end-line="110" selection-end-column="9" />
+            <state relative-caret-position="-154">
+              <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
               <folding>
                 <element signature="docComment;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#AT2ACCSU0011Test#0;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#start#0;class#AT2ACCSU0011Test#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#Room_description#0;class#AT2ACCSU0011Test#0" expanded="false" />
+                <element signature="method#Room_description_delete#0;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#Room_description_other_actions#0;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#Room_description_qbe#0;class#AT2ACCSU0011Test#0" expanded="false" />
                 <element signature="method#Room_description_edit#0;class#AT2ACCSU0011Test#0" expanded="false" />
@@ -114,11 +249,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Functions.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
+      <file leaf-file-name="WebElement.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/WebElement.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="1452" column="52" selection-start-line="1452" selection-start-column="52" selection-end-line="1452" selection-end-column="52" />
+            <state relative-caret-position="85">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -163,7 +298,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0006/AT2ACCSU0006Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0006/AT2ACCSU0006Manager.java" />
@@ -206,14 +340,15 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0010/AT2ACCSU0010Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Sis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Sis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Locators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Locators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java" />
       </list>
     </option>
   </component>
@@ -418,152 +553,6 @@
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AT2ACCSU0015" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AT2ACCSU0011" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TestDriver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CommonActions" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -609,6 +598,9 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0003/AT2MDMDE0003Locators.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0003/AT2MDMDE0003Sis.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMDE0003/AT2MDMDE0003Test.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -616,26 +608,16 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0015/AT2MDMRM0015Data.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0015/AT2MDMRM0015Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0015/AT2MDMRM0015Manager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0015/AT2MDMRM0015Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0015/AT2MDMRM0015Test.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0018/AT2MDMRM0018Data.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0018/AT2MDMRM0018Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0018/AT2MDMRM0018Manager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0018/AT2MDMRM0018Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0018/AT2MDMRM0018Test.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0026/AT2MDMRM0026Data.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0026/AT2MDMRM0026Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0026/AT2MDMRM0026Manager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0026/AT2MDMRM0026Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0026/AT2MDMRM0026Test.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMUS0014/AT2MDMUS0014Data.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMUS0014/AT2MDMUS0014Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMUS0014/AT2MDMUS0014Manager.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMUS0014/AT2MDMUS0014Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMUS0014/AT2MDMUS0014Test.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0037/AT2MDMRM0037Data.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0037/AT2MDMRM0037Locators.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0037/AT2MDMRM0037Manager.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0037/AT2MDMRM0037Sis.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMRM0037/AT2MDMRM0037Test.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMSY0019/AT2MDMSY0019Data.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMSY0019/AT2MDMSY0019Locators.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMSY0019/AT2MDMSY0019Manager.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMSY0019/AT2MDMSY0019Sis.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMSY0019/AT2MDMSY0019Test.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -749,7 +731,7 @@
       </extension>
       <option name="MAIN_CLASS_NAME" value="core.TestDriver.Main" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="-e SIS -t AT2ACCSU0074  -u vsolis -p Hola1234 " />
+      <option name="PROGRAM_PARAMETERS" value="-e TEST -t AT2ACCSU0074  -u vsolis -p Hola1234 " />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -1064,13 +1046,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
-    </task>
-    <task id="LOCAL-00065" summary="Actualización código AT2ACCOP0020,">
-      <created>1474888435238</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1474888435274</updated>
     </task>
     <task id="LOCAL-00066" summary="Actualización código AT2ACCOP0020,">
       <created>1474888647312</created>
@@ -1408,7 +1383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478513614688</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="Actualización código  ACCSU0015">
+      <created>1478531384778</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1478531384778</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1422,7 +1404,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1394" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1432,7 +1414,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29118773" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21583652" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32950193" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32684824" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1515,7 +1497,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Actualización código  AT2TRFSU0008," />
     <MESSAGE value="Actualización código  AT2TRFSU0019," />
     <MESSAGE value="Actualización código  AT2MDMOR0029," />
     <MESSAGE value="Actualización código  AT2BOOSU1004," />
@@ -1540,7 +1521,8 @@
     <MESSAGE value="Actualización código  ACCOP0021" />
     <MESSAGE value="Actualización código  ACCSU0010" />
     <MESSAGE value="Actualización código  ACCSU0011" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  ACCSU0011" />
+    <MESSAGE value="Actualización código  ACCSU0015" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  ACCSU0015" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1805,11 +1787,29 @@
           <properties />
           <option name="timeStamp" value="1515" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Test.java</url>
+          <line>89</line>
+          <properties />
+          <option name="timeStamp" value="1516" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="1524" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java</url>
+          <line>255</line>
+          <properties />
+          <option name="timeStamp" value="1531" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1516" />
+      <option name="time" value="1532" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1839,24 +1839,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Locators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="93" column="55" selection-start-line="93" selection-start-column="22" selection-end-line="93" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="79" column="67" selection-start-line="79" selection-start-column="67" selection-end-line="79" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/WebElement.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -1878,40 +1864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="242" column="0" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-          <folding>
-            <element signature="docComment;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#AT2TRFSU0008Test#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Create_in_route_second_time#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Go_to_routes_by_default#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Create_in_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Go_to_create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Routes_by_default#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Delete_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Other_actions#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Qbe_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Edition_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Search_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-            <element signature="method#Add_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2215,14 +2167,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0010/AT2ACCSU0010Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -2323,21 +2267,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="55" column="6" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#AT2ACCSU0015Sis#0;class#AT2ACCSU0015Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU0015Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0015Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0015Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0015Sis#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Sis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -2396,8 +2325,8 @@
         <state relative-caret-position="119">
           <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
           <folding>
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#513#514#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2437,55 +2366,167 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state relative-caret-position="374">
+          <caret line="87" column="62" selection-start-line="87" selection-start-column="62" selection-end-line="87" selection-end-column="62" />
           <folding>
-            <element signature="docComment;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#AT2ACCSU0074Test#0;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#Template_search_search#0;class#AT2ACCSU0074Test#0" expanded="false" />
-            <element signature="method#Template_search_add#0;class#AT2ACCSU0074Test#0" expanded="false" />
+            <element signature="docComment;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#AT2ACCOP0019Test#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Create_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Give_elements_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Delete_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Other_actions_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Qbe_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Edit_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Search_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+            <element signature="method#Add_merchant#0;class#AT2ACCOP0019Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0008/AT2TRFSU0008Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="144" column="38" selection-start-line="144" selection-start-column="38" selection-end-line="144" selection-end-column="38" />
+          <folding>
+            <element signature="docComment;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#AT2TRFSU0008Test#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Create_in_route_second_time#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Go_to_create_route#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Routes_by_default#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Delete_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Other_actions#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Qbe_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Edition_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Search_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
+            <element signature="method#Add_routes#0;class#AT2TRFSU0008Test#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Locators.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1079">
-          <caret line="100" column="106" selection-start-line="100" selection-start-column="106" selection-end-line="100" selection-end-column="106" />
+        <state relative-caret-position="478">
+          <caret line="138" column="89" selection-start-line="138" selection-start-column="89" selection-end-line="138" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="1452" column="52" selection-start-line="1452" selection-start-column="52" selection-end-line="1452" selection-end-column="52" />
+        <state relative-caret-position="370">
+          <caret line="576" column="5" selection-start-line="56" selection-start-column="4" selection-end-line="576" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#AT2ACCSU0015Test#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#hotel_brand#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_brand_qbe#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_brand_delete#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_brand_other_actions#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_brand_edit#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_brand_search#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_brand_add#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_delete#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_other_actions#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_edit#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_search#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_add#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_chain_description#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_delete#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_other_actions#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_qbe#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_edit#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_search#0;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_add#0;class#AT2ACCSU0015Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="300" column="0" selection-start-line="300" selection-start-column="0" selection-end-line="300" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#AT2ACCSU0015Sis#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#hotel_brand#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_brand_qbe#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_brand_delete#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_brand_other_actions#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_brand_edit#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_brand_search#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_brand_add#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_delete#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_other_actions#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Cadena_hotel_id_search#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_chain_description#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_delete#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_other_actions#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_qbe#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_edit#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_search#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <element signature="method#Hotel_chain_description_add#0;class#AT2ACCSU0015Sis#0" expanded="false" />
+            <marker date="1478594119519" expanded="false" signature="938:1117" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar!/org/openqa/selenium/WebElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Locators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="48" column="106" selection-start-line="48" selection-start-column="69" selection-end-line="48" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="110" column="9" selection-start-line="102" selection-start-column="6" selection-end-line="110" selection-end-column="9" />
+        <state relative-caret-position="-154">
+          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
           <folding>
             <element signature="docComment;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#AT2ACCSU0011Test#0;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#start#0;class#AT2ACCSU0011Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#getData#1;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#testCSED#0;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#Room_description#0;class#AT2ACCSU0011Test#0" expanded="false" />
+            <element signature="method#Room_description_delete#0;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#Room_description_other_actions#0;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#Room_description_qbe#0;class#AT2ACCSU0011Test#0" expanded="false" />
             <element signature="method#Room_description_edit#0;class#AT2ACCSU0011Test#0" expanded="false" />
@@ -2501,16 +2542,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Test.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/CommonProcedures.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+        <state relative-caret-position="93">
+          <caret line="103" column="79" selection-start-line="103" selection-start-column="79" selection-end-line="103" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="270" column="25" selection-start-line="270" selection-start-column="25" selection-end-line="270" selection-end-column="25" />
           <folding>
-            <element signature="method#start#0;class#AT2ACCSU0015Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0015Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0015Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0015Test#0" expanded="false" />
+            <element signature="docComment;class#AT2ACCSU0074Test#0" expanded="false" />
+            <element signature="method#AT2ACCSU0074Test#0;class#AT2ACCSU0074Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0074Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU0074Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0074Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0074Test#0" expanded="false" />
+            <element signature="method#Template_search_search#0;class#AT2ACCSU0074Test#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="827" column="20" selection-start-line="827" selection-start-column="20" selection-end-line="827" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
