@@ -341,6 +341,7 @@ public class AT2TRFSU0008Test {
                 " on EDITION")) {
             return false;
         }
+        Functions.break_time(driver,10,500);
         if (!Functions.createLov(driver,
                 new String[]{"route_ed_lov_to_group", getElements("route_ed_lov_to_group")}, // b_lov
                 new String[]{"route_ed_i_to_group", getElements("route_ed_i_to_group")}, // i_lov
