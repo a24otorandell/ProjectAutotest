@@ -14,34 +14,27 @@ public class AT2ACCSU0075Sis {
 
     public AT2ACCSU0075Sis() {
     }
-
     public AT2ACCSU0075Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0075Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0075Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0075Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Setup");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Atributos plantillas");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
@@ -53,6 +46,7 @@ public class AT2ACCSU0075Sis {
         if (!interaction_record_accommodation(driver)) return false;
         if (!search_accommodation(driver)) return false;
         if (!interaction_edit_accommodation(driver)) return false;
+        if (!search_reset(driver)) return false;
         if (!qbe_accommodation(driver)) return false;
         if (!others_actions_accommodation(driver)) return false;
         if (!delete_accommodation(driver)) return false;
@@ -62,6 +56,7 @@ public class AT2ACCSU0075Sis {
     private boolean interaction_record_accommodation(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"setup_b_add", getElements("setup_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -77,22 +72,22 @@ public class AT2ACCSU0075Sis {
             return false;
         }
         if (!Functions.createLov(driver,
-                new String[]{"add_lov_concepto", getElements("add_lov_concepto")}, // b_lov
-                new String[]{"add_i_concepto", getElements("add_i_concepto")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "concepto", //Data name
-                where)) {
-            return false;
-        }
-        if (!Functions.createLov(driver,
                 new String[]{"add_lov_grupo", getElements("add_lov_grupo")}, // b_lov
                 new String[]{"add_i_grupo", getElements("add_i_grupo")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "grupo", //Data name
+                where)) {
+            return false;
+        }
+        if (!Functions.createLov(driver,
+                new String[]{"add_lov_concepto", getElements("add_lov_concepto")}, // b_lov
+                new String[]{"add_i_concepto", getElements("add_i_concepto")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "concepto", //Data name
                 where)) {
             return false;
         }
@@ -117,15 +112,6 @@ public class AT2ACCSU0075Sis {
             return false;
         }
         if (!Functions.createLovByValue(driver,
-                new String[]{"search_lov_concepto", getElements("search_lov_concepto")}, //LoV button
-                new String[]{"search_i_concepto", getElements("search_i_concepto")}, //external LoV input
-                new String[]{"search_lov_concepto_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                getData("concepto"), // value to search
-                "concepto", //name of the data
-                where)) {
-            return false;
-        }
-        if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_grupo", getElements("search_lov_grupo")}, //LoV button
                 new String[]{"search_i_grupo", getElements("search_i_grupo")}, //external LoV input
                 new String[]{"search_lov_grupo_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
@@ -134,6 +120,16 @@ public class AT2ACCSU0075Sis {
                 where)) {
             return false;
         }
+        if (!Functions.createLovByValue(driver,
+                new String[]{"search_lov_concepto", getElements("search_lov_concepto")}, //LoV button
+                new String[]{"search_i_concepto", getElements("search_i_concepto")}, //external LoV input
+                new String[]{"search_lov_concepto_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("concepto"), // value to search
+                "concepto", //name of the data
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"setup_e_result", getElements("setup_e_result")}, //result element
@@ -145,11 +141,7 @@ public class AT2ACCSU0075Sis {
     private boolean interaction_edit_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"setup_b_edit", getElements("setup_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -165,16 +157,6 @@ public class AT2ACCSU0075Sis {
             return false;
         }
         if (!Functions.createLov(driver,
-                new String[]{"add_lov_concepto", getElements("add_lov_concepto")}, // b_lov
-                new String[]{"add_i_concepto", getElements("add_i_concepto")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "concepto", //Data name
-                where)) {
-            return false;
-        }
-        if (!Functions.createLov(driver,
                 new String[]{"add_lov_grupo", getElements("add_lov_grupo")}, // b_lov
                 new String[]{"add_i_grupo", getElements("add_i_grupo")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
@@ -184,9 +166,30 @@ public class AT2ACCSU0075Sis {
                 where)) {
             return false;
         }
+        if (!Functions.createLov(driver,
+                new String[]{"add_lov_concepto", getElements("add_lov_concepto")}, // b_lov
+                new String[]{"add_i_concepto", getElements("add_i_concepto")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "concepto", //Data name
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    private boolean search_reset(TestDriver driver) {
+        driver.getReport().addHeader("SEARCH RESET", 3, false);
+        String where = " on SEARCH RESET";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 where)) {
             return false;
         }
@@ -209,12 +212,12 @@ public class AT2ACCSU0075Sis {
                 "negocio", getData("negocio"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_concepto", getElements("qbe_i_concepto")}, // element path
-                "concepto", getData("concepto"), where)) {
-            return false;
-        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_grupo", getElements("qbe_i_grupo")}, // element path
                 "grupo", getData("grupo"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_concepto", getElements("qbe_i_concepto")}, // element path
+                "concepto", getData("concepto"), where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,

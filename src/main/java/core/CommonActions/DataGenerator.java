@@ -299,4 +299,16 @@ public class DataGenerator {
         }
         return converted;
     }
+    /**
+     * This method generates a random, dummy IP with port
+     *
+     * @return String containing the generated IP
+     */
+    public static String ipGenerator() {
+        return Integer.toString(random(1, 255)) + "." +
+                Integer.toString(random(1, 255)) + "." +
+                Integer.toString(random(1, 255)) + "." +
+                Integer.toString(random(1, 255));
+    }
+
 }
