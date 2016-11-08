@@ -1,5 +1,7 @@
 package screen.AT2MDMSY1003;
 
+import core.TestDriver.TestDriver;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,18 +12,26 @@ public class AT2MDMSY1003Locators {
     Map<String, String> elements = new HashMap<>();
 
     public AT2MDMSY1003Locators(String enviroment) {
-        setElements();
+        setElements(enviroment);
     }
 
     public java.util.Map<String, String> getElements() {
         return elements;
     }
-
-    public void setElements() {
+    public void setElements(String enviroment) {
         //GENERALS
-        elements.put("parameters_b_add", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:boton_add')]");
-        elements.put("parameters_b_delete", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:boton_remove')]");
-        elements.put("parameters_b_edit", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:boton_edit')]");
+        if(enviroment.equalsIgnoreCase("sis")){
+            elements.put("parameters_b_add", "//*[contains(@id, 'pcgt1:boton_add')]");
+            elements.put("parameters_b_delete", "//*[contains(@id, 'pcgt1:boton_remove')]");
+            elements.put("parameters_b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");
+            elements.put("add_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
+        }
+        else {
+            elements.put("add_b_save", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:btn_commitExit')]");
+            elements.put("parameters_b_add", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:boton_add')]");
+            elements.put("parameters_b_delete", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:boton_remove')]");
+            elements.put("parameters_b_edit", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:boton_edit')]");
+        }
         elements.put("parameters_b_actions", "//*[contains(@id, 'pcgmc1:dc_m1')]");
         elements.put("parameters_b_actions_b_audit_data", "//*[contains(@id, 'pcgmc1:dc_cmi1')]/td[2]");
         elements.put("parameters_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
@@ -34,7 +44,6 @@ public class AT2MDMSY1003Locators {
         elements.put("search_i_param", "//*[contains(@id, 'qryId1:value00::content')]");
         elements.put("search_sl_type", "//*[contains(@id, 'qryId1:value10::content')]");
         //ADD
-        elements.put("add_b_save", "//*[contains(@id, 'toolbar_ParametersGvccTBBean:btn_commitExit')]");
         elements.put("add_i_param", "//*[contains(@id, 'it4::content')]");
         elements.put("add_i_value", "//*[contains(@id, 'it6::content')]");
         elements.put("add_i_type", "//*[contains(@id, 'it5::content')]");
