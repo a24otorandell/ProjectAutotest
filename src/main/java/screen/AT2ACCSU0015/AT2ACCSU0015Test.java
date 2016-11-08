@@ -135,7 +135,6 @@ public class AT2ACCSU0015Test {
 
         return true;
     }
-
     private boolean Hotel_brand_delete (TestDriver driver){
 
         driver.getReport().addHeader(" DELETE IN HOTEL BRAND",3,false);
@@ -150,7 +149,6 @@ public class AT2ACCSU0015Test {
 
         return true;
     }
-
     private boolean Hotel_brand_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN HOTEL BRAND",3,false);
@@ -172,7 +170,6 @@ public class AT2ACCSU0015Test {
 
         return true;
     }
-
     private boolean Hotel_brand_edit (TestDriver driver){
 
         driver.getReport().addHeader(" EDIT IN HOTEL BRAND",3,false);
@@ -199,7 +196,6 @@ public class AT2ACCSU0015Test {
 
         return true;
     }
-
     private boolean Hotel_brand_search (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN HOTEL BRAND",3,false);
@@ -222,7 +218,6 @@ public class AT2ACCSU0015Test {
 
         return true;
     }
-
     private boolean Hotel_brand_add (TestDriver driver){
         Functions.break_time(driver,6,500);
         if(!Functions.checkClick(driver,
@@ -288,7 +283,6 @@ public class AT2ACCSU0015Test {
 
         return true;
     }
-
     private boolean Cadena_hotel_id_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN CADENA HOTEL ID",3,false);
@@ -309,7 +303,6 @@ public class AT2ACCSU0015Test {
         }
         return true;
     }
-
     private boolean Cadena_hotel_id_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN CADENA HOTEL ID",3,false);
         if(!Functions.checkClick(driver,
@@ -349,7 +342,6 @@ public class AT2ACCSU0015Test {
         }
         return true;
     }
-
     private boolean Cadena_hotel_id_search (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN CADENA HOTEL ID",3,false);
@@ -382,7 +374,6 @@ public class AT2ACCSU0015Test {
 
         return true;
     }
-
     private boolean Cadena_hotel_id_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN CADENA HOTEL ID",3,false);

@@ -103,19 +103,20 @@ public class AT2ACCSU0015Sis {
 
     private boolean Hotel_brand_qbe (TestDriver driver){
         driver.getReport().addHeader(" QBE IN HOTEL HOTEL BRAND ID",3,false);
+        Functions.break_time(driver,6,500);
         if(!Functions.simpleClick(driver,
                 new String[]{"hotel_brand_se_b_reset",getElements("hotel_brand_se_b_reset")}, //element to click
                 " on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.clickQbE(driver,
                 new String[]{"hotel_brand_qbe_b_qbe",getElements("hotel_brand_qbe_b_qbe")},// query button
                 new String[]{"hotel_brand_qbe_i_brand",getElements("hotel_brand_qbe_i_brand")},//any query input
                 " on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"hotel_brand_qbe_i_brand",getElements("hotel_brand_qbe_i_brand")},
                 "brand",getData("brand"),"on QBE")){
             return false;
@@ -134,11 +135,10 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_brand_delete (TestDriver driver){
 
         driver.getReport().addHeader(" DELETE IN HOTEL BRAND",3,false);
-
+        Functions.break_time(driver,6,500);
         if(!Functions.doDeleteNCheck(driver,
                 new String[]{"hotel_brand_del_b_delete",getElements("hotel_brand_del_b_delete")},
                 new String[]{"hotel_brand_del_e_record",getElements("hotel_brand_del_e_record")},
@@ -149,11 +149,10 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_brand_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN HOTEL BRAND",3,false);
-
+        Functions.break_time(driver,6,500);
         if(!Functions.auditData(driver,
                 new String[]{"hotel_brand_oa_b_actions",getElements("hotel_brand_oa_b_actions")}, //actions button
                 new String[]{"hotel_brand_oa_b_actions_b_audit_data",getElements("hotel_brand_oa_b_actions_b_audit_data")}, //audit button
@@ -162,6 +161,7 @@ public class AT2ACCSU0015Sis {
             return false;
 
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.detachTable(driver,
                 new String[]{"hotel_brand_oa_b_detach",getElements("hotel_brand_oa_b_detach")}, //detach button
                 true,     //screenshot??
@@ -171,7 +171,6 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_brand_edit (TestDriver driver){
 
         driver.getReport().addHeader(" EDIT IN HOTEL BRAND",3,false);
@@ -184,10 +183,12 @@ public class AT2ACCSU0015Sis {
                 " on EDIT")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"hotel_brand_ed_i_user_description",getElements("hotel_brand_ed_i_user_description")},
                 "user_description",DataGenerator.getRandomAlphanumericSequence(8,true),"on EDIT")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.checkClickByAbsence(driver,
                 new String[]{"hotel_brand_ed_b_save",getElements("hotel_brand_ed_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -198,20 +199,20 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_brand_search (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN HOTEL BRAND",3,false);
-
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"hotel_brand_se_i_brand",getElements("hotel_brand_se_i_brand")},
                 "brand",getData("brand"),"on SEARCH")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"hotel_brand_se_i_user_description",getElements("hotel_brand_se_i_user_description")},
                 "user_description",getData("user_description"),"on SEARCH")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.clickSearchAndResult(driver,
                 new String[]{"hotel_brand_se_b_search",getElements("hotel_brand_se_b_search")}, //search button
                 new String[]{"hotel_brand_se_e_result",getElements("hotel_brand_se_e_result")}, //result element
@@ -221,7 +222,6 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_brand_add (TestDriver driver){
         Functions.break_time(driver,6,500);
         if(!Functions.checkClick(driver,
@@ -276,7 +276,7 @@ public class AT2ACCSU0015Sis {
 
     private boolean Cadena_hotel_id_delete (TestDriver driver){
         driver.getReport().addHeader(" DELETE IN CADENA HOTEL ID",3,false);
-
+        Functions.break_time(driver,6,500);
         if(!Functions.doDeleteNCheck(driver,
                 new String[]{"cadena_hotel_description_del_b_delete",getElements("cadena_hotel_description_del_b_delete")},
                 new String[]{"cadena_hotel_description_del_e_record",getElements("cadena_hotel_description_del_e_record")},
@@ -287,11 +287,10 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Cadena_hotel_id_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN CADENA HOTEL ID",3,false);
-
+        Functions.break_time(driver,6,500);
         if(!Functions.auditData(driver,
                 new String[]{"cadena_hotel_description_oa_b_actions",getElements("cadena_hotel_description_oa_b_actions")}, //actions button
                 new String[]{"cadena_hotel_description_oa_b_actions_audit_data",getElements("cadena_hotel_description_oa_b_actions_audit_data")}, //audit button
@@ -300,6 +299,7 @@ public class AT2ACCSU0015Sis {
             return false;
 
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.detachTable(driver,
                 new String[]{"cadena_hotel_description_oa_b_detach",getElements("cadena_hotel_description_oa_b_detach")}, //detach button
                 true,     //screenshot??
@@ -308,10 +308,10 @@ public class AT2ACCSU0015Sis {
         }
         return true;
     }
-
     private boolean Cadena_hotel_id_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN CADENA HOTEL ID",3,false);
 
+        Functions.break_time(driver,6,500);
         if(!Functions.checkClick(driver,
                 new String[]{"cadena_hotel_description_ed_b_edit",getElements("cadena_hotel_description_ed_b_edit")}, //element to click
                 new String[]{"cadena_hotel_description_ed_e_code",getElements("cadena_hotel_description_ed_e_code")}, //element expected to appear
@@ -319,6 +319,7 @@ public class AT2ACCSU0015Sis {
                 " on EDIT")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.getValue(driver,new String[]{"cadena_hotel_description_ed_e_code",getElements("cadena_hotel_description_ed_e_code")}, // element path
                 "code", // key for data value (the name)
                 " on EDIT")){
@@ -335,11 +336,12 @@ public class AT2ACCSU0015Sis {
                 " on EDIT")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"cadena_hotel_description_ed_i_description",getElements("cadena_hotel_description_ed_i_description")},
                 "descriptions",DataGenerator.getRandomAlphanumericSequence(8,true),"on EDIT")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.checkClickByAbsence(driver,
                 new String[]{"cadena_hotel_description_ed_b_save",getElements("cadena_hotel_description_ed_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -349,7 +351,6 @@ public class AT2ACCSU0015Sis {
         }
         return true;
     }
-
     private boolean Cadena_hotel_id_search (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN CADENA HOTEL ID",3,false);
@@ -382,7 +383,6 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Cadena_hotel_id_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN CADENA HOTEL ID",3,false);
@@ -465,7 +465,6 @@ public class AT2ACCSU0015Sis {
         }
         return true;
     }
-
     private boolean Hotel_chain_description_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN HOTEL CHAIN DESCRIPTION",3,false);
@@ -487,7 +486,6 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_chain_description_qbe (TestDriver driver){
 
         driver.getReport().addHeader(" QBE IN HOTEL CHAIN DESCRIPTION",3,false);
@@ -523,7 +521,6 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_chain_description_edit (TestDriver driver){
 
         driver.getReport().addHeader(" EDIT IN HOTEL CHAIN DESCRIPTION",3,false);
@@ -553,7 +550,6 @@ public class AT2ACCSU0015Sis {
         }
         return true;
     }
-
     private boolean Hotel_chain_description_search (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN HOTEL CHAIN DESCRIPTION",3,false);
@@ -577,7 +573,6 @@ public class AT2ACCSU0015Sis {
 
         return true;
     }
-
     private boolean Hotel_chain_description_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN HOTEL BRAND",3,false);

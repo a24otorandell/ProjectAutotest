@@ -826,7 +826,7 @@ public class Functions {
                 String optiontext = option.getText();
                 if (optiontext.contains(content)) {
                     option.click();
-                    sleep(2000);
+                   /* sleep(2000);*/
                     driver.getReport().addContent("Option (" + content + ") selected on " + pathselect[0] + ".");
                     found = true;
                     driver.getTest().getData().put(dataname, content);

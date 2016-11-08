@@ -261,7 +261,7 @@ public class AT2ACCSU0074Test {
             return false;
         }
         if(!Functions.simpleClick(driver,
-                new String[]{"template_descriptions_add_text_sl_check_box",getElements("template_descriptions_add_text_sl_check_box")}, //element to click
+                new String[]{"template_descriptions_add_text_sl_secuencial",getElements("template_descriptions_add_text_sl_secuencial")}, //element to click
                 " on ADD")){
             return false;
         }
