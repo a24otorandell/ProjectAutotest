@@ -209,11 +209,10 @@ public class AT2MDMDE0003Sis {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
         if (!Functions.doDeleteNCheck(driver,
-                new String[]{"country_b_delete", getElements("country_b_delete")},
-                new String[]{"country_e_records", getElements("country_e_records")},
-                where)){
-            return false;
-        }
+                new String[]{"country_b_delete", getElements("country_b_delete")}, //button delete
+                new String[]{"country_e_records", getElements("country_e_records")}, // result
+                new String[]{"country_b_delete_yes", getElements("country_b_delete_yes")}, //delete button yes
+                where)){return false;}
         return true;
     }
 

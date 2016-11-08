@@ -29,6 +29,7 @@ public class AT2MDMDE0003Locators {
         elements.put("country_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("country_e_result", "//*[contains(@id, 'pc1:master::db')]/table/tbody/tr[1]/td[1]");
         elements.put("country_e_records", "//*[contains(@id, 'pc1:ot111')]");
+        elements.put("country_b_delete_yes", "//*[contains(@id, 'pcgt1:cbt1')]");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
