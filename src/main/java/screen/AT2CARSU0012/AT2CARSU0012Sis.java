@@ -1,6 +1,7 @@
 package screen.AT2CARSU0012;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
@@ -63,7 +64,7 @@ public class AT2CARSU0012Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_external_lang", getElements("add_i_external_lang")},
-                "ext_lang", "ott", where)) {
+                "ext_lang", DataGenerator.getRandomAlphanumericSequence(3,false), where)) {
             return false;
         }
         if (!Functions.createLov(driver,
@@ -85,7 +86,7 @@ public class AT2CARSU0012Sis {
                 new String[]{"add_lov_atlas", getElements("add_lov_atlas")}, // b_lov
                 new String[]{"add_i_atlas_lan", getElements("add_i_atlas_lan")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "atlas", //Data name
                 where)) {
@@ -134,7 +135,7 @@ public class AT2CARSU0012Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_external_lang", getElements("add_i_external_lang")},
-                "ext_lang", "EDI", where)) {
+                "ext_lang", DataGenerator.getRandomAlphanumericSequence(3,false), where)) {
             return false;
         }
        /* if (!Functions.createLov(driver,
@@ -152,7 +153,7 @@ public class AT2CARSU0012Sis {
                 where)) {
             return false;
         }*/
-        if (!Functions.createLov(driver,
+/*        if (!Functions.createLov(driver,
                 new String[]{"add_lov_atlas", getElements("add_lov_atlas")}, // b_lov
                 new String[]{"add_i_atlas_lan", getElements("add_i_atlas_lan")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
@@ -161,7 +162,15 @@ public class AT2CARSU0012Sis {
                 "atlas", //Data name
                 where)) {
             return false;
-        }
+        }*/
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_atlas", getElements("add_lov_atlas")}, //LoV button
+                new String[]{"add_i_atlas_lan", getElements("add_i_atlas_lan")}, //external LoV input
+                new String[]{"add_lov_atlas_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "BRI", // value to search
+                "atlas", //name of the data
+                where)){return false;}
         if (!Functions.getText(driver, new String[]{"add_i_des_altas", getElements("add_i_des_altas")}, // element path
                 "desc", // key for data value (the name)
                 where)) {
@@ -210,12 +219,10 @@ public class AT2CARSU0012Sis {
                 "desc", getData("desc"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_atlas", getElements("qbe_i_atlas")}, //search button
-                new String[]{"languaje_e_result", getElements("languaje_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_atlas", getElements("qbe_i_atlas")}, //any query input
+                new String[]{"languaje_e_result", getElements("languaje_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_languaje(TestDriver driver) {
