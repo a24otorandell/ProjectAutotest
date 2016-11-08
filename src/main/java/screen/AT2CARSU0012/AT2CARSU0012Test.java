@@ -63,7 +63,7 @@ public class AT2CARSU0012Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_external_lang", getElements("add_i_external_lang")},
-                "ext_lang", "ott", where)) {
+                "ext_lang", DataGenerator.getRandomAlphanumericSequence(3,false), where)) {
             return false;
         }
         if (!Functions.createLov(driver,
@@ -134,7 +134,7 @@ public class AT2CARSU0012Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_external_lang", getElements("add_i_external_lang")},
-                "ext_lang", "EDI", where)) {
+                "ext_lang", DataGenerator.getRandomAlphanumericSequence(3,false), where)) {
             return false;
         }
        /* if (!Functions.createLov(driver,
@@ -210,12 +210,10 @@ public class AT2CARSU0012Test {
                 "desc", getData("desc"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_atlas", getElements("qbe_i_atlas")}, //search button
-                new String[]{"languaje_e_result", getElements("languaje_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_atlas", getElements("qbe_i_atlas")}, //any query input
+                new String[]{"languaje_e_result", getElements("languaje_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_languaje(TestDriver driver) {
