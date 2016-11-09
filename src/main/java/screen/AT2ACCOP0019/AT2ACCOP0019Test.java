@@ -9,11 +9,8 @@ import core.recursiveData.recursiveXPaths;
 
 /**
  * Created by vsolis on 28/09/2016.
- *
- *
+
  * XPATH DIFERENTES QUE LOS DE SIS
- *
- * ERRORES GRAFICOS QUE HARAN QUE EL CODIGO FALLE.
  */
 public class AT2ACCOP0019Test {
     protected AT2ACCOP0019Locators locators;
@@ -65,10 +62,14 @@ public class AT2ACCOP0019Test {
         if (!Give_elements_merchant(driver)) {
             return false;
         }
+
         if (!Add_merchant(driver)) {
             return false;
         }
         if (!Search_merchant(driver)) {
+            return false;
+        }
+        if(!Qbe_merchant_and_payment_method(driver)){
             return false;
         }
         if (!Edit_merchant(driver)) {
@@ -83,6 +84,81 @@ public class AT2ACCOP0019Test {
         if (!Delete_merchant(driver)) {
             return false;
         }
+        return true;
+    }
+
+    private boolean Qbe_merchant_and_payment_method (TestDriver driver){
+        if(!Functions.simpleClick(driver,
+                new String[]{"mercant_se_b_reset",getElements("mercant_se_b_reset")}, //element to click
+                " on QBE")){
+            return false;
+        }
+
+        if(!Functions.clickQbE(driver,
+                new String[]{"mercant_qbe_b_qbe",getElements("mercant_qbe_b_qbe")},// query button
+                new String[]{"mercant_qbe_i_provider",getElements("mercant_qbe_i_provider")},//any query input
+                " on QBE")){
+            return false;
+        }
+        if(!Functions.getText(driver,new String[]{"payment_method_record",getElements("payment_method_record")}, // element path
+                "method_record", // key for data value (the name)
+                " on SIMPLE")){
+            return false;
+        }
+        if(!Functions.getText(driver,new String[]{"currency_record",getElements("currency_record")}, // element path
+                "currency_record", // key for data value (the name)
+                " on SIMPLE")){
+            return false;
+        }
+        Functions.break_time(driver,6,500);
+        if(!Functions.getText(driver,new String[]{"capture_delay_record",getElements("capture_delay_record")}, // element path
+                "delay_record", // key for data value (the name)
+                " on SIMPLE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_provider",getElements("mercant_qbe_i_provider")},
+                "qbe_provider",data.getData().get("provider")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_merchant",getElements("mercant_qbe_i_merchant")},
+                "qbe_mercant",data.getData().get("mercant")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_submerchant",getElements("mercant_qbe_i_submerchant")},
+                "qbe_submercant",data.getData().get("submercant")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_country_code",getElements("mercant_qbe_i_country_code")},
+                "qbe_country_code",data.getData().get("country_code")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_user",getElements("mercant_qbe_i_user")},
+                "qbe_user",data.getData().get("user")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_password",getElements("mercant_qbe_i_password")},
+                "qbe_pass",data.getData().get("pass")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_capture_delay",getElements("mercant_qbe_i_capture_delay")},
+                "delay_record",data.getData().get("delay_record")," on SIMPLE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_currency",getElements("mercant_qbe_i_currency")},
+                "currency_record",data.getData().get("currency_record")," on SIMPLE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"mercant_qbe_i_payment_method",getElements("mercant_qbe_i_payment_method")},
+                "method_record",data.getData().get("method_record")," on SIMPLE")){
+            return false;
+        }
+        if(!Functions.enterQueryAndClickResult(driver,
+                new String[]{"mercant_qbe_i_submerchant",getElements("mercant_qbe_i_submerchant")}, //search button
+                new String[]{"mercant_se_e_result",getElements("mercant_se_e_result")}, //result element
+                " on QBE")){
+            return false;
+        }
+
         return true;
     }
     private boolean Give_elements_merchant(TestDriver driver) {
@@ -188,7 +264,7 @@ public class AT2ACCOP0019Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"mercant_se_i_delete_date", getElements("mercant_se_i_delete_date")},
-                "del_gettoday", DataGenerator.getToday(driver, "dd/MM/yyyy"), " on DELETE")) {
+                "del_gettoday",DataGenerator.getToday(driver,"dd/MM/yyyy")," on DELETE")){
             return false;
         }
 
@@ -232,6 +308,11 @@ public class AT2ACCOP0019Test {
                 " on QBE")) {
             return false;
         }
+        if(!Functions.simpleClick(driver,
+                new String[]{"refresh_qbe",getElements("refresh_qbe")}, //element to click
+                " on QBE")){
+            return false;
+        }
 
         if (!Functions.clickQbE(driver,
                 new String[]{"mercant_qbe_b_qbe", getElements("mercant_qbe_b_qbe")},// query button
@@ -255,18 +336,22 @@ public class AT2ACCOP0019Test {
                 "qbe_country_code", data.getData().get("country_code"), " on QBE")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"mercant_qbe_i_user", getElements("mercant_qbe_i_user")},
                 "qbe_user", data.getData().get("user"), " on QBE")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"mercant_qbe_i_password", getElements("mercant_qbe_i_password")},
                 "qbe_pass", data.getData().get("pass"), " on QBE")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"mercant_qbe_i_secure_hash", getElements("mercant_qbe_i_secure_hash")},
                 "qbe_delay", data.getData().get("delay"), " on QBE")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"mercant_qbe_i_submerchant", getElements("mercant_qbe_i_submerchant")}, //search button
                 new String[]{"mercant_se_e_result", getElements("mercant_se_e_result")}, //result element
@@ -286,6 +371,28 @@ public class AT2ACCOP0019Test {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
+        if(!Functions.simpleClick(driver,
+                new String[]{"mercant_ed_e_currency_table",getElements("mercant_ed_e_currency_table")}, //element to click
+                " on ADD")){
+            return false;
+        }
+        Functions.break_time(driver,6,500);
+        if(!Functions.checkClick(driver,
+                new String[]{"mercant_add_b_delete_currenzy_and_payment_method",getElements("mercant_add_b_delete_currenzy_and_payment_method")}, //element to click
+                new String[]{"mercant_add_b_delete_currenzy_and_payment_method_yes",getElements("mercant_add_b_delete_currenzy_and_payment_method_yes")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on ADD")){
+            return false;
+        }
+        Functions.break_time(driver,6,500);
+        if(!Functions.checkClick(driver,
+                new String[]{"mercant_add_b_delete_currenzy_and_payment_method_yes",getElements("mercant_add_b_delete_currenzy_and_payment_method_yes")}, //element to click
+                new String[]{"mercant_add_b_save",getElements("mercant_add_b_save")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on ADD")){
+            return false;
+        }
         Functions.break_time(driver, 6, 500);
         if (!Functions.createLov(driver,
                 new String[]{"mercant_ed_lov_provider", getElements("mercant_ed_lov_provider")}, // b_lov
@@ -302,6 +409,7 @@ public class AT2ACCOP0019Test {
                 "mercant", DataGenerator.getRandomAlphanumericSequence(8, true), " on EDIT")) {
             return false;
         }
+
         if (!Functions.createLov(driver,
                 new String[]{"mercant_ed_lov_country_code", getElements("mercant_ed_lov_country_code")}, // b_lov
                 new String[]{"mercant_ed_i_counter_code", getElements("mercant_ed_i_counter_code")}, // i_lov
@@ -371,7 +479,7 @@ public class AT2ACCOP0019Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"mercant_se_i_creation_date", getElements("mercant_se_i_creation_date")},
-                "se_gettoday", DataGenerator.getToday(driver, "dd/MM/yyyy"), " on SEARCH")) {
+                "se_gettoday",DataGenerator.getToday(driver,"dd/MM/yyyy")," on SEARCH")){
             return false;
         }
 
@@ -437,7 +545,7 @@ public class AT2ACCOP0019Test {
             return false;
         }
 
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_add_b_add_currency_and_payment_methods", getElements("mercant_add_b_add_currency_and_payment_methods")}, //element to click
                 new String[]{"mercant_add_lov_currency", getElements("mercant_add_lov_currency")}, //element expected to appear
@@ -539,7 +647,7 @@ public class AT2ACCOP0019Test {
             return false;
         }
         //Editar en tabla currenzy
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_add_b_add_currency_and_payment_methods", getElements("mercant_add_b_add_currency_and_payment_methods")}, //element to click
                 new String[]{"mercant_add_b_rollback_currenzy_and_payment_method", getElements("mercant_add_b_rollback_currenzy_and_payment_method")}, //element expected to appear
@@ -561,6 +669,7 @@ public class AT2ACCOP0019Test {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.simpleClick(driver,
                 new String[]{"mercant_ed_e_currency_table", getElements("mercant_ed_e_currency_table")}, //element to click
                 " on ADD")) {
@@ -582,12 +691,13 @@ public class AT2ACCOP0019Test {
         }
 
         //Editar en tabla payment method
-
+        Functions.break_time(driver,6,500);
         if (!Functions.simpleClick(driver,
                 new String[]{"mercant_ed_e_currency_table", getElements("mercant_ed_e_currency_table")}, //element to click
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_ed_b_ed_currency_and_payment_methods", getElements("mercant_ed_b_ed_currency_and_payment_methods")}, //element to click
                 new String[]{"mercant_ed_lov_payment_method", getElements("mercant_ed_lov_payment_method")}, //element expected to appear
@@ -595,7 +705,7 @@ public class AT2ACCOP0019Test {
                 " on ADD")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_ed_lov_payment_method", getElements("mercant_ed_lov_payment_method")}, //element to click
                 new String[]{"mercant_ed_e_payment_method_pass", getElements("mercant_ed_e_payment_method_pass")}, //element expected to appear
@@ -603,6 +713,7 @@ public class AT2ACCOP0019Test {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"mercant_add_lov_payment_method_i_payment_methood", getElements("mercant_add_lov_payment_method_i_payment_methood")},
                 "ed_payment2", data.getData().get("payment2"), " on EDIT")) {
             return false;
@@ -618,7 +729,7 @@ public class AT2ACCOP0019Test {
                 " on ADD")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_ed_e_payment_method_pass", getElements("mercant_ed_e_payment_method_pass")}, //element to click
                 new String[]{"mercant_ed_e_payment_method_description", getElements("mercant_ed_e_payment_method_description")}, //element expected to appear
@@ -626,6 +737,7 @@ public class AT2ACCOP0019Test {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_ed_lov_payment_method_b_ok", getElements("mercant_ed_lov_payment_method_b_ok")}, //element to click
                 new String[]{"mercant_ed_lov_payment_method", getElements("mercant_ed_lov_payment_method")}, //element expected to appear
@@ -633,6 +745,7 @@ public class AT2ACCOP0019Test {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_ed_b_save_currency_and_payment_methods", getElements("mercant_ed_b_save_currency_and_payment_methods")}, //element to click
                 new String[]{"mercant_ed_b_save", getElements("mercant_ed_b_save")}, //element expected to appear
@@ -640,25 +753,28 @@ public class AT2ACCOP0019Test {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.simpleClick(driver,
-                new String[]{"mercant_ed_e_currency_table", getElements("mercant_ed_e_currency_table")}, //element to click
-                " on ADD")) {
+                new String[]{"mercant_ed_e_currency_table",getElements("mercant_ed_e_currency_table")}, //element to click
+                " on ADD")){
             return false;
         }
-        if (!Functions.checkClick(driver,
+        Functions.break_time(driver,6,500);
+     /*   if (!Functions.checkClick(driver,
                 new String[]{"mercant_add_b_delete_currenzy_and_payment_method", getElements("mercant_add_b_delete_currenzy_and_payment_method")}, //element to click
                 new String[]{"mercant_add_b_delete_currenzy_and_payment_method_yes", getElements("mercant_add_b_delete_currenzy_and_payment_method_yes")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"mercant_add_b_delete_currenzy_and_payment_method_yes", getElements("mercant_add_b_delete_currenzy_and_payment_method_yes")}, //element to click
                 new String[]{"mercant_add_b_save", getElements("mercant_add_b_save")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 " on ADD")) {
             return false;
-        }
+        }*/
 
         Functions.break_time(driver, 6, 500);
         if (!Functions.checkClickByAbsence(driver,

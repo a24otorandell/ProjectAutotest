@@ -21,6 +21,20 @@ public class AT2ACCOP0019Locators {
     public void setElements() {
 
 
+
+
+        /*SIMPLE QBE*/
+
+        elements.put("payment_method_order","//*[contains(@id, 'pc1:tMerch:c1')]");
+        elements.put("payment_method_record","//*[contains(@id, 'pc1:tMerch::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[11]");
+        elements.put("currency_record","//*[contains(@id, 'pc1:tMerch::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[10]");
+        elements.put("capture_delay_record","//*[contains(@id, 'pc1:tMerch::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[8]");
+        elements.put("refresh_qbe","//*[contains(@id, 'pc1:tMerch::ch::t')]/tbody/tr[2]/th/a");
+        elements.put("","//*[contains(@id, '");
+
+
+
+
         //GIVE ELEMENTS
         elements.put("card_ips", "//*[contains(@id, 'qryId1:value80::pop')]/li[4]/ul/li[3]/label");
         elements.put("aed_united", "//*[contains(@id, 'qryId1:value70::pop')]/li[4]/ul/li[1]/label");
