@@ -71,6 +71,7 @@ public class AT2MDMCL0032Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //element to click
                 where)){return false;}
+        Functions.break_time(driver, 60, 500);
         return true;
     }
     private boolean interaction_record_prising(TestDriver driver) {

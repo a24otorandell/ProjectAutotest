@@ -12,6 +12,7 @@ import core.recursiveData.recursiveXPaths;
 public class AT2MDMSY0039Sis {
     protected AT2MDMSY0039Locators locators;
     protected AT2MDMSY0039Data data;
+    boolean check;
     public AT2MDMSY0039Sis() {
     }
     public AT2MDMSY0039Locators getLocators() {
@@ -52,6 +53,16 @@ public class AT2MDMSY0039Sis {
         return true;
     }
 
+    public boolean check_bussines () {
+        int random = DataGenerator.random(1,3);
+        if (random == 2) {
+            check = true;
+        }
+        else {
+            check = false;
+        }
+        return check;
+    }
     public boolean interaction_add (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
@@ -83,8 +94,9 @@ public class AT2MDMSY0039Sis {
                 getElements("add_ck_visible_screen"),"visible",true,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_modify_labels"),"modify",true,true, where)){return false;}
+        check_bussines();
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_business_labels"),"business",true,true, where)){return false;}
+                getElements("add_ck_business_labels"),"business",check,true, where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -117,7 +129,7 @@ public class AT2MDMSY0039Sis {
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_modify_labels"),"modify",true,true, where)){return false;}
         if (!Functions.checkboxValue(driver,
-                getElements("search_ck_business_labels"),"business",true,true, where)){return false;}
+                getElements("search_ck_business_labels"),"business",check,true, where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"reports_e_result", getElements("reports_e_result")}, //result element
@@ -157,8 +169,8 @@ public class AT2MDMSY0039Sis {
                 getElements("add_ck_visible_screen"),"visible",false,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_modify_labels"),"modify",false,true, where)){return false;}
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_business_labels"),"business",false,true, where)){return false;}
+/*        if (!Functions.checkboxValue(driver,
+                getElements("add_ck_business_labels"),"business",false,true, where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

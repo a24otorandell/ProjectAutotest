@@ -86,7 +86,7 @@ public class AT2TRFSU0016Locators {
         elements.put("aditional_qbe_i_suplements_type", "//*[contains(@id, 'afr_r1_afr_1_afr_pc1_afr_t1_afr_c9::content')]");
         elements.put("aditional_qbe_i_suplementss_description", "//*[contains(@id, 'afr_r1_afr_1_afr_pc1_afr_t1_afr_c4::content')]");
         elements.put("aditional_qbe_sl_purcharse_or_sale", "//*[contains(@id, 't1:soc5::content')]");
-        elements.put("aditional_qbe_i_suplier_name", "//*[contains(@id, 'afr_r1_afr_1_afr_pc1_afr_t1_afr_c8::content')]");
+        elements.put("aditional_qbe_i_suplier_name","//*[contains(@id, 'pc1_afr_t1_afr_c8::content')]");
         elements.put("aditional_qbe_sl_person_or_unit", "//*[contains(@id, 't1:soc6::content')]");
         elements.put("aditional_qbe_i_unit_price", "//*[contains(@id, 'afr_1_afr_pc1_afr_t1_afr_c7::content')]");
         elements.put("aditional_qbe_i_currency", "//*[contains(@id, 'afr_pc1_afr_t1_afr_c6::content')]");

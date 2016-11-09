@@ -72,6 +72,7 @@ public class AT2MDMCL0032Sis {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //element to click
                 where)){return false;}
+        Functions.break_time(driver, 60, 500);
         return true;
     }
     private boolean interaction_record_prising(TestDriver driver) {
@@ -274,12 +275,6 @@ public class AT2MDMCL0032Sis {
     private boolean qbe_prising(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        /*if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"pricing_e_result", getElements("pricing_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 where)){return false;}
