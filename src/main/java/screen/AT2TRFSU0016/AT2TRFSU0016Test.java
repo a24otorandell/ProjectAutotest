@@ -57,6 +57,7 @@ public class AT2TRFSU0016Test {
         return false;
     }
 
+
     private boolean Aditional_suplements(TestDriver driver) {
 
         if (!Add_aditional(driver)) {
@@ -138,27 +139,31 @@ public class AT2TRFSU0016Test {
                 " on QBE")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"aditional_qbe_i_suplements_type", getElements("aditional_qbe_i_suplements_type")},
                 "qbe_suplements_type", data.getData().get("suplements_type"), " on QBE ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"aditional_qbe_i_suplementss_description", getElements("aditional_qbe_i_suplementss_description")},
                 "qbe_suplements_description", data.getData().get("suplements_description"), " on QBE ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"aditional_qbe_sl_purcharse_or_sale", getElements("aditional_qbe_sl_purcharse_or_sale")},
                 data.getData().get("select_pur"), "qbe_sl_purcharse_or_sale", "  on QBE ")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"aditional_qbe_sl_person_or_unit", getElements("aditional_qbe_sl_person_or_unit")},
                 data.getData().get("select_per"), "qbe_person_or_unit", " on QBE ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"aditional_qbe_i_unit_price", getElements("aditional_qbe_i_unit_price")},
                 "qbe_unit_price", data.getData().get("unit_price"), " on QBE ")) {
@@ -201,6 +206,7 @@ public class AT2TRFSU0016Test {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"aditional_ed_lov_suplements_type", getElements("aditional_ed_lov_suplements_type")}, // b_lov
                 new String[]{"aditional_ed_i_suplements_type", getElements("aditional_ed_i_suplements_type")}, // i_lov
@@ -211,6 +217,7 @@ public class AT2TRFSU0016Test {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         Functions.getValue(driver, new String[]{"aditional_ed_e_suplementss_description", getElements("aditional_ed_e_suplementss_description")}, // element path
                 "suplements_description", // key for data value (the name)
                 " on EDIT");
@@ -239,6 +246,7 @@ public class AT2TRFSU0016Test {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
 
         if (!Functions.createLov(driver,
                 new String[]{"aditional_ed_lov_guide", getElements("aditional_ed_lov_guide")}, // b_lov
@@ -250,12 +258,13 @@ public class AT2TRFSU0016Test {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
 
         if (!Functions.insertInput(driver, new String[]{"aditional_ed_i_remarks", getElements("aditional_ed_i_remarks")},
                 "remarks", "Prueba2", " on EDIT")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"aditional_ed_b_save", getElements("aditional_ed_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -269,7 +278,7 @@ public class AT2TRFSU0016Test {
     private boolean Search_aditional(TestDriver driver) {
 
         driver.getReport().addHeader(" BASIC SEARCH IN ADITIONAL SUPLEMENTS", 3, false);
-
+        Functions.break_time(driver,6,500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"aditional_se_lov_suplements_type", getElements("aditional_se_lov_suplements_type")}, //LoV button
                 new String[]{"aditional_se_i_suplements_type", getElements("aditional_se_i_suplements_type")}, //external LoV input
@@ -279,12 +288,13 @@ public class AT2TRFSU0016Test {
                 " on SEARCH")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"aditional_se_sl_purcharse_or_sale", getElements("aditional_se_sl_purcharse_or_sale")},
                 data.getData().get("select_pur"), "se_sl_purcharse_or_sale", " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"aditional_se_lov_suplier_name", getElements("aditional_se_lov_suplier_name")}, //LoV button
                 new String[]{"aditional_se_i_suplier_name", getElements("aditional_se_i_suplier_name")}, //external LoV input
@@ -294,16 +304,19 @@ public class AT2TRFSU0016Test {
                 " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"aditional_se_sl_person_or_unit", getElements("aditional_se_sl_person_or_unit")},
                 data.getData().get("select_per"), "sl_person_or_unit", " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"aditional_se_i_unit_price", getElements("aditional_se_i_unit_price")},
                 "se_i_unit_price", data.getData().get("unit_price"), " on SEARCH ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"aditional_se_lov_currency", getElements("aditional_se_lov_currency")}, //LoV button
                 new String[]{"aditional_se_i_currency", getElements("aditional_se_i_currency")}, //external LoV input
@@ -313,6 +326,7 @@ public class AT2TRFSU0016Test {
                 " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"aditional_se_lov_guide", getElements("aditional_se_lov_guide")}, //LoV button
                 new String[]{"aditional_se_i_guide", getElements("aditional_se_i_guide")}, //external LoV input
@@ -322,6 +336,7 @@ public class AT2TRFSU0016Test {
                 " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"aditional_se_i_remarks", getElements("aditional_se_i_remarks")},
                 "se_remarks", data.getData().get("remarks"), " on SEARCH")) {
@@ -348,6 +363,7 @@ public class AT2TRFSU0016Test {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,8,500);
         if (!Functions.createLov(driver,
                 new String[]{"aditional_add_lov_suplements_type", getElements("aditional_add_lov_suplements_type")}, // b_lov
                 new String[]{"aditional_add_i_suplements_type", getElements("aditional_add_i_suplements_type")}, // i_lov
@@ -358,6 +374,7 @@ public class AT2TRFSU0016Test {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         Functions.getValue(driver, new String[]{"aditional_add_e_suplementss_description", getElements("aditional_add_e_suplementss_description")}, // element path
                 "suplements_description", // key for data value (the name)
                 " on ADD");
@@ -366,6 +383,7 @@ public class AT2TRFSU0016Test {
                 "Purchase", "select_pur", " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"aditional_add_lov_suplier_name", getElements("aditional_add_lov_suplier_name")}, // b_lov
                 new String[]{"aditional_add_i_suplier_name", getElements("aditional_add_i_suplier_name")}, // i_lov
@@ -376,7 +394,7 @@ public class AT2TRFSU0016Test {
                 " on ADD")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"aditional_add_sl_person_or_unit", getElements("aditional_add_sl_person_or_unit")},
                 "Person", "select_per", " on ADD")) {
@@ -386,6 +404,7 @@ public class AT2TRFSU0016Test {
                 "unit_price", (Integer.toString(DataGenerator.random(1, 90))), " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"aditional_add_lov_currency", getElements("aditional_add_lov_currency")}, // b_lov
                 new String[]{"aditional_add_i_currency", getElements("aditional_add_i_currency")}, // i_lov
@@ -396,7 +415,7 @@ public class AT2TRFSU0016Test {
                 " on ADD")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"aditional_add_lov_guide", getElements("aditional_add_lov_guide")}, // b_lov
                 new String[]{"aditional_add_i_guide", getElements("aditional_add_i_guide")}, // i_lov
@@ -407,7 +426,7 @@ public class AT2TRFSU0016Test {
                 " on ADD")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"aditional_add_i_remarks", getElements("aditional_add_i_remarks")},
                 "remarks", "Prueba1", " on ADD")) {
             return false;

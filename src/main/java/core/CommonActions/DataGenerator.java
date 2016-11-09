@@ -211,7 +211,7 @@ public class DataGenerator {
     }
 
     /**
-     * This method change a string in uppercase, lowercase, capitalcase, firstletter string
+     * This method changes a string in uppercase, lowercase, capitalcase, firstletter string
      *
      * @param toConvert String - String to change
      * @param condition String - values to change: uppercase, lowercase, capitalcase, firstletter
@@ -300,7 +300,7 @@ public class DataGenerator {
         return converted;
     }
     /**
-     * This method generates a random, dummy IP with port
+     * This method generates a random, dummy IP
      *
      * @return String containing the generated IP
      */

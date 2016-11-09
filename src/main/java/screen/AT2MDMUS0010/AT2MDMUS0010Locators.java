@@ -21,9 +21,9 @@ public class AT2MDMUS0010Locators {
         //GENERALS
         elements.put("passwords_b_actions", "//*[contains(@id, 'pcgm1:dc_m1')]");
         elements.put("passwords_b_actions_b_change", "//*[contains(@id, 'pcgm1:dc_cmi1')]/td[2]");
-        elements.put("passwords_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
-        elements.put("passwords_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
-        elements.put("passwords_e_result", "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("passwords_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]");
+        elements.put("passwords_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
+        elements.put("passwords_e_result", "//*[contains(@id, 'pc2:pwdTb::db')]/table/tbody/tr[1]/td[1]");
         elements.put("passwords_e_records", "//*[contains(@id, 'pc1:outputText7')]");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");

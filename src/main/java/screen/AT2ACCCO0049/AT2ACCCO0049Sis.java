@@ -9,12 +9,10 @@ import core.recursiveData.recursiveXPaths;
  * Created by jmrios on 13/10/2016.
  */
 public class AT2ACCCO0049Sis {
-
     protected AT2ACCCO0049Locators locators;
     protected AT2ACCCO0049Data data;
 
     public AT2ACCCO0049Sis() {
-
     }
     public AT2ACCCO0049Locators getLocators() {
         return locators;
@@ -57,6 +55,7 @@ public class AT2ACCCO0049Sis {
     private boolean interaction_record_accommodation(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"accommodation_b_add", getElements("accommodation_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -122,7 +121,7 @@ public class AT2ACCCO0049Sis {
                 new String[]{"add_lov_atlas_characteristics", getElements("add_lov_atlas_characteristics")}, // b_lov
                 new String[]{"add_i_atlas_characteristics", getElements("add_i_atlas_characteristics")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "atlas_characteristics", //Data name
                 where)){
@@ -148,6 +147,7 @@ public class AT2ACCCO0049Sis {
                 "contract_type", getData("contract_type"), where)){
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -199,7 +199,7 @@ public class AT2ACCCO0049Sis {
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_atlas_characteristics", getElements("search_lov_atlas_characteristics")}, //LoV button
                 new String[]{"search_i_atlas_characteristics", getElements("search_i_atlas_characteristics")}, //external LoV input
-                new String[]{"search_lov_atlas_characteristics_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"search_lov_atlas_characteristics_i_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
                 getData("atlas_characteristics"), // value to search
                 "atlas_characteristics", //name of the data
                 where)){
@@ -305,7 +305,7 @@ public class AT2ACCCO0049Sis {
                 new String[]{"add_lov_atlas_characteristics", getElements("add_lov_atlas_characteristics")}, // b_lov
                 new String[]{"add_i_atlas_characteristics", getElements("add_i_atlas_characteristics")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "atlas_characteristics", //Data name
                 where)){

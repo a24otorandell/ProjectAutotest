@@ -62,13 +62,13 @@ public class AT2MDMUS0015Test {
             return false;
         }
         if (!Functions.selectText(driver,
-                new String[]{"add_sl_type",getElements("x")},
+                new String[]{"add_sl_type",getElements("add_sl_type")},
                 "Envio Desvios", "type", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_user",getElements("add_lov_user")}, // b_lov
                 new String[]{"add_i_user", getElements("add_i_user")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "user", //Data name
                 where)){return false;}
@@ -81,7 +81,7 @@ public class AT2MDMUS0015Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "user", //Data name
+                "interface", //Data name
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_interface_des", getElements("add_i_interface_des")}, // element path
                 "inter_desc", // key for data value (the name)
@@ -101,9 +101,9 @@ public class AT2MDMUS0015Test {
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
-                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
-                getData("user"), // value to search
+                getData("user_name"), // value to search
                 "user", //name of the data
                 where)){return false;}
         if (!Functions.createLovByValue(driver,
@@ -132,7 +132,7 @@ public class AT2MDMUS0015Test {
             return false;
         }
         if (!Functions.selectText(driver,
-                new String[]{"add_sl_type",getElements("x")},
+                new String[]{"add_sl_type",getElements("add_sl_type")},
                 "Acceso Reservas", "type", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_user",getElements("add_lov_user")}, // b_lov
@@ -151,7 +151,7 @@ public class AT2MDMUS0015Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "user", //Data name
+                "interface", //Data name
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_interface_des", getElements("add_i_interface_des")}, // element path
                 "inter_desc", // key for data value (the name)
@@ -180,8 +180,8 @@ public class AT2MDMUS0015Test {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
                 getData("type"), "type", where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_user",getElements("qbe_i_user")},
-                "user", getData("user"), where)){return false;}
+/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_user",getElements("qbe_i_user")},
+                "user", getData("user"), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"qbe_i_user_name",getElements("qbe_i_user_name")},
                 "user_name", getData("user_name"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_interface",getElements("qbe_i_interface")},

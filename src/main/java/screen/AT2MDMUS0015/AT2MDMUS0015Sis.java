@@ -61,13 +61,13 @@ public class AT2MDMUS0015Sis {
             return false;
         }
         if (!Functions.selectText(driver,
-                new String[]{"add_sl_type",getElements("x")},
+                new String[]{"add_sl_type",getElements("add_sl_type")},
                 "Envio Desvios", "type", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_user",getElements("add_lov_user")}, // b_lov
                 new String[]{"add_i_user", getElements("add_i_user")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "user", //Data name
                 where)){return false;}
@@ -80,7 +80,7 @@ public class AT2MDMUS0015Sis {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "user", //Data name
+                "interface", //Data name
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_interface_des", getElements("add_i_interface_des")}, // element path
                 "inter_desc", // key for data value (the name)
@@ -100,9 +100,9 @@ public class AT2MDMUS0015Sis {
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
-                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
-                getData("user"), // value to search
+                getData("user_name"), // value to search
                 "user", //name of the data
                 where)){return false;}
         if (!Functions.createLovByValue(driver,
@@ -131,7 +131,7 @@ public class AT2MDMUS0015Sis {
             return false;
         }
         if (!Functions.selectText(driver,
-                new String[]{"add_sl_type",getElements("x")},
+                new String[]{"add_sl_type",getElements("add_sl_type")},
                 "Acceso Reservas", "type", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_user",getElements("add_lov_user")}, // b_lov
@@ -150,7 +150,7 @@ public class AT2MDMUS0015Sis {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "user", //Data name
+                "interface", //Data name
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_interface_des", getElements("add_i_interface_des")}, // element path
                 "inter_desc", // key for data value (the name)
@@ -195,7 +195,7 @@ public class AT2MDMUS0015Sis {
     }
     private boolean others_actions(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
-        String where = " on OTHER AUDIT DATA BUSINESS";
+        String where = " on OTHER AUDIT DATA";
         if (!Functions.auditData(driver,
                 new String[]{"users_b_actions", getElements("users_b_actions")}, //actions button
                 new String[]{"users_b_actions_b_audit_data", getElements("users_b_actions_b_audit_data")}, //audit button
@@ -204,7 +204,7 @@ public class AT2MDMUS0015Sis {
             return false;
         }
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH BUSINESS";
+        where = " on OTHER DETACH";
         if (!Functions.detachTable(driver,
                 new String[]{"users_b_detach", getElements("users_b_detach")}, //detach button
                 true,     //screenshot??
@@ -215,7 +215,7 @@ public class AT2MDMUS0015Sis {
     }
     private boolean delete(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
-        String where = " on DELETE DATA BUSINESS";
+        String where = " on DELETE DATA";
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"users_b_delete", getElements("users_b_delete")},
                 new String[]{"users_e_records", getElements("users_e_records")},
