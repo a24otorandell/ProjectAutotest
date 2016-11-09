@@ -33,7 +33,7 @@ public class AT2MDMUS0010Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("System");
-        driver.getTestdetails().setScreen("Users per interface 2.0");
+        driver.getTestdetails().setScreen("Password change");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -59,7 +59,7 @@ public class AT2MDMUS0010Test {
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
                 new String[]{"search_lov_user_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
-                getData("user"), // value to search
+                "ABRAVO", // value to search
                 "user", //name of the data
                 where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
@@ -102,15 +102,20 @@ public class AT2MDMUS0010Test {
                 "pass", DataGenerator.getRandomAlphanumericSequence(5,false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"change_i_confirm",getElements("change_i_confirm")},
                 "new", getData("pass"), where)){return false;}
-        if (!Functions.checkClickByAbsence(driver,
+        if (!Functions.simpleClick(driver,
+                new String[]{"change_b_ok", getElements("change_b_ok")}, //element to click
+                where)){return false;}
+
+/*        if (!Functions.checkClickByAbsence(driver,
                 new String[]{"change_b_ok", getElements("change_b_ok")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
-                where)){return false;}
+                where)){return false;}*/
         return true;
     }
     private boolean qbe(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        Functions.break_time(driver, 3, 700);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
                 new String[]{"passwords_e_result", getElements("passwords_e_result")}, //result element
