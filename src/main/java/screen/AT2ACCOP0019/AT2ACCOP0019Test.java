@@ -482,6 +482,40 @@ public class AT2ACCOP0019Test {
                 "se_gettoday",DataGenerator.getToday(driver,"dd/MM/yyyy")," on SEARCH")){
             return false;
         }
+        if(!Functions.checkClick(driver,
+                new String[]{"mercant_se_sl_currency",getElements("mercant_se_sl_currency")}, //element to click
+                new String[]{"mercant_se_sl_currency_ch_aed",getElements("mercant_se_sl_currency_ch_aed")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on EDIT")){
+            return false;
+        }
+        if(!Functions.simpleClick(driver,
+                new String[]{"mercant_se_sl_currency_ch_aed",getElements("mercant_se_sl_currency_ch_aed")}, //element to click
+                " on SEARCH")){
+            return false;
+        }
+        if(!Functions.simpleClick(driver,
+                new String[]{"mercant_se_i_creation_date",getElements("mercant_se_i_creation_date")}, //element to click
+                " on SEARCH")){
+            return false;
+        }
+        if(!Functions.checkClick(driver,
+                new String[]{"mercant_se_sl_payment_method",getElements("mercant_se_sl_payment_method")}, //element to click
+                new String[]{"mercant_se_sl_payment_method_alipay",getElements("mercant_se_sl_payment_method_alipay")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on EDIT")){
+            return false;
+        }
+        if(!Functions.simpleClick(driver,
+                new String[]{"mercant_se_sl_payment_method_alipay",getElements("mercant_se_sl_payment_method_alipay")}, //element to click
+                " on SEARCH")){
+            return false;
+        }
+        if(!Functions.simpleClick(driver,
+                new String[]{"mercant_se_i_creation_date",getElements("mercant_se_i_creation_date")}, //element to click
+                " on SEARCH")){
+            return false;
+        }
 
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"mercant_se_b_save", getElements("mercant_se_b_save")}, //search button

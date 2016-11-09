@@ -40,8 +40,8 @@ public class AT2ACCSU0004Sis {
 
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
-        driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Season 2.0");
+        driver.getTestdetails().setSubmenu("Operations");
+        driver.getTestdetails().setScreen("Free types 2.0");
     }
 
     protected String getElements (String key){
