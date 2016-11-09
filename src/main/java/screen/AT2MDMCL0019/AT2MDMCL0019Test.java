@@ -350,11 +350,6 @@ public class AT2MDMCL0019Test {
     private boolean interaction_edit_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_b_edit", getElements("MDM_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -501,6 +496,11 @@ public class AT2MDMCL0019Test {
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
+                where)) {
+            return false;
+        }
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 where)) {
             return false;
         }
