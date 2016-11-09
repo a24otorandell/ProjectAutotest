@@ -156,6 +156,11 @@ public class AT2TRFSU0016Sis {
                 data.getData().get("select_pur"), "qbe_sl_purcharse_or_sale", "  on QBE ")) {
             return false;
         }
+        if(!Functions.insertInput(driver,
+                new String[]{"aditional_qbe_i_suplier_name",getElements("aditional_qbe_i_suplier_name")},
+                "qbe_suplier_name",data.getData().get("suplier_name")," on QBE ")){
+            return false;
+        }
         Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"aditional_qbe_sl_person_or_unit", getElements("aditional_qbe_sl_person_or_unit")},
@@ -222,10 +227,20 @@ public class AT2TRFSU0016Sis {
                 " on EDIT");
         if (!Functions.selectText(driver,
                 new String[]{"aditional_ed_sl_purcharse_or_sale", getElements("aditional_ed_sl_purcharse_or_sale")},
-                "Sale", "select_pur", " on EDIT")) {
+                "Purchase","select_pur"," on EDIT")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
+        if(!Functions.createLov(driver,
+                new String[]{"aditional_add_lov_suplier_name",getElements("aditional_add_lov_suplier_name")}, // b_lov
+                new String[]{"aditional_add_i_suplier_name",getElements("aditional_add_i_suplier_name")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "suplier_name", //Data name
+                " on EDIT")){
+            return false;
+        }
         if (!Functions.selectText(driver,
                 new String[]{"aditional_ed_sl_person_or_unit", getElements("aditional_ed_sl_person_or_unit")},
                 "Unit", "select_per", " on EDIT")) {
@@ -291,16 +306,6 @@ public class AT2TRFSU0016Sis {
         if (!Functions.selectText(driver,
                 new String[]{"aditional_se_sl_purcharse_or_sale", getElements("aditional_se_sl_purcharse_or_sale")},
                 data.getData().get("select_pur"), "se_sl_purcharse_or_sale", " on SEARCH")) {
-            return false;
-        }
-        Functions.break_time(driver,6,500);
-        if (!Functions.createLovByValue(driver,
-                new String[]{"aditional_se_lov_suplier_name", getElements("aditional_se_lov_suplier_name")}, //LoV button
-                new String[]{"aditional_se_i_suplier_name", getElements("aditional_se_i_suplier_name")}, //external LoV input
-                new String[]{"aditional_se_lov_suplier_name_i_short_name", getElements("aditional_se_lov_suplier_name_i_short_name")}, //internal LoV input
-                data.getData().get("suplier_name"), // value to search
-                "se_suplier_name", //name of the data
-                " on SEARCH")) {
             return false;
         }
         Functions.break_time(driver,6,500);
@@ -379,18 +384,7 @@ public class AT2TRFSU0016Sis {
                 " on ADD");
         if (!Functions.selectText(driver,
                 new String[]{"aditional_add_sl_purcharse_or_sale", getElements("aditional_add_sl_purcharse_or_sale")},
-                "Purchase", "select_pur", " on ADD")) {
-            return false;
-        }
-        Functions.break_time(driver,6,500);
-        if (!Functions.createLov(driver,
-                new String[]{"aditional_add_lov_suplier_name", getElements("aditional_add_lov_suplier_name")}, // b_lov
-                new String[]{"aditional_add_i_suplier_name", getElements("aditional_add_i_suplier_name")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "suplier_name", //Data name
-                " on ADD")) {
+                "Sale","select_pur"," on ADD")){
             return false;
         }
         Functions.break_time(driver,6,500);
