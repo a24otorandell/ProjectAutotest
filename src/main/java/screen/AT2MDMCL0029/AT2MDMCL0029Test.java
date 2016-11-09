@@ -525,12 +525,16 @@ public class AT2MDMCL0029Test {
             return false;
         }
         Functions.break_time(driver, 3, 400);
-        if (!Functions.clickSearchAndResult(driver,
+/*        if (!Functions.clickSearchAndResult(driver,
                 new String[]{"qbe_i_partner", getElements("qbe_i_partner")}, //search button
                 new String[]{"agency_e_result", getElements("agency_e_result")}, //result element
                 where)) {
             return false;
-        }
+        }*/
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_partner", getElements("qbe_i_partner")}, //any query input
+                new String[]{"agency_e_result", getElements("agency_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions(TestDriver driver) {
@@ -556,12 +560,17 @@ public class AT2MDMCL0029Test {
     private boolean delete(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA AGENCY";
-        if (!Functions.doDeleteNCheck(driver,
+/*        if (!Functions.doDeleteNCheck(driver,
                 new String[]{"agency_b_delete", getElements("agency_b_delete")},
                 new String[]{"agency_e_records", getElements("agency_e_records")},
                 where)){
             return false;
-        }
+        }*/
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"agency_b_delete", getElements("agency_b_delete")}, //button delete
+                new String[]{"agency_e_records", getElements("agency_e_records")}, // result
+                new String[]{"agency_b_delete_yes", getElements("agency_b_delete_yes")}, //delete button yes
+                where)){return false;}
         return true;
     }
 
@@ -693,12 +702,16 @@ public class AT2MDMCL0029Test {
         if (!Functions.selectText(driver,
                 new String[]{"b_qbe_sl_stop",getElements("b_qbe_sl_stop")},
                 getData("stop2"), "stop2", where)){return false;}
-        if (!Functions.clickSearchAndResult(driver,
+/*        if (!Functions.clickSearchAndResult(driver,
                 new String[]{"b_qbe_i_short_name", getElements("b_qbe_i_short_name")}, //search button
                 new String[]{"branch_e_result", getElements("branch_e_result")}, //result element
                 where)) {
             return false;
-        }
+        }*/
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"b_qbe_i_short_name", getElements("b_qbe_i_short_name")}, //any query input
+                new String[]{"branch_e_result", getElements("branch_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_branch(TestDriver driver) {
@@ -728,12 +741,16 @@ public class AT2MDMCL0029Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"branch_tab", getElements("branch_tab")}, //element to click
                 where)){return false;}
-        if (!Functions.doDeleteNCheck(driver,
+/*        if (!Functions.doDeleteNCheck(driver,
                 new String[]{"branch_b_delete", getElements("branch_b_delete")},
                 new String[]{"branch_e_records", getElements("branch_e_records")},
                 where)){
             return false;
-        }
+        }*/
+        if(!Functions.doDelete(driver,
+                new String[]{"branch_b_delete", getElements("branch_b_delete")},//delete button
+                new String[]{"delete_yes", recursiveXPaths.delete_b_yes},//delete button
+                where)){return false;}
         return true;
     }
 
@@ -806,7 +823,7 @@ public class AT2MDMCL0029Test {
                 new String[]{"c_add_lov_country",getElements("c_add_lov_country")}, // b_lov
                 new String[]{"c_add_i_country", getElements("c_add_i_country")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "c_country", //Data name
                 where)){return false;}
@@ -880,12 +897,16 @@ public class AT2MDMCL0029Test {
                 "curre_des", getData("con_des"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
+/*        if (!Functions.clickSearchAndResult(driver,
                 new String[]{"c_qbe_i_country", getElements("c_qbe_i_country")}, //search button
                 new String[]{"currencies_e_result", getElements("currencies_e_result")}, //result element
                 where)) {
             return false;
-        }
+        }*/
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"c_qbe_i_country", getElements("c_qbe_i_country")}, //any query input
+                new String[]{"currencies_e_result", getElements("currencies_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_currency(TestDriver driver) {

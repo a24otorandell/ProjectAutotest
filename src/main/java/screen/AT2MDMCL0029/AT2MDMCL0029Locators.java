@@ -31,6 +31,7 @@ public class AT2MDMCL0029Locators {
         elements.put("agency_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("agency_e_result", "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[1]/td[1]");
         elements.put("agency_e_records", "//*[contains(@id, 'pc1:outputText2')]");
+        elements.put("agency_b_delete_yes", "//*[contains(@id, 'PCGenericToolbar1:cbt1')]");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");

@@ -3,8 +3,10 @@ package screen.AT2MDMSY1002;
 import core.CommonActions.CommonProcedures;
 import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
+import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
+import org.openqa.selenium.By;
 
 /**
  * Created by aibanez on 08/11/2016.
@@ -147,15 +149,15 @@ public class AT2MDMSY1002Sis {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_create",getElements("qbe_sl_create")},
                 getData("create"), "create", where)){return false;}
-        if (!Functions.selectText(driver,
+/*        if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_update",getElements("qbe_sl_update")},
                 getData("update"), "update", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_monitoring",getElements("qbe_sl_monitoring")},
-                getData("monitoring"), "monitoring", where)){return false;}
-        if (!Functions.selectText(driver,
+                getData("monitoring"), "monitoring", where)){return false;}*/
+/*        if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
-                getData("active"), "active", where)){return false;}
+                getData("active"), "active", where)){return false;}*/
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_client", getElements("qbe_i_client")}, //any query input
                 new String[]{"client_e_result", getElements("client_e_result")}, //table result
@@ -192,18 +194,20 @@ public class AT2MDMSY1002Sis {
         Functions.simpleClick(driver,
                 new String[]{"client_b_delete", getElements("client_b_delete")}, //element to click
                 where);
+        Functions.break_time(driver, 3, 700);
         Functions.simpleClick(driver,
                 new String[]{"b_delete_yes", recursiveXPaths.delete_b_yes}, //element to click
                 where);
-/*        try {
-            if (driver.getDriver().findElement(By.xpath("/*//*[contains(@id, 'pc1:gvcc:1:sbc4::content')]/span/img")).getAttribute("title").equals("unchecked")) {
+        Functions.break_time(driver, 3, 700);
+        try {
+            if (driver.getDriver().findElement(By.xpath("/*//*[contains(@id, 'pc1:userSet:1:sbc1::content')]/span/img")).getAttribute("title").equals("unchecked")) {
                 driver.getReport().addContent("\"Active\" CHECKBOX IS UNCHECKED. DELETION WORKED", "h3","class='success'" );
             }
         } catch (Exception e) {
             String exc = ("--ERROR: \"Active\" - CHECKBOX IS CHECKED. DELETION DID NOT WORKED");
             e.printStackTrace();
             ErrorManager.process(driver, exc);
-        }*/
+        }
         return true;
     }
 }
