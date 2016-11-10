@@ -839,7 +839,7 @@ public class Functions {
                 return false;
             }
         } catch (Exception e) {
-            String ecode = "--ERROR: selectText(): Unable to find the target option into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
+            String ecode = "--ERROR: selectText(): Unable to find the target option " + content + " into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return false;
