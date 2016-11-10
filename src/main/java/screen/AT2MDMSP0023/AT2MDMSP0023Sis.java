@@ -129,7 +129,7 @@ public class AT2MDMSP0023Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "supplier", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_description", getElements("add_i_description")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_description", getElements("add_i_description")}, // element path
                 "desc", // key for data value (the name)
                 where)){return false;}
         if (!Functions.checkboxValue(driver,
@@ -181,12 +181,10 @@ public class AT2MDMSP0023Sis {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_finished",getElements("qbe_sl_finished")},
                 getData("finished"), "finished", where)){return false;}
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_suppliers", getElements("qbe_i_suppliers")}, //search button
-                new String[]{"suppliers_e_result", getElements("suppliers_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_suppliers", getElements("qbe_i_suppliers")}, //any query input
+                new String[]{"suppliers_e_result", getElements("suppliers_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions(TestDriver driver) {

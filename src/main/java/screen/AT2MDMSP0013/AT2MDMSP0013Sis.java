@@ -128,12 +128,10 @@ public class AT2MDMSP0013Sis {
                 "desc", getData("desc"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_profile", getElements("qbe_i_profile")}, //search button
-                new String[]{"profiles_e_result", getElements("profiles_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_profile", getElements("qbe_i_profile")}, //any query input
+                new String[]{"profiles_e_result", getElements("profiles_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_profiles(TestDriver driver) {
