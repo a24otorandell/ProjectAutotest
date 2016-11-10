@@ -135,6 +135,12 @@ public class AT2ACCDI0029Sis {
                 "Always", "opaque", where)) {
             return false;
         }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"add_b_save", getElements("add_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                where)) {
+            return false;
+        }
         return true;
     }
     private boolean search_opaque(TestDriver driver) {
@@ -219,7 +225,7 @@ public class AT2ACCDI0029Sis {
                 new String[]{"add_lov_company", getElements("add_lov_company")}, // b_lov
                 new String[]{"add_i_company", getElements("add_i_company")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "company", //Data name
                 where)) {
@@ -229,7 +235,7 @@ public class AT2ACCDI0029Sis {
                 new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
                 new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "office", //Data name
                 where)) {
@@ -283,6 +289,12 @@ public class AT2ACCDI0029Sis {
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_opaque_type", getElements("add_sl_opaque_type")},
                 "Always", "opaque", where)) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"add_b_save", getElements("add_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                where)) {
             return false;
         }
         return true;
@@ -339,12 +351,10 @@ public class AT2ACCDI0029Sis {
                 "Always", "opaque", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //search button
-                new String[]{"opaque_e_result", getElements("opaque_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //any query input
+                new String[]{"opaque_e_result", getElements("opaque_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_opaque(TestDriver driver) {

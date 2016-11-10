@@ -213,7 +213,6 @@ public class AT2ACCDI0018Sis {
         }
         return true;
     }
-
     private boolean search_cancellation(TestDriver driver, boolean check) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -425,11 +424,11 @@ public class AT2ACCDI0018Sis {
                 "extra", "", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 1500);
         if (!Functions.insertInput(driver, new String[]{"add_i_time", getElements("add_i_time")},
                 "time", "" + 2, where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 1200);
         if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
                 "amount_cost", DataGenerator.randomFloat(1,2), where)) {
             return false;
@@ -575,18 +574,10 @@ public class AT2ACCDI0018Sis {
                 getData("net_amount"), "net_amount", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //search button
-                new String[]{"cancellation_e_result", getElements("cancellation_e_result")}, //result element
-                where)) {
-            return false;
-        }
-/*        if (!Functions.checkClick(driver,
-                new String[]{"cancellation_b_qbe", getElements("cancellation_b_qbe")}, //element to click
-                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //element expected to appear
-                where)) {
-            return false;
-        }*/
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_extra", getElements("qbe_i_extra")}, //any query input
+                new String[]{"cancellation_e_result", getElements("cancellation_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_cancellation(TestDriver driver) {

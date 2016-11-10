@@ -278,6 +278,31 @@ public class AT2MDMCL0032Sis {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 where)){return false;}
+        if (!Functions.createLovByValue(driver,
+                new String[]{"search_lov_partner", getElements("search_lov_partner")}, //LoV button
+                new String[]{"search_i_partner", getElements("search_i_partner")}, //external LoV input
+                new String[]{"search_lov_partner_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("partner1"), // value to search
+                "partner1", //name of the data
+                where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"search_i_partner_p", getElements("search_i_partner_p")},
+                "partner", getData("partner"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"search_i_agency", getElements("search_i_agency")},
+                "agency", getData("agency"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"search_i_rappel", getElements("search_i_rappel")},
+                "rappel", getData("rappel"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"search_i_agent", getElements("search_i_agent")},
+                "agent", getData("agent"), where)) {
+            return false;
+        }
         if (!Functions.clickQbE(driver,
                 new String[]{"pricing_b_qbe", getElements("pricing_b_qbe")},// query button
                 new String[]{"qbe_i_group", getElements("qbe_i_group")},//any query input
@@ -304,7 +329,7 @@ public class AT2MDMCL0032Sis {
                 "to", getData("to"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_partner", getElements("qbe_i_partner")},
+/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_partner", getElements("qbe_i_partner")},
                 "partner", getData("partner"), where)) {
             return false;
         }
@@ -319,13 +344,11 @@ public class AT2MDMCL0032Sis {
         if (!Functions.insertInput(driver, new String[]{"qbe_i_agent", getElements("qbe_i_agent")},
                 "agent", getData("agent"), where)) {
             return false;
-        }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //search button
-                new String[]{"pricing_e_result", getElements("pricing_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        }*/
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //any query input
+                new String[]{"pricing_e_result", getElements("pricing_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_prising(TestDriver driver) {
