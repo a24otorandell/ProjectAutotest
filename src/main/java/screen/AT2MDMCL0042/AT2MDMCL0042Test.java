@@ -363,12 +363,10 @@ public class AT2MDMCL0042Test {
                 "agency", getData("agency"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //search button
-                new String[]{"comercial_e_result", getElements("comercial_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //any query input
+                new String[]{"comercial_e_result", getElements("comercial_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_comercial(TestDriver driver) {

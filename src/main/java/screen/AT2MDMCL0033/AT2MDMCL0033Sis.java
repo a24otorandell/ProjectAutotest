@@ -250,12 +250,10 @@ public class AT2MDMCL0033Sis {
                 "agent", getData("agent"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //search button
-                new String[]{"agency_e_result", getElements("agency_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //any query input
+                new String[]{"agency_e_result", getElements("agency_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_agency(TestDriver driver) {
