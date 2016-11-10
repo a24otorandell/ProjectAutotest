@@ -55,6 +55,7 @@ public class AT2MDMOR0016Sis {
     private boolean interaction_record_transfers(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION";
+        Functions.break_time(driver, 3, 600);
         if (!Functions.checkClick(driver,
                 new String[]{"transfers_b_add", getElements("transfers_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -164,7 +165,7 @@ public class AT2MDMOR0016Sis {
         String where = " on SEARCH";
         if (!Functions.insertInput(driver, new String[]{"search_i_date",getElements("search_i_date")},
                 "date", getData("date"), where)){return false;}
-        Functions.break_time(driver, 3, 800);
+        Functions.break_time(driver, 3, 1800);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_b_company", getElements("search_lov_b_company")}, //LoV button
                 new String[]{"search_i_b_company", getElements("search_i_b_company")}, //external LoV input
@@ -394,12 +395,10 @@ public class AT2MDMOR0016Sis {
                 "extra", getData("extra"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_b_company", getElements("qbe_i_b_company")}, //search button
-                new String[]{"transfers_e_result", getElements("transfers_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_b_company", getElements("qbe_i_b_company")}, //any query input
+                new String[]{"transfers_e_result", getElements("transfers_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_transfers(TestDriver driver) {

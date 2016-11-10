@@ -179,12 +179,10 @@ public class AT2MDMRM0005Test {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_account",getElements("qbe_sl_account")},
                 getData("account"), "account", where)){return false;}
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_code", getElements("qbe_i_code")}, //search button
-                new String[]{"product_e_result", getElements("product_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_code", getElements("qbe_i_code")}, //any query input
+                new String[]{"product_e_result", getElements("product_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_products(TestDriver driver) {
@@ -305,12 +303,10 @@ public class AT2MDMRM0005Test {
                 "product", getData("product"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_lang", getElements("qbe_i_lang")}, //search button
-                new String[]{"multi_e_result", getElements("multi_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_lang", getElements("qbe_i_lang")}, //any query input
+                new String[]{"multi_e_result", getElements("multi_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_multi(TestDriver driver) {
