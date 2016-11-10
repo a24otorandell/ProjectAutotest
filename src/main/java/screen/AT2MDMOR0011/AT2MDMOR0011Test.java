@@ -33,7 +33,7 @@ public class AT2MDMOR0011Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Destination");
-        driver.getTestdetails().setScreen("Set Up Web Prepayment 2.0");
+        driver.getTestdetails().setScreen("Departments (General)");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -213,12 +213,10 @@ public class AT2MDMOR0011Test {
                 getData("active"), "active", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_code", getElements("qbe_i_code")}, //search button
-                new String[]{"departments_e_result", getElements("departments_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_code", getElements("qbe_i_code")}, //any query input
+                new String[]{"departments_e_result", getElements("departments_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_departments(TestDriver driver) {
