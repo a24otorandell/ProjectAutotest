@@ -402,7 +402,7 @@ public class AT2ACCCO0049Sis {
                 "contract_type", getData("contract_type"), where)){
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_receptive", getElements("qbe_i_receptive")}, //search button
                 new String[]{"accommodation_e_result", getElements("accommodation_e_result")}, //result element
                 where)){

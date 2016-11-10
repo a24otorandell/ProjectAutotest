@@ -180,7 +180,7 @@ public class AT2ACCSU0057Test {
                 "value", getData("value"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_key", getElements("qbe_i_key")}, //search button
                 new String[]{"accommodation_e_result", getElements("accommodation_e_result")}, //result element
                 where)) {

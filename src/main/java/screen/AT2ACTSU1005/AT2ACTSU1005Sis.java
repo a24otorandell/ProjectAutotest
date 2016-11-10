@@ -157,7 +157,7 @@ public class AT2ACTSU1005Sis {
             return false;
         }
 
-        if (!Functions.clickSearchAndResult(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_prefix", getElements("qbe_i_prefix")}, //search button
                 new String[]{"activities_e_result", getElements("activities_e_result")}, //result element
                 where)) {

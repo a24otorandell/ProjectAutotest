@@ -366,7 +366,7 @@ public class AT2ACCOP0004Test {
                 "currency_result", getData("currency_result"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_interface", getElements("qbe_i_interface")}, //search button
                 new String[]{"accommodation_e_result", getElements("accommodation_e_result")}, //result element
                 where)) {

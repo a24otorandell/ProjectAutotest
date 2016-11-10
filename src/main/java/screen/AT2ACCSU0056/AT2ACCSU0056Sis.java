@@ -173,7 +173,7 @@ public class AT2ACCSU0056Sis {
                 "description", getData("description"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_client_exp", getElements("qbe_i_client_exp")}, //search button
                 new String[]{"accommodation_e_result", getElements("accommodation_e_result")}, //result element
                 where)) {
