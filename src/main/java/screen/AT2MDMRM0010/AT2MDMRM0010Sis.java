@@ -33,7 +33,7 @@ public class AT2MDMRM0010Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Market");
-        driver.getTestdetails().setScreen("Time confirmation maintenance 2.0");
+        driver.getTestdetails().setScreen("Maintenance time confirmation");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -145,12 +145,10 @@ public class AT2MDMRM0010Sis {
                 "time", getData("time"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_to_code", getElements("qbe_i_to_code")}, //search button
-                new String[]{"time_e_result", getElements("time_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_to_code", getElements("qbe_i_to_code")}, //any query input
+                new String[]{"time_e_result", getElements("time_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_time(TestDriver driver) {
