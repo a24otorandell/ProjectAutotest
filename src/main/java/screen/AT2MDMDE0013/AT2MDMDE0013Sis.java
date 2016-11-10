@@ -227,7 +227,7 @@ public class AT2MDMDE0013Sis {
                 where)) {
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"add_i_external_name", getElements("add_i_external_name")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_external_name", getElements("add_i_external_name")}, // element path
                 "ext_name", // key for data value (the name)
                 where)){return false;}
         if (!Functions.createLov(driver,
@@ -240,7 +240,7 @@ public class AT2MDMDE0013Sis {
                 where)) {
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"add_i_b2b_des", getElements("add_i_b2b_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_b2b_des", getElements("add_i_b2b_des")}, // element path
                 "b2b_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
@@ -292,16 +292,13 @@ public class AT2MDMDE0013Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_b2b_des", getElements("qbe_i_b2b_des")},
-                "b2b_des", getData("b2b_des"), where)) {
+                "b2b_des", "%"+getData("b2b_des"), where)) {
             return false;
         }
-
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //search button
-                new String[]{"b2b_e_result", getElements("b2b_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //any query input
+                new String[]{"b2b_e_result", getElements("b2b_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_b2b(TestDriver driver) {
