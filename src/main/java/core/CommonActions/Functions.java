@@ -18,6 +18,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import java.util.Random;
 
 /**
  * This class has all the actions commonly used to test a component
@@ -842,6 +843,34 @@ public class Functions {
             String ecode = "--ERROR: selectText(): Unable to find the target option " + content + " into " + pathselect[0] + " with xpath: " + pathselect[1] + where + ".";
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * This method chooses the random option form dropdown menus, you have indicate an array with values.
+     *
+     * @param driver     TestDriver - This object gathers all the info refferent to the current test
+     * @param pathselect String[] - Xpath referent to the select WebElement, [0] is the data name, [1] is the value
+     * @param content    array - array of values
+     * @param dataname   String - Name of the data that is included in the data map
+     * @param where      String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
+     * @see Select#getOptions()
+     * @see List
+     * @see WebElement
+     */
+    public static boolean selectTextRandom(TestDriver driver, String[] pathselect, String[] content, String dataname, String where) {
+        //HOW TO CALL THIS METHOD
+        /*  String list_options[] = {"value1", "value2", "value3"};
+            if (!Functions.selectTextRandom(driver,
+                new String[]{"x", getElements("x")},
+                list_options, "data name", "where")){return false;}*/
+
+        String option = (content[new Random().nextInt(content.length)]);
+        if (!Functions.selectText(driver, pathselect, option, dataname, where)) {
             return false;
         }
         return true;

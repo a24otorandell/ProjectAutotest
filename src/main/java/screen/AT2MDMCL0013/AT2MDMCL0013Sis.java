@@ -132,11 +132,6 @@ public class AT2MDMCL0013Sis {
     private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_b_edit", getElements("MDM_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -144,12 +139,12 @@ public class AT2MDMCL0013Sis {
             return false;
         }
         String list_options[] = {"Clasification", "Hotel", "Price"};
-        String option = (list_options[new Random().nextInt(list_options.length)]);
-        if (!Functions.selectText(driver,
+        if (!Functions.selectTextRandom(driver,
                 new String[]{"add_sl_availability_disp", getElements("add_sl_availability_disp")},
-                option, "availability_disp", where)) {
+                list_options, "availability_disp", where)) {
             return false;
         }
+
         if (!Functions.insertInput(driver, new String[]{"add_i_availability_iteration_number", getElements("add_i_availability_iteration_number")}, // element path
                 "availability_iteration_number", getData("availability_iteration_number"), where)) {
             return false;
@@ -165,6 +160,12 @@ public class AT2MDMCL0013Sis {
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_b_qbe", getElements("MDM_b_qbe")},// query button
                 new String[]{"qbe_i_ATLAS_number", getElements("qbe_i_ATLAS_number")},//any query input
