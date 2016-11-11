@@ -320,7 +320,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "partner", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_partner_des", getElements("add_i_partner_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_partner_des", getElements("add_i_partner_des")}, // element path
                 "p_desc", // key for data value (the name)
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_short_name", getElements("add_i_short_name")},
@@ -398,9 +398,14 @@ public class AT2MDMCL0029Test {
                 "tax_p", DataGenerator.randomFloat(1,3), where)) {
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+/*        if (!Functions.getAttr(driver,
+                new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+                "value", // atribute to get data (class, value, id, style, etc...)
                 "agency", // key for data value (the name)
-                where)){return false;}
+                where)) {return  false;}*/
+//        if(!Functions.getValue(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+//                "agency", // key for data value (the name)
+//                where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_street", getElements("add_i_street")},
                 "street", DataGenerator.getRandomAlphanumericSequence(12, false), where)) {
             return false;
@@ -421,7 +426,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "country", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_country_des", getElements("add_i_country_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_country_des", getElements("add_i_country_des")}, // element path
                 "country_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_telephone", getElements("add_i_telephone")},
@@ -779,7 +784,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "c_country", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"c_add_i_country_des", getElements("c_add_i_country_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"c_add_i_country_des", getElements("c_add_i_country_des")}, // element path
                 "con_des", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -790,7 +795,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "destination", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"c_add_i_destination_des", getElements("c_add_i_destination_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"c_add_i_destination_des", getElements("c_add_i_destination_des")}, // element path
                 "dest_des", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -801,7 +806,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "currency", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"c_add_i_currency_des", getElements("c_add_i_currency_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"c_add_i_currency_des", getElements("c_add_i_currency_des")}, // element path
                 "curre_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
@@ -827,7 +832,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "c_country", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"c_add_i_country_des", getElements("c_add_i_country_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"c_add_i_country_des", getElements("c_add_i_country_des")}, // element path
                 "con_des", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -838,7 +843,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "destination", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"c_add_i_destination_des", getElements("c_add_i_destination_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"c_add_i_destination_des", getElements("c_add_i_destination_des")}, // element path
                 "dest_des", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -849,7 +854,7 @@ public class AT2MDMCL0029Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "currency", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"c_add_i_currency_des", getElements("c_add_i_currency_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"c_add_i_currency_des", getElements("c_add_i_currency_des")}, // element path
                 "curre_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
@@ -886,7 +891,7 @@ public class AT2MDMCL0029Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"c_qbe_i_destination_des", getElements("c_qbe_i_destination_des")},
-                "dest_des", getData("con_des"), where)) {
+                "dest_des", getData("dest_des"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"c_qbe_i_currency", getElements("c_qbe_i_currency")},
@@ -894,7 +899,7 @@ public class AT2MDMCL0029Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"c_qbe_i_currency_des", getElements("c_qbe_i_currency_des")},
-                "curre_des", getData("con_des"), where)) {
+                "curre_des", getData("curre_des"), where)) {
             return false;
         }
 /*        if (!Functions.clickSearchAndResult(driver,
