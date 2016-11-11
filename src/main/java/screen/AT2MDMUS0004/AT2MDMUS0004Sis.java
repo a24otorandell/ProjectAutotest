@@ -32,8 +32,8 @@ public class AT2MDMUS0004Sis {
     }
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
-        driver.getTestdetails().setSubmenu("System");
-        driver.getTestdetails().setScreen("GVCC Configuration Maintenance");
+        driver.getTestdetails().setSubmenu("User");
+        driver.getTestdetails().setScreen("Export/Import users");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -295,7 +295,7 @@ public class AT2MDMUS0004Sis {
                 new String[]{"t2_qbe_sl_status",getElements("t2_qbe_sl_status")},
                 getData("status2"), "status2",  where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
-                new String[]{"qbe_i_application", getElements("qbe_i_application")}, //any query input
+                new String[]{"qbe_i_description", getElements("qbe_i_description")}, //any query input
                 new String[]{"application_e_result", getElements("application_e_result")}, //table result
                 where)){return false;}
         return true;
