@@ -99,7 +99,6 @@ public class AT2MDMSP0010Test {
     }
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        Functions.break_time(driver, 30, 500);
         String where = " on SEARCH";
         Functions.break_time(driver, 30, 500);
         if (!Functions.createLovByValue(driver,
@@ -140,11 +139,6 @@ public class AT2MDMSP0010Test {
     private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_b_edit", getElements("MDM_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -200,6 +194,12 @@ public class AT2MDMSP0010Test {
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_b_qbe", getElements("MDM_b_qbe")},// query button
                 new String[]{"qbe_i_supplier_SAP_code", getElements("qbe_i_supplier_SAP_code")},//any query input

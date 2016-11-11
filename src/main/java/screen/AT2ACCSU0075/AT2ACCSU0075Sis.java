@@ -46,7 +46,6 @@ public class AT2ACCSU0075Sis {
         if (!interaction_record_accommodation(driver)) return false;
         if (!search_accommodation(driver)) return false;
         if (!interaction_edit_accommodation(driver)) return false;
-        if (!search_reset(driver)) return false;
         if (!qbe_accommodation(driver)) return false;
         if (!others_actions_accommodation(driver)) return false;
         if (!delete_accommodation(driver)) return false;
@@ -185,19 +184,15 @@ public class AT2ACCSU0075Sis {
         }
         return true;
     }
-    private boolean search_reset(TestDriver driver) {
-        driver.getReport().addHeader("SEARCH RESET", 3, false);
-        String where = " on SEARCH RESET";
+    private boolean qbe_accommodation(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE";
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 where)) {
             return false;
         }
-        return true;
-    }
-    private boolean qbe_accommodation(TestDriver driver) {
-        driver.getReport().addHeader("QBE RECORD", 3, false);
-        String where = " on QBE";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"setup_b_qbe", getElements("setup_b_qbe")},// query button
                 new String[]{"qbe_i_modelo", getElements("qbe_i_modelo")},//any query input

@@ -237,7 +237,6 @@ public class AT2ACCCO0049Sis {
             return false;
         }
         return true;
-
     }
     private boolean interaction_edit_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
@@ -340,10 +339,14 @@ public class AT2ACCCO0049Sis {
         return true;
     }
     private boolean qbe_accommodation(TestDriver driver) {
-
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"accommodation_b_qbe", getElements("accommodation_b_qbe")},// query button
                 new String[]{"qbe_i_receptive", getElements("qbe_i_receptive")},//any query input

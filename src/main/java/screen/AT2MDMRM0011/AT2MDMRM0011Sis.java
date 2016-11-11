@@ -345,17 +345,16 @@ public class AT2MDMRM0011Sis {
                 where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 500);
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         return true;
     }
     private boolean id_qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
         Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_id_b_qbe", getElements("MDM_id_b_qbe")},// query button

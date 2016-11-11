@@ -175,12 +175,6 @@ public class AT2MDMRM0033Sis {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
         Functions.break_time(driver, 30, 500);
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_alc_b_reset", getElements("search_alc_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
-        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_alc_b_edit", getElements("MDM_alc_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -241,6 +235,12 @@ public class AT2MDMRM0033Sis {
     private boolean qbe_alc_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_alc_b_reset", getElements("search_alc_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_alc_b_qbe", getElements("MDM_alc_b_qbe")},// query button
                 new String[]{"qbe_alc_i_validation_type", getElements("qbe_alc_i_validation_type")},//any query input
@@ -349,6 +349,12 @@ public class AT2MDMRM0033Sis {
     private boolean qbe_vt_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_vt_b_reset", getElements("search_vt_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_vt_b_qbe", getElements("MDM_vt_b_qbe")},// query button
                 new String[]{"qbe_vt_i_validation_type", getElements("qbe_vt_i_validation_type")},//any query input

@@ -145,6 +145,12 @@ public class AT2ACCSU0056Test {
     private boolean qbe_accommodation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"accommodation_b_qbe", getElements("accommodation_b_qbe")},// query button
                 new String[]{"qbe_i_client_exp", getElements("qbe_i_client_exp")},//any query input
