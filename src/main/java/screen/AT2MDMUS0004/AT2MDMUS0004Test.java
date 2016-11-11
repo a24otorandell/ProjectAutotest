@@ -32,8 +32,8 @@ public class AT2MDMUS0004Test {
     }
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
-        driver.getTestdetails().setSubmenu("System");
-        driver.getTestdetails().setScreen("GVCC Configuration Maintenance");
+        driver.getTestdetails().setSubmenu("User");
+        driver.getTestdetails().setScreen("Export/Import users");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
