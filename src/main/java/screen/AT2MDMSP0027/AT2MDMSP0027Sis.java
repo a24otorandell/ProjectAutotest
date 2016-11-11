@@ -30,7 +30,7 @@ public class AT2MDMSP0027Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Suppliers");
-        driver.getTestdetails().setScreen("Supplier Management");
+        driver.getTestdetails().setScreen("Supplier request pool");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
