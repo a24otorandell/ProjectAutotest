@@ -33,7 +33,7 @@ public class AT2MDMCL0033Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Client");
-        driver.getTestdetails().setScreen("Agency commision 2.0");
+        driver.getTestdetails().setScreen("Hotelopia Commercial Policy");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -49,6 +49,7 @@ public class AT2MDMCL0033Test {
         if (!others_actions_agency(driver)) return false;
         return false;
     }
+
     private boolean interaction_record_agency(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION";
