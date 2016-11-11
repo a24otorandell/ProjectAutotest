@@ -14,7 +14,6 @@ import java.util.Random;
 public class AT2MDMCL0042Sis {
     protected AT2MDMCL0042Locators locators;
     protected AT2MDMCL0042Data data;
-    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
     public AT2MDMCL0042Sis() {
     }
     public AT2MDMCL0042Locators getLocators() {
@@ -47,8 +46,9 @@ public class AT2MDMCL0042Sis {
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_record_comercial(driver)) return false;
         if (!search_comercial(driver)) return false;
+        if (!qbe_comercial(driver, false)) return false;
         if (!interaction_edit_comercial(driver)) return false;
-        if (!qbe_comercial(driver)) return false;
+        if (!qbe_comercial(driver, true)) return false;
         if (!others_actions_comercial(driver)) return false;
         return true;
     }
@@ -98,6 +98,7 @@ public class AT2MDMCL0042Sis {
                 "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1, 3), 0), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_invoicing", getElements("add_lov_invoicing")}, // b_lov
                 new String[]{"add_i_invoicing", getElements("add_i_invoicing")}, // i_lov
@@ -158,16 +159,6 @@ public class AT2MDMCL0042Sis {
                 where)) {
             return false;
         }
-        /*if (!Functions.createLov(driver,
-                new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
-                new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "office", //Data name
-                where)) {
-            return false;
-        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_office", getElements("add_lov_office")}, //LoV button
                 new String[]{"add_i_office", getElements("add_i_office")}, //external LoV input
@@ -204,15 +195,15 @@ public class AT2MDMCL0042Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commission", getElements("add_i_commission")},
-                "commission", DataGenerator.randomFloat(1,50), where)) {
+                "commission", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_rappel", getElements("add_i_rappel")},
-                "rappel", DataGenerator.randomFloat(1,50), where)) {
+                "rappel", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_agency", getElements("add_i_agency")},
-                "agency", DataGenerator.randomFloat(1,50), where)) {
+                "agency", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
 
@@ -272,15 +263,17 @@ public class AT2MDMCL0042Sis {
         }
         return true;
     }
-    private boolean qbe_comercial(TestDriver driver) {
+    private boolean qbe_comercial(TestDriver driver, boolean reset) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         Functions.zoomOut(driver);
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"comercial_e_result", getElements("comercial_e_result")}, //result element
-                where)) {
-            return false;
+        if (reset) {
+            if (!Functions.clickSearchAndResult(driver,
+                    new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
+                    new String[]{"comercial_e_result", getElements("comercial_e_result")}, //result element
+                    where)) {
+                return false;
+            }
         }
         if (!Functions.clickQbE(driver,
                 new String[]{"comercial_b_qbe", getElements("comercial_b_qbe")},// query button

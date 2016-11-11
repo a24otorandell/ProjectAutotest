@@ -45,8 +45,9 @@ public class AT2MDMCL0042Test {
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_record_comercial(driver)) return false;
         if (!search_comercial(driver)) return false;
+        if (!qbe_comercial(driver, false)) return false;
         if (!interaction_edit_comercial(driver)) return false;
-        if (!qbe_comercial(driver)) return false;
+        if (!qbe_comercial(driver, true)) return false;
         if (!others_actions_comercial(driver)) return false;
         return true;
     }
@@ -156,16 +157,6 @@ public class AT2MDMCL0042Test {
                 where)) {
             return false;
         }
-        /*if (!Functions.createLov(driver,
-                new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
-                new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "office", //Data name
-                where)) {
-            return false;
-        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_office", getElements("add_lov_office")}, //LoV button
                 new String[]{"add_i_office", getElements("add_i_office")}, //external LoV input
@@ -202,15 +193,15 @@ public class AT2MDMCL0042Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commission", getElements("add_i_commission")},
-                "commission", DataGenerator.randomFloat(1,50), where)) {
+                "commission", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_rappel", getElements("add_i_rappel")},
-                "rappel", DataGenerator.randomFloat(1,50), where)) {
+                "rappel", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_agency", getElements("add_i_agency")},
-                "agency", DataGenerator.randomFloat(1,50), where)) {
+                "agency", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
 
@@ -270,99 +261,101 @@ public class AT2MDMCL0042Test {
         }
         return true;
     }
-    private boolean qbe_comercial(TestDriver driver) {
+    private boolean qbe_comercial(TestDriver driver, boolean reset) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         Functions.zoomOut(driver);
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"comercial_e_result", getElements("comercial_e_result")}, //result element
-                where)) {
-            return false;
+        if (reset) {
+            if (!Functions.clickSearchAndResult(driver,
+                    new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
+                    new String[]{"comercial_e_result", getElements("comercial_e_result")}, //result element
+                    where)) {
+                return false;
+            }
         }
-        if (!Functions.clickQbE(driver,
-                new String[]{"comercial_b_qbe", getElements("comercial_b_qbe")},// query button
-                new String[]{"qbe_i_prod", getElements("qbe_i_prod")},//any query input
-                where)) {
-            return false;
-        } // where the operation occurs
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_prod", getElements("qbe_i_prod")},
-                "prod", getData("prod"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_interface", getElements("qbe_i_interface")},
-                "interface", getData("interface"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_application_from", getElements("qbe_i_application_from")},
-                "apli_f", getData("apli_f"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_application_to", getElements("qbe_i_application_to")},
-                "apli_t", getData("apli_t"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_booking_from", getElements("qbe_i_booking_from")},
-                "from", getData("from"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_booking_to", getElements("qbe_i_booking_to")},
-                "to", getData("to"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_invoicing", getElements("qbe_i_invoicing")},
-                "invoicing", getData("invoicing"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_client", getElements("qbe_i_client")},
-                "client", getData("client"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_group", getElements("qbe_i_group")},
-                "group", getData("group"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_chain", getElements("qbe_i_chain")},
-                "chain", getData("chain"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_destination", getElements("qbe_i_destination")},
-                "destination", getData("destination"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_company", getElements("qbe_i_company")},
-                "company", getData("company"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_office", getElements("qbe_i_office")},
-                "office", getData("office"), where)) {
-            return false;
-        }
-        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_type", getElements("qbe_sl_type")},
-                getData("type"), "type", where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_service", getElements("qbe_i_service")},
-                "service", getData("service"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_modality", getElements("qbe_i_modality")},
-                "modality", getData("modality"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_commission", getElements("qbe_i_commission")},
-                "commission", getData("commission"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_rappel", getElements("qbe_i_rappel")},
-                "rappel", getData("rappel"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_agency", getElements("qbe_i_agency")},
-                "agency", getData("agency"), where)) {
-            return false;
-        }
+            if (!Functions.clickQbE(driver,
+                    new String[]{"comercial_b_qbe", getElements("comercial_b_qbe")},// query button
+                    new String[]{"qbe_i_prod", getElements("qbe_i_prod")},//any query input
+                    where)) {
+                return false;
+            } // where the operation occurs
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_prod", getElements("qbe_i_prod")},
+                    "prod", getData("prod"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_interface", getElements("qbe_i_interface")},
+                    "interface", getData("interface"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_application_from", getElements("qbe_i_application_from")},
+                    "apli_f", getData("apli_f"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_application_to", getElements("qbe_i_application_to")},
+                    "apli_t", getData("apli_t"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_booking_from", getElements("qbe_i_booking_from")},
+                    "from", getData("from"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_booking_to", getElements("qbe_i_booking_to")},
+                    "to", getData("to"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_invoicing", getElements("qbe_i_invoicing")},
+                    "invoicing", getData("invoicing"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_client", getElements("qbe_i_client")},
+                    "client", getData("client"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_group", getElements("qbe_i_group")},
+                    "group", getData("group"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_chain", getElements("qbe_i_chain")},
+                    "chain", getData("chain"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_destination", getElements("qbe_i_destination")},
+                    "destination", getData("destination"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_company", getElements("qbe_i_company")},
+                    "company", getData("company"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_office", getElements("qbe_i_office")},
+                    "office", getData("office"), where)) {
+                return false;
+            }
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_type", getElements("qbe_sl_type")},
+                    getData("type"), "type", where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_service", getElements("qbe_i_service")},
+                    "service", getData("service"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_modality", getElements("qbe_i_modality")},
+                    "modality", getData("modality"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_commission", getElements("qbe_i_commission")},
+                    "commission", getData("commission"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_rappel", getElements("qbe_i_rappel")},
+                    "rappel", getData("rappel"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_agency", getElements("qbe_i_agency")},
+                    "agency", getData("agency"), where)) {
+                return false;
+            }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_group", getElements("qbe_i_group")}, //any query input
                 new String[]{"comercial_e_result", getElements("comercial_e_result")}, //table result
