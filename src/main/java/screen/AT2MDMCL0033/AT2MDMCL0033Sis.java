@@ -14,7 +14,6 @@ import java.util.Random;
 public class AT2MDMCL0033Sis {
     protected AT2MDMCL0033Locators locators;
     protected AT2MDMCL0033Data data;
-    double randomNumber = (double) (new Random().nextInt(1001)) / 100;
     public AT2MDMCL0033Sis() {
     }
     public AT2MDMCL0033Locators getLocators() {
@@ -36,7 +35,7 @@ public class AT2MDMCL0033Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Client");
-        driver.getTestdetails().setScreen("Agency commision 2.0");
+        driver.getTestdetails().setScreen("Hotelopia Commercial Policy");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -52,6 +51,7 @@ public class AT2MDMCL0033Sis {
         if (!others_actions_agency(driver)) return false;
         return false;
     }
+
     private boolean interaction_record_agency(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION";
@@ -250,12 +250,10 @@ public class AT2MDMCL0033Sis {
                 "agent", getData("agent"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //search button
-                new String[]{"agency_e_result", getElements("agency_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_group", getElements("qbe_i_group")}, //any query input
+                new String[]{"agency_e_result", getElements("agency_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_agency(TestDriver driver) {
@@ -278,5 +276,4 @@ public class AT2MDMCL0033Sis {
         }
         return true;
     }
-
 }

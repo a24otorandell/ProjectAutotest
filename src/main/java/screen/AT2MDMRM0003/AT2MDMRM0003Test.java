@@ -80,7 +80,7 @@ public class AT2MDMRM0003Test {
                 where)) {
             return false;
         }
-        if (!Functions.getText(driver, new String[]{"add_i_char_sequence",getElements("add_i_char_sequence")},
+        if (!Functions.getValue(driver, new String[]{"add_i_char_sequence",getElements("add_i_char_sequence")},
                "c_sequence", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_char_name",getElements("add_i_char_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(5,false), where)){return false;}
@@ -124,7 +124,7 @@ public class AT2MDMRM0003Test {
                 where)) {
             return false;
         }
-        if (!Functions.getText(driver, new String[]{"add_i_char_sequence",getElements("add_i_char_sequence")},
+        if (!Functions.getValue(driver, new String[]{"add_i_char_sequence",getElements("add_i_char_sequence")},
                 "c_sequence", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_char_name",getElements("add_i_char_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(5,false), where)){return false;}
@@ -169,12 +169,10 @@ public class AT2MDMRM0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_web_type",getElements("qbe_sl_web_type")},
                 getData("type"), "type", where)){return false;}
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_char_sequence", getElements("qbe_i_char_sequence")}, //search button
-                new String[]{"characteristics_e_result", getElements("characteristics_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_char_sequence", getElements("qbe_i_char_sequence")}, //any query input
+                new String[]{"characteristics_e_result", getElements("characteristics_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_characteristics(TestDriver driver) {
@@ -229,7 +227,7 @@ public class AT2MDMRM0003Test {
             where)) {
         return false;
     }
-    if (!Functions.getText(driver, new String[]{"add_i_sequence",getElements("add_i_sequence")},
+    if (!Functions.getValue(driver, new String[]{"add_i_sequence",getElements("add_i_sequence")},
             "sequence", where)){return false;}
     if(!Functions.createLov(driver,
             new String[]{"add_lov_atlas_agency_code",getElements("add_lov_atlas_agency_code")}, // b_lov
@@ -239,7 +237,7 @@ public class AT2MDMRM0003Test {
             recursiveXPaths.lov_b_ok, //lov b ok
             "a_code", //Data name
             where)){return false;}
-    if (!Functions.getText(driver, new String[]{"add_i_agency",getElements("add_i_agency")},
+    if (!Functions.getValue(driver, new String[]{"add_i_agency",getElements("add_i_agency")},
             "agency", where)){return false;}
     if(!Functions.createLov(driver,
             new String[]{"add_lov_web_code",getElements("add_lov_web_code")}, // b_lov
@@ -249,7 +247,7 @@ public class AT2MDMRM0003Test {
             recursiveXPaths.lov_b_ok, //lov b ok
             "web_code", //Data name
             where)){return false;}
-    if (!Functions.getText(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
+    if (!Functions.getValue(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
             "web_des", where)){return false;}
     if (!Functions.checkClickByAbsence(driver,
             new String[]{"add_configuration_b_save", getElements("add_configuration_b_save")}, //e1
@@ -295,7 +293,7 @@ public class AT2MDMRM0003Test {
                 where)) {
             return false;
         }
-        if (!Functions.getText(driver, new String[]{"add_i_sequence",getElements("add_i_sequence")},
+        if (!Functions.getValue(driver, new String[]{"add_i_sequence",getElements("add_i_sequence")},
                 "sequence", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_atlas_agency_code",getElements("add_lov_atlas_agency_code")}, // b_lov
@@ -305,7 +303,7 @@ public class AT2MDMRM0003Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "a_code", //Data name
                 where)){return false;}
-        if (!Functions.getText(driver, new String[]{"add_i_agency",getElements("add_i_agency")},
+        if (!Functions.getValue(driver, new String[]{"add_i_agency",getElements("add_i_agency")},
                 "agency", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_web_code",getElements("add_lov_web_code")}, // b_lov
@@ -315,7 +313,7 @@ public class AT2MDMRM0003Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "web_code", //Data name
                 where)){return false;}
-        if (!Functions.getText(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
+        if (!Functions.getValue(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
                 "web_des", where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_configuration_b_save", getElements("add_configuration_b_save")}, //e1
@@ -358,12 +356,10 @@ public class AT2MDMRM0003Test {
                 "agency", getData("agency"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_sequence", getElements("qbe_i_sequence")}, //search button
-                new String[]{"configuration_e_result", getElements("configuration_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_sequence", getElements("qbe_i_sequence")}, //any query input
+                new String[]{"configuration_e_result", getElements("configuration_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_configuration(TestDriver driver) {
@@ -543,12 +539,10 @@ public class AT2MDMRM0003Test {
                 "value", getData("value"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_characteristic_sequence", getElements("qbe_i_characteristic_sequence")}, //search button
-                new String[]{"status_e_result", getElements("status_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_characteristic_sequence", getElements("qbe_i_characteristic_sequence")}, //any query input
+                new String[]{"status_e_result", getElements("status_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_status(TestDriver driver) {

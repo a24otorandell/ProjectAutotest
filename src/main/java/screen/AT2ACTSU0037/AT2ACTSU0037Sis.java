@@ -243,12 +243,10 @@ public class AT2ACTSU0037Sis {
                 "days", getData("days"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_to", getElements("qbe_i_to")}, //search button
-                new String[]{"suppliers_e_result", getElements("suppliers_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_to", getElements("qbe_i_to")}, //any query input
+                new String[]{"suppliers_e_result", getElements("suppliers_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_supplier(TestDriver driver) {

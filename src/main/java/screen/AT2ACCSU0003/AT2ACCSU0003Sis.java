@@ -68,7 +68,7 @@ public class AT2ACCSU0003Sis {
                 new String[]{"add_lov_crs_code", getElements("add_lov_crs_code")}, //LoV button
                 new String[]{"add_i_crs_code", getElements("add_i_crs_code")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok,
                 "crs", //name of the data
                 where)) {
@@ -88,7 +88,7 @@ public class AT2ACCSU0003Sis {
                 new String[]{"add_lov_destination_code", getElements("add_lov_destination_code")}, //LoV button
                 new String[]{"add_i_destination_code", getElements("add_i_destination_code")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok,
                 "destination", //name of the data
                 where)) {
@@ -98,7 +98,7 @@ public class AT2ACCSU0003Sis {
                 new String[]{"add_lov_interface_code", getElements("add_lov_interface_code")}, //LoV button
                 new String[]{"add_i_interface_code", getElements("add_i_interface_code")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok,
                 "interface", //name of the data
                 where)) {
@@ -255,7 +255,7 @@ public class AT2ACCSU0003Sis {
                 new String[]{"add_lov_crs_code", getElements("add_lov_crs_code")}, //LoV button
                 new String[]{"add_i_crs_code", getElements("add_i_crs_code")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok,
                 "crs", //name of the data
                 where)) {
@@ -265,7 +265,7 @@ public class AT2ACCSU0003Sis {
                 new String[]{"add_lov_brand_code", getElements("add_lov_brand_code")}, //LoV button
                 new String[]{"add_i_brand_code", getElements("add_i_brand_code")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok,
                 "brand", //name of the data
                 where)) {
@@ -275,7 +275,7 @@ public class AT2ACCSU0003Sis {
                 new String[]{"add_lov_destination_code", getElements("add_lov_destination_code")}, //LoV button
                 new String[]{"add_i_destination_code", getElements("add_i_destination_code")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok,
                 "destination", //name of the data
                 where)) {
@@ -285,7 +285,7 @@ public class AT2ACCSU0003Sis {
                 new String[]{"add_lov_interface_code", getElements("add_lov_interface_code")}, //LoV button
                 new String[]{"add_i_interface_code", getElements("add_i_interface_code")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok,
                 "interface", //name of the data
                 where)) {
@@ -402,12 +402,10 @@ public class AT2ACCSU0003Sis {
                 getData("active"), "active", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_crs_code", getElements("qbe_i_crs_code")}, //search button
-                new String[]{"commisions_e_result", getElements("commisions_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_commission", getElements("qbe_i_commission")}, //any query input
+                new String[]{"commisions_e_result", getElements("commisions_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_commisions(TestDriver driver) {

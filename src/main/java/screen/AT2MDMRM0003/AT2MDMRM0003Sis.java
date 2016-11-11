@@ -167,12 +167,10 @@ public class AT2MDMRM0003Sis {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_web_type",getElements("qbe_sl_web_type")},
                 getData("type"), "type", where)){return false;}
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_char_sequence", getElements("qbe_i_char_sequence")}, //search button
-                new String[]{"characteristics_e_result", getElements("characteristics_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_char_sequence", getElements("qbe_i_char_sequence")}, //any query input
+                new String[]{"characteristics_e_result", getElements("characteristics_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_characteristics(TestDriver driver) {
@@ -356,12 +354,10 @@ public class AT2MDMRM0003Sis {
                 "agency", getData("agency"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_sequence", getElements("qbe_i_sequence")}, //search button
-                new String[]{"configuration_e_result", getElements("configuration_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_sequence", getElements("qbe_i_sequence")}, //any query input
+                new String[]{"configuration_e_result", getElements("configuration_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_configuration(TestDriver driver) {
@@ -541,12 +537,10 @@ public class AT2MDMRM0003Sis {
                 "value", getData("value"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_characteristic_sequence", getElements("qbe_i_characteristic_sequence")}, //search button
-                new String[]{"status_e_result", getElements("status_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_characteristic_sequence", getElements("qbe_i_characteristic_sequence")}, //any query input
+                new String[]{"status_e_result", getElements("status_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_status(TestDriver driver) {

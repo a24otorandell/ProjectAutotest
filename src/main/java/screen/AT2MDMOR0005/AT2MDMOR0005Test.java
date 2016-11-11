@@ -32,8 +32,8 @@ public class AT2MDMOR0005Test {
     }
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
-        driver.getTestdetails().setSubmenu("Destination");
-        driver.getTestdetails().setScreen("Set Up Web Prepayment 2.0");
+        driver.getTestdetails().setSubmenu("Organization");
+        driver.getTestdetails().setScreen("Companies (Configuration)");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -312,6 +312,10 @@ public class AT2MDMOR0005Test {
                 where)) {
             return false;
         }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_code", getElements("qbe_i_code")}, //any query input
+                new String[]{"companies_e_result", getElements("companies_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_companies(TestDriver driver) {

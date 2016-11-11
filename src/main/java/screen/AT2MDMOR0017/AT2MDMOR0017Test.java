@@ -270,11 +270,6 @@ public class AT2MDMOR0017Test {
     private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_b_edit", getElements("MDM_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -386,6 +381,11 @@ public class AT2MDMOR0017Test {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         Functions.zoomOut(driver, 2);
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
         Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_b_qbe", getElements("MDM_b_qbe")},// query button

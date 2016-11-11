@@ -308,12 +308,10 @@ public class AT2MDMDE0014Sis {
                 getData("active"), "active", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //search button
-                new String[]{"b2b_e_result", getElements("b2b_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //any query input
+                new String[]{"b2b_e_result", getElements("b2b_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_b2b(TestDriver driver) {

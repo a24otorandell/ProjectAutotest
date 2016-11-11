@@ -194,11 +194,6 @@ public class AT2MDMDE0007Sis {
     private boolean interaction_edit_ip_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_ip_b_edit", getElements("MDM_ip_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -274,6 +269,12 @@ public class AT2MDMDE0007Sis {
     private boolean qbe_ip_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_ip_b_qbe", getElements("MDM_ip_b_qbe")},// query button
                 new String[]{"qbe_ip_i_destination_code", getElements("qbe_ip_i_destination_code")},//any query input

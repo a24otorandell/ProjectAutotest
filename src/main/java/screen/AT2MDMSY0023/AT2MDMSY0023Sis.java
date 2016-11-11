@@ -164,6 +164,12 @@ public class AT2MDMSY0023Sis {
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_b_qbe", getElements("MDM_b_qbe")},// query button
                 new String[]{"qbe_i_application", getElements("qbe_i_application")},//any query input

@@ -129,11 +129,7 @@ public class AT2ACCSU0055Sis {
     private boolean interaction_edit_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_chains_reset", getElements("search_b_chains_reset")}, //element to click
-                where)) {
-            return false;
-        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"accommodation_b_chains_edit", getElements("accommodation_b_chains_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -170,6 +166,12 @@ public class AT2ACCSU0055Sis {
     private boolean qbe_chains_accommodation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_chains_reset", getElements("search_b_chains_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"accommodation_b_chains_qbe", getElements("accommodation_b_chains_qbe")},// query button
                 new String[]{"qbe_i_crs_code", getElements("qbe_i_crs_code")},//any query input
@@ -299,11 +301,7 @@ public class AT2ACCSU0055Sis {
     private boolean interaction_edit_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_brands_reset", getElements("search_b_brands_reset")}, //element to click
-                where)) {
-            return false;
-        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"accommodation_b_brands_edit", getElements("accommodation_b_brands_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -332,6 +330,12 @@ public class AT2ACCSU0055Sis {
     private boolean qbe_brands_accommodation(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_brands_reset", getElements("search_b_brands_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"accommodation_b_brands_qbe", getElements("accommodation_b_brands_qbe")},// query button
                 new String[]{"qbe_i_brand_name", getElements("qbe_i_brand_name")},//any query input

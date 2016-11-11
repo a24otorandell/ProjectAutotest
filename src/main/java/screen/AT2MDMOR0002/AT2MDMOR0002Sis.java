@@ -32,8 +32,8 @@ public class AT2MDMOR0002Sis {
     }
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
-        driver.getTestdetails().setSubmenu("Destination");
-        driver.getTestdetails().setScreen("Set Up Web Prepayment 2.0");
+        driver.getTestdetails().setSubmenu("Organization");
+        driver.getTestdetails().setScreen("Booking Types");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -209,12 +209,10 @@ public class AT2MDMOR0002Sis {
                 getData("visible"), "visible", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_booking_type", getElements("qbe_i_booking_type")}, //search button
-                new String[]{"booking_e_result", getElements("booking_e_result")}, //result element
-                where)){
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_booking_type", getElements("qbe_i_booking_type")}, //any query input
+                new String[]{"booking_e_result", getElements("booking_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_booking(TestDriver driver) {
@@ -327,12 +325,10 @@ public class AT2MDMOR0002Sis {
                 "des", getData("des"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_lang", getElements("qbe_i_lang")}, //search button
-                new String[]{"booking_des_b_result", getElements("booking_des_b_result")}, //result element
-                where)){
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_lang", getElements("qbe_i_lang")}, //any query input
+                new String[]{"booking_des_b_result", getElements("booking_des_b_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_booking_des(TestDriver driver) {
