@@ -113,7 +113,7 @@ public class AT2MDMSP0017Test {
                 getData("supplier"), // value to search
                 "supplier", //name of the data
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"search_i_comercial", getElements("search_i_comercial")}, // element path
+        if(!Functions.getText(driver,new String[]{"search_i_comercial", getElements("search_i_comercial")}, // element path
                 "comercial", // key for data value (the name)
                 where)){return false;}
         if (!Functions.selectText(driver,

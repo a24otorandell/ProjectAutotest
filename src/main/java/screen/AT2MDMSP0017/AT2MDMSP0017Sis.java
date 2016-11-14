@@ -113,7 +113,7 @@ public class AT2MDMSP0017Sis {
                 getData("supplier"), // value to search
                 "supplier", //name of the data
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"search_i_comercial", getElements("search_i_comercial")}, // element path
+        if(!Functions.getText(driver,new String[]{"search_i_comercial", getElements("search_i_comercial")}, // element path
                 "comercial", // key for data value (the name)
                 where)){return false;}
         if (!Functions.selectText(driver,
@@ -239,20 +239,26 @@ public class AT2MDMSP0017Sis {
         Functions.zoomOut(driver);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_expiration_days",getElements("qbe_i_expiration_days")},
                 "expiration", getData("expiration"), where)){return false;}
-/*        if (!Functions.selectText(driver,
+        Functions.break_time(driver, 3, 800);
+        if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_cost",getElements("qbe_sl_cost")},
                 getData("cost"), "cost", where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_card",getElements("qbe_sl_card")},
                 getData("card"), "card", where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_advice",getElements("qbe_sl_advice")},
                 getData("advice"), "advice", where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_cvc",getElements("qbe_sl_cvc")},
-                getData("cvc"), "cvc", where)){return false;}*/
+                getData("cvc"), "cvc", where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_days_previous_to_sending",getElements("qbe_i_days_previous_to_sending")},
                 "previous", getData("previous"), where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_address_book",getElements("qbe_sl_address_book")},
                 getData("address"), "address", where)){return false;}

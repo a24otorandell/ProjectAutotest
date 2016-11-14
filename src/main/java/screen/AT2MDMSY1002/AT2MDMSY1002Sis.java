@@ -146,18 +146,23 @@ public class AT2MDMSY1002Sis {
                 "client", getData("client"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_mail",getElements("qbe_i_mail")},
                 "mail", getData("mail"), where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_create",getElements("qbe_sl_create")},
                 getData("create"), "create", where)){return false;}
-/*        if (!Functions.selectText(driver,
+        Functions.break_time(driver, 3, 800);
+        if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_update",getElements("qbe_sl_update")},
                 getData("update"), "update", where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_monitoring",getElements("qbe_sl_monitoring")},
-                getData("monitoring"), "monitoring", where)){return false;}*/
-/*        if (!Functions.selectText(driver,
+                getData("monitoring"), "monitoring", where)){return false;}
+        Functions.break_time(driver, 3, 800);
+        if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
-                getData("active"), "active", where)){return false;}*/
+                getData("active"), "active", where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_client", getElements("qbe_i_client")}, //any query input
                 new String[]{"client_e_result", getElements("client_e_result")}, //table result

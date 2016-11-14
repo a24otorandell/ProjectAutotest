@@ -174,6 +174,7 @@ public class AT2MDMUS0004Sis {
                 "sur1", getData("sur1"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_surname2",getElements("qbe_i_surname2")},
                 "sur2", getData("sur2"), where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_status",getElements("qbe_sl_status")},
                 getData("status"), "status",  where)){return false;}
@@ -291,9 +292,11 @@ public class AT2MDMUS0004Sis {
                 "appli", getData("appli"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_description",getElements("qbe_i_description")},
                 "desc", getData("desc"), where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.selectText(driver,
                 new String[]{"t2_qbe_sl_status",getElements("t2_qbe_sl_status")},
                 getData("status2"), "status2",  where)){return false;}
+        Functions.break_time(driver, 3, 800);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_description", getElements("qbe_i_description")}, //any query input
                 new String[]{"application_e_result", getElements("application_e_result")}, //table result
