@@ -33,7 +33,7 @@ public class AT2MDMCL0040Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data");
         driver.getTestdetails().setSubmenu("Client");
-        driver.getTestdetails().setScreen("Hotelopia Commercial Policy");
+        driver.getTestdetails().setScreen("Credit Control");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

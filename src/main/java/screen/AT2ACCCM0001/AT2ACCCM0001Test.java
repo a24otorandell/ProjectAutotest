@@ -30,7 +30,7 @@ public class AT2ACCCM0001Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Suppliers");
-        driver.getTestdetails().setScreen("Supplier Management");
+        driver.getTestdetails().setScreen("Pantalla para la aplicacion de Parlam Integration");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
