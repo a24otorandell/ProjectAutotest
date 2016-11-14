@@ -394,12 +394,10 @@ public class AT2MDMOR0016Test {
                 "extra", getData("extra"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_b_company", getElements("qbe_i_b_company")}, //search button
-                new String[]{"transfers_e_result", getElements("transfers_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_b_company", getElements("qbe_i_b_company")}, //any query input
+                new String[]{"transfers_e_result", getElements("transfers_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_transfers(TestDriver driver) {

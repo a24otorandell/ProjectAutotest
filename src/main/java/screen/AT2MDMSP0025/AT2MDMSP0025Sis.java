@@ -117,11 +117,6 @@ public class AT2MDMSP0025Sis {
     private boolean interaction_edit_market_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_market_b_edit", getElements("MDM_market_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -143,6 +138,12 @@ public class AT2MDMSP0025Sis {
     private boolean qbe_market_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_market_b_qbe", getElements("MDM_market_b_qbe")},// query button
                 new String[]{"qbe_market_i_market", getElements("qbe_market_i_market")},//any query input

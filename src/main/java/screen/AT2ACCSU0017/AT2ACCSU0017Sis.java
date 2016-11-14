@@ -326,6 +326,7 @@ public class AT2ACCSU0017Sis {
                 "No","active"," on QBE")){
             return false;
         }
+        Functions.break_time(driver, 6, 500);
         if(!Functions.selectText(driver,
                 new String[]{"hotel_categories_qbe_sl_sws",getElements("hotel_categories_qbe_sl_sws")},
                 "No","sws"," on QBE")){

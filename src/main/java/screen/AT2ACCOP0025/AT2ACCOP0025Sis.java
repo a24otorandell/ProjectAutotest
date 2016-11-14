@@ -18,42 +18,33 @@ public class AT2ACCOP0025Sis {
         setData(new AT2ACCOP0025Data(enviroment));
         setLocators(new AT2ACCOP0025Locators(enviroment));
     }
-
     public AT2ACCOP0025Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCOP0025Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCOP0025Data getData() {
         return data;
     }
-
     public void setData(AT2ACCOP0025Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodations");
         driver.getTestdetails().setSubmenu("Operations");
         driver.getTestdetails().setScreen("Commissions Rules 2.0");
     }
-
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     protected String getData(String key) {
         return String.valueOf(this.data.getData().get(key));
     }
-
     protected boolean testCSED(TestDriver driver) {
         //ToDo Wait until the issue QA-10113 is true resolved
         if (!recordInteraction(driver, true)) {
@@ -82,7 +73,6 @@ public class AT2ACCOP0025Sis {
         }
         return false;
     }
-
     /**
      * @param driver TestDriver
      * @param type   boolean que controla el flujo inicial para saber si creamos o modificamos el registro
@@ -183,7 +173,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -270,13 +259,8 @@ public class AT2ACCOP0025Sis {
                     " on SEARCH")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.clickSearchAndResult(driver,
                     new String[]{"search_b_search", getElements("search_b_search")},
-                    " on SEARCH")) {
-                return false;
-            }
-            Thread.sleep(2800);
-            if (!Functions.simpleClick(driver,
                     new String[]{"search_e_result", getElements("search_e_result")},
                     " on SEARCH")) {
                 return false;
@@ -286,7 +270,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -384,14 +367,14 @@ public class AT2ACCOP0025Sis {
                 " on QBE")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_search", getElements("search_b_search")},
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"record_interaction_qbe_i_percentage", getElements("record_interaction_qbe_i_percentage")},
+                new String[]{"search_e_result", getElements("search_e_result")},
                 " on QBE")) {
             return false;
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return boolean
@@ -417,7 +400,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -430,8 +412,9 @@ public class AT2ACCOP0025Sis {
                     " on Delete")) {
                 return false;
             }
-            if (!Functions.doDelete(driver,
+            if (!Functions.doDeleteNCheck(driver,
                     new String[]{"record_interaction_b_remove", getElements("record_interaction_b_remove")},
+                    new String[]{"search_n_records", getElements("search_n_records")},
                     new String[]{"record_interaction_b_remove_b_ok", getElements("record_interaction_b_remove_b_ok")},
                     " on DELETE")) {
                 return false;
@@ -442,7 +425,6 @@ public class AT2ACCOP0025Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver
      * @return Boolean
@@ -451,24 +433,6 @@ public class AT2ACCOP0025Sis {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")},
                 " on RESET")) {
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * @param driver TestDriver
-     * @return Boolean
-     */
-    protected boolean enabler(TestDriver driver) {
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")},
-                " on SEARCH")) {
-            return false;
-        }
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_search", getElements("search_b_search")},
-                " on SEARCH")) {
             return false;
         }
         return true;

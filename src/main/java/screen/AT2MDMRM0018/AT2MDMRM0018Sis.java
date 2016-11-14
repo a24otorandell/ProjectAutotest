@@ -179,11 +179,6 @@ public class AT2MDMRM0018Sis {
     private boolean interaction_edit_tabs_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_tabs_b_reset", getElements("search_tabs_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_tabs_b_edit", getElements("MDM_tabs_b_edit")}, //element to click
@@ -222,6 +217,12 @@ public class AT2MDMRM0018Sis {
     private boolean qbe_tabs_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_tabs_b_reset", getElements("search_tabs_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_tabs_b_qbe", getElements("MDM_tabs_b_qbe")},// query button
                 new String[]{"qbe_tabs_i_code", getElements("qbe_tabs_i_code")},//any query input
@@ -732,11 +733,6 @@ public class AT2MDMRM0018Sis {
     private boolean interaction_edit_config_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_configuration_b_reset", getElements("search_configuration_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_config_b_edit", getElements("MDM_config_b_edit")}, //element to click
@@ -766,6 +762,12 @@ public class AT2MDMRM0018Sis {
     private boolean qbe_config_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_configuration_b_reset", getElements("search_configuration_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_config_b_qbe", getElements("MDM_config_b_qbe")},// query button
                 new String[]{"qbe_config_i_code", getElements("qbe_config_i_code")},//any query input

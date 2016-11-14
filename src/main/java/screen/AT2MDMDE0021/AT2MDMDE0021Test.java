@@ -188,12 +188,10 @@ public class AT2MDMDE0021Test {
                 "info_air", getData("info_air"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //search button
-                new String[]{"hotelbeds_e_result", getElements("hotelbeds_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //any query input
+                new String[]{"hotelbeds_e_result", getElements("hotelbeds_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_hotelbeds(TestDriver driver) {

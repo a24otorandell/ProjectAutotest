@@ -4,9 +4,6 @@ import core.CommonActions.CommonProcedures;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
-import org.openqa.selenium.By;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * @author ajvirgili on 23/06/2016.
@@ -45,10 +42,6 @@ public class AT2ACCOP0025Test {
     public String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-    protected String getData(String key) {
-        return String.valueOf(this.data.getData().get(key));
-    }
-
     protected boolean testCSED(TestDriver driver) {
         if (!recordInteraction(driver, true)) {
             return false;
@@ -75,6 +68,10 @@ public class AT2ACCOP0025Test {
             return false;
         }
         return false;
+    }
+
+    protected String getData(String key) {
+        return String.valueOf(this.data.getData().get(key));
     }
     /**
      * @param driver TestDriver
@@ -262,13 +259,8 @@ public class AT2ACCOP0025Test {
                     " on SEARCH")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.clickSearchAndResult(driver,
                     new String[]{"search_b_search", getElements("search_b_search")},
-                    " on SEARCH")) {
-                return false;
-            }
-            Thread.sleep(2800);
-            if (!Functions.simpleClick(driver,
                     new String[]{"search_e_result", getElements("search_e_result")},
                     " on SEARCH")) {
                 return false;
@@ -375,8 +367,9 @@ public class AT2ACCOP0025Test {
                 " on QBE")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_search", getElements("search_b_search")},
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"record_interaction_qbe_i_percentage", getElements("record_interaction_qbe_i_percentage")},
+                new String[]{"search_e_result", getElements("search_e_result")},
                 " on QBE")) {
             return false;
         }
@@ -419,13 +412,9 @@ public class AT2ACCOP0025Test {
                     " on DELETE")) {
                 return false;
             }
-            if (!Functions.simpleClick(driver,
+            if (!Functions.doDeleteNCheck(driver,
                     new String[]{"record_interaction_b_remove", getElements("record_interaction_b_remove")},
-                    " on DELETE")) {
-                return false;
-            }
-            Thread.sleep(2800);
-            if (!Functions.simpleClick(driver,
+                    new String[]{"search_n_records", getElements("search_n_records")},
                     new String[]{"record_interaction_b_remove_b_ok", getElements("record_interaction_b_remove_b_ok")},
                     " on DELETE")) {
                 return false;
@@ -444,23 +433,6 @@ public class AT2ACCOP0025Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")},
                 " on RESET")) {
-            return false;
-        }
-        return true;
-    }
-    /**
-     * @param driver TestDriver
-     * @return Boolean
-     */
-    protected boolean enabler(TestDriver driver) {
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")},
-                " on SEARCH")) {
-            return false;
-        }
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_search", getElements("search_b_search")},
-                " on SEARCH")) {
             return false;
         }
         return true;

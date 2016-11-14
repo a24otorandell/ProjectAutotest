@@ -164,10 +164,12 @@ public class AT2MSCSU0007Test {
                 return false;
             }
         }
-        if (!Functions.insertInput(driver,
-                new String[]{"url_country_pais_url_b_add_i_country_code", getElements("url_country_pais_url_b_add_i_country_code")},
-                "country_code_url",
-                getData(update + "country_code_url"),
+        if (!Functions.createLovByValue(driver,
+                new String[]{"url_country_pais_url_b_add_lov_country_code", getElements("url_country_pais_url_b_add_lov_country_code")}, //LoV button
+                new String[]{"url_country_pais_url_b_add_i_country_code", getElements("url_country_pais_url_b_add_i_country_code")}, //external LoV input
+                new String[]{"url_country_pais_url_b_add_lov_country_code_i_country_code", getElements("url_country_pais_url_b_add_lov_country_code_i_country_code")}, //internal LoV input
+                getData(update + "country_code_url"), // value to search
+                "country_code_url", //name of the data
                 on)) {
             return false;
         }

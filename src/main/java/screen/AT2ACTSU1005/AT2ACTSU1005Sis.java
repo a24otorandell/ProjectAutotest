@@ -138,6 +138,12 @@ public class AT2ACTSU1005Sis {
     private boolean qbe_activities(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"activities_b_qbe", getElements("activities_b_qbe")},// query button
                 new String[]{"qbe_i_prefix", getElements("qbe_i_prefix")},//any query input
@@ -157,7 +163,7 @@ public class AT2ACTSU1005Sis {
             return false;
         }
 
-        if (!Functions.clickSearchAndResult(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_prefix", getElements("qbe_i_prefix")}, //search button
                 new String[]{"activities_e_result", getElements("activities_e_result")}, //result element
                 where)) {

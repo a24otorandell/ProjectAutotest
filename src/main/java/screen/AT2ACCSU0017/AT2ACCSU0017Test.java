@@ -327,12 +327,13 @@ public class AT2ACCSU0017Test {
                 "No","active"," on QBE")){
             return false;
         }
+        Functions.break_time(driver, 6, 500);
         if(!Functions.selectText(driver,
                 new String[]{"hotel_categories_qbe_sl_sws",getElements("hotel_categories_qbe_sl_sws")},
                 "No","sws"," on QBE")){
             return false;
         }
-
+        Functions.break_time(driver, 6, 500);
         if(!Functions.insertInput(driver,new String[]{"hotel_categories_qbe_i_category_code",getElements("hotel_categories_qbe_i_category_code")},
                 "category_code",getData("category_code"),"on QBE")){
             return false;

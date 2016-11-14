@@ -340,12 +340,10 @@ public class AT2MDMCL0024Sis {
                 getData("incl"), "incl", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_atlas", getElements("qbe_i_atlas")}, //search button
-                new String[]{"commision_e_result", getElements("commision_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_atlas", getElements("qbe_i_atlas")}, //any query input
+                new String[]{"commision_e_result", getElements("commision_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_commision(TestDriver driver) {

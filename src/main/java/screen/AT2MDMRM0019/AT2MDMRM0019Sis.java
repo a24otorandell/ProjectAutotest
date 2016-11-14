@@ -200,12 +200,10 @@ public class AT2MDMRM0019Sis {
                 "order", getData("order"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_sequence", getElements("qbe_i_sequence")}, //search button
-                new String[]{"hotel_e_result", getElements("hotel_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_sequence", getElements("qbe_i_sequence")}, //any query input
+                new String[]{"hotel_e_result", getElements("hotel_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_hotel(TestDriver driver) {

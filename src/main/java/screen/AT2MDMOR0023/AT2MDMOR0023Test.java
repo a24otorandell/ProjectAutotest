@@ -131,6 +131,7 @@ public class AT2MDMOR0023Test {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_b_qbe", getElements("MDM_b_qbe")},// query button
                 new String[]{"qbe_e_company", getElements("qbe_e_company")},//any query input

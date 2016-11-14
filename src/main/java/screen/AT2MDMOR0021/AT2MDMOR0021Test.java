@@ -185,11 +185,6 @@ public class AT2MDMOR0021Test {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
         if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
-        if (!Functions.simpleClick(driver,
                 new String[]{"MDM_errors_e_result", getElements("MDM_errors_e_result")}, //element to click
                 where)) {
             return false;
@@ -229,7 +224,12 @@ public class AT2MDMOR0021Test {
     private boolean errors_qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        Functions.break_time(driver, 6, 500);
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_errors_b_qbe", getElements("MDM_errors_b_qbe")},// query button
                 new String[]{"qbe_errors_i_language", getElements("qbe_errors_i_language")},//any query input
@@ -291,11 +291,6 @@ public class AT2MDMOR0021Test {
     private boolean results_interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.simpleClick(driver,
                 new String[]{"MDM_results_e_result", getElements("MDM_results_e_result")}, //element to click
                 where)) {

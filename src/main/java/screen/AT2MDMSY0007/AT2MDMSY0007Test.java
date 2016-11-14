@@ -47,7 +47,6 @@ public class AT2MDMSY0007Test {
         if (!interaction_record_dms_MDM(driver)) return false;
         if (!interaction_record_ml_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
-        if (!reset_search_MDM(driver)) return false;
         if (!qbe_dms_MDM(driver)) return false;
         if (!others_actions_dms_MDM(driver)) return false;
         if (!interaction_edit_ml_MDM(driver)) return false;
@@ -136,20 +135,15 @@ public class AT2MDMSY0007Test {
         }
         return true;
     }
-    private boolean reset_search_MDM(TestDriver driver) {
-        driver.getReport().addHeader("RESET SEARCH", 3, false);
-        String where = " on RESET SEARCH";
-
+    private boolean qbe_dms_MDM(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE";
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 where)) {
             return false;
         }
-        return true;
-    }
-    private boolean qbe_dms_MDM(TestDriver driver) {
-        driver.getReport().addHeader("QBE RECORD", 3, false);
-        String where = " on QBE";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_dms_b_qbe", getElements("MDM_dms_b_qbe")},// query button
                 new String[]{"qbe_dms_i_domain_code", getElements("qbe_dms_i_domain_code")},//any query input

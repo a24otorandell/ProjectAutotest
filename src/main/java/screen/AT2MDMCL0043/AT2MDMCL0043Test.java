@@ -33,7 +33,7 @@ public class AT2MDMCL0043Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("Clients");
-        driver.getTestdetails().setScreen("Agency 2.0");
+        driver.getTestdetails().setScreen("Set up grace period");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

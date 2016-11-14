@@ -582,18 +582,10 @@ public class AT2ACCDI0018Test {
                 getData("net_amount"), "net_amount", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //search button
-                new String[]{"cancellation_e_result", getElements("cancellation_e_result")}, //result element
-                where)) {
-            return false;
-        }
-/*        if (!Functions.checkClick(driver,
-                new String[]{"cancellation_b_qbe", getElements("cancellation_b_qbe")}, //element to click
-                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //element expected to appear
-                where)) {
-            return false;
-        }*/
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //any query input
+                new String[]{"cancellation_e_result", getElements("cancellation_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_cancellation(TestDriver driver) {

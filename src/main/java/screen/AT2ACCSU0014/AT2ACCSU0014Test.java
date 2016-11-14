@@ -242,12 +242,10 @@ public class AT2ACCSU0014Test {
                 "Yes", "visible", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_hotel_code", getElements("qbe_i_hotel_code")}, //search button
-                new String[]{"hotel_card_e_result", getElements("hotel_card_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_hotel_code", getElements("qbe_i_hotel_code")}, //any query input
+                new String[]{"hotel_card_e_result", getElements("hotel_card_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_hotel_card(TestDriver driver) {

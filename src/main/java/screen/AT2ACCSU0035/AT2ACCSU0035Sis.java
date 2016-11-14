@@ -413,12 +413,10 @@ public class AT2ACCSU0035Sis {
                 "currency", getData("currency"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_company_code", getElements("qbe_i_company_code")}, //search button
-                new String[]{"taxes_e_result", getElements("taxes_e_result")}, //result element
-                where)){
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_company_code", getElements("qbe_i_company_code")}, //any query input
+                new String[]{"taxes_e_result", getElements("taxes_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_taxes(TestDriver driver) {

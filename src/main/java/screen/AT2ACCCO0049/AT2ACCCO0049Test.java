@@ -341,10 +341,14 @@ public class AT2ACCCO0049Test {
         return true;
     }
     private boolean qbe_accommodation(TestDriver driver) {
-
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"accommodation_b_qbe", getElements("accommodation_b_qbe")},// query button
                 new String[]{"qbe_i_receptive", getElements("qbe_i_receptive")},//any query input
@@ -403,7 +407,7 @@ public class AT2ACCCO0049Test {
                 "contract_type", getData("contract_type"), where)){
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
+        if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_receptive", getElements("qbe_i_receptive")}, //search button
                 new String[]{"accommodation_e_result", getElements("accommodation_e_result")}, //result element
                 where)){

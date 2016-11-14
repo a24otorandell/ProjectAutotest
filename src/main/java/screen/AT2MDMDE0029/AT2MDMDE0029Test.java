@@ -114,13 +114,13 @@ public class AT2MDMDE0029Test {
                 "description", DataGenerator.getRandomAlphanumericSequence(10, true), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_days",getElements("add_i_days")},
                 "days", String.valueOf(DataGenerator.random(1, 20)), where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
                 "last", // key for data value (the name)
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
                 "p_second", // key for data value (the name)
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
                 "p_first", // key for data value (the name)
                 where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
@@ -134,12 +134,26 @@ public class AT2MDMDE0029Test {
     private boolean qbe_web(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-/*        if (!Functions.clickSearchAndResult(driver,
+        /*if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
                 new String[]{"web_e_result", getElements("web_e_result")}, //result element
                 where)) {
             return false;
         }*/
+      /*  if (!Functions.insertInput(driver, new String[]{"search_i_web",getElements("search_i_web")},
+                "web", getData("web"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_description",getElements("search_i_description")},
+                "description", getData("description"), where)){return false;}*/
+        if (!Functions.insertInput(driver, new String[]{"search_i_web",getElements("search_i_web")},
+                "web_void", "", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_description",getElements("search_i_description")},
+                "description_void", "", where)){return false;}
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"web_e_result", getElements("web_e_result")}, //result element
+                where)) {
+            return false;
+        }
         if (!Functions.clickQbE(driver,
                 new String[]{"web_b_qbe", getElements("web_b_qbe")},// query button
                 new String[]{"qbe_i_web", getElements("qbe_i_web")},//any query input
@@ -170,12 +184,10 @@ public class AT2MDMDE0029Test {
                 "p_first", getData("p_first"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_web", getElements("qbe_i_web")}, //search button
-                new String[]{"web_e_result", getElements("web_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_web", getElements("qbe_i_web")}, //any query input
+                new String[]{"web_e_result", getElements("web_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_web(TestDriver driver) {

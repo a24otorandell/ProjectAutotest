@@ -237,12 +237,10 @@ public class AT2MDMRM0037Sis {
                 "ledger", getData("ledger"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_interface", getElements("qbe_i_interface")}, //search button
-                new String[]{"campaing_e_result", getElements("campaing_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_interface", getElements("qbe_i_interface")}, //any query input
+                new String[]{"campaing_e_result", getElements("campaing_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions(TestDriver driver) {
@@ -444,12 +442,10 @@ public class AT2MDMRM0037Sis {
                 "perc", getData("perc"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_voucher_nr", getElements("qbe_i_voucher_nr")}, //search button
-                new String[]{"transfer_e_result", getElements("transfer_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_voucher_nr", getElements("qbe_i_voucher_nr")}, //any query input
+                new String[]{"transfer_e_result", getElements("transfer_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_transfer(TestDriver driver) {

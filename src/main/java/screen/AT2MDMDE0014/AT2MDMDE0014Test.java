@@ -199,7 +199,7 @@ public class AT2MDMDE0014Test {
                 "TAE", // value to search
                 "destination", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_des", getElements("add_i_info_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_des", getElements("add_i_info_des")}, // element path
                 "info_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.createLovByValue(driver,
@@ -209,7 +209,7 @@ public class AT2MDMDE0014Test {
                 "20", // value to search
                 "agency", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_age", getElements("add_i_info_age")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_age", getElements("add_i_info_age")}, // element path
                 "info_age", // key for data value (the name)
                 where)){return false;}
         if (!Functions.createLovByValue(driver,
@@ -229,7 +229,7 @@ public class AT2MDMDE0014Test {
                 "26751", // value to search
                 "b2b", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_b2b", getElements("add_i_info_b2b")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_b2b", getElements("add_i_info_b2b")}, // element path
                 "info_b2b", // key for data value (the name)
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_zone",getElements("add_i_zone")},
@@ -311,12 +311,10 @@ public class AT2MDMDE0014Test {
                 getData("active"), "active", where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //search button
-                new String[]{"b2b_e_result", getElements("b2b_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_destination", getElements("qbe_i_destination")}, //any query input
+                new String[]{"b2b_e_result", getElements("b2b_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_b2b(TestDriver driver) {
