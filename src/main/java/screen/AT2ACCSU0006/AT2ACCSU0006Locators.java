@@ -148,6 +148,7 @@ public class AT2ACCSU0006Locators {
         elements.put("multi_lenguaje_se_b_qbe","//*[contains(@id, 'pc3:_qbeTbr')]/a");
         elements.put("multi_lenguaje_se_i_code","//*[contains(@id, 'pc3_afr_wfgkl_afr_c5::content')]");
         elements.put("multi_lenguaje_se_i_lenguage","//*[contains(@id, 'pc3_afr_wfgkl_afr_c8::content')]");
+        elements.put("multi_lenguaje_se_e_lenguage","//*[contains(@id, 'pc3:wfgkl::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
         elements.put("multi_lenguaje_se_i_description","//*[contains(@id, 'pc3_afr_wfgkl_afr_c4::content')]");
         elements.put("multi_lenguaje_se_e_result","//*[contains(@id, 'pc3:wfgkl::db')]/table/tbody/tr[1]/td[1]");
 
