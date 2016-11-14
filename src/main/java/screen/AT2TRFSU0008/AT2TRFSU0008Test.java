@@ -21,35 +21,28 @@ public class AT2TRFSU0008Test {
     public AT2TRFSU0008Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2TRFSU0008Locators locators) {
         this.locators = locators;
     }
-
     public AT2TRFSU0008Data getData() {
         return data;
     }
-
     public void setData(AT2TRFSU0008Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Routes by default");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -69,9 +62,7 @@ public class AT2TRFSU0008Test {
         return false;
     }
 
-
     //CREATE ROUTE
-
     private boolean Create_route(TestDriver driver) {
 
         if (!Go_to_routes_by_default(driver)) {
@@ -90,6 +81,7 @@ public class AT2TRFSU0008Test {
 
         return true;
     }
+
     private boolean Create_in_route_second_time(TestDriver driver) {
         driver.getReport().addHeader("ADD IN ROUTES BY DEFAULT", 3, false);
 
@@ -206,9 +198,7 @@ public class AT2TRFSU0008Test {
         return true;
     }
 
-
     //ROUTES BY DEFAULT
-
     private boolean Routes_by_default(TestDriver driver) {
 
         if (!Add_routes(driver)) {
@@ -285,7 +275,7 @@ public class AT2TRFSU0008Test {
             return false;
         }
 
-
+        Functions.break_time(driver,6,500);
         if (!Functions.clickQbE(driver,
                 new String[]{"route_b_qbe", getElements("route_b_qbe")},// query button
                 new String[]{"route_qbe_to_group", getElements("route_qbe_to_group")},//any query input
@@ -293,7 +283,7 @@ public class AT2TRFSU0008Test {
             return false;
         }
 
-
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"route_qbe_to_group", getElements("route_qbe_to_group")},
                 "qbe_to_group", data.getData().get("lov_to_group"), " on QBE")) {
@@ -320,7 +310,7 @@ public class AT2TRFSU0008Test {
                 "qbe_terminal_area", data.getData().get("route_description"), " on QBE")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"route_qbe_terminal_are", getElements("route_qbe_terminal_are")}, //search button
                 new String[]{"route_result", getElements("route_result")}, //result element
@@ -341,7 +331,7 @@ public class AT2TRFSU0008Test {
                 " on EDITION")) {
             return false;
         }
-        Functions.break_time(driver,10,500);
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"route_ed_lov_to_group", getElements("route_ed_lov_to_group")}, // b_lov
                 new String[]{"route_ed_i_to_group", getElements("route_ed_i_to_group")}, // i_lov
@@ -352,6 +342,7 @@ public class AT2TRFSU0008Test {
                 " on EDITION")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         Functions.getValue(driver, new String[]{"route_ed_i_to_group_description", getElements("route_ed_i_to_group_description")}, // element path
                 "to_group_description", // key for data value (the name)
                 " on EDITION");
@@ -360,6 +351,7 @@ public class AT2TRFSU0008Test {
                 "Departure", "selec_arrival", " on EDITION")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"route_ed_lov2_route", getElements("route_ed_lov2_route")}, // b_lov
                 new String[]{"route_ed_i_route", getElements("route_ed_i_route")}, // i_lov
@@ -373,7 +365,7 @@ public class AT2TRFSU0008Test {
         Functions.getValue(driver, new String[]{"route_ed_i_route_description", getElements("route_ed_i_route_description")}, // element path
                 "route_description", // key for data value (the name)
                 " on EDITION");
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"route_b_save", getElements("route_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
