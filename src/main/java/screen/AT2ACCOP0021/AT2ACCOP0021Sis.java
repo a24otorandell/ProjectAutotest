@@ -332,7 +332,7 @@ public class AT2ACCOP0021Sis {
                 new String[]{"template_mapping_se_b_reset", getElements("template_mapping_se_b_reset")}, //element to click
                 " on QBE")) {
             return false;
-        }
+        }Functions.break_time(driver, 6, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"template_mapping_qbe_b_qbe", getElements("template_mapping_qbe_b_qbe")},// query button
                 new String[]{"template_mapping_qbe_i_provider", getElements("template_mapping_qbe_i_provider")},//any query input
@@ -348,11 +348,7 @@ public class AT2ACCOP0021Sis {
                 "qbe_code",data.getData().get("code_mapping")," on QBE")){
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"template_mapping_qbe_e_template_name_result",getElements("template_mapping_qbe_e_template_name_result")}, // element path
-                "template_name", // key for data value (the name)
-                " on QBE")){
-            return false;
-        }
+
         if (!Functions.insertInput(driver, new String[]{"template_mapping_qbe_i_psp_template_code", getElements("template_mapping_qbe_i_psp_template_code")},
                 "qbe_psp_code", data.getData().get("psp_code"), " on QBE")) {
             return false;
@@ -366,17 +362,23 @@ public class AT2ACCOP0021Sis {
                 "No", "qbe_enabled", " on QBE")) {
             return false;
         }
+        Functions.break_time(driver, 6, 500);
+        if(!Functions.getText(driver,new String[]{"template_mapping_qbe_e_template_name_result",getElements("template_mapping_qbe_e_template_name_result")}, // element path
+                "template_name", // key for data value (the name)
+                " on QBE")){
+            return false;
+        }
         if(!Functions.insertInput(driver,new String[]{"template_mapping_qbe_i_template_name",getElements("template_mapping_qbe_i_template_name")},
                 "qbe_name",getData("template_name")," on QBE")){
             return false;
         }
+        Functions.break_time(driver, 6, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"template_mapping_qbe_i_psp_template_code", getElements("template_mapping_qbe_i_psp_template_code")}, //search button
                 new String[]{"template_mapping_se_e_result", getElements("template_mapping_se_e_result")}, //result element
                 " on QBE")) {
             return false;
         }
-
 
         return true;
     }

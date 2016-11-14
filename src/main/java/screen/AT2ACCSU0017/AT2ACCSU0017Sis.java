@@ -105,7 +105,6 @@ public class AT2ACCSU0017Sis {
         }
         return true;
     }
-
     private boolean Multi_lenguaje_delete (TestDriver driver){
         driver.getReport().addHeader(" DELETE IN MULTI LENGUAJE",3,false);
         Functions.break_time(driver,6,500);
@@ -118,7 +117,6 @@ public class AT2ACCSU0017Sis {
         }
         return true;
     }
-
     private boolean Multi_lenguaje_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN SERVICE AUTORIZATION",3,false);
 
@@ -163,7 +161,6 @@ public class AT2ACCSU0017Sis {
         }
         return true;
     }
-
     private boolean Multi_lenguaje_search (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN MULTI LENGUAJE",3,false);
 
@@ -199,7 +196,6 @@ public class AT2ACCSU0017Sis {
         return true;
 
     }
-
     private boolean Multi_lenguaje_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN MULTI LENGUAJE",3,false);
@@ -280,7 +276,6 @@ public class AT2ACCSU0017Sis {
         }
         return true;
     }
-
     private boolean Hotel_categories_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN HOTEL CATEGORIES",3,false);
@@ -293,7 +288,6 @@ public class AT2ACCSU0017Sis {
         }
         return true;
     }
-
     private boolean Hotel_categories_qbe (TestDriver driver){
 
 
@@ -352,7 +346,6 @@ public class AT2ACCSU0017Sis {
         }
         return true;
     }
-
     private boolean Hotel_categories_edit (TestDriver driver){
 
         driver.getReport().addHeader(" EDIT IN HOTEL CATEGORIES",3,false);
@@ -409,7 +402,6 @@ public class AT2ACCSU0017Sis {
 
         return true;
     }
-
     private boolean Hotel_categories_search (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN HOTEL CATEGORIES",3,false);
@@ -441,7 +433,6 @@ public class AT2ACCSU0017Sis {
         }
         return true;
     }
-
     private boolean Hotel_categories_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN HOTEL CATEGORIES",3,false);

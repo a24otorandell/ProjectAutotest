@@ -57,9 +57,9 @@ public class AT2ACCOP0021Test {
 
     protected boolean testCSED(TestDriver driver) {
 
-        if (!Template_management(driver)) return false;
-        if (!Go_to_template_mapping_management(driver)) return false;
-        if (!Template_mapping_management(driver)) return false;
+        if(!Template_management(driver)) return false;
+        if(!Go_to_template_mapping_management(driver)) return false;
+        if(!Template_mapping_management(driver)) return false;
         if(!Return_template_management(driver)){
             return false;
         }
@@ -162,7 +162,7 @@ public class AT2ACCOP0021Test {
         }
         if (!Functions.selectText(driver,
                 new String[]{"template_management_qbe_sl_enabled", getElements("template_management_qbe_sl_enabled")},
-                "Yes", "qbe_enabled", " on QBE")) {
+                "Yes","qbe_enabled"," on QBE")){
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
@@ -201,7 +201,7 @@ public class AT2ACCOP0021Test {
         }
 
         if (!Functions.checkboxValue(driver,
-                getElements("template_management_ed_cb_enabled"), "enabled", true, true, " on EDIT")) {
+                getElements("template_management_ed_cb_enabled"),"enabled",true,true," on EDIT")){
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -229,7 +229,7 @@ public class AT2ACCOP0021Test {
 
         if (!Functions.selectText(driver,
                 new String[]{"template_management_se_sl_enabled", getElements("template_management_se_sl_enabled")},
-                "No", "se_enabled", " on SEARCH")) {
+                "No","se_enabled"," on SEARCH")){
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,
@@ -258,8 +258,8 @@ public class AT2ACCOP0021Test {
             return false;
         }
         Functions.break_time(driver,7,500);
-        if (!Functions.checkboxValue(driver,
-                getElements("template_management_add_cb_enabled"), "enabled", false, true, " on ADD")) {
+        if(!Functions.checkboxValue(driver,
+                getElements("template_management_add_cb_enabled"),"enabled",false,true," on ADD")){
             return false;
         }
         if(!Functions.insertInput(driver,new String[]{"template_management_add_i_template_name",getElements("template_management_add_i_template_name")},
@@ -299,12 +299,12 @@ public class AT2ACCOP0021Test {
     //TEMPLATE  MAPPING MANAGEMENT
     private boolean Template_mapping_management(TestDriver driver) {
 
-        if (!Add_mapping(driver)) return false;
-        if (!Search_mapping(driver)) return false;
-        if (!Edit_mapping(driver)) return false;
-        if (!Qbe_mapping(driver)) return false;
-        if (!Other_actions_mapping(driver)) return false;
-        if (!Delete_mapping(driver)) return false;
+        if(!Add_mapping(driver)) return false;
+        if(!Search_mapping(driver)) return false;
+        if(!Edit_mapping(driver)) return false;
+        if(!Qbe_mapping(driver)) return false;
+        if(!Other_actions_mapping(driver)) return false;
+        if(!Delete_mapping(driver)) return false;
         return true;
     }
     private boolean Delete_mapping(TestDriver driver) {
@@ -337,7 +337,7 @@ public class AT2ACCOP0021Test {
                 new String[]{"template_mapping_se_b_reset", getElements("template_mapping_se_b_reset")}, //element to click
                 " on QBE")) {
             return false;
-        }
+        }Functions.break_time(driver, 6, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"template_mapping_qbe_b_qbe", getElements("template_mapping_qbe_b_qbe")},// query button
                 new String[]{"template_mapping_qbe_i_provider", getElements("template_mapping_qbe_i_provider")},//any query input
@@ -353,11 +353,7 @@ public class AT2ACCOP0021Test {
                 "qbe_code",data.getData().get("code_mapping")," on QBE")){
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"template_mapping_qbe_e_template_name_result",getElements("template_mapping_qbe_e_template_name_result")}, // element path
-                "template_name", // key for data value (the name)
-                " on QBE")){
-            return false;
-        }
+
         if (!Functions.insertInput(driver, new String[]{"template_mapping_qbe_i_psp_template_code", getElements("template_mapping_qbe_i_psp_template_code")},
                 "qbe_psp_code", data.getData().get("psp_code"), " on QBE")) {
             return false;
@@ -371,17 +367,23 @@ public class AT2ACCOP0021Test {
                 "No", "qbe_enabled", " on QBE")) {
             return false;
         }
+        Functions.break_time(driver, 6, 500);
+        if(!Functions.getText(driver,new String[]{"template_mapping_qbe_e_template_name_result",getElements("template_mapping_qbe_e_template_name_result")}, // element path
+                "template_name", // key for data value (the name)
+                " on QBE")){
+            return false;
+        }
         if(!Functions.insertInput(driver,new String[]{"template_mapping_qbe_i_template_name",getElements("template_mapping_qbe_i_template_name")},
                 "qbe_name",getData("template_name")," on QBE")){
             return false;
         }
+        Functions.break_time(driver, 6, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"template_mapping_qbe_i_psp_template_code", getElements("template_mapping_qbe_i_psp_template_code")}, //search button
                 new String[]{"template_mapping_se_e_result", getElements("template_mapping_se_e_result")}, //result element
                 " on QBE")) {
             return false;
         }
-
 
         return true;
     }
