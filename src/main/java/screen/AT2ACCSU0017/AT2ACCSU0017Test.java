@@ -21,35 +21,28 @@ public class AT2ACCSU0017Test {
     public AT2ACCSU0017Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2ACCSU0017Locators locators){
         this.locators = locators;
     }
-
     public AT2ACCSU0017Data getData (){
         return data;
     }
-
     public void setData (AT2ACCSU0017Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Hotel Categorias 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -70,7 +63,6 @@ public class AT2ACCSU0017Test {
     }
 
     //MULTI LENGUAJE
-
     private boolean Multi_lenguaje (TestDriver driver){
 
         if(!Multi_lenguaje_add(driver)){
