@@ -16,39 +16,31 @@ public class AT2ACCSU0005Sis {
     public AT2ACCSU0005Sis (){
 
     }
-
     public AT2ACCSU0005Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2ACCSU0005Locators locators){
         this.locators = locators;
     }
-
     public AT2ACCSU0005Data getData (){
         return data;
     }
-
     public void setData (AT2ACCSU0005Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Season 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -73,7 +65,6 @@ public class AT2ACCSU0005Sis {
 
 
     //MULTI LENGUAJE
-
     private boolean Multi_lenguaje (TestDriver driver){
 
         if(!Multi_lenguaje_add(driver)){
@@ -109,7 +100,6 @@ public class AT2ACCSU0005Sis {
         }
         return true;
     }
-
     private boolean Multi_lenguaje_delete (TestDriver driver){
         driver.getReport().addHeader(" DELETE IN MULTI LENGUAJE",3,false);
 
@@ -122,7 +112,6 @@ public class AT2ACCSU0005Sis {
         }
         return true;
     }
-
     private boolean Multi_lenguaje_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN SERVICE AUTORIZATION",3,false);
 
@@ -164,7 +153,6 @@ public class AT2ACCSU0005Sis {
         }
         return true;
     }
-
     private boolean Multi_lenguaje_search (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN MULTI LENGUAJE",3,false);
 
@@ -192,7 +180,6 @@ public class AT2ACCSU0005Sis {
         return true;
 
     }
-
     private boolean Multi_lenguaje_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN MULTI LENGUAJE",3,false);
@@ -236,7 +223,6 @@ public class AT2ACCSU0005Sis {
 
 
     //SEASONS MAINTENANCE
-
     private boolean Seasons_maintenance (TestDriver driver){
 
         if(!Seasons_maintenance_add(driver)){
@@ -273,7 +259,6 @@ public class AT2ACCSU0005Sis {
         }
         return true;
     }
-
     private boolean Seasons_maintenance_other_actions (TestDriver driver){
         driver.getReport().addHeader(" OTHER ACTIONS IN SEASONS MAINTENANCE",3,false);
 
@@ -295,7 +280,6 @@ public class AT2ACCSU0005Sis {
 
         return true;
     }
-
     private boolean Seasons_maintenance_qbe (TestDriver driver){
 
         driver.getReport().addHeader(" QBE IN SEASONS MAINTENANCE",3,false);
@@ -342,7 +326,6 @@ public class AT2ACCSU0005Sis {
         }
         return true;
     }
-
     private boolean Seasons_maintenance_edit (TestDriver driver){
 
         driver.getReport().addHeader(" EDIT IN SEASONS MAINTENANCE",3,false);
@@ -384,7 +367,6 @@ public class AT2ACCSU0005Sis {
         }
         return true;
     }
-
     private boolean Seasons_maintenance_search (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN SEASONS MAINTENANCE",3,false);
 
@@ -420,7 +402,6 @@ public class AT2ACCSU0005Sis {
 
         return true;
     }
-
     private boolean Seasons_maintenance_add (TestDriver driver){
         driver.getReport().addHeader(" ADD IN SEASONS MAINTENANCE",3,false);
 
