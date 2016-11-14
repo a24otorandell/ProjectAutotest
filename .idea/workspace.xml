@@ -12,8 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -180,7 +180,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2ACCSU0017Sis.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AT2ACCSU0017Sis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="611">
@@ -206,6 +206,68 @@
                 <element signature="method#Hotel_categories_edit#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#Hotel_categories_search#0;class#AT2ACCSU0017Sis#0" expanded="false" />
                 <element signature="method#Hotel_categories_add#0;class#AT2ACCSU0017Sis#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCSU0004Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#AT2ACCSU0004Test#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Lenguaje_description#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Lenguaje_description_other_actions#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Lenguaje_description_delete#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Lenguaje_description_edit#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Lenguaje_description_search#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Lenguaje_description_add#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Fre_type#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Free_type_delete#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Free_type_other_actions#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Free_type_qbe#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Free_type_edit#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Free_type_search#0;class#AT2ACCSU0004Test#0" expanded="false" />
+                <element signature="method#Free_type_add#0;class#AT2ACCSU0004Test#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCSU0004Sis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#AT2ACCSU0004Sis#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Lenguaje_description#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Lenguaje_description_other_actions#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Lenguaje_description_delete#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Lenguaje_description_edit#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Lenguaje_description_search#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Lenguaje_description_add#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Fre_type#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Free_type_delete#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Free_type_other_actions#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Free_type_qbe#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Free_type_edit#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Free_type_search#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+                <element signature="method#Free_type_add#0;class#AT2ACCSU0004Sis#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -363,8 +425,6 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0019/AT2ACCOP0019Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0021/AT2ACCOP0021Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0021/AT2ACCOP0021Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0011/AT2ACCSU0011Test.java" />
@@ -373,6 +433,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0015/AT2ACCSU0015Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0017/AT2ACCSU0017Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java" />
       </list>
     </option>
   </component>
@@ -553,37 +615,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AT2ACCSU0017" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjectAutotest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AT2ACCSU0011" />
+              <option name="myItemId" value="AT2ACCSU0004" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1092,13 +1124,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00079" summary="Actualización código  AT2TRFSU0011,">
-      <created>1475588228942</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1475588228942</updated>
-    </task>
     <task id="LOCAL-00080" summary="Actualización código  AT2TRFSU0008,">
       <created>1475592363406</created>
       <option name="number" value="00080" />
@@ -1435,7 +1460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479112589534</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="Actualización código  AT2ACCSU0017&#10;">
+      <created>1479112685691</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1479112685691</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1542,7 +1574,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Actualización código AT2TRFSU0010" />
     <MESSAGE value="Actualización código AT2MDMOR0012" />
     <MESSAGE value="Actualización código AT2TRFSU0016" />
     <MESSAGE value="Actualización código ACCSU0005" />
@@ -1567,7 +1598,8 @@
     <MESSAGE value="Actualización código  AT2ACCOP0021&#10;" />
     <MESSAGE value="Actualización código  AT2ACCSU0011&#10;" />
     <MESSAGE value="Actualización código  AT2ACCSU0015&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  AT2ACCSU0015&#10;" />
+    <MESSAGE value="Actualización código  AT2ACCSU0017&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actualización código  AT2ACCSU0017&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2352,48 +2384,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="42" column="54" selection-start-line="42" selection-start-column="44" selection-end-line="42" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2TRFSU0016/AT2TRFSU0016Locators.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="88" column="100" selection-start-line="88" selection-start-column="100" selection-end-line="88" selection-end-column="100" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-97">
-          <caret line="76" column="60" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="60" />
-          <folding>
-            <element signature="docComment;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#AT2ACCSU0004Test#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Lenguaje_description#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Lenguaje_description_other_actions#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Lenguaje_description_delete#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Lenguaje_description_edit#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Lenguaje_description_search#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Lenguaje_description_add#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Fre_type#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Free_type_delete#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Free_type_other_actions#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Free_type_qbe#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Free_type_edit#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Free_type_search#0;class#AT2ACCSU0004Test#0" expanded="false" />
-            <element signature="method#Free_type_add#0;class#AT2ACCSU0004Test#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2687,6 +2682,64 @@
             <element signature="method#Hotel_categories_edit#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#Hotel_categories_search#0;class#AT2ACCSU0017Sis#0" expanded="false" />
             <element signature="method#Hotel_categories_add#0;class#AT2ACCSU0017Sis#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#AT2ACCSU0004Sis#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Lenguaje_description#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Lenguaje_description_other_actions#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Lenguaje_description_delete#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Lenguaje_description_edit#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Lenguaje_description_search#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Lenguaje_description_add#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Fre_type#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Free_type_delete#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Free_type_other_actions#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Free_type_qbe#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Free_type_edit#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Free_type_search#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+            <element signature="method#Free_type_add#0;class#AT2ACCSU0004Sis#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0004/AT2ACCSU0004Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#AT2ACCSU0004Test#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Lenguaje_description#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Lenguaje_description_other_actions#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Lenguaje_description_delete#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Lenguaje_description_edit#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Lenguaje_description_search#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Lenguaje_description_add#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Fre_type#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Free_type_delete#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Free_type_other_actions#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Free_type_qbe#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Free_type_edit#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Free_type_search#0;class#AT2ACCSU0004Test#0" expanded="false" />
+            <element signature="method#Free_type_add#0;class#AT2ACCSU0004Test#0" expanded="false" />
           </folding>
         </state>
       </provider>

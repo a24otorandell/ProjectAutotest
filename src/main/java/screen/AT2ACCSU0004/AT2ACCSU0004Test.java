@@ -17,39 +17,31 @@ public class AT2ACCSU0004Test {
     public AT2ACCSU0004Test (){
 
     }
-
     public AT2ACCSU0004Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2ACCSU0004Locators locators){
         this.locators = locators;
     }
-
     public AT2ACCSU0004Data getData (){
         return data;
     }
-
     public void setData (AT2ACCSU0004Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
-        driver.getTestdetails().setSubmenu("Operations");
+        driver.getTestdetails().setSubmenu("Set up");
         driver.getTestdetails().setScreen("Free types 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -73,7 +65,6 @@ public class AT2ACCSU0004Test {
 
 
     //LENGUAJE DESCRIPTION
-
     private boolean Lenguaje_description (TestDriver driver){
         if(!Lenguaje_description_add(driver)){
             return false;
@@ -118,7 +109,6 @@ public class AT2ACCSU0004Test {
         }
         return true;
     }
-
     private boolean Lenguaje_description_delete (TestDriver driver){
         driver.getReport().addHeader(" DELETE IN LENGUAJE DESCRIPTION",3,false);
         Functions.break_time(driver,6,500);
@@ -131,7 +121,6 @@ public class AT2ACCSU0004Test {
         }
         return true;
     }
-
     private boolean Lenguaje_description_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN LENGUAJE DESCRIPTION",3,false);
 
@@ -168,7 +157,6 @@ public class AT2ACCSU0004Test {
         }
         return true;
     }
-
     private boolean Lenguaje_description_search (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN LENGUAJE DESCRIPTION",3,false);
 
@@ -196,7 +184,6 @@ public class AT2ACCSU0004Test {
         return true;
 
     }
-
     private boolean Lenguaje_description_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN LENGUAJE DESCRIPTION",3,false);
@@ -236,7 +223,6 @@ public class AT2ACCSU0004Test {
 
 
     //Free type
-
     private boolean Fre_type (TestDriver driver){
 
         if(!Free_type_add(driver)){
@@ -275,7 +261,6 @@ public class AT2ACCSU0004Test {
         }
         return true;
     }
-
     private boolean Free_type_other_actions (TestDriver driver){
         driver.getReport().addHeader(" OTHER ACTIONS IN SEASONS MAINTENANCE",3,false);
 
@@ -295,7 +280,6 @@ public class AT2ACCSU0004Test {
         }
         return true;
     }
-
     private boolean Free_type_qbe (TestDriver driver){
         driver.getReport().addHeader(" QBE IN FREE TYPE",3,false);
 
@@ -324,7 +308,6 @@ public class AT2ACCSU0004Test {
         }
         return true;
     }
-
     private boolean Free_type_edit (TestDriver driver){
 
         driver.getReport().addHeader(" EDIT IN FREE TYPE",3,false);
@@ -351,7 +334,6 @@ public class AT2ACCSU0004Test {
         }
         return true;
     }
-
     private boolean Free_type_search (TestDriver driver){
         driver.getReport().addHeader("  SEARCH IN FREE TYPE",3,false);
 
@@ -368,7 +350,6 @@ public class AT2ACCSU0004Test {
 
         return true;
     }
-
     private boolean Free_type_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN FREE TYPE",3,false);
