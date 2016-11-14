@@ -20,35 +20,28 @@ public class AT2ACCSU0010Sis {
     public AT2ACCSU0010Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2ACCSU0010Locators locators){
         this.locators = locators;
     }
-
     public AT2ACCSU0010Data getData (){
         return data;
     }
-
     public void setData (AT2ACCSU0010Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Room descriptions");
+        driver.getTestdetails().setScreen("Linked Room descriptions 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -70,10 +63,7 @@ public class AT2ACCSU0010Sis {
         return true;
     }
 
-
-
   /*LENGUAGE DESCRIPTION*/
-
     private boolean Lenguage_description (TestDriver driver){
 
 
@@ -123,7 +113,6 @@ public class AT2ACCSU0010Sis {
         }
         return true;
     }
-
     private boolean Lenguage_description_delete (TestDriver driver){
         driver.getReport().addHeader(" DELETE IN MULTI LENGUAJE",3,false);
         Functions.break_time(driver,6,500);
@@ -136,7 +125,6 @@ public class AT2ACCSU0010Sis {
         }
         return true;
     }
-
     private boolean Lenguage_description_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN SERVICE AUTORIZATION",3,false);
 
@@ -177,7 +165,6 @@ public class AT2ACCSU0010Sis {
         }
         return true;
     }
-
     private boolean Lenguage_description_search (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN MULTI LENGUAJE",3,false);
 
@@ -215,7 +202,6 @@ public class AT2ACCSU0010Sis {
         return true;
 
     }
-
     private boolean Lenguage_description_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN MULTI LENGUAJE",3,false);
@@ -259,7 +245,6 @@ public class AT2ACCSU0010Sis {
 
 
     /*ROOM CHARACTERISTICS*/
-
     private boolean Room_characteristics (TestDriver driver){
 
         if(!Room_characteristics_add(driver)){
@@ -295,7 +280,6 @@ public class AT2ACCSU0010Sis {
 
         return true;
     }
-
     private boolean Room_characteristics_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN ROOM CHARACTERISTICS",3,false);
@@ -316,7 +300,6 @@ public class AT2ACCSU0010Sis {
 
         return true;
     }
-
     private boolean Room_characteristics_qbe (TestDriver driver){
         driver.getReport().addHeader(" QBE IN ROOM CHARACTERISTICS",3,false);
 
@@ -325,18 +308,19 @@ public class AT2ACCSU0010Sis {
                 " on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.clickQbE(driver,
                 new String[]{"room_characteristics_qbe_b_qbe",getElements("room_characteristics_qbe_b_qbe")},// query button
                 new String[]{"room_characteristics_qbe_i_code",getElements("room_characteristics_qbe_i_code")},//any query input
                 " on QBE")){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.insertInput(driver,new String[]{"room_characteristics_qbe_i_code",getElements("room_characteristics_qbe_i_code")},
                 "code",getData("code"),"on EDIT")){
             return false;
         }
+        Functions.break_time(driver,6,500);
         if(!Functions.selectText(driver,
                 new String[]{"room_characteristics_qbe_sl_active",getElements("room_characteristics_qbe_sl_active")},
                 "No","qbe_active"," on SEARCH")){
@@ -351,7 +335,6 @@ public class AT2ACCSU0010Sis {
         } // where this operation occurs
         return true;
     }
-
     private boolean Room_characteristics_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN ROOM CHARACTERISTICS",3,false);
 
@@ -377,7 +360,6 @@ public class AT2ACCSU0010Sis {
         }
         return true;
     }
-
     private boolean Room_characteristics_search (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN ROOM CHARACTERISTICS",3,false);
 
@@ -400,7 +382,6 @@ public class AT2ACCSU0010Sis {
 
         return true;
     }
-
     private boolean Room_characteristics_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN ROOM CHARACTERISTICS",3,false);
