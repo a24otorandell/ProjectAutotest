@@ -38,7 +38,7 @@ public class AT2ACCSU1002Sis {
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Category Type");
+        driver.getTestdetails().setScreen("Category types 2.0");
     }
 
     protected String getElements (String key){
