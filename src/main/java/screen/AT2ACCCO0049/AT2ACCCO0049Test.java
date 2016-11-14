@@ -376,7 +376,7 @@ public class AT2ACCCO0049Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_description3", getElements("qbe_i_description3")},
-                "hotel_description", getData("hotel_description"), where)){
+                "hotel_description", "%" + getData("hotel_description"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_atlas_room", getElements("qbe_i_atlas_room")},
