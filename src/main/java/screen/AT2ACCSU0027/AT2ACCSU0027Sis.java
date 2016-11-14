@@ -21,35 +21,28 @@ public class AT2ACCSU0027Sis {
     public AT2ACCSU0027Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2ACCSU0027Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0027Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0027Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Office Sending Configuration");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
@@ -64,7 +57,6 @@ public class AT2ACCSU0027Sis {
 
         return false;
     }
-
 
     private boolean Sws_office_sending (TestDriver driver){
 
@@ -89,7 +81,6 @@ public class AT2ACCSU0027Sis {
 
         return true;
     }
-
     private boolean Edit_sws_positive (TestDriver driver){
         driver.getReport().addHeader("EDIT IN SWS",3,false);
 
@@ -145,8 +136,6 @@ public class AT2ACCSU0027Sis {
 
         return true;
     }
-
-
     private boolean Edit_sws_negative (TestDriver driver){
         driver.getReport().addHeader("EDIT IN SWS",3,false);
 
@@ -202,8 +191,6 @@ public class AT2ACCSU0027Sis {
 
         return true;
     }
-
-
     private boolean Other_actions_sws (TestDriver driver){
 
         driver.getReport().addHeader("OTHER ACTIONS IN SWS",3,false);
@@ -228,7 +215,6 @@ public class AT2ACCSU0027Sis {
 
         return true;
     }
-
     private boolean QBE_sws (TestDriver driver){
 
         driver.getReport().addHeader("  QBE IN SWS",3,false);
@@ -286,7 +272,6 @@ public class AT2ACCSU0027Sis {
 
         return true;
     }
-
     private boolean Search_sws (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN SWS",3,false);
