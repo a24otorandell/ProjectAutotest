@@ -145,14 +145,6 @@ public class AT2MDMDE0007Test {
                 where)){
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"search_i_destination_description", getElements("search_i_destination_description")}, // element path
-                "destination_description", getData("destination_description"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"search_i_country", getElements("search_i_country")}, // element path
-                "country", getData("country"), where)) {
-            return false;
-        }
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_area_code", getElements("search_lov_area_code")}, //LoV button
                 new String[]{"search_i_area_code", getElements("search_i_area_code")}, //external LoV input
@@ -160,10 +152,6 @@ public class AT2MDMDE0007Test {
                 getData("area_code"), // value to search
                 "area_code", //name of the data
                 where)){
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"search_i_area_name", getElements("search_i_area_name")}, // element path
-                "area_name", getData("area_name"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_tpi_longitude", getElements("search_i_tpi_longitude")}, // element path

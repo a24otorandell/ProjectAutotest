@@ -60,6 +60,7 @@ public class AT2MDMDE0007Sis {
     private boolean interaction_record_ip_MDM(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_ip_b_add", getElements("MDM_ip_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -145,14 +146,6 @@ public class AT2MDMDE0007Sis {
                 where)){
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"search_i_destination_description", getElements("search_i_destination_description")}, // element path
-                "destination_description", getData("destination_description"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"search_i_country", getElements("search_i_country")}, // element path
-                "country", getData("country"), where)) {
-            return false;
-        }
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_area_code", getElements("search_lov_area_code")}, //LoV button
                 new String[]{"search_i_area_code", getElements("search_i_area_code")}, //external LoV input
@@ -160,10 +153,6 @@ public class AT2MDMDE0007Sis {
                 getData("area_code"), // value to search
                 "area_code", //name of the data
                 where)){
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"search_i_area_name", getElements("search_i_area_name")}, // element path
-                "area_name", getData("area_name"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_tpi_longitude", getElements("search_i_tpi_longitude")}, // element path
@@ -194,6 +183,7 @@ public class AT2MDMDE0007Sis {
     private boolean interaction_edit_ip_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_ip_b_edit", getElements("MDM_ip_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
