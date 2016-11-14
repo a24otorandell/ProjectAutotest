@@ -50,6 +50,9 @@ public class AT2TRFSU0007Sis {
 
     protected boolean testCSED(TestDriver driver) {
 
+        if(!Create_group(driver)){
+            return false;
+        }
 
         if (!Vehicles(driver)) {
             return false;
@@ -60,8 +63,106 @@ public class AT2TRFSU0007Sis {
         return false;
     }
 
-    //Vehicles
+    //Create groups
+    private boolean Create_group (TestDriver driver){
+        if(!Go_to_grouping_vehicles(driver)){
+            return false;
+        }
+        if(!Create_in_groups(driver)){
+            return false;
+        }
+        if(!Create_in_groups_second_time(driver)){
+            return false;
+        }
+        if(!Return_vehicles_type(driver)){
+            return false;
+        }
+        return true;
+    }
 
+    private boolean Return_vehicles_type (TestDriver driver){
+        if(!Functions.checkClick(driver,
+                new String[]{"grouping_e_routes_by_default",getElements("grouping_e_routes_by_default")}, //element to click
+                new String[]{"vehicles_b_add",getElements("vehicles_b_add")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on GO TO")){
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Create_in_groups_second_time (TestDriver driver){
+        driver.getReport().addHeader("ADD IN GROUPING VEHICLES",3,false);
+        Functions.break_time(driver,6,500);
+        if(!Functions.checkClick(driver,
+                new String[]{"grouping_add_b_add",getElements("grouping_add_b_add")}, //element to click
+                new String[]{"grouping_add_check_box_active",getElements("grouping_add_check_box_active")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.checkboxValue(driver,
+                getElements("grouping_add_check_box_active"),"active",true,true," on ADD")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"grouping_add_i_vehicles_code",getElements("grouping_add_i_vehicles_code")},
+                "vehicles_code",(Integer.toString(DataGenerator.random(1,100)))," on ADD")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"grouping_add_i_description",getElements("grouping_add_i_description")},
+                "vehicles_descrip",DataGenerator.getRandomAlphanumericSequence(5,true)," on ADD")){
+            return false;
+        }
+        Functions.checkClickByAbsence(driver,
+                new String[]{"grouping_add_b_save",getElements("grouping_add_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                90,500,
+                " on ADD");
+
+
+        return true;
+    }
+
+    private boolean Create_in_groups (TestDriver driver){
+        driver.getReport().addHeader("ADD IN GROUPING VEHICLES",3,false);
+        Functions.break_time(driver,6,500);
+        if(!Functions.checkClick(driver,
+                new String[]{"grouping_add_b_add",getElements("grouping_add_b_add")}, //element to click
+                new String[]{"grouping_add_check_box_active",getElements("grouping_add_check_box_active")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.checkboxValue(driver,
+                getElements("grouping_add_check_box_active"),"active",true,true," on ADD")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"grouping_add_i_vehicles_code",getElements("grouping_add_i_vehicles_code")},
+                "vehicles_code",(Integer.toString(DataGenerator.random(1,100)))," on ADD")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"grouping_add_i_description",getElements("grouping_add_i_description")},
+                "vehicles_descrip",DataGenerator.getRandomAlphanumericSequence(5,true)," on ADD")){
+            return false;
+        }
+        Functions.checkClickByAbsence(driver,
+                new String[]{"grouping_add_b_save",getElements("grouping_add_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                90,500,
+                " on ADD");
+
+        return true;
+    }
+
+    private boolean Go_to_grouping_vehicles (TestDriver driver){
+        driver.getReport().addHeader("GO TO IN ROUTES BY DEFAULT",3,false);
+        driver.getTestdetails().setTestname("AT2TRFSU0013");
+        CommonProcedures.goToScreen(driver,1);
+        driver.getTestdetails().setTestname("AT2TRFSU0007");
+        return true;
+    }
+
+    //Vehicles
     private boolean Vehicles(TestDriver driver) {
 
 
@@ -111,7 +212,7 @@ public class AT2TRFSU0007Sis {
 
 
         driver.getReport().addHeader("OTHER ACTIONS VEHICLES", 3, false);
-
+        Functions.break_time(driver,6,500);
         if (!Functions.auditData(driver,
                 new String[]{"vehicles_actions_b_actions", getElements("vehicles_actions_b_actions")}, //actions button
                 new String[]{"vehicles_actions_b_auditdata", getElements("vehicles_actions_b_auditdata")}, //audit button
@@ -120,6 +221,7 @@ public class AT2TRFSU0007Sis {
             return false;
 
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.detachTable(driver,
                 new String[]{"vehicles_dtacj_b_detach", getElements("vehicles_dtacj_b_detach")}, //detach button
                 true,     //screenshot??
@@ -133,7 +235,7 @@ public class AT2TRFSU0007Sis {
     private boolean Qbe_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader(" QBE IN VEHICLES", 3, false);
-
+        Functions.break_time(driver,6,500);
         if (!Functions.simpleClick(driver,
                 new String[]{"vehicles_se_b_reset", getElements("vehicles_se_b_reset")}, //element to click
                 " on QBE")) {
@@ -147,6 +249,7 @@ public class AT2TRFSU0007Sis {
                 " on QBE")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"vehicles_qbe_sl_active", getElements("vehicles_qbe_sl_active")},
                 "No", "qbe_active", " on SEARCH")) {
@@ -158,6 +261,7 @@ public class AT2TRFSU0007Sis {
                 "qbe_vehicle_type", data.getData().get("add_vehicle_type"), " on QBE ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"vehicles_qbe_i_vehicle_type_description", getElements("vehicles_qbe_i_vehicle_type_description")},
                 "qbe_vehicles_type_description", data.getData().get("add_vehicles_type_description"), " on QBE ")) {
@@ -168,21 +272,25 @@ public class AT2TRFSU0007Sis {
                 "qbe_group", data.getData().get("add_group"), " on QBE ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"vehicles_qbe_i_desgroupvehic", getElements("vehicles_qbe_i_desgroupvehic")},
                 "qbe_group_description", data.getData().get("add_group_description"), " on QBE ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"vehicles_qbe_preferred", getElements("vehicles_qbe_preferred")},
                 "No", "qbe_preferred", " on QBE")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver,
                 new String[]{"vehicles_qbe_i_capacity", getElements("vehicles_qbe_i_capacity")},
                 "qbe_capacity", data.getData().get("add_capacity"), " on QBE ")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"vehicles_qbe_i_capacity", getElements("vehicles_qbe_i_capacity")}, //search button
                 new String[]{"vehicles_se_result", getElements("vehicles_se_result")}, //result element
@@ -197,7 +305,7 @@ public class AT2TRFSU0007Sis {
 
         driver.getReport().addHeader(" EDIT IN VEHICLES", 3, false);
 
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"vehicles_b_edit", getElements("vehicles_b_edit")}, //element to click
                 new String[]{"vehicles_ed_check_box_active", getElements("vehicles_ed_check_box_active")}, //element expected to appear
@@ -205,10 +313,12 @@ public class AT2TRFSU0007Sis {
                 " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkboxValue(driver,
                 getElements("vehicles_ed_check_box_active"), "active", false, true, " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"vehicles_ed_vehicle_type", getElements("vehicles_ed_vehicle_type")},
                 "add_vehicle_type", "$", " on EDIT")) {
             return false;
@@ -217,6 +327,7 @@ public class AT2TRFSU0007Sis {
                 "add_vehicles_type_description", "Prueba2", " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"vehicles_ed_lov_group", getElements("vehicles_ed_lov_group")}, // b_lov
                 new String[]{"vehicles_ed_i_group", getElements("vehicles_ed_i_group")}, // i_lov
@@ -230,7 +341,7 @@ public class AT2TRFSU0007Sis {
         Functions.getText(driver, new String[]{"vehicles_ed_i_group_description", getElements("vehicles_ed_i_group_description")}, // element path
                 "add_group_description", // key for data value (the name)
                 " on EDIT");
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkboxValue(driver,
                 getElements("vehicles_ed_check_box_preferred"), "active", false, true, " on EDIT")) {
             return false;
@@ -239,6 +350,7 @@ public class AT2TRFSU0007Sis {
                 "add_capacity", (Integer.toString(DataGenerator.random(1, 15))), " on EDIT")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"vehicles_ed_b_save", getElements("vehicles_ed_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -253,17 +365,19 @@ public class AT2TRFSU0007Sis {
     private boolean Search_vehicles(TestDriver driver) {
 
         driver.getReport().addHeader(" BASIC SEARCH IN VEHICLES", 3, false);
-
+        Functions.break_time(driver,6,500);
         if (!Functions.selectText(driver,
                 new String[]{"vehicles_se_select_text_active", getElements("vehicles_se_select_text_active")},
                 "Yes", "se_active", " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
 
         if (!Functions.insertInput(driver, new String[]{"vehicles_se_i_vehicle_type", getElements("vehicles_se_i_vehicle_type")},
                 "se_vehicle_type", data.getData().get("add_vehicle_type"), " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"vehicles_se_i_vehicle_type_description", getElements("vehicles_se_i_vehicle_type_description")},
                 "se_vehicles_type_description", data.getData().get("add_vehicles_type_description"), " on SEARCH")) {
             return false;
@@ -272,6 +386,7 @@ public class AT2TRFSU0007Sis {
                 "se_group", data.getData().get("add_group"), " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"vehicles_se_i_descgroupvehic", getElements("vehicles_se_i_descgroupvehic")},
                 "se_group_description", data.getData().get("add_group_description"), " on SEARCH")) {
             return false;
@@ -285,6 +400,7 @@ public class AT2TRFSU0007Sis {
                 "se_capacity", data.getData().get("add_capacity"), " on SEARCH")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"vehicles_se_b_search", getElements("vehicles_se_b_search")}, //search button
                 new String[]{"vehicles_se_result", getElements("vehicles_se_result")}, //Falta crear este resultado por bug
@@ -300,7 +416,7 @@ public class AT2TRFSU0007Sis {
 
         driver.getReport().addHeader(" ADD IN VEHICLES", 3, false);
 
-
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClick(driver,
                 new String[]{"vehicles_b_add", getElements("vehicles_b_add")}, //element to click
                 new String[]{"vehicles_ad_check_box_active", getElements("vehicles_ad_check_box_active")}, //element expected to appear
@@ -308,10 +424,12 @@ public class AT2TRFSU0007Sis {
                 " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkboxValue(driver,
                 getElements("vehicles_ad_check_box_active"), "active", true, true, " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.insertInput(driver, new String[]{"vehicles_ad_vehicle_type", getElements("vehicles_ad_vehicle_type")},
                 "add_vehicle_type", "Ñ", " on ADD")) {
             return false;
@@ -320,6 +438,7 @@ public class AT2TRFSU0007Sis {
                 "add_vehicles_type_description", "PRUEBA1", " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.createLov(driver,
                 new String[]{"vehicles_ad_lov_group", getElements("vehicles_ad_lov_group")}, // b_lov
                 new String[]{"vehicles_ad_i_group", getElements("vehicles_ad_i_group")}, // i_lov
@@ -342,6 +461,7 @@ public class AT2TRFSU0007Sis {
                 "add_capacity", (Integer.toString(DataGenerator.random(1, 15))), " on ADD")) {
             return false;
         }
+        Functions.break_time(driver,6,500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"vehicles_ad_b_save", getElements("vehicles_ad_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear

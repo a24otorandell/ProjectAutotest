@@ -82,7 +82,16 @@ public class AT2TRFSU0007Locators {
         elements.put("vehicles_delete_b_ok", "//*[contains(@id, 'pc1:pcgt1:cbt1')]");
         elements.put("vehicles_delete_records", "//*[contains(@id, 'pc1:ot2')]");
 
+        //Grouping vehicles
 
+        //add
+
+        elements.put("grouping_add_b_add","//*[contains(@id, 'pcgt2:boton_add')]");
+        elements.put("grouping_add_check_box_active","//*[contains(@id, 'pcgt2:sbc1::content')]");
+        elements.put("grouping_add_i_vehicles_code","//*[contains(@id, 'pcgt2:it6::content')]");
+        elements.put("grouping_add_i_description","//*[contains(@id, 'pcgt2:it5::content')]");
+        elements.put("grouping_add_b_save","//*[contains(@id, 'pcgt2:btn_commitExit')]");
+        elements.put("grouping_e_routes_by_default","//*[contains(@id, 'pt1:dyntdc:dynTabsPane:1:tabIndex::disclosureAnchor')]");
     }
 
 }
