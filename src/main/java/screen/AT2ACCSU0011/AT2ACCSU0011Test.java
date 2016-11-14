@@ -97,7 +97,6 @@ public class AT2ACCSU0011Test {
 
         return true;
     }
-
     private boolean Room_description_delete (TestDriver driver){
 
         driver.getReport().addHeader(" DELETE IN ROOM DESCRIPTION",3,false);
@@ -111,7 +110,6 @@ public class AT2ACCSU0011Test {
         }
         return true;
     }
-
     private boolean Room_description_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN ROOM DESCRIPTIONS",3,false);
@@ -133,7 +131,6 @@ public class AT2ACCSU0011Test {
 
         return true;
     }
-
     private boolean Room_description_qbe (TestDriver driver){
         driver.getReport().addHeader(" QBE IN ROOM DESCRIPTION",3,false);
 
@@ -176,7 +173,6 @@ public class AT2ACCSU0011Test {
 
         return true;
     }
-
     private boolean Room_description_edit (TestDriver driver){
         driver.getReport().addHeader(" ADD IN ROOM DESCRIPTION",3,false);
 
@@ -208,7 +204,6 @@ public class AT2ACCSU0011Test {
         }
         return true;
     }
-
     private boolean Room_description_search (TestDriver driver){
         driver.getReport().addHeader(" ADD IN ROOM DESCRIPTION",3,false);
 
@@ -234,7 +229,6 @@ public class AT2ACCSU0011Test {
         }
         return true;
     }
-
     private boolean Room_description_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN ROOM DESCRIPTION",3,false);
@@ -299,8 +293,6 @@ public class AT2ACCSU0011Test {
         }
         return true;
     }
-
-
     private boolean Lenguage_description_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN MULTI LENGUAJE",3,false);
@@ -314,7 +306,6 @@ public class AT2ACCSU0011Test {
         }
         return true;
     }
-
     private boolean Lenguage_description_delete (TestDriver driver){
         driver.getReport().addHeader(" DELETE IN MULTI LENGUAJE",3,false);
         Functions.break_time(driver,6,500);
@@ -327,7 +318,6 @@ public class AT2ACCSU0011Test {
         }
         return true;
     }
-
     private boolean Lenguage_description_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN SERVICE AUTORIZATION",3,false);
 
@@ -352,7 +342,6 @@ public class AT2ACCSU0011Test {
         }
         return true;
     }
-
     private boolean Lenguage_description_search (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN MULTI LENGUAJE",3,false);
 
@@ -390,7 +379,6 @@ public class AT2ACCSU0011Test {
         return true;
 
     }
-
     private boolean Lenguage_description_add (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN MULTI LENGUAJE",3,false);
