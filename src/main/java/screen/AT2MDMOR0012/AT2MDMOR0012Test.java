@@ -34,9 +34,9 @@ public class AT2MDMOR0012Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo (TestDriver driver){
-        driver.getTestdetails().setMainmenu("Transfers");
-        driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("TTOO Quality Groups");
+        driver.getTestdetails().setMainmenu("Master Data");
+        driver.getTestdetails().setSubmenu("Management");
+        driver.getTestdetails().setScreen("Departments 2.0");
     }
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
@@ -64,7 +64,6 @@ public class AT2MDMOR0012Test {
     }
 
     //TABLA MULTI LENGUAJE
-
     private boolean Multi_lenguaje (TestDriver driver){
 
         if(!Multi_lenguaje_add(driver)){
@@ -220,9 +219,7 @@ public class AT2MDMOR0012Test {
         return true;
     }
 
-
-    //TABLA DEPARTMENTS
-
+    //TABLA DEPARTMENT
     private boolean Departments (TestDriver driver){
 
         if(!Departments_add(driver)){
