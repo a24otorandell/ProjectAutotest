@@ -16,39 +16,31 @@ public class AT2ACCSU0015Test {
     public AT2ACCSU0015Test (){
 
     }
-
     public AT2ACCSU0015Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2ACCSU0015Locators locators){
         this.locators = locators;
     }
-
     public AT2ACCSU0015Data getData (){
         return data;
     }
-
     public void setData (AT2ACCSU0015Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Hotel Chain");
+        driver.getTestdetails().setScreen("Hotel Chains 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -78,7 +70,6 @@ public class AT2ACCSU0015Test {
     }
 
     /*HOTEL BRAND*/
-
     private boolean hotel_brand (TestDriver driver){
 
         if(!Hotel_brand_add(driver)){
@@ -246,7 +237,6 @@ public class AT2ACCSU0015Test {
     }
 
     /*CADENA HOTEL ID*/
-
     private boolean Cadena_hotel_id (TestDriver driver){
 
         if(!Cadena_hotel_id_add(driver)){
@@ -418,7 +408,6 @@ public class AT2ACCSU0015Test {
     }
 
     /*HOTEL CHAIN DESCRIPTION*/
-
     private boolean Hotel_chain_description (TestDriver driver){
 
 
@@ -591,5 +580,4 @@ public class AT2ACCSU0015Test {
         }
         return true;
     }
-
 }
