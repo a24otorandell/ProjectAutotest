@@ -20,35 +20,28 @@ public class AT2ACCSU0074Test {
     public AT2ACCSU0074Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2ACCSU0074Locators locators){
         this.locators = locators;
     }
-
     public AT2ACCSU0074Data getData (){
         return data;
     }
-
     public void setData (AT2ACCSU0074Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Template Descriptions 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -59,15 +52,240 @@ public class AT2ACCSU0074Test {
         if(!Template_search_add(driver)){
             return false;
         }
-        if(Template_search_search(driver)){
+        if(!Template_search_search(driver)){
+            return false;
+        }
+        if(!Template_search_edit(driver)){
+            return false;
+        }
+
+        if(!Template_search_qbe(driver)){
+            return false;
+        }
+
+        if(!Template_search_other_actions(driver)){
+            return false;
+        }
+
+        if(!Template_search_delete(driver)){
             return false;
         }
 
         return false;
     }
 
+    private boolean Template_search_delete (TestDriver driver){
+
+        driver.getReport().addHeader(" DELETE IN TEMPLATE SEARCH ",3,false);
+
+        if(!Functions.doDeleteNCheck(driver,
+                new String[]{"template_descriptions_del_b_delete",getElements("template_descriptions_del_b_delete")},
+                new String[]{"template_descriptions_del_e_record",getElements("template_descriptions_del_e_record")},
+                new String[]{"template_descriptions_del_b_delete_b_ok",getElements("template_descriptions_del_b_delete_b_ok")},
+                " on DELETE")){
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Template_search_other_actions (TestDriver driver){
+
+        driver.getReport().addHeader(" OTHER ACTIONS IN TEMPLATE SEARCH ",3,false);
+
+        if(!Functions.auditData(driver,
+                new String[]{"template_descriptions_oa_b_actions",getElements("template_descriptions_oa_b_actions")}, //actions button
+                new String[]{"template_descriptions_oa_b_actions_b_audit_data",getElements("template_descriptions_oa_b_actions_b_audit_data")}, //audit button
+                new String[]{"template_descriptions_oa_b_actions_b_audit_data_b_ok",getElements("template_descriptions_oa_b_actions_b_audit_data_b_ok")}, //audit_b_ok
+                " on ONTHER ACTIONS")){
+            return false;
+        }
+
+        if(!Functions.detachTable(driver,
+                new String[]{"template_descriptions_oa_b_detach",getElements("template_descriptions_oa_b_detach")}, //detach button
+                true,     //screenshot??
+                " on OTHER ACTIONS")){
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Template_search_qbe (TestDriver driver){
+
+        driver.getReport().addHeader(" QBE IN TEMPLATE SEARCH ",3,false);
+        if(!Functions.simpleClick(driver,
+                new String[]{"template_descriptions_se_b_reset",getElements("template_descriptions_se_b_reset")}, //element to click
+                " on ADD")){
+            return false;
+        }
+
+        if(!Functions.clickQbE(driver,
+                new String[]{"template_descriptions_qbe_b_qbe",getElements("template_descriptions_qbe_b_qbe")},// query button
+                new String[]{"template_descriptions_qbe_sl_main",getElements("template_descriptions_qbe_sl_main")},//any query input
+                " on QBE")){
+            return false;
+        }
+        if(!Functions.selectText(driver,
+                new String[]{"template_descriptions_qbe_sl_main",getElements("template_descriptions_qbe_sl_main")},
+                "Yes","main"," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"template_descriptions_qbe_i_code",getElements("template_descriptions_qbe_i_code")},
+                "code",getData("code")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"template_descriptions_qbe_i_lenguage",getElements("template_descriptions_qbe_i_lenguage")},
+                "lenguage",getData("leguage")," on QBE")){
+            return false;
+        }
+        if(!Functions.selectText(driver,
+                new String[]{"template_descriptions_qbe_sl_active",getElements("template_descriptions_qbe_sl_active")},
+                "No","active"," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"template_descriptions_qbe_i_condition",getElements("template_descriptions_qbe_i_condition")},
+                "final_condition",getData("final_condition")," on QBE")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"template_descriptions_qbe_i_description",getElements("template_descriptions_qbe_i_description")},
+                "final_description",getData("final_description")," on QBE")){
+            return false;
+        }
+        if(!Functions.enterQueryAndClickResult(driver,
+                new String[]{"template_descriptions_qbe_i_code",getElements("template_descriptions_qbe_i_code")}, //any query input
+                new String[]{"template_descriptions_se_e_result",getElements("template_descriptions_se_e_result")}, //table result
+                " on QBE")){
+            return false;
+        }
+        return true;
+    }
+
+    private boolean Template_search_edit (TestDriver driver){
+        driver.getReport().addHeader(" EDIT IN TEMPLATE SEARCH ",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"template_descriptions_ed_b_edit",getElements("template_descriptions_ed_b_edit")}, //element to click
+                new String[]{"template_descriptions_ed_template_i_code",getElements("template_descriptions_ed_template_i_code")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on ADD")){
+            return false;
+        }
+
+        /*Template*/
+
+        if(!Functions.getValue(driver,new String[]{"template_descriptions_ed_template_i_code",getElements("template_descriptions_ed_template_i_code")}, // element path
+                "code", // key for data value (the name)
+                " on where")){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"template_descriptions_ed_template_i_description",getElements("template_descriptions_ed_template_i_description")},
+                "description",DataGenerator.getRandomAlphanumericSequence(6,true)," on ADD")){
+            return false;
+        }
+
+        if(!Functions.createLov(driver,
+                new String[]{"template_descriptions_ed_template_lov_condition",getElements("template_descriptions_ed_template_lov_condition")}, // b_lov
+                new String[]{"template_descriptions_ed_template_i_condition",getElements("template_descriptions_ed_template_i_condition")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult2, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "condition_alias", //Data name
+                " on ADD")){
+            return false;
+        }
+        String list_options[] = {"!","Yes","No"};
+        if(!Functions.selectTextRandom(driver,
+                new String[]{"template_descriptions_ed_template_sl_condition",getElements("template_descriptions_ed_template_sl_condition")},
+                list_options,"condition"," on EDIT")){
+            return false;
+        }
+
+     /*   if(!Functions.insertInput(driver,new String[]{"template_descriptions_add_template_i_condition_second",getElements("template_descriptions_add_template_i_condition_second")},
+                "text",DataGenerator.getRandomAlphanumericSequence(3,true)," on ADD")){
+            return false;
+        }*/
+
+        if(!Functions.simpleClick(driver,
+                new String[]{"template_descriptions_ed_template_b_or",getElements("template_descriptions_ed_template_b_or")}, //element to click
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.getText(driver,new String[]{"template_descriptions_ed_i_result",getElements("template_descriptions_ed_i_result")}, // element path
+                "final_condition", // key for data value (the name)
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.checkboxValue(driver,
+                getElements("template_descriptions_ed_template_sl_active"),"active",false,false," on ADD")){
+            return false;
+        }//where
+        if(!Functions.checkboxValue(driver,
+                getElements("template_descriptions_ed_template_sl_main"),"main",false,false," on ADD")){
+            return false;
+        }//where
+        if(!Functions.checkboxValue(driver,
+                getElements("template_descriptions_ed_template_sl_legend"),"legend",false,false," on ADD")){
+            return false;
+        }//where
+        Functions.break_time(driver,8,500);
+
+        if(!Functions.checkboxValue(driver,
+                getElements("template_descriptions_ed_sl_active_final_text"),"final_text",true,true," on EDIT")){
+            return false;
+        }//where
+
+        if(!Functions.checkClick(driver,
+                new String[]{"template_descriptions_ed_final_text_b_add",getElements("template_descriptions_ed_final_text_b_add")}, //element to click
+                new String[]{"template_descriptions_ed_e_result_final_text",getElements("template_descriptions_ed_e_result_final_text")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.createLov(driver,
+                new String[]{"template_descriptions_ed_final_text_lov_template",getElements("template_descriptions_ed_final_text_lov_template")}, // b_lov
+                new String[]{"template_descriptions_ed_final_text_i_template",getElements("template_descriptions_ed_final_text_i_template")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "template", //Data name
+                " on EDIT")){
+            return false;
+        }
+
+        if(!Functions.selectText(driver,
+                new String[]{"template_descriptions_ed_final_text_sl_condition",getElements("template_descriptions_ed_final_text_sl_condition")},
+                "vr2 resort","resort"," on where")){
+            return false;
+        }
+
+        if(!Functions.checkClick(driver,
+                new String[]{"template_descriptions_ed_final_text_b_add",getElements("template_descriptions_ed_final_text_b_add")}, //element to click
+                new String[]{"template_descriptions_ed_e_result_final_text",getElements("template_descriptions_ed_e_result_final_text")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.simpleClick(driver,
+                new String[]{"template_descriptions_ed_e_result_final_text",getElements("template_descriptions_ed_e_result_final_text")}, //element to click
+                " on ADD")){
+            return false;
+        }
+        if(!Functions.getText(driver,new String[]{"template_descriptions_ed_final_text_i_final_description",getElements("template_descriptions_ed_final_text_i_final_description")}, // element path
+                "final_description", // key for data value (the name)
+                " on ADD")){
+            return false;
+        }
+
+        if(!Functions.checkClickByAbsence(driver,
+                new String[]{"template_descriptions_ed_b_save",getElements("template_descriptions_ed_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                30,500,
+                " on EDIT")){
+            return false;
+        }
+        return true;
+    }
     private boolean Template_search_search (TestDriver driver){
-        driver.getReport().addHeader(" ADD IN TEMPLATE SEARCH ",3,false);
+        driver.getReport().addHeader(" SEARCH IN TEMPLATE SEARCH ",3,false);
 
         if(!Functions.insertInput(driver,new String[]{"template_descriptions_se_i_code",getElements("template_descriptions_se_i_code")},
                 "se_template_code",getData("code")," on SEARCH")){
@@ -109,7 +327,6 @@ public class AT2ACCSU0074Test {
         }
         return true;
     }
-
     private boolean Template_search_add (TestDriver driver){
         driver.getReport().addHeader(" ADD IN TEMPLATE SEARCH ",3,false);
 
@@ -136,7 +353,7 @@ public class AT2ACCSU0074Test {
                 new String[]{"template_descriptions_add_template_lov_condition",getElements("template_descriptions_add_template_lov_condition")}, // b_lov
                 new String[]{"template_descriptions_add_template_i_condition",getElements("template_descriptions_add_template_i_condition")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "condition_alias", //Data name
                 " on ADD")){
@@ -177,25 +394,27 @@ public class AT2ACCSU0074Test {
         }//where
         Functions.break_time(driver,8,500);
         /*Lenguaje Text*/
-
-        /*if(!Functions.checkClick(driver,
+        Functions.break_time(driver,8,500);
+        if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_add",getElements("template_descriptions_add_lenguaje_text_b_add")}, //element to click
                 new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element expected to appear
                 30,500, //seconds/miliseconds (driver wait)
                 " on ADD")){
             return false;
         }
+        Functions.break_time(driver,8,500);
         if(!Functions.simpleClick(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element to click
                 " on ADD")){
             return false;
         }
+        Functions.break_time(driver,8,500);
         if(!Functions.selectText(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_sl_lenguaje",getElements("template_descriptions_add_lenguaje_text_sl_lenguaje")},
-                "ALE","lenguaje"," on ADD")){
+                "ENG","lenguage"," on ADD")){
             return false;
-        }*/
-    /*    if(!Functions.checkClick(driver,
+        }
+        if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_lenguaje_text_b_add",getElements("template_descriptions_add_lenguaje_text_b_add")}, //element to click
                 new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element expected to appear
                 30,500, //seconds/miliseconds (driver wait)
@@ -226,24 +445,7 @@ public class AT2ACCSU0074Test {
                 " on ADD")){
             return false;
         }
-        Functions.break_time(driver,10,500);
-        if(!Functions.checkClick(driver,
-                new String[]{"template_descriptions_add_lenguaje_text_b_add",getElements("template_descriptions_add_lenguaje_text_b_add")}, //element to click
-                new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element expected to appear
-                30,500, //seconds/miliseconds (driver wait)
-                " on ADD")){
-            return false;
-        }
-        if(!Functions.simpleClick(driver,
-                new String[]{"template_descriptions_add_lenguaje_text_e_lenguajeresult",getElements("template_descriptions_add_lenguaje_text_e_lenguajeresult")}, //element to click
-                " on ADD")){
-            return false;
-        }
-        if(!Functions.selectText(driver,
-                new String[]{"template_descriptions_add_lenguaje_text_sl_lenguaje",getElements("template_descriptions_add_lenguaje_text_sl_lenguaje")},
-                "ALE","lenguaje"," on ADD")){
-            return false;
-        }*/
+
 
         /*Text*/
         Functions.break_time(driver,15,500);
@@ -252,7 +454,7 @@ public class AT2ACCSU0074Test {
             return false;
         }*/
 
-        Functions.break_time(driver,5,500);
+     /*   Functions.break_time(driver,5,500);
         if(!Functions.checkClick(driver,
                 new String[]{"template_descriptions_add_text_sl_button",getElements("template_descriptions_add_text_sl_button")}, //element to click
                 new String[]{"template_descriptions_add_text_sl_check_box",getElements("template_descriptions_add_text_sl_check_box")}, //element expected to appear

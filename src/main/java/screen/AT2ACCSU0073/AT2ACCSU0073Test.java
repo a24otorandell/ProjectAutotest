@@ -97,6 +97,7 @@ public class AT2ACCSU0073Test {
         return true;
     }
     private boolean Other_actions_subreason_department (TestDriver driver){
+
         if(!Functions.detachTable(driver,
                 new String[]{"subreason_department_oa_b_detach",getElements("subreason_department_oa_b_detach")}, //detach button
                 true,     //screenshot??
