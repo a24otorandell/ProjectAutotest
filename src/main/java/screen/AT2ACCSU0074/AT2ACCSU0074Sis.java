@@ -16,39 +16,31 @@ public class AT2ACCSU0074Sis {
     public AT2ACCSU0074Sis (){
 
     }
-
     public AT2ACCSU0074Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2ACCSU0074Locators locators){
         this.locators = locators;
     }
-
     public AT2ACCSU0074Data getData (){
         return data;
     }
-
     public void setData (AT2ACCSU0074Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Accomodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Template Descriptions 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
@@ -94,7 +86,6 @@ public class AT2ACCSU0074Sis {
         }
         return true;
     }
-
     private boolean Template_search_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN TEMPLATE SEARCH ",3,false);
@@ -115,7 +106,6 @@ public class AT2ACCSU0074Sis {
         }
         return true;
     }
-
     private boolean Template_search_qbe (TestDriver driver){
 
         driver.getReport().addHeader(" QBE IN TEMPLATE SEARCH ",3,false);
@@ -165,7 +155,6 @@ public class AT2ACCSU0074Sis {
         }
         return true;
     }
-
     private boolean Template_search_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN TEMPLATE SEARCH ",3,false);
 

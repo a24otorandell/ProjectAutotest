@@ -87,7 +87,6 @@ public class AT2ACCSU0074Test {
         }
         return true;
     }
-
     private boolean Template_search_other_actions (TestDriver driver){
 
         driver.getReport().addHeader(" OTHER ACTIONS IN TEMPLATE SEARCH ",3,false);
@@ -108,7 +107,6 @@ public class AT2ACCSU0074Test {
         }
         return true;
     }
-
     private boolean Template_search_qbe (TestDriver driver){
 
         driver.getReport().addHeader(" QBE IN TEMPLATE SEARCH ",3,false);
@@ -158,7 +156,6 @@ public class AT2ACCSU0074Test {
         }
         return true;
     }
-
     private boolean Template_search_edit (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN TEMPLATE SEARCH ",3,false);
 
