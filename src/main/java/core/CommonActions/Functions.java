@@ -438,7 +438,7 @@ public class Functions {
         /* if(!Functions.auditData(driver,
                 new String[]{"x",getElements("x")}, //actions button
                 new String[]{"y",getElements("y")}, //audit button
-                new String[]{"z",getElements(z")}, //audit_b_ok
+                new String[]{"z",getElements("z")}, //audit_b_ok
                 true/false, //zoom in??
                 "where")){return false;}*/ //where this occurs
         driver.getReport().addContent("Audit Data:", "h5", "");

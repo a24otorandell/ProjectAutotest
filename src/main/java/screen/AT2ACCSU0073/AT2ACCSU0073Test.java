@@ -27,26 +27,21 @@ public class AT2ACCSU0073Test {
     public void setLocators(AT2ACCSU0073Locators locators) {
         this.locators = locators;
     }
-
     public AT2ACCSU0073Data getData() {
         return data;
     }
-
     public void setData(AT2ACCSU0073Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Accommodation");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("OM Traker Maintenance 2.0");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
@@ -124,7 +119,6 @@ public class AT2ACCSU0073Test {
 
         return true;
     }
-
     private boolean Edit_subreason_department (TestDriver driver){
         driver.getReport().addHeader("EDIT IN SUBREASON DEPARTMENT",3,false);
 
@@ -162,7 +156,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Search_subreason_deparment (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN SUBREASON",3,false);
         if(!Functions.simpleClick(driver,
@@ -194,7 +187,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Add_subreason_department (TestDriver driver){
         driver.getReport().addHeader("ADD IN SUBREASON DEPARTMENT",3,false);
 
@@ -275,7 +267,6 @@ public class AT2ACCSU0073Test {
 
         return true;
     }
-
     private boolean Search_edit_reason_department (TestDriver driver){
         driver.getReport().addHeader("SEARCH IN REASON DEPARTMENT",3,false);
 
@@ -315,7 +306,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Edit_reason_department (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN REASON DEPARTMENT",3,false);
 
@@ -346,7 +336,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Search_reason_deparment (TestDriver driver){
         driver.getReport().addHeader("SEARCH IN REASON DEPARTMENT",3,false);
 
@@ -388,7 +377,6 @@ public class AT2ACCSU0073Test {
 
         return true;
     }
-
     private boolean Add_reason_department (TestDriver driver){
         driver.getReport().addHeader("ADD IN REASON DEPARTMENT",3,false);
 
@@ -475,7 +463,6 @@ public class AT2ACCSU0073Test {
 
         return true;
     }
-
     private boolean Search_edit_subreason (TestDriver driver){
 
         if(!Functions.clickQbE(driver,
@@ -509,7 +496,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Edit_subreason (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN SUBREASON",3,false);
 
@@ -540,7 +526,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Search_subreason (TestDriver driver){
 
         driver.getReport().addHeader(" SEARCH IN SUBREASON",3,false);
@@ -577,7 +562,6 @@ public class AT2ACCSU0073Test {
 
         return true;
     }
-
     private boolean Add_subreason (TestDriver driver){
 
         driver.getReport().addHeader(" ADD IN SUBREASON",3,false);
@@ -658,7 +642,6 @@ public class AT2ACCSU0073Test {
 
         return true;
     }
-
     private boolean Search_edit_reason (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN REASON",3,false);
 
@@ -706,7 +689,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Edit_reason (TestDriver driver){
         driver.getReport().addHeader(" EDIT IN REASON",3,false);
 
@@ -736,7 +718,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Search_reason (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN REASON",3,false);
 
@@ -783,7 +764,6 @@ public class AT2ACCSU0073Test {
         }
         return true;
     }
-
     private boolean Add_reason (TestDriver driver){
 
 
