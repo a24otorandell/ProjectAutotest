@@ -49,62 +49,49 @@ public class AT2ACCSU0073Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
-
-        if(!Reason(driver)){
-            return false;
-        }
-
-        if(!Subreason(driver)){
-            return false;
-        }
-
-        if(!Reason_department(driver)){
-            return false;
-        }
-
-
-        if(!Add_subreason_department(driver)){
-            return false;
-        }
-
-        if(!Search_subreason_deparment(driver)){
-            return false;
-        }
-        if(!Edit_reason(driver)){
-            return false;
-        }
-
-        if(!Search_edit_reason(driver)){
-            return false;
-        }
-        if(!Add_reason(driver)){
-            return false;
-        }
-        if(!Edit_reason_department(driver)){
-            return false;
-        }
-
-        if(!Search_edit_reason_department(driver)){
-            return false;
-        }
-
-        if(!Edit_subreason_department(driver)){
-            return false;
-        }
-        if(!Search_subreason_deparment(driver)){
-            return false;
-        }
-
-        if(!Other_actions_subreason_department(driver)){
-            return false;
-        }
-
+        //REASON TABLE
+        if (!Add_reason(driver)) return false;
+        if (!Search_reason(driver)) return false;
+        if (!Edit_reason(driver)) return false;
+        if (!Search_edit_reason(driver)) return false;
+        if (!Other_actions_reason(driver)) return false;
+        //SUBREASON TABLE
+        if (!Add_subreason(driver)) return false;
+        if (!Search_subreason(driver)) return false;
+        if (!Edit_subreason(driver)) return false;
+        if (!Search_edit_subreason(driver)) return false;
+        if (!Other_actions_subreason(driver)) return false;
+        //DEPARTMENT TABLE
+        if (!Add_reason_department(driver)) return false;
+        if (!Search_reason_department(driver)) return false;
+        if (!Edit_reason_department(driver)) return false;
+        if (!Search_edit_reason_department(driver)) return false;
+        if (!Other_actions_reason_department(driver)) return false;
+        if (!Delete_reason_department(driver)) return false;
+        //SUBREASON DEPARTMENT TABLE
+        if (!Add_subreason_department(driver)) return false;
+        if (!Search_subreason_department(driver)) return false;
+        if (!Edit_subreason_department(driver)) return false;
+        if (!Search_subreason_department(driver)) return false;
+        if (!Other_actions_subreason_department(driver)) return false;
+        if (!Delete_subreason_department(driver)) return false;
         return false;
     }
 
-
     //REASON-DEPARTMENT2
 
+    private boolean Delete_subreason_department (TestDriver driver) {
+        driver.getReport().addHeader("DELETE DATA", 3, false);
+        String where = " on DELETE DATA";
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"subreason_department_del_b_delete", getElements("subreason_department_del_b_delete")},
+                new String[]{"subreason_department_del_e_records", getElements("subreason_department_del_e_records")},
+                new String[]{"subreason_department_del_b_del_ok", getElements("subreason_department_del_b_del_ok")}, //delete button yes
+                where)) {
+            return false;
+        }
+        return true;
+    }
     private boolean Other_actions_subreason_department (TestDriver driver){
         if(!Functions.detachTable(driver,
                 new String[]{"subreason_department_oa_b_detach",getElements("subreason_department_oa_b_detach")}, //detach button
@@ -152,7 +139,7 @@ public class AT2ACCSU0073Sis {
         }
         return true;
     }
-    private boolean Search_subreason_deparment (TestDriver driver){
+    private boolean Search_subreason_department (TestDriver driver){
         driver.getReport().addHeader(" SEARCH IN SUBREASON",3,false);
         if(!Functions.simpleClick(driver,
                 new String[]{"reason_se_e_first_result",getElements("reason_se_e_first_result")}, //element to click
@@ -199,7 +186,7 @@ public class AT2ACCSU0073Sis {
                 new String[]{"subreason_department_add_i_department_code",getElements("subreason_department_add_i_department_code")}, //external LoV input
                 new String[]{"subreason_department_add_lov_department_code_i_code",getElements("subreason_department_add_lov_department_code_i_code")}, //internal LoV input
                 data.getData().get("department_code"), // value to search
-                "deparment_code_sub", //name of the data
+                "department_code_sub", //name of the data
                 " on SEARCH")){
             return false;
         }
@@ -225,22 +212,19 @@ public class AT2ACCSU0073Sis {
 
     //Reason Department
 
-    private boolean Reason_department (TestDriver driver){
 
-        if(!Add_reason_department(driver)){
-            return false;
-        }
-
-        if(!Search_reason_deparment(driver)){
-            return false;
-        }
-
-        if(!Other_actions_reason_department(driver)){
+    private boolean Delete_reason_department (TestDriver driver) {
+        driver.getReport().addHeader("DELETE DATA", 3, false);
+        String where = " on DELETE DATA";
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"reason_department_del_b_delete", getElements("reason_department_del_b_delete")},
+                new String[]{"reason_department_del_e_records", getElements("reason_department_del_e_records")},
+                new String[]{"reason_department_del_b_del_ok", getElements("reason_department_del_b_del_ok")}, //delete button yes
+                where)) {
             return false;
         }
         return true;
     }
-
     private boolean Other_actions_reason_department (TestDriver driver){
         driver.getReport().addHeader("OTHER ACTIONS IN REASON DEPARTMENT",3,false);
 
@@ -332,7 +316,7 @@ public class AT2ACCSU0073Sis {
         }
         return true;
     }
-    private boolean Search_reason_deparment (TestDriver driver){
+    private boolean Search_reason_department (TestDriver driver){
         driver.getReport().addHeader("SEARCH IN REASON DEPARTMENT",3,false);
 
         if(!Functions.clickQbE(driver,
@@ -410,29 +394,6 @@ public class AT2ACCSU0073Sis {
 
     //Subreason Table
 
-    private boolean Subreason (TestDriver driver){
-
-        if(!Add_subreason(driver)){
-            return false;
-        }
-
-        if(!Search_subreason(driver)){
-            return false;
-        }
-
-        if(!Edit_subreason(driver)){
-            return false;
-        }
-
-        if(!Search_edit_subreason(driver)){
-            return false;
-        }
-
-        if(!Other_actions_subreason(driver)){
-            return false;
-        }
-        return true;
-    }
 
     private boolean Other_actions_subreason (TestDriver driver){
 
@@ -598,22 +559,7 @@ public class AT2ACCSU0073Sis {
 
 
     //Reason Table
-    private boolean Reason (TestDriver driver){
 
-        if(!Add_reason(driver)){
-            return false;
-        }
-
-        if(!Search_reason(driver)){
-            return false;
-        }
-
-        if(!Other_actions_reason(driver)){
-            return false;
-        }
-
-        return true;
-    }
 
     private boolean Other_actions_reason (TestDriver driver){
 
