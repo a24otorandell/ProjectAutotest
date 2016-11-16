@@ -201,5 +201,9 @@ public class AT2ACCOP0024Locators {
         elements.put("alert_e_info", "//*[contains(@id, 'doc0::msgDlg::_cnt')]/div/table/tbody/tr/td/table/tbody/tr/td[2]/div");
         elements.put("alert_b_x", "//*[contains(@id, 'doc0::msgDlg::close')]");
         elements.put("alert_box", "//*[contains(@id, 'doc0::msgDlg')]");
+        //EDIT
+        elements.put("result_b_edit", "//*[contains(@id, 'pc1:pcgt1:boton_edit')]");
+        elements.put("result_b_edit_i_batchid", "//*[contains(@id, 'pc1:pcgt1:it7::content')]");
+        elements.put("result_b_edit_b_save", "//*[contains(@id, 'pc1:pcgt1:btn_commitExit')]");
     }
 }

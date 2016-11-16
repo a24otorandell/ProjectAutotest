@@ -120,12 +120,6 @@ public class AT2ACCOP0024Sis {
         if (!qbe(driver)) {
             return false;
         }
-        if (!edit(driver)) {
-            return false;
-        }
-        if (!qbe(driver)) {
-            return false;
-        }
         if (!exportAction(driver)) {
             return false;
         }
@@ -911,7 +905,6 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     private boolean edit(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, true);
         if (!Functions.checkClick(driver,
