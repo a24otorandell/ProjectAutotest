@@ -63,13 +63,13 @@ public class AT2ACCSU1002Sis {
 
     //  HOTEL CATEGORY AND LENGUAGE DATA
     private boolean Hotel_category_lenguage_data (TestDriver driver){
-        if(!Hotel_category_lenguage_data_add(driver)){
-            return false;
-        }
         if(!Hotel_category_lenguage_data_search(driver)){
             return false;
         }
         if(!Hotel_category_lenguage_data_edit(driver)){
+            return false;
+        }
+        if(!Hotel_category_lenguage_data_search(driver)){
             return false;
         }
         if(!Hotel_category_lenguage_data_other_actions(driver)){
@@ -94,7 +94,6 @@ public class AT2ACCSU1002Sis {
         }
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_other_actions (TestDriver driver){
         String where = " on OTHER ACTIONS";
         driver.getReport().addHeader("OTHER ACTIONS IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -115,7 +114,6 @@ public class AT2ACCSU1002Sis {
         }
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_edit (TestDriver driver){
         String where = " on EDIT";
         driver.getReport().addHeader("EDIT IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -126,14 +124,14 @@ public class AT2ACCSU1002Sis {
                 where)){
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"hotel_category_lenguage_data_ed_e_category_code",getElements("hotel_category_lenguage_data_ed_e_category_code")}, // element path
-                "category_code", // key for data value (the name)
+        if(!Functions.getValue(driver,new String[]{"hotel_category_lenguage_data_ed_e_category_code",getElements("hotel_category_lenguage_data_ed_e_category_code")}, // element path
+                "category_code_lenguage", // key for data value (the name)
                 where)){
             return false;
         }
 
         if(!Functions.insertInput(driver,new String[]{"hotel_category_lenguage_data_ed_i_category_description",getElements("hotel_category_lenguage_data_ed_i_category_description")},
-                "category_description",DataGenerator.getRandomAlphanumericSequence(3,true),where)){
+                "category_description_lenguage",DataGenerator.getRandomAlphanumericSequence(3,true),where)){
             return false;
         }
         if(!Functions.createLov(driver,
@@ -154,7 +152,6 @@ public class AT2ACCSU1002Sis {
                 where);
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_search (TestDriver driver){
         String where = " on SEARCH";
         driver.getReport().addHeader("SEARCH IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -167,12 +164,12 @@ public class AT2ACCSU1002Sis {
         }
 
         if(!Functions.insertInput(driver,new String[]{"hotel_category_lenguage_data_se_i_category_code",getElements("hotel_category_lenguage_data_se_i_category_code")},
-                "category_code",getData("category_code"),where)){
+                "category_code_lenguage",getData("category_code_lenguage"),where)){
             return false;
         }
 
         if(!Functions.insertInput(driver,new String[]{"hotel_category_lenguage_data_se_i_category_descriptions",getElements("hotel_category_lenguage_data_se_i_category_descriptions")},
-                "category_description",getData("category_description"),where)){
+                "category_description_lenguage",getData("category_description_lenguage"),where)){
             return false;
         }
 
@@ -189,7 +186,6 @@ public class AT2ACCSU1002Sis {
         }
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_add (TestDriver driver){
         String where = " on ADD";
         driver.getReport().addHeader("ADD IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -201,14 +197,14 @@ public class AT2ACCSU1002Sis {
             return false;
         }
 
-        if(!Functions.getText(driver,new String[]{"hotel_category_lenguage_data_add_e_category_code",getElements("hotel_category_lenguage_data_add_e_category_code")}, // element path
-                "category_code", // key for data value (the name)
+        if(!Functions.getValue(driver,new String[]{"hotel_category_lenguage_data_add_e_category_code",getElements("hotel_category_lenguage_data_add_e_category_code")}, // element path
+                "category_code_lenguage", // key for data value (the name)
                 where)){
             return false;
         }
 
         if(!Functions.insertInput(driver,new String[]{"hotel_category_lenguage_data_add_i_category_description",getElements("hotel_category_lenguage_data_add_i_category_description")},
-                "category_description",DataGenerator.getRandomAlphanumericSequence(3,true),where)){
+                "category_description_lenguage",DataGenerator.getRandomAlphanumericSequence(3,true),where)){
             return false;
         }
         if(!Functions.createLovByValue(driver,
@@ -232,6 +228,9 @@ public class AT2ACCSU1002Sis {
     //  HOTEL CATEGORY AND SEARCH AREA
     private boolean Hotel_category_search_area (TestDriver driver){
         if(!Hotel_category_search_area_add(driver)){
+            return false;
+        }
+        if(!Hotel_category_lenguage_data_add(driver)){
             return false;
         }
         if(!Hotel_category_search_area_search(driver)){
@@ -264,7 +263,6 @@ public class AT2ACCSU1002Sis {
         }
         return true;
     }
-
     private boolean Hotel_category_search_area_other_actions (TestDriver driver){
 
         String where = " on OTHER ACTIONS";
@@ -288,7 +286,6 @@ public class AT2ACCSU1002Sis {
 
         return true;
     }
-
     private boolean Hotel_category_search_area_qbe (TestDriver driver){
 
         String where = " on QBE";
@@ -331,7 +328,6 @@ public class AT2ACCSU1002Sis {
 
         return true;
     }
-
     private boolean Hotel_category_search_area_edit (TestDriver driver){
 
         String where = " on EDIT";
@@ -343,6 +339,7 @@ public class AT2ACCSU1002Sis {
                 where)){
             return false;
         }
+        Functions.break_time(driver,25,500);
         if(!Functions.getText(driver,new String[]{"hotel_category_search_area_ed_i_category_code",getElements("hotel_category_search_area_ed_i_category_code")}, // element path
                 "category_code", // key for data value (the name)
                 where)){
@@ -365,12 +362,17 @@ public class AT2ACCSU1002Sis {
                 where);
         return true;
     }
-
     private boolean Hotel_category_search_area_search (TestDriver driver){
         String where = " on SEARCH";
         driver.getReport().addHeader("SEARCH IN HOTEL CATEGORY SEARCH AREA",3,false);
-
-
+        /*if(!Functions.checkClick(driver,
+                new String[]{"hotel_category_search_area_se_lov_category_code",getElements("hotel_category_search_area_se_lov_category_code")}, //element to click
+                new String[]{"hotel_category_search_area_se_lov_category_code_i_category_code",getElements("hotel_category_search_area_se_lov_category_code_i_category_code")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }*/
+        Functions.break_time(driver,6,500);
         if(!Functions.createLovByValue(driver,
                 new String[]{"hotel_category_search_area_se_lov_category_code",getElements("hotel_category_search_area_se_lov_category_code")}, //LoV button
                 new String[]{"hotel_category_search_area_se_i_category_code",getElements("hotel_category_search_area_se_i_category_code")}, //external LoV input
@@ -380,7 +382,7 @@ public class AT2ACCSU1002Sis {
                 where)){
             return false;
         }
-
+        Functions.break_time(driver,6,500);
         if(!Functions.clickSearchAndResult(driver,
                 new String[]{"hotel_category_search_area_se_b_search",getElements("hotel_category_search_area_se_b_search")}, //search button
                 new String[]{"hotel_category_search_area_se_e_result",getElements("hotel_category_search_area_se_e_result")}, //result element
@@ -389,7 +391,6 @@ public class AT2ACCSU1002Sis {
         }
         return true;
     }
-
     private boolean Hotel_category_search_area_add (TestDriver driver){
 
         String where = " on ADD";
@@ -404,7 +405,7 @@ public class AT2ACCSU1002Sis {
         }
 
         if(!Functions.insertInput(driver,new String[]{"hotel_category_search_area_add_i_category_code",getElements("hotel_category_search_area_add_i_category_code")},
-                "category_code",DataGenerator.getRandomAlphanumericSequence(3,true),where)){
+                "category_code",(Integer.toString(DataGenerator.random(5,50))),where)){
             return false;
         }
 

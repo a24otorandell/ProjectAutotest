@@ -72,6 +72,9 @@ public class AT2ACCSU1002Test {
         if(!Hotel_category_lenguage_data_edit(driver)){
             return false;
         }
+        if(!Hotel_category_lenguage_data_search(driver)){
+            return false;
+        }
         if(!Hotel_category_lenguage_data_other_actions(driver)){
             return false;
         }
@@ -94,7 +97,6 @@ public class AT2ACCSU1002Test {
         }
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_other_actions (TestDriver driver){
         String where = " on OTHER ACTIONS";
         driver.getReport().addHeader("OTHER ACTIONS IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -115,7 +117,6 @@ public class AT2ACCSU1002Test {
         }
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_edit (TestDriver driver){
         String where = " on EDIT";
         driver.getReport().addHeader("EDIT IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -154,7 +155,6 @@ public class AT2ACCSU1002Test {
                 where);
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_search (TestDriver driver){
         String where = " on SEARCH";
         driver.getReport().addHeader("SEARCH IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -189,7 +189,6 @@ public class AT2ACCSU1002Test {
         }
         return true;
     }
-
     private boolean Hotel_category_lenguage_data_add (TestDriver driver){
         String where = " on ADD";
         driver.getReport().addHeader("ADD IN HOTEL CATEGORY LENGUAGE DATA",3,false);
@@ -267,7 +266,6 @@ public class AT2ACCSU1002Test {
         }
         return true;
     }
-
     private boolean Hotel_category_search_area_other_actions (TestDriver driver){
 
         String where = " on OTHER ACTIONS";
@@ -291,7 +289,6 @@ public class AT2ACCSU1002Test {
 
         return true;
     }
-
     private boolean Hotel_category_search_area_qbe (TestDriver driver){
 
         String where = " on QBE";
@@ -334,7 +331,6 @@ public class AT2ACCSU1002Test {
 
         return true;
     }
-
     private boolean Hotel_category_search_area_edit (TestDriver driver){
 
         String where = " on EDIT";
@@ -346,6 +342,7 @@ public class AT2ACCSU1002Test {
                 where)){
             return false;
         }
+        Functions.break_time(driver,25,500);
         if(!Functions.getText(driver,new String[]{"hotel_category_search_area_ed_i_category_code",getElements("hotel_category_search_area_ed_i_category_code")}, // element path
                 "category_code", // key for data value (the name)
                 where)){
@@ -368,22 +365,21 @@ public class AT2ACCSU1002Test {
                 where);
         return true;
     }
-
     private boolean Hotel_category_search_area_search (TestDriver driver){
         String where = " on SEARCH";
         driver.getReport().addHeader("SEARCH IN HOTEL CATEGORY SEARCH AREA",3,false);
-        if(!Functions.checkClick(driver,
+        /*if(!Functions.checkClick(driver,
                 new String[]{"hotel_category_search_area_se_lov_category_code",getElements("hotel_category_search_area_se_lov_category_code")}, //element to click
                 new String[]{"hotel_category_search_area_se_lov_category_code_i_category_code",getElements("hotel_category_search_area_se_lov_category_code_i_category_code")}, //element expected to appear
                 30,500, //seconds/miliseconds (driver wait)
                 where)){
             return false;
-        }
+        }*/
         Functions.break_time(driver,6,500);
         if(!Functions.createLovByValue(driver,
                 new String[]{"hotel_category_search_area_se_lov_category_code",getElements("hotel_category_search_area_se_lov_category_code")}, //LoV button
-                new String[]{"hotel_category_search_area_se_lov_category_code_i_category_code",getElements("hotel_category_search_area_se_lov_category_code_i_category_code")}, //external LoV input
-                new String[]{"hotel_category_search_area_se_i_category_code",getElements("hotel_category_search_area_se_i_category_code")}, //internal LoV input
+                new String[]{"hotel_category_search_area_se_i_category_code",getElements("hotel_category_search_area_se_i_category_code")}, //external LoV input
+                new String[]{"hotel_category_search_area_se_lov_category_code_i_category_code",getElements("hotel_category_search_area_se_lov_category_code_i_category_code")}, //internal LoV input
                 getData("category_code"), // value to search
                 "category_code", //name of the data
                 where)){
@@ -398,7 +394,6 @@ public class AT2ACCSU1002Test {
         }
         return true;
     }
-
     private boolean Hotel_category_search_area_add (TestDriver driver){
 
         String where = " on ADD";
