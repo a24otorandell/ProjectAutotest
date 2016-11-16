@@ -507,6 +507,11 @@ public class AT2ACCDI0018Sis {
                 "office", getData("office"), where)) {
             return false;
         }
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_application_cost", getElements("qbe_sl_application_cost")},
+                getData("application_cost"), "application_cost", where)) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_to", getElements("qbe_i_to")},
                 "to", getData("to"), where)) {
             return false;
@@ -562,11 +567,6 @@ public class AT2ACCDI0018Sis {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_application_type", getElements("qbe_sl_application_type")},
                 getData("application_type"), "application_type", where)) {
-            return false;
-        }
-        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_application_cost", getElements("qbe_sl_application_cost")},
-                getData("application_cost"), "application_cost", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
