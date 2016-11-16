@@ -57,7 +57,6 @@ public class AT2TRFSU0016Test {
         return false;
     }
 
-
     private boolean Aditional_suplements(TestDriver driver) {
 
         if (!Add_aditional(driver)) {
@@ -131,7 +130,27 @@ public class AT2TRFSU0016Test {
                 " on QBE")) {
             return false;
         }
-
+        Functions.break_time(driver,6,500);
+        if(!Functions.createLovByValue(driver,
+                new String[]{"aditional_se_lov_suplier_name",getElements("aditional_se_lov_suplier_name")}, //LoV button
+                new String[]{"aditional_se_i_suplier_name",getElements("aditional_se_i_suplier_name")}, //external LoV input
+                new String[]{"aditional_se_lov_suplier_name_i_short_name",getElements("aditional_se_lov_suplier_name_i_short_name")}, //internal LoV input
+                data.getData().get("suplier_name"), // value to search
+                "se_i_suplier_name", //name of the data
+                " on QBE")){
+            return false;
+        }
+        if(!Functions.clickSearchAndResult(driver,
+                new String[]{"aditional_se_b_search",getElements("aditional_se_b_search")}, //search button
+                new String[]{"aditional_se_result",getElements("aditional_se_result")}, //Falta crear este resultado por bug
+                " on SEARCH")){
+            return false;
+        }
+        if(!Functions.simpleClick(driver,
+                new String[]{"aditional_se_b_reset",getElements("aditional_se_b_reset")}, //element to click
+                " on QBE")){
+            return false;
+        }
 
         if (!Functions.clickQbE(driver,
                 new String[]{"aditional_qbe_b_qbe", getElements("aditional_qbe_b_qbe")},// query button
