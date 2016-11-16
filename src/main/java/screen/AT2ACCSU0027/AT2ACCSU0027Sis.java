@@ -6,6 +6,8 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by vsolis on 21/09/2016.
  */
@@ -60,28 +62,24 @@ public class AT2ACCSU0027Sis {
 
     private boolean Sws_office_sending (TestDriver driver){
 
-        if(!Edit_sws_negative(driver)){
+
+        if(!Edit_sws(driver)){
             return false;
         }
-
         if(!Search_sws(driver)){
             return false;
         }
-        if(!Edit_sws_positive(driver)){
-            return false;
-        }
-
         if(!QBE_sws(driver)){
             return false;
         }
-
         if(!Other_actions_sws(driver)){
             return false;
         }
 
         return true;
     }
-    private boolean Edit_sws_positive (TestDriver driver){
+
+    private boolean Edit_sws (TestDriver driver){
         driver.getReport().addHeader("EDIT IN SWS",3,false);
 
         if(!Functions.simpleClick(driver,
@@ -113,72 +111,71 @@ public class AT2ACCSU0027Sis {
                 "email",DataGenerator.getRandomAlphanumericSequence(5,true) + "@" + DataGenerator.getRandomAlphanumericSequence(5,true) + ".es"," on EDIT")){
             return false;
         }
-        if(!Functions.checkboxValue(driver,
-                getElements("SWS_ed_check_box_contracts"),"contracts",true,true," on EDIT")){
-            return false;
-        }
-        if(!Functions.checkboxValue(driver,
-                getElements("SWS_ed_check_box_send_report"),"report",true,true," on EDIT")){
-            return false;
-        }
-        if(!Functions.checkboxValue(driver,
-                getElements("SWS_ed_check_box_stop_sales"),"sales",true,true," on EDIT")){
-            return false;
-        }
-        if(!Functions.checkClickByAbsence(driver,
-                new String[]{"SWS_ed_b_save",getElements("SWS_ed_b_save")}, //element to click
-                recursiveXPaths.glass, //element expected to disappear
-                30,500,
-                " on EDIT")){
-            return false;
+
+        Random value = new Random();
+        boolean getRandomBoolean = value.nextBoolean();
+
+        String randomBoolean;
+
+        if(getRandomBoolean){
+
+            randomBoolean = "Yes";
+            if(!Functions.checkboxValue(driver,
+                    getElements("SWS_ed_check_box_contracts"),"contracts",true,true," on EDIT")){
+                return false;
+            }
+        } else {
+            randomBoolean = "No";
+            if(!Functions.checkboxValue(driver,
+                    getElements("SWS_ed_check_box_contracts"),"contracts",false,true," on EDIT")){
+                return false;
+
+            }
+
         }
 
 
-        return true;
-    }
-    private boolean Edit_sws_negative (TestDriver driver){
-        driver.getReport().addHeader("EDIT IN SWS",3,false);
+        Random value2 = new Random();
+        boolean getRandomBoolean2 = value2.nextBoolean();
 
-        if(!Functions.simpleClick(driver,
-                new String[]{"SWS_se_b_save",getElements("SWS_se_b_save")}, //element to click
-                " on EDIT")){
-            return false;
-        }
-        if(!Functions.simpleClick(driver,
-                new String[]{"SWS_ed_result",getElements("SWS_ed_result")}, //element to click
-                " on EDIT")){
-            return false;
-        }
+        String randomBoolean2;
 
-        Functions.break_time(driver,6,500);
-        if(!Functions.checkClick(driver,
-                new String[]{"SWS_ed_b_edit",getElements("SWS_ed_b_edit")}, //element to click
-                new String[]{"SWS_ed_i_code",getElements("SWS_ed_i_code")}, //element expected to appear
-                30,500, //seconds/miliseconds (driver wait)
-                " on EDIT")){
-            return false;
+        if(getRandomBoolean2){
+
+            randomBoolean2 = "Yes";
+            if(!Functions.checkboxValue(driver,
+                    getElements("SWS_ed_check_box_send_report"),"report",true,true," on EDIT")){
+                return false;
+            }
+        } else {
+            randomBoolean2 = "No";
+            if(!Functions.checkboxValue(driver,
+                    getElements("SWS_ed_check_box_send_report"),"report",false,true," on EDIT")){
+                return false;
+
+            }
+
         }
-        Functions.getValue(driver,new String[]{"SWS_ed_i_code",getElements("SWS_ed_i_code")}, // element path
-                "code", // key for data value (the name)
-                " on EDIT");
-        Functions.getValue(driver,new String[]{"SWS_ed_i_desreceptivo",getElements("SWS_ed_i_desreceptivo")}, // element path
-                "desrecep", // key for data value (the name)
-                " on EDIT");
-        if(!Functions.insertInput(driver,new String[]{"SWS_ed_i_Email",getElements("SWS_ed_i_Email")},
-                "email",DataGenerator.getRandomAlphanumericSequence(5,true) + "@" + DataGenerator.getRandomAlphanumericSequence(5,true) + ".es"," on EDIT")){
-            return false;
-        }
-        if(!Functions.checkboxValue(driver,
-                getElements("SWS_ed_check_box_contracts"),"contracts",false,true," on EDIT")){
-            return false;
-        }
-        if(!Functions.checkboxValue(driver,
-                getElements("SWS_ed_check_box_send_report"),"report",false,true," on EDIT")){
-            return false;
-        }
-        if(!Functions.checkboxValue(driver,
-                getElements("SWS_ed_check_box_stop_sales"),"sales",false,true," on EDIT")){
-            return false;
+        Random value3 = new Random();
+        boolean getRandomBoolean3 = value3.nextBoolean();
+
+        String randomBoolean3;
+
+        if(getRandomBoolean3){
+
+            randomBoolean3 = "Yes";
+            if(!Functions.checkboxValue(driver,
+                    getElements("SWS_ed_check_box_stop_sales"),"sales",true,true," on EDIT")){
+                return false;
+            }
+        } else {
+            randomBoolean3 = "No";
+            if(!Functions.checkboxValue(driver,
+                    getElements("SWS_ed_check_box_stop_sales"),"sales",false,true," on EDIT")){
+                return false;
+
+            }
+
         }
         if(!Functions.checkClickByAbsence(driver,
                 new String[]{"SWS_ed_b_save",getElements("SWS_ed_b_save")}, //element to click
@@ -249,17 +246,17 @@ public class AT2ACCSU0027Sis {
         }
         if(!Functions.selectText(driver,
                 new String[]{"SWS_qbe_select_text_contracts",getElements("SWS_qbe_select_text_contracts")},
-                "Yes","qbe_contracts"," on QBE")){
+                getData("contracts"),"qbe_contracts"," on QBE")){
             return false;
         }
         if(!Functions.selectText(driver,
                 new String[]{"SWS_qbe_select_text_send_report",getElements("SWS_qbe_select_text_send_report")},
-                "Yes","qbe_report"," on QBE")){
+                getData("report"),"qbe_report"," on QBE")){
             return false;
         }
         if(!Functions.selectText(driver,
                 new String[]{"SWS_qbe_select_text_stop_sales",getElements("SWS_qbe_select_text_stop_sales")},
-                "Yes","qbe_sales"," on QBE")){
+                getData("sales"),"qbe_sales"," on QBE")){
             return false;
         }
         if(!Functions.enterQueryAndClickResult(driver,
@@ -273,6 +270,11 @@ public class AT2ACCSU0027Sis {
         return true;
     }
     private boolean Search_sws (TestDriver driver){
+
+        boolean check_box_contract;
+        boolean check_box_report;
+        boolean check_box_sales;
+
 
         driver.getReport().addHeader(" SEARCH IN SWS",3,false);
 
@@ -291,18 +293,44 @@ public class AT2ACCSU0027Sis {
                 "se_email",data.getData().get("email")," on SEARCH")){
             return false;
         }
+        if(getData("contracts").equalsIgnoreCase("Yes")){
+            check_box_contract = true;
+        } else {
+
+            check_box_contract = false;
+        }
+
+        if(getData("report").equalsIgnoreCase("Yes")){
+            check_box_report = true;
+        } else {
+
+            check_box_report = false;
+        }
+
+
+        if(getData("sales").equalsIgnoreCase("Yes")){
+            check_box_sales = true;
+        } else {
+
+
+            check_box_sales = false;
+
+        }
+        Functions.break_time(driver,6,500);
         if(!Functions.checkboxValue(driver,
-                getElements("SWS_se_check_box_contracts"),"contracts",false,true," on SEARCH")){
+                getElements("SWS_se_check_box_contracts"),"contracts",check_box_contract,true," on SEARCH")){
+            return false;
+        }
+        Functions.break_time(driver,6,500);
+        if(!Functions.checkboxValue(driver,
+                getElements("SWS_se_check_box_send_report"),"report",check_box_report,true," on SEARCH")){
             return false;
         }
         if(!Functions.checkboxValue(driver,
-                getElements("SWS_se_check_box_send_report"),"report",false,true," on SEARCH")){
+                getElements("SWS_se_check_box_stop_sales"),"sales",check_box_sales,true," on SEARCH")){
             return false;
         }
-        if(!Functions.checkboxValue(driver,
-                getElements("SWS_se_check_box_stop_sales"),"sales",false,true," on SEARCH")){
-            return false;
-        }
+        Functions.break_time(driver,6,500);
         if(!Functions.clickSearchAndResult(driver,
                 new String[]{"SWS_se_b_save",getElements("SWS_se_b_save")}, //search button
                 new String[]{"SWS_ed_result",getElements("SWS_ed_result")}, //Falta crear este resultado por bug
