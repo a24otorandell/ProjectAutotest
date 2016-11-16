@@ -4,7 +4,7 @@ import core.CommonActions.CommonProcedures;
 import core.TestDriver.TestDriver;
 
 /**
- * Created by aibanez on 11/11/2016.
+ * Created by aibanez on 16/11/2016.
  */
 public class AT2MSCSU0002Test {
     protected AT2MSCSU0002Locators locators;

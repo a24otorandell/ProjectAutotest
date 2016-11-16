@@ -1,4 +1,4 @@
-package screen.AT2MSCSU0002;
+package screen.AT2ACCSU0060;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,10 +6,10 @@ import java.util.Map;
 /**
  * Created by aibanez on 16/11/2016.
  */
-public class AT2MSCSU0002Locators {
+public class AT2ACCSU0060Locators {
     Map<String, String> elements = new HashMap<>();
 
-    public AT2MSCSU0002Locators(String enviroment) {
+    public AT2ACCSU0060Locators(String enviroment) {
         setElements();
     }
 
