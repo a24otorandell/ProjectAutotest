@@ -1549,7 +1549,7 @@ public class Functions {
      * @param rows       {@code Integer} Rows that you want to be stored
      * @return {@code boolean}
      */
-    public static boolean collectTableData(TestDriver driver, String[] columns, String xpathBegin, String xpathMid, String xpathEnd, int rows, String where) {
+    public static boolean collectTableData(TestDriver driver, String[] columns, String xpathtable, int rows, String where) {
         /*
         Xpath completo de ejemplo: //*[contains(@id,  'pc1:resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
                                 el primer num (tbody/tr[n]) es la fila y el ultimo (tr/td[n]) la columna
@@ -1564,17 +1564,18 @@ public class Functions {
             xpathBegin,
             xpathMid,
             xpathEnd,
-            1, //number of rows to retrieve
+            1, // row to give values
             "where");
          */
+        String xpathBegin = "/table/tbody/tr[";
+        String xpathMid = "]/td[2]/div/table/tbody/tr/td[";
+        String xpathEnd = "]";
         try {
-            for (int i = 1; i < rows + 1; i++) {
                 for (int j = 1; j < columns.length + 1; j++) {
                     getText(driver,
-                            new String[]{columns[j - 1], xpathBegin + i + xpathMid + j + xpathEnd},
-                            columns[j - 1] + "_" + Integer.toString(i), where);
+                            new String[]{columns[j - 1], xpathtable + xpathBegin + rows + xpathMid + j + xpathEnd},
+                            columns[j - 1], where);
                 }
-            }
         } catch (Exception e) {
             String ecode = "--ERROR: error to retrieve values " + where;
             e.printStackTrace();

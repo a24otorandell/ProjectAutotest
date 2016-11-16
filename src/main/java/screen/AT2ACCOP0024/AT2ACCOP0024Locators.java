@@ -83,6 +83,7 @@ public class AT2ACCOP0024Locators {
         elements.put("record_interaction_b_new_b_file", "//input[contains(@id, 'if1::content')]");
         elements.put("record_interaction_b_new_i_add", "//*[contains(@id, '1:cb1')]");
         /* QBE */
+        elements.put("record_interaction_qbe_b_clear", "//*[contains(@id, 'pc1:resId1::ch::t')]/tbody/tr[2]/th/a");
         elements.put("record_interaction_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
         elements.put("record_interaction_b_qbe_i_report", "//*[contains(@id, 'resId1_afr_c9::content')]");
         elements.put("record_interaction_b_qbe_i_file", "//*[contains(@id, 'resId1_afr_c10::content')]");
@@ -110,6 +111,11 @@ public class AT2ACCOP0024Locators {
         elements.put("alert_e_info", "//*[contains(@id, 'doc0::msgDlg::_cnt')]/div/table/tbody/tr/td/table/tbody/tr/td[2]/div");
         elements.put("alert_b_x", "//*[contains(@id, 'doc0::msgDlg::close')]");
         elements.put("alert_box", "//*[contains(@id, 'doc0::msgDlg')]");
+        //EDIT
+        elements.put("result_b_edit", "//*[contains(@id, 'pc1:pcgt1:boton_edit')]");
+        elements.put("result_b_edit_i_batchid", "//*[contains(@id, 'pc1:pcgt1:it7::content')]");
+        elements.put("result_b_edit_b_save", "//*[contains(@id, 'pc1:pcgt1:btn_commitExit')]");
+
     }
 
     /**

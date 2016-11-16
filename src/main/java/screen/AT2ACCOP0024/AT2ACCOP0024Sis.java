@@ -1,11 +1,14 @@
 package screen.AT2ACCOP0024;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.ui.Select;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -26,14 +29,12 @@ public class AT2ACCOP0024Sis {
         setLocators(new AT2ACCOP0024Locators(enviroment));
         setData(new AT2ACCOP0024Data(enviroment));
     }
-
     /**
      * @return an AT2ACCOP0024Locators object
      */
     public AT2ACCOP0024Locators getLocators() {
         return locators;
     }
-
     /**
      * @param locators Gets the locators given in the ATACCOP0024Locators, a Hashmap with locator_name[0], xpath[1]
      *                 and puts it in the locators variable
@@ -41,14 +42,12 @@ public class AT2ACCOP0024Sis {
     public void setLocators(AT2ACCOP0024Locators locators) {
         this.locators = locators;
     }
-
     /**
      * @return an AT2ACCOP0024Data object
      */
     public AT2ACCOP0024Data getData() {
         return data;
     }
-
     /**
      * @param data ATACCOP0024Data data, that has a Hashmap with data_name[0], xpath[1]
      *             and puts it in the data object of this class
@@ -56,7 +55,6 @@ public class AT2ACCOP0024Sis {
     public void setData(AT2ACCOP0024Data data) {
         this.data = data;
     }
-
     /**
      * This function calls the setScreenInfo to establish some data and then the goToScreen function
      *
@@ -68,7 +66,6 @@ public class AT2ACCOP0024Sis {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     /**
      * This function sets the test details for the report created
      *
@@ -80,7 +77,6 @@ public class AT2ACCOP0024Sis {
         driver.getTestdetails().setSubmenu("Operations");
         driver.getTestdetails().setScreen("Financial Monitoring 2.0");
     }
-
     /**
      * @param key String with the locator_name to get
      * @return String with an xpath
@@ -88,7 +84,6 @@ public class AT2ACCOP0024Sis {
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
     }
-
     /**
      * @param key String with the data_name to get
      * @return String with an xpath
@@ -116,43 +111,54 @@ public class AT2ACCOP0024Sis {
         if (!detachTable(driver)) {
             return false;
         }
-        if (!reset(driver)) {
+        if (!financial_report(driver)) {
+            return false;
+        }
+        if (!enabler(driver, true)) {
             return false;
         }
         if (!qbe(driver)) {
             return false;
         }
-        if (!financial_report(driver)) {
+        if (!edit(driver)) {
+            return false;
+        }
+        if (!qbe(driver)) {
             return false;
         }
         if (!exportAction(driver)) {
             return false;
         }
-        /*if (!modifyAction(driver)) {
+        if (!modifyAction(driver)) {
             return false;
-        }*/
+        }
         if (!reprocessAction(driver)) {
             return false;
         }
-        /*if (!delete(driver)) {
+        if (!enabler(driver, false)) {
             return false;
-        }*/
+        }
+        if (!delete(driver)) {
+            return false;
+        }
+
         return false;
     }
 
     /**
-     * Gets the data of the first 3 rows after arrange the table by financial date <br>
+     * Gets the data of the first 3 rows after arrange the table by 'total amount' <br>
      * In this component of the Atlas2.0 proyect we can't randomize data so we get it directly from the table
      *
-     * @param driver Object that manages the core of the test
-     * @return boolean to control the process flow
-     * @see Functions#break_time(TestDriver, int, long)
+     * @param driver {@code Object} that manages the core of the test
+     * @return {@code boolean} to control the process flow
+     * @see Functions#sleep(int)
      * @see Functions#simpleClick(TestDriver, String[], String)
      * @see Functions#getText(TestDriver, String[], String, String)
      * @see core.HTMLReport.AutoReport#addContent(String)
      */
     protected boolean gettingData(TestDriver driver) {
         driver.getReport().addContent("Getting data to test:", "h4", "");
+        Functions.zoomOut(driver, 1);
         Functions.break_time(driver, 4, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_search", getElements("search_b_search")},
@@ -161,7 +167,13 @@ public class AT2ACCOP0024Sis {
         }
         Functions.break_time(driver, 4, 500);
         if (!Functions.simpleClick(driver,
-                new String[]{"record_interaction_b_qbe_financial_status", getElements("record_interaction_b_qbe_financial_status")},
+                new String[]{"record_interaction_b_qbe_total_amount", getElements("record_interaction_b_qbe_total_amount")},
+                " on Get data")) {
+            return false;
+        }
+        Functions.break_time(driver, 4, 500);
+        if (!Functions.simpleClick(driver,
+                new String[]{"record_interaction_b_qbe_total_amount", getElements("record_interaction_b_qbe_total_amount")},
                 " on Get data")) {
             return false;
         }
@@ -169,15 +181,9 @@ public class AT2ACCOP0024Sis {
         String[] fields = {"report", "file", "type", "financial_date_from", "financial_status",
                 "merchant", "settelment", "currency", "modification_user", "modification_date_from",
                 "batchID", "total_amount", "submerchant"};
-
-        Functions.collectTableData(driver,
-                fields,
-                "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[", "]/td[2]/div/table/tbody/tr/td[", "]",
-                3,
-                " on Getting Data");
+        Functions.collectTableData(driver, fields, "//*[contains(@id, 'pc1:resId1::db')]", 1, " on Getting Data");
         return true;
     }
-
     /**
      * This function tries to execute the EXPORT action that downloads a file, checking every fail or dialog that may happen
      *
@@ -185,7 +191,7 @@ public class AT2ACCOP0024Sis {
      * @return boolean to control the process flow
      * @see Functions#checkClick(TestDriver, String[], String[], String)
      * @see Functions#simpleClick(TestDriver, String[], String)
-     * @see Functions#break_time(TestDriver, int, long)
+     * @see Functions#sleep(int)
      * @see Functions#screenshot(TestDriver, boolean)
      * @see Robot#keyPress(int)
      */
@@ -231,14 +237,13 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     /**
      * This function tries to execute the MODIFY action that uploads a file, checking every fail or dialog that may happen
      *
      * @param driver Object that manages the core of the test
      * @return boolean to control the process flow
      * @see Functions#simpleClick(TestDriver, String[], String)
-     * @see Functions#break_time(TestDriver, int, long)
+     * @see Functions#sleep(int)
      * @see Functions#checkClick(TestDriver, String[], String[], String)
      * @see Functions#fileUploader(TestDriver, String[], String[], String)
      * @see #modifyActionFileCreator(TestDriver)
@@ -285,7 +290,6 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     /**
      * For the MODIFY action we need a file to upload that has the same name as the previous, so we create one
      * Cheking it's previous exitence
@@ -308,7 +312,6 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     /**
      * This function tries to execute the REPROCESS action, checking every fail or dialog that may happen
      *
@@ -350,6 +353,7 @@ public class AT2ACCOP0024Sis {
                     " on reprocess")) {
                 return false;
             }
+            Functions.break_time(driver, 2, 500);
             if (!Functions.getText(driver,
                     new String[]{"alert_e_info", getElements("alert_e_info")},
                     "info_text_reprocess",
@@ -359,10 +363,13 @@ public class AT2ACCOP0024Sis {
             if (!getData("info_text_reprocess").equals("No such file")) {
                 Functions.screenshot(driver, false);
             }
-            if (!Functions.simpleClick(driver,
-                    new String[]{"alert_b_ok", getElements("alert_b_ok")},
-                    " on reprocess")) {
-                return false;
+            Functions.break_time(driver, 2, 500);
+            if (Functions.displayed(driver, getElements("alert_b_ok"))) {
+                if (!Functions.simpleClick(driver,
+                        new String[]{"alert_b_ok", getElements("alert_b_ok")},
+                        " on reprocess")) {
+                    return false;
+                }
             }
             if (driver.getDriver().findElement(By.xpath(getElements("record_interaction_b_reprocess_b_cancel"))).isDisplayed()) {
                 ErrorManager.process(driver, "Cannot complete the ~Reprocess~ Action");
@@ -375,7 +382,6 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     /**
      * This function tries to execute the NEW action that uploads a file, checking every fail or dialog that may happen
      *
@@ -408,7 +414,7 @@ public class AT2ACCOP0024Sis {
                 " on new")) {
             return false;
         }
-        //ToDo learn to use URLs for the files
+        //ToDo -> learn to use URLs for the files
         if (!Functions.fileUploader(driver,
                 new String[]{"record_interaction_b_new_b_file", getElements("record_interaction_b_new_b_file")},
                 new String[]{"test", getData("file_new")},
@@ -416,14 +422,16 @@ public class AT2ACCOP0024Sis {
             return false;
         }
         Functions.break_time(driver, 2, 500);
-        if (!Functions.simpleClick(driver,
+        if (!Functions.checkClickByAbsence(driver,
                 new String[]{"record_interaction_b_new_i_add", getElements("record_interaction_b_new_i_add")},
+                recursiveXPaths.glass,
                 " on new")) {
             return false;
         }
         try {
-            Functions.break_time(driver, 30, 500);
-            if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed() || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
+            Functions.break_time(driver, 2, 500);
+            if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed()
+                    || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
                 if (!Functions.getText(driver,
                         new String[]{"alert_e_info", getElements("alert_e_info")},
                         "info_text_new",
@@ -433,8 +441,9 @@ public class AT2ACCOP0024Sis {
                 if (!getData("info_text_new").equals("The report will be process in the next execution")) {
                     ErrorManager.process(driver, "Cannot complete the ~New~ Action");
                 }
-                Functions.simpleClick(driver,
+                Functions.checkClickByAbsence(driver,
                         new String[]{"alert_b_ok", getElements("alert_b_ok")},
+                        recursiveXPaths.glass,
                         " on new");
                 return true;
             }
@@ -443,7 +452,6 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     /**
      * Searches doing inputs of the previous recolected data
      *
@@ -454,106 +462,146 @@ public class AT2ACCOP0024Sis {
      * @see Functions#createLovByValue(TestDriver, String[], String[], String[], String, String, String)
      */
     protected boolean search(TestDriver driver) {
+        String financialStatus;
         driver.getReport().addContent("Search:", "h4", "");
         try {
             if (!Functions.insertInput(driver,
                     new String[]{"search_i_report", getElements("search_i_report")},
-                    "report_2",
-                    getData("report_2"),
+                    "report",
+                    getData("report"),
                     " on SEARCH")) {
                 return false;
             }
+            if (getData("financial_status").equals("OK") || getData("financial_status").equals("PROCESS") || getData("financial_status").equals("NEW")) {
+                financialStatus = "PROCESS-OK";
+            } else {
+                financialStatus = getData("financial_status");
+            }
+            //Le cambio el nombre porque para que la busqueda de la qbe no se atere el valor por el condicional anterior.
             if (!Functions.selectText(driver,
                     new String[]{"search_l_financial_status", getElements("search_l_financial_status")},
-                    getData("financial_status_2"),//ToDo financial status list not equal to results fields, so...
-                    "financial_status_2",
-                    " on SEARCH")) {
+                    financialStatus, "financial_status2", " on SEARCH")) {
                 return false;
             }
+            //dos veces porque no se suele seleccionar a la primera
+            Functions.break_time(driver, 30, 500);
+            if (!Functions.selectText(driver,
+                    new String[]{"search_l_financial_status", getElements("search_l_financial_status")},
+                    financialStatus, "financial_status2", " on SEARCH")) {
+                return false;
+            }
+            Functions.break_time(driver, 30, 500);
             if (!Functions.insertInput(driver,
-                    new String[]{"search_i_modification_date_from", getElements("search_i_modification_date_from")},
-                    "modification_date_2",
-                    getData("modification_date_2"),
+                    new String[]{"search_i_modification_user", getElements("search_i_modification_user")},
+                    "modification_user",//usually empty
+                    getData("modification_user"),
                     " on SEARCH")) {
                 return false;
             }
-            Functions.break_time(driver, 4, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"search_i_file", getElements("search_i_file")},
-                    "file_2",
-                    getData("file_2"),
+                    "file",
+                    getData("file"),
                     " on SEARCH")) {
                 return false;
             }
             if (!Functions.insertInput(driver,
                     new String[]{"search_i_merchant", getElements("search_i_merchant")},
-                    "merchant_2",
-                    getData("merchant_2"),
+                    "merchant",
+                    getData("merchant"),
                     " on SEARCH")) {
                 return false;
             }
             if (!Functions.insertInput(driver,
-                    new String[]{"search_i_modification_date_to", getElements("search_i_modification_date_to")},
-                    "modification_date_2",
-                    getData("modification_date_2"),
-                    " on SEARCH")) {
-                return false;
-            }
-            Functions.break_time(driver, 6, 500);
-            if (!Functions.selectText(driver,
-                    new String[]{"search_l_type", getElements("search_l_type")},
-                    getData("type_2"),
-                    "type_2",
-                    " on SEARCH")) {
-                return false;
-            }
-            if (!Functions.insertInput(driver,
-                    new String[]{"search_i_settelment", getElements("search_i_settelment")},
-                    "settelment_2",
-                    getData("settelment_2"),
-                    " on SEARCH")) {
-                return false;
-            }
-            if (!Functions.insertInput(driver,
-                    new String[]{"search_i_financial_date_from", getElements("search_i_financial_date_from")},
-                    "financial_date_2",
-                    getData("financial_date_2"),
+                    new String[]{"search_i_modification_date_from", getElements("search_i_modification_date_from")},
+                    "modification_date_from",
+                    getData("modification_date_from"),
                     " on SEARCH")) {
                 return false;
             }
             Functions.break_time(driver, 4, 500);
-            if (!getData("currency_2").equals(" ")) {
+            if (!getData("type").equals("ERROR")) {
+                if (!Functions.selectText(driver,
+                        new String[]{"search_l_type", getElements("search_l_type")},
+                        getData("type"), "type", " on SEARCH")) {
+                    return false;
+                }
+                Functions.break_time(driver, 30, 500);
+                if (!Functions.selectText(driver,
+                        new String[]{"search_l_type", getElements("search_l_type")},
+                        getData("type"), "type", " on SEARCH")) {
+                    return false;
+                }
+                Functions.break_time(driver, 30, 500);
+            }
+            if (!getData("submerchant").equals(" ")) {
                 if (!Functions.createLovByValue(driver,
-                        new String[]{"search_lov_currency", getElements("search_lov_currency")},
-                        new String[]{"search_i_currency", getElements("search_i_currency")},
-                        new String[]{"search_lov_currency_i_currency", getElements("search_lov_currency_i_currency")},
-                        getData("currency_2"),
-                        "currency2",
+                        new String[]{"search_lov_submerchant", getElements("search_lov_submerchant")},
+                        new String[]{"search_i_submerchant", getElements("search_i_submerchant")},
+                        new String[]{"search_lov_submerchant_i_submerchant", getElements("search_lov_submerchant_i_submerchant")},
+                        getData("submerchant"),
+                        "submerchant",
                         " on SEARCH")) {
                     return false;
                 }
             }
             if (!Functions.insertInput(driver,
-                    new String[]{"search_i_financial_date_to", getElements("search_i_financial_date_to")},
-                    "financial_date_2",
-                    getData("financial_date_2"),
-                    " on SEARCH")) {
-                return false;
-            }
-            if (!Functions.insertInput(driver,
-                    new String[]{"search_i_modification_user", getElements("search_i_modification_user")},
-                    "modification_user_2",
-                    getData("modification_user_2"),
-                    " on SEARCH")) {
-                return false;
-            }
-            if (!Functions.simpleClick(driver,
-                    new String[]{"search_b_search", getElements("search_b_search")},
+                    new String[]{"search_i_modification_date_to", getElements("search_i_modification_date_to")},
+                    "modification_date_from",
+                    getData("modification_date_from"),
                     " on SEARCH")) {
                 return false;
             }
             Functions.break_time(driver, 4, 500);
-            if (!Functions.simpleClick(driver,
+            if (!Functions.insertInput(driver,
+                    new String[]{"search_i_financial_date_from", getElements("search_i_financial_date_from")},
+                    "financial_date_from",
+                    getData("financial_date_from"),
+                    " on SEARCH")) {
+                return false;
+            }
+            Functions.break_time(driver, 4, 500);
+            if (!Functions.insertInput(driver,
+                    new String[]{"search_i_settelment", getElements("search_i_settelment")},
+                    "settelment",
+                    getData("settelment"),
+                    " on SEARCH")) {
+                return false;
+            }
+            Functions.break_time(driver, 30, 500);
+            if (!Functions.selectText(driver,
+                    new String[]{"search_l_reprocess", getElements("search_l_reprocess")},
+                    "Son", "reprocess", " on SEARCH")) {
+                return false;
+            }
+            Functions.break_time(driver, 30, 500);
+            if (!Functions.selectText(driver,
+                    new String[]{"search_l_reprocess", getElements("search_l_reprocess")},
+                    "Son", "reprocess", " on SEARCH")) {
+                return false;
+            }
+            Functions.break_time(driver, 30, 500);
+
+            if (!Functions.insertInput(driver,
+                    new String[]{"search_i_financial_date_to", getElements("search_i_financial_date_to")},
+                    "financial_date_from",
+                    getData("financial_date_from"),
+                    " on SEARCH")) {
+                return false;
+            }
+            if (!getData("currency").equals(" ")) {
+                if (!Functions.createLovByValue(driver,
+                        new String[]{"search_lov_currency", getElements("search_lov_currency")},
+                        new String[]{"search_i_currency", getElements("search_i_currency")},
+                        new String[]{"search_lov_currency_i_currency", getElements("search_lov_currency_i_currency")},
+                        getData("currency"),
+                        "currency",
+                        " on SEARCH")) {
+                    return false;
+                }
+            }
+            if (!Functions.clickSearchAndResult(driver,
+                    new String[]{"search_b_search", getElements("search_b_search")},
                     new String[]{"search_e_result", getElements("search_e_result")},
                     " on SEARCH")) {
                 return false;
@@ -563,7 +611,6 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     /**
      * Does a search via the QBE using the previous recolected data
      *
@@ -585,88 +632,104 @@ public class AT2ACCOP0024Sis {
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_report", getElements("record_interaction_b_qbe_i_report")},
-                "report_3",
-                getData("report_3"),
+                "report",
+                getData("report"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_file", getElements("record_interaction_b_qbe_i_file")},
-                "file_3",
-                getData("file_3"),
+                "file",
+                getData("file"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_type", getElements("record_interaction_b_qbe_i_type")},
-                "type_3",
-                getData("type_3"),
+                "type",
+                getData("type"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_financial_date", getElements("record_interaction_b_qbe_i_financial_date")},
-                "financial_date_3",
-                getData("financial_date_3"),
+                "financial_date_from",
+                getData("financial_date_from"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_financial_status", getElements("record_interaction_b_qbe_i_financial_status")},
-                "financial_status_3",
-                getData("financial_status_3"),
+                "financial_status",
+                getData("financial_status"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_merchant", getElements("record_interaction_b_qbe_i_merchant")},
-                "merchant_3",
-                getData("merchant_3"),
+                "merchant",
+                getData("merchant"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_settelment", getElements("record_interaction_b_qbe_i_settelment")},
-                "settelment_3",
-                getData("settelment_3"),
+                "settelment",
+                getData("settelment"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_currency", getElements("record_interaction_b_qbe_i_currency")},
-                "currency_3",
-                getData("currency_3"),
+                "currency",
+                getData("currency"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_modification_user", getElements("record_interaction_b_qbe_i_modification_user")},
-                "modification_user_3",
-                getData("modification_user_3"),
+                "modification_user",
+                getData("modification_user"),
                 " on QBE")) {
             return false;
         }
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_b_qbe_i_modification_date", getElements("record_interaction_b_qbe_i_modification_date")},
-                "modification_date_3",
-                getData("modification_date_3"),
+                "modification_date_from",
+                getData("modification_date_from"),
                 " on QBE")) {
             return false;
         }
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_search", getElements("search_b_search")},
+        if (!Functions.insertInput(driver,
+                new String[]{"record_interaction_b_qbe_i_batchID", getElements("record_interaction_b_qbe_i_batchID")},
+                "batchID",
+                getData("batchID"),
                 " on QBE")) {
             return false;
         }
-        Functions.break_time(driver, 4, 500);
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_e_result", getElements("search_e_result")},
+        if (!Functions.insertInput(driver,
+                new String[]{"record_interaction_b_qbe_i_total_amount", getElements("record_interaction_b_qbe_i_total_amount")},
+                "total_amount",
+                getData("total_amount"),
                 " on QBE")) {
             return false;
         }
+        if (!Functions.insertInput(driver,
+                new String[]{"record_interaction_b_qbe_i_submerchant", getElements("record_interaction_b_qbe_i_submerchant")},
+                "submerchant",
+                getData("submerchant"),
+                " on QBE")) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"record_interaction_b_qbe_i_batchID", getElements("record_interaction_b_qbe_i_batchID")}, //any query input
+                new String[]{"search_e_result", getElements("search_e_result")}, //table result
+                " on QBE")) {
+            return false;
+        }
+        Functions.zoomIn(driver);
         return true;
     }
-
     /**
      * Calls the detachtable function
      *
@@ -677,50 +740,39 @@ public class AT2ACCOP0024Sis {
     protected boolean detachTable(TestDriver driver) {
         if (!Functions.detachTable(driver,
                 new String[]{"record_interaction_b_detach_table", getElements("record_interaction_b_detach_table")},
-                false, false, " on Detach table")
+                true, false, " on Detach table")
                 ) {
             return false;
         }
         return true;
     }
-
-    /**
-     * Click on the Reset button
-     *
-     * @param driver Object that manages the core of the test
-     * @return boolean to control the process flow
-     * @see Functions#simpleClick(TestDriver, String[], String)
-     */
-    protected boolean reset(TestDriver driver) {
-        driver.getReport().addContent("Reset:", "h5", "");
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")},
-                " on RESET")) {
-            return false;
-        }
-        return true;
-    }
-
     /**
      * Cleans the form and fills the table with results
      *
      * @param driver TestDriver that manages the core of the test
      * @return boolean to control the process flow
      */
-    protected boolean enabler(TestDriver driver) {
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")},
-                " on SEARCH")) {
-            return false;
-        }
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_search", getElements("search_b_search")},
-                " on SEARCH")) {
-            return false;
+    protected boolean enabler(TestDriver driver, boolean clear_search) {
+        if (clear_search) {
+            if (!Functions.simpleClick(driver,
+                    new String[]{"search_b_reset", getElements("search_b_reset")},
+                    " on SEARCH")) {
+                return false;
+            }
+            if (!Functions.simpleClick(driver,
+                    new String[]{"search_b_search", getElements("search_b_search")},
+                    " on SEARCH")) {
+                return false;
+            }
+        } else {
+            if (!Functions.simpleClick(driver,
+                    new String[]{"record_interaction_qbe_b_clear", getElements("record_interaction_qbe_b_clear")}, //element to click
+                    " on QBE RESET")) {
+                return false;
+            }
         }
         return true;
     }
-
     /**
      * @param driver TestDriver that manages the core of the test
      * @return boolean to control the process flow
@@ -731,26 +783,26 @@ public class AT2ACCOP0024Sis {
                 new String[]{"record_interaction_e_financial_status_window",
                         getElements("record_interaction_e_financial_status_window")},
                 recursiveXPaths.glass,
-                " on Financial report - Close")) {
-            return false;
-        }
-        if (!Functions.getText(driver,
-                new String[]{"record_interaction_e_financial_status_window_e_records_num", getElements("record_interaction_e_financial_status_window_e_records_num")},
-                "financial_status_num_records",
-                " on Financial report - Getting the num of records")) {
+                " on Financial report")) {
             return false;
         }
         if (!getData("financial_status_num_records").equals("0") && !getData("financial_status_num_records").equals("1")) {
-            if (!financial_report_getdata(driver, false)) {
+            /*if (!financial_report_getdata(driver, false)) {
                 return false;
-            }
+            }*/
+            String[] fields = {"error_code", "error_description"};
+            Functions.collectTableData(driver, fields, "//*[contains(@id, 'pc2:t3::db')]", 1, " on Getting Data");
+
             if (!financial_report_qbe(driver)) {
                 return false;
             }
         } else if (getData("financial_status_num_records").equals("1")) {
-            if (!financial_report_getdata(driver, true)) {
+            /*if (!financial_report_getdata(driver, true)) {
                 return false;
-            }
+            }*/
+            String[] fields = {"error_code", "error_description"};
+            Functions.collectTableData(driver, fields, "//*[contains(@id, 'pc2:t3::db')]", 1, " on Getting Data");
+
             if (!financial_report_qbe(driver)) {
                 return false;
             }
@@ -758,21 +810,17 @@ public class AT2ACCOP0024Sis {
         if (!Functions.detachTable(driver,
                 new String[]{"record_interaction_e_financial_status_window_b_detach",
                         getElements("record_interaction_e_financial_status_window_b_detach")},
-                true,
-                true,
-                " on Financial report - Detach table")) {
+                true, true, " on Financial report - Detach table")) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"record_interaction_e_financial_status_window_b_close",
                         getElements("record_interaction_e_financial_status_window_b_close")},
-                recursiveXPaths.glass,
-                " on Financial report - Close")) {
+                recursiveXPaths.glass, " on Financial report")) {
             return false;
         }
         return true;
     }
-
     /**
      * @param driver TestDriver that manages the core of the test
      * @return boolean to control the process flow
@@ -798,9 +846,7 @@ public class AT2ACCOP0024Sis {
         if (!Functions.insertInput(driver,
                 new String[]{"record_interaction_e_financial_status_window_b_qbe_i_error_description",
                         getElements("record_interaction_e_financial_status_window_b_qbe_i_error_description")},
-                "error_desc",
-                getData("error_desc"),
-                " on Financial report - QBE")) {
+                "error_description", getData("error_description").replace(" ", "%"), " on Financial report - QBE")) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
@@ -813,7 +859,6 @@ public class AT2ACCOP0024Sis {
         }
         return true;
     }
-
     /**
      * @param driver TestDriver that manages the core of the test
      * @return boolean to control the process flow
@@ -827,31 +872,62 @@ public class AT2ACCOP0024Sis {
         driver.getReport().addContent("Financial report - Getting data:", "h5", "");
         String[] fields = {"error_code", "error_desc"};
         for (int j = 1; j < 3; j++) {
-            // pc2:t3::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]
-            // pc2:t3::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
+            // pc2:t3::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[1] Xpath cuando solo hay un registro
+            // pc2:t3::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1] Xpath cuando hay varios
             //el ultimo (tr/td[n]) es la columna
             Functions.getText(driver,
-                    new String[]{fields[j],
+                    new String[]{fields[j - 1],
                             "//*[contains(@id, 'pc2:t3::db')]/table/tbody/tr" + un + "/td[2]/div/table/tbody/tr/td[" + j + "]"},
-                    fields[j]
+                    fields[j - 1]
                     , " on Financial report - Getting Data");
         }
         return true;
     }
-
-
     /**
      * @param driver TestDriver that manages the core of the test
      * @return boolean to control the process flow
      */
-
     protected boolean delete(TestDriver driver) {
         driver.getReport().addHeader("RECORD DELETE", 3, true);
-        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"record_interaction_b_delete", getElements("record_interaction_b_delete")},
-                new String[]{"search_e_result", getElements("search_e_result")},
-                new String[]{"record_interaction_b_delete_b_ok", recursiveXPaths.delete_b_yes},
-                " on DELETE ")) {
+        driver.getReport().addContent("Only can delete the files in status NEW", "h5", "");
+        if (!Functions.insertInput(driver,
+                new String[]{"record_interaction_b_qbe_i_financial_status", getElements("record_interaction_b_qbe_i_financial_status")},
+                "financial_status_delete",
+                "NEW",
+                " on QBE")) {
+            return false;
+        }
+        driver.getDriver().findElement(By.xpath(getElements("record_interaction_b_qbe_i_financial_status"))).sendKeys(Keys.RETURN);
+        if (Functions.displayed(driver, getElements("search_e_result"))) {
+            if (!Functions.doDeleteNCheck(driver,
+                    new String[]{"record_interaction_b_delete", getElements("record_interaction_b_delete")},
+                    new String[]{"search_e_result", getElements("search_e_result")},
+                    new String[]{"record_interaction_b_delete_b_ok", recursiveXPaths.delete_b_yes},
+                    " on DELETE ")) {
+                return false;
+            }
+        } else {
+            driver.getReport().addContent("DOESN'T HAS RECORD WITH NEW VALUE, DOESN'T HAS VALUES TO DELETE", "h4", "");
+        }
+        return true;
+    }
+
+    private boolean edit(TestDriver driver) {
+        driver.getReport().addHeader("EDIT RECORD", 3, true);
+        if (!Functions.checkClick(driver,
+                new String[]{"result_b_edit", getElements("result_b_edit")}, //element to click
+                recursiveXPaths.glass, //element expected to appear
+                " on EDIT")) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"result_b_edit_i_batchid", getElements("result_b_edit_i_batchid")},
+                "batchID", String.valueOf(DataGenerator.random(1, 99)), " on EDIT")) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"result_b_edit_b_save", getElements("result_b_edit_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to appear
+                " on EDIT")) {
             return false;
         }
         return true;

@@ -87,21 +87,21 @@ public class AT2ACCOP0024Manager implements AT2Test {
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {
             if (getProcedure()[i].equals("s")) {
-                getTest().enabler(driver);
+                getTest().enabler(driver, true);
                 getTest().gettingData(driver);
                 getTest().search(driver);
-                getTest().enabler(driver);
+                getTest().enabler(driver, true);
             }
             if (getProcedure()[i].equals("q")) {
-                getTest().enabler(driver);
+                getTest().enabler(driver, true);
                 getTest().gettingData(driver);
                 getTest().qbe(driver);
-                getTest().enabler(driver);
+                getTest().enabler(driver, true);
             }
             if (getProcedure()[i].equals("t")) {
-                getTest().enabler(driver);
+                getTest().enabler(driver, true);
                 getTest().detachTable(driver);
-                getTest().enabler(driver);
+                getTest().enabler(driver, true);
             }
             if (getProcedure()[i].equals("x")) {
                 if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("test")) {
