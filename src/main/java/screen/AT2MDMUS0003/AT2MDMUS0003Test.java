@@ -55,20 +55,18 @@ public class AT2MDMUS0003Test {
     public boolean interaction_add_user (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
-        if (!Functions.checkClick(driver,
+        if (!Functions.simpleClick(driver,
                 new String[]{"users_b_add", getElements("users_b_add")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
-                where)) {
-            return false;
-        }
+                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_user",getElements("add_i_user")},
+                "user", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_company",getElements("add_lov_company")}, // b_lov
                 new String[]{"add_i_company", getElements("add_i_company")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "company",
-                where)){return false;}//Data namewhere)){return false;}
+                "company", where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_short_name", getElements("add_i_short_name")}, // element path
                 "short", // key for data value (the name)
                 where)){return false;}
@@ -94,6 +92,20 @@ public class AT2MDMUS0003Test {
         if(!Functions.getText(driver,new String[]{"add_i_department_des", getElements("add_i_department_des")}, // element path
                 "department_desc", // key for data value (the name)
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_name",getElements("add_i_name")},
+                "name", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
+                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_email",getElements("add_i_email")},
+                "mail", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+/*        if(!Functions.createLov(driver,
+                new String[]{"add_lov_org_role",getElements("add_lov_org_role")}, // b_lov
+                new String[]{"add_i_org_role", getElements("add_i_org_role")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "org", //Data name
+                where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_business",getElements("add_lov_business")}, // b_lov
                 new String[]{"add_i_business", getElements("add_i_business")}, // i_lov
@@ -102,24 +114,29 @@ public class AT2MDMUS0003Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "business", //Data name
                 where)){return false;}
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_active"),"active",true,true,where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_name",getElements("add_i_name")},
-                "name", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname_01",getElements("add_i_surname_01")},
-                "sur01",  DataGenerator.getRandomAlphanumericSequence(7, true), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname_02",getElements("add_i_surname_02")},
-                "sur02", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
-                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+                    "sur01",  DataGenerator.getRandomAlphanumericSequence(7, true), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname1",getElements("add_i_surname1")},
                 "sur1", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
-                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_email",getElements("add_i_email")},
-                "mail", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_intranet_user",getElements("add_i_intranet_user")},
                 "intranet", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+/*        if (!Functions.selectText(driver,
+                new String[]{"add_sl_blocking",getElements("add_sl_blocking")},
+                "Administrative", "blocking",  where)){return false;}*/
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_reference_user",getElements("add_lov_reference_user")}, // b_lov
+                new String[]{"add_i_reference_user", getElements("add_i_reference_user")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "reference", //Data name
+                where)){return false;}
+        if (!Functions.checkboxValue(driver,
+                getElements("add_ck_active"),"active",true,true,where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_surname_02",getElements("add_i_surname_02")},
+                "sur02", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
+                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_lang",getElements("add_lov_lang")}, // b_lov
                 new String[]{"add_i_lang", getElements("add_i_lang")}, // i_lov
@@ -130,36 +147,21 @@ public class AT2MDMUS0003Test {
                 where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_assign"),"assign",true,true,where)){return false;}
-        if (!Functions.selectText(driver,
-                new String[]{"add_sl_blocking",getElements("add_sl_blocking")},
-                "Active", "blocking",  where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_unblocking",getElements("add_i_unblocking")},
-                "unblocking", "unblocking", where)){return false;}
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_org_role",getElements("add_lov_org_role")}, // b_lov
-                new String[]{"add_i_org_role", getElements("add_i_org_role")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "org", //Data name
+                "unblocking", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 where)){return false;}
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_reference_user",getElements("add_lov_reference_user")}, // b_lov
-                new String[]{"add_i_reference_user", getElements("add_i_reference_user")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "reference", //Data name
-                where)){return false;}
-        if (!Functions.checkClickByAbsence(driver,
-                new String[]{"add_b_save", getElements("add_b_save")}, //e1
-                recursiveXPaths.glass, //e2
-                where)) return false; //where
         return true;
     }
     private boolean search_user(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH USER";
+        if (!Functions.simpleClick(driver,
+                new String[]{"users_tab", getElements("users_tab")}, //element to click
+                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_user",getElements("search_i_user")},
+                "user", getData("user"), where)){return false;}
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_company", getElements("search_lov_company")}, //LoV button
                 new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
@@ -189,8 +191,8 @@ public class AT2MDMUS0003Test {
                 new String[]{"search_i_business", getElements("search_i_business")}, //external LoV input
                 new String[]{"search_lov_business_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
-                getData("bussiness"), // value to search
-                "bussiness", //name of the data
+                getData("business"), // value to search
+                "business", //name of the data
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_name",getElements("search_i_name")},
                 "name", getData("name"), where)){return false;}
@@ -201,8 +203,6 @@ public class AT2MDMUS0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_active",getElements("search_sl_active")},
                 getData("active"), "active",  where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"search_i_deactivation",getElements("search_i_deactivation")},
-                "desactivation", getData("desactivation"), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"search_i_name1",getElements("search_i_name1")},
                 "name1", getData("name1"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_surname1",getElements("search_i_surname1")},
@@ -224,9 +224,9 @@ public class AT2MDMUS0003Test {
                 getData("lang"), // value to search
                 "lang", //name of the data
                 where)){return false;}
-        if (!Functions.selectText(driver,
+/*        if (!Functions.selectText(driver,
                 new String[]{"search_sl_blocking",getElements("search_sl_blocking")},
-                getData("blocking"), "blocking",  where)){return false;}
+                getData("blocking"), "blocking",  where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"search_i_unblocking",getElements("search_i_unblocking")},
                 "unblocking", getData("unblocking"), where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
@@ -240,20 +240,19 @@ public class AT2MDMUS0003Test {
     private boolean interaction_edit_user(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDITTION";
-        if (!Functions.checkClick(driver,
+        if (!Functions.simpleClick(driver,
                 new String[]{"users_b_edit", getElements("users_b_edit")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
-                where)) {
-            return false;
-        }
+                where)){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"users_b_edit2", getElements("users_b_edit2")}, //element to click
+                where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_company",getElements("add_lov_company")}, // b_lov
                 new String[]{"add_i_company", getElements("add_i_company")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "company",
-                where)){return false;}//Data namewhere)){return false;}
+                "company", where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_short_name", getElements("add_i_short_name")}, // element path
                 "short", // key for data value (the name)
                 where)){return false;}
@@ -279,6 +278,20 @@ public class AT2MDMUS0003Test {
         if(!Functions.getText(driver,new String[]{"add_i_department_des", getElements("add_i_department_des")}, // element path
                 "department_desc", // key for data value (the name)
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_name",getElements("add_i_name")},
+                "name", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
+                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_email",getElements("add_i_email")},
+                "mail", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+/*        if(!Functions.createLov(driver,
+                new String[]{"add_lov_org_role",getElements("add_lov_org_role")}, // b_lov
+                new String[]{"add_i_org_role", getElements("add_i_org_role")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "org", //Data name
+                where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_business",getElements("add_lov_business")}, // b_lov
                 new String[]{"add_i_business", getElements("add_i_business")}, // i_lov
@@ -287,24 +300,29 @@ public class AT2MDMUS0003Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "business", //Data name
                 where)){return false;}
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_active"),"active",false,true,where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_name",getElements("add_i_name")},
-                "name", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname_01",getElements("add_i_surname_01")},
                 "sur01",  DataGenerator.getRandomAlphanumericSequence(7, true), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname_02",getElements("add_i_surname_02")},
-                "sur02", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
-                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname1",getElements("add_i_surname1")},
                 "sur1", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
-                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_email",getElements("add_i_email")},
-                "mail", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_intranet_user",getElements("add_i_intranet_user")},
                 "intranet", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+/*        if (!Functions.selectText(driver,
+                new String[]{"add_sl_blocking",getElements("add_sl_blocking")},
+                "Administrative", "blocking",  where)){return false;}*/
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_reference_user",getElements("add_lov_reference_user")}, // b_lov
+                new String[]{"add_i_reference_user", getElements("add_i_reference_user")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "reference", //Data name
+                where)){return false;}
+        if (!Functions.checkboxValue(driver,
+                getElements("add_ck_active"),"active",false,true,where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_surname_02",getElements("add_i_surname_02")},
+                "sur02", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
+                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_lang",getElements("add_lov_lang")}, // b_lov
                 new String[]{"add_i_lang", getElements("add_i_lang")}, // i_lov
@@ -315,36 +333,20 @@ public class AT2MDMUS0003Test {
                 where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_assign"),"assign",false,true,where)){return false;}
-        if (!Functions.selectText(driver,
-                new String[]{"add_sl_blocking",getElements("add_sl_blocking")},
-                "Active", "blocking",  where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_unblocking",getElements("add_i_unblocking")},
-                "unblocking", "unblocking", where)){return false;}
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_org_role",getElements("add_lov_org_role")}, // b_lov
-                new String[]{"add_i_org_role", getElements("add_i_org_role")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "org", //Data name
+                "unblocking", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 where)){return false;}
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_reference_user",getElements("add_lov_reference_user")}, // b_lov
-                new String[]{"add_i_reference_user", getElements("add_i_reference_user")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "reference", //Data name
-                where)){return false;}
-        if (!Functions.checkClickByAbsence(driver,
-                new String[]{"add_b_save", getElements("add_b_save")}, //e1
-                recursiveXPaths.glass, //e2
-                where)) return false; //where
         return true;
     }
     private boolean qbe_user(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE USER";
+        if (!Functions.simpleClick(driver,
+                new String[]{"users_tab", getElements("users_tab")}, //element to click
+                where)){return false;}
+        Functions.zoomOut(driver);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
                 new String[]{"users_e_result", getElements("users_e_result")}, //result element
@@ -353,11 +355,13 @@ public class AT2MDMUS0003Test {
         }
         if (!Functions.clickQbE(driver,
                 new String[]{"users_b_qbe", getElements("users_b_qbe")},// query button
-                new String[]{"qbe_i_company", getElements("qbe_i_company")},//any query input
+                new String[]{"qbe_i_user", getElements("qbe_i_user")},//any query input
                 where)) {
             return false;
         }
         // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_user",getElements("qbe_i_user")},
+                "user", getData("user"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_company",getElements("qbe_i_company")},
                 "company", getData("company"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_short_name",getElements("qbe_i_short_name")},
@@ -381,27 +385,28 @@ public class AT2MDMUS0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
                 getData("active"), "active",  where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"search_i_deactivation",getElements("search_i_deactivation")},
-                "desactivation", getData("desactivation"), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"qbe_i_name1",getElements("qbe_i_name1")},
                 "name1", getData("name1"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_surname1",getElements("qbe_i_surname1")},
                 "sur1", getData("sur1"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_surname2",getElements("qbe_i_surname2")},
                 "sur2", getData("sur2"), where)){return false;}
-
         if (!Functions.selectText(driver,
-                new String[]{"search_sl_assign",getElements("search_sl_assign")},
+                new String[]{"qbe_sl_assing",getElements("qbe_sl_assing")},
                 getData("assign"), "assign",  where)){return false;}
-
-        if (!Functions.insertInput(driver, new String[]{"search_i_email",getElements("search_i_email")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_email",getElements("qbe_i_email")},
                 "mail", getData("mail"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"search_i_intranet_user",getElements("search_i_intranet_user")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_intranet_user",getElements("qbe_i_intranet_user")},
                 "intranet", getData("intranet"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_language",getElements("qbe_i_language")},
                 "lang", getData("lang"), where)){return false;}
+/*        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_blocking",getElements("qbe_sl_blocking")},
+                getData("blocking"), "blocking",  where)){return false;}*/
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_unblocking",getElements("qbe_i_unblocking")},
+                "unblocking", getData("unblocking"), where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
-                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //any query input
+                new String[]{"qbe_i_user", getElements("qbe_i_user")}, //any query input
                 new String[]{"users_e_result", getElements("users_e_result")}, //table result
                 where)){return false;}
         return true;
@@ -429,12 +434,16 @@ public class AT2MDMUS0003Test {
     private boolean delete_user(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
-        if (!Functions.doDeleteNCheck(driver,
+/*        if (!Functions.doDeleteNCheck(driver,
                 new String[]{"users_b_delete", getElements("users_b_delete")},
                 new String[]{"users_e_records", getElements("users_e_records")},
                 where)){
             return false;
-        }
+        }*/
+        if(!Functions.doDelete(driver,
+                new String[]{"users_b_delete", getElements("users_b_delete")},//delete button
+                new String[]{"users_b_yes", getElements("users_b_yes")},//delete button
+                where)){return false;}
         return true;
     }
 }
