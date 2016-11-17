@@ -1,4 +1,4 @@
-package screen.AT2ACCSU1002;
+package screen.AT2ACCSU1003;
 
 import core.TestDriver.TestDriver;
 import screen.AT2Test;
@@ -6,46 +6,52 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * Created by vsolis on 09/11/2016.
+ * Created by vsolis on 16/11/2016.
  */
-public class AT2ACCSU1002Manager implements AT2Test {
-    AT2ACCSU1002Test test;
-    AT2ACCSU1002Sis sis;
+public class AT2ACCSU1003Manager implements AT2Test {
+    AT2ACCSU1003Test test;
+    AT2ACCSU1003Sis sis;
     String[] procedure;
     String entorno;
 
-    public AT2ACCSU1002Manager (String enviroment){
+    public AT2ACCSU1003Manager (String enviroment){
         if(enviroment.equalsIgnoreCase("test")){
             entorno = "test";
-            setTest(new AT2ACCSU1002Test());
-            this.test.setData(new AT2ACCSU1002Data(enviroment));
-            this.test.setLocators(new AT2ACCSU1002Locators(enviroment));
+            setTest(new AT2ACCSU1003Test());
+            this.test.setData(new AT2ACCSU1003Data(enviroment));
+            this.test.setLocators(new AT2ACCSU1003Locators(enviroment));
         } else {
             entorno = "sis";
-            setTestSis(new AT2ACCSU1002Sis());
-            this.sis.setData(new AT2ACCSU1002Data(enviroment));
-            this.sis.setLocators(new AT2ACCSU1002Locators(enviroment));
+            setTestSis(new AT2ACCSU1003Sis());
+            this.sis.setData(new AT2ACCSU1003Data(enviroment));
+            this.sis.setLocators(new AT2ACCSU1003Locators(enviroment));
         }
     }
 
     public String[] getProcedure (){
         return procedure;
     }
+
     public void setProcedure (String[] procedure){
         this.procedure = procedure;
     }
-    public AT2ACCSU1002Test getTest (){
+
+    public AT2ACCSU1003Test getTest (){
         return test;
     }
-    public void setTest (AT2ACCSU1002Test test){
+
+    public void setTest (AT2ACCSU1003Test test){
         this.test = test;
     }
-    public AT2ACCSU1002Sis getTestSis (){
+
+    public AT2ACCSU1003Sis getTestSis (){
         return sis;
     }
-    public void setTestSis (AT2ACCSU1002Sis sis){
+
+    public void setTestSis (AT2ACCSU1003Sis sis){
         this.sis = sis;
     }
+
     public Map<String, String> getData (){
         if(entorno.equalsIgnoreCase("test")){
             return this.test.getData().getData();
@@ -53,6 +59,7 @@ public class AT2ACCSU1002Manager implements AT2Test {
             return this.sis.getData().getData();
         }
     }
+
     public boolean start (TestDriver driver){
         setProcedure(driver.getTestdetails().getCsedProcedure().split(""));
         if(entorno.equalsIgnoreCase("sis")){
@@ -62,6 +69,7 @@ public class AT2ACCSU1002Manager implements AT2Test {
         }
         return csedIteration(driver);
     }
+
     private boolean csedIteration (TestDriver driver){
         String[] procedure = getProcedure();
         for (int i = 0; i < procedure.length; i++) {

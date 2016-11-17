@@ -368,13 +368,7 @@ public class AT2ACCSU1002Test {
     private boolean Hotel_category_search_area_search (TestDriver driver){
         String where = " on SEARCH";
         driver.getReport().addHeader("SEARCH IN HOTEL CATEGORY SEARCH AREA",3,false);
-        /*if(!Functions.checkClick(driver,
-                new String[]{"hotel_category_search_area_se_lov_category_code",getElements("hotel_category_search_area_se_lov_category_code")}, //element to click
-                new String[]{"hotel_category_search_area_se_lov_category_code_i_category_code",getElements("hotel_category_search_area_se_lov_category_code_i_category_code")}, //element expected to appear
-                30,500, //seconds/miliseconds (driver wait)
-                where)){
-            return false;
-        }*/
+
         Functions.break_time(driver,6,500);
         if(!Functions.createLovByValue(driver,
                 new String[]{"hotel_category_search_area_se_lov_category_code",getElements("hotel_category_search_area_se_lov_category_code")}, //LoV button
