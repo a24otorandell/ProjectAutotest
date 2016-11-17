@@ -10,19 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1002/AT2ACCSU1002Manager.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1002/AT2ACCSU1002Manager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1002/AT2ACCSU1002Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1002/AT2ACCSU1002Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -87,13 +77,16 @@
       <file leaf-file-name="AT2BOOSA1005Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="170">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="docComment;class#AT2BOOSA1005Test#0" expanded="false" />
+                <element signature="method#AT2BOOSA1005Test#0;class#AT2BOOSA1005Test#0" expanded="false" />
                 <element signature="method#start#0;class#AT2BOOSA1005Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2BOOSA1005Test#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2BOOSA1005Test#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2BOOSA1005Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2BOOSA1005Test#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -102,8 +95,8 @@
       <file leaf-file-name="AT2BOOSA1005Sis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="187">
+              <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA1005Sis#0" expanded="false" />
                 <element signature="method#AT2BOOSA1005Sis#0;class#AT2BOOSA1005Sis#0" expanded="false" />
@@ -205,8 +198,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Locators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Sis.java" />
       </list>
     </option>
@@ -971,13 +964,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00079" summary="    quitar espacios innecesarios de la accdi0003&#10;">
-      <created>1476705042104</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1476705042104</updated>
-    </task>
     <task id="LOCAL-00080" summary="añadir el xpath de los campos de busqueda de las lupas q están en la posición 10 y 20&#10;">
       <created>1476705222088</created>
       <option name="number" value="00080" />
@@ -1314,7 +1300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479304740791</updated>
     </task>
-    <option name="localTasksCounter" value="128" />
+    <task id="LOCAL-00128" summary="CREACION COMPONENTE AT2ACCSU1003 Y AT2BOOSA1005&#10;&#10;">
+      <created>1479394856388</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1479394856389</updated>
+    </task>
+    <option name="localTasksCounter" value="129" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1328,7 +1321,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1394" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1338,7 +1331,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29501915" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1954023" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1954023" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1422,7 +1415,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="corrección mdmcl0013 para elegir los valores de la lista&#10;(cherry picked from commit 4f53f88)" />
     <MESSAGE value="modificacon la instrucción collectTableData de Fuctions, daba error de nullpointer del array, se ha modificado el indice para que sea j-1" />
     <MESSAGE value="- eliminanción de codigo no usado en accdi0018sis" />
     <MESSAGE value="Corrección codigo de la ACCOP0005 para que use en el historico los valores de la edicion" />
@@ -1447,7 +1439,8 @@
     <MESSAGE value="Actualizazcion AT2ACCSU1002&#10;&#10;" />
     <MESSAGE value="Actualizazcion AT2TRFSU0016&#10;&#10;" />
     <MESSAGE value="Actualizazcion AT2ACCSU0027&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualizazcion AT2ACCSU0027&#10;&#10;" />
+    <MESSAGE value="CREACION COMPONENTE AT2ACCSU1003 Y AT2BOOSA1005&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="CREACION COMPONENTE AT2ACCSU1003 Y AT2BOOSA1005&#10;&#10;" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2263,13 +2256,13 @@
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#860#861#0" expanded="false" />
-            <element signature="e#943#944#0" expanded="false" />
-            <element signature="e#1025#1026#0" expanded="false" />
-            <element signature="e#1052#1053#0" expanded="false" />
-            <element signature="e#1101#1102#0" expanded="false" />
-            <element signature="e#1133#1134#0" expanded="false" />
-            <element signature="e#1175#1176#0" expanded="false" />
-            <element signature="e#1201#1202#0" expanded="false" />
+            <element signature="e#944#945#0" expanded="false" />
+            <element signature="e#1027#1028#0" expanded="false" />
+            <element signature="e#1054#1055#0" expanded="false" />
+            <element signature="e#1104#1105#0" expanded="false" />
+            <element signature="e#1136#1137#0" expanded="false" />
+            <element signature="e#1179#1180#0" expanded="false" />
+            <element signature="e#1205#1206#0" expanded="false" />
             <element signature="method#getData#0;class#AT2BOOSA1005Manager#0" expanded="false" />
             <element signature="method#start#0;class#AT2BOOSA1005Manager#0" expanded="false" />
             <element signature="method#csedIteration#0;class#AT2BOOSA1005Manager#0" expanded="false" />
@@ -2327,21 +2320,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="170">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#AT2BOOSA1005Test#0" expanded="false" />
+            <element signature="method#AT2BOOSA1005Test#0;class#AT2BOOSA1005Test#0" expanded="false" />
             <element signature="method#start#0;class#AT2BOOSA1005Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2BOOSA1005Test#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2BOOSA1005Test#0" expanded="false" />
             <element signature="method#getData#1;class#AT2BOOSA1005Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2BOOSA1005Test#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        <state relative-caret-position="187">
+          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2BOOSA1005Sis#0" expanded="false" />
             <element signature="method#AT2BOOSA1005Sis#0;class#AT2BOOSA1005Sis#0" expanded="false" />
