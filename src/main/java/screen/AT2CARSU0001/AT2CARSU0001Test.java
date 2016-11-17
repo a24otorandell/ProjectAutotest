@@ -1,4 +1,4 @@
-package screen.AT2ACTSU2008;
+package screen.AT2CARSU0001;
 
 import core.CommonActions.CommonProcedures;
 import core.TestDriver.TestDriver;
@@ -6,23 +6,22 @@ import core.TestDriver.TestDriver;
 /**
  * Created by aibanez on 17/11/2016.
  */
-public class AT2ACTSU2008Sis {
-    protected AT2ACTSU2008Locators locators;
-    protected AT2ACTSU2008Data data;
+public class AT2CARSU0001Test {
+    protected AT2CARSU0001Locators locators;
+    protected AT2CARSU0001Data data;
 
-    public AT2ACTSU2008Sis() {
-
+    public AT2CARSU0001Test() {
     }
-    public AT2ACTSU2008Locators getLocators() {
+    public AT2CARSU0001Locators getLocators() {
         return locators;
     }
-    public void setLocators(AT2ACTSU2008Locators locators) {
+    public void setLocators(AT2CARSU0001Locators locators) {
         this.locators = locators;
     }
-    public AT2ACTSU2008Data getData() {
+    public AT2CARSU0001Data getData() {
         return data;
     }
-    public void setData(AT2ACTSU2008Data data) {
+    public void setData(AT2CARSU0001Data data) {
         this.data = data;
     }
     public void start(TestDriver driver) {
@@ -30,9 +29,9 @@ public class AT2ACTSU2008Sis {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Activities");
+        driver.getTestdetails().setMainmenu("Car Hire");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("APIKEY USER");
+        driver.getTestdetails().setScreen("Offices Carhire Master Maintenance");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

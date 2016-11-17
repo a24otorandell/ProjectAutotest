@@ -32,7 +32,7 @@ public class AT2ACTSU2009Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Activities");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("APIKEY FEATURE");
+        driver.getTestdetails().setScreen("Foursquare Mappings");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
