@@ -1,15 +1,15 @@
-package screen.AT2CARSU0012;
+package screen.AT2ACTSU1006;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by aibanez on 19/10/2016.
+ * Created by aibanez on 17/11/2016.
  */
-public class AT2CARSU0012Locators {
+public class AT2ACTSU1006Locators {
     Map<String, String> elements = new HashMap<>();
 
-    public AT2CARSU0012Locators(String enviroment) {
+    public AT2ACTSU1006Locators(String enviroment) {
         setElements();
     }
 
