@@ -32,7 +32,7 @@ public class AT2ACTSU1009Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Activities");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("SUPINT - Integrations Cancellation Policies Setup");
+        driver.getTestdetails().setScreen("GRAYLINE - Mantenimiento ADF");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));

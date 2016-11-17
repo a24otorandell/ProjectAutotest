@@ -1,4 +1,4 @@
-package screen.AT2ACTSU1009;
+package screen.AT2TRFOP0016;
 
 import core.CommonActions.CommonProcedures;
 import core.TestDriver.TestDriver;
@@ -6,22 +6,21 @@ import core.TestDriver.TestDriver;
 /**
  * Created by aibanez on 17/11/2016.
  */
-public class AT2ACTSU1009Test {
-    protected AT2ACTSU1009Locators locators;
-    protected AT2ACTSU1009Data data;
-
-    public AT2ACTSU1009Test() {
+public class AT2TRFOP0016Sis {
+    protected AT2TRFOP0016Locators locators;
+    protected AT2TRFOP0016Data data;
+    public AT2TRFOP0016Sis() {
     }
-    public AT2ACTSU1009Locators getLocators() {
+    public AT2TRFOP0016Locators getLocators() {
         return locators;
     }
-    public void setLocators(AT2ACTSU1009Locators locators) {
+    public void setLocators(AT2TRFOP0016Locators locators) {
         this.locators = locators;
     }
-    public AT2ACTSU1009Data getData() {
+    public AT2TRFOP0016Data getData() {
         return data;
     }
-    public void setData(AT2ACTSU1009Data data) {
+    public void setData(AT2TRFOP0016Data data) {
         this.data = data;
     }
     public void start(TestDriver driver) {
@@ -29,9 +28,9 @@ public class AT2ACTSU1009Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Activities");
-        driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("GRAYLINE - Mantenimiento ADF");
+        driver.getTestdetails().setMainmenu("Transfer");
+        driver.getTestdetails().setSubmenu("Operations");
+        driver.getTestdetails().setScreen("Transfers pickup time SMS/Email sending 2.0");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -42,6 +41,6 @@ public class AT2ACTSU1009Test {
 
     protected boolean testCSED(TestDriver driver) {
         CommonProcedures.styleGuide(driver);
-        return false;
+        return true;
     }
 }

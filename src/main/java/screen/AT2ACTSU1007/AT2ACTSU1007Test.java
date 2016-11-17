@@ -31,7 +31,7 @@ public class AT2ACTSU1007Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Activities");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("SUPINT - Integrations Cancellation Policies Setup");
+        driver.getTestdetails().setScreen("Enconre Integration Setup");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
