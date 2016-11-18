@@ -297,7 +297,6 @@ public class AT2ACCSU1003Test {
         }
         return true;
     }
-
     private boolean Establishment_hotel_lenguage_data_other_actions (TestDriver driver){
         String where = " on OTHER ACTIONS";
         driver.getReport().addHeader("OTHER ACTIONS IN ESTABLISHMENT LENGUAGE DATA",3,false);
@@ -319,7 +318,6 @@ public class AT2ACCSU1003Test {
         }
         return true;
     }
-
     private boolean Establishment_hotel_lenguage_data_edit (TestDriver driver){
         String where = " on EDIT";
         driver.getReport().addHeader("EDIT IN ESTABLISHMENT LENGUAGE DATA",3,false);
@@ -358,7 +356,6 @@ public class AT2ACCSU1003Test {
                 where);
         return true;
     }
-
     private boolean Establishment_hotel_lenguage_data_search (TestDriver driver){
         String where = " on SEARCH";
         driver.getReport().addHeader("SEARCH IN ESTABLISHMENT LENGUAGE DATA",3,false);
@@ -391,7 +388,6 @@ public class AT2ACCSU1003Test {
 
         return true;
     }
-
     private boolean Establishment_hotel_lenguage_data_add (TestDriver driver){
         String where = " on ADD";
         driver.getReport().addHeader("ADD IN ESTABLISHMENT LENGUAGE DATA",3,false);

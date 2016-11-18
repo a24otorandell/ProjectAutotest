@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Locators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Sis.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java" />
     </list>
@@ -73,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2ACCSU1003Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AT2ACCSU1003Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="66" column="42" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
+            <state relative-caret-position="576">
+              <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
               <folding>
                 <element signature="docComment;class#AT2ACCSU1003Test#0" expanded="false" />
                 <element signature="method#AT2ACCSU1003Test#0;class#AT2ACCSU1003Test#0" expanded="false" />
@@ -104,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2ACCSU1003Sis.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AT2ACCSU1003Sis.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+            <state relative-caret-position="202">
+              <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2ACCSU1003Sis#0" expanded="false" />
                 <element signature="method#AT2ACCSU1003Sis#0;class#AT2ACCSU1003Sis#0" expanded="false" />
@@ -224,8 +223,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA1005/AT2BOOSA1005Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Locators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java" />
       </list>
     </option>
   </component>
@@ -922,13 +921,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00081" summary="    quitar espacios innecesarios de la ACCOP0019 y ACCSU0014&#10;">
-      <created>1476712805231</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1476712805259</updated>
-    </task>
     <task id="LOCAL-00082" summary="    quitar espacios innecesarios de la accsu0018&#10;">
       <created>1476713437846</created>
       <option name="number" value="00082" />
@@ -1265,7 +1257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479394957509</updated>
     </task>
-    <option name="localTasksCounter" value="130" />
+    <task id="LOCAL-00130" summary="ACTUALIOZACION AT2ACCSU1003&#10;&#10;">
+      <created>1479458255467</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1479458255467</updated>
+    </task>
+    <option name="localTasksCounter" value="131" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1289,7 +1288,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29501915" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1954023" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1954023" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1373,7 +1372,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="- eliminanción de codigo no usado en accdi0018sis" />
     <MESSAGE value="Corrección codigo de la ACCOP0005 para que use en el historico los valores de la edicion" />
     <MESSAGE value="    quitar espacios innecesarios de la actsu0037Test&#10;" />
     <MESSAGE value="quitado de mdmcl0013 del array de valores en la lista, el valor Hotel - contract, no sabemos como buscar por este valor en el motor de busqueda&#10;" />
@@ -1398,7 +1396,8 @@
     <MESSAGE value="Actualizazcion AT2ACCSU0027&#10;&#10;" />
     <MESSAGE value="CREACION COMPONENTE AT2ACCSU1003 Y AT2BOOSA1005&#10;&#10;" />
     <MESSAGE value="ACTUALIOZACION AT2BOOSA1005&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIOZACION AT2BOOSA1005&#10;&#10;" />
+    <MESSAGE value="ACTUALIOZACION AT2ACCSU1003&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACTUALIOZACION AT2ACCSU1003&#10;&#10;" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -2284,39 +2283,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="66" column="42" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
-          <folding>
-            <element signature="docComment;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#AT2ACCSU1003Test#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#Establishment_hotel_data#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#establishment_hotel_data_delete#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#establishment_hotel_data_other_actions#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#establishment_hotel_data_qbe#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#establishment_hotel_data_edit#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#establishment_hotel_data_search#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#establishment_hotel_data_add#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#Establishment_hotel_lenguage_data#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#Establishment_hotel_lenguage_data_delete#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#Establishment_hotel_lenguage_data_other_actions#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#Establishment_hotel_lenguage_data_edit#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#Establishment_hotel_lenguage_data_search#0;class#AT2ACCSU1003Test#0" expanded="false" />
-            <element signature="method#Establishment_hotel_lenguage_data_add#0;class#AT2ACCSU1003Test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="256" column="0" selection-start-line="256" selection-start-column="0" selection-end-line="256" selection-end-column="0" />
+        <state relative-caret-position="202">
+          <caret line="98" column="5" selection-start-line="98" selection-start-column="5" selection-end-line="98" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2ACCSU1003Sis#0" expanded="false" />
             <element signature="method#AT2ACCSU1003Sis#0;class#AT2ACCSU1003Sis#0" expanded="false" />
@@ -2338,6 +2308,35 @@
             <element signature="method#Establishment_hotel_lenguage_data_edit#0;class#AT2ACCSU1003Sis#0" expanded="false" />
             <element signature="method#Establishment_hotel_lenguage_data_search#0;class#AT2ACCSU1003Sis#0" expanded="false" />
             <element signature="method#Establishment_hotel_lenguage_data_add#0;class#AT2ACCSU1003Sis#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1003/AT2ACCSU1003Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="285" column="4" selection-start-line="285" selection-start-column="4" selection-end-line="285" selection-end-column="4" />
+          <folding>
+            <element signature="docComment;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#AT2ACCSU1003Test#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#Establishment_hotel_data#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#establishment_hotel_data_delete#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#establishment_hotel_data_other_actions#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#establishment_hotel_data_qbe#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#establishment_hotel_data_edit#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#establishment_hotel_data_search#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#establishment_hotel_data_add#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#Establishment_hotel_lenguage_data#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#Establishment_hotel_lenguage_data_delete#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#Establishment_hotel_lenguage_data_other_actions#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#Establishment_hotel_lenguage_data_edit#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#Establishment_hotel_lenguage_data_search#0;class#AT2ACCSU1003Test#0" expanded="false" />
+            <element signature="method#Establishment_hotel_lenguage_data_add#0;class#AT2ACCSU1003Test#0" expanded="false" />
           </folding>
         </state>
       </provider>
