@@ -81,8 +81,8 @@ public class AT2ACCSU1003Locators {
         elements.put("establishment_lenguage_data_se_i_lenguage","//*[contains(@id, 'pc2_afr_estabid_afr_c6::content')]");
         elements.put("establishment_lenguage_data_se_e_result","//*[contains(@id, 'pc2:estabid::db')]/table/tbody/tr[1]/td[1]");
 
-        //ADD
-        elements.put("establishment_lenguage_data_ed_b_add","//*[contains(@id, 'pc2:pcgt38:boton_add')]");
+        //EDIT
+        elements.put("establishment_lenguage_data_ed_b_edit","//*[contains(@id, 'pc2:pcgt38:boton_edit')]");
         elements.put("establishment_lenguage_data_ed_e_hotel","//*[contains(@id, 'pc2:pcgt38:it2::content')]");
         elements.put("establishment_lenguage_data_ed_i_establishment_description","//*[contains(@id, 'pc2:pcgt38:it3::content')]");
         elements.put("establishment_lenguage_data_ed_lov_lenguage","//*[contains(@id, 'pc2:pcgt38:codIdiomaId::lovIconId')]");
