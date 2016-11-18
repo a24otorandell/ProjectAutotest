@@ -87,7 +87,7 @@ public class AT2ACCOP0024Locators {
         elements.put("record_interaction_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
         elements.put("record_interaction_b_qbe_i_report", "//*[contains(@id, 'resId1_afr_c9::content')]");
         elements.put("record_interaction_b_qbe_i_file", "//*[contains(@id, 'resId1_afr_c10::content')]");
-        elements.put("record_interaction_b_qbe_i_type", "//*[contains(@id, 'resId1_afr_c11::content')]");
+        elements.put("record_interaction_b_qbe_i_type", "//*[contains(@id, 'resId1_afr_c17::content')]");
         elements.put("record_interaction_b_qbe_i_financial_date", "//*[contains(@id, 'pc1:resId1:id4::content')]");
         elements.put("record_interaction_b_qbe_financial_date", "//*[contains(@id, 'pc1:resId1:c7')]");
         elements.put("record_interaction_b_qbe_i_financial_status", "//*[contains(@id, 'resId1_afr_c6::content')]");
