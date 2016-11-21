@@ -62,12 +62,6 @@ public class AT2BOOSA0001Test {
         return false;
     }
 
-    private boolean Search_booking_advanced_search (TestDriver driver){
-        String where = " on SUPER SEARCH";
-        driver.getReport().addHeader("SUPER SEARCH IN SEARCH BOOKING",3,false);
-        return true;
-    }
-
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
         String where = " on HARD QBE";
@@ -632,6 +626,11 @@ public class AT2BOOSA0001Test {
                 " on SEARCH")){
             return false;
         }
+        return true;
+    }
+    private boolean Search_booking_advanced_search (TestDriver driver){
+        String where = " on SUPER SEARCH";
+        driver.getReport().addHeader("SUPER SEARCH IN SEARCH BOOKING",3,false);
         return true;
     }
 }

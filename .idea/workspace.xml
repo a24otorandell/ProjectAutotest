@@ -10,14 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0051/AT2ACCSU0051Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0051/AT2ACCSU0051Locators.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -87,11 +83,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2BOOSA0001Sis.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AT2BOOSA0001Sis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-847">
-              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="362" column="5" selection-start-line="362" selection-start-column="5" selection-end-line="362" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
@@ -100,8 +96,10 @@
                 <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+                <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+                <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -129,20 +127,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2BOOSA0001Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AT2BOOSA0001Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="442">
+              <caret line="634" column="5" selection-start-line="49" selection-start-column="3" selection-end-line="634" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#start#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Getrecords#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
-                <marker date="1479730329932" expanded="false" signature="1295:1377" ph="{...}" />
+                <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <marker date="1479730406902" expanded="false" signature="1295:1377" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -237,8 +238,8 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
       </list>
     </option>
   </component>
@@ -939,13 +940,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00084" summary="    quitar espacios innecesarios de la ACCSU0025&#10;">
-      <created>1476718190688</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1476718190689</updated>
-    </task>
     <task id="LOCAL-00085" summary="    quitar espacios innecesarios de la ACCSU0057&#10;">
       <created>1476718974521</created>
       <option name="number" value="00085" />
@@ -1282,7 +1276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1479460053362</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="   CREACION AT2BOOSA0001 Y ACTUALIZACION DE CODIGO&#10;&#10;">
+      <created>1479730364099</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1479730364099</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1390,7 +1391,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="    quitar espacios innecesarios de la actsu0037Test&#10;" />
     <MESSAGE value="quitado de mdmcl0013 del array de valores en la lista, el valor Hotel - contract, no sabemos como buscar por este valor en el motor de busqueda&#10;" />
     <MESSAGE value="    quitar espacios innecesarios de la actsu0037Sis&#10;" />
     <MESSAGE value="completado nombre de la pantalla mdmcl0024&#10;" />
@@ -1415,7 +1415,8 @@
     <MESSAGE value="ACTUALIOZACION AT2BOOSA1005&#10;&#10;" />
     <MESSAGE value="ACTUALIOZACION AT2ACCSU1003&#10;&#10;" />
     <MESSAGE value="CREACIONS AT2ACCSU0051&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="CREACIONS AT2ACCSU0051&#10;&#10;" />
+    <MESSAGE value="   CREACION AT2BOOSA0001 Y ACTUALIZACION DE CODIGO&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="   CREACION AT2BOOSA0001 Y ACTUALIZACION DE CODIGO&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2277,24 +2278,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-847">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="457">
@@ -2331,17 +2314,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="634" column="5" selection-start-line="49" selection-start-column="3" selection-end-line="634" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#start#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Getrecords#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
-            <marker date="1479730329932" expanded="false" signature="1295:1377" ph="{...}" />
+            <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <marker date="1479730406902" expanded="false" signature="1295:1377" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="362" column="5" selection-start-line="362" selection-start-column="5" selection-end-line="362" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
           </folding>
         </state>
       </provider>
