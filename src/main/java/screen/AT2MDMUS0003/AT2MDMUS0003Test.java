@@ -94,8 +94,8 @@ public class AT2MDMUS0003Test {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_name",getElements("add_i_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
-                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
+                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_email",getElements("add_i_email")},
                 "mail", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
 /*        if(!Functions.createLov(driver,
@@ -116,8 +116,8 @@ public class AT2MDMUS0003Test {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname_01",getElements("add_i_surname_01")},
                     "sur01",  DataGenerator.getRandomAlphanumericSequence(7, true), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname1",getElements("add_i_surname1")},
-                "sur1", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_surname1",getElements("add_i_surname1")},
+                "sur1", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_intranet_user",getElements("add_i_intranet_user")},
                 "intranet", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
 /*        if (!Functions.selectText(driver,
@@ -135,8 +135,8 @@ public class AT2MDMUS0003Test {
                 getElements("add_ck_active"),"active",true,true,where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname_02",getElements("add_i_surname_02")},
                 "sur02", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
-                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
+                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_lang",getElements("add_lov_lang")}, // b_lov
                 new String[]{"add_i_lang", getElements("add_i_lang")}, // i_lov
@@ -204,11 +204,11 @@ public class AT2MDMUS0003Test {
                 new String[]{"search_sl_active",getElements("search_sl_active")},
                 getData("active"), "active",  where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_name1",getElements("search_i_name1")},
-                "name1", getData("name1"), where)){return false;}
+                "name1", getData("name"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_surname1",getElements("search_i_surname1")},
-                "sur1", getData("sur1"), where)){return false;}
+                "sur1", getData("sur01"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_surname2",getElements("search_i_surname2")},
-                "sur2", getData("sur2"), where)){return false;}
+                "sur2", getData("sur02"), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_assign",getElements("search_sl_assign")},
                 getData("assign"), "assign",  where)){return false;}
@@ -280,8 +280,8 @@ public class AT2MDMUS0003Test {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_name",getElements("add_i_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
-                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_name1",getElements("add_i_name1")},
+                "name1", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_email",getElements("add_i_email")},
                 "mail", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
 /*        if(!Functions.createLov(driver,
@@ -302,8 +302,8 @@ public class AT2MDMUS0003Test {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname_01",getElements("add_i_surname_01")},
                 "sur01",  DataGenerator.getRandomAlphanumericSequence(7, true), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname1",getElements("add_i_surname1")},
-                "sur1", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_surname1",getElements("add_i_surname1")},
+                "sur1", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_intranet_user",getElements("add_i_intranet_user")},
                 "intranet", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
 /*        if (!Functions.selectText(driver,
@@ -321,8 +321,8 @@ public class AT2MDMUS0003Test {
                 getElements("add_ck_active"),"active",false,true,where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_surname_02",getElements("add_i_surname_02")},
                 "sur02", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
-                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_surname2",getElements("add_i_surname2")},
+                "sur2", DataGenerator.getRandomAlphanumericSequence(5, false), where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_lang",getElements("add_lov_lang")}, // b_lov
                 new String[]{"add_i_lang", getElements("add_i_lang")}, // i_lov
@@ -386,11 +386,11 @@ public class AT2MDMUS0003Test {
                 new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
                 getData("active"), "active",  where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_name1",getElements("qbe_i_name1")},
-                "name1", getData("name1"), where)){return false;}
+                "name1", getData("name"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_surname1",getElements("qbe_i_surname1")},
-                "sur1", getData("sur1"), where)){return false;}
+                "sur1", getData("sur01"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_surname2",getElements("qbe_i_surname2")},
-                "sur2", getData("sur2"), where)){return false;}
+                "sur2", getData("sur02"), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_assing",getElements("qbe_sl_assing")},
                 getData("assign"), "assign",  where)){return false;}
