@@ -18,6 +18,26 @@ public class AT2BOOSA0001Locators {
     }
 
     public void setElements (){
+
+         //ADVANCED SEARCH
+
+        elements.put("advanced_search_ch_client", "//*[contains(@id, 'gttoSeqTtooId::lovIconId')]");
+        elements.put("advanced_search_lov_client", "//*[contains(@id, 'gttoSeqTtooId::dropdownPopup::popupsearch')]");
+        elements.put("advanced_search_lov_client_i_client", "//*[contains(@id, 'afrLovInternalQueryId:value10::content')]");
+        elements.put("advanced_search_i_client", "//*[contains(@id, 'gttoSeqTtooId::content')]");
+        elements.put("advanced_search_lov_interface", "//*[contains(@id, 'bookingInterfaceId::lovIconId')]");
+        elements.put("advanced_search_lov_interface_i_code", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
+        elements.put("advanced_search_sl_crc", "//*[contains(@id, 'soc6::content')]");
+        elements.put("advanced_search_i_client_reference", "//*[contains(@id, 'it12::content')]");
+        elements.put("advanced_search_", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+
+
+
+
+
+
           // SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'dyntdc:r1:1:cb3')]");
         elements.put("search_i_creation", "//*[contains(@id, 'r1:1:id4::content')]");
@@ -47,6 +67,7 @@ public class AT2BOOSA0001Locators {
         elements.put("query_b_search", "//*[contains(@id, '1:cb3')]");
         elements.put("query_e_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
         elements.put("query_e_result_real", "pc1:t1::db')]");
+        elements.put("query_b_reset", "1:cb4')]");
 
 
         // QUERY
@@ -83,8 +104,8 @@ public class AT2BOOSA0001Locators {
         elements.put("query_i_profit", "//*[contains(@id, '_afr_t1_afr_c11::content')]");
         elements.put("query_i_profitability", "//*[contains(@id, '_afr_t1_afr_c24::content')]");
         elements.put("query_i_currency", "//*[contains(@id, '_afr_t1_afr_c53::content')]");
-        elements.put("query_i_bm", "//*[contains(@id, '_afr_t1_afr_c32::content')]");
-        elements.put("query_i_bco", "//*[contains(@id, '_afr_t1_afr_c21::content')]");
+        elements.put("query_i_bm", "//*[contains(@id, 'selectOneChoice12::content')]");
+        elements.put("query_i_bco", "//*[contains(@id, 't1:soc29::content')]");
         elements.put("query_i_ticket_number", "//*[contains(@id, '_afr_t1_afr_c3::content')]");
         elements.put("query_i_room", "//*[contains(@id, '_afr_t1_afr_c1::content')]");
         elements.put("query_i_type_of_room", "//*[contains(@id, '_afr_t1_afr_c5::content')]");
@@ -96,12 +117,12 @@ public class AT2BOOSA0001Locators {
         elements.put("query_i_sap_client_code", "//*[contains(@id, '_afr_t1_afr_c8::content')]");
         elements.put("query_i_destination", "//*[contains(@id, '_afr_t1_afr_c58::content')]");
         elements.put("query_i_country_market", "//*[contains(@id, '_afr_t1_afr_c55::content')]");
-        elements.put("query_i_paid", "//*[contains(@id, '_afr_t1_afr_c51::content')]");
-        elements.put("query_i_invoiced", "//*[contains(@id, '_afr_t1_afr_c19::content')]");
-        elements.put("query_i_multi_destination", "//*[contains(@id, '_afr_t1_afr_c49::content')]");
-        elements.put("query_i_transfer", "//*[contains(@id, '_afr_t1_afr_c25::content')]");
-        elements.put("query_i_retailer", "//*[contains(@id, '_afr_t1_afr_c9::content')]");
-        elements.put("query_i_refundable", "//*[contains(@id, '_afr_t1_afr_c42::content')]");
+        elements.put("query_i_paid", "//*[contains(@id, 't1:soc351::content')]");
+        elements.put("query_i_invoiced", "//*[contains(@id, 't1:soc31::content')]");
+        elements.put("query_i_multi_destination", "//*[contains(@id, 't1:soc32::content')]");
+        elements.put("query_i_transfer", "//*[contains(@id, 't1:soc33::content')]");
+        elements.put("query_i_retailer", "//*[contains(@id, 't1:soc34::content')]");
+        elements.put("query_i_refundable", "//*[contains(@id, 't1:soc35::content')]");
         elements.put("query_i_excluded_cancellation_process", "//*[contains(@id, '_afr_t1_afr_c14::content')]");
         elements.put("query_i_error_message", "//*[contains(@id, '_afr_t1_afr_c50::content')]");
         elements.put("query_i_n_attempts", "//*[contains(@id, '_afr_t1_afr_c57::content')]");

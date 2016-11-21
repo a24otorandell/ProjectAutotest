@@ -4,6 +4,7 @@ import core.CommonActions.CommonProcedures;
 import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
+import core.recursiveData.recursiveXPaths;
 
 /**
  * Created by vsolis on 18/11/2016.
@@ -630,6 +631,25 @@ public class AT2BOOSA0001Sis {
     private boolean Search_booking_advanced_search (TestDriver driver){
         String where = " on SUPER SEARCH";
         driver.getReport().addHeader("SUPER SEARCH IN SEARCH BOOKING",3,false);
+
+        if (!Functions.simpleClick(driver,
+                new String[]{"query_b_reset", getElements("query_b_reset")}, //element to click
+                where)){return false;}
+
+        if(!Functions.checkClick(driver,
+                new String[]{"search_b_advanced_search", getElements("search_b_advanced_search")}, //element to click
+                new String[]{"advanced_search_b_show", getElements("advanced_search_b_show")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
+        if(!Functions.createLov(driver,
+                new String[]{"x",getElements("y")}, // b_lov
+                new String[]{"", getElements("")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "", //Data name
+                "")){return false;}
         return true;
     }
 }

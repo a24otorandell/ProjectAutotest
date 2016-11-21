@@ -223,16 +223,35 @@ public class AT2BOOSA0001Test {
                 "result_currency",
                 getData("result_currency"),
                 where);
-     /*  Functions.insertInput(driver,
-                new String[]{"query_i_bm",getElements("query_i_bm")},
-                "result_bm",
-                getData("result_bm"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_bco",getElements("query_i_bco")},
-                "result_bco",
-                getData("result_bco"),
-                where);*/
+
+        Functions.break_time(driver,25,500);
+       if (getData("result_bm").equalsIgnoreCase("unchecked")) {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_bm",getElements("query_i_bm")},
+                   "No", "result_bm", where)){return false;}
+        }
+        else {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_bm",getElements("query_i_bm")},
+                    "Yes", "result_bm", where)){return false;}
+        }
+
+
+        if (getData("query_i_bco").equalsIgnoreCase("unchecked")) {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_bco",getElements("query_i_bco")},
+                    "No", "result_bco", where)){return false;}
+        }
+        else {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_bco",getElements("query_i_bco")},
+                    "Yes", "result_bco", where)){return false;}
+        }
+
         Functions.insertInput(driver,
                 new String[]{"query_i_ticket_number",getElements("query_i_ticket_number")},
                 "result_ticket_number",
@@ -288,79 +307,129 @@ public class AT2BOOSA0001Test {
                 "result_country_market",
                 getData("result_country_market"),
                 where);
-    /*    Functions.insertInput(driver,
-                new String[]{"query_i_paid",getElements("query_i_paid")},
-                "result_paid",
-                getData("result_paid"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_invoiced",getElements("query_i_invoiced")},
-                "result_invoiced",
-                getData("result_invoiced"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_multi_destination",getElements("query_i_multi_destination")},
-                "result_multi_destination",
-                getData("result_multi_destination"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_transfer",getElements("query_i_transfer")},
-                "result_transfer",
-                getData("result_transfer"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_retailer",getElements("query_i_retailer")},
-                "result_retailer",
-                getData("result_retailer"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_refundable",getElements("query_i_refundable")},
-                "result_refundable",
-                getData("result_refundable"),
-                where);*/
-        Functions.insertInput(driver,
-                new String[]{"query_i_excluded_cancellation_process",getElements("query_i_excluded_cancellation_process")},
-                "result_excluded_cancellation_process",
-                getData("result_excluded_cancellation_process"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_error_message",getElements("query_i_error_message")},
-                "query_i_error_message",
-                getData("query_i_error_message"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_n_attempts",getElements("query_i_n_attempts")},
-                "result_n_attempts",
-                getData("result_n_attempts"),
-                where);
-        Functions.selectText(driver,
-                new String[]{"query_i_cancellation_reason",getElements("query_i_cancellation_reason")},
-                getData("result_cancellation_reason"),
-                "result_cancellation_reason",
-                " on QUERY ");
-        Functions.insertInput(driver,
-                new String[]{"query_i_booking_type",getElements("query_i_booking_type")},
-                "result_booking_type",
-                getData("result_booking_type"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_contract_code",getElements("query_i_contract_code")},
-                "result_contract_code",
-                getData("result_contract_code"),
-                where);
-        Functions.insertInput(driver,
-                new String[]{"query_i_contract_name",getElements("query_i_contract_name")},
-                "result_contract_name",
-                getData("result_contract_name"),
-                where);
-        if(!Functions.enterQueryAndClickResult(driver,
-                new String[]{"query_i_atlas_company",getElements("query_i_atlas_company")}, //any query input
-                new String[]{"query_e_result",getElements("query_e_result")}, //table result
-                where)){
-            return false;
-        } // where this operation occurs
 
-        return true;
+        if (getData("result_paid").equalsIgnoreCase("unchecked")) {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_paid",getElements("query_i_paid")},
+                    "No", "result_paid", where)){return false;}
+        }
+        else {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_paid",getElements("query_i_paid")},
+                    "Yes", "result_paid", where)){return false;}
+        }
+
+        if (getData("result_invoiced").equalsIgnoreCase("unchecked")) {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_invoiced",getElements("query_i_invoiced")},
+                    "No", "result_invoiced", where)){return false;}
+        }
+        else {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_invoiced",getElements("query_i_invoiced")},
+                    "Yes", "result_invoiced", where)){return false;}
+        }
+
+        if (getData("result_multi_destination").equalsIgnoreCase("unchecked")) {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_multi_destination",getElements("query_i_multi_destination")},
+                    "No", "result_multi_destination", where)){return false;}
+        }
+        else {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_multi_destination",getElements("query_i_multi_destination")},
+                    "Yes", "result_multi_destination", where)){return false;}
+        }
+        if (getData("result_transfer").equalsIgnoreCase("unchecked")) {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_transfer",getElements("query_i_transfer")},
+                    "No", "result_transfer", where)){return false;}
+        }
+        else {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_transfer",getElements("query_i_transfer")},
+                    "Yes", "result_transfer", where)){return false;}
+        }
+
+        if (getData("result_retailer").equalsIgnoreCase("unchecked")) {
+
+            if (!Functions.selectText(driver,
+                    new String[]{"query_i_retailer",getElements("query_i_retailer")},
+                    "No", "result_retailer", where)){return false;}
+        }
+        else {
+
+            if(!Functions.selectText(driver,
+                    new String[]{"query_i_retailer",getElements("query_i_retailer")},
+                    "Yes","result_retailer",where)){
+                return false;
+            }
+            if(getData("result_refundable").equalsIgnoreCase("unchecked")){
+
+                if(!Functions.selectText(driver,
+                        new String[]{"query_i_refundable",getElements("query_i_refundable")},
+                        "No","result_refundable",where)){
+                    return false;
+                }
+            } else {
+
+                if(!Functions.selectText(driver,
+                        new String[]{"query_i_refundable",getElements("query_i_refundable")},
+                        "Yes","result_refundable",where)){
+                    return false;
+                }
+            }
+            Functions.insertInput(driver,
+                    new String[]{"query_i_excluded_cancellation_process",getElements("query_i_excluded_cancellation_process")},
+                    "result_excluded_cancellation_process",
+                    getData("result_excluded_cancellation_process"),
+                    where);
+            Functions.insertInput(driver,
+                    new String[]{"query_i_error_message",getElements("query_i_error_message")},
+                    "query_i_error_message",
+                    getData("query_i_error_message"),
+                    where);
+            Functions.insertInput(driver,
+                    new String[]{"query_i_n_attempts",getElements("query_i_n_attempts")},
+                    "result_n_attempts",
+                    getData("result_n_attempts"),
+                    where);
+            Functions.selectText(driver,
+                    new String[]{"query_i_cancellation_reason",getElements("query_i_cancellation_reason")},
+                    getData("result_cancellation_reason"),
+                    "result_cancellation_reason",
+                    " on QUERY ");
+            Functions.insertInput(driver,
+                    new String[]{"query_i_booking_type",getElements("query_i_booking_type")},
+                    "result_booking_type",
+                    getData("result_booking_type"),
+                    where);
+            Functions.insertInput(driver,
+                    new String[]{"query_i_contract_code",getElements("query_i_contract_code")},
+                    "result_contract_code",
+                    getData("result_contract_code"),
+                    where);
+            Functions.insertInput(driver,
+                    new String[]{"query_i_contract_name",getElements("query_i_contract_name")},
+                    "result_contract_name",
+                    getData("result_contract_name"),
+                    where);
+            if(!Functions.enterQueryAndClickResult(driver,
+                    new String[]{"query_i_atlas_company",getElements("query_i_atlas_company")}, //any query input
+                    new String[]{"query_e_result",getElements("query_e_result")}, //table result
+                    where)){
+                return false;
+            } // where this operation occurs
+
+        }   return true;
     }
     private boolean Getrecords (TestDriver driver){
 
