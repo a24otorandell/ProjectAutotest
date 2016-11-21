@@ -142,12 +142,10 @@ public class AT2MDMCL0016Test {
                 "name", getData("name"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_group_code", getElements("qbe_i_group_code")}, //search button
-                new String[]{"group_e_result", getElements("group_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_group_code", getElements("qbe_i_group_code")}, //any query input
+                new String[]{"group_e_result", getElements("group_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions(TestDriver driver) {
@@ -236,12 +234,10 @@ public class AT2MDMCL0016Test {
                 "name", getData("name"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_short_name", getElements("qbe_i_short_name")}, //search button
-                new String[]{"to_e_result", getElements("to_e_result")}, //result element
-                where)) {
-            return false;
-        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_short_name", getElements("qbe_i_short_name")}, //any query input
+                new String[]{"to_e_result", getElements("to_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_to(TestDriver driver) {
