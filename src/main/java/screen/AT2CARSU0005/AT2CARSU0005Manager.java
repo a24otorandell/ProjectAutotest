@@ -1,4 +1,4 @@
-package screen.AT2CARSU0004;
+package screen.AT2CARSU0005;
 
 import core.TestDriver.TestDriver;
 import screen.AT2Test;
@@ -6,26 +6,26 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * Created by aibanez on 17/11/2016.
+ * Created by aibanez on 22/11/2016.
  */
-public class AT2CARSU0004Manager implements AT2Test {
-    AT2CARSU0004Sis sis;
-    AT2CARSU0004Test test;
+public class AT2CARSU0005Manager implements AT2Test {
+    AT2CARSU0005Sis sis;
+    AT2CARSU0005Test test;
     String[] procedure;
     String entorno;
 
 
-    public AT2CARSU0004Manager(String enviroment) {
+    public AT2CARSU0005Manager(String enviroment) {
         if (enviroment.equalsIgnoreCase("test")) {
             entorno = "test";
-            setTest(new AT2CARSU0004Test());
-            this.test.setData(new AT2CARSU0004Data(enviroment));
-            this.test.setLocators(new AT2CARSU0004Locators(enviroment));
+            setTest(new AT2CARSU0005Test());
+            this.test.setData(new AT2CARSU0005Data(enviroment));
+            this.test.setLocators(new AT2CARSU0005Locators(enviroment));
         } else {
             entorno = "sis";
-            setTestSis(new AT2CARSU0004Sis());
-            this.sis.setData(new AT2CARSU0004Data(enviroment));
-            this.sis.setLocators(new AT2CARSU0004Locators(enviroment));
+            setTestSis(new AT2CARSU0005Sis());
+            this.sis.setData(new AT2CARSU0005Data(enviroment));
+            this.sis.setLocators(new AT2CARSU0005Locators(enviroment));
         }
     }
 
@@ -37,19 +37,19 @@ public class AT2CARSU0004Manager implements AT2Test {
         this.procedure = procedure;
     }
 
-    public AT2CARSU0004Test getTest() {
+    public AT2CARSU0005Test getTest() {
         return test;
     }
 
-    public void setTest(AT2CARSU0004Test test) {
+    public void setTest(AT2CARSU0005Test test) {
         this.test = test;
     }
 
-    public AT2CARSU0004Sis getTestSis() {
+    public AT2CARSU0005Sis getTestSis() {
         return sis;
     }
 
-    public void setTestSis(AT2CARSU0004Sis sis) {
+    public void setTestSis(AT2CARSU0005Sis sis) {
         this.sis = sis;
     }
 

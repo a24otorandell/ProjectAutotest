@@ -1,28 +1,28 @@
-package screen.AT2CARSU0004;
+package screen.AT2CARSU0005;
 
 import core.CommonActions.CommonProcedures;
 import core.TestDriver.TestDriver;
 
 /**
- * Created by aibanez on 17/11/2016.
+ * Created by aibanez on 22/11/2016.
  */
-public class AT2CARSU0004Sis {
-    protected AT2CARSU0004Locators locators;
-    protected AT2CARSU0004Data data;
+public class AT2CARSU0005Sis {
+    protected AT2CARSU0005Locators locators;
+    protected AT2CARSU0005Data data;
 
-    public AT2CARSU0004Sis() {
+    public AT2CARSU0005Sis() {
 
     }
-    public AT2CARSU0004Locators getLocators() {
+    public AT2CARSU0005Locators getLocators() {
         return locators;
     }
-    public void setLocators(AT2CARSU0004Locators locators) {
+    public void setLocators(AT2CARSU0005Locators locators) {
         this.locators = locators;
     }
-    public AT2CARSU0004Data getData() {
+    public AT2CARSU0005Data getData() {
         return data;
     }
-    public void setData(AT2CARSU0004Data data) {
+    public void setData(AT2CARSU0005Data data) {
         this.data = data;
     }
     public void start(TestDriver driver) {
@@ -32,7 +32,7 @@ public class AT2CARSU0004Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Car Hire");
         driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("External Integration Carhire Master Maintenance");
+        driver.getTestdetails().setScreen("Brand Carhire Master Maintenance");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
