@@ -29,9 +29,63 @@ public class AT2BOOSA0001Locators {
         elements.put("advanced_search_lov_interface_i_code", "//*[contains(@id, 'afrLovInternalQueryId:value00::content')]");
         elements.put("advanced_search_sl_crc", "//*[contains(@id, 'soc6::content')]");
         elements.put("advanced_search_i_client_reference", "//*[contains(@id, 'it12::content')]");
-        elements.put("advanced_search_", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_lov_group_ttoo", "//*[contains(@id, 'grupoTtooId::lovIconId')]");
+        elements.put("advanced_search_lov_group_ttoo_i_name", "//*[contains(@id, 'afrLovInternalQueryId:value10::content')]");
+        elements.put("advanced_search_i_group_ttoo", "//*[contains(@id, 'grupoTtooId::content')]");
+        elements.put("advanced_search_lov_integration_name", "//*[contains(@id, 'agencyB2BId::lovIconId']");
+        elements.put("advanced_search_lov_integration_name_i_name", "//*[contains(@id, 'afrLovInternalQueryId:value10::content')]");
+        elements.put("advanced_search_i_integration_name", "//*[contains(@id, 'agencyB2BId::content')]");
+        elements.put("advanced_search_lov_suplier_b2b", "//*[contains(@id, 'supplierB2BId::lovIconId')]");
+        elements.put("advanced_search_lov_suplier_b2b_i_name", "//*[contains(@id, 'afrLovInternalQueryId:value10::content')]");
+        elements.put("advanced_search_i_suplier_b2b", "//*[contains(@id, 'supplierB2BId::content')]");
+        elements.put("advanced_search_i_suplier_booking_reference", "//*[contains(@id, 'it5::content')]");
+        elements.put("advanced_search_i_temporart_booking_reference", "//*[contains(@id, 'it10::content')]");
+        elements.put("advanced_search_multilov_market", "//*[contains(@id, 'msilov1:dc_ctb1::icon')]");
+        elements.put("advanced_search_multilov_market_i_name", "//*[contains(@id, 'dc_q1:value10::content')]");
+        elements.put("advanced_search_lov_destination", "//*[contains(@id, 'destinoId::lovIconId')]");
+        elements.put("advanced_search_i_destination", "//*[contains(@id, 'destinoId::content')]");
+        elements.put("advanced_search_lov_hotel_zone", "//*[contains(@id, 'hotelZoneId::lovIconId')]");
+        elements.put("advanced_search_i_hotel_zone", "//*[contains(@id, 'hotelZoneId::content')]");
+        elements.put("advanced_search_e_hotelzone", "//*[contains(@id, 'it3::content')]");
+        elements.put("advanced_search_i_pax_name", "//*[contains(@id, 'it14::content')]");
+        elements.put("advanced_search_i_pax_surname", "//*[contains(@id, 'it8::content')]");
+        elements.put("advanced_search_sl_insurance", "//*[contains(@id, 'soc1::content')]");
+        elements.put("advanced_search_sl_canceled", "//*[contains(@id, 'soc5::content')]");
+        elements.put("advanced_search_sl_confirmed", "//*[contains(@id, 'soc7::content')]");
+        elements.put("advanced_search_i_contract", "//*[contains(@id, 'it18::content')]");
+        elements.put("advanced_search_lov_booking_type", "//*[contains(@id, 'bookingTypeId::lovIconId')]");
+        elements.put("advanced_search_i_booking_type", "//*[contains(@id, 'bookingTypeId::content')]");
+        elements.put("advanced_search_lov_department", "//*[contains(@id, 'departmentId::lovIconId')]");
+        elements.put("advanced_search_i_department", "//*[contains(@id, 'departmentId::content']");
+        elements.put("advanced_search_i_creation_user", "//*[contains(@id, 'it7::content')]");
+        elements.put("advanced_search_i_ticked_num", "//*[contains(@id, 'it16::content')]");
+        elements.put("advanced_search_lov_ivoiced_company", "//*[contains(@id, 'empFacturadoraId::lovIconId')]");
+        elements.put("advanced_search_i_invoiced_company", "//*[contains(@id, 'empFacturadoraId::content')]");
+        elements.put("advanced_search_sl_credit_type", "//*[contains(@id, 'soc4::content')]");
+        elements.put("advanced_search_sl_invoiced", "//*[contains(@id, 'soc8::content')]");
+        elements.put("advanced_search_i_vip", "//*[contains(@id, 'soc36::content')]");
+        elements.put("advanced_search_ch_transfer", "//*[contains(@id, 'it17::content')]");
+        elements.put("advanced_search_lov_from", "//*[contains(@id, 'transferFromId::lovIconId')]");
+        elements.put("advanced_search_i_from", "//*[contains(@id, 'transferFromId::content')]");
+        elements.put("advanced_search_lov_to", "//*[contains(@id, 'transferToId::lovIconId')]");
+        elements.put("advanced_search_i_to", "//*[contains(@id, 'transferToId::content')]");
+        elements.put("advanced_search_i_stay_date_from", "//*[contains(@id, 'id9::content')]");
+        elements.put("advanced_search_i_stay_date_to", "//*[contains(@id, 'id10::content')]");
+        elements.put("advanced_search_i_sending_date_from", "//*[contains(@id, 'id5::content')]");
+        elements.put("advanced_search_i_sending_date_to", "//*[contains(@id, 'id7::content')]");
+        elements.put("advanced_search_i_cancel_fee_from", "//*[contains(@id, 'id1::content')]");
+        elements.put("advanced_search_i_cancel_fee_to", "//*[contains(@id, 'id8::content')]");
+        elements.put("advanced_search_ch_extra", "//*[contains(@id, 'it9::content')]");
         elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
         elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
+
+
 
 
 
@@ -131,11 +185,6 @@ public class AT2BOOSA0001Locators {
         elements.put("query_i_contract_code", "//*[contains(@id, '_afr_t1_afr_c62::content')]");
         elements.put("query_i_contract_name", "//*[contains(@id, '_afr_t1_afr_c61::content')]");
 
-
-
-
-
-
         // TOOLBAR
         elements.put("tb_b_actions", "//*[contains(@id, 'pc1:pcgm2:dc_m1')]/div/table/tbody/tr/td[3]/div");
         elements.put("tb_b_audit", "//*[contains(@id, 'pc1:pcgm2:dc_cmi0')]/td[2]");
@@ -162,7 +211,6 @@ public class AT2BOOSA0001Locators {
         elements.put("result_e_arrival_booking", "//*[contains(@id, 'ot21::content')]");
         elements.put("result_e_departure_booking", "//*[contains(@id, 'ot55::content')]");
         elements.put("result_e_hotel_send", "//*[contains(@id, 'ot7')]");
-
         elements.put("result_e_client_reference", "//*[contains(@id, 'ot47::content')]");
         elements.put("result_e_interface", "//*[contains(@id, 'ot1::content')]");
         elements.put("result_e_booking_status", "//*[contains(@id, 'ot48::content')]");
@@ -175,7 +223,6 @@ public class AT2BOOSA0001Locators {
         elements.put("result_e_profit", "//*[contains(@id, 'ot12::content')]");
         elements.put("result_e_profitability", "//*[contains(@id, 'ot46::content')]");
         elements.put("result_e_currency", "//*[contains(@id, 'ot38::content')]");
-
         elements.put("result_e_bm", "//*[contains(@id, 'sbc2::content')]/span/img");
         elements.put("result_e_bco", "//*[contains(@id, 'sbc3::content')]/span/img");
         elements.put("result_e_ticket_number", "//*[contains(@id, 'ot57::content')]");
@@ -202,59 +249,6 @@ public class AT2BOOSA0001Locators {
         elements.put("result_e_booking_type", "//*[contains(@id, 'ot39::content')]");
         elements.put("result_e_contract_code", "//*[contains(@id, 'ot37::content')]");
         elements.put("result_e_contract_name", "//*[contains(@id, 'ot41::content')]");
-
-/*
-        elements.put("result_e_client", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[6]");
-        elements.put("result_e_branch", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[7]");
-        elements.put("result_e_crc", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[8]");
-        elements.put("result_e_pax_name", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[9]");
-        elements.put("result_e_adults", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[10]");
-        elements.put("result_e_children", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[11]");
-        elements.put("result_e_babies", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[12]");
-        elements.put("result_e_hotel_code", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[13]");
-        elements.put("result_e_first_hotel", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[14]");
-        elements.put("result_e_arrival_booking", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[15]");
-        elements.put("result_e_departure_booking", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[16]");
-        elements.put("result_e_hotel_send", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[17]");
-        elements.put("result_e_client_reference", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[18]");
-        elements.put("result_e_interface", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[19]");
-        elements.put("result_e_booking_status", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[20]");
-        elements.put("result_e_description", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[21]");
-        elements.put("result_e_canrec_status", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[22]");
-        elements.put("result_e_canrec_description", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[23]");
-        elements.put("result_e_invoiced_company", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[24]");
-        elements.put("result_e_cost", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[25]");
-        elements.put("result_e_sale", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[26]");
-        elements.put("result_e_profit", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[27]");
-        elements.put("result_e_profitability", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[28]");
-        elements.put("result_e_currency", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[28]");
-        elements.put("result_e_bm", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[29]");
-        elements.put("result_e_bco", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[30]");
-        elements.put("result_e_ticket_number", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[31]");
-        elements.put("result_e_room", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[32]");
-        elements.put("result_e_type_of_room", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[33]");
-        elements.put("result_e_cancellation_date", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[34]");
-        elements.put("result_e_cancellation_fee_date", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[35]");
-        elements.put("result_e_auto_cancellation_date_time", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[36]");
-        elements.put("result_e_client_code", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[37]");
-        elements.put("result_e_customer", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[38]");
-        elements.put("result_e_sap_client_code", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[39]");
-        elements.put("result_e_destination", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[40]");
-        elements.put("result_e_country_market", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[41]");
-        elements.put("result_e_paid", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[42]");
-        elements.put("result_e_invoiced", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[43]");
-        elements.put("result_e_multi_destination", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[44]");
-        elements.put("result_e_transfer", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[45]");
-        elements.put("result_e_retailer", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[46]");
-        elements.put("result_e_refundable", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[47]");
-        elements.put("result_e_excluded_cancellation_process", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[48]");
-        elements.put("result_e_error_message", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[49]");
-        elements.put("result_e_n_attempts", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[50]");
-        elements.put("result_e_cancellation_reason", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[51]");
-        elements.put("result_e_booking_type", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[52]");
-        elements.put("result_e_contract_code", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[53]");
-        elements.put("result_e_contract_name", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[54]");
-*/
     }
 
     }

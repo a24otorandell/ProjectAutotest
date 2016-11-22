@@ -231,7 +231,7 @@ public class AT2BOOSA0001Test {
                     new String[]{"query_i_bm",getElements("query_i_bm")},
                    "No", "result_bm", where)){return false;}
         }
-        else {
+        else if (getData("result_bm").equalsIgnoreCase("checked")) {
 
             if (!Functions.selectText(driver,
                     new String[]{"query_i_bm",getElements("query_i_bm")},
@@ -239,7 +239,7 @@ public class AT2BOOSA0001Test {
         }
 
 
-        if (getData("query_i_bco").equalsIgnoreCase("unchecked")) {
+        if (getData("result_bco").equalsIgnoreCase("unchecked")) {
 
             if (!Functions.selectText(driver,
                     new String[]{"query_i_bco",getElements("query_i_bco")},
@@ -556,12 +556,12 @@ public class AT2BOOSA0001Test {
                 where);
         Functions.getAttr(driver,
                 new String[]{"result_e_bm",getElements("result_e_bm")}, // element path
-                "alt", // atribute to get data (class, value, id, style, etc...)
+                "title", // atribute to get data (class, value, id, style, etc...)
                 "result_bm", // key for data value (the name)
                 where); // where this operation occurs
         Functions.getAttr(driver,
                 new String[]{"result_e_bco",getElements("result_e_bco")}, // element path
-                "alt", // atribute to get data (class, value, id, style, etc...)
+                "title", // atribute to get data (class, value, id, style, etc...)
                 "result_bco", // key for data value (the name)
                 where); // where this operation occurs
         Functions.getValue(driver,
