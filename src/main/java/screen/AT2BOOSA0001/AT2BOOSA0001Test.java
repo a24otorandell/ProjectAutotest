@@ -58,14 +58,25 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_qbe(driver)){
             return false;
         }
-        if(!Search_booking_advanced_search(driver)){return true;}
-        return false;
+        if(!Search_booking_other_actions(driver)){
+            return false;
+        }
+        if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
+            return false;
+        }
+
+      /*  if(!Search_booking_advanced_search(driver)){return true;}
+        return false;*/
+
+      return true;
     }
+
+
 
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
-        String where = " on HARD QBE";
-        driver.getReport().addHeader("HARD QBE IN SEARCH BOOKING",3,false);
+        String where = " on SEARCH BY QUERY BY EXAPLE";
+        driver.getReport().addHeader("SEARCH BY QUERY BY EXAPLE IN SEARCH BOOKING",3,false);
 
 
 
@@ -80,6 +91,11 @@ public class AT2BOOSA0001Test {
                 "result_receptive",getData("result_receptive"),where)){
             return false;
         }
+        Functions.insertInput(driver,
+                new String[]{"query_i_receptive",getElements("query_i_receptive")},
+                "result_receptive",
+                getData("result_receptive"),
+                where);
         Functions.insertInput(driver,
                 new String[]{"query_i_atlas_company",getElements("query_i_atlas_company")},
                 "result_atlas_company",
@@ -125,6 +141,13 @@ public class AT2BOOSA0001Test {
                 "result_adults",
                 getData("result_adults"),
                 where);
+        Functions.insertInput(driver,
+                new String[]{"query_id_booking",getElements("query_id_booking")},
+                "result_id_booking",
+                getData("result_id_booking"),
+                where);
+
+
         Functions.insertInput(driver,
                 new String[]{"query_i_children",getElements("query_i_children")},
                 "result_children",
@@ -217,19 +240,19 @@ public class AT2BOOSA0001Test {
                 "result_profitability",
                 getData("result_profitability"),
                 where);
-        Functions.break_time(driver,25,500);
+        Functions.break_time(driver,30,500);
         Functions.insertInput(driver,
                 new String[]{"query_i_currency",getElements("query_i_currency")},
                 "result_currency",
                 getData("result_currency"),
                 where);
 
-        Functions.break_time(driver,25,500);
-       if (getData("result_bm").equalsIgnoreCase("unchecked")) {
+        Functions.break_time(driver,30,500);
+        if (getData("result_bm").equalsIgnoreCase("unchecked")) {
 
             if (!Functions.selectText(driver,
                     new String[]{"query_i_bm",getElements("query_i_bm")},
-                   "No", "result_bm", where)){return false;}
+                    "No", "result_bm", where)){return false;}
         }
         else if (getData("result_bm").equalsIgnoreCase("checked")) {
 
@@ -238,7 +261,7 @@ public class AT2BOOSA0001Test {
                     "Yes", "result_bm", where)){return false;}
         }
 
-
+        Functions.break_time(driver,30,500);
         if (getData("result_bco").equalsIgnoreCase("unchecked")) {
 
             if (!Functions.selectText(driver,
@@ -251,7 +274,7 @@ public class AT2BOOSA0001Test {
                     new String[]{"query_i_bco",getElements("query_i_bco")},
                     "Yes", "result_bco", where)){return false;}
         }
-
+        Functions.break_time(driver,25,500);
         Functions.insertInput(driver,
                 new String[]{"query_i_ticket_number",getElements("query_i_ticket_number")},
                 "result_ticket_number",
@@ -307,7 +330,7 @@ public class AT2BOOSA0001Test {
                 "result_country_market",
                 getData("result_country_market"),
                 where);
-
+        Functions.break_time(driver,25,500);
         if (getData("result_paid").equalsIgnoreCase("unchecked")) {
 
             if (!Functions.selectText(driver,
@@ -320,7 +343,7 @@ public class AT2BOOSA0001Test {
                     new String[]{"query_i_paid",getElements("query_i_paid")},
                     "Yes", "result_paid", where)){return false;}
         }
-
+        Functions.break_time(driver,25,500);
         if (getData("result_invoiced").equalsIgnoreCase("unchecked")) {
 
             if (!Functions.selectText(driver,
@@ -328,12 +351,12 @@ public class AT2BOOSA0001Test {
                     "No", "result_invoiced", where)){return false;}
         }
         else {
-
+            Functions.break_time(driver,25,500);
             if (!Functions.selectText(driver,
                     new String[]{"query_i_invoiced",getElements("query_i_invoiced")},
                     "Yes", "result_invoiced", where)){return false;}
         }
-
+        Functions.break_time(driver,25,500);
         if (getData("result_multi_destination").equalsIgnoreCase("unchecked")) {
 
             if (!Functions.selectText(driver,
@@ -341,24 +364,24 @@ public class AT2BOOSA0001Test {
                     "No", "result_multi_destination", where)){return false;}
         }
         else {
-
+            Functions.break_time(driver,25,500);
             if (!Functions.selectText(driver,
                     new String[]{"query_i_multi_destination",getElements("query_i_multi_destination")},
                     "Yes", "result_multi_destination", where)){return false;}
-        }
+        }Functions.break_time(driver,25,500);
         if (getData("result_transfer").equalsIgnoreCase("unchecked")) {
-
+            Functions.break_time(driver,25,500);
             if (!Functions.selectText(driver,
                     new String[]{"query_i_transfer",getElements("query_i_transfer")},
                     "No", "result_transfer", where)){return false;}
         }
         else {
-
+            Functions.break_time(driver,25,500);
             if (!Functions.selectText(driver,
                     new String[]{"query_i_transfer",getElements("query_i_transfer")},
                     "Yes", "result_transfer", where)){return false;}
         }
-
+        Functions.break_time(driver,25,500);
         if (getData("result_retailer").equalsIgnoreCase("unchecked")) {
 
             if (!Functions.selectText(driver,
@@ -366,21 +389,21 @@ public class AT2BOOSA0001Test {
                     "No", "result_retailer", where)){return false;}
         }
         else {
-
+            Functions.break_time(driver,25,500);
             if(!Functions.selectText(driver,
                     new String[]{"query_i_retailer",getElements("query_i_retailer")},
                     "Yes","result_retailer",where)){
                 return false;
             }
             if(getData("result_refundable").equalsIgnoreCase("unchecked")){
-
+                Functions.break_time(driver,40,500);
                 if(!Functions.selectText(driver,
                         new String[]{"query_i_refundable",getElements("query_i_refundable")},
                         "No","result_refundable",where)){
                     return false;
                 }
             } else {
-
+                Functions.break_time(driver,40,500);
                 if(!Functions.selectText(driver,
                         new String[]{"query_i_refundable",getElements("query_i_refundable")},
                         "Yes","result_refundable",where)){
@@ -412,16 +435,19 @@ public class AT2BOOSA0001Test {
                     "result_booking_type",
                     getData("result_booking_type"),
                     where);
+            Functions.break_time(driver,25,500);
             Functions.insertInput(driver,
                     new String[]{"query_i_contract_code",getElements("query_i_contract_code")},
                     "result_contract_code",
                     getData("result_contract_code"),
                     where);
+            Functions.break_time(driver,25,500);
             Functions.insertInput(driver,
                     new String[]{"query_i_contract_name",getElements("query_i_contract_name")},
                     "result_contract_name",
                     getData("result_contract_name"),
                     where);
+            Functions.break_time(driver,50,500);
             if(!Functions.enterQueryAndClickResult(driver,
                     new String[]{"query_i_atlas_company",getElements("query_i_atlas_company")}, //any query input
                     new String[]{"query_e_result",getElements("query_e_result")}, //table result
@@ -445,6 +471,10 @@ public class AT2BOOSA0001Test {
         Functions.getValue(driver,
                 new String[]{"result_e_atlas_company",getElements("result_e_atlas_company")},
                 "result_atlas_company",
+                where);
+        Functions.getValue(driver,
+                new String[]{"result_e_id_booking",getElements("result_e_id_booking")},
+                "result_id_booking",
                 where);
         Functions.getValue(driver,
                 new String[]{"result_e_atlas_office",getElements("result_e_atlas_office")},
@@ -695,6 +725,52 @@ public class AT2BOOSA0001Test {
                 " on SEARCH")){
             return false;
         }
+        return true;
+    }
+    private boolean Search_booking_other_actions (TestDriver driver){
+        String where = " on OTHER ACTIONS";
+        driver.getReport().addHeader("OTHER ACTIONS IN SEARCH BOOKING",3,false);
+
+        if(!Functions.auditData(driver,
+                new String[]{"tb_b_actions",getElements("tb_b_actions")}, //actions button
+                new String[]{"tb_b_audit",getElements("tb_b_audit")}, //audit button
+                new String[]{"tb_b_audit_b_ok",getElements("tb_b_audit_b_ok")}, //audit_b_ok
+                where)){return false;}
+        if(!Functions.detachTable(driver,
+                new String[]{"tb_b_detach",getElements("tb_b_detach")}, //detach button
+                true,     //screenshot??
+                where)){return false;}
+        return true;
+    }
+    private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
+        String where = " on GO TO CANCELED_BOOKINGD";
+        driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
+                new String[]{"go_to_actions_b_bloqued_bookings", getElements("go_to_actions_b_bloqued_bookings")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"go_to_actions_b_bloqued_bookings", getElements("go_to_actions_b_bloqued_bookings")}, //element to click
+                new String[]{"go_to_bloqued_bookings_ch_select_all_gods", getElements("go_to_bloqued_bookings_ch_select_all_gods")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if (!Functions.checkboxValue(driver,
+                getElements("go_to_bloqued_bookings_ch_select_all_gods"),"datanme",true,true, where)){return false;}//where
+        if(!Functions.doDeleteNCheck(driver,
+                new String[]{"go_to_bloqued_bookings_b_delete",getElements("go_to_bloqued_bookings_b_delete")},
+                new String[]{"go_to_bloqued_bookings_e_record",getElements("go_to_bloqued_bookings_e_record")},
+                new String[]{"go_to_bloqued_bookings_b_delete_b_ok",getElements("go_to_bloqued_bookings_b_delete_b_ok")},
+                where)){
+            return false;
+        }
+        if(!Functions.checkClick(driver,
+                new String[]{"go_to_search_booking", getElements("go_to_search_booking")}, //element to click
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){

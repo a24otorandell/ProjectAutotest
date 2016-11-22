@@ -76,20 +76,14 @@ public class AT2BOOSA0001Locators {
         elements.put("advanced_search_i_cancel_fee_from", "//*[contains(@id, 'id1::content')]");
         elements.put("advanced_search_i_cancel_fee_to", "//*[contains(@id, 'id8::content')]");
         elements.put("advanced_search_ch_extra", "//*[contains(@id, 'it9::content')]");
+        elements.put("advanced_search_lov_extra", "//*[contains(@id, 'extraId::lovIconId')]");
+        elements.put("advanced_search_i_extra", "//*[contains(@id, 'extraId::content')]");
+        elements.put("advanced_search_ch_only_hotel", "//*[contains(@id, 'it20::content')]");
+        elements.put("advanced_search_ch_pay_associated", "//*[contains(@id, 'it11::content')]");
+        elements.put("advanced_search_ch_other", "//*[contains(@id, 'it13::content')]");
+        elements.put("advanced_search_sl_other", "//*[contains(@id, 'soc3::content')]");
+        elements.put("advanced_search_b_reset", "//*[contains(@id, '1:cb4')]");
         elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-        elements.put("advanced_search_i_interface", "//*[contains(@id, 'bookingInterfaceId::content')]");
-
-
-
-
-
-
 
 
           // SEARCH
@@ -125,8 +119,6 @@ public class AT2BOOSA0001Locators {
 
 
         // QUERY
-
-
         elements.put("query_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
 
         elements.put("query_i_receptive", "//*[contains(@id, 'pc1_afr_t1_afr_c17::content')]");
@@ -146,6 +138,7 @@ public class AT2BOOSA0001Locators {
         elements.put("query_i_arrival_booking", "//*[contains(@id, 'pc1:t1:id12::content')]");
         elements.put("query_i_departure_booking", "//*[contains(@id, 'pc1:t1:id19::content')]");
         elements.put("query_i_hotel_send", "//*[contains(@id, 'pc1:t1:id20::content')]");
+        elements.put("query_id_booking", "//*[contains(@id, 'pc1_afr_t1_afr_c113::content')]");
         elements.put("query_i_client_reference", "//*[contains(@id, '_afr_t1_afr_c39::content')]");
         elements.put("query_i_interface", "//*[contains(@id, '_afr_t1_afr_c28::content')]");
         elements.put("query_i_booking_status", "//*[contains(@id, '_afr_t1_afr_c15::content')]");
@@ -188,13 +181,14 @@ public class AT2BOOSA0001Locators {
         // TOOLBAR
         elements.put("tb_b_actions", "//*[contains(@id, 'pc1:pcgm2:dc_m1')]/div/table/tbody/tr/td[3]/div");
         elements.put("tb_b_audit", "//*[contains(@id, 'pc1:pcgm2:dc_cmi0')]/td[2]");
+        elements.put("tb_b_audit_b_ok", "//*[contains(@id, 'pc1:pcgm2:d22::ok')]");
         elements.put("tb_b_detach", "//*[contains(@id, 'dyntdc:r1:1:pc1:_dchTbr')]");
 
         // RESULT
         elements.put("result_e_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
         elements.put("result_n_records", "//*[contains(@id, 'pc1:outputText2')]");
-
         elements.put("result_e_receptive", "//*[contains(@id, 'ot50::content')]");
+        elements.put("result_e_id_booking", "//*[contains(@id, 'it28::content')]");
         elements.put("result_e_atlas_company", "//*[contains(@id, 'ot40::content')]");
         elements.put("result_e_atlas_office", "//*[contains(@id, 'ot36::content')]");
         elements.put("result_e_booking_reference", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[4]");
@@ -249,6 +243,20 @@ public class AT2BOOSA0001Locators {
         elements.put("result_e_booking_type", "//*[contains(@id, 'ot39::content')]");
         elements.put("result_e_contract_code", "//*[contains(@id, 'ot37::content')]");
         elements.put("result_e_contract_name", "//*[contains(@id, 'ot41::content')]");
+
+
+
+        //GO TO BOOOSA1004
+
+        elements.put("go_to_actions_b_bloqued_bookings", "//*[contains(@id, 'pc1:pcgm2:dc_cmi9')]/td[2]");
+        elements.put("go_to_bloqued_bookings_b_qbe", "//*[contains(@id, 'pc1:pcgm2:dc_cmi9')]/td[2]");
+        elements.put("go_to_bloqued_bookings_qbe_i_booking_reference", "//*[contains(@id, 'pc1:t2:inputText2::content')]");
+        elements.put("go_to_bloqued_bookings_e_result", "//*[contains(@id, 'pc1:t2::db')]/table/tbody/tr/td[1]]");
+        elements.put("go_to_bloqued_bookings_b_delete", "//*[contains(@id, 'pc1:pcgt1:boton_remove')]");
+        elements.put("go_to_bloqued_bookings_e_record", "//*[contains(@id, 'pc1:ot4count')]");
+        elements.put("go_to_bloqued_bookings_b_delete_b_ok", "//*[contains(@id, 'pc1:pcgt1:cbt1')]");
+        elements.put("go_to_bloqued_bookings_ch_select_all_gods", "//*[contains(@id, 'pc1:sbc1::content')]");
+        elements.put("go_to_search_booking", "//*[contains(@id, 'tabIndex::disclosureAnchor')]");
     }
 
     }

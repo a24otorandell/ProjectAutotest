@@ -58,14 +58,19 @@ public class AT2BOOSA0001Sis {
         if(!Search_booking_qbe(driver)){
             return false;
         }
-        if(!Search_booking_advanced_search(driver)){return true;}
-        return false;
+        if(!Search_booking_other_actions(driver)){
+            return false;
+        }
+      /*  if(!Search_booking_advanced_search(driver)){return true;}
+        return false;*/
+
+        return true;
     }
 
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
-        String where = " on HARD QBE";
-        driver.getReport().addHeader("HARD QBE IN SEARCH BOOKING",3,false);
+        String where = " on SEARCH BY QUERY BY EXAPLE";
+        driver.getReport().addHeader("SEARCH BY QUERY BY EXAPLE IN SEARCH BOOKING",3,false);
 
 
 
@@ -80,6 +85,11 @@ public class AT2BOOSA0001Sis {
                 "result_receptive",getData("result_receptive"),where)){
             return false;
         }
+        Functions.insertInput(driver,
+                new String[]{"query_i_receptive",getElements("query_i_receptive")},
+                "result_receptive",
+                getData("result_receptive"),
+                where);
         Functions.insertInput(driver,
                 new String[]{"query_i_atlas_company",getElements("query_i_atlas_company")},
                 "result_atlas_company",
@@ -125,6 +135,13 @@ public class AT2BOOSA0001Sis {
                 "result_adults",
                 getData("result_adults"),
                 where);
+        Functions.insertInput(driver,
+                new String[]{"query_id_booking",getElements("query_id_booking")},
+                "result_id_booking",
+                getData("result_id_booking"),
+                where);
+
+
         Functions.insertInput(driver,
                 new String[]{"query_i_children",getElements("query_i_children")},
                 "result_children",
@@ -450,6 +467,10 @@ public class AT2BOOSA0001Sis {
                 "result_atlas_company",
                 where);
         Functions.getValue(driver,
+                new String[]{"result_e_id_booking",getElements("result_e_id_booking")},
+                "result_id_booking",
+                where);
+        Functions.getValue(driver,
                 new String[]{"result_e_atlas_office",getElements("result_e_atlas_office")},
                 "result_atlas_office",
                 where);
@@ -698,6 +719,21 @@ public class AT2BOOSA0001Sis {
                 " on SEARCH")){
             return false;
         }
+        return true;
+    }
+    private boolean Search_booking_other_actions (TestDriver driver){
+        String where = " on OTHER ACTIONS";
+        driver.getReport().addHeader("OTHER ACTIONS IN SEARCH BOOKING",3,false);
+
+        if(!Functions.auditData(driver,
+                new String[]{"tb_b_actions",getElements("tb_b_actions")}, //actions button
+                new String[]{"tb_b_audit",getElements("tb_b_audit")}, //audit button
+                new String[]{"tb_b_audit_b_ok",getElements("tb_b_audit_b_ok")}, //audit_b_ok
+                where)){return false;}
+        if(!Functions.detachTable(driver,
+                new String[]{"tb_b_detach",getElements("tb_b_detach")}, //detach button
+                true,     //screenshot??
+                where)){return false;}
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){
