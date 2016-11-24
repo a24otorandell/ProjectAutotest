@@ -33,7 +33,7 @@ public class AT2MDMSY1005Test {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("System");
-        driver.getTestdetails().setScreen("GVCC Configuration Maintenance");
+        driver.getTestdetails().setScreen("Consulta de Mapper File");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
@@ -46,19 +46,27 @@ public class AT2MDMSY1005Test {
         if (!first_search_t1(driver)) return false;
         if (!getData_t1(driver)) return false;
         if (!search_t1(driver)) return false;
-        /*if (!qbe_t1(driver)) return false;*/
+        if (!qbe_t1(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!first_search_t2(driver)) return false;
         if (!getData_t2(driver)) return false;
+        if (!search_t2(driver)) return false;
+        if (!qbe_t2(driver)) return false;
         if (!others_actions_t2(driver)) return false;
         return true;
     }
 
+    /**
+     * TAB TRANSACTIONS MAPPER FILE - TABLE TRANSACTION
+     */
     private boolean first_search_t1(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on FIRST SEARCH";
+        String where = " on FIRST SEARCH 1";
+        Functions.zoomOut(driver);
+        Functions.zoomOut(driver);
+        Functions.zoomOut(driver);
         if (!Functions.insertInput(driver, new String[]{"search_i_from_date",getElements("search_i_from_date")},
-                "from", "23/11/2016 00:00:00",where)){return false;}
+                "from", "23/11/2016 18:00:00",where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_to_date",getElements("search_i_to_date")},
                 "to", "24/11/2016 00:00:00",where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
@@ -70,17 +78,20 @@ public class AT2MDMSY1005Test {
         return true;
     }
     private boolean getData_t1 (TestDriver driver) {
+        //Functions.zoomOut(driver);
         String[] columns = {"trans", "ref", "type", "desc_type", "company", "currency", "supplier", "cost", "buffer", "amount", "payment", "activa", "expira", "operator", "client", "request", "reference", "id", "status", "code", "origin", "file", "load", "t_amount", "t_currency", "b_amount", "b_currency", "from", "merchant", "b_card", "b_date", "ref1", "ref2", "ref3", "sap", "error", "desc_error", "c_user", "c_date", "m_user", "m_date"};
         Functions.collectTableData(driver,
                 columns, //array with the names of the columns
                 "//*[contains(@id, 'pc1:t1::db')]",
-                1, // row to give values
-                "where");
+                25, // row to give values
+                "GET DATA 1");
         return true;
+
+
     }
     private boolean search_t1(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH";
+        String where = " on SEARCH 1";
         if (!Functions.insertInput(driver, new String[]{"search_i_from_date",getElements("search_i_from_date")},
                 "from", getData("from"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_to_date",getElements("search_i_to_date")},
@@ -110,7 +121,7 @@ public class AT2MDMSY1005Test {
                 "reference", getData("reference"),where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_type",getElements("search_sl_type")},
-                getData("desc_type"), "type", where)){return false;}
+                getData("desc_type"), "type2", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_staus",getElements("search_sl_staus")},
                 getData("status"), "status", where)){return false;}
@@ -133,7 +144,7 @@ public class AT2MDMSY1005Test {
                 "load", getData("load"),where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search1", getElements("search_b_search1")}, //search button
-                new String[]{"transaction_e_result", getElements("transaction_e_result")}, //result element
+                new String[]{"transaction_e_result_1", getElements("transaction_e_result_1")}, //result element
                 where)) {
             return false;
         }
@@ -141,16 +152,20 @@ public class AT2MDMSY1005Test {
     }
     private boolean qbe_t1(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
-        String where = " on QBE";
+        String where = " on QBE 1";
         if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"configuration_e_result", getElements("configuration_e_result")}, //result element
+                new String[]{"search_b_reset1", getElements("search_b_reset1")}, //search button
+                new String[]{"transaction_e_result_1", getElements("transaction_e_result_1")}, //result element
                 where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"search_i_from_date",getElements("search_i_from_date")},
+                "from", getData("from"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_to_date",getElements("search_i_to_date")},
+                "to", getData("to"),where)){return false;}
         if (!Functions.clickQbE(driver,
-                new String[]{"configuration_b_qbe", getElements("configuration_b_qbe")},// query button
-                new String[]{"qbe_i_company", getElements("qbe_i_company")},//any query input
+                new String[]{"transaction_b_qbe", getElements("transaction_b_qbe")},// query button
+                new String[]{"qbe_i_transaction", getElements("qbe_i_transaction")},//any query input
                 where)) {
             return false;
         } // where the operation occurs
@@ -162,41 +177,66 @@ public class AT2MDMSY1005Test {
                 new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
                 getData("type"), "type", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_type_desc",getElements("qbe_i_type_desc")},
-                "type_desc", getData("type_desc"),where)){return false;}
+                "desc_type", getData("desc_type"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_company",getElements("qbe_i_company")},
                 "company", getData("company"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_currency",getElements("qbe_i_currency")},
                 "currency", getData("currency"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_supplier",getElements("qbe_i_supplier")},
                 "supplier", getData("supplier"), where)){return false;}
-
-
-
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_cost",getElements("qbe_i_cost")},
+                "cost", getData("cost"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_buffer",getElements("qbe_i_buffer")},
+                "buffer", getData("buffer"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_amount",getElements("qbe_i_amount")},
+                "amount", getData("amount"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_payment",getElements("qbe_i_payment")},
+                "payment", getData("payment"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_act",getElements("qbe_i_act")},
+                "activa", getData("activa"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_exp",getElements("qbe_i_exp")},
+                "expira", getData("expira"),where)){return false;}
+/*        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_operator",getElements("qbe_sl_operator")},
+                getData("operator"), "operator", where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_client",getElements("qbe_sl_client")},
+                getData("client"), "client", where)){return false;}*/
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_req",getElements("qbe_i_req")},
+                "request", getData("request"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_ref_tmp",getElements("qbe_i_ref_tmp")},
+                "reference", getData("reference"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_id",getElements("qbe_i_id")},
+                "id", getData("id"),where)){return false;}
+        Functions.break_time(driver, 3, 400);
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_status",getElements("qbe_sl_status")},
+                getData("status"), "status", where)){return false;}
+        Functions.break_time(driver, 3, 400);
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_code",getElements("qbe_i_code")},
+                "code", getData("code"),where)){return false;}
+        Functions.break_time(driver, 3, 400);
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_origin",getElements("qbe_sl_origin")},
+                getData("origin"), "origin", where)){return false;}
+        Functions.break_time(driver, 3, 400);
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_file",getElements("qbe_i_file")},
+                "file", getData("file"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_load",getElements("qbe_i_load")},
+                "load", getData("load"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_date",getElements("qbe_i_date")},
                 "from", getData("from"),where)){return false;}
-
-
-        if (!Functions.selectText(driver,
-                new String[]{"search_sl_origin",getElements("search_sl_origin")},
-                getData("origin"), "origin", where)){return false;}
-
-
-
-
-
-
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_payment",getElements("qbe_i_payment")},
-                "payment", getData("payment"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_vcc",getElements("qbe_i_vcc")},
-                "vcc", getData("vcc"), where)){return false;}
-
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_percentage",getElements("qbe_i_percentage")},
-                "perce", getData("perce"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_max",getElements("qbe_i_max")},
-                "max", getData("max"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_error",getElements("qbe_i_error")},
+                "error", getData("error"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_desc_error",getElements("qbe_i_desc_error")},
+                "desc_error", getData("desc_error"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_user",getElements("qbe_i_user")},
+                "c_user", getData("c_user"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_c_date",getElements("qbe_i_c_date")},
+                "c_date", getData("c_date"), where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
-                new String[]{"qbe_i_company", getElements("qbe_i_company")}, //any query input
-                new String[]{"configuration_e_result", getElements("configuration_e_result")}, //table result
+                new String[]{"qbe_i_desc_error", getElements("qbe_i_desc_error")}, //any query input
+                new String[]{"transaction_e_result_1", getElements("transaction_e_result_1")}, //table result
                 where)){return false;}
         return true;
     }
@@ -221,14 +261,20 @@ public class AT2MDMSY1005Test {
         return true;
     }
 
-
+    /**
+     * TAB LOAD MAPPER FILE - TABLE LOAD
+     */
     private boolean first_search_t2(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on FIRST SEARCH";
+        String where = " on FIRST SEARCH 2";
+        Functions.break_time(driver, 3, 400);
+        if (!Functions.simpleClick(driver,
+                new String[]{"load_tab", getElements("load_tab")}, //element to click
+                where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_from_date",getElements("search_i_from_date")},
-                "from", "20/11/2016 00:00:00",where)){return false;}
+                "start1", "21/11/2016",where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_to_date",getElements("search_i_to_date")},
-                "to", "24/11/2016 00:00:00",where)){return false;}
+                "end1", "22/11/2016",where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search2", getElements("search_b_search2")}, //search button
                 new String[]{"load_e_result", getElements("load_e_result")}, //result element
@@ -238,17 +284,87 @@ public class AT2MDMSY1005Test {
         return true;
     }
     private boolean getData_t2 (TestDriver driver) {
-        String[] columns = {"load2", "conf", "operator", "start", "end", "file2", "total", "correct", "incorrect", "error2", "desc_error2"};
+        String[] columns = {"load2", "conf", "operator2", "start", "end", "file2", "total", "correct", "incorrect", "error2", "desc_error2"};
         Functions.collectTableData(driver,
                 columns, //array with the names of the columns
                 "//*[contains(@id, 'pc1:t1::db')]",
                 1, // row to give values
-                "where");
+                "GET DATA 2");
+        return true;
+    }
+    private boolean search_t2(TestDriver driver) {
+        driver.getReport().addHeader("SEARCH RECORD", 3, false);
+        String where = " on SEARCH 2";
+        if (!Functions.insertInput(driver, new String[]{"search_i_from_date1",getElements("search_i_from_date1")},
+                "start", getData("start"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_to_date1",getElements("search_i_to_date1")},
+                "end", getData("end"),where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"search_sl_operator2",getElements("search_sl_operator2")},
+                getData("operator2"), "operator2", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_file2",getElements("search_i_file2")},
+                "file2", getData("file2"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_load2",getElements("search_i_load2")},
+                "load2", getData("load2"),where)){return false;}
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search2", getElements("search_b_search2")}, //search button
+                new String[]{"load_e_result", getElements("load_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    private boolean qbe_t2(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE 2";
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_reset2", getElements("search_b_reset2")}, //search button
+                new String[]{"load_e_result", getElements("load_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"search_i_from_date1",getElements("search_i_from_date1")},
+                "start1", getData("start1"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_to_date1",getElements("search_i_to_date1")},
+                "end1", getData("end1"),where)){return false;}
+        if (!Functions.clickQbE(driver,
+                new String[]{"load_b_qbe", getElements("load_b_qbe")},// query button
+                new String[]{"qbe_i_load2", getElements("qbe_i_load2")},//any query input
+                where)) {
+            return false;
+        } // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_load2",getElements("qbe_i_load2")},
+                "load2", getData("load2"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_conf2",getElements("qbe_i_conf2")},
+                "conf", getData("conf"),where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_operator2",getElements("qbe_sl_operator2")},
+                getData("operator2"), "operator2", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_start",getElements("qbe_i_start")},
+                "start", getData("start"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_end",getElements("qbe_i_end")},
+                "end", getData("end"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_file2",getElements("qbe_i_file2")},
+                "file2", getData("file2"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_total",getElements("qbe_i_total")},
+                "total", getData("total"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_correct",getElements("qbe_i_correct")},
+                "correct", getData("correct"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_incorrect",getElements("qbe_i_incorrect")},
+                "incorrect", getData("incorrect"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_error2",getElements("qbe_i_error2")},
+                "error2", getData("error2"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_desc_error2",getElements("qbe_i_desc_error2")},
+                "desc_error2", getData("desc_error2"), where)){return false;}
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_load2", getElements("qbe_i_load2")}, //any query input
+                new String[]{"load_e_result", getElements("load_e_result")}, //table result
+                where)){return false;}
         return true;
     }
     private boolean others_actions_t2(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
-        String where = " on OTHER AUDIT DATA 1";
+        String where = " on OTHER AUDIT DATA 2";
         if (!Functions.auditData(driver,
                 new String[]{"load_b_actions", getElements("load_b_actions")}, //actions button
                 new String[]{"load_b_actions_b_audit_data", getElements("load_b_actions_b_audit_data")}, //audit button
@@ -257,7 +373,7 @@ public class AT2MDMSY1005Test {
             return false;
         }
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH 1";
+        where = " on OTHER DETACH 2";
         if (!Functions.detachTable(driver,
                 new String[]{"load_b_detach", getElements("load_b_detach")}, //detach button
                 true,     //screenshot??

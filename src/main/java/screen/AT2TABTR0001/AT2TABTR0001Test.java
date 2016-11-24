@@ -29,9 +29,9 @@ public class AT2TABTR0001Test {
         CommonProcedures.goToScreen(driver);
     }
     protected void setScreenInfo(TestDriver driver) {
-        driver.getTestdetails().setMainmenu("Car Hire");
-        driver.getTestdetails().setSubmenu("Setup");
-        driver.getTestdetails().setScreen("Carnect - Introducir la política de cancelación en la reserva");
+        driver.getTestdetails().setMainmenu("Tab");
+        driver.getTestdetails().setSubmenu("Transfer");
+        driver.getTestdetails().setScreen("Content Factsheet");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
