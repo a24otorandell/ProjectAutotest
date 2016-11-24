@@ -293,10 +293,10 @@ public class AT2MDMSY0015Test {
                 "rbc2_hotelbeds_reference", getData("rbc2_hotelbeds_reference"), where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"qbe_rbc2_i_modification_date", getElements("qbe_rbc2_i_modification_date")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_rbc2_i_modification_date", getElements("qbe_rbc2_i_modification_date")},
                 "rbc2_modification_date", getData("rbc2_modification_date"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_rbc2_i_remarks", getElements("qbe_rbc2_i_remarks")},
                 "rbc2_remarks", getData("rbc2_remarks"), where)) {
             return false;
