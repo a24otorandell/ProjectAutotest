@@ -31,6 +31,7 @@ public class AT2MDMRM0001Locators {
         elements.put("classif_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("classif_e_result", "//*[contains(@id, 'pc1:coCls::db')]/table/tbody/tr[1]/td[1]");
         elements.put("classif_e_records", "//*[contains(@id, 'pc1:ot2')]");
+        elements.put("classif_b_reset", "//*[contains(@id, 'pc1:coCls::ch::t')]/tbody/tr[2]/th/a");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
@@ -77,7 +78,7 @@ public class AT2MDMRM0001Locators {
         elements.put("qbe_sl_application_type", "//*[contains(@id, 'coCls:soc7::content')]");
         elements.put("qbe_sl_opaque", "//*[contains(@id, 'coCls:soc15::content')]");
         elements.put("qbe_sl_pep", "//*[contains(@id, 'coCls:soc8::content')]");
-        elements.put("qbe_sl_liberate", "//*[contains(@id, 'coCls:soc9::content)]");
+        elements.put("qbe_sl_liberate", "//*[contains(@id, 'coCls:soc9::content')]");
         elements.put("qbe_sl_nrf", "//*[contains(@id, 'coCls:selectOneChoice3::content')]");
         /**
          * TABLE INCOMPATIBILITY
@@ -96,11 +97,11 @@ public class AT2MDMRM0001Locators {
         elements.put("add_b_save2", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
         elements.put("add_i_code2", "//*[contains(@id, 'pcgt1:codClasifIncomId::content')]");
         elements.put("add_lov_code", "//*[contains(@id, 'pcgt1:codClasifIncomId::lovIconId')]");
-        elements.put("add_sl_type", "//*[contains(@id, 'pcgt1:soc3::content')]");
+        elements.put("add_sl_type2", "//*[contains(@id, 'pcgt1:soc3::content')]");
         elements.put("add_i_description", "//*[contains(@id, 'pcgt1:it3::content')]");
         //QBE
-        elements.put("qbe_i_code", "//*[contains(@id, '_afr_ClsInc_afr_c13::content')]");
-        elements.put("qbe_sl_type", "//*[contains(@id, 'ClsInc:soc12::content')]");
+        elements.put("qbe_i_code2", "//*[contains(@id, '_afr_ClsInc_afr_c13::content')]");
+        elements.put("qbe_sl_type2", "//*[contains(@id, 'ClsInc:soc12::content')]");
         elements.put("qbe_i_description", "//*[contains(@id, '_afr_ClsInc_afr_c14::content')]");
         /**
          * TABLE MULTI-LANGUAGE
@@ -114,7 +115,7 @@ public class AT2MDMRM0001Locators {
         elements.put("multi_b_qbe", "//*[contains(@id, 'pc3:_qbeTbr')]");
         elements.put("multi_b_detach", "//*[contains(@id, 'pc3:_dchTbr')]");
         elements.put("multi_e_result", "//*[contains(@id, 'pc3:ClsId::db')]/table/tbody/tr[1]/td[1]");
-        elements.put("multi_e_records", "//*[contains(@id, 'pc3:t6::eoi')]");
+        elements.put("multi_e_records", "//*[contains(@id, 'pc3:ot8')]");
         //ADD
         elements.put("add_b_save3", "//*[contains(@id, 'pcgt3:btn_commitExit')]");
         elements.put("add_i_language_code", "//*[contains(@id, 'pcgt3:codIdiId::content')]");
