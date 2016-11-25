@@ -47,27 +47,27 @@ public class AT2MDMSP0015Sis {
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_record_ea_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
-       /* if (!interaction_record_srvcs_MDM(driver)) return false;
+        if (!interaction_record_srvcs_MDM(driver)) return false;
         if (!qbe_srvcs_MDM(driver)) return false;
         if (!first_tab_change(driver)) return false;
         if (!interaction_record_stps_MDM(driver)) return false;
-        if (!qbe_stps_MDM(driver)) return false;*/
+        if (!qbe_stps_MDM(driver)) return false;
         if (!second_tab_change(driver)) return false;
         if (!interaction_record_rst_MDM(driver)) return false;
         if (!qbe_rst_MDM(driver)) return false;
-        /*if (!third_tab_change(driver)) return false;
+        if (!third_tab_change(driver)) return false;
         if (!interaction_record_cndtn_MDM(driver)) return false;
         if (!qbe_cndtn_MDM(driver)) return false;
         if (!interaction_edit_cndtn_MDM(driver)) return false;
         if (!qbe_cndtn_MDM(driver)) return false;
         if (!others_actions_cndtn_MDM(driver)) return false;
         if (!delete_cndtn_MDM(driver)) return false;
-        if (!second_tab_change(driver)) return false;*/
+        if (!second_tab_change(driver)) return false;
         if (!interaction_edit_rst_MDM(driver)) return false;
         if (!qbe_rst_MDM(driver)) return false;
         if (!others_actions_rst_MDM(driver)) return false;
         if (!delete_rst_MDM(driver)) return false;
-       /* if (!first_tab_change(driver)) return false;
+        if (!first_tab_change(driver)) return false;
         if (!interaction_edit_stps_MDM(driver)) return false;
         if (!qbe_stps_MDM(driver)) return false;
         if (!others_actions_stps_MDM(driver)) return false;
@@ -76,7 +76,7 @@ public class AT2MDMSP0015Sis {
         if (!interaction_edit_srvcs_MDM(driver)) return false;
         if (!qbe_srvcs_MDM(driver)) return false;
         if (!others_actions_srvcs_MDM(driver)) return false;
-        if (!delete_srvcs_MDM(driver)) return false;*/
+        if (!delete_srvcs_MDM(driver)) return false;
         if (!interaction_edit_ea_MDM(driver)) return false;
         if (!qbe_ea_MDM(driver)) return false;
         if (!others_actions_ea_MDM(driver)) return false;
@@ -153,6 +153,7 @@ public class AT2MDMSP0015Sis {
                 option, "service_type", where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         String second_list_options[] = {"A","X"};
         String second_option = (second_list_options[new Random().nextInt(second_list_options.length)]);
         if (!Functions.selectText(driver,
@@ -189,13 +190,16 @@ public class AT2MDMSP0015Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         String first_list_options[] = {"DAILY","OCCASIONAL"};
         String first_option = (first_list_options[new Random().nextInt(first_list_options.length)]);
         if (!Functions.selectText(driver,
                 new String[]{"add_stps_sl_stop_type", getElements("add_stps_sl_stop_type")},
-                first_option, "stop_type", where)) {
+                first_option, "stop_type",
+                where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.insertInput(driver, new String[]{"add_stps_i_stop_time", getElements("add_stps_i_stop_time")}, // element path
                 "stop_time", getData("stop_time"), where)) {
             return false;
@@ -204,6 +208,7 @@ public class AT2MDMSP0015Sis {
                 "start_time", getData("start_time"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         String second_list_options[] = {"A","X"};
         String second_option = (second_list_options[new Random().nextInt(second_list_options.length)]);
         if (!Functions.selectText(driver,
@@ -211,6 +216,7 @@ public class AT2MDMSP0015Sis {
                 second_option, "status", where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.insertInput(driver, new String[]{"add_stps_i_stop_date", getElements("add_stps_i_stop_date")}, // element path
                 "stop_date", getData("stop_date"), where)) {
             return false;
@@ -241,6 +247,7 @@ public class AT2MDMSP0015Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.getText(driver,new String[]{"add_rst_e_external_agency", getElements("add_rst_e_external_agency")}, // element path
                 "rst_external_agency", // key for data value (the name)
                 where)) {
@@ -283,21 +290,11 @@ public class AT2MDMSP0015Sis {
                 "app_id", getData("app_id"), where)) {
             return false;
         }
-        //El campo se bloquea al introducir una "Destination" así que lo omitimos
-            /*if (!Functions.createLov(driver,
-                    new String[]{"add_rst_lov_country", getElements("add_rst_lov_country")}, // b_lov
-                    new String[]{"add_rst_i_country", getElements("add_rst_i_country")}, // i_lov
-                    recursiveXPaths.lov_b_search, // lov b search
-                    recursiveXPaths.lov_e_result, // lov result
-                    recursiveXPaths.lov_b_ok, //lov b ok
-                    "country", //Data name
-                    where)){
-                return false;
-            }*/
         if (!Functions.insertInput(driver, new String[]{"add_rst_i_TO_branch", getElements("add_rst_i_TO_branch")}, // element path
                 "TO_branch", getData("TO_branch"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         String list_options[] = {"Cars","Cancel Protection","Hotel","Payment Gateway","Transfer","Ticket","Virtual Credit Card"};
         String option = (list_options[new Random().nextInt(list_options.length)]);
         if (!Functions.selectText(driver,
@@ -305,6 +302,7 @@ public class AT2MDMSP0015Sis {
                 option, "service_type", where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.getValue(driver,new String[]{"add_rst_e_filter_type", getElements("add_rst_e_filter_type")}, // element path
                 "filter_type", // key for data value (the name)
                 where)) {
@@ -385,11 +383,13 @@ public class AT2MDMSP0015Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.getText(driver,new String[]{"add_ea_e_code", getElements("add_ea_e_code")}, // element path
                 "code", // key for data value (the name)
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.insertInput(driver, new String[]{"add_ea_i_name", getElements("add_ea_i_name")}, // element path
                 "name", getData("name_edit"), where)) {
             return false;
@@ -482,10 +482,12 @@ public class AT2MDMSP0015Sis {
                 where)) {
             return false;
         }
-        String list_options[] = {"DAILY", "OCCASIONAL"};
-        if (!Functions.selectTextRandom(driver,
+        Functions.break_time(driver, 90, 500);
+        String first_list_options[] = {"DAILY","OCCASIONAL"};
+        String first_option = (first_list_options[new Random().nextInt(first_list_options.length)]);
+        if (!Functions.selectText(driver,
                 new String[]{"add_stps_sl_stop_type", getElements("add_stps_sl_stop_type")},
-                list_options, "data stop_type",
+                first_option, "stop_type",
                 where)) {
             return false;
         }
@@ -576,17 +578,6 @@ public class AT2MDMSP0015Sis {
                 "app_id", getData("app_id_edit"), where)) {
             return false;
         }
-        //El campo se bloquea al introducir una "Destination" así que lo omitimos
-            /*if (!Functions.createLov(driver,
-                    new String[]{"add_rst_lov_country", getElements("add_rst_lov_country")}, // b_lov
-                    new String[]{"add_rst_i_country", getElements("add_rst_i_country")}, // i_lov
-                    recursiveXPaths.lov_b_search, // lov b search
-                    recursiveXPaths.lov_e_altresult, // lov result
-                    recursiveXPaths.lov_b_ok, //lov b ok
-                    "country", //Data name
-                    where)){
-                return false;
-            }*/
         if (!Functions.insertInput(driver, new String[]{"add_rst_i_TO_branch", getElements("add_rst_i_TO_branch")}, // element path
                 "TO_branch", getData("TO_branch_edit"), where)) {
             return false;
@@ -671,6 +662,7 @@ public class AT2MDMSP0015Sis {
     private boolean delete_ea_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"MDM_ea_b_delete", getElements("MDM_ea_b_delete")},
                 new String[]{"MDM_ea_e_records", getElements("MDM_ea_e_records")},
@@ -683,6 +675,7 @@ public class AT2MDMSP0015Sis {
     private boolean delete_srvcs_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"MDM_srvcs_b_delete", getElements("MDM_srvcs_b_delete")},
                 new String[]{"MDM_srvcs_e_records", getElements("MDM_srvcs_e_records")},
@@ -695,6 +688,7 @@ public class AT2MDMSP0015Sis {
     private boolean delete_stps_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"MDM_stps_b_delete", getElements("MDM_stps_b_delete")},
                 new String[]{"MDM_stps_e_records", getElements("MDM_stps_e_records")},
@@ -707,6 +701,7 @@ public class AT2MDMSP0015Sis {
     private boolean delete_rst_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"MDM_rst_b_delete", getElements("MDM_rst_b_delete")},
                 new String[]{"MDM_rst_e_records", getElements("MDM_rst_e_records")},
@@ -719,6 +714,7 @@ public class AT2MDMSP0015Sis {
     private boolean delete_cndtn_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"MDM_cndtn_b_delete", getElements("MDM_cndtn_b_delete")},
                 new String[]{"MDM_cndtn_e_records", getElements("MDM_cndtn_e_records")},
@@ -833,10 +829,12 @@ public class AT2MDMSP0015Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_srvcs_sl_service_type", getElements("qbe_srvcs_sl_service_type")},
                 getData("service_type"), "service_type", where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_srvcs_sl_parameters_type", getElements("qbe_srvcs_sl_parameters_type")},
                 getData("parameters_type"), getData("parameters_type"), where)) {
             return false;
@@ -867,10 +865,12 @@ public class AT2MDMSP0015Sis {
                 "external_agency", getData("external_agency"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_stps_sl_stop_type", getElements("qbe_stps_sl_stop_type")},
                 getData("stop_type"), "stop_type", where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_stps_i_stop_time", getElements("qbe_stps_i_stop_time")},
                 "stop_time", getData("stop_time"), where)) {
             return false;
@@ -879,10 +879,12 @@ public class AT2MDMSP0015Sis {
                 "start_time", getData("start_time"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_stps_sl_status", getElements("qbe_stps_sl_status")},
                 getData("status"), "status", where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_stps_i_stop_date", getElements("qbe_stps_i_stop_date")},
                 "stop_date", getData("stop_date"), where)) {
             return false;
@@ -909,13 +911,40 @@ public class AT2MDMSP0015Sis {
                 where)) {
             return false;
         }
-        if (!Functions.getText(driver, new String[]{"search_e_rst_id_result", getElements("search_e_rst_id_result")}, // element path
-                "id", // key for data value (the name)
-                where)) {
-            return false;
+        String service_type = "";
+        if (getData("service_type") == "Cars") {
+            service_type = "C";
         }
+        else if (getData("service_type") == "Cancel Protection") {
+            service_type = "CP";
+        }
+        else if (getData("service_type") == "Cancel Protection") {
+            service_type = "CP";
+        }
+        else if (getData("service_type") == "Hotel") {
+            service_type = "H";
+        }
+        else if (getData("service_type") == "Payment Gateway") {
+            service_type = "PG";
+        }
+        else if (getData("service_type") == "Transfer") {
+            service_type = "TF";
+        }
+        else if (getData("service_type") == "Ticket") {
+            service_type = "TK";
+        }
+        else if (getData("service_type") == "Virtual Credit Card") {
+            service_type = "VC";
+        }
+        String id = getData("rst_external_agency") + "-" +
+                getData("interface") + "-" +
+                getData("TO") + "-" +
+                getData("destination") + "-" +
+                getData("app_id").substring(0,3) + "-" +
+                "X" + "-" +
+                service_type;
         if (!Functions.insertInput(driver, new String[]{"qbe_rst_i_id", getElements("qbe_rst_i_id")},
-                "id", getData("id"), where)) {
+                "id", id, where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_rst_i_external_agency", getElements("qbe_rst_i_external_agency")},
@@ -938,19 +967,16 @@ public class AT2MDMSP0015Sis {
                 "app_id", getData("app_id"), where)) {
             return false;
         }
-        //El campo se bloquea al introducir una "Destination" así que lo omitimos
-            /*if (!Functions.insertInput(driver, new String[]{"qbe_rst_i_country", getElements("qbe_rst_i_country")},
-                    "country", getData("country"), where)) {
-                return false;
-            }*/
         if (!Functions.insertInput(driver, new String[]{"qbe_rst_i_TO_branch", getElements("qbe_rst_i_TO_branch")},
                 "TO_branch", getData("TO_branch"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_rst_sl_service_type", getElements("qbe_rst_sl_service_type")},
                 getData("service_type"), "service_type", where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_rst_i_filter_type", getElements("qbe_rst_i_filter_type")},
                 "filter_type", getData("filter_type"), where)) {
             return false;

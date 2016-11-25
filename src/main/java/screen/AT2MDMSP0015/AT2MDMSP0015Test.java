@@ -47,27 +47,27 @@ public class AT2MDMSP0015Test {
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_record_ea_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
-       /* if (!interaction_record_srvcs_MDM(driver)) return false;
+        if (!interaction_record_srvcs_MDM(driver)) return false;
         if (!qbe_srvcs_MDM(driver)) return false;
         if (!first_tab_change(driver)) return false;
         if (!interaction_record_stps_MDM(driver)) return false;
-        if (!qbe_stps_MDM(driver)) return false;*/
+        if (!qbe_stps_MDM(driver)) return false;
         if (!second_tab_change(driver)) return false;
         if (!interaction_record_rst_MDM(driver)) return false;
         if (!qbe_rst_MDM(driver)) return false;
-        /*if (!third_tab_change(driver)) return false;
+        if (!third_tab_change(driver)) return false;
         if (!interaction_record_cndtn_MDM(driver)) return false;
         if (!qbe_cndtn_MDM(driver)) return false;
         if (!interaction_edit_cndtn_MDM(driver)) return false;
         if (!qbe_cndtn_MDM(driver)) return false;
         if (!others_actions_cndtn_MDM(driver)) return false;
         if (!delete_cndtn_MDM(driver)) return false;
-        if (!second_tab_change(driver)) return false;*/
+        if (!second_tab_change(driver)) return false;
         if (!interaction_edit_rst_MDM(driver)) return false;
         if (!qbe_rst_MDM(driver)) return false;
         if (!others_actions_rst_MDM(driver)) return false;
         if (!delete_rst_MDM(driver)) return false;
-       /* if (!first_tab_change(driver)) return false;
+        if (!first_tab_change(driver)) return false;
         if (!interaction_edit_stps_MDM(driver)) return false;
         if (!qbe_stps_MDM(driver)) return false;
         if (!others_actions_stps_MDM(driver)) return false;
@@ -76,7 +76,7 @@ public class AT2MDMSP0015Test {
         if (!interaction_edit_srvcs_MDM(driver)) return false;
         if (!qbe_srvcs_MDM(driver)) return false;
         if (!others_actions_srvcs_MDM(driver)) return false;
-        if (!delete_srvcs_MDM(driver)) return false;*/
+        if (!delete_srvcs_MDM(driver)) return false;
         if (!interaction_edit_ea_MDM(driver)) return false;
         if (!qbe_ea_MDM(driver)) return false;
         if (!others_actions_ea_MDM(driver)) return false;
@@ -193,7 +193,8 @@ public class AT2MDMSP0015Test {
         String first_option = (first_list_options[new Random().nextInt(first_list_options.length)]);
         if (!Functions.selectText(driver,
                 new String[]{"add_stps_sl_stop_type", getElements("add_stps_sl_stop_type")},
-                first_option, "stop_type", where)) {
+                first_option, "stop_type",
+                where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_stps_i_stop_time", getElements("add_stps_i_stop_time")}, // element path
@@ -485,7 +486,7 @@ public class AT2MDMSP0015Test {
         String list_options[] = {"DAILY", "OCCASIONAL"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_stps_sl_stop_type", getElements("add_stps_sl_stop_type")},
-                list_options, "data stop_type",
+                list_options, "stop_type",
                 where)) {
             return false;
         }
@@ -909,13 +910,40 @@ public class AT2MDMSP0015Test {
                 where)) {
             return false;
         }
-        if (!Functions.getText(driver, new String[]{"search_e_rst_id_result", getElements("search_e_rst_id_result")}, // element path
-                "id", // key for data value (the name)
-                where)) {
-            return false;
+        String service_type = "";
+        if (getData("service_type") == "Cars") {
+            service_type = "C";
         }
+        else if (getData("service_type") == "Cancel Protection") {
+            service_type = "CP";
+        }
+        else if (getData("service_type") == "Cancel Protection") {
+            service_type = "CP";
+        }
+        else if (getData("service_type") == "Hotel") {
+            service_type = "H";
+        }
+        else if (getData("service_type") == "Payment Gateway") {
+            service_type = "PG";
+        }
+        else if (getData("service_type") == "Transfer") {
+            service_type = "TF";
+        }
+        else if (getData("service_type") == "Ticket") {
+            service_type = "TK";
+        }
+        else if (getData("service_type") == "Virtual Credit Card") {
+            service_type = "VC";
+        }
+        String id = getData("rst_external_agency") + "-" +
+                getData("interface") + "-" +
+                getData("TO") + "-" +
+                getData("destination") + "-" +
+                getData("app_id").substring(0,3) + "-" +
+                "X" + "-" +
+                service_type;
         if (!Functions.insertInput(driver, new String[]{"qbe_rst_i_id", getElements("qbe_rst_i_id")},
-                "id", getData("id"), where)) {
+                "id", id, where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_rst_i_external_agency", getElements("qbe_rst_i_external_agency")},
