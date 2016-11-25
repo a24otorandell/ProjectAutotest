@@ -460,19 +460,6 @@ public class AT2MDMSY0015Test {
         }
         return true;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
     //ASSISTED ROLLBACK CORE2
     private boolean interaction_record_arc2_MDM(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);

@@ -110,7 +110,6 @@ public class AT2MDMSY0015Locators {
                     elements.put("search_rbc2_e_creation_date_result", "//*[contains(@id, 'r1:1:pc1:rolback::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
                     elements.put("search_rbc2_e_modification_date_result", "//*[contains(@id, 'r1:1:pc1:rolback::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[7]");
                     elements.put("search_prb2_e_sequence_result", "//*[contains(@id, 'r1:1:pc2:rolparm::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[1]");
-        //CREAR RESULTADOS DE LA SEGUNDA TABLA PARA QUE PUEDA HACERSE EN TEST
                 //ASSISTED ROLLBACK CORE2
                     elements.put("search_arc2_b_search", "//*[contains(@id, 'r1:1:qryId2::search')]");
                     elements.put("search_arc2_b_reset", "//*[contains(@id, 'r1:1:qryId2::reset')]");
