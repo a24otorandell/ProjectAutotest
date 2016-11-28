@@ -6,7 +6,8 @@ import java.util.Map;
 /**
  * Created by aibanez on 28/11/2016.
  */
-public class AT2MDMCL0003Locators {    Map<String, String> elements = new HashMap<>();
+public class AT2MDMCL0003Locators {
+    Map<String, String> elements = new HashMap<>();
 
     public AT2MDMCL0003Locators(String enviroment) {
         setElements();

@@ -515,7 +515,7 @@ public class AT2MDMCL0019Sis {
             return false;
         }
         Functions.break_time(driver, 30, 500);
-        Functions.zoomOut(driver, 3);
+        Functions.zoomOut(driver, 4);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_b_qbe", getElements("MDM_b_qbe")},// query button
                 new String[]{"qbe_i_agency_name", getElements("qbe_i_agency_name")},//any query input
