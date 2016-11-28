@@ -13,7 +13,7 @@ public class AT2BOOSA1002Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
-    public AT2BOOSA1002Data() {
+    public AT2BOOSA1002Data(String enviroment) {
         this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2BOOSA1002Values.txt");
         setData();
     }
@@ -30,27 +30,27 @@ public class AT2BOOSA1002Data {
     }
 
     public void setDefaultData() {
-        data.put("header_interface", "A");
-        data.put("header_to", "turchese");
-        data.put("header_branch", "");
-        data.put("header_user", "");
-        data.put("header_booking_type", "");
+        data.put("header_interface", "W");
+        data.put("header_to", "HOTELOPESP");
+        data.put("header_branch", "1");
+        data.put("header_user", "WLG00029");
+        data.put("header_booking_type", "HOTELOPIA");
         data.put("header_ag_ref", DataGenerator.getRandomAlphanumericSequence(6, true));
         data.put("header_despt", "HOTELOPIA");
         data.put("header_adults", "2");
-        data.put("header_child", "0");
+        data.put("header_child", "1");
         data.put("header_baby", "0");
-        data.put("header_pax_name", "Federico");
-        data.put("header_valuation", "Booking");
+        data.put("header_pax_name", "Godofredo");
+        //data.put("header_valuation", "");
         data.put("booking_remmarks", "Testing random data");
         data.put("hotel_startdate", DataGenerator.getToday());
         data.put("hotel_night", "5");
         data.put("hotel_name", "CAPDEMAR");
         data.put("room_name", "1BS");
         data.put("char_name", "1BS");
-        data.put("hotel_fixinfo_phone", "971971971");
-        data.put("hotel_fixinfo_mail", "anemail@adomain.none");
-        data.put("hotel_fixinfo_comment", "Testing some stuff");
+        data.put("hotel_fixinfo_phone", "971546791");
+        data.put("hotel_fixinfo_mail", "anemail@adomain.ar");
+        data.put("hotel_fixinfo_comment", "Testing some staff");
         data.put("transfer_date", DataGenerator.getToday());
         data.put("activities_startdate", DataGenerator.getToday());
 
