@@ -64,14 +64,15 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
             return false;
         }
+        if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
+            return false;
+        }
 
       /*  if(!Search_booking_advanced_search(driver)){return true;}
         return false;*/
 
       return true;
     }
-
-
 
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
@@ -771,6 +772,28 @@ public class AT2BOOSA0001Test {
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
 
+        return true;
+    }
+    private boolean Search_booking_other_actions_send_booking_by_fax_email (TestDriver driver){
+        String where = " on ACTIONS SEND EMAIL/FAX";
+        driver.getReport().addHeader("ACTIONS SEND EMAIL/FAX IN SEARCH BOOKING",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
+                new String[]{"actions_b_send_booking", getElements("actions_b_send_booking")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_send_booking", getElements("actions_b_send_booking")}, //element to click
+                new String[]{"actions_send_booking_sl_format", getElements("actions_send_booking_sl_format")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
+        if (!Functions.selectText(driver,
+                new String[]{"actions_send_booking_sl_format",getElements("actions_send_booking_sl_format")},
+                "Fax", "Fax",  where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"actions_send_booking_i_destination",getElements("actions_send_booking_i_destination")},
+                "destination", (Integer.toString(DataGenerator.random(1, 100000000))), where)){return false;}
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){

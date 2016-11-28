@@ -257,6 +257,19 @@ public class AT2BOOSA0001Locators {
         elements.put("go_to_bloqued_bookings_b_delete_b_ok", "//*[contains(@id, 'pc1:pcgt1:cbt1')]");
         elements.put("go_to_bloqued_bookings_ch_select_all_gods", "//*[contains(@id, 'pc1:sbc1::content')]");
         elements.put("go_to_search_booking", "//*[contains(@id, 'tabIndex::disclosureAnchor')]");
+
+
+
+
+        //SEND BOOKING
+
+        elements.put("actions_b_send_booking", "//*[contains(@id, 'pc1:pcgm2:dc_cmi1')]/td[2]");
+        elements.put("actions_send_booking_sl_format", "//*[contains(@id, 'r2:0:soc1::content')]");
+        elements.put("actions_send_booking_i_from", "//*[contains(@id, 'r2:0:it1::content')]");
+        elements.put("actions_send_booking_i_destination", "//*[contains(@id, 'r2:0:it2::content')]");
+
+
+
     }
 
     }
