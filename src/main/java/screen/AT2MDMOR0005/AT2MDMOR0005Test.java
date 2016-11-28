@@ -306,12 +306,6 @@ public class AT2MDMOR0005Test {
                 "debtor", getData("debtor"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_code", getElements("qbe_i_code")}, //search button
-                new String[]{"companies_e_result", getElements("companies_e_result")}, //result element
-                where)) {
-            return false;
-        }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_code", getElements("qbe_i_code")}, //any query input
                 new String[]{"companies_e_result", getElements("companies_e_result")}, //table result
