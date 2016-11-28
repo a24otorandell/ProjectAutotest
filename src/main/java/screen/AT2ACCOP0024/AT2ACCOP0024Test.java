@@ -8,7 +8,6 @@ import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.support.ui.Select;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -233,6 +232,7 @@ public class AT2ACCOP0024Test {
             r.keyPress(KeyEvent.VK_ENTER);
             driver.getReport().addContent("Enter pressed on export");
             driver.getReport().addContent("File downloaded on export");
+            r.keyRelease(KeyEvent.VK_ENTER);
         } catch (Exception e) {
             e.printStackTrace();
         }

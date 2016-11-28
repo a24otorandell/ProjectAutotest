@@ -61,6 +61,13 @@ public class AT2BOOSA0001Sis {
         if(!Search_booking_other_actions(driver)){
             return false;
         }
+        if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
+            return false;
+        }
+        if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
+            return false;
+        }
+
       /*  if(!Search_booking_advanced_search(driver)){return true;}
         return false;*/
 
@@ -734,6 +741,59 @@ public class AT2BOOSA0001Sis {
                 new String[]{"tb_b_detach",getElements("tb_b_detach")}, //detach button
                 true,     //screenshot??
                 where)){return false;}
+        return true;
+    }
+    private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
+        String where = " on GO TO CANCELED_BOOKINGD";
+        driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
+                new String[]{"go_to_actions_b_bloqued_bookings", getElements("go_to_actions_b_bloqued_bookings")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"go_to_actions_b_bloqued_bookings", getElements("go_to_actions_b_bloqued_bookings")}, //element to click
+                new String[]{"go_to_bloqued_bookings_ch_select_all_gods", getElements("go_to_bloqued_bookings_ch_select_all_gods")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if (!Functions.checkboxValue(driver,
+                getElements("go_to_bloqued_bookings_ch_select_all_gods"),"datanme",true,true, where)){return false;}//where
+        if(!Functions.doDeleteNCheck(driver,
+                new String[]{"go_to_bloqued_bookings_b_delete",getElements("go_to_bloqued_bookings_b_delete")},
+                new String[]{"go_to_bloqued_bookings_e_record",getElements("go_to_bloqued_bookings_e_record")},
+                new String[]{"go_to_bloqued_bookings_b_delete_b_ok",getElements("go_to_bloqued_bookings_b_delete_b_ok")},
+                where)){
+            return false;
+        }
+        if(!Functions.checkClick(driver,
+                new String[]{"go_to_search_booking", getElements("go_to_search_booking")}, //element to click
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
+        return true;
+    }
+    private boolean Search_booking_other_actions_send_booking_by_fax_email (TestDriver driver){
+        String where = " on ACTIONS SEND EMAIL/FAX";
+        driver.getReport().addHeader("ACTIONS SEND EMAIL/FAX IN SEARCH BOOKING",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
+                new String[]{"actions_b_send_booking", getElements("actions_b_send_booking")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_send_booking", getElements("actions_b_send_booking")}, //element to click
+                new String[]{"actions_send_booking_sl_format", getElements("actions_send_booking_sl_format")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
+        if (!Functions.selectText(driver,
+                new String[]{"actions_send_booking_sl_format",getElements("actions_send_booking_sl_format")},
+                "Fax", "Fax",  where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"actions_send_booking_i_destination",getElements("actions_send_booking_i_destination")},
+                "destination", (Integer.toString(DataGenerator.random(1, 100000000))), where)){return false;}
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){

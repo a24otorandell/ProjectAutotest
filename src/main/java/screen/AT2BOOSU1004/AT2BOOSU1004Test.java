@@ -21,55 +21,41 @@ public class AT2BOOSU1004Test {
     public AT2BOOSU1004Locators getLocators() {
         return locators;
     }
-
     public void setLocators(AT2BOOSU1004Locators locators) {
         this.locators = locators;
     }
-
     public AT2BOOSU1004Data getData() {
         return data;
     }
-
     public void setData(AT2BOOSU1004Data data) {
         this.data = data;
     }
-
     public void start(TestDriver driver) {
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Transfers");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("TTOO Quality Groups");
     }
-
     protected String getElements(String key) {
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData(String key) {
         String value = this.data.getData().get(key);
         return value;
     }
 
     protected boolean testCSED(TestDriver driver) {
-
-        if (!Reconfirmation_clients(driver)) {
-            return false;
-        }
-        if (!Suplier_hotel_exclusions(driver)) {
-            return false;
-        }
+        if (!Reconfirmation_clients(driver)) return false;
+        if (!Suplier_hotel_exclusions(driver)) return false;
 
         return false;
     }
 
-
     //SUPLIER HOTEL EXCLUSIONS
-
     private boolean Suplier_hotel_exclusions(TestDriver driver) {
 
         if (!Go_to_suplier_hotel_exclusions(driver)) {
@@ -104,7 +90,6 @@ public class AT2BOOSU1004Test {
 
 
     }
-
     private boolean Delete_supler_hotel_exclusions(TestDriver driver) {
 
         driver.getReport().addHeader("DELETE IN SUPLIER HOTEL EXCLUSIONS", 3, false);
@@ -119,7 +104,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Other_actions_suplier_hotel_exclusions(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN SUPLIER HOTEL EXCLUSIONS", 3, false);
@@ -143,7 +127,6 @@ public class AT2BOOSU1004Test {
 
         return true;
     }
-
     private boolean Edit_suplier_hotel_exclusions(TestDriver driver) {
 
         driver.getReport().addHeader(" EDIT IN SUPLIER HOTEL EXCLUSIONS", 3, false);
@@ -269,7 +252,6 @@ public class AT2BOOSU1004Test {
 
         return true;
     }
-
     private boolean Search_suplier_hotel_exclusions(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN SUPLIER HOTEL EXCLUSIONS", 3, false);
@@ -310,7 +292,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Add_suplier_hotel_exclusions(TestDriver driver) {
 
 
@@ -435,7 +416,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Go_to_suplier_hotel_exclusions(TestDriver driver) {
         if (!Functions.checkClick(driver,
                 new String[]{"go_to_suplier_hotel_exclusions", getElements("go_to_suplier_hotel_exclusions")}, //element to click
@@ -446,10 +426,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
-
-
-
 
     private boolean Reconfirmation_clients(TestDriver driver) {
 
@@ -500,10 +476,7 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     // CONFIGURATION BY CLIENT
-
-
     private boolean Delete_configuration_by_clients(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN CONFIGURATION BY CLIENTS", 3, false);
 
@@ -518,7 +491,6 @@ public class AT2BOOSU1004Test {
 
         return true;
     }
-
     private boolean Other_actions_configuration_by_clients(TestDriver driver) {
         driver.getReport().addHeader(" OTHER ACTIONS IN CONFIGURATION BY CLIENTS", 3, false);
 
@@ -539,7 +511,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Search_edit_configuration_by_clients(TestDriver driver) {
         driver.getReport().addHeader(" SEARCH IN CONFIGURATION BY CLIENTS", 3, false);
 
@@ -673,7 +644,6 @@ public class AT2BOOSU1004Test {
 
         return true;
     }
-
     private boolean Edit_configuration_by_clients(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN CONFIGURATION c", 3, false);
 
@@ -1022,7 +992,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Search_configuration_by_clients(TestDriver driver) {
         driver.getReport().addHeader("SEARCH IN CONFIGURATION BY CLIENTS", 3, false);
 
@@ -1155,7 +1124,6 @@ public class AT2BOOSU1004Test {
 
         return true;
     }
-
     private boolean Add_configuration_by_clients(TestDriver driver) {
 
         driver.getReport().addHeader(" ADD IN CONFIGURATION BY CLIENTS", 3, false);
@@ -1481,9 +1449,7 @@ public class AT2BOOSU1004Test {
         return true;
     }
 
-
     //CONFIGURATION BY TTO
-
     private boolean Delete_configuration_by_tto(TestDriver driver) {
         driver.getReport().addHeader("DELETE IN CONFIGURATION BY TTO", 3, false);
 
@@ -1498,7 +1464,6 @@ public class AT2BOOSU1004Test {
         return true;
 
     }
-
     private boolean Other_actions_configuration_by_tto(TestDriver driver) {
 
         driver.getReport().addHeader("OTHER ACTIONS IN CONFIGURATION BY TTO", 3, false);
@@ -1521,7 +1486,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Search_edit_configuration_by_tto(TestDriver driver) {
         driver.getReport().addHeader(" SEARCH IN CONFIGURATION BY TTO", 3, false);
 
@@ -1663,7 +1627,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Edit_configuration_by_tto(TestDriver driver) {
         driver.getReport().addHeader(" EDIT IN CONFIGURATION BY TTO", 3, false);
 
@@ -2022,7 +1985,6 @@ public class AT2BOOSU1004Test {
 
         return true;
     }
-
     private boolean Search_configuratons_by_tto(TestDriver driver) {
 
         driver.getReport().addHeader(" SEARCH IN CONFIGURATION BY TTO", 3, false);
@@ -2158,7 +2120,6 @@ public class AT2BOOSU1004Test {
         }
         return true;
     }
-
     private boolean Add_cofiguration_by_tto(TestDriver driver) {
 
 
@@ -2311,7 +2272,7 @@ public class AT2BOOSU1004Test {
                 " on ADD")) {
             return false;
         }
-
+/////////////////////////////////////////////////////
         if (!Functions.getText(driver, new String[]{"configuration_by_ttoo_add_i_atlas_co", getElements("configuration_by_ttoo_add_i_atlas_co")}, // element path
                 "atlas_co", // key for data value (the name)
                 " on ADD")) {

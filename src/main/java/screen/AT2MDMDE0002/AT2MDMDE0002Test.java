@@ -76,7 +76,7 @@ public class AT2MDMDE0002Test {
         if (!delete_table4(driver)) return false;
         if (!delete_table3(driver)) return false;
         if (!delete_table2(driver)) return false;
-/*        if (!delete_table1(driver)) return false;*/
+        if (!delete_table1(driver)) return false;
         return true;
     }
 
