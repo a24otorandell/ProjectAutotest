@@ -793,7 +793,7 @@ public class AT2BOOSA0001Sis {
                 new String[]{"actions_send_booking_sl_format",getElements("actions_send_booking_sl_format")},
                 "Fax", "Fax",  where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"actions_send_booking_i_destination",getElements("actions_send_booking_i_destination")},
-                "destination", (Integer.toString(DataGenerator.random(1, 100000000))), where)){return false;}
+                "destination", (Integer.toString(DataGenerator.random(99999999, 100000000))), where)){return false;}
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){

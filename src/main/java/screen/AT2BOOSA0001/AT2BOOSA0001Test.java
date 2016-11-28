@@ -5,6 +5,10 @@ import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
+import org.openqa.selenium.Keys;
+
+import java.awt.*;
+import java.awt.event.KeyEvent;
 
 /**
  * Created by vsolis on 18/11/2016.
@@ -67,11 +71,60 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
             return false;
         }
+        if(!Search_booking_other_actions_service_details(driver)){return false;}
+
 
       /*  if(!Search_booking_advanced_search(driver)){return true;}
         return false;*/
 
       return true;
+    }
+
+    private boolean Search_booking_other_actions_service_details (TestDriver driver){
+        String where = " on ACTIONS SEND EMAIL/FAX";
+        driver.getReport().addHeader("ACTIONS SERVICE DETAIL IN SEARCH BOOKING",3,false);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
+                new String[]{"", getElements("")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
+        if(!Functions.checkClick(driver,
+                new String[]{"", getElements("")}, //element to click
+                new String[]{"", getElements("")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "receptive_ofice", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "cost", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "sale", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "profit", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "profitability", // key for data value (the name)
+                where);
+        if(!Functions.clickQbE(driver,
+                new String[]{"x", getElements("x")},// query button
+                new String[]{"y", getElements("y")},//any query input
+                where)){return false;} // where the operation occurs
+
+        return true;
     }
 
     //SEARCH BOOKING
@@ -296,7 +349,7 @@ public class AT2BOOSA0001Test {
                 "result_cancellation_date",
                 getData("result_cancellation_date"),
                 where);
-        Functions.insertInput(driver,
+       /* Functions.insertInput(driver,
                 new String[]{"query_i_cancellation_fee_date",getElements("query_i_cancellation_fee_date")},
                 "result_e_cancellation_fee_date",
                 getData("result_e_cancellation_fee_date"),
@@ -305,7 +358,7 @@ public class AT2BOOSA0001Test {
                 new String[]{"query_i_auto_cancellation_date_time",getElements("query_i_auto_cancellation_date_time")},
                 "result_auto_cancellation_date_time",
                 getData("result_auto_cancellation_date_time"),
-                where);
+                where);*/
         Functions.insertInput(driver,
                 new String[]{"query_i_client_code",getElements("query_i_client_code")},
                 "result_client_code",
@@ -794,6 +847,12 @@ public class AT2BOOSA0001Test {
                 "Fax", "Fax",  where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"actions_send_booking_i_destination",getElements("actions_send_booking_i_destination")},
                 "destination", (Integer.toString(DataGenerator.random(1, 100000000))), where)){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"actions_send_booking_b_send", getElements("actions_send_booking_b_send")}, //element to click
+                where)){return false;}
+        driver.getDriverdetails().getUrl();
+
+
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){

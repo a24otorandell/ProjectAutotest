@@ -267,6 +267,7 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_send_booking_sl_format", "//*[contains(@id, 'r2:0:soc1::content')]");
         elements.put("actions_send_booking_i_from", "//*[contains(@id, 'r2:0:it1::content')]");
         elements.put("actions_send_booking_i_destination", "//*[contains(@id, 'r2:0:it2::content')]");
+        elements.put("actions_send_booking_b_send", "//*[contains(@id, 'r2:0:cb1')]");
 
 
 
