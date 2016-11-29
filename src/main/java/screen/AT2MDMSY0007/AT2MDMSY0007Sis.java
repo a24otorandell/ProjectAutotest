@@ -46,6 +46,7 @@ public class AT2MDMSY0007Sis {
 
         if (!interaction_record_dms_MDM(driver)) return false;
         if (!interaction_record_ml_MDM(driver)) return false;
+        if (!qbe_ml_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
         if (!qbe_dms_MDM(driver)) return false;
         if (!others_actions_dms_MDM(driver)) return false;
