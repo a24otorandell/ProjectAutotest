@@ -49,10 +49,12 @@ public class AT2MDMRM0014Sis {
         if (!qbe_grp_MDM(driver)) return false;
         if (!others_actions_grp_MDM(driver)) return false;
         if (!interaction_record_dscr_MDM(driver)) return false;
+        if (!qbe_dscr_MDM(driver)) return false;
         if (!interaction_edit_dscr_MDM(driver)) return false;
         if (!qbe_dscr_MDM(driver)) return false;
         if (!others_actions_dscr_MDM(driver)) return false;
         if (!interaction_record_brds_MDM(driver)) return false;
+        if (!qbe_brds_MDM(driver)) return false;
         if (!interaction_edit_brds_MDM(driver)) return false;
         if (!qbe_brds_MDM(driver)) return false;
         if (!others_actions_brds_MDM(driver)) return false;
@@ -203,6 +205,11 @@ public class AT2MDMRM0014Sis {
                 where)){
             return false;
         }
+        if (!Functions.getValue(driver, new String[]{"add_i_web_description", getElements("add_i_web_description")}, // element path
+                "web_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_dscr_b_save", getElements("add_dscr_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -334,6 +341,11 @@ public class AT2MDMRM0014Sis {
                 where)){
             return false;
         }
+        if (!Functions.getText(driver, new String[]{"add_e_company_description", getElements("add_e_company_description")}, // element path
+                "company_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_board",getElements("add_lov_board")}, // b_lov
                 new String[]{"add_i_board", getElements("add_i_board")}, // i_lov
@@ -341,6 +353,11 @@ public class AT2MDMRM0014Sis {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "board", //Data name
+                where)){
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"add_e_board_description", getElements("add_e_board_description")}, // element path
+                "board_description", // key for data value (the name)
                 where)){
             return false;
         }

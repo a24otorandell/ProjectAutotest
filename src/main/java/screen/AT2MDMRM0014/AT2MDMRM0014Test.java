@@ -49,10 +49,12 @@ public class AT2MDMRM0014Test {
         if (!qbe_grp_MDM(driver)) return false;
         if (!others_actions_grp_MDM(driver)) return false;
         if (!interaction_record_dscr_MDM(driver)) return false;
+        if (!qbe_dscr_MDM(driver)) return false;
         if (!interaction_edit_dscr_MDM(driver)) return false;
         if (!qbe_dscr_MDM(driver)) return false;
         if (!others_actions_dscr_MDM(driver)) return false;
         if (!interaction_record_brds_MDM(driver)) return false;
+        if (!qbe_brds_MDM(driver)) return false;
         if (!interaction_edit_brds_MDM(driver)) return false;
         if (!qbe_brds_MDM(driver)) return false;
         if (!others_actions_brds_MDM(driver)) return false;
@@ -103,6 +105,7 @@ public class AT2MDMRM0014Test {
     private boolean interaction_edit_grp_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_grp_b_edit", getElements("MDM_grp_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -199,6 +202,11 @@ public class AT2MDMRM0014Test {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "web", //Data name
+                where)){
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"add_i_web_description", getElements("add_i_web_description")}, // element path
+                "web_description", // key for data value (the name)
                 where)){
             return false;
         }
@@ -333,6 +341,11 @@ public class AT2MDMRM0014Test {
                 where)){
             return false;
         }
+        if (!Functions.getText(driver, new String[]{"add_e_company_description", getElements("add_e_company_description")}, // element path
+                "company_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_board",getElements("add_lov_board")}, // b_lov
                 new String[]{"add_i_board", getElements("add_i_board")}, // i_lov
@@ -340,6 +353,11 @@ public class AT2MDMRM0014Test {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "board", //Data name
+                where)){
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"add_e_board_description", getElements("add_e_board_description")}, // element path
+                "board_description", // key for data value (the name)
                 where)){
             return false;
         }
@@ -384,7 +402,7 @@ public class AT2MDMRM0014Test {
                 new String[]{"add_lov_board",getElements("add_lov_board")}, // b_lov
                 new String[]{"add_i_board", getElements("add_i_board")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "board", //Data name
                 where)){
