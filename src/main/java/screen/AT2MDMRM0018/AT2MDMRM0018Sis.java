@@ -54,17 +54,20 @@ public class AT2MDMRM0018Sis {
         if (!others_actions_tabs_MDM(driver)) return false;
         //LANGUAGES TABLE
         if (!interaction_record_lang_MDM(driver)) return false;
+        if (!qbe_lang_MDM(driver)) return false;
         if (!interaction_edit_lang_MDM(driver)) return false;
         if (!qbe_lang_MDM(driver)) return false;
         if (!others_actions_lang_MDM(driver)) return false;
         //COUNTRIES TABLE
         if (!interaction_record_cntrs_MDM(driver)) return false;
         if (!delete_dstn_MDM(driver)) return false;
+        if (!qbe_cntrs_MDM(driver)) return false;
         if (!interaction_edit_cntrs_MDM(driver)) return false;
         if (!qbe_cntrs_MDM(driver)) return false;
         if (!others_actions_cntrs_MDM(driver)) return false;
         //DESTINATION TABLE
         if (!interaction_record_dstn_MDM(driver)) return false;
+        if (!qbe_dstn_MDM(driver)) return false;
         if (!interaction_edit_dstn_MDM(driver)) return false;
         if (!qbe_dstn_MDM(driver)) return false;
         if (!others_actions_dstn_MDM(driver)) return false;
@@ -84,6 +87,7 @@ public class AT2MDMRM0018Sis {
         if (!others_actions_config_MDM(driver)) return false;
         //CONFIGURATIONS PER TABLE TABLE
         if (!interaction_record_tabconfig_MDM(driver)) return false;
+        if (!qbe_tabconfig_MDM(driver)) return false;
         if (!interaction_edit_tabconfig_MDM(driver)) return false;
         if (!qbe_tabconfig_MDM(driver)) return false;
         if (!others_actions_tabconfig_MDM(driver)) return false;
@@ -404,6 +408,11 @@ public class AT2MDMRM0018Sis {
                 where)){
             return false;
         }
+        if (!Functions.getValue(driver, new String[]{"add_cntrs_e_country_description", getElements("add_cntrs_e_country_description")}, // element path
+                "cntrs_country_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_cntrs_b_save", getElements("add_cntrs_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -515,6 +524,11 @@ public class AT2MDMRM0018Sis {
                 where)){
             return false;
         }
+        if (!Functions.getValue(driver, new String[]{"add_dstn_e_destination_description", getElements("add_dstn_e_destination_description")}, // element path
+                "dstn_destination_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_dstn_b_save", getElements("add_dstn_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -614,11 +628,10 @@ public class AT2MDMRM0018Sis {
                 where)) {
             return false;
         }
-        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"MDM_dstn_b_delete", getElements("MDM_dstn_b_delete")},
-                new String[]{"MDM_dstn_e_records", getElements("MDM_dstn_e_records")},
-                new String[]{"MDM_dstn_b_delete_ok", getElements("MDM_dstn_b_delete_ok")}, //delete button yes
-                where)) {
+        if(!Functions.doDelete(driver,
+                new String[]{"MDM_dstn_b_delete", getElements("MDM_dstn_b_delete")},//delete button
+                new String[]{"MDM_dstn_b_delete_ok", getElements("MDM_dstn_b_delete_ok")},//delete button
+                "where")) {
             return false;
         }
         return true;
@@ -832,6 +845,11 @@ public class AT2MDMRM0018Sis {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "tabconfig_tab", //Data name
+                where)){
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"add_tabconfig_e_tabconfiguration_description", getElements("add_tabconfig_e_tabconfiguration_description")}, // element path
+                "tabconfig_tabconfiguration_description", // key for data value (the name)
                 where)){
             return false;
         }

@@ -46,55 +46,59 @@ public class AT2MDMRM0018Test {
 
     protected boolean testCSED(TestDriver driver) {
         //TABS SCREEN
-            //TABS TABLE
-                if (!interaction_record_tabs_MDM(driver)) return false;
-                if (!search_tabs_MDM(driver)) return false;
-                if (!interaction_edit_tabs_MDM(driver)) return false;
-                if (!qbe_tabs_MDM(driver)) return false;
-                if (!others_actions_tabs_MDM(driver)) return false;
-            //LANGUAGES TABLE
-                if (!interaction_record_lang_MDM(driver)) return false;
-                if (!interaction_edit_lang_MDM(driver)) return false;
-                if (!qbe_lang_MDM(driver)) return false;
-                if (!others_actions_lang_MDM(driver)) return false;
-            //COUNTRIES TABLE
-                if (!interaction_record_cntrs_MDM(driver)) return false;
-                if (!delete_dstn_MDM(driver)) return false;
-                if (!interaction_edit_cntrs_MDM(driver)) return false;
-                if (!qbe_cntrs_MDM(driver)) return false;
-                if (!others_actions_cntrs_MDM(driver)) return false;
-            //DESTINATION TABLE
-                if (!interaction_record_dstn_MDM(driver)) return false;
-                if (!interaction_edit_dstn_MDM(driver)) return false;
-                if (!qbe_dstn_MDM(driver)) return false;
-                if (!others_actions_dstn_MDM(driver)) return false;
-                if (!delete_dstn_MDM(driver)) return false;
-            //COUNTRIES TABLE
-                if (!delete_cntrs_MDM(driver)) return false;
-            //LANGUAGE TABLE
-                if (!delete_lang_MDM(driver)) return false;
-            //CHANGE TAB
-                if (!first_change_tab(driver)) return false;
+        //TABS TABLE
+        if (!interaction_record_tabs_MDM(driver)) return false;
+        if (!search_tabs_MDM(driver)) return false;
+        if (!interaction_edit_tabs_MDM(driver)) return false;
+        if (!qbe_tabs_MDM(driver)) return false;
+        if (!others_actions_tabs_MDM(driver)) return false;
+        //LANGUAGES TABLE
+        if (!interaction_record_lang_MDM(driver)) return false;
+        if (!qbe_lang_MDM(driver)) return false;
+        if (!interaction_edit_lang_MDM(driver)) return false;
+        if (!qbe_lang_MDM(driver)) return false;
+        if (!others_actions_lang_MDM(driver)) return false;
+        //COUNTRIES TABLE
+        if (!interaction_record_cntrs_MDM(driver)) return false;
+        if (!delete_dstn_MDM(driver)) return false;
+        if (!qbe_cntrs_MDM(driver)) return false;
+        if (!interaction_edit_cntrs_MDM(driver)) return false;
+        if (!qbe_cntrs_MDM(driver)) return false;
+        if (!others_actions_cntrs_MDM(driver)) return false;
+        //DESTINATION TABLE
+        if (!interaction_record_dstn_MDM(driver)) return false;
+        if (!qbe_dstn_MDM(driver)) return false;
+        if (!interaction_edit_dstn_MDM(driver)) return false;
+        if (!qbe_dstn_MDM(driver)) return false;
+        if (!others_actions_dstn_MDM(driver)) return false;
+        if (!delete_dstn_MDM(driver)) return false;
+        //COUNTRIES TABLE
+        if (!delete_cntrs_MDM(driver)) return false;
+        //LANGUAGE TABLE
+        if (!delete_lang_MDM(driver)) return false;
+        //CHANGE TAB
+        if (!first_change_tab(driver)) return false;
         //CONFIGURATION SCREEN
-            //CONFIGURATION TABLE
-                if (!interaction_record_config_MDM(driver)) return false;
-                if (!search_config_MDM(driver)) return false;
-                if (!interaction_edit_config_MDM(driver)) return false;
-                if (!qbe_config_MDM(driver)) return false;
-                if (!others_actions_config_MDM(driver)) return false;
-            //CONFIGURATIONS PER TABLE TABLE
-                if (!interaction_record_tabconfig_MDM(driver)) return false;
-                if (!interaction_edit_tabconfig_MDM(driver)) return false;
-                if (!qbe_tabconfig_MDM(driver)) return false;
-                if (!others_actions_tabconfig_MDM(driver)) return false;
-                if (!delete_tabconfig_MDM(driver)) return false;
-            //CONFIGURATION TABLE
-                if (!delete_config_MDM(driver)) return false;
-            //CHANGE TAB
-                if (!second_change_tab(driver)) return false;
-            //TABS TABLE
-                if (!delete_tabs_MDM(driver)) return false;
-                return false;
+        //CONFIGURATION TABLE
+        if (!interaction_record_config_MDM(driver)) return false;
+        if (!search_config_MDM(driver)) return false;
+        if (!interaction_edit_config_MDM(driver)) return false;
+        if (!qbe_config_MDM(driver)) return false;
+        if (!others_actions_config_MDM(driver)) return false;
+        //CONFIGURATIONS PER TABLE TABLE
+        if (!interaction_record_tabconfig_MDM(driver)) return false;
+        if (!qbe_tabconfig_MDM(driver)) return false;
+        if (!interaction_edit_tabconfig_MDM(driver)) return false;
+        if (!qbe_tabconfig_MDM(driver)) return false;
+        if (!others_actions_tabconfig_MDM(driver)) return false;
+        if (!delete_tabconfig_MDM(driver)) return false;
+        //CONFIGURATION TABLE
+        if (!delete_config_MDM(driver)) return false;
+        //CHANGE TAB
+        if (!second_change_tab(driver)) return false;
+        //TABS TABLE
+        if (!delete_tabs_MDM(driver)) return false;
+        return false;
     }
 
     private boolean interaction_record_tabs_MDM(TestDriver driver) {
@@ -404,6 +408,11 @@ public class AT2MDMRM0018Test {
                 where)){
             return false;
         }
+        if (!Functions.getValue(driver, new String[]{"add_cntrs_e_country_description", getElements("add_cntrs_e_country_description")}, // element path
+                "cntrs_country_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_cntrs_b_save", getElements("add_cntrs_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -515,6 +524,11 @@ public class AT2MDMRM0018Test {
                 where)){
             return false;
         }
+        if (!Functions.getValue(driver, new String[]{"add_dstn_e_destination_description", getElements("add_dstn_e_destination_description")}, // element path
+                "dstn_destination_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_dstn_b_save", getElements("add_dstn_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -614,11 +628,10 @@ public class AT2MDMRM0018Test {
                 where)) {
             return false;
         }
-        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"MDM_dstn_b_delete", getElements("MDM_dstn_b_delete")},
-                new String[]{"MDM_dstn_e_records", getElements("MDM_dstn_e_records")},
-                new String[]{"MDM_dstn_b_delete_ok", getElements("MDM_dstn_b_delete_ok")}, //delete button yes
-                where)) {
+        if(!Functions.doDelete(driver,
+                new String[]{"MDM_dstn_b_delete", getElements("MDM_dstn_b_delete")},//delete button
+                new String[]{"MDM_dstn_b_delete_ok", getElements("MDM_dstn_b_delete_ok")},//delete button
+                "where")) {
             return false;
         }
         return true;
@@ -733,6 +746,7 @@ public class AT2MDMRM0018Test {
     private boolean interaction_edit_config_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_config_b_edit", getElements("MDM_config_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -831,6 +845,11 @@ public class AT2MDMRM0018Test {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "tabconfig_tab", //Data name
+                where)){
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"add_tabconfig_e_tabconfiguration_description", getElements("add_tabconfig_e_tabconfiguration_description")}, // element path
+                "tabconfig_tabconfiguration_description", // key for data value (the name)
                 where)){
             return false;
         }

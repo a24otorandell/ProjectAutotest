@@ -49,10 +49,12 @@ public class AT2MDMRM0015Sis {
         if (!qbe_grp_MDM(driver)) return false;
         if (!others_actions_grp_MDM(driver)) return false;
         if (!interaction_record_dscr_MDM(driver)) return false;
+        if (!qbe_dscr_MDM(driver)) return false;
         if (!interaction_edit_dscr_MDM(driver)) return false;
         if (!qbe_dscr_MDM(driver)) return false;
         if (!others_actions_dscr_MDM(driver)) return false;
         if (!interaction_record_ctgrs_MDM(driver)) return false;
+        if (!qbe_ctgrs_MDM(driver)) return false;
         if (!interaction_edit_ctgrs_MDM(driver)) return false;
         if (!qbe_ctgrs_MDM(driver)) return false;
         if (!others_actions_ctgrs_MDM(driver)) return false;
