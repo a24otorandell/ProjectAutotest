@@ -49,6 +49,7 @@ public class AT2MDMSP0033Sis {
         if (!qbe_sproles_MDM(driver)) return false;
         if (!others_actions_sproles_MDM(driver)) return false;
         if (!interaction_record_spprofiles_MDM(driver)) return false;
+        if (!qbe_spprofiles_MDM(driver)) return false;
         if (!interaction_edit_spprofiles_MDM(driver)) return false;
         if (!qbe_spprofiles_MDM(driver)) return false;
         if (!others_actions_spprofiles_MDM(driver)) return false;
@@ -195,6 +196,11 @@ public class AT2MDMSP0033Sis {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "profile_code", //Data name
+                where)){
+            return false;
+        }
+        if(!Functions.getText(driver,new String[]{"add_e_profile_description", getElements("add_e_profile_description")}, // element path
+                "profile_description", // key for data value (the name)
                 where)){
             return false;
         }

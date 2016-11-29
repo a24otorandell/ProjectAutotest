@@ -50,6 +50,7 @@ public class AT2MDMSP0033Test {
         if (!qbe_sproles_MDM(driver)) return false;
         if (!others_actions_sproles_MDM(driver)) return false;
         if (!interaction_record_spprofiles_MDM(driver)) return false;
+        if (!qbe_spprofiles_MDM(driver)) return false;
         if (!interaction_edit_spprofiles_MDM(driver)) return false;
         if (!qbe_spprofiles_MDM(driver)) return false;
         if (!others_actions_spprofiles_MDM(driver)) return false;
@@ -199,6 +200,11 @@ public class AT2MDMSP0033Test {
                 where)){
             return false;
         }
+        if(!Functions.getText(driver,new String[]{"add_e_profile_description", getElements("add_e_profile_description")}, // element path
+                "profile_description", // key for data value (the name)
+                where)){
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_spprofiles_b_save", getElements("add_spprofiles_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -210,11 +216,6 @@ public class AT2MDMSP0033Test {
     private boolean interaction_edit_spprofiles_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
         if (!Functions.simpleClick(driver,
                 new String[]{"MDM_spprofiles_e_result", getElements("MDM_spprofiles_e_result")}, //element to click
                 where)) {
