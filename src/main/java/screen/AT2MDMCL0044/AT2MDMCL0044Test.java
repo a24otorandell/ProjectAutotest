@@ -304,7 +304,7 @@ public class AT2MDMCL0044Test {
                 new String[]{"add_cn_lov_type", getElements("add_cn_lov_type")}, // b_lov
                 new String[]{"add_cn_i_type", getElements("add_cn_i_type")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "type", //Data name
                 where)){
