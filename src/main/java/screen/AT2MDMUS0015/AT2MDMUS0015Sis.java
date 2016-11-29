@@ -60,9 +60,11 @@ public class AT2MDMUS0015Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type",getElements("add_sl_type")},
                 "Envio Desvios", "type", where)){return false;}
+        Functions.break_time(driver, 30, 500);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_user",getElements("add_lov_user")}, // b_lov
                 new String[]{"add_i_user", getElements("add_i_user")}, // i_lov

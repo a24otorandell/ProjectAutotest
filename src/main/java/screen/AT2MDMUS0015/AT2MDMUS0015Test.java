@@ -180,8 +180,8 @@ public class AT2MDMUS0015Test {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
                 getData("type"), "type", where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_user",getElements("qbe_i_user")},
-                "user", getData("user"), where)){return false;}*/
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_user",getElements("qbe_i_user")},
+                "user", getData("user"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_user_name",getElements("qbe_i_user_name")},
                 "user_name", getData("user_name"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_interface",getElements("qbe_i_interface")},
