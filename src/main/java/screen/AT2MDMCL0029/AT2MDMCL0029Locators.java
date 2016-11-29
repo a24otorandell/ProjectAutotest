@@ -140,6 +140,9 @@ public class AT2MDMCL0029Locators {
         elements.put("b_add_i_zip", "//*[contains(@id, 'it25::content')]");
         elements.put("b_add_i_country", "//*[contains(@id, 'inputListOfValues1::content')]");
         elements.put("b_add_lov_country", "//*[contains(@id, 'inputListOfValues1::lovIconId')]");
+        elements.put("b_add_i_phone", "//*[contains(@id, 'it27::content')]");
+        elements.put("b_add_i_fax", "//*[contains(@id, 'it30::content')]");
+        elements.put("b_add_i_mail", "//*[contains(@id, 'it31::content')]");
         //QBE
         elements.put("b_qbe_i_short_name", "//*[contains(@id, 'afr_c1::content')]");
         elements.put("b_qbe_sl_stop", "//*[contains(@id, 'soc7::content')]");

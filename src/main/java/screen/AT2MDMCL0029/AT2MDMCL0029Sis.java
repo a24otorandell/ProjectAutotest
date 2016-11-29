@@ -639,6 +639,18 @@ public class AT2MDMCL0029Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "b_country", //Data name
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"b_add_i_phone", getElements("b_add_i_phone")},
+                "phone", String.valueOf(DataGenerator.random(111111111, 999999999)), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"b_add_i_fax", getElements("b_add_i_fax")},
+                "fax", String.valueOf(DataGenerator.random(111111111, 999999999)), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"b_add_i_mail", getElements("b_add_i_mail")},
+                "mail", DataGenerator.getRandomAlphanumericSequence(5,false)+"@mail.com", where)) {
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"b_add_b_save", getElements("b_add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -688,6 +700,18 @@ public class AT2MDMCL0029Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "b_country", //Data name
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"b_add_i_phone", getElements("b_add_i_phone")},
+                "phone", String.valueOf(DataGenerator.random(111111111, 999999999)), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"b_add_i_fax", getElements("b_add_i_fax")},
+                "fax", String.valueOf(DataGenerator.random(111111111, 999999999)), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"b_add_i_mail", getElements("b_add_i_mail")},
+                "mail", DataGenerator.getRandomAlphanumericSequence(5,false)+"@mail.com", where)) {
+            return false;
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"b_add_b_save", getElements("b_add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
