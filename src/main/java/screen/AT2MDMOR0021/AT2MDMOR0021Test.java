@@ -47,6 +47,7 @@ public class AT2MDMOR0021Test {
     protected boolean testCSED(TestDriver driver) {
         if (!results_interaction_record_MDM(driver)) return false;
         if (!errors_interaction_record_MDM(driver)) return false;
+        if (!errors_qbe_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
         if (!errors_interaction_edit_MDM(driver)) return false;
         if (!errors_qbe_MDM(driver)) return false;
