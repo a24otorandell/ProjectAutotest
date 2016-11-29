@@ -123,10 +123,12 @@ public class AT2MDMCL0005Sis {
                 "request",getData("request"), where)) {
             return false;
         }
-        if (!Functions.selectText(driver,
-                new String[]{"search_sl_status", getElements("search_sl_status")},
-                getData("status"), "status", where)) {
-            return false;
+        if (!getData("status").equalsIgnoreCase(" ")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"search_sl_status", getElements("search_sl_status")},
+                    getData("status"), "status", where)) {
+                return false;
+            }
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_date_received_01", getElements("search_i_date_received_01")},
                 "date_1",getData("date_1"), where)) {
@@ -136,22 +138,24 @@ public class AT2MDMCL0005Sis {
                 "date_1b",masDia("date_1"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"search_i_date_modified_01", getElements("search_i_date_modified_01")},
-                "date_2",getData("date_2"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"search_i_date_modified_02", getElements("search_i_date_modified_02")},
-                "date_2b",masDia("date_2"), where)) {
-            return false;
+        if (!getData("date_2").equalsIgnoreCase(" ")) {
+            if (!Functions.insertInput(driver, new String[]{"search_i_date_modified_01", getElements("search_i_date_modified_01")},
+                    "date_2", getData("date_2"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"search_i_date_modified_02", getElements("search_i_date_modified_02")},
+                    "date_2b", masDia("date_2"), where)) {
+                return false;
+            }
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_type", getElements("search_i_type")},
                 "type",getData("type"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"search_i_desc", getElements("search_i_desc")},
+/*        if (!Functions.insertInput(driver, new String[]{"search_i_desc", getElements("search_i_desc")},
                 "desc",getData("desc"), where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"search_i_module", getElements("search_i_module")},
                 "module",getData("module"), where)) {
             return false;

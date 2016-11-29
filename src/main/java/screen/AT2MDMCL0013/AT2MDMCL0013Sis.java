@@ -50,7 +50,6 @@ public class AT2MDMCL0013Sis {
         if (!data_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
         if (!interaction_edit_MDM(driver)) return false;
-        if (!search_MDM(driver)) return false;
         if (!qbe_MDM(driver)) return false;
         if (!others_actions_MDM(driver)) return false;
         return false;

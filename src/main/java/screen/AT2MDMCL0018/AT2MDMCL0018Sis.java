@@ -394,7 +394,6 @@ public class AT2MDMCL0018Sis {
     private boolean qbe_t2(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE 2";
-        Functions.zoomOut(driver);
         if (!Functions.clickQbE(driver,
                 new String[]{"agencies_b_qbe", getElements("agencies_b_qbe")},// query button
                 new String[]{"a_qbe_i_agency_code", getElements("a_qbe_i_agency_code")},//any query input

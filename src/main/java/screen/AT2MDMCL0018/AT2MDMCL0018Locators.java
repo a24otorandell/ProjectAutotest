@@ -72,7 +72,7 @@ public class AT2MDMCL0018Locators {
         elements.put("agencies_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("agencies_e_result", "//*[contains(@id, 'pc1:child::db')]/table/tbody/tr[1]/td[1]");
         elements.put("agencies_e_records", "//*[contains(@id, 'pc1:otp95')]");
-        elements.put("agencies_ok_audit" , "//*[contains(@id, 'r2:1:d8::ok')]");
+        elements.put("agencies_ok_audit" , "//*[contains(@id, 'd8::ok')]");
         //ADD
         elements.put("add_b_save2", "//*[contains(@id, 'pcgt3:btn_commitExit')]");
         elements.put("a_add_i_agency_code", "//*[contains(@id, 'it36::content')]");
