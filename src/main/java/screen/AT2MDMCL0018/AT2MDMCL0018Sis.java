@@ -160,7 +160,7 @@ public class AT2MDMCL0018Sis {
                 where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_agency_id", getElements("add_i_agency_id")},
+/*        if (!Functions.insertInput(driver, new String[]{"add_i_agency_id", getElements("add_i_agency_id")},
                 "agency", String.valueOf(DataGenerator.random(1,700)), where)) {
             return false;
         }
@@ -171,7 +171,7 @@ public class AT2MDMCL0018Sis {
         if (!Functions.insertInput(driver, new String[]{"add_i_interface", getElements("add_i_interface")},
                 "interface", DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"add_i_major", getElements("add_i_major")},
                 "major", String.valueOf(DataGenerator.random(1,800)), where)) {
             return false;
@@ -349,10 +349,10 @@ public class AT2MDMCL0018Sis {
                 where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"a_add_i_agency_code", getElements("a_add_i_agency_code")},
+/*        if (!Functions.insertInput(driver, new String[]{"a_add_i_agency_code", getElements("a_add_i_agency_code")},
                 "agency2", String.valueOf(DataGenerator.random(1,700)), where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"a_add_i_to_branch", getElements("a_add_i_to_branch")},
                 "to2", String.valueOf(DataGenerator.random(1,9)), where)) {
             return false;
@@ -361,7 +361,7 @@ public class AT2MDMCL0018Sis {
                 "a_name", DataGenerator.getRandomAlphanumericSequence(10,false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"a_add_i_major", getElements("a_add_i_major")},
+/*        if (!Functions.insertInput(driver, new String[]{"a_add_i_major", getElements("a_add_i_major")},
                 "major2", String.valueOf(DataGenerator.random(1,800)), where)) {
             return false;
         }
@@ -384,7 +384,7 @@ public class AT2MDMCL0018Sis {
         if (!Functions.insertInput(driver, new String[]{"a_add_i_interface", getElements("a_add_i_interface")},
                 "interface2", DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
-        }
+        }*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
                 recursiveXPaths.glass, //e2
@@ -449,7 +449,7 @@ public class AT2MDMCL0018Sis {
         if (!Functions.auditData(driver,
                 new String[]{"agencies_b_actions", getElements("agencies_b_actions")}, //actions button
                 new String[]{"agencies_b_actions_audit_data", getElements("agencies_b_actions_audit_data")}, //audit button
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
+                new String[]{"audit_b_ok", getElements("agencies_ok_audit")}, //audit_b_ok
                 where)) {
             return false;
         }

@@ -58,10 +58,10 @@ public class AT2ACCDI0018Test {
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_record_cancellation(driver)) return false;
         if (!search_cancellation(driver, true)) return false;
-        if (!qbe_cancellation(driver)) return false;
+        if (!qbe_cancellation(driver, true)) return false;
         if (!interaction_edit_cancellation(driver)) return false;
         if (!search_cancellation(driver, false)) return false;
-        if (!qbe_cancellation(driver)) return false;
+        if (!qbe_cancellation(driver, false)) return false;
         if (!others_actions_cancellation(driver)) return false;
         if (!delete_cancellation(driver)) return false;
         return false;
@@ -489,11 +489,13 @@ public class AT2ACCDI0018Test {
         }
         return true;
     }
-    private boolean qbe_cancellation(TestDriver driver) {
+    private boolean qbe_cancellation(TestDriver driver, boolean zoom) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        if (!Functions.zoomOut(driver)) {
-            return false;
+        if (zoom) {
+            if (!Functions.zoomOut(driver)) {
+                return false;
+            }
         }
         if (!Functions.checkClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
