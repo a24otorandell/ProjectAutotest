@@ -49,6 +49,7 @@ public class AT2MDMDE0012Sis {
         if (!qbe_dm_MDM(driver)) return false;
         if (!others_actions_dm_MDM(driver)) return false;
         if (!interaction_record_ml_MDM(driver)) return false;
+        if (!qbe_ml_MDM(driver)) return false;
         if (!interaction_edit_ml_MDM(driver)) return false;
         if (!qbe_ml_MDM(driver)) return false;
         if (!others_actions_ml_MDM(driver)) return false;

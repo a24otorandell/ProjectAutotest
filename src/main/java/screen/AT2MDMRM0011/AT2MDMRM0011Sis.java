@@ -47,6 +47,7 @@ public class AT2MDMRM0011Sis {
     protected boolean testCSED(TestDriver driver) {
         if (!id_interaction_record_MDM(driver)) return false;
         if (!pbcc_interaction_record_MDM(driver)) return false;
+        if (!pbcc_qbe_MDM(driver)) return false;
         if (!search_MDM(driver)) return false;
         if (!id_interaction_edit_MDM(driver)) return false;
         if (!id_qbe_MDM(driver)) return false;
