@@ -47,7 +47,9 @@ public class AT2MDMCL0012Sis {
         if (!search_t1(driver)) return false;
         if (!interaction_edit_t1(driver)) return false;
         if (!qbe_t1(driver)) return false;
+        if (!actions_add(driver)) return false;
         if (!others_actions_t1(driver)) return false;
+        if (!actions_delete(driver)) return false;
         if (!interaction_add_t2(driver)) return false;
         if (!qbe_t2(driver)) return false;
         if (!interaction_edit_t2(driver)) return false;
@@ -55,9 +57,16 @@ public class AT2MDMCL0012Sis {
         if (!others_actions_t2(driver)) return false;
         if (!delete_t2(driver)) return false;
         if (!delete_t1(driver)) return false;
+        if (!hardSearch(driver)) return false;
+        if (!getDatos(driver)) return  false;
+        if (!qbe_t3(driver)) return false;
+        if (!others_actions_t3(driver)) return false;
         return true;
     }
 
+    /**
+     * TABLE PLATFORM
+     */
     public boolean interaction_add_t1 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
@@ -214,7 +223,64 @@ public class AT2MDMCL0012Sis {
         }
         return true;
     }
+    public boolean actions_add (TestDriver driver) {
+        driver.getReport().addHeader("ADD ACTIONS", 3, false);
+        String where = " on ADD ACTIONS 1";
+        if (!Functions.simpleClick(driver,
+                new String[]{"platform_b_actions", getElements("platform_b_actions")}, //element to click
+                where)){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"platform_b_actions_create", getElements("platform_b_actions_create")}, //element to click
+                where)){return false;}
 
+        if (!Functions.insertInput(driver, new String[]{"add_i_short_act", getElements("add_i_short_act")},
+                "short_act", DataGenerator.getRandomAlphanumericSequence(5,false), where)) {
+            return false;
+        }
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_sap_code",getElements("add_lov_sap_code")}, // b_lov
+                new String[]{"add_i_sap_code", getElements("add_i_sap_code")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "sàp_code", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_cco",getElements("add_lov_cco")}, // b_lov
+                new String[]{"add_i_cco", getElements("add_i_cco")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "cco", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_tax",getElements("add_lov_tax")}, // b_lov
+                new String[]{"add_i_tax", getElements("add_i_tax")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "tax", //Data name
+                where)){return false;}
+        Functions.break_time(driver, 3, 400);
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"add_i_create", getElements("add_i_create")}, //e1
+                recursiveXPaths.glass, //e2
+                where)) return false; //where
+        return true;
+    }
+    public boolean actions_delete (TestDriver driver) {
+        if (!Functions.auditData(driver,
+                new String[]{"platform_b_actions", getElements("platform_b_actions")}, //actions button
+                new String[]{"platform_b_actions_delete", getElements("platform_b_actions_delete")}, //audit button
+                new String[]{"platform_b_ok_actions_delete", getElements("platform_b_ok_actions_delete")}, //audit_b_ok
+                "DELETE ACTIONS")) {
+            return false;
+        }
+        return true;
+    }
+    /**
+     * TABLE PLATFORM FREE
+     */
     public boolean interaction_add_t2 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 2";
@@ -230,7 +296,7 @@ public class AT2MDMCL0012Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"add_i_app_date_end", getElements("add_i_app_date_end")},
-                "app_end", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(2,5), 0), where)) {
+                "app_end", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6,10), 0), where)) {
             return false;
         }
         if(!Functions.createLov(driver,
@@ -261,7 +327,7 @@ public class AT2MDMCL0012Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"add_i_date_to", getElements("add_i_date_to")},
-                "d_to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(2,5), 0), where)) {
+                "d_to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6,10), 0), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_amount", getElements("add_i_amount")},
@@ -486,6 +552,91 @@ public class AT2MDMCL0012Sis {
                 new String[]{"free_b_delete", getElements("free_b_delete")},
                 new String[]{"free_e_records", getElements("free_e_records")},
                 where)){
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * SUPPLIER PLATFORM
+     */
+    public boolean hardSearch (TestDriver driver) {
+        driver.getReport().addHeader("HARD SEARCH RECORD", 3, false);
+        String where = " on HARD SEARCH";
+        if (!Functions.simpleClick(driver,
+                new String[]{"platform_b_rest_qbe", getElements("platform_b_rest_qbe")}, //element to click
+                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_platform", getElements("search_i_platform")},
+                "platform","1", where)) {
+            return false;
+        }
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"platform_e_result", getElements("platform_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    public boolean getDatos (TestDriver driver) {
+        if (!Functions.simpleClick(driver,
+                new String[]{"supplier_e_result", getElements("supplier_e_result")}, //element to click
+                "GET DATA")){return false;}
+        String[] columns = {"supplier", "company", "code", "market"};
+        Functions.collectTableData(driver,
+                columns, //array with the names of the columns
+                "//*[contains(@id, 'pc3:psupp::db')]",
+                1, // row to give values
+                "GET DATA");
+        return true;
+    }
+    private boolean qbe_t3(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE 3";
+        if (!Functions.clickQbE(driver,
+                new String[]{"supplier_b_qbe", getElements("supplier_b_qbe")},// query button
+                new String[]{"qbe_i_supplier", getElements("qbe_i_supplier")},//any query input
+                where)) {
+            return false;
+        } // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_supplier", getElements("qbe_i_supplier")},
+                "supplier", getData("supplier"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_company", getElements("qbe_i_company")},
+                "company", getData("company"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_code2", getElements("qbe_i_code2")},
+                "code", getData("code"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_market", getElements("qbe_i_market")},
+                "market", getData("market"), where)) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_supplier", getElements("qbe_i_supplier")}, //any query input
+                new String[]{"supplier_e_result", getElements("supplier_e_result")}, //table result
+                where)){return false;}
+        return true;
+    }
+    private boolean others_actions_t3(TestDriver driver) {
+        driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
+        String where = " on OTHER AUDIT DATA 3";
+        if (!Functions.auditData(driver,
+                new String[]{"supplier_b_actions", getElements("supplier_b_actions")}, //actions button
+                new String[]{"supplier_b_actions_audit_data", getElements("supplier_b_actions_audit_data")}, //audit button
+                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
+                where)) {
+            return false;
+        }
+        driver.getReport().addHeader("OTHER DETACH", 3, false);
+        where = " on OTHER DETACH 3";
+        if (!Functions.detachTable(driver,
+                new String[]{"supplier_b_detach", getElements("supplier_b_detach")}, //detach button
+                true,     //screenshot??
+                where)) {
             return false;
         }
         return true;

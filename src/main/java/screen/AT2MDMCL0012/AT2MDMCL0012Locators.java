@@ -27,12 +27,15 @@ public class AT2MDMCL0012Locators {
         elements.put("platform_b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");
         elements.put("platform_b_actions", "//*[contains(@id, 'pdm2:dc_m1')]");
         elements.put("platform_b_actions_audit_data", "//*[contains(@id, 'pdm2:dc_cmi1')]/td[2]");
+        elements.put("platform_b_actions_create", "//*[contains(@id, 'pdm2:dc_cmi2')]/td[2]");
         elements.put("platform_b_actions_delete", "//*[contains(@id, 'pdm2:dc_cmi3')]/td[2]");
         elements.put("platform_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("platform_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("platform_e_result", "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[1]/td[1]");
         elements.put("platform_e_records", "//*[contains(@id, 'pc1:ot2')]");
-        elements.put("platform_b_ok_delete" ,"//*[contains(@id, 'pc1:pcgt1:cbt1')]");
+        elements.put("platform_b_ok_delete", "//*[contains(@id, 'pc1:pcgt1:cbt1')]");
+        elements.put("platform_b_ok_actions_delete", "//*[contains(@id, 'dd2::yes')]");
+        elements.put("platform_b_rest_qbe", "//*[contains(@id, 'resId1::ch::t')]/tbody/tr[2]/th/a");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
@@ -49,11 +52,23 @@ public class AT2MDMCL0012Locators {
         elements.put("add_ck_push", "//*[contains(@id, 'pc1:pcgt1:sbc4::content')]");
         elements.put("add_ck_voucher", "//*[contains(@id, 'pc1:pcgt1:sbc8::content')]");
         //QBE
-        elements.put("qbe_i_platform","//*[contains(@id,'pc1:resId1:it24::content')]");
-        elements.put("qbe_i_desc","//*[contains(@id,'pc1_afr_resId1_afr_resId1c2::content')]");
-        elements.put("qbe_sl_email","//*[contains(@id,'pc1:resId1:soc2::content')]");
-        elements.put("qbe_sl_push","//*[contains(@id,'pc1:resId1:soc1::content')]");
-        elements.put("qbe_sl_voucher","//*[contains(@id,'selectOneChoice1::content')]");
+        elements.put("qbe_i_platform", "//*[contains(@id,'pc1:resId1:it24::content')]");
+        elements.put("qbe_i_desc", "//*[contains(@id,'pc1_afr_resId1_afr_resId1c2::content')]");
+        elements.put("qbe_sl_email", "//*[contains(@id,'pc1:resId1:soc2::content')]");
+        elements.put("qbe_sl_push", "//*[contains(@id,'pc1:resId1:soc1::content')]");
+        elements.put("qbe_sl_voucher", "//*[contains(@id,'selectOneChoice1::content')]");
+
+        /**
+         * ADD DE ACTIONS
+         */
+        elements.put("add_i_create", "//*[contains(@id, '1:cb1')]");
+        elements.put("add_i_short_act", "//*[contains(@id, 'it23::content')]");
+        elements.put("add_i_sap_code", "//*[contains(@id, 'sAPCodeId::content')]");
+        elements.put("add_lov_sap_code", "//*[contains(@id, 'sAPCodeId::lovIconId')]");
+        elements.put("add_i_cco", "//*[contains(@id, 'companyId::content')]");
+        elements.put("add_lov_cco", "//*[contains(@id, 'companyId::lovIconId')]");
+        elements.put("add_i_tax", "//*[contains(@id, 'taxAreaId::content')]");
+        elements.put("add_lov_tax", "//*[contains(@id, 'taxAreaId::lovIconId')]");
         /**
          * TABLE PLATFORM FREE
          */
@@ -101,5 +116,22 @@ public class AT2MDMCL0012Locators {
         elements.put("qbe_i_imp", "//*[contains(@id, '_afr_c4::content')]");
         elements.put("qbe_sl_canceled", "//*[contains(@id, 'soc5::content')]");
         elements.put("qbe_sl_tax", "//*[contains(@id, 'soc6::content')]");
+        /**
+         * SUPPLIER PLATFORM
+         */
+        //GENERALS
+        elements.put("supplier_b_actions", "//*[contains(@id, 'pcgm3:dc_m1')]");
+        elements.put("supplier_b_actions_audit_data", "//*[contains(@id, 'pcgm3:dc_cmi1')]/td[2]");
+        elements.put("supplier_b_qbe", "//*[contains(@id, 'pc3:_qbeTbr')]");
+        elements.put("supplier_b_detach", "//*[contains(@id, 'pc3:_dchTbr')]");
+        elements.put("supplier_e_result", "//*[contains(@id, 'pc3:psupp::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("supplier_e_records", "//*[contains(@id, 'pc3:ot24')]");
+        /**
+         * QBE
+         */
+        elements.put("qbe_i_supplier", "//*[contains(@id, 'pc3:psupp:it25::content')]");
+        elements.put("qbe_i_company", "//*[contains(@id, 'pc3_afr_psupp_afr_c13::content')]");
+        elements.put("qbe_i_code2", "//*[contains(@id, 'pc3:psupp:it26::content')]");
+        elements.put("qbe_i_market", "//*[contains(@id, 'pc3_afr_psupp_afr_c12::content')]");
     }
 }
