@@ -42,15 +42,32 @@ public class AT2MDMCL0040Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
+        if (!getDatos(driver))return false;
         if (!search_agency(driver)) return false;
         if (!qbe_agency(driver)) return false;
         if (!others_actions_agency(driver)) return false;
         return false;
     }
 
+    public boolean getDatos (TestDriver driver)  {
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"credit_e_result", getElements("credit_e_result")}, //result element
+                "GET DATOS")) {
+            return false;
+        }
+        String[] columns = {"code", "short"};
+        Functions.collectTableData(driver,
+                columns,
+                "//*[contains(@id, 'pc1:resId1::db')]",
+                1, // row to give values
+                "GET DATOS");
+        return true;
+    }
     private boolean search_agency(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
+        Functions.break_time(driver, 3, 400);
         if (!Functions.createLov(driver,
                 new String[]{"search_lov_sap", getElements("search_lov_sap")}, //LoV button
                 new String[]{"search_i_sap", getElements("search_i_sap")}, //external LoV input

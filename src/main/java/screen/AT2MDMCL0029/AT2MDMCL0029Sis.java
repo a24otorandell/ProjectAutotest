@@ -165,7 +165,11 @@ public class AT2MDMCL0029Sis {
                 "tax_p", DataGenerator.randomFloat(1,3), where)) {
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+/*        if(!Functions.getText(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+                "agency", // key for data value (the name)
+                where)){return false;}*/
+        if(!Functions.getAttr(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+                "value",
                 "agency", // key for data value (the name)
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_street", getElements("add_i_street")},
@@ -192,7 +196,11 @@ public class AT2MDMCL0029Sis {
                 "country_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_telephone", getElements("add_i_telephone")},
-                "phone", "999999999", where)) {
+                "phone", String.valueOf(DataGenerator.random(111111111,999999999)), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_i_fax", getElements("add_i_fax")},
+                "fax", String.valueOf(DataGenerator.random(111111111,999999999)), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_email", getElements("add_i_email")},
@@ -216,10 +224,10 @@ public class AT2MDMCL0029Sis {
                 getData("partner"), // value to search
                 "partner", //name of the data
                 where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"search_i_partner_des", getElements("search_i_partner_des")},
+/*        if (!Functions.insertInput(driver, new String[]{"search_i_partner_des", getElements("search_i_partner_des")},
                 "p_desc", getData("p_desc"), where)) {
             return false;
-        }
+        }*/
         if (!Functions.insertInput(driver, new String[]{"search_i_short_name", getElements("search_i_short_name")},
                 "short", getData("short"), where)) {
             return false;
@@ -240,10 +248,10 @@ public class AT2MDMCL0029Sis {
                 getData("group"), // value to search
                 "group", //name of the data
                 where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"search_i_group_des", getElements("search_i_group_des")},
+/*        if (!Functions.insertInput(driver, new String[]{"search_i_group_des", getElements("search_i_group_des")},
                 "g_desc", getData("g_desc"), where)) {
             return false;
-        }
+        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_language", getElements("search_lov_language")}, //LoV button
                 new String[]{"search_i_language", getElements("search_i_language")}, //external LoV input
@@ -399,9 +407,10 @@ public class AT2MDMCL0029Sis {
                 "tax_p", DataGenerator.randomFloat(1,3), where)) {
             return false;
         }
-/*        if(!Functions.getValue(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+        if(!Functions.getAttr(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+                "value",
                 "agency", // key for data value (the name)
-                where)){return false;}*/
+                where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_street", getElements("add_i_street")},
                 "street", DataGenerator.getRandomAlphanumericSequence(12, false), where)) {
             return false;
@@ -426,7 +435,11 @@ public class AT2MDMCL0029Sis {
                 "country_des", // key for data value (the name)
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_telephone", getElements("add_i_telephone")},
-                "phone", "911999889", where)) {
+                "phone", String.valueOf(DataGenerator.random(111111111,999999999)), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_i_fax", getElements("add_i_fax")},
+                "fax", String.valueOf(DataGenerator.random(111111111,999999999)), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_email", getElements("add_i_email")},

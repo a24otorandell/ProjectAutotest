@@ -43,12 +43,28 @@ public class AT2MDMCL0040Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
+        if (!getDatos(driver))return false;
         if (!search_agency(driver)) return false;
         if (!qbe_agency(driver)) return false;
         if (!others_actions_agency(driver)) return false;
         return false;
     }
 
+    public boolean getDatos (TestDriver driver)  {
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"credit_e_result", getElements("credit_e_result")}, //result element
+                "GET DATOS")) {
+            return false;
+        }
+        String[] columns = {"code", "short"};
+        Functions.collectTableData(driver,
+                columns,
+                "//*[contains(@id, 'pc1:resId1::db')]",
+                1, // row to give values
+                "GET DATOS");
+        return true;
+    }
     private boolean search_agency(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
@@ -64,11 +80,11 @@ public class AT2MDMCL0040Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"search_i_code", getElements("search_i_code")},
-                "code", "E10", where)) {
+                "code", getData("code"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_short", getElements("search_i_short")},
-                "short", "HOTELBEDS", where)) {
+                "short", getData("short"), where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,

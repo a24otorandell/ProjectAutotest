@@ -91,6 +91,7 @@ public class AT2MDMCL0029Locators {
         elements.put("add_lov_country", "//*[contains(@id, 'inputListOfValues3::lovIconId')]");
         elements.put("add_i_country_des", "//*[contains(@id, 'it38::content')]");
         elements.put("add_i_telephone", "//*[contains(@id, 'it37::content')]");
+        elements.put("add_i_fax", "//*[contains(@id, 'it34::content')]");
         elements.put("add_i_email", "//*[contains(@id, 'it44::content')]");
         //QBE
         elements.put("qbe_i_partner", "//*[contains(@id, 'afr_c13::content')]");
