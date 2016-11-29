@@ -229,7 +229,7 @@ public class AT2MDMSP0025Test {
                 where)) {
             return false;
         }
-        if (!Functions.getText(driver, new String[]{"add_marketc_e_country_description", getElements("add_marketc_e_country_description")}, // element path
+        if (!Functions.getValue(driver, new String[]{"add_marketc_e_country_description", getElements("add_marketc_e_country_description")}, // element path
                 "country_description", // key for data value (the name)
                 where)) {
             return false;
