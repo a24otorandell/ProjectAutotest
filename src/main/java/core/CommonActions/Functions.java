@@ -1551,25 +1551,18 @@ public class Functions {
      */
     public static boolean collectTableData(TestDriver driver, String[] columns, String xpathtable, int rows, String where) {
         /*
-        Xpath completo de ejemplo: //*[contains(@id,  'pc1:resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
-                                el primer num (tbody/tr[n]) es la fila y el ultimo (tr/td[n]) la columna
+        String[] columns = {"variable1","variable2",...};
+        if (!Functions.collectTableData(driver,columns,getElements("tabla"),1,where))return false;
 
-        - String[] columns = {"column1", "column2"...}
-        - xpathBegin "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr["
-        - xpathMid   "]/td[2]/div/table/tbody/tr/td["
-        - xpathEnd   "]"
-
-        Functions.collectTableData(driver,
-            columns, //array with the names of the columns
-            xpathBegin,
-            xpathMid,
-            xpathEnd,
-            1, // row to give values
-            "where");
          */
         String xpathBegin = "/table/tbody/tr[";
         String xpathMid = "]/td[2]/div/table/tbody/tr/td[";
         String xpathEnd = "]";
+        if (xpathtable.isEmpty()){
+            String ecode = "--ERROR: The xpath table is null " + where;
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
         try {
                 for (int j = 1; j < columns.length + 1; j++) {
                     getText(driver,
