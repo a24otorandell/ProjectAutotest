@@ -80,52 +80,7 @@ public class AT2BOOSA0001Test {
       return true;
     }
 
-    private boolean Search_booking_other_actions_service_details (TestDriver driver){
-        String where = " on ACTIONS SEND EMAIL/FAX";
-        driver.getReport().addHeader("ACTIONS SERVICE DETAIL IN SEARCH BOOKING",3,false);
-        if(!Functions.checkClick(driver,
-                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
-                new String[]{"", getElements("")}, //element expected to appear
-                30, 500, //seconds/miliseconds (driver wait)
-                where)){return false;}
 
-        if(!Functions.checkClick(driver,
-                new String[]{"", getElements("")}, //element to click
-                new String[]{"", getElements("")}, //element expected to appear
-                30, 500, //seconds/miliseconds (driver wait)
-                where)){return false;}
-        Functions.getAttr(driver,
-                new String[]{"x", getElements("x")}, // element path
-                "title", // atribute to get data (class, value, id, style, etc...)
-                "receptive_ofice", // key for data value (the name)
-                where);
-        Functions.getAttr(driver,
-                new String[]{"x", getElements("x")}, // element path
-                "title", // atribute to get data (class, value, id, style, etc...)
-                "cost", // key for data value (the name)
-                where);
-        Functions.getAttr(driver,
-                new String[]{"x", getElements("x")}, // element path
-                "title", // atribute to get data (class, value, id, style, etc...)
-                "sale", // key for data value (the name)
-                where);
-        Functions.getAttr(driver,
-                new String[]{"x", getElements("x")}, // element path
-                "title", // atribute to get data (class, value, id, style, etc...)
-                "profit", // key for data value (the name)
-                where);
-        Functions.getAttr(driver,
-                new String[]{"x", getElements("x")}, // element path
-                "title", // atribute to get data (class, value, id, style, etc...)
-                "profitability", // key for data value (the name)
-                where);
-        if(!Functions.clickQbE(driver,
-                new String[]{"x", getElements("x")},// query button
-                new String[]{"y", getElements("y")},//any query input
-                where)){return false;} // where the operation occurs
-
-        return true;
-    }
 
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
@@ -852,6 +807,52 @@ public class AT2BOOSA0001Test {
                 where)){return false;}
         driver.getDriverdetails().getUrl();
 
+
+        return true;
+    }
+    private boolean Search_booking_other_actions_service_details (TestDriver driver){
+        String where = " on ACTIONS SEND EMAIL/FAX";
+        driver.getReport().addHeader("ACTIONS SERVICE DETAIL IN SEARCH BOOKING",3,false);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
+                new String[]{"", getElements("")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
+        if(!Functions.checkClick(driver,
+                new String[]{"", getElements("")}, //element to click
+                new String[]{"", getElements("")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "receptive_ofice", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "cost", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "sale", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "profit", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"x", getElements("x")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "profitability", // key for data value (the name)
+                where);
+        if(!Functions.clickQbE(driver,
+                new String[]{"x", getElements("x")},// query button
+                new String[]{"y", getElements("y")},//any query input
+                where)){return false;} // where the operation occurs
 
         return true;
     }
