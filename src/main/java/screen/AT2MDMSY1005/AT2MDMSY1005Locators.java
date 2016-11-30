@@ -38,6 +38,7 @@ public class AT2MDMSY1005Locators {
         elements.put("search_b_reset1", "//*[contains(@id, 'qryId1::reset')]");
         elements.put("search_i_from_date", "//*[contains(@id, 'qryId1:value00::content')]");
         elements.put("search_i_to_date", "//*[contains(@id, 'qryId1:value01::content')]");
+        elements.put("search_sl_operator", "//*[contains(@id, 'qryId1:value10::content')]");
         elements.put("search_i_reference", "//*[contains(@id, 'qryId1:value20::content')]");
         elements.put("search_sl_origin", "//*[contains(@id, 'qryId1:value30::content')]");
         elements.put("search_i_company", "//*[contains(@id, 'qryId1:value40::content')]");
@@ -45,11 +46,15 @@ public class AT2MDMSY1005Locators {
         elements.put("search_i_supplier", "//*[contains(@id, 'qryId1:value50::content')]");
         elements.put("search_lov_supplier", "//*[contains(@id, 'qryId1:value50::lovIconId')]");
         elements.put("search_i_ref_tmp", "//*[contains(@id, 'qryId1:value60::content')]");
+        elements.put("search_i_file", "//*[contains(@id, 'qryId1:value70::content')]");
+        elements.put("search_ck_sap", "//*[contains(@id, 'qryId1:value80::content')]");
         elements.put("search_sl_type", "//*[contains(@id, 'qryId1:value90::content')]");
         elements.put("search_sl_staus", "//*[contains(@id, 'qryId1:value100::content')]");
         elements.put("search_sl_client", "//*[contains(@id, 'qryId1:value110::content')]");
         elements.put("search_i_currency", "//*[contains(@id, 'qryId1:value120::content')]");
         elements.put("search_lov_currency", "//*[contains(@id, 'qryId1:value120::lovIconId')]");
+        elements.put("search_i_trans", "//*[contains(@id, 'qryId1:value130::content')]");
+        elements.put("search_lov_trans", "//*[contains(@id, 'qryId1:value130::lovIconId')]");
         elements.put("search_i_id", "//*[contains(@id, 'qryId1:value140::content')]");
         elements.put("search_i_code", "//*[contains(@id, 'qryId1:value150::content')]");
         elements.put("search_i_load", "//*[contains(@id, 'qryId1:value160::content')]");
@@ -77,11 +82,24 @@ public class AT2MDMSY1005Locators {
         elements.put("qbe_sl_origin", "//*[contains(@id, 'pc1:t1:soc5::content')]");
         elements.put("qbe_i_file", "//*[contains(@id, 'afr_t1_afr_c34::content')]");
         elements.put("qbe_i_load", "//*[contains(@id, 'afr_t1_afr_c16::content')]");
+        elements.put("qbe_i_t_amount", "//*[contains(@id, 'afr_t1_afr_c22::content')]");
+        elements.put("qbe_i_t_currency", "//*[contains(@id, 'afr_t1_afr_c37::content')]");
+        elements.put("qbe_i_b_amount", "//*[contains(@id, 'afr_t1_afr_c14::content')]");
+        elements.put("qbe_i_b_currency", "//*[contains(@id, 'afr_t1_afr_c1::content')]");
         elements.put("qbe_i_date", "//*[contains(@id, 'pc1:t1:id8::content')]");
+        elements.put("qbe_i_merchant", "//*[contains(@id, 'afr_t1_afr_c32::content')]");
+        elements.put("qbe_i_balance", "//*[contains(@id, 'afr_t1_afr_c6::content')]");
+        elements.put("qbe_i_b_date", "//*[contains(@id, 'pc1:t1:id3::content')]");
+        elements.put("qbe_i_ref1", "//*[contains(@id, 'afr_t1_afr_c26::content')]");
+        elements.put("qbe_i_ref2", "//*[contains(@id, 'afr_t1_afr_c24::content')]");
+        elements.put("qbe_i_ref3", "//*[contains(@id, 'afr_t1_afr_c38::content')]");
+        elements.put("qbe_sl_sap", "//*[contains(@id, 'pc1:t1:soc6::content')]");
         elements.put("qbe_i_error", "//*[contains(@id, 'pc1_afr_t1_afr_c17::content')]");
         elements.put("qbe_i_desc_error", "//*[contains(@id, 'pc1_afr_t1_afr_c19::content')]");
         elements.put("qbe_i_user", "//*[contains(@id, 'pc1_afr_t1_afr_c4::content')]");
         elements.put("qbe_i_c_date", "//*[contains(@id, 'pc1:t1:id4::content')]");
+        elements.put("qbe_i_m_user", "//*[contains(@id, 'pc1_afr_t1_afr_c40::content')]");
+        elements.put("qbe_i_m_date", "//*[contains(@id, 'pc1:t1:id6::content')]");
         /**
          * TAB LOAD MAPPER FILE - TABLE LOAD
          */
@@ -118,5 +136,20 @@ public class AT2MDMSY1005Locators {
         elements.put("qbe_i_incorrect", "//*[contains(@id, 'afr_t1_afr_c4::content')]");
         elements.put("qbe_i_error2", "//*[contains(@id, 'afr_t1_afr_c5::content')]");
         elements.put("qbe_i_desc_error2", "//*[contains(@id, 'pc1_afr_t1_afr_c7::content')]");
+        /**
+         * TAB LOAD - TABLE ISSUES LOAD
+         */
+        //GENERALS
+/*        elements.put("transaction_b_add", "/*//*[contains(@id, 'pcgt2:boton_add')]");
+        elements.put("transaction_b_delete", "/*//*[contains(@id, 'pcgt2:boton_remove')]");
+        elements.put("transaction_b_edit", "/*//*[contains(@id, 'pcgt2:boton_edit')]");*/
+        elements.put("issues_b_actions", "//*[contains(@id, 'pcqm1:dc_m1')]");
+        elements.put("issues_b_actions_b_audit_data", "//*[contains(@id, 'pcqn1:dc_cmi0')]/td[2]");
+        elements.put("issues_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]");
+        elements.put("issues_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
+        elements.put("issues_e_result", "//*[contains(@id, 'pc2:t2::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("issues_e_result_1", "//*[contains(@id, 'pc2:t2::db')]/table/tbody/tr[4]/td[1]");
+        elements.put("issues_e_records", "//*[contains(@id, 'pc2:ot22')]");
+        
     }
 }

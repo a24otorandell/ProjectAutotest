@@ -11,6 +11,9 @@ import org.openqa.selenium.By;
 /**
  * Created by aibanez on 08/11/2016.
  */
+/**
+ * EL CHECK BOX ACTIVE NO LO TOCO EN CREACIÓN NI EDICIÓN, NI QBE, PORQUE A LA HORA DE ELIMINAR SE ACTIVA ESE CHECKBOX
+ */
 public class AT2MDMSY1001Sis {
     protected AT2MDMSY1001Locators locators;
     protected AT2MDMSY1001Data data;
@@ -35,7 +38,7 @@ public class AT2MDMSY1001Sis {
     protected void setScreenInfo(TestDriver driver) {
         driver.getTestdetails().setMainmenu("Master Data Management");
         driver.getTestdetails().setSubmenu("System");
-        driver.getTestdetails().setScreen("List of reports");
+        driver.getTestdetails().setScreen("Setup GVCC Operator");
     }
     protected String getElements(String key) {
         return String.valueOf(this.locators.getElements().get(key));
