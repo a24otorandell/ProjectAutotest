@@ -46,10 +46,12 @@ public class AT2MDMUS0001Test {
         if (!getDatos(driver)) return false;
         if (!search_user(driver)) return false;
         if (!qbe_user(driver)) return false;
+        if (!others_actions_user(driver)) return false;
         if (!interaction_add(driver)) return false;
-        if (!search(driver)) return false;
+        if (!qbe(driver)) return false;
         if (!interaction_edit(driver)) return false;
         if (!qbe(driver)) return false;
+        if (!search(driver)) return false;
         if (!others_actions(driver)) return false;
         if (!delete(driver))return false;
         return true;
@@ -135,6 +137,17 @@ public class AT2MDMUS0001Test {
                 where)){return false;}
         return true;
     }
+    private boolean others_actions_user(TestDriver driver) {
+        driver.getReport().addHeader("OTHER DETACH", 3, false);
+        String where = " on OTHER DETACH";
+        if (!Functions.detachTable(driver,
+                new String[]{"users_b_detach", getElements("users_b_detach")}, //detach button
+                true,     //screenshot??
+                where)) {
+            return false;
+        }
+        return true;
+    }
 
     /**
      * TABLE ASSOCIATED PRINTERS
@@ -199,6 +212,13 @@ public class AT2MDMUS0001Test {
                 where)) {
             return false;
         }
+        if (!Functions.simpleClick(driver,
+                new String[]{"copy_printer", getElements("copy_printer")}, //element to click
+                where)){return false;}
+        Functions.break_time(driver,2,300);
+        if (!Functions.simpleClick(driver,
+                new String[]{"asign_printer", getElements("asign_printer")}, //element to click
+                where)){return false;}
         return true;
     }
     private boolean interaction_edit(TestDriver driver) {
@@ -237,13 +257,6 @@ public class AT2MDMUS0001Test {
     private boolean qbe(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        if (!Functions.insertInput(driver, new String[]{"search_i_spooler",getElements("search_i_spooler")},
-                "spooler2", "", where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"search_i_user2",getElements("search_i_user2")},
-                "user", "", where)){return false;}
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_i_find", getElements("search_i_find")}, //element to click
-                where)){return false;}
         if (!Functions.clickQbE(driver,
                 new String[]{"associated_b_qbe", getElements("associated_b_qbe")},// query button
                 new String[]{"qbe_i_spooler", getElements("qbe_i_spooler")},//any query input

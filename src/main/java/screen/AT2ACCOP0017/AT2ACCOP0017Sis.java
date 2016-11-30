@@ -44,12 +44,12 @@ public class AT2ACCOP0017Sis {
     public boolean testCSED(TestDriver driver) {
         if (!getvalues(driver))return false;
         if (!getvaluesNull(driver))return false;
-        if (!qbe(driver))return false;
-        if (!validationError(driver))return false;
-        if (!qbeValidationError(driver))return false;
-        if (!processError(driver))return false;
-        if (!processErrorTabCE_Payment(driver))return false;
-        if (!processErrorTabCE_itp(driver))return false;
+        //if (!qbe(driver))return false;
+        //if (!validationError(driver))return false;
+        //if (!qbeValidationError(driver))return false;
+        //if (!processError(driver))return false;
+        //if (!processErrorTabCE_Payment(driver))return false;
+        //if (!processErrorTabCE_itp(driver))return false;
         if (!search(driver))return false;
         if (!extraActions(driver))return false;
 
@@ -58,7 +58,7 @@ public class AT2ACCOP0017Sis {
 
     private boolean getvalues(TestDriver driver) {
         driver.getReport().addHeader("GIVE ELEMENTS IN MAIN TABLE", 3, false);
-        Functions.zoomOut(driver,8);
+        Functions.zoomOut(driver,6);
         String where = " GIVE VALUE FROM MAIN TABLE";
         if (!Functions.insertInput(driver, new String[]{"search_i_datefrom", getElements("search_i_datefrom")},
                 "clear",
@@ -859,8 +859,9 @@ public class AT2ACCOP0017Sis {
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "pay_currency", //Data name
+                300,1000,
                 " on PAYMENT CURRENCY"))return false;
-        Functions.break_time(driver,30,500);
+        //Functions.break_time(driver,30,500);
 
         if (!Functions.selectText(driver,
                 new String[]{"paymnent_ls_payment_method",getElements("paymnent_ls_payment_method")},
@@ -1011,10 +1012,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"screen_principal", getElements("screen_principal")}, //element to click
                 " on GO TO SCREEN AT2ACCOP0017"))return false;
         Functions.break_time(driver,30,500);
-        if (!Functions.simpleClick(driver,
+        if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_order_code", getElements("tb_b_query_i_order_code")},
+                "qbe_e_order_code",
+                "",
+                " ON SEARCH OPERATION"))return false;
+        /*if (!Functions.simpleClick(driver,
                 new String[]{"tb_clean_query", getElements("tb_clean_query")}, //element to click
                 " on GO TO SCREEN AT2ACCOP0017"))return false;
-        Functions.break_time(driver,120,1000);
+        Functions.break_time(driver,600,1000);
         /*BUSCAR POR SEARCH LOS DATOS DE GET TEXT*/
         if (!Functions.insertInput(driver, new String[]{"search_i_operation", getElements("search_i_operation")},
                 "qbe_e_operation",
@@ -1031,11 +1036,15 @@ public class AT2ACCOP0017Sis {
                 data.getData().get("qbe_e_order_report"),
                 " on SEARCH ORDER REPORT"))return false;
         if (!search_and_reset(driver,"search_i_orderreport"))return false;
-        if (!Functions.insertInput(driver, new String[]{"search_i_financialreport", getElements("search_i_financialreport")},
-                "qbe_e_financial_report",
-                data.getData().get("qbe_e_financial_report"),
-                " on SEARCH FINANCIAL REPORT"))return false;
-        if (!search_and_reset(driver,"search_i_financialreport"))return false;
+        if (!data.getData().get("qbe_e_financial_report").equals(" ")) {
+            if (!Functions.insertInput(driver, new String[]{"search_i_financialreport", getElements("search_i_financialreport")},
+                    "qbe_e_financial_report",
+                    data.getData().get("qbe_e_financial_report"),
+                    " on SEARCH FINANCIAL REPORT")) return false;
+            if (!search_and_reset(driver,"search_i_financialreport"))return false;
+        }else{
+            driver.getReport().addContent("The field FINANCIAL REPORT has not values in all records. Don't search by this field.");
+        }
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_i_receptive_b_lov", getElements("search_i_receptive_b_lov")}, //LoV button
                 new String[]{"search_i_receptive", getElements("search_i_receptive")}, //external LoV input
@@ -1159,6 +1168,7 @@ public class AT2ACCOP0017Sis {
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"search_e_record", getElements("search_e_record")}, //result element
+                60,1000,
                 " on SEARCH"))return false;
         if (!Functions.insertInput(driver,
                 new String[]{xpath, getElements(xpath)}, //element to click

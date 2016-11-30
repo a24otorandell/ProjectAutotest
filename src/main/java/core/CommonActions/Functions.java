@@ -293,6 +293,30 @@ public class Functions {
         }
         return true;
     }
+    /**
+     * This method does a check click and a simple click, intended to do click and search actions which are very common
+     *
+     * @param driver   TestDriver - This object gathers all the info refferent to the current test
+     * @param b_search String[] - [0] is the data name, [1] is the xpath
+     * @param e_result String[] - [0] is the data name, [1] is the xpath
+     * @param where    String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     */
+    public static boolean clickSearchAndResult(TestDriver driver, String[] b_search, String[] e_result,int segundos, int milisegundos, String where) {
+        //HOW TO CALL THIS METHOD
+        /*if(!Functions.clickSearchAndResult(driver,
+                new String[]{"x", getElements("x")}, //search button
+                new String[]{"y", getElements("y")}, //result element
+                " on SEARCH")){return false;}*/ // where
+        if (!checkClick(driver, b_search, e_result,segundos,milisegundos, where)) {
+            return false;
+        }
+        //break_time(driver, segundos, milisegundos);
+        if (!simpleClick(driver, e_result, where)) {
+            return false;
+        }
+        return true;
+    }
 
     /**
      * This method is used to insert strings into the desired input, also checks that is done correctly
@@ -511,6 +535,65 @@ public class Functions {
             return false;
         }
         if (!clickSearchAndResult(driver, b_search, e_result, where)) {
+            return false;
+        }
+        if (!checkClickByAbsence(driver, b_ok, recursiveXPaths.lov_e_result, where)) {
+            return false;
+        }
+        try {
+            attr = driver.getDriver().findElement(By.xpath(i_lov[1])).getAttribute("value");
+            if (!attr.equals("") && !attr.equals(null)) {
+                driver.getTest().getData().put(data_name, attr);
+            } else {
+                String ecode = "--ERROR: createLov - Unable to check that the correct value was inserted in " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ". Value is blank or null.";
+                ErrorManager.process(driver, ecode);
+                return false;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            String ecode = "--ERROR: createLov - Unable to get the selected " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ".";
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+
+        driver.getReport().addContent("", "br", "");
+        return true;
+
+    }
+    /**
+     * this method fills a LoV field by searching in the internal lov search for a value, and saves it into data for a further usage
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param b_lov     String[] - Xpath referent to the LoV button, [0] is the data name, [1] is the value
+     * @param i_lov     String[] - Xpath referent to the LoV input, [0] is the data name, [1] is the value
+     * @param b_search  String[] - Xpath referent to the LoV internal search button, [0] is the data name, [1] is the value
+     * @param e_result  String[] - Xpath referent to the LoV internal result, [0] is the data name, [1] is the value
+     * @param b_ok      String[] - Xpath referent to the LoV internal ok button, [0] is the data name, [1] is the value
+     * @param data_name String - The data name value to search in the lov
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
+     */
+    public static boolean createLov(TestDriver driver, String[] b_lov, String[] i_lov, String[] b_search, String[] e_result, String[] b_ok, String data_name, int segundos, int milisegundos, String where) {
+        // HOW TO CALL THIS METHOD
+        /* if(!Functions.createLov(driver,
+                new String[]{"x",getElements("y")}, // b_lov
+                new String[]{"", getElements("")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "", //Data name
+                120,500,
+                "")){return false;} */ // where the operation occurs
+        driver.getReport().addContent("LoV Creation: ", "h5", "");
+        String attr;
+        if (!simpleClick(driver, i_lov, where)) {
+            return false;
+        }
+        if (!checkClick(driver, b_lov, b_search, where)) {
+            return false;
+        }
+        if (!clickSearchAndResult(driver, b_search, e_result,segundos, milisegundos, where)) {
             return false;
         }
         if (!checkClickByAbsence(driver, b_ok, recursiveXPaths.lov_e_result, where)) {

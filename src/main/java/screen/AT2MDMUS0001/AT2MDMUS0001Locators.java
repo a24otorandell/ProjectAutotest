@@ -63,12 +63,14 @@ public class AT2MDMUS0001Locators {
         elements.put("associated_b_edit", "//*[contains(@id, 'pcgt38:boton_edit')]");
         elements.put("associated_b_actions", "//*[contains(@id, 'PCGenericMenu1:dc_m1')]");
         elements.put("associated_b_actions_b_audit_data", "//*[contains(@id, 'PCGenericMenu1:dc_cmi0')]/td[2]");
-        elements.put("associated_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]");
+        elements.put("associated_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]/a");
         elements.put("associated_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
         elements.put("associated_e_result", "//*[contains(@id, 'pc2:child30::db')]/table/tbody/tr[1]/td[1]");
         elements.put("associated_e_records", "//*[contains(@id, 'pc2:ot63')]");
         //SEARCH
         elements.put("search_i_find", "//*[contains(@id, 'r1:1:cb1')]");
+        elements.put("copy_printer", "//*[contains(@id, 'r1:1:cb2')]");
+        elements.put("asign_printer", "//*[contains(@id, 'r1:1:cb2')]");
         elements.put("search_i_spooler", "//*[contains(@id, 'giprSpoolerId::content')]");
         elements.put("search_lov_spooler", "//*[contains(@id, 'giprSpoolerId::lovIconId')]");
         elements.put("search_i_user2", "//*[contains(@id, 'gusuCodUsuId::content')]");
