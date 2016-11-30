@@ -65,6 +65,7 @@ public class AT2MDMSP0018Sis {
                 "short_name", getData("short_name"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_SAP_code", getElements("add_lov_SAP_code")}, // b_lov
                 new String[]{"add_i_SAP_code", getElements("add_i_SAP_code")}, // i_lov
@@ -75,7 +76,7 @@ public class AT2MDMSP0018Sis {
                 where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 90, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"MDM_b_edit_insert", getElements("MDM_b_edit_insert")}, //element to click
                 where)){
@@ -97,6 +98,7 @@ public class AT2MDMSP0018Sis {
                 "short_name", getData("short_name"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_SAP_code", getElements("search_lov_SAP_code")}, //LoV button
                 new String[]{"search_i_SAP_code", getElements("search_i_SAP_code")}, //external LoV input
@@ -118,13 +120,14 @@ public class AT2MDMSP0018Sis {
     private boolean interaction_edit_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.break_time(driver, 90, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_b_edit", getElements("MDM_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
                 where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 90, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"MDM_b_edit_insert", getElements("MDM_b_edit_insert")}, //element to click
                 where)) {
