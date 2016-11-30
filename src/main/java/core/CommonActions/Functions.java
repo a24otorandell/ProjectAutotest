@@ -790,6 +790,40 @@ public class Functions {
         }
         return true;
     }
+    /**
+     * This method presses the enter button to do a query search, and then tries to click a result
+     *
+     * @param driver    TestDriver - This object gathers all the info refferent to the current test
+     * @param qbe_input String[] - Xpath referent to the query input, [0] is the data name, [1] is the value
+     * @param e_result  String[] - Xpath referent to the result, [0] is the data name, [1] is the value
+     * @param where     String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     * @see ErrorManager#process(TestDriver, String)
+     */
+    public static boolean enterQueryAndClickResult(TestDriver driver, String[] qbe_input, String[] e_result,  int seconds, long miliseconds, String where) {
+        //HOW TO CALL THIS METHOD
+        /*if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"x", getElements("x")}, //any query input
+                new String[]{"y", getElements("y")}, //table result
+                "where")){return false;} // where this operation occurs
+                */
+        if (!simpleClick(driver, qbe_input, where)) {
+            return false;
+        }
+        try {
+            driver.getDriver().findElement(By.xpath(qbe_input[1])).sendKeys(Keys.RETURN);
+        } catch (Exception e) {
+            String ecode = "--ERROR: enterQueryAndClickResult - Unable to enter the data in the query.";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        break_time(driver, seconds, miliseconds);
+        if (!simpleClick(driver, e_result, where)) {
+            return false;
+        }
+        return true;
+    }
 
     /**
      * This method chooses the wanted option form dropdown menus

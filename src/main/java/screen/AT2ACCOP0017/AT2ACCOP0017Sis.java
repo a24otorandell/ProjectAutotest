@@ -87,6 +87,7 @@ public class AT2ACCOP0017Sis {
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"tb_b_query_i_order_code", getElements("tb_b_query_i_order_code")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
+                120,1000,
                 where))return false;
         String[] columns = {"qbe_e_error","qbe_e_operation","qbe_e_order_code","qbe_e_transaction","qbe_e_receptivo","qbe_e_booking","qbe_e_operation_type",
                 "qbe_e_type","qbe_e_order_report","qbe_e_financial_report","qbe_e_message","qbe_e_date","qbe_e_error_code","qbe_e_tech_error_desc",

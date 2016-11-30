@@ -10,15 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Data.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Locators.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Manager.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" afterPath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" afterPath="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -89,22 +84,21 @@
       <file leaf-file-name="AT2ACCOP0017Sis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.95098037">
-              <caret line="1018" column="34" selection-start-line="1018" selection-start-column="34" selection-end-line="1018" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.7713718">
+              <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
               <folding>
                 <element signature="docComment;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#start#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#setScreenInfo#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2ACCOP0017Sis#0" expanded="false" />
-                <element signature="method#getvalues#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#getvaluesNull#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#qbe#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#validationError#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#qbeValidationError#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#processError#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#processErrorTabCE_Payment#0;class#AT2ACCOP0017Sis#0" expanded="false" />
-                <element signature="e#45959#45994#0" expanded="false" />
+                <element signature="e#45985#46020#0" expanded="false" />
                 <element signature="method#processErrorTabCE_itp#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#extraActions#0;class#AT2ACCOP0017Sis#0" expanded="false" />
                 <element signature="method#search_and_reset#0;class#AT2ACCOP0017Sis#0" expanded="false" />
@@ -148,9 +142,10 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="819" column="0" selection-start-line="819" selection-start-column="0" selection-end-line="819" selection-end-column="0" />
+              <caret line="820" column="47" selection-start-line="820" selection-start-column="47" selection-end-line="820" selection-end-column="47" />
               <folding>
                 <element signature="docComment;class#Functions#0" expanded="false" />
+                <element signature="e#813#837#0" expanded="true" />
                 <element signature="docComment;method#simpleClick#0;class#Functions#0" expanded="false" />
                 <element signature="method#simpleClick#0;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#checkClick#0;class#Functions#0" expanded="false" />
@@ -187,7 +182,7 @@
                 <element signature="docComment;method#createLovByValue#1;class#Functions#0" expanded="false" />
                 <element signature="method#createLovByValue#1;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#enterQueryAndClickResult#0;class#Functions#0" expanded="false" />
-                <element signature="method#enterQueryAndClickResult#0;class#Functions#0" expanded="false" />
+                <element signature="docComment;method#enterQueryAndClickResult#1;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#selectText#0;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#selectTextRandom#0;class#Functions#0" expanded="false" />
                 <element signature="method#selectTextRandom#0;class#Functions#0" expanded="false" />
@@ -219,8 +214,8 @@
                 <element signature="method#sleep#0;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#displayed#0;class#Functions#0" expanded="false" />
                 <element signature="method#displayed#0;class#Functions#0" expanded="false" />
-                <element signature="e#69354#69417#0" expanded="false" />
-                <element signature="e#69585#69654#0" expanded="false" />
+                <element signature="e#71071#71134#0" expanded="false" />
+                <element signature="e#71302#71371#0" expanded="false" />
                 <element signature="docComment;method#checkboxValue#0;class#Functions#0" expanded="false" />
                 <element signature="method#checkboxValue#0;class#Functions#0" expanded="false" />
                 <element signature="docComment;method#checkboxValue#1;class#Functions#0" expanded="false" />
@@ -325,9 +320,9 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/TestDriver/TestDriver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java" />
       </list>
     </option>
@@ -1279,12 +1274,6 @@
       <option name="number" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00084" summary="    quitar espacios innecesarios de la ACCSU0025&#10;">
-      <created>1476718190688</created>
-      <option name="number" value="00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1476718190689</updated>
-    </task>
     <task id="LOCAL-00085" summary="    quitar espacios innecesarios de la ACCSU0057&#10;">
       <created>1476718974521</created>
       <option name="number" value="00085" />
@@ -1573,7 +1562,13 @@
       <option name="project" value="LOCAL" />
       <updated>1480329160610</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="subida pantalla nueva AT2ACCOP0017&#10;">
+      <created>1480495310724</created>
+      <option name="number" value="00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1480495310726</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1587,7 +1582,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1595,8 +1590,8 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38247013" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2563081" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38247013" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2563081" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29083094" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
@@ -1652,7 +1647,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="    quitar espacios innecesarios de la actsu0037Test&#10;" />
     <MESSAGE value="quitado de mdmcl0013 del array de valores en la lista, el valor Hotel - contract, no sabemos como buscar por este valor en el motor de busqueda&#10;" />
     <MESSAGE value="    quitar espacios innecesarios de la actsu0037Sis&#10;" />
     <MESSAGE value="completado nombre de la pantalla mdmcl0024&#10;" />
@@ -1677,7 +1671,8 @@
     <MESSAGE value="ACTUALIOZACION AT2BOOSA1005&#10;&#10;" />
     <MESSAGE value="ACTUALIOZACION AT2ACCSU1003&#10;&#10;" />
     <MESSAGE value="correcciones at2boosu1004Test y At2mdmde0002Test&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="correcciones at2boosu1004Test y At2mdmde0002Test&#10;" />
+    <MESSAGE value="subida pantalla nueva AT2ACCOP0017&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="subida pantalla nueva AT2ACCOP0017&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1978,19 +1973,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java</url>
-          <line>1005</line>
+          <line>1006</line>
           <properties />
           <option name="timeStamp" value="958" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java</url>
-          <line>1006</line>
+          <line>1007</line>
           <properties />
           <option name="timeStamp" value="959" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java</url>
-          <line>1008</line>
+          <line>1009</line>
           <properties />
           <option name="timeStamp" value="960" />
         </line-breakpoint>
@@ -2536,111 +2531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.034483">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#AT2ACCOP0017Manager#0" expanded="false" />
-            <element signature="method#getData#0;class#AT2ACCOP0017Manager#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCOP0017Manager#0" expanded="false" />
-            <element signature="method#csedIteration#0;class#AT2ACCOP0017Manager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="819" column="0" selection-start-line="819" selection-start-column="0" selection-end-line="819" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#simpleClick#0;class#Functions#0" expanded="false" />
-            <element signature="method#simpleClick#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#checkClick#0;class#Functions#0" expanded="false" />
-            <element signature="method#checkClick#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#checkClick#1;class#Functions#0" expanded="false" />
-            <element signature="method#checkClick#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#checkClickByAbsence#0;class#Functions#0" expanded="false" />
-            <element signature="method#checkClickByAbsence#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#checkClickByAbsence#1;class#Functions#0" expanded="false" />
-            <element signature="method#checkClickByAbsence#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#clickQbE#0;class#Functions#0" expanded="false" />
-            <element signature="method#clickQbE#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#clickSearchAndResult#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#insertInput#0;class#Functions#0" expanded="false" />
-            <element signature="method#insertInput#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#screenshot#0;class#Functions#0" expanded="false" />
-            <element signature="method#screenshot#0;class#Functions#0" expanded="false" />
-            <element signature="e#18564#18589#0" expanded="false" />
-            <element signature="method#screenshot#1;class#Functions#0" expanded="false" />
-            <element signature="e#20205#20230#0" expanded="false" />
-            <element signature="docComment;method#auditData#0;class#Functions#0" expanded="false" />
-            <element signature="method#auditData#0;class#Functions#0" expanded="false" />
-            <element signature="method#auditData#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#createLov#0;class#Functions#0" expanded="false" />
-            <element signature="method#createLov#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#getValue#0;class#Functions#0" expanded="false" />
-            <element signature="method#getValue#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#getAttr#0;class#Functions#0" expanded="false" />
-            <element signature="method#getAttr#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#getText#0;class#Functions#0" expanded="false" />
-            <element signature="method#getText#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#createLovByValue#0;class#Functions#0" expanded="false" />
-            <element signature="method#createLovByValue#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#createLovByValue#1;class#Functions#0" expanded="false" />
-            <element signature="method#createLovByValue#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#enterQueryAndClickResult#0;class#Functions#0" expanded="false" />
-            <element signature="method#enterQueryAndClickResult#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#selectText#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#selectTextRandom#0;class#Functions#0" expanded="false" />
-            <element signature="method#selectTextRandom#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#detachTable#0;class#Functions#0" expanded="false" />
-            <element signature="method#detachTable#0;class#Functions#0" expanded="false" />
-            <element signature="method#detachTable#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#doDelete#0;class#Functions#0" expanded="false" />
-            <element signature="method#doDelete#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#doDelete#1;class#Functions#0" expanded="false" />
-            <element signature="method#doDelete#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#doDeleteNCheck#0;class#Functions#0" expanded="false" />
-            <element signature="method#doDeleteNCheck#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#doDeleteNCheck#1;class#Functions#0" expanded="false" />
-            <element signature="method#doDeleteNCheck#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#zoomOut#0;class#Functions#0" expanded="false" />
-            <element signature="method#zoomOut#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#zoomOut#1;class#Functions#0" expanded="false" />
-            <element signature="method#zoomOut#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#zoomIn#0;class#Functions#0" expanded="false" />
-            <element signature="method#zoomIn#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#checkExistence#0;class#Functions#0" expanded="false" />
-            <element signature="method#checkExistence#0;class#Functions#0" expanded="false" />
-            <element signature="method#checkExistence#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#findElement#0;class#Functions#0" expanded="false" />
-            <element signature="method#findElement#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#fileUploader#0;class#Functions#0" expanded="false" />
-            <element signature="method#fileUploader#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#sleep#0;class#Functions#0" expanded="false" />
-            <element signature="method#sleep#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#displayed#0;class#Functions#0" expanded="false" />
-            <element signature="method#displayed#0;class#Functions#0" expanded="false" />
-            <element signature="e#69354#69417#0" expanded="false" />
-            <element signature="e#69585#69654#0" expanded="false" />
-            <element signature="docComment;method#checkboxValue#0;class#Functions#0" expanded="false" />
-            <element signature="method#checkboxValue#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#checkboxValue#1;class#Functions#0" expanded="false" />
-            <element signature="method#checkboxValue#1;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#break_time#0;class#Functions#0" expanded="false" />
-            <element signature="method#break_time#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#collectTableData#0;class#Functions#0" expanded="false" />
-            <element signature="method#collectTableData#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#lovMultiSelection#0;class#Functions#0" expanded="false" />
-            <element signature="method#lovMultiSelection#0;class#Functions#0" expanded="false" />
-            <element signature="docComment;method#lovMultiSelectionByValue#0;class#Functions#0" expanded="false" />
-            <element signature="method#lovMultiSelectionByValue#0;class#Functions#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1034484">
@@ -2680,24 +2570,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.034483">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#AT2ACCOP0017Manager#0" expanded="false" />
+            <element signature="method#getData#0;class#AT2ACCOP0017Manager#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCOP0017Manager#0" expanded="false" />
+            <element signature="method#csedIteration#0;class#AT2ACCOP0017Manager#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="820" column="47" selection-start-line="820" selection-start-column="47" selection-end-line="820" selection-end-column="47" />
+          <folding>
+            <element signature="docComment;class#Functions#0" expanded="false" />
+            <element signature="e#813#837#0" expanded="true" />
+            <element signature="docComment;method#simpleClick#0;class#Functions#0" expanded="false" />
+            <element signature="method#simpleClick#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#checkClick#0;class#Functions#0" expanded="false" />
+            <element signature="method#checkClick#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#checkClick#1;class#Functions#0" expanded="false" />
+            <element signature="method#checkClick#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#checkClickByAbsence#0;class#Functions#0" expanded="false" />
+            <element signature="method#checkClickByAbsence#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#checkClickByAbsence#1;class#Functions#0" expanded="false" />
+            <element signature="method#checkClickByAbsence#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#clickQbE#0;class#Functions#0" expanded="false" />
+            <element signature="method#clickQbE#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#clickSearchAndResult#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#insertInput#0;class#Functions#0" expanded="false" />
+            <element signature="method#insertInput#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#screenshot#0;class#Functions#0" expanded="false" />
+            <element signature="method#screenshot#0;class#Functions#0" expanded="false" />
+            <element signature="e#18564#18589#0" expanded="false" />
+            <element signature="method#screenshot#1;class#Functions#0" expanded="false" />
+            <element signature="e#20205#20230#0" expanded="false" />
+            <element signature="docComment;method#auditData#0;class#Functions#0" expanded="false" />
+            <element signature="method#auditData#0;class#Functions#0" expanded="false" />
+            <element signature="method#auditData#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#createLov#0;class#Functions#0" expanded="false" />
+            <element signature="method#createLov#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#getValue#0;class#Functions#0" expanded="false" />
+            <element signature="method#getValue#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#getAttr#0;class#Functions#0" expanded="false" />
+            <element signature="method#getAttr#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#getText#0;class#Functions#0" expanded="false" />
+            <element signature="method#getText#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#createLovByValue#0;class#Functions#0" expanded="false" />
+            <element signature="method#createLovByValue#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#createLovByValue#1;class#Functions#0" expanded="false" />
+            <element signature="method#createLovByValue#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#enterQueryAndClickResult#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#enterQueryAndClickResult#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#selectText#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#selectTextRandom#0;class#Functions#0" expanded="false" />
+            <element signature="method#selectTextRandom#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#detachTable#0;class#Functions#0" expanded="false" />
+            <element signature="method#detachTable#0;class#Functions#0" expanded="false" />
+            <element signature="method#detachTable#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#doDelete#0;class#Functions#0" expanded="false" />
+            <element signature="method#doDelete#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#doDelete#1;class#Functions#0" expanded="false" />
+            <element signature="method#doDelete#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#doDeleteNCheck#0;class#Functions#0" expanded="false" />
+            <element signature="method#doDeleteNCheck#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#doDeleteNCheck#1;class#Functions#0" expanded="false" />
+            <element signature="method#doDeleteNCheck#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#zoomOut#0;class#Functions#0" expanded="false" />
+            <element signature="method#zoomOut#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#zoomOut#1;class#Functions#0" expanded="false" />
+            <element signature="method#zoomOut#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#zoomIn#0;class#Functions#0" expanded="false" />
+            <element signature="method#zoomIn#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#checkExistence#0;class#Functions#0" expanded="false" />
+            <element signature="method#checkExistence#0;class#Functions#0" expanded="false" />
+            <element signature="method#checkExistence#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#findElement#0;class#Functions#0" expanded="false" />
+            <element signature="method#findElement#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#fileUploader#0;class#Functions#0" expanded="false" />
+            <element signature="method#fileUploader#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#sleep#0;class#Functions#0" expanded="false" />
+            <element signature="method#sleep#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#displayed#0;class#Functions#0" expanded="false" />
+            <element signature="method#displayed#0;class#Functions#0" expanded="false" />
+            <element signature="e#71071#71134#0" expanded="false" />
+            <element signature="e#71302#71371#0" expanded="false" />
+            <element signature="docComment;method#checkboxValue#0;class#Functions#0" expanded="false" />
+            <element signature="method#checkboxValue#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#checkboxValue#1;class#Functions#0" expanded="false" />
+            <element signature="method#checkboxValue#1;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#break_time#0;class#Functions#0" expanded="false" />
+            <element signature="method#break_time#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#collectTableData#0;class#Functions#0" expanded="false" />
+            <element signature="method#collectTableData#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#lovMultiSelection#0;class#Functions#0" expanded="false" />
+            <element signature="method#lovMultiSelection#0;class#Functions#0" expanded="false" />
+            <element signature="docComment;method#lovMultiSelectionByValue#0;class#Functions#0" expanded="false" />
+            <element signature="method#lovMultiSelectionByValue#0;class#Functions#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCOP0017/AT2ACCOP0017Sis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.95098037">
-          <caret line="1018" column="34" selection-start-line="1018" selection-start-column="34" selection-end-line="1018" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.7713718">
+          <caret line="92" column="48" selection-start-line="92" selection-start-column="48" selection-end-line="92" selection-end-column="48" />
           <folding>
             <element signature="docComment;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#start#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#setScreenInfo#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#testCSED#0;class#AT2ACCOP0017Sis#0" expanded="false" />
-            <element signature="method#getvalues#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#getvaluesNull#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#qbe#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#validationError#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#qbeValidationError#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#processError#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#processErrorTabCE_Payment#0;class#AT2ACCOP0017Sis#0" expanded="false" />
-            <element signature="e#45959#45994#0" expanded="false" />
+            <element signature="e#45985#46020#0" expanded="false" />
             <element signature="method#processErrorTabCE_itp#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#extraActions#0;class#AT2ACCOP0017Sis#0" expanded="false" />
             <element signature="method#search_and_reset#0;class#AT2ACCOP0017Sis#0" expanded="false" />
