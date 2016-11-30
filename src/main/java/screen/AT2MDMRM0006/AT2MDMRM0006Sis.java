@@ -48,6 +48,7 @@ public class AT2MDMRM0006Sis {
         if (!channel_qbe_MDM(driver)) return false;
         if (!channel_other_actions_MDM(driver)) return false;
         if (!channel_description_interaction_record_MDM(driver)) return false;
+        if (!channel_description_qbe_MDM(driver)) return false;
         if (!channel_description_interaction_edit_MDM(driver)) return false;
         if (!channel_description_qbe_MDM(driver)) return false;
         if (!channel_description_other_actions_MDM(driver)) return false;
