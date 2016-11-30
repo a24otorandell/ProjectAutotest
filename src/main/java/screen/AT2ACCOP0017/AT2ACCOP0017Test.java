@@ -59,7 +59,7 @@ public class AT2ACCOP0017Test {
 
     private boolean getvalues(TestDriver driver) {
         driver.getReport().addHeader("GIVE ELEMENTS IN MAIN TABLE", 3, false);
-        Functions.zoomOut(driver,8);
+        Functions.zoomOut(driver,6);
         String where = " GIVE VALUE FROM MAIN TABLE";
         if (!Functions.insertInput(driver, new String[]{"search_i_datefrom", getElements("search_i_datefrom")},
                 "clear",
