@@ -91,6 +91,14 @@ public class AT2MDMUS0006Sis {
                 "user", getData("user"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_module",getElements("search_i_module")},
                 "module", getData("module"), where)){return false;}
+        if (getData("ok").equalsIgnoreCase("checked")) {
+            if (!Functions.checkboxValue(driver,
+                    getElements("search_ck_ok"),"ok",true,true,where)){return false;}
+        }
+        else {
+            if (!Functions.checkboxValue(driver,
+                    getElements("search_ck_ok"),"ok",false,true,where)){return false;}
+        }
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"users_e_result", getElements("users_e_result")}, //result element
@@ -108,8 +116,14 @@ public class AT2MDMUS0006Sis {
                 where)) {
             return false;
         }
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_ok"),"ok",true,true,where)){return false;}
+        if (getData("ok").equalsIgnoreCase("checked")) {
+            if (!Functions.checkboxValue(driver,
+                    getElements("add_ck_ok"),"ok",true,true,where)){return false;}
+        }
+        else {
+            if (!Functions.checkboxValue(driver,
+                    getElements("add_ck_ok"),"ok",false,true,where)){return false;}
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

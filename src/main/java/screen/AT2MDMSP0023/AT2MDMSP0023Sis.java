@@ -137,7 +137,7 @@ public class AT2MDMSP0023Sis {
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_send"),"send",false,true, where)){return false;}
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_allotment"),"allotment",false,true, where)){return false;}
+                getElements("add_ck_allotment"),"allotment",true,true, where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_finished"),"finished",false,true, where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
@@ -169,18 +169,23 @@ public class AT2MDMSP0023Sis {
                 "desc", getData("desc"), where)) {
             return false;
         }
+        Functions.break_time(driver, 2, 300);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_web",getElements("qbe_sl_web")},
                 getData("web"), "web", where)){return false;}
+        Functions.break_time(driver, 2, 300);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_send",getElements("qbe_sl_send")},
                 getData("send"), "send", where)){return false;}
+        Functions.break_time(driver, 2, 300);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_allotment",getElements("qbe_sl_allotment")},
                 getData("allotment"), "allotment", where)){return false;}
+        Functions.break_time(driver, 2, 300);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_finished",getElements("qbe_sl_finished")},
                 getData("finished"), "finished", where)){return false;}
+        Functions.break_time(driver, 2, 300);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_suppliers", getElements("qbe_i_suppliers")}, //any query input
                 new String[]{"suppliers_e_result", getElements("suppliers_e_result")}, //table result
