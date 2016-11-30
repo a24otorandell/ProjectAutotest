@@ -45,6 +45,7 @@ public class AT2MDMSY0023Test {
     protected boolean testCSED(TestDriver driver) {
         if (!search_MDM(driver)) return false;
         if (!interaction_record_MDM(driver)) return false;
+        if (!qbe_MDM(driver)) return false;
         if (!interaction_edit_MDM(driver)) return false;
         if (!qbe_MDM(driver)) return false;
         if (!others_actions_MDM(driver)) return false;
@@ -164,12 +165,6 @@ public class AT2MDMSY0023Test {
     private boolean qbe_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        if (!Functions.simpleClick(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
-        Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_b_qbe", getElements("MDM_b_qbe")},// query button
                 new String[]{"qbe_i_application", getElements("qbe_i_application")},//any query input
@@ -202,6 +197,11 @@ public class AT2MDMSY0023Test {
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_parameter_value", getElements("qbe_i_parameter_value")}, // element path
                 "parameter_value", getData("parameter_value"), where)) {
+            return false;
+        }
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //element to click
+                where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
