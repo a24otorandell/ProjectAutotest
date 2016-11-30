@@ -44,6 +44,7 @@ public class AT2MDMSY1004Test {
 
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_add(driver)) return false;
+        if (!getData_1(driver)) return false;
         if (!search(driver)) return false;
         if (!interaction_edit(driver)) return false;
         if (!qbe(driver)) return false;
@@ -79,7 +80,7 @@ public class AT2MDMSY1004Test {
         if (!Functions.insertInput(driver, new String[]{"add_i_from_date",getElements("add_i_from_date")},
                 "from", DataGenerator.getToday(), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_to_date",getElements("add_i_to_date")},
-                "to",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8,3), 0), where)){return false;}
+                "to",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1,15), 0), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_payment",getElements("add_lov_payment")}, // b_lov
                 new String[]{"add_i_payment", getElements("add_i_payment")}, // i_lov
@@ -114,9 +115,16 @@ public class AT2MDMSY1004Test {
                 where)) return false; //where
         return true;
     }
+    public boolean getData_1 (TestDriver driver) {
+        String[] columns = {"config"};
+        if (!Functions.collectTableData(driver,columns,"//*[contains(@id, 'pc1:ReTVcCo::db')]",1,"get Data"))return false;
+        return true;
+    }
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
+        if (!Functions.insertInput(driver, new String[]{"search_i_config",getElements("search_i_config")},
+                "config", getData("config"), where)){return false;}
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_company", getElements("search_lov_company")}, //LoV button
                 new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
@@ -151,7 +159,7 @@ public class AT2MDMSY1004Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_to_date",getElements("add_i_to_date")},
-                "to",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8,3), 0), where)){return false;}
+                "to",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1,15), 0), where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -173,6 +181,8 @@ public class AT2MDMSY1004Test {
                 where)) {
             return false;
         } // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_config",getElements("qbe_i_config")},
+                "config", getData("config"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_company",getElements("qbe_i_company")},
                 "company", getData("company"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_currency",getElements("qbe_i_currency")},

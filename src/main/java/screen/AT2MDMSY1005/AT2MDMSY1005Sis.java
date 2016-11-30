@@ -52,6 +52,7 @@ public class AT2MDMSY1005Sis {
         if (!search_t2(driver)) return false;
         if (!qbe_t2(driver)) return false;
         if (!others_actions_t2(driver)) return false;
+        if (!others_actions_t3(driver)) return false;
         return true;
     }
 
@@ -97,11 +98,22 @@ public class AT2MDMSY1005Sis {
                 "from", getData("from"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_to_date",getElements("search_i_to_date")},
                 "to", getData("to"),where)){return false;}
+        if (!getData("operator").equalsIgnoreCase(" ")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"search_sl_operator", getElements("search_sl_operator")},
+                    getData("operator"), "operator", where)) {
+                return false;
+            }
+        }
         if (!Functions.insertInput(driver, new String[]{"search_i_reference",getElements("search_i_reference")},
                 "ref", getData("ref"),where)){return false;}
-        if (!Functions.selectText(driver,
-                new String[]{"search_sl_origin",getElements("search_sl_origin")},
-                getData("origin"), "origin", where)){return false;}
+        if (!getData("origin").equalsIgnoreCase(" ")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"search_sl_origin", getElements("search_sl_origin")},
+                    getData("origin"), "origin", where)) {
+                return false;
+            }
+        }
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_company", getElements("search_lov_company")}, //LoV button
                 new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
@@ -120,15 +132,37 @@ public class AT2MDMSY1005Sis {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_ref_tmp",getElements("search_i_ref_tmp")},
                 "reference", getData("reference"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_file",getElements("search_i_file")},
+                "file", getData("file"),where)){return false;}
+        if (getData("sap").equalsIgnoreCase("S")) {
+            if (!Functions.checkboxValue(driver,
+                    getElements("search_ck_sap"), "sap", true, true, where)) {
+                return false;
+            }
+        }
+        else {
+            if (!Functions.checkboxValue(driver,
+                    getElements("search_ck_sap"), "sap", false, true, where)) {
+                return false;
+            }
+        }
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_type",getElements("search_sl_type")},
                 getData("desc_type"), "type2", where)){return false;}
-        if (!Functions.selectText(driver,
-                new String[]{"search_sl_staus",getElements("search_sl_staus")},
-                getData("status"), "status", where)){return false;}
-        if (!Functions.selectText(driver,
-                new String[]{"search_sl_client",getElements("search_sl_client")},
-                getData("client"), "client", where)){return false;}
+        if (!getData("status").equalsIgnoreCase(" ")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"search_sl_staus", getElements("search_sl_staus")},
+                    getData("status"), "status", where)) {
+                return false;
+            }
+        }
+        if (!getData("client").equalsIgnoreCase(" ")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"search_sl_client", getElements("search_sl_client")},
+                    getData("client"), "client", where)) {
+                return false;
+            }
+        }
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_currency", getElements("search_lov_currency")}, //LoV button
                 new String[]{"search_i_currency", getElements("search_i_currency")}, //external LoV input
@@ -137,6 +171,18 @@ public class AT2MDMSY1005Sis {
                 getData("currency"), // value to search
                 "currency", //name of the data
                 where)){return false;}
+        if (!getData("t_currency").equalsIgnoreCase(" ")) {
+            if (!Functions.createLovByValue(driver,
+                    new String[]{"search_lov_trans", getElements("search_lov_trans")}, //LoV button
+                    new String[]{"search_i_trans", getElements("search_i_trans")}, //external LoV input
+                    new String[]{"search_lov_trans_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                    recursiveXPaths.lov_e_result, // lov internal result
+                    getData("t_currency"), // value to search
+                    "t_currency", //name of the data
+                    where)) {
+                return false;
+            }
+        }
         if (!Functions.insertInput(driver, new String[]{"search_i_id",getElements("search_i_id")},
                 "id", getData("id"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_code",getElements("search_i_code")},
@@ -174,9 +220,13 @@ public class AT2MDMSY1005Sis {
                 "trans", getData("trans"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_reference",getElements("qbe_i_reference")},
                 "ref", getData("ref"),where)){return false;}
-        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
-                getData("type"), "type", where)){return false;}
+        if (!getData("type").equalsIgnoreCase(" ")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_type", getElements("qbe_sl_type")},
+                    getData("type"), "type", where)) {
+                return false;
+            }
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_type_desc",getElements("qbe_i_type_desc")},
                 "desc_type", getData("desc_type"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_company",getElements("qbe_i_company")},
@@ -210,9 +260,13 @@ public class AT2MDMSY1005Sis {
         if (!Functions.insertInput(driver, new String[]{"qbe_i_id",getElements("qbe_i_id")},
                 "id", getData("id"),where)){return false;}
         Functions.break_time(driver, 3, 400);
-        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_status",getElements("qbe_sl_status")},
-                getData("status"), "status", where)){return false;}
+        if (!getData("status").equalsIgnoreCase(" ")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_status", getElements("qbe_sl_status")},
+                    getData("status"), "status", where)) {
+                return false;
+            }
+        }
         Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_code",getElements("qbe_i_code")},
                 "code", getData("code"),where)){return false;}
@@ -225,8 +279,35 @@ public class AT2MDMSY1005Sis {
                 "file", getData("file"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_load",getElements("qbe_i_load")},
                 "load", getData("load"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_t_amount",getElements("qbe_i_t_amount")},
+                "t_amount", getData("t_amount"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_t_currency",getElements("qbe_i_t_currency")},
+                "t_currency", getData("t_currency"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_b_amount",getElements("qbe_i_b_amount")},
+                "b_amount", getData("b_amount"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_b_currency",getElements("qbe_i_b_currency")},
+                "b_currency", getData("b_currency"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_date",getElements("qbe_i_date")},
                 "from", getData("from"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_merchant",getElements("qbe_i_merchant")},
+                "merchant", getData("merchant"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_balance",getElements("qbe_i_balance")},
+                "b_card", getData("b_card"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_b_date",getElements("qbe_i_b_date")},
+                "b_date", getData("b_date"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_ref1",getElements("qbe_i_ref1")},
+                "ref1", getData("ref1"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_ref2",getElements("qbe_i_ref2")},
+                "ref2", getData("ref2"),where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_ref3",getElements("qbe_i_ref3")},
+                "ref3", getData("ref3"), where)){return false;}
+        if (getData("sap").equalsIgnoreCase("S")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_status", getElements("qbe_sl_status")},
+                    "Yes", "sap", where)) {
+                return false;
+            }
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_error",getElements("qbe_i_error")},
                 "error", getData("error"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_desc_error",getElements("qbe_i_desc_error")},
@@ -235,6 +316,10 @@ public class AT2MDMSY1005Sis {
                 "c_user", getData("c_user"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_c_date",getElements("qbe_i_c_date")},
                 "c_date", getData("c_date"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_m_user",getElements("qbe_i_m_user")},
+                "m_user", getData("m_user"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_m_date",getElements("qbe_i_m_date")},
+                "m_date", getData("m_date"), where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_desc_error", getElements("qbe_i_desc_error")}, //any query input
                 new String[]{"transaction_e_result_1", getElements("transaction_e_result_1")}, //table result
@@ -377,6 +462,21 @@ public class AT2MDMSY1005Sis {
         where = " on OTHER DETACH 2";
         if (!Functions.detachTable(driver,
                 new String[]{"load_b_detach", getElements("load_b_detach")}, //detach button
+                true,     //screenshot??
+                where)) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * TAB LOAD - TABLE ISSUES LOAD
+     */
+    private boolean others_actions_t3(TestDriver driver) {
+        driver.getReport().addHeader("OTHER DETACH", 3, false);
+        String where = " on OTHER DETACH 3";
+        if (!Functions.detachTable(driver,
+                new String[]{"issues_b_detach", getElements("issues_b_detach")}, //detach button
                 true,     //screenshot??
                 where)) {
             return false;

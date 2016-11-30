@@ -28,6 +28,7 @@ public class AT2MDMUS0015Locators {
         elements.put("users_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("users_e_result", "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[1]/td[1]");
         elements.put("users_e_records", "//*[contains(@id, 'pc1:outputText7')]");
+        elements.put("users_b_reset", "//*[contains(@id, 'resId1::ch::t']/tbody/tr[2]/th/a");
         //SEARCB
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
@@ -52,5 +53,11 @@ public class AT2MDMUS0015Locators {
         elements.put("qbe_i_user_name", "//*[contains(@id, 'pc1_afr_resId1_afr_c2::content')]");
         elements.put("qbe_i_interface", "//*[contains(@id, 'pc1_afr_resId1_afr_resId1c4::content')]");
         elements.put("qbe_i_interface_des", "//*[contains(@id, 'pc1_afr_resId1_afr_c1::content')]");
+        //COPY USER
+        elements.put("search_i_from_user", "//*[contains(@id, 'usUiniId::content')]");
+        elements.put("search_lov_from_user", "//*[contains(@id, 'usUiniId::lovIconId')]");
+        elements.put("search_i_to_user", "//*[contains(@id, 'usufinId::content')]");
+        elements.put("search_lov_to_user", "//*[contains(@id, 'usufinId::lovIconId')]");
+        elements.put("search_b_copy", "//*[contains(@id, 's2:cb1')]");
     }
 }

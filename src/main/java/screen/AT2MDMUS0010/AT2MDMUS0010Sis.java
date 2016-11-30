@@ -54,6 +54,7 @@ public class AT2MDMUS0010Sis {
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
+        Functions.break_time(driver, 3, 400);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
@@ -62,6 +63,7 @@ public class AT2MDMUS0010Sis {
                 "ABRAVO", // value to search
                 "user", //name of the data
                 where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"passwords_e_result", getElements("passwords_e_result")}, //result element
@@ -73,6 +75,7 @@ public class AT2MDMUS0010Sis {
     public boolean getDatos (TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on GET DATOS";
+        Functions.break_time(driver, 3, 400);
         if(!Functions.getText(driver,new String[]{"table_e_user", getElements("table_e_user")}, // element path
                 "user", // key for data value (the name)
                 where)){return false;}
@@ -90,6 +93,7 @@ public class AT2MDMUS0010Sis {
     public boolean cambiarPass (TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on CAMBIAR PASS";
+        Functions.break_time(driver, 3, 400);
         if(!Functions.checkClick(driver,
                 new String[]{"passwords_b_actions", getElements("passwords_b_actions")}, //element to click
                 new String[]{"passwords_b_actions_b_change", getElements("passwords_b_actions_b_change")}, //element expected to appear

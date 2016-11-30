@@ -53,6 +53,7 @@ public class AT2MDMSY1004Locators {
         elements.put("add_i_percentage", "//*[contains(@id, 'pc1:pcgt2:it2::content')]");
         elements.put("add_i_max", "//*[contains(@id, 'pc1:pcgt2:it1::content')]");
         //QBE
+        elements.put("qbe_i_config", "//*[contains(@id, 'pc1_afr_ReTVcCo_afr_resId1c1::content')]");
         elements.put("qbe_i_company", "//*[contains(@id, 'pc1_afr_ReTVcCo_afr_resId1c2::content')]");
         elements.put("qbe_i_currency", "//*[contains(@id, 'pc1_afr_ReTVcCo_afr_resId1c3::content')]");
         elements.put("qbe_i_from_date", "//*[contains(@id, 'pc1:ReTVcCo:id1::content')]");
@@ -62,5 +63,6 @@ public class AT2MDMSY1004Locators {
         elements.put("qbe_i_vcc2", "//*[contains(@id, 'pc1_afr_ReTVcCo_afr_resId1c8::content')]");
         elements.put("qbe_i_percentage", "//*[contains(@id, 'pc1_afr_ReTVcCo_afr_resId1c9::content')]");
         elements.put("qbe_i_max", "//*[contains(@id, 'pc1_afr_ReTVcCo_afr_resId1c10::content')]");
+
     }
 }

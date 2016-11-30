@@ -66,7 +66,7 @@ public class AT2MDMSY1003Sis {
         if (!Functions.insertInput(driver, new String[]{"add_i_value",getElements("add_i_value")},
                 "value", String.valueOf(DataGenerator.random(1,100)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_type",getElements("add_i_type")},
-                "type", "SCHEDULER", where)){return false;}
+                "type", DataGenerator.getRandomAlphanumericSequence(6, false), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_environment",getElements("add_sl_environment")},
                 "Live", "environment", where)){return false;}
@@ -108,7 +108,7 @@ public class AT2MDMSY1003Sis {
         if (!Functions.insertInput(driver, new String[]{"add_i_value",getElements("add_i_value")},
                 "value", String.valueOf(DataGenerator.random(1,100)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_type",getElements("add_i_type")},
-                "type", "PARAM_FTP", where)){return false;}
+                "type", DataGenerator.getRandomAlphanumericSequence(6, false), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_environment",getElements("add_sl_environment")},
                 "Test", "environment", where)){return false;}
