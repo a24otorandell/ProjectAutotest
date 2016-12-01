@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
@@ -41,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AT2BOOSA0001Locators.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AT2BOOSA0001Locators.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="183">
-              <caret line="279" column="54" selection-start-line="279" selection-start-column="54" selection-end-line="279" selection-end-column="54" />
+            <state relative-caret-position="482">
+              <caret line="285" column="85" selection-start-line="285" selection-start-column="84" selection-end-line="285" selection-end-column="85" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Locators#0" expanded="false" />
               </folding>
@@ -65,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2BOOSA0001Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AT2BOOSA0001Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="457" column="57" selection-start-line="457" selection-start-column="57" selection-end-line="457" selection-end-column="57" />
+            <state relative-caret-position="148">
+              <caret line="846" column="0" selection-start-line="846" selection-start-column="0" selection-end-line="846" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
@@ -83,7 +84,6 @@
                 <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Test#0" expanded="false" />
-                <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
               </folding>
             </state>
@@ -243,11 +243,11 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Manager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
       </list>
     </option>
   </component>
@@ -370,15 +370,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0008/AT2MDMOR0008Locators.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0008/AT2MDMOR0008Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0008/AT2MDMOR0008Test.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0016/AT2MDMOR0016Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0016/AT2MDMOR0016Test.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0022/AT2MDMOR0022Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0022/AT2MDMOR0022Test.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0025/AT2MDMOR0025Sis.java</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0025/AT2MDMOR0025Test.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0010/AT2MDMOR0010Data.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0025/AT2MDMOR0025Data.java</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -386,6 +379,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/hotel2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/resources/hotelbeds.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -796,13 +791,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00095" summary="    quitar espacios innecesarios de la mdmcl0030&#10;">
-      <created>1476896694955</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1476896694955</updated>
-    </task>
     <task id="LOCAL-00096" summary="modificacion del metodo de ramdomfloat para que solo saque dos cecimales y sea un string&#10;">
       <created>1476961029384</created>
       <option name="number" value="00096" />
@@ -1139,7 +1127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480590174930</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="   ACTUALIZACION DE AT2BOOSA0001&#10;   &#10;&#10;">
+      <created>1480604738051</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1480604738051</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1153,7 +1148,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1394" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1171,7 +1166,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22113943" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962519" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3218391" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3320562" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25573066" sideWeight="0.094387755" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1270,9 +1265,9 @@
     <MESSAGE value="   CREACION AT2BOOSA0001 Y ACTUALIZACION DE CODIGO&#10;&#10;" />
     <MESSAGE value="   ACTUALIZACION DE AT2BOOSA0001&#10;&#10;" />
     <MESSAGE value="   ACTUALIZACION DE AT2ACCDI0028&#10;&#10;" />
-    <MESSAGE value="   ACTUALIZACION DE AT2BOOSA0001&#10;   &#10;&#10;" />
     <MESSAGE value="   ACTUALIZACION DE AT2ACCDI0028&#10;   &#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="   ACTUALIZACION DE AT2ACCDI0028&#10;   &#10;&#10;" />
+    <MESSAGE value="   ACTUALIZACION DE AT2BOOSA0001&#10;   &#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="   ACTUALIZACION DE AT2BOOSA0001&#10;   &#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1519,21 +1514,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java</url>
-          <line>846</line>
+          <line>825</line>
           <properties />
-          <option name="timeStamp" value="1032" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java</url>
-          <line>457</line>
-          <properties />
-          <option name="timeStamp" value="1033" />
+          <option name="timeStamp" value="1037" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1034" />
+      <option name="time" value="1038" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2052,16 +2041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="279" column="54" selection-start-line="279" selection-start-column="54" selection-end-line="279" selection-end-column="54" />
-          <folding>
-            <element signature="docComment;class#AT2BOOSA0001Locators#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -2098,8 +2077,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="457" column="57" selection-start-line="457" selection-start-column="57" selection-end-line="457" selection-end-column="57" />
+        <state relative-caret-position="148">
+          <caret line="846" column="0" selection-start-line="846" selection-start-column="0" selection-end-line="846" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
@@ -2113,8 +2092,17 @@
             <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Test#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="285" column="85" selection-start-line="285" selection-start-column="84" selection-end-line="285" selection-end-column="85" />
+          <folding>
+            <element signature="docComment;class#AT2BOOSA0001Locators#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -828,19 +828,19 @@ public class AT2BOOSA0001Test {
                 "span", // atribute to get data (class, value, id, style, etc...)
                 "receptive_ofice", // key for data value (the name)
                 where);
-        Functions.getText(driver,
+        Functions.getValue(driver,
                 new String[]{"actions_service_details_e_cost", getElements("actions_service_details_e_cost")}, // element path
                 "cost", // key for data value (the name)
                 where);
-        Functions.getText(driver,
+        Functions.getValue(driver,
                 new String[]{"action_service_detailse_e_sale", getElements("action_service_detailse_e_sale")}, // element path
                 "sale", // key for data value (the name)
                 where);
-        Functions.getText(driver,
+        Functions.getValue(driver,
                 new String[]{"actions_service_detailse_e_profit", getElements("actions_service_detailse_e_profit")}, // element path
                 "profit", // key for data value (the name)
                 where);
-        Functions.getText(driver,
+        Functions.getValue(driver,
                 new String[]{"actions_service_details_e_profitability", getElements("actions_service_details_e_profitability")}, // element path
                 "profitability", // key for data value (the name)
                 where);

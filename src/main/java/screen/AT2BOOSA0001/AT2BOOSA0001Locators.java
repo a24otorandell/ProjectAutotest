@@ -271,10 +271,10 @@ public class AT2BOOSA0001Locators {
 
         elements.put("actions_b_service_details", "//*[contains(@id, 'pc1:pcgm2:dc_cmi2')]/td[2]");
         elements.put("actions_service_details_e_receptive_office", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
-        elements.put("actions_service_details_e_cost", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
-        elements.put("action_service_detailse_e_sale", "//*[contains(@id, 't1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]");
-        elements.put("actions_service_detailse_e_profit", "//*[contains(@id, 't1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[4]");
-        elements.put("actions_service_details_e_profitability", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[5]");
+        elements.put("actions_service_details_e_cost", "//*[contains(@id, 'pc1:t1:0:ot6::content')]");
+        elements.put("action_service_detailse_e_sale", "//*[contains(@id, 'pc1:t1:0:ot7::content')]");
+        elements.put("actions_service_detailse_e_profit", "//*[contains(@id, 'pc1:t1:0:ot8::content')]");
+        elements.put("actions_service_details_e_profitability", "//*[contains(@id, 'pc1:t1:0:ot9::content')]");
         elements.put("actions_service_details_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("actions_service_details_i_receptive_office", "//*[contains(@id, 'pc1_afr_t1_afr_c5::content')]");
         elements.put("actions_service_details_i_cost", "//*[contains(@id, 'pc1_afr_t1_afr_c6::content')]");
