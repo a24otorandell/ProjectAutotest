@@ -296,7 +296,7 @@ public class AT2BOOSA0001Sis {
                 "result_cancellation_date",
                 getData("result_cancellation_date"),
                 where);
-        Functions.insertInput(driver,
+       /* Functions.insertInput(driver,
                 new String[]{"query_i_cancellation_fee_date",getElements("query_i_cancellation_fee_date")},
                 "result_e_cancellation_fee_date",
                 getData("result_e_cancellation_fee_date"),
@@ -305,7 +305,7 @@ public class AT2BOOSA0001Sis {
                 new String[]{"query_i_auto_cancellation_date_time",getElements("query_i_auto_cancellation_date_time")},
                 "result_auto_cancellation_date_time",
                 getData("result_auto_cancellation_date_time"),
-                where);
+                where);*/
         Functions.insertInput(driver,
                 new String[]{"query_i_client_code",getElements("query_i_client_code")},
                 "result_client_code",
@@ -436,19 +436,19 @@ public class AT2BOOSA0001Sis {
                     "result_booking_type",
                     getData("result_booking_type"),
                     where);
-            Functions.break_time(driver,25,500);
+            Functions.break_time(driver,90,600);
             Functions.insertInput(driver,
                     new String[]{"query_i_contract_code",getElements("query_i_contract_code")},
                     "result_contract_code",
                     getData("result_contract_code"),
                     where);
-            Functions.break_time(driver,25,500);
+            Functions.break_time(driver,90,600);
             Functions.insertInput(driver,
                     new String[]{"query_i_contract_name",getElements("query_i_contract_name")},
                     "result_contract_name",
                     getData("result_contract_name"),
                     where);
-            Functions.break_time(driver,50,500);
+            Functions.break_time(driver,90,600);
             if(!Functions.enterQueryAndClickResult(driver,
                     new String[]{"query_i_atlas_company",getElements("query_i_atlas_company")}, //any query input
                     new String[]{"query_e_result",getElements("query_e_result")}, //table result
@@ -746,7 +746,7 @@ public class AT2BOOSA0001Sis {
     private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
         String where = " on GO TO CANCELED_BOOKINGD";
         driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
-
+        Functions.break_time(driver,90,600);
         if(!Functions.checkClick(driver,
                 new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
                 new String[]{"go_to_actions_b_bloqued_bookings", getElements("go_to_actions_b_bloqued_bookings")}, //element expected to appear
@@ -793,7 +793,81 @@ public class AT2BOOSA0001Sis {
                 new String[]{"actions_send_booking_sl_format",getElements("actions_send_booking_sl_format")},
                 "Fax", "Fax",  where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"actions_send_booking_i_destination",getElements("actions_send_booking_i_destination")},
-                "destination", (Integer.toString(DataGenerator.random(99999999, 100000000))), where)){return false;}
+                "destination", (Integer.toString(DataGenerator.random(1, 100000000))), where)){return false;}
+        if (!Functions.simpleClick(driver,
+                new String[]{"actions_send_booking_b_send", getElements("actions_send_booking_b_send")}, //element to click
+                where)){return false;}
+        driver.getDriverdetails().getUrl();
+        if (!Functions.simpleClick(driver,
+                new String[]{"actions_send_booking_b_cancel", getElements("actions_send_booking_b_cancel")}, //element to click
+                where)){return false;}
+
+        return true;
+    }
+    private boolean Search_booking_other_actions_service_details (TestDriver driver){
+        String where = " on ACTIONS SEND EMAIL/FAX";
+        driver.getReport().addHeader("ACTIONS SERVICE DETAIL IN SEARCH BOOKING",3,false);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
+                new String[]{"actions_b_service_details", getElements("actions_b_service_details")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_service_details", getElements("actions_b_service_details")}, //element to click
+                new String[]{"actions_service_details_e_receptive_office", getElements("actions_service_details_e_receptive_office")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        Functions.getAttr(driver,
+                new String[]{"actions_service_details_e_receptive_office", getElements("actions_service_details_e_receptive_office")}, // element path
+                "span", // atribute to get data (class, value, id, style, etc...)
+                "receptive_ofice", // key for data value (the name)
+                where);
+        Functions.getText(driver,
+                new String[]{"actions_service_details_e_cost", getElements("actions_service_details_e_cost")}, // element path
+                "cost", // key for data value (the name)
+                where);
+        Functions.getText(driver,
+                new String[]{"action_service_detailse_e_sale", getElements("action_service_detailse_e_sale")}, // element path
+                "sale", // key for data value (the name)
+                where);
+        Functions.getText(driver,
+                new String[]{"actions_service_detailse_e_profit", getElements("actions_service_detailse_e_profit")}, // element path
+                "profit", // key for data value (the name)
+                where);
+        Functions.getText(driver,
+                new String[]{"actions_service_details_e_profitability", getElements("actions_service_details_e_profitability")}, // element path
+                "profitability", // key for data value (the name)
+                where);
+        if(!Functions.clickQbE(driver,
+                new String[]{"actions_service_details_b_qbe", getElements("actions_service_details_b_qbe")},// query button
+                new String[]{"actions_service_details_i_receptive_office", getElements("actions_service_details_i_receptive_office")},//any query input
+                where)){return false;} // where the operation occurs
+
+        if (!Functions.insertInput(driver, new String[]{"actions_service_details_i_receptive_office",getElements("actions_service_details_i_receptive_office")},
+                "receptive_ofice", "receptive_ofice", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"actions_service_details_i_cost",getElements("actions_service_details_i_cost")},
+                "cost", "cost", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"actions_service_details_i_sale",getElements("actions_service_details_i_sale")},
+                "sale", "sale", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"actions_service_details_i_profit",getElements("actions_service_details_i_profit")},
+                "profit", "profit", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"actions_service_details_i_profitability",getElements("actions_service_details_i_profitability")},
+                "profitability", "profitability", where)){return false;}
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"actions_service_details_i_receptive_office", getElements("actions_service_details_i_receptive_office")}, //any query input
+                new String[]{"actions_service_details_e_result", getElements("actions_service_details_e_result")}, //table result
+                where)){return false;} // where this operation occurs
+        if(!Functions.detachTable(driver,
+                new String[]{"actions_service_details_b_detach",getElements("actions_service_details_b_detach")}, //detach button
+                true,     //screenshot??
+                where)){return false;}
+        if(!Functions.checkClickByAbsence(driver,
+                new String[]{"actions_service_details_b_ok",getElements("actions_service_details_b_ok")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                30,500,
+                where)){
+            return false;
+        }
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){

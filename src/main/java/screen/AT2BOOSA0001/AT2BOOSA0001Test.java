@@ -442,33 +442,33 @@ public class AT2BOOSA0001Test {
                     "result_booking_type",
                     getData("result_booking_type"),
                     where);
-            Functions.break_time(driver,25,500);
+            Functions.break_time(driver,90,600);
             Functions.insertInput(driver,
                     new String[]{"query_i_contract_code",getElements("query_i_contract_code")},
                     "result_contract_code",
                     getData("result_contract_code"),
                     where);
-            Functions.break_time(driver,25,500);
+            Functions.break_time(driver,90,600);
             Functions.insertInput(driver,
                     new String[]{"query_i_contract_name",getElements("query_i_contract_name")},
                     "result_contract_name",
                     getData("result_contract_name"),
                     where);
-            Functions.break_time(driver,50,500);
+            Functions.break_time(driver,90,600);
             if(!Functions.enterQueryAndClickResult(driver,
                     new String[]{"query_i_atlas_company",getElements("query_i_atlas_company")}, //any query input
                     new String[]{"query_e_result",getElements("query_e_result")}, //table result
                     where)){
                 return false;
             } // where this operation occurs
-
+            if (!Functions.zoomIn(driver )){return false;}
         }   return true;
     }
     private boolean Getrecords (TestDriver driver){
 
         String where = " on GET RECORDS";
         driver.getReport().addHeader("GET RECORDS SEARCH IN SEARCH BOOKING",3,false);
-        if(!Functions.zoomOut(driver,4)){
+        if(!Functions.zoomOut(driver,5)){
             return false;
         }
         Functions.getValue(driver,
@@ -752,7 +752,7 @@ public class AT2BOOSA0001Test {
     private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
         String where = " on GO TO CANCELED_BOOKINGD";
         driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
-
+        Functions.break_time(driver,90,600);
         if(!Functions.checkClick(driver,
                 new String[]{"tb_b_actions", getElements("tb_b_actions")}, //element to click
                 new String[]{"go_to_actions_b_bloqued_bookings", getElements("go_to_actions_b_bloqued_bookings")}, //element expected to appear
