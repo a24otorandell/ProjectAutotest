@@ -79,6 +79,7 @@ public class AT2MDMOR0016Sis {
 //                "E15", // value to search
 //                "company", //name of the data
 //                where)) {return false;}
+        Functions.break_time(driver, 3, 400);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_b_office",getElements("add_lov_b_office")}, // b_lov
                 new String[]{"add_i_b_office", getElements("add_i_b_office")}, // i_lov
@@ -198,16 +199,19 @@ public class AT2MDMOR0016Sis {
                 getData("location"), // value to search
                 "location", //name of the data
                 where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_service", getElements("search_sl_service")},
                 getData("service"), "service", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_allotment", getElements("search_sl_allotment")},
                 getData("allotment"), "allotment", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"search_i_p_contracting",getElements("search_i_p_contracting")},
                 "p_contracting", getData("p_contracting"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_p_billing",getElements("search_i_p_billing")},
@@ -286,7 +290,7 @@ public class AT2MDMOR0016Sis {
 //                "CEE", // value to search
 //                "location", //name of the data
 //                where)) {return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
                 "des", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -297,6 +301,8 @@ public class AT2MDMOR0016Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "contracting", //Data name
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_extra",getElements("add_i_extra")},
+                "extra","", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_service", getElements("add_sl_service")},
                 "Hotel", "service", where)) {
@@ -369,11 +375,13 @@ public class AT2MDMOR0016Sis {
                 "contracting", getData("contracting"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_service", getElements("qbe_sl_service")},
                 getData("service"), "service", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_allotment", getElements("qbe_sl_allotment")},
                 getData("allotment"), "allotment", where)) {
