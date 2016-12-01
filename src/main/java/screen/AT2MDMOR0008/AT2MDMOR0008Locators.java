@@ -22,16 +22,16 @@ public class AT2MDMOR0008Locators {
          * TABLE INCOMING
          */
         //GENERALS
-/*        elements.put("office_b_add", "/*//*[contains(@id, 'pcgt1:boton_add')]");
-        elements.put("office_b_delete", "/*//*[contains(@id, 'pcgt1:boton_remove')]");
-        elements.put("office_b_edit", "/*//*[contains(@id, 'pcgt1:boton_edit')]");*/
+/*        elements.put("office_b_add", "//*[contains(@id, 'pcgt1:boton_add')]");
+        elements.put("office_b_delete", "//*[contains(@id, 'pcgt1:boton_remove')]");
+        elements.put("office_b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");*/
         elements.put("office_b_actions", "//*[contains(@id, 'popup1:dc_m1')]");
         elements.put("office_b_actions_b_audit_data", "//*[contains(@id, 'popup1:dc_cmi0')]/td[2]");
         elements.put("audit_ok1", "//*[contains(@id, 'pc2:popup1:d22::ok')]");
         elements.put("office_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]");
         elements.put("office_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
         elements.put("office_e_result", "//*[contains(@id, 'pc2:table1::db')]/table/tbody/tr[1]/td[1]");
-/*        elements.put("office_e_records", "/*//*[contains(@id, 'pc1:ot111')]");*/
+/*        elements.put("office_e_records", "//*[contains(@id, 'pc1:ot111')]");*/
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
@@ -46,16 +46,17 @@ public class AT2MDMOR0008Locators {
          * TABLE ADDRESS
          */
         //GENERAL
-        elements.put("address_b_add", "/*//*[contains(@id, 'PCGenericToolbar2:boton_add')]");
-        elements.put("address_b_delete", "/*//*[contains(@id, 'PCGenericToolbar2:boton_remove')]");
-        elements.put("address_b_edit", "/*//*[contains(@id, 'PCGenericToolbar2:boton_edit')]");
+        elements.put("address_b_add", "//*[contains(@id, 'PCGenericToolbar2:boton_add')]");
+        elements.put("address_b_delete", "//*[contains(@id, 'PCGenericToolbar2:boton_remove')]");
+        elements.put("address_b_edit", "//*[contains(@id, 'PCGenericToolbar2:boton_edit')]");
         elements.put("address_b_actions", "//*[contains(@id, 'PCGenericMenu1:dc_m1')]");
         elements.put("address_b_actions_b_audit_data", "//*[contains(@id, 'PCGenericMenu1:dc_cmi0')]/td[2]");
+        elements.put("address_b_actions_b_area", "//*[contains(@id, 'PCGenericMenu1:dc_cmi2')]/td[2]");
         elements.put("audit_ok2", "//*[contains(@id, 'PCGenericMenu1:d22::ok')]");
         elements.put("address_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("address_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("address_e_result", "//*[contains(@id, 'pc1:table2::db')]/table/tbody/tr[1]/td[1]");
-        elements.put("address_e_records", "/*//*[contains(@id, 'pc1:outputText5')]");
+        elements.put("address_e_records", "//*[contains(@id, 'pc1:outputText5')]");
         //ADD
         elements.put("add_b_save1", "//*[contains(@id, 'PCGenericToolbar2:btn_commitExit')]");
         elements.put("add_ck_head", "//*[contains(@id, 'pc1:PCGenericToolbar2:sbc4::content')]");
@@ -110,19 +111,40 @@ public class AT2MDMOR0008Locators {
         elements.put("qbe_i_position_code", "//*[contains(@id, 'pc1_afr_table2_afr_c13::content')]");
         elements.put("qbe_i_position_desc", "//*[contains(@id, 'pc1_afr_table2_afr_c3::content')]");
         /**
+         * ZONA AREA
+         */
+        //GENERALS
+        elements.put("area_b_edit", "//*[contains(@id, 'PCGenericToolbar4:boton_edit')]");
+        elements.put("area_b_actions", "//*[contains(@id, 'pcgm1:dc_m1')]");
+        elements.put("area_b_actions_b_audit_data", "//*[contains(@id, 'pcgm1:dc_cmi0')]/td[2]");
+        elements.put("area_b_qbe", "//*[contains(@id, 'pc4:_qbeTbr')]");
+        elements.put("area_b_detach", "//*[contains(@id, 'pc4:_dchTbr')]/a");
+        elements.put("area_e_result", "//*[contains(@id, 'pc4:table4::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("area_e_records", "//*[contains(@id, 'pc4:outputText15')]");
+        elements.put("area_ck_contact", "//*[contains(@id, 'table4:0:sbc1::content')]/span/img");
+        elements.put("area_audit_ok2", "//*[contains(@id, 'pcgm1:d22::ok')]");
+        //ADD
+        elements.put("add_b_save4", "//*[contains(@id, 'PCGenericToolbar4:btn_commitExit')]");
+        elements.put("add_ck_contact_a", "//*[contains(@id, 'sbc2::content')]");
+        elements.put("add_b_ok", "//*[contains(@id, 'd2::ok')]");
+        //QBE
+        elements.put("qbe_i_areac", "//*[contains(@id, 'afr_table4_afr_c30::content')]");
+        elements.put("qbe_i_area_desc", "//*[contains(@id, 'afr_table4_afr_c31::content')]");
+        elements.put("qbe_sl_contact_a", "//*[contains(@id, 'soc1::content')]");
+        /**
          * TABLE LANGUAGE
          */
         //GENERALS
-        elements.put("language_b_add", "/*//*[contains(@id, 'PCGenericToolbar3:boton_add')]");
-        elements.put("language_b_delete", "/*//*[contains(@id, 'PCGenericToolbar3:boton_remove')]");
-        elements.put("language_b_edit", "/*//*[contains(@id, 'PCGenericToolbar3:boton_edit')]");
+        elements.put("language_b_add", "//*[contains(@id, 'PCGenericToolbar3:boton_add')]");
+        elements.put("language_b_delete", "//*[contains(@id, 'PCGenericToolbar3:boton_remove')]");
+        elements.put("language_b_edit", "//*[contains(@id, 'PCGenericToolbar3:boton_edit')]");
         elements.put("language_b_actions", "//*[contains(@id, 'PCGenericMenu2:dc_m1')]");
         elements.put("language_b_actions_b_audit_data", "//*[contains(@id, 'PCGenericMenu2:dc_cmi0')]/td[2]");
         elements.put("audit_ok3", "//*[contains(@id, 'PCGenericMenu2:d22::ok')]");
         elements.put("language_b_qbe", "//*[contains(@id, 'pc3:_qbeTbr')]");
         elements.put("language_b_detach", "//*[contains(@id, 'pc3:_dchTbr')]");
         elements.put("language_e_result", "//*[contains(@id, 'pc3:table3::db')]/table/tbody/tr[1]/td[1]");
-        elements.put("language_e_records", "/*//*[contains(@id, 'pc3:outputText9')]");
+        elements.put("language_e_records", "//*[contains(@id, 'pc3:outputText9')]");
         //ADD
         elements.put("add_b_save2", "//*[contains(@id, 'PCGenericToolbar3:btn_commitExit')]");
         elements.put("add_i_language", "//*[contains(@id, 'pc3:PCGenericToolbar3:sidiCodIdiomaId::content')]");

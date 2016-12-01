@@ -74,9 +74,10 @@ public class AT2MDMOR0022Test {
                 where)) {
             return false;
         }
-        if (!Functions.selectText(driver,
-                new String[]{"tab1_add_sl_module",getElements("tab1_add_sl_module")},
-                "Proforma", "module1", where)){return false;}
+        String list_options[] = {"Stop Sales", "Contracting" ,"Web sending" ,"Activities", "Invoice" ,"Pick up time", "OS grouped" ,"Proforma", "Web proforma" ,"Bookings", "Front Desk" ,"Transfers"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"tab1_add_sl_module", getElements("tab1_add_sl_module")},
+                list_options, "module1", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"tab1_add_lov_supplier",getElements("tab1_add_lov_supplier")}, // b_lov
                 new String[]{"tab1_add_i_supplier", getElements("tab1_add_i_supplier")}, // i_lov
@@ -213,9 +214,10 @@ public class AT2MDMOR0022Test {
                 where)) {
             return false;
         }
-        if (!Functions.selectText(driver,
-                new String[]{"tab1_add_sl_module",getElements("tab1_add_sl_module")},
-                "Transfers", "module1", where)){return false;}
+        String list_options[] = {"Stop Sales", "Contracting" ,"Web sending" ,"Activities", "Invoice" ,"Pick up time", "OS grouped" ,"Proforma", "Web proforma" ,"Bookings", "Front Desk" ,"Transfers"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"tab1_add_sl_module", getElements("tab1_add_sl_module")},
+                list_options, "module1", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"tab1_add_lov_supplier",getElements("tab1_add_lov_supplier")}, // b_lov
                 new String[]{"tab1_add_i_supplier", getElements("tab1_add_i_supplier")}, // i_lov
@@ -355,9 +357,10 @@ public class AT2MDMOR0022Test {
                 where)) {
             return false;
         }
-        if (!Functions.selectText(driver,
-                new String[]{"tab2_add_sl_module",getElements("tab2_add_sl_module")},
-                "Activities", "module2", where)){return false;}
+        String list_options[] = {"Stop Sales", "Contracting" ,"Web sending" ,"Activities", "Invoice" ,"Pick up time", "OS grouped" ,"Proforma", "Web proforma" ,"Bookings", "Front Desk" ,"Transfers"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"tab2_add_sl_module", getElements("tab2_add_sl_module")},
+                list_options, "module2", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"tab2_add_lov_to",getElements("tab2_add_lov_to")}, // b_lov
                 new String[]{"tab2_add_i_to", getElements("tab2_add_i_to")}, // i_lov
@@ -420,9 +423,10 @@ public class AT2MDMOR0022Test {
                 where)) {
             return false;
         }
-        if (!Functions.selectText(driver,
-                new String[]{"tab2_add_sl_module",getElements("tab2_add_sl_module")},
-                "Invoice", "module2", where)){return false;}
+        String list_options[] = {"Stop Sales", "Contracting" ,"Web sending" ,"Activities", "Invoice" ,"Pick up time", "OS grouped" ,"Proforma", "Web proforma" ,"Bookings", "Front Desk" ,"Transfers"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"tab2_add_sl_module", getElements("tab2_add_sl_module")},
+                list_options, "module2", where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"tab2_add_lov_to",getElements("tab2_add_lov_to")}, // b_lov
                 new String[]{"tab2_add_i_to", getElements("tab2_add_i_to")}, // i_lov
