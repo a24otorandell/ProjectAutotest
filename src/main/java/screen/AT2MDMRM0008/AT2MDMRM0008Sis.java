@@ -102,7 +102,7 @@ public class AT2MDMRM0008Sis {
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 90, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_code", getElements("search_i_code")}, // element path
                 "code", getData("code_result"), where)) {
             return false;
@@ -115,7 +115,7 @@ public class AT2MDMRM0008Sis {
                 "interface_code", getData("interface_code_result"), where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 90, 500);
         boolean checkbox;
         if (getData("allotment_result").equalsIgnoreCase("checked")) {
             checkbox = true;
@@ -155,6 +155,7 @@ public class AT2MDMRM0008Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         Random booleanValue = new Random();
         boolean getRandomBoolean = booleanValue.nextBoolean();
         String randomBoolean;
@@ -215,11 +216,13 @@ public class AT2MDMRM0008Sis {
                 "interface_code", getData("interface_code_result"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_inter_sl_allotment", getElements("qbe_inter_sl_allotment")},
                 getData("allotment"), "allotment",
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (getData("allotment").equalsIgnoreCase("Yes")) {
             if (!Functions.insertInput(driver, new String[]{"qbe_inter_i_no_max", getElements("qbe_inter_i_no_max")},
                     "no_max", getData("no_max_edit"),
@@ -245,7 +248,7 @@ public class AT2MDMRM0008Sis {
     private boolean others_actions_inter_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 90, 500);
         if (!Functions.auditData(driver,
                 new String[]{"MDM_inter_b_actions", getElements("MDM_inter_b_actions")}, //actions button
                 new String[]{"MDM_inter_b_actions_audit_data", getElements("MDM_inter_b_actions_audit_data")}, //audit button
