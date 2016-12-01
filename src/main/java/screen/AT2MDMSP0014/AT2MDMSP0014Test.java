@@ -77,11 +77,11 @@ public class AT2MDMSP0014Test {
         if (!interaction_edit_table7(driver)) return false;
         if (!qbe_table7(driver)) return false;
         if (!others_actions_table7(driver)) return false;
-/*        if (!interaction_add_table8(driver)) return false;
+        if (!interaction_add_table8(driver)) return false;
         if (!search_table8(driver)) return false;
         if (!interaction_edit_table8(driver)) return false;
         if (!qbe_table8(driver)) return false;
-        if (!others_actions_table8(driver)) return false;*/
+        if (!others_actions_table8(driver)) return false;
         if (!interaction_add_table9(driver)) return false;
         if (!search_table9(driver)) return false;
         if (!interaction_edit_table9(driver)) return false;
@@ -934,7 +934,7 @@ public class AT2MDMSP0014Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_type",getElements("table8_add_i_type")},
-                "t8_type", "I", where)){return false;}
+                "t8_type", "E", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"table8_add_sl_status",getElements("table8_add_sl_status")},
                 "Active", "t8_status", where)){return false;}
@@ -947,9 +947,10 @@ public class AT2MDMSP0014Test {
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_ip_from_4",getElements("table8_add_i_ip_from_4")},
                 "ip4", String.valueOf(DataGenerator.random(1,172)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_ip_from_5",getElements("table8_add_i_ip_from_5")},
-                "ip5", String.valueOf(DataGenerator.random(1,172)), where)){return false;}
+                "ip5", getData("ip4"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_comments",getElements("table8_add_i_comments")},
                 "t8_comments", DataGenerator.getRandomAlphanumericSequence(7,false), where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if(!Functions.getValue(driver,new String[]{"table8_add_ip", getElements("table8_add_ip")}, // element path
                 "t8_ip", // key for data value (the name)
                 where)){return false;}
@@ -987,7 +988,7 @@ public class AT2MDMSP0014Test {
         }
         return true;
     }
-    private boolean interaction_edit_table8(TestDriver driver) {
+    private boolean interaction_edit_table8(TestDriver driver) /**/{
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDITTION table8";
         if (!Functions.checkClick(driver,
@@ -997,7 +998,7 @@ public class AT2MDMSP0014Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_type",getElements("table8_add_i_type")},
-                "t8_type", "E", where)){return false;}
+                "t8_type", "I", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"table8_add_sl_status",getElements("table8_add_sl_status")},
                 "Inactive", "t8_status", where)){return false;}
@@ -1013,6 +1014,7 @@ public class AT2MDMSP0014Test {
                 "ip5", String.valueOf(DataGenerator.random(1,172)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_comments",getElements("table8_add_i_comments")},
                 "t8_comments", DataGenerator.getRandomAlphanumericSequence(7,false), where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if(!Functions.getValue(driver,new String[]{"table8_add_ip", getElements("table8_add_ip")}, // element path
                 "t8_ip", // key for data value (the name)
                 where)){return false;}
