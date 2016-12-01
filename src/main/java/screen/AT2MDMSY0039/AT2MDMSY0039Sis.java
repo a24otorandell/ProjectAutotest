@@ -209,18 +209,23 @@ public class AT2MDMSY0039Sis {
                 "orientation", getData("orientation"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_size",getElements("qbe_i_size")},
                 "size",  getData("size"), where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_graphic",getElements("qbe_sl_graphic")},
                 getData("graphic"), "graphic", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_visible_screen",getElements("qbe_sl_visible_screen")},
                 getData("visible"), "visible", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_modify_labels",getElements("qbe_sl_modify_labels")},
                 getData("modify"), "modify", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_business_labels",getElements("qbe_sl_business_labels")},
                 getData("business"), "business", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_report", getElements("qbe_i_report")}, //any query input
                 new String[]{"reports_e_result", getElements("reports_e_result")}, //table result

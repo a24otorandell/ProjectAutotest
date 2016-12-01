@@ -264,7 +264,6 @@ public class AT2MDMCL0042Test {
     private boolean qbe_comercial(TestDriver driver, boolean reset) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        Functions.zoomOut(driver);
         if (reset) {
             if (!Functions.clickSearchAndResult(driver,
                     new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
@@ -272,6 +271,9 @@ public class AT2MDMCL0042Test {
                     where)) {
                 return false;
             }
+        }
+        else {
+            Functions.zoomOut(driver);
         }
             if (!Functions.clickQbE(driver,
                     new String[]{"comercial_b_qbe", getElements("comercial_b_qbe")},// query button
