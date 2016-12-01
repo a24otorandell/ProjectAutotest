@@ -93,6 +93,7 @@ public class AT2MDMRM0001Locators {
         elements.put("incompa_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
         elements.put("incompa_e_result", "//*[contains(@id, 'pc2:ClsInc::db')]/table/tbody/tr[1]/td[1]");
         elements.put("incompa_e_records", "//*[contains(@id, 'pc2:ot4')]");
+        elements.put("incompa_b_okdel", "//*[contains(@id, 'pcgt1:cbt1')]");
         //ADD
         elements.put("add_b_save2", "//*[contains(@id, 'pcgt1:btn_commitExit')]");
         elements.put("add_i_code2", "//*[contains(@id, 'pcgt1:codClasifIncomId::content')]");

@@ -49,18 +49,18 @@ public class AT2MDMRM0001Sis {
         if (!interaction_edit_t1(driver)) return false;
         if (!qbe_t1(driver)) return false;
         if (!others_actions_t1(driver)) return false;
-/*        if (!interaction_add_t2(driver)) return false;
+        if (!interaction_add_t2(driver)) return false;
         if (!qbe_t2(driver)) return false;
         if (!interaction_edit_t2(driver)) return false;
         if (!qbe_t2(driver)) return false;
-        if (!others_actions_t2(driver)) return false;*/
+        if (!others_actions_t2(driver)) return false;
         if (!interaction_add_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
         if (!interaction_edit_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
         if (!others_actions_t3(driver)) return false;
         if (!delete_t3(driver)) return false;
-/*        if (!delete_t2(driver)) return false;*/
+        if (!delete_t2(driver)) return false;
         if (!activaTabla4(driver)) return false;
         if (!interaction_add_t4(driver)) return false;
         if (!qbe_t4(driver)) return false;
@@ -229,36 +229,49 @@ public class AT2MDMRM0001Sis {
         String where = " on SEARCH 1";
         if (!Functions.insertInput(driver, new String[]{"search_i_code",getElements("search_i_code")},
                 "code", getData("code"), where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_type",getElements("search_sl_type")},
                 getData("type"), "type", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_distribution",getElements("search_sl_distribution")},
                 getData("dist"), "dist", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_offer"),"offer",act1, true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_enters"),"enters",act2, true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_active"),"active",act3, true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_restrictive"),"rest",act4, true,where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_priority",getElements("search_i_priority")},
                 "priority", getData("priority"), where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_application_type",getElements("search_sl_application_type")},
                 getData("app_type"), "app_type", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_opaque"),"opaque",act5, true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_pep"),"pep",act6, true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_liberate"),"liberate",act7, true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_classification",getElements("search_sl_classification")},
                 getData("class"), "class", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_nrf"),"nrf",act8, true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"classif_e_result", getElements("classif_e_result")}, //result element
@@ -276,9 +289,11 @@ public class AT2MDMRM0001Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_distribution",getElements("add_sl_distribution")},
                 "Special", "dist", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (act2) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_enters"),"enters",false,true,where)){return false;}
@@ -287,6 +302,7 @@ public class AT2MDMRM0001Sis {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_enters"),"enters",true,true,where)){return false;}
         }
+        Functions.break_time(driver, 3, 400);
         if (act3) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_active"),"active",false,true,where)){return false;}
@@ -295,6 +311,7 @@ public class AT2MDMRM0001Sis {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_active"),"active",true,true,where)){return false;}
         }
+        Functions.break_time(driver, 3, 400);
         if (act4) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_restrictive"),"rest",false,true,where)){return false;}
@@ -303,12 +320,14 @@ public class AT2MDMRM0001Sis {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_restrictive"),"rest",true,true,where)){return false;}
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"add_i_priority",getElements("add_i_priority")},
                 "priority", String.valueOf(DataGenerator.random(1,80)),where)){return false;}
-
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_application_type",getElements("add_sl_application_type")},
                 "Rate", "app_type", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (act5) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_opaque"),"opaque",false,true,where)){return false;}
@@ -317,6 +336,7 @@ public class AT2MDMRM0001Sis {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_opaque"),"opaque",true,true,where)){return false;}
         }
+        Functions.break_time(driver, 3, 400);
         if (act6) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_pep"),"pep",false,true,where)){return false;}
@@ -325,6 +345,7 @@ public class AT2MDMRM0001Sis {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_pep"),"pep",true,true,where)){return false;}
         }
+        Functions.break_time(driver, 3, 400);
         if (act7) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_liberate"),"liberate",false,true,where)){return false;}
@@ -333,6 +354,7 @@ public class AT2MDMRM0001Sis {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_liberate"),"liberate",true,true,where)){return false;}
         }
+        Functions.break_time(driver, 3, 400);
         if (act8) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_nrf"),"nrf",false,true,where)){return false;}
@@ -341,7 +363,7 @@ public class AT2MDMRM0001Sis {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_nrf"),"nrf",true,true,where)){return false;}
         }
-
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_classification",getElements("add_sl_classification")},
                 "Accommodation","class" , where)){return false;}
@@ -371,9 +393,11 @@ public class AT2MDMRM0001Sis {
                 "code", getData("code"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
                 getData("type"), "type", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_distribution",getElements("qbe_sl_distribution")},
                 getData("dist"), "dist", where)){return false;}
@@ -381,9 +405,11 @@ public class AT2MDMRM0001Sis {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_offer",getElements("qbe_sl_offer")},
                 getData("offer"), "offer", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_enters",getElements("qbe_sl_enters")},
                 getData("enters"), "enters", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
                 getData("active"), "active", where)){return false;}
@@ -391,6 +417,7 @@ public class AT2MDMRM0001Sis {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_classification",getElements("qbe_sl_classification")},
                 getData("class"), "class", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_restrictive",getElements("qbe_sl_restrictive")},
                 getData("rest"), "rest", where)){return false;}
@@ -400,6 +427,7 @@ public class AT2MDMRM0001Sis {
             return false;
         }
         Functions.zoomOut(driver);
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_application_type",getElements("qbe_sl_application_type")},
                 getData("app_type"), "app_type", where)){return false;}
@@ -415,6 +443,7 @@ public class AT2MDMRM0001Sis {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_liberate",getElements("qbe_sl_liberate")},
                 getData("liberate"), "liberate", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_code", getElements("qbe_i_code")}, //any query input
                 new String[]{"classif_e_result", getElements("classif_e_result")}, //table result
@@ -427,6 +456,7 @@ public class AT2MDMRM0001Sis {
         if (!Functions.simpleClick(driver,
                 new String[]{"classif_b_reset", getElements("classif_b_reset")}, //element to click
                 where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
                 "Retailer sale", "type", where)){return false;}
@@ -475,8 +505,8 @@ public class AT2MDMRM0001Sis {
                 where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type2",getElements("add_sl_type2")},
-                "Wholesaler sale", "type2", where)){return false;}
-        if (!Functions.getValue(driver, new String[]{"add_i_description",getElements("add_i_description")},
+                "Retailer sale", "type2", where)){return false;}
+        if (!Functions.getText(driver, new String[]{"add_i_description",getElements("add_i_description")},
                 "c_desc",where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
@@ -503,8 +533,8 @@ public class AT2MDMRM0001Sis {
                 where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type2",getElements("add_sl_type2")},
-                "Purchase", "type2", where)){return false;}
-        if (!Functions.getValue(driver, new String[]{"add_i_description",getElements("add_i_description")},
+                "Retailer sale", "type2", where)){return false;}
+        if (!Functions.getText(driver, new String[]{"add_i_description",getElements("add_i_description")},
                 "c_desc",where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
@@ -563,7 +593,8 @@ public class AT2MDMRM0001Sis {
         String where = " on DELETE DATA 2";
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"incompa_b_delete", getElements("incompa_b_delete")},
-                new String[]{"incompa_e_records", getElements("incompa_e_records")},
+                new String []{"incompa_e_records", getElements("incompa_e_records")},
+                new String[]{"incompa_b_okdel", getElements("incompa_b_okdel")},
                 where)){
             return false;
         }

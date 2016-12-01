@@ -49,18 +49,18 @@ public class AT2MDMRM0001Test {
         if (!interaction_edit_t1(driver)) return false;
         if (!qbe_t1(driver)) return false;
         if (!others_actions_t1(driver)) return false;
-/*        if (!interaction_add_t2(driver)) return false;
+        if (!interaction_add_t2(driver)) return false;
         if (!qbe_t2(driver)) return false;
         if (!interaction_edit_t2(driver)) return false;
         if (!qbe_t2(driver)) return false;
-        if (!others_actions_t2(driver)) return false;*/
+        if (!others_actions_t2(driver)) return false;
         if (!interaction_add_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
         if (!interaction_edit_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
         if (!others_actions_t3(driver)) return false;
         if (!delete_t3(driver)) return false;
-        /*        if (!delete_t2(driver)) return false;*/
+        if (!delete_t2(driver)) return false;
         if (!activaTabla4(driver)) return false;
         if (!interaction_add_t4(driver)) return false;
         if (!qbe_t4(driver)) return false;
@@ -445,17 +445,6 @@ public class AT2MDMRM0001Test {
         }
         return true;
     }
-    private boolean delete_t1(TestDriver driver) {
-        driver.getReport().addHeader("DELETE DATA", 3, false);
-        String where = " on DELETE DATA 1";
-        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"classif_b_delete", getElements("classif_b_delete")},
-                new String[]{"classif_e_records", getElements("classif_e_records")},
-                where)){
-            return false;
-        }
-        return true;
-    }
 
     /**
      * TABLE INCOMPATIBILITY
@@ -473,14 +462,14 @@ public class AT2MDMRM0001Test {
                 new String[]{"add_lov_code",getElements("add_lov_code")}, // b_lov
                 new String[]{"add_i_code2", getElements("add_i_code2")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "code2", //Data name
                 where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type2",getElements("add_sl_type2")},
-                "Wholesaler sale", "type2", where)){return false;}
-        if (!Functions.getValue(driver, new String[]{"add_i_description",getElements("add_i_description")},
+                "Retailer sale", "type2", where)){return false;}
+        if (!Functions.getText(driver, new String[]{"add_i_description",getElements("add_i_description")},
                 "c_desc",where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
@@ -501,14 +490,14 @@ public class AT2MDMRM0001Test {
                 new String[]{"add_lov_code",getElements("add_lov_code")}, // b_lov
                 new String[]{"add_i_code2", getElements("add_i_code2")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "code2", //Data name
                 where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type2",getElements("add_sl_type2")},
-                "Purchase", "type2", where)){return false;}
-        if (!Functions.getValue(driver, new String[]{"add_i_description",getElements("add_i_description")},
+                "Retailer sale", "type2", where)){return false;}
+        if (!Functions.getText(driver, new String[]{"add_i_description",getElements("add_i_description")},
                 "c_desc",where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
@@ -567,7 +556,8 @@ public class AT2MDMRM0001Test {
         String where = " on DELETE DATA 2";
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"incompa_b_delete", getElements("incompa_b_delete")},
-                new String[]{"incompa_e_records", getElements("incompa_e_records")},
+                new String []{"incompa_e_records", getElements("incompa_e_records")},
+                new String[]{"incompa_b_okdel", getElements("incompa_b_okdel")},
                 where)){
             return false;
         }

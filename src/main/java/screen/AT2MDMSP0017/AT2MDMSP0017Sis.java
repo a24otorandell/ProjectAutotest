@@ -75,7 +75,7 @@ public class AT2MDMSP0017Sis {
         if (!Functions.insertInput(driver, new String[]{"add_i_from",getElements("add_i_from")},
                 "from", DataGenerator.getToday(), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_to",getElements("add_i_to")},
-                "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8, 3), 0), where)){return false;}
+                "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1, 9), 0), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type_",getElements("add_sl_type_")},
                 "Creation Date", "type", where)){return false;}
@@ -113,7 +113,7 @@ public class AT2MDMSP0017Sis {
                 getData("supplier"), // value to search
                 "supplier", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"search_i_comercial", getElements("search_i_comercial")}, // element path
+        if(!Functions.getValue(driver,new String[]{"search_i_comercial", getElements("search_i_comercial")}, // element path
                 "comercial", // key for data value (the name)
                 where)){return false;}
         if (!Functions.selectText(driver,
@@ -174,7 +174,7 @@ public class AT2MDMSP0017Sis {
         if (!Functions.insertInput(driver, new String[]{"add_i_from",getElements("add_i_from")},
                 "from", DataGenerator.getToday(), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_to",getElements("add_i_to")},
-                "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8, 3), 0), where)){return false;}
+                "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1, 9), 0), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type_",getElements("add_sl_type_")},
                 "Arrival Date", "type", where)){return false;}
@@ -220,10 +220,10 @@ public class AT2MDMSP0017Sis {
                 "supplier", getData("supplier"), where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_comercial", getElements("qbe_i_comercial")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_comercial", getElements("qbe_i_comercial")},
                 "comercial", getData("comercial"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_vcc",getElements("qbe_sl_vcc")},
                 getData("vcc"), "vcc", where)){return false;}
