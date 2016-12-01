@@ -80,8 +80,6 @@ public class AT2BOOSA0001Test {
       return true;
     }
 
-
-
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
         String where = " on SEARCH BY QUERY BY EXAPLE";

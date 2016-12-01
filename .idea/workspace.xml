@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
@@ -88,8 +87,8 @@
       <file leaf-file-name="AT2BOOSA0001Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="853" column="0" selection-start-line="853" selection-start-column="0" selection-end-line="853" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
@@ -97,11 +96,14 @@
                 <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Getrecords#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
               </folding>
             </state>
@@ -806,13 +808,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00092" summary="    quitar espacios innecesarios de la trfsu0016&#10;">
-      <created>1476882344672</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1476882344701</updated>
-    </task>
     <task id="LOCAL-00093" summary="    quitar espacios innecesarios de la trfsu0005&#10;">
       <created>1476889251543</created>
       <option name="number" value="00093" />
@@ -1149,7 +1144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1480502239581</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="   ACTUALIZACION DE AT2BOOSA0001&#10;   &#10;&#10;">
+      <created>1480522278872</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1480522278873</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1163,7 +1165,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1394" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1173,7 +1175,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15178572" sideWeight="0.67402947" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.017879948" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.017879948" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1257,7 +1259,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="completado nombre de la pantalla mdmcl0024&#10;" />
     <MESSAGE value="corregido info de la pantalla accsu0055&#10;" />
     <MESSAGE value="corregido info de la pantalla accsu0075&#10;" />
     <MESSAGE value="añadida espera para la primera busqueda,  para que no falla por espera al crear. mdmcl0032&#10;" />
@@ -1282,7 +1283,8 @@
     <MESSAGE value="   CREACION AT2BOOSA0001 Y ACTUALIZACION DE CODIGO&#10;&#10;" />
     <MESSAGE value="   ACTUALIZACION DE AT2BOOSA0001&#10;&#10;" />
     <MESSAGE value="   ACTUALIZACION DE AT2ACCDI0028&#10;&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="   ACTUALIZACION DE AT2ACCDI0028&#10;&#10;" />
+    <MESSAGE value="   ACTUALIZACION DE AT2BOOSA0001&#10;   &#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="   ACTUALIZACION DE AT2BOOSA0001&#10;   &#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1540,31 +1542,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java</url>
-          <line>787</line>
+          <line>785</line>
           <properties />
           <option name="timeStamp" value="984" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java</url>
-          <line>458</line>
+          <line>456</line>
           <properties />
           <option name="timeStamp" value="990" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java</url>
-          <line>817</line>
+          <line>815</line>
           <properties />
           <option name="timeStamp" value="1018" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java</url>
-          <line>848</line>
+          <line>846</line>
           <properties />
           <option name="timeStamp" value="1020" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java</url>
-          <line>827</line>
+          <line>825</line>
           <properties />
           <option name="timeStamp" value="1021" />
         </line-breakpoint>
@@ -2096,8 +2098,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="853" column="0" selection-start-line="853" selection-start-column="0" selection-end-line="853" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
           <folding>
             <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
@@ -2105,11 +2107,14 @@
             <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#getData#1;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Getrecords#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
           </folding>
         </state>
