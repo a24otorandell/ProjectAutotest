@@ -93,28 +93,29 @@ public class AT2ACCDI0028Locators {
         elements.put("binding_b_menu", "//*[contains(@id, 'pc1:pcgt2:dc_t1::eoi')]");
         //ADD
         elements.put("binding_b_add", "//*[contains(@id, 'pc1:pcgt2:boton_add')]");
+        elements.put("binding_add_e_sequence", "//*[contains(@id, 'pc1:pcgt2:it15::content')]");
         elements.put("binding_i_add_reason", "//*[contains(@id, 'pc1:pcgt2:soc2::content')]");
         elements.put("binding_i_add_start_date", "//*[contains(@id, 'pc1:pcgt2:id3::content')]");
         elements.put("binding_i_add_ttoo", "//*[contains(@id, 'pc1:pcgt2:seqTtooId::content')]");
         elements.put("binding_lov_add_ttoo", "//*[contains(@id, 'pc1:pcgt2:seqTtooId::lovIconId')]");
-        elements.put("binding_i_add_ttoo_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
+        elements.put("binding_i_add_ttoo_description", "//*[contains(@id, 'pc1:pcgt2:sbc3::content')]");
         elements.put("binding_cb_add_main", "//*[contains(@id, 'pc1:pcgt2:sbc3::content')]");
         elements.put("binding_cb_add_active", "//*[contains(@id, 'pc1:pcgt2:sbc4::content')]");
         elements.put("binding_i_add_market", "//*[contains(@id, 'pc1:pcgt2:codPaisId::content')]");
         elements.put("binding_lov_add_market", "//*[contains(@id, 'pc1:pcgt2:codPaisId::lovIconId')]");
-        elements.put("binding_i_add_market_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
+        elements.put("binding_i_add_market_description", "//*[contains(@id, 'pc1:pcgt2:it8')]");
         elements.put("binding_i_add_hotel", "//*[contains(@id, 'pc1:pcgt2:seqHotelId::content')]");
         elements.put("binding_lov_add_hotel", "//*[contains(@id, 'pc1:pcgt2:seqHotelId::lovIconId')]");
-        elements.put("binding_i_add_hotel_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
+        elements.put("binding_i_add_hotel_description", "//*[contains(@id, 'pc1:pcgt2:it12::content')]");
         elements.put("binding_i_add_chain", "//*[contains(@id, 'pcgt2:codCadenaId::content')]");
         elements.put("binding_lov_add_chain", "//*[contains(@id, 'pc1:pcgt2:codCadenaId::lovIconId')]");
-        elements.put("binding_i_add_chain_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
+        elements.put("binding_i_add_des_cadena", "//*[contains(@id, 'pc1:pcgt2:it7::content')]");
         elements.put("binding_i_add_destination", "//*[contains(@id, 'pc1:pcgt2:codDestinoId::content')]");
         elements.put("binding_lov_add_destination", "//*[contains(@id, 'pc1:pcgt2:codDestinoId::lovIconId')]");
-        elements.put("binding_i_add_destination_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
+        elements.put("binding_i_add_destination_description", "//*[contains(@id, 'pc1:pcgt2:it10::content')]");
         elements.put("binding_i_add_country", "//*[contains(@id, 'pc1:pcgt2:codPaisDestinoId::content')]");
         elements.put("binding_lov_add_country", "//*[contains(@id, 'pc1:pcgt2:codPaisDestinoId::lovIconId')]");
-        elements.put("binding_i_add_country_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
+        elements.put("binding_i_add_country_description", "//*[contains(@id, 'pc1:pcgt2:it13::content')]");
         elements.put("binding_b_add_save", "//*[contains(@id, 'pcgt2:btn_commitExit')]");
         //SEARCH
         elements.put("binding_b_search", "//*[contains(@id, 'qryId1::search')]");

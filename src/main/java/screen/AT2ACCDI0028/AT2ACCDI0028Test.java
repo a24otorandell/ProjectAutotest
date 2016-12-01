@@ -11,6 +11,8 @@ import java.util.Locale;
 
 /**
  * Created by vsolis on 29/11/2016.
+ *
+ * Campo "Desactivation Date" no funciona, descomentar código cuando lo haga
  */
 public class AT2ACCDI0028Test {
     protected AT2ACCDI0028Locators locators;
@@ -59,7 +61,7 @@ public class AT2ACCDI0028Test {
 
     protected boolean testCSED (TestDriver driver){
 
-        if(!Exclusions_maintenance_category(driver)){return false;}
+      //  if(!Exclusions_maintenance_category(driver)){return false;}
         if(!Exclusions_maintenance_binding(driver)){return false;}
 
 
@@ -68,7 +70,133 @@ public class AT2ACCDI0028Test {
     }
 
     private boolean Exclusions_maintenance_binding (TestDriver driver){
+        if(!Go_exclusions_maintenance_category_binding(driver)){return true;}
+        if(!Exclusions_maintenance_category_binding_add(driver)){return true;}
+        if(!Exclusions_maintenance_category_binding_search(driver)){return true;}
+        return true;
+    }
 
+    private boolean Exclusions_maintenance_category_binding_search (TestDriver driver){
+        String where;
+        where= " on SEARCH";
+        driver.getReport().addHeader(" SEARCH IN BINDING EXCLUSIONS MAINTENACE 2.0 ",3,false);
+
+
+        return true;
+    }
+
+    private boolean Go_exclusions_maintenance_category_binding (TestDriver driver){
+        String where;
+        where= " on GO TO BINDING";
+        driver.getReport().addHeader(" GO TO BINDING IN  EXCLUSIONS MAINTENACE 2.0 ",3,false);
+        if(!Functions.checkClick(driver,
+                new String[]{"binding_tab", getElements("binding_tab")}, //element to click
+                new String[]{"binding_b_add", getElements("binding_b_add")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+
+        return true;
+    }
+
+    private boolean Exclusions_maintenance_category_binding_add (TestDriver driver){
+        String where;
+        where= " on ADD";
+        driver.getReport().addHeader(" ADD IN BINDING EXCLUSIONS MAINTENACE 2.0 ",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"binding_b_add", getElements("binding_b_add")}, //element to click
+                new String[]{"binding_i_add_reason", getElements("binding_i_add_reason")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        String sl_reason[] = {"Selling to B2C client", "TEST Other reasons",
+                "Category","Reduced commission",
+                "Direct contract with the hotel", "Price Differences", "Does not comply with Binding",
+                "Client request", "Specific hotel request", "Signed by contract",
+                "Technical issues", "Client pricing to be revised", "Administration request",
+                 "B2B rate not valid for B2C clients"   };
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"binding_i_add_reason", getElements("binding_i_add_reason")},
+                sl_reason, "sl_reason", where)){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"binding_i_add_start_date",getElements("binding_i_add_start_date")},
+                "start_date", DataGenerator.getToday(driver,"dd/MM/yyyy"),  where)){return false;}
+        if (!Functions.checkboxValue(driver,
+                getElements("binding_cb_add_main"),"main",true,true, where)){return false;}//where
+        if(!Functions.createLov(driver,
+                new String[]{"binding_lov_add_ttoo",getElements("binding_lov_add_ttoo")}, // b_lov
+                new String[]{"binding_i_add_ttoo", getElements("binding_i_add_ttoo")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "tto", //Data name
+                where)){return false;}
+        if(!Functions.getValue(driver,new String[]{"binding_i_add_ttoo_description", getElements("binding_i_add_ttoo_description")}, // element path
+                "tto_description", // key for data value (the name)
+                where)){return false;} // where this operation occurs
+        if(!Functions.createLov(driver,
+                new String[]{"binding_lov_add_market",getElements("binding_lov_add_market")}, // b_lov
+                new String[]{"binding_i_add_market", getElements("binding_i_add_market")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "market_country", //Data name
+                where)){return false;}
+        Functions.break_time(driver,10,500);
+        if(!Functions.getValue(driver,new String[]{"binding_i_add_market_description", getElements("binding_i_add_market_description")}, // element path
+                "market_country_description", // key for data value (the name)
+                where)){return false;} // where this operation occurs
+        if(!Functions.createLov(driver,
+                new String[]{"binding_lov_add_hotel",getElements("binding_lov_add_hotel")}, // b_lov
+                new String[]{"binding_i_add_hotel", getElements("binding_i_add_hotel")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "hotel", //Data name
+                where)){return false;}
+        Functions.break_time(driver,10,500);
+        if(!Functions.getValue(driver,new String[]{"binding_i_add_hotel_description", getElements("binding_i_add_hotel_description")}, // element path
+                "hotel_country", // key for data value (the name)
+                where)){return false;} // where this operation occurs
+   /*     if(!Functions.createLov(driver,
+                new String[]{"binding_lov_add_chain",getElements("binding_lov_add_chain")}, // b_lov
+                new String[]{"binding_i_add_chain", getElements("binding_i_add_chain")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "chain", //Data name
+                where)){return false;}
+        if(!Functions.getValue(driver,new String[]{"binding_i_add_des_cadena", getElements("binding_i_add_des_cadena")}, // element path
+                "descadena", // key for data value (the name)
+                where)){return false;} // where this operation occurs
+        if(!Functions.createLov(driver,
+                new String[]{"binding_lov_add_destination",getElements("binding_lov_add_destination")}, // b_lov
+                new String[]{"binding_i_add_destination", getElements("binding_i_add_destination")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "destination", //Data name
+                where)){return false;}
+        if(!Functions.getValue(driver,new String[]{"binding_i_add_destination_description", getElements("binding_i_add_destination_description")}, // element path
+                "destination_description", // key for data value (the name)
+                where)){return false;} // where this operation occurs
+        if(!Functions.createLov(driver,
+                new String[]{"binding_lov_add_country",getElements("binding_lov_add_country")}, // b_lov
+                new String[]{"binding_i_add_country", getElements("binding_i_add_country")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "destination_country", //Data name
+                where)){return false;}
+        if(!Functions.getValue(driver,new String[]{"binding_i_add_country_description", getElements("binding_i_add_country_description")}, // element path
+                "destination_country_description", // key for data value (the name)
+                where)){return false;} // where this operation occurs*/
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"binding_b_add_save", getElements("binding_b_add_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                30, 500,
+                where)) {
+            return false;
+        }
         return true;
     }
 
@@ -352,9 +480,9 @@ public class AT2ACCDI0028Test {
                 30, 500, //seconds/miliseconds (driver wait)
                  where)){return false;}
 
-        String sl_reason[] = {"Sellin to B2C client", "TEST Other reasons",
-                "Category","Reduced comission",
-                "Direct contract with the hotel", "Price Differences", "Does not comply whith Binding",
+        String sl_reason[] = {"Selling to B2C client", "TEST Other reasons",
+                "Category","Reduced commission",
+                "Direct contract with the hotel", "Price Differences", "Does not comply with Binding",
                 "Client request", "Specific hotel request", "Signed by contract",
                 "Technical issues", "Client pricing to be revised", "Administration request", "Tes",
                 "TEST", "Test reason", "B2B rate not valid for B2C clients"   };
