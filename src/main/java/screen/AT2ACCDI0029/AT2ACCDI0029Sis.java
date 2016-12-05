@@ -164,10 +164,10 @@ public class AT2ACCDI0029Sis {
                 where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"search_i_incoming_office", getElements("search_i_incoming_office")},
+/*        if (!Functions.insertInput(driver, new String[]{"search_i_incoming_office", getElements("search_i_incoming_office")},
                 "incoming", getData("incoming"), where)) {
             return false;
-        }
+        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_market_country", getElements("search_lov_market_country")}, //LoV button
                 new String[]{"search_i_market_country", getElements("search_i_market_country")}, //external LoV input
@@ -177,10 +177,10 @@ public class AT2ACCDI0029Sis {
                 where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"search_i_country", getElements("search_i_country")},
+/*        if (!Functions.insertInput(driver, new String[]{"search_i_country", getElements("search_i_country")},
                 "country", getData("country"), where)) {
             return false;
-        }
+        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_chain", getElements("search_lov_chain")}, //LoV button
                 new String[]{"search_i_chain", getElements("search_i_chain")}, //external LoV input
@@ -275,7 +275,7 @@ public class AT2ACCDI0029Sis {
                 new String[]{"add_lov_hotel_code", getElements("add_lov_hotel_code")}, // b_lov
                 new String[]{"add_i_hotel_code", getElements("add_i_hotel_code")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "hotel_code", //Data name
                 where)) {
@@ -288,7 +288,7 @@ public class AT2ACCDI0029Sis {
         }
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_opaque_type", getElements("add_sl_opaque_type")},
-                "Always", "opaque", where)) {
+                "Opaque", "opaque", where)) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
