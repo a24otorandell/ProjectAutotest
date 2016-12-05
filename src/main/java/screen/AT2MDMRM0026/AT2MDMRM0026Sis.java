@@ -74,12 +74,12 @@ public class AT2MDMRM0026Sis {
         }
         if (!Functions.insertInput(driver, new String[]{"add_code",getElements("add_code")},
                 "code", String.valueOf(DataGenerator.random(1,450)), where)){return false;}
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_type", getElements("add_lov_type")}, //LoV button
                 new String[]{"add_i_type", getElements("add_i_type")}, //external LoV input
-                new String[]{"add_lov_type_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "Refine", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "type", //name of the data
                 where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_i_desc", getElements("add_i_desc")}, // element path
