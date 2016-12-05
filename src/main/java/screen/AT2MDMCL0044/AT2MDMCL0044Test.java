@@ -102,7 +102,7 @@ public class AT2MDMCL0044Test {
                 new String[]{"add_cn_lov_client", getElements("add_cn_lov_client")}, // b_lov
                 new String[]{"add_cn_i_client", getElements("add_cn_i_client")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "client", //Data name
                 where)){
@@ -118,6 +118,7 @@ public class AT2MDMCL0044Test {
                 where)){
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_cn_lov_type", getElements("add_cn_lov_type")}, // b_lov
                 new String[]{"add_cn_i_type", getElements("add_cn_i_type")}, // i_lov
@@ -284,7 +285,7 @@ public class AT2MDMCL0044Test {
                 new String[]{"add_cn_lov_client", getElements("add_cn_lov_client")}, // b_lov
                 new String[]{"add_cn_i_client", getElements("add_cn_i_client")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult2, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "client", //Data name
                 where)){
@@ -611,6 +612,7 @@ public class AT2MDMCL0044Test {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_cn_i_client", getElements("qbe_cn_i_client")}, //search button
                 new String[]{"MDM_cn_e_result", getElements("MDM_cn_e_result")}, //result element
@@ -637,6 +639,7 @@ public class AT2MDMCL0044Test {
                 "value", getData("value"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_cd_i_property", getElements("qbe_cd_i_property")}, //search button
                 new String[]{"MDM_cd_e_result", getElements("MDM_cd_e_result")}, //result element
@@ -672,7 +675,7 @@ public class AT2MDMCL0044Test {
                 getData("nt_active"), "nt_active", where)) {
             return false;
         }
-
+        Functions.break_time(driver, 90, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_nt_i_type", getElements("qbe_nt_i_type")}, //search button
                 new String[]{"MDM_nt_e_result", getElements("MDM_nt_e_result")}, //result element
@@ -708,6 +711,7 @@ public class AT2MDMCL0044Test {
                 "default", getData("default"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_np_i_property", getElements("qbe_np_i_property")}, //search button
                 new String[]{"MDM_np_e_result", getElements("MDM_np_e_result")}, //result element
