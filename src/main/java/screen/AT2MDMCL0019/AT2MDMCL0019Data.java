@@ -44,9 +44,9 @@ public class AT2MDMCL0019Data {
         data.put("interface_description", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("street", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("city", DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("postcode", DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("telephone", DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("fax", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("postcode", Integer.toString(DataGenerator.random(1000, 9999)));
+        data.put("telephone", Integer.toString(DataGenerator.random(100000000, 999999999)));
+        data.put("fax", Integer.toString(DataGenerator.random(100000000, 999999999)));
         data.put("name", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("surname", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("email", DataGenerator.getRandomAlphanumericSequence(5, true));
@@ -64,9 +64,9 @@ public class AT2MDMCL0019Data {
         data.put("id_web_description_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("street_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("city_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("postcode_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("telephone_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
-        data.put("fax_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("postcode_edit", Integer.toString(DataGenerator.random(1000, 9999)));
+        data.put("telephone_edit", Integer.toString(DataGenerator.random(100000000, 999999999)));
+        data.put("fax_edit", Integer.toString(DataGenerator.random(100000000, 999999999)));
         data.put("name_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("surname_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("email_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
