@@ -220,6 +220,7 @@ public class AT2MDMRM0011Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_brand_description", getElements("search_i_brand_description")}, // element path
                 "brand_description", getData("brand_description"), where)) {
             return false;
