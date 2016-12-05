@@ -42,7 +42,7 @@ public class AT2MDMSP0015Data {
             data.put("stop_time", DataGenerator.getRelativeDateToday("hh:mm:ss", 0, 0, 0));
             data.put("start_time", DataGenerator.getRelativeDateToday("hh:mm:ss", 0, 1, 0));
             data.put("stop_date", DataGenerator.getToday());
-            data.put("start_date", DataGenerator.getToday());
+            data.put("start_date", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, 1, 0));
             data.put("comments", DataGenerator.getRandomAlphanumericSequence(5, true));
             data.put("stop_time_edit", DataGenerator.getRelativeDateToday("hh:mm:ss", 0, 2, 0));
             data.put("start_time_edit", DataGenerator.getRelativeDateToday("hh:mm:ss", 0, 3, 0));
