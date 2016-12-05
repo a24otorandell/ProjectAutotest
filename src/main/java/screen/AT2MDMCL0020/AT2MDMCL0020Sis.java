@@ -95,12 +95,12 @@ public class AT2MDMCL0020Sis {
                 "pwd", DataGenerator.getRandomAlphanumericSequence(6, true), where)) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_to", getElements("add_lov_to")}, //LoV button
                 new String[]{"add_i_to", getElements("add_i_to")}, //external LoV input
-                new String[]{"add_lov_to_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "52650", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "to", //name of the data
                 where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_e_des_ttoo", getElements("add_e_des_ttoo")}, // element path
@@ -224,22 +224,22 @@ public class AT2MDMCL0020Sis {
                 "pwd", DataGenerator.getRandomAlphanumericSequence(6, true), where)) {
             return false;
         }
-/*        if(!Functions.createLov(driver,
+        if(!Functions.createLov(driver,
                 new String[]{"add_lov_to",getElements("add_lov_to")}, // b_lov
                 new String[]{"add_i_to", getElements("add_i_to")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "to", //Data name
-                where)){return false;}*/
-        if (!Functions.createLovByValue(driver,
+                where)){return false;}
+/*        if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_to", getElements("add_lov_to")}, //LoV button
                 new String[]{"add_i_to", getElements("add_i_to")}, //external LoV input
                 new String[]{"add_lov_to_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 "562", // value to search
                 "to", //name of the data
-                where)){return false;}
+                where)){return false;}*/
         if(!Functions.getValue(driver,new String[]{"add_e_des_ttoo", getElements("add_e_des_ttoo")}, // element path
                 "to_desc", // key for data value (the name)
                 where)){return false;}
