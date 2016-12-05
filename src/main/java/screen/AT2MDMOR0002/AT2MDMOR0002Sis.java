@@ -181,34 +181,42 @@ public class AT2MDMOR0002Sis {
                 "type", getData("type"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_groups", getElements("qbe_sl_groups")},
                 getData("group"), "group", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_internet", getElements("qbe_sl_internet")},
                 getData("internet"), "internet", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_retailer", getElements("qbe_sl_retailer")},
                 getData("retailer"), "retailer", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_circuits", getElements("qbe_sl_circuits")},
                 getData("circuits"), "circuits", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_lates", getElements("qbe_sl_lates")},
                 getData("lates"), "lates", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_island", getElements("qbe_sl_island")},
                 getData("island"), "island", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_visible", getElements("qbe_sl_visible")},
                 getData("visible"), "visible", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_booking_type", getElements("qbe_i_booking_type")}, //any query input
                 new String[]{"booking_e_result", getElements("booking_e_result")}, //table result
