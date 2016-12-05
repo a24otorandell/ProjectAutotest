@@ -30,6 +30,7 @@ public class AT2MDMCL0045Locators {
         elements.put("results_e_records", "//*[contains(@id, 'pc1:ot2')]");
         elements.put("results_ck_active", "//*[contains(@id, 'sbc3::content')]/span/img");
         elements.put("results_ck_payment", "//*[contains(@id, 'sbc4::content')]/span/img");
+        elements.put("results_ck_extra", "//*[contains(@id, 'sbc5::content')]/span/img");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId2::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId2::reset')]");
@@ -59,6 +60,7 @@ public class AT2MDMCL0045Locators {
         elements.put("add_i_member_username", "//*[contains(@id, 'it16::content')]");
         elements.put("add_i_member_email", "//*[contains(@id, 'it17::content')]");
         elements.put("add_ck_payment", "//*[contains(@id, 'sbc2::content')]");
+        elements.put("add_ck_extra", "//*[contains(@id, 'sbc6::content')]");
         //QBE        
         elements.put("qbe_i_key","//*[contains (@id, 'afr_pc1_afr_t1_afr_c1::content')]");
         elements.put("qbe_i_secret_key","//*[contains (@id,'afr_pc1_afr_t1_afr_c11::content')]");
@@ -76,5 +78,6 @@ public class AT2MDMCL0045Locators {
         elements.put("qbe_i_member_username", "//*[contains(@id, 'afr_pc1_afr_t1_afr_c13::content')]");
         elements.put("qbe_i_member_email", "//*[contains(@id, 'afr_pc1_afr_t1_afr_c14::content')]");
         elements.put("qbe_sl_payment","//*[contains (@id,'selectOneChoice2::content')]");
+        elements.put("qbe_sl_extra","//*[contains (@id,'selectOneChoice3::content')]");
     }
 }

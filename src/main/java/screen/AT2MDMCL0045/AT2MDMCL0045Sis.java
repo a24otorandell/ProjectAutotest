@@ -142,7 +142,7 @@ public class AT2MDMCL0045Sis {
                 new String[]{"add_lov_client",getElements("add_lov_client")}, // b_lov
                 new String[]{"add_i_client", getElements("add_i_client")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "client", //Data name
                 where)){return false;}
@@ -150,7 +150,7 @@ public class AT2MDMCL0045Sis {
                 new String[]{"add_lov_interface",getElements("add_lov_interface")}, // b_lov
                 new String[]{"add_i_interface", getElements("add_i_interface")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "interface", //Data name
                 where)){return false;}
