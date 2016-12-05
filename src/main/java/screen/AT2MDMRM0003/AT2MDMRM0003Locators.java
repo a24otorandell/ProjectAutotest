@@ -121,10 +121,20 @@ public class AT2MDMRM0003Locators {
         elements.put("add_lov_configuration_sequence", "//*[contains(@id, 'pcgt3:cfgSeq1Id::lovIconId')]");
         elements.put("add_sl_status", "//*[contains(@id, 'pcgt3:soc1::content')]");
         elements.put("add_i_est_value", "//*[contains(@id, 'pcgt3:it19::content')]");
+        elements.put("add_i_char_name", "//*[contains(@id, 'pcgt3:it16::content')]");
+        elements.put("add_i_char_desc", "//*[contains(@id, 'pcgt3:it15::content')]");
+        elements.put("add_i_agency", "//*[contains(@id, 'pcgt3:it4::content')]");
+        elements.put("add_i_idweb", "//*[contains(@id, 'pcgt3:it3::content')]");
+        elements.put("add_sl_evolution", "//*[contains(@id, 'pcgt3:soc5::content')]");
         //QBE
         elements.put("qbe_i_characteristic_sequence", "//*[contains(@id, 'resId3:inputText4::content')]");
         elements.put("qbe_i_configuration_sequence", "//*[contains(@id, 'resId3:inputText5::content')]");
         elements.put("qbe_sl_status", "//*[contains(@id, 'resId3:soc2::content')]");
         elements.put("qbe_i_est_value", "//*[contains(@id, 'afr_resId3c4::content')]");
+        elements.put("qbe_i_char_name", "//*[contains(@id, 'afr_resId3c11::content')]");
+        elements.put("qbe_i_char_desc", "//*[contains(@id, 'afr_resId3c9::content')]");
+        elements.put("qbe_i_agency", "//*[contains(@id, 'afr_resId3c15::content')]");
+        elements.put("qbe_i_idweb", "//*[contains(@id, 'afr_resId3c16::content')]");
+        elements.put("qbe_sl_evolution", "//*[contains(@id, 'resId3:soc3778::content')]");
     }
 }

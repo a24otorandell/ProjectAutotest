@@ -503,6 +503,21 @@ public class AT2MDMRM0003Test {
                 "INACTIVE", "status", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_est_value",getElements("add_i_est_value")},
                 "value", String.valueOf(DataGenerator.random(1,10)), where)){return false;}
+        if(!Functions.getText(driver,new String[]{"add_i_char_name", getElements("add_i_char_name")}, // element path
+                "char_name", // key for data value (the name)
+                where)){return false;}
+        if(!Functions.getText(driver,new String[]{"add_i_char_desc", getElements("add_i_char_desc")}, // element path
+                "char_desc", // key for data value (the name)
+                where)){return false;}
+        if(!Functions.getText(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+                "agency", // key for data value (the name)
+                where)){return false;}
+        if(!Functions.getText(driver,new String[]{"add_i_idweb", getElements("add_i_idweb")}, // element path
+                "idw", // key for data value (the name)
+                where)){return false;}
+        if(!Functions.getText(driver,new String[]{"add_sl_evolution", getElements("add_sl_evolution")}, // element path
+                "evolution", // key for data value (the name)
+                where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_status_b_save", getElements("add_status_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -539,6 +554,26 @@ public class AT2MDMRM0003Test {
                 "value", getData("value"), where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_char_name", getElements("qbe_i_char_name")},
+                "char_name", getData("char_name"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_char_desc", getElements("qbe_i_char_desc")},
+                "char_desc", getData("char_desc"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_agency", getElements("qbe_i_agency")},
+                "agency", getData("agency"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_idweb", getElements("qbe_i_idweb")},
+                "idw", getData("idw"), where)) {
+            return false;
+        }
+        Functions.break_time(driver, 3, 200);
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_evolution",getElements("qbe_sl_evolution")},
+                getData("evolution"), "evolution", where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_characteristic_sequence", getElements("qbe_i_characteristic_sequence")}, //any query input
                 new String[]{"status_e_result", getElements("status_e_result")}, //table result
