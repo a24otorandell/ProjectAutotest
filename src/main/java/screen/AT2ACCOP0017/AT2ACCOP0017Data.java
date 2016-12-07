@@ -13,7 +13,7 @@ public class AT2ACCOP0017Data {
     DataHarvester harvester;
 
     public AT2ACCOP0017Data(String enviroment) {
-        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources AT2ACCOP0017Values.txt");
+        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources/AT2ACCOP0017Values.txt");
         setData();
     }
 

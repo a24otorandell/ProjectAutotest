@@ -9,6 +9,8 @@ import core.recursiveData.recursiveXPaths;
 import org.apache.bcel.generic.RETURN;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -44,12 +46,12 @@ public class AT2ACCOP0017Sis {
     public boolean testCSED(TestDriver driver) {
         if (!getvalues(driver))return false;
         if (!getvaluesNull(driver))return false;
-        //if (!qbe(driver))return false;
-        //if (!validationError(driver))return false;
-        //if (!qbeValidationError(driver))return false;
-        //if (!processError(driver))return false;
-        //if (!processErrorTabCE_Payment(driver))return false;
-        //if (!processErrorTabCE_itp(driver))return false;
+        if (!qbe(driver))return false;
+        if (!validationError(driver))return false;
+        if (!qbeValidationError(driver))return false;
+        if (!processError(driver))return false;
+        if (!processErrorTabCE_Payment(driver))return false;
+        if (!processErrorTabCE_itp(driver))return false;
         if (!search(driver))return false;
         if (!extraActions(driver))return false;
 
@@ -58,6 +60,7 @@ public class AT2ACCOP0017Sis {
 
     private boolean getvalues(TestDriver driver) {
         driver.getReport().addHeader("GIVE ELEMENTS IN MAIN TABLE", 3, false);
+        Functions.break_time(driver,120,500);
         Functions.zoomOut(driver,6);
         String where = " GIVE VALUE FROM MAIN TABLE";
         if (!Functions.insertInput(driver, new String[]{"search_i_datefrom", getElements("search_i_datefrom")},
@@ -121,12 +124,12 @@ public class AT2ACCOP0017Sis {
         driver.getReport().addHeader("ORDER THE ELEMENTS NULL AND GIVE AGAIN", 3, false);
         //Se realiza un segundo getText debido al ser una tabla donde no todos los campos tienen contenido y se reordena las columnas
         //buscamos por todos los campos, ya que no todos lo campos estan rellenados en esta tabla
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 120,500);
         if (data.getData().get("qbe_e_error").equals(" ")) {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_error", getElements("tb_b_query_b_error")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
               /*GET TEXT ERROR*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_error", getElements("tb_b_query_e_error")}, // element path
                     "qbe_e_error", // key for data value (the name)
@@ -136,7 +139,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_operation", getElements("tb_b_query_b_operation")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_operation", getElements("tb_b_query_e_operation")}, // element path
                     "qbe_e_operation", // key for data value (the name)
                     " on QbE operation"))return false;
@@ -145,7 +148,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_order_code", getElements("tb_b_query_b_order_code")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_order_code", getElements("tb_b_query_e_order_code")}, // element path
                     "qbe_e_order_code", // key for data value (the name)
                     " on QbE payment"))return false;
@@ -154,7 +157,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_transaction", getElements("tb_b_query_b_transaction")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_transaction", getElements("tb_b_query_e_transaction")}, // element path
                     "qbe_e_transaction", // key for data value (the name)
                     " on QbE transaction"))return false;
@@ -163,7 +166,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_receptivo", getElements("tb_b_query_b_receptivo")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT BOOKING*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_receptivo", getElements("tb_b_query_e_receptivo")}, // element path
                     "qbe_e_receptivo", // key for data value (the name)
@@ -173,7 +176,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_booking", getElements("tb_b_query_b_booking")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT BOOKING*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_booking", getElements("tb_b_query_e_booking")}, // element path
                     "qbe_e_booking", // key for data value (the name)
@@ -183,7 +186,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_select_otype", getElements("tb_b_query_b_select_otype")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT OPERATION TYPE*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_operation_type", getElements("tb_b_query_e_operation_type")}, // element path
                     "qbe_e_operation_type", // key for data value (the name)
@@ -194,7 +197,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_select_type", getElements("tb_b_query_b_select_type")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT OPERATION TYPE*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_type", getElements("tb_b_query_e_type")}, // element path
                     "qbe_e_type", // key for data value (the name)
@@ -206,7 +209,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_orderreport", getElements("tb_b_query_b_orderreport")}, //element to click
                     " on QbE MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT ORDER REPORT*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_order_report", getElements("tb_b_query_e_order_report")}, // element path
                     "qbe_e_order_report", // key for data value (the name)
@@ -216,7 +219,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_financialreport", getElements("tb_b_query_b_financialreport")}, //element to click
                     " on QbE MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT FINANCIAL REPORT*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_financial_report", getElements("tb_b_query_e_financial_report")}, // element path
                     "qbe_e_financial_report", // key for data value (the name)
@@ -226,7 +229,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_message", getElements("tb_b_query_b_message")}, //element to click
                     " on QbE MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT MESSAGE*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_message", getElements("tb_b_query_e_message")}, // element path
                     "qbe_e_message", // key for data value (the name)
@@ -236,7 +239,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_date", getElements("tb_b_query_b_date")}, //element to click
                     " on QbE MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT DATE*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_date", getElements("tb_b_query_e_date")}, // element path
                     "qbe_e_date", // key for data value (the name)
@@ -246,7 +249,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_techerrorcode", getElements("tb_b_query_b_techerrorcode")}, //element to click
                     " on QbE MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT TECH ERROR CODE*/
             if (!Functions.getText(driver,
                     new String[]{"tb_b_query_e_tech_error_code", getElements("tb_b_query_e_tech_error_code")}, // element path
@@ -260,7 +263,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_maperrorcode", getElements("tb_b_query_b_maperrorcode")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT MAP ERROR DESC*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_map_error_code", getElements("tb_b_query_e_map_error_code")}, // element path
                     "qbe_e_map_error_code", // key for data value (the name)
@@ -274,7 +277,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_pspecode", getElements("tb_b_query_b_pspecode")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT PSP ERROR CODE*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_psp_error_code", getElements("tb_b_query_e_psp_error_code")}, // element path
                     "qbe_e_psp_error_code", // key for data value (the name)
@@ -287,7 +290,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_token", getElements("tb_b_query_b_token")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT TOKEN ERROR*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_token_error", getElements("tb_b_query_e_token_error")}, // element path
                     "qbe_e_token_error", // key for data value (the name)
@@ -297,7 +300,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_validated", getElements("tb_b_query_b_validated")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT VALIDATED*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_validated", getElements("tb_b_query_e_validated")}, // element path
                     "qbe_e_validated", // key for data value (the name)
@@ -307,7 +310,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_validatedby", getElements("tb_b_query_b_validatedby")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT VALIDATED BY*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_validated_by", getElements("tb_b_query_e_validated_by")}, // element path
                     "qbe_e_validated_by", // key for data value (the name)
@@ -317,7 +320,7 @@ public class AT2ACCOP0017Sis {
             if (!Functions.simpleClick(driver,
                     new String[]{"tb_b_query_b_validateddate", getElements("tb_b_query_b_validateddate")}, //element to click
                     " on QbE TAB MONITORING"))return false;
-            Functions.break_time(driver, 30, 500);
+            Functions.break_time(driver, 120,500);
             /*GET TEXT VALIDATED DATE*/
             if (!Functions.getText(driver, new String[]{"tb_b_query_e_validated_date", getElements("tb_b_query_e_validated_date")}, // element path
                     "qbe_e_validate_date", // key for data value (the name)
@@ -335,14 +338,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_error", getElements("tb_b_query_i_error")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_error", getElements("tb_b_query_i_error")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_operation", getElements("tb_b_query_i_operation")},
                 "qbe_e_operation",
                 data.getData().get("qbe_e_operation"),
@@ -351,14 +354,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_operation", getElements("tb_b_query_i_operation")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_operation", getElements("tb_b_query_i_operation")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_order_code", getElements("tb_b_query_i_order_code")},
                 "qbe_e_order_code",
                 data.getData().get("qbe_e_order_code"),
@@ -367,14 +370,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_order_code", getElements("tb_b_query_i_order_code")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_order_code", getElements("tb_b_query_i_order_code")},
                 "clean_qbe",
                 "e%-%",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_transaction", getElements("tb_b_query_i_transaction")},
                 "qbe_e_transaction",
                 data.getData().get("qbe_e_transaction"),
@@ -383,7 +386,7 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_transaction", getElements("tb_b_query_i_transaction")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
 
         //Clean QbE
@@ -391,7 +394,7 @@ public class AT2ACCOP0017Sis {
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_receptivo", getElements("tb_b_query_i_receptivo")},
                 "qbe_e_receptivo",
                 data.getData().get("qbe_e_receptivo"),
@@ -400,14 +403,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_booking", getElements("tb_b_query_i_booking")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_receptivo", getElements("tb_b_query_i_receptivo")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_booking", getElements("tb_b_query_i_booking")},
                 "qbe_e_booking",
                 data.getData().get("qbe_e_booking"),
@@ -416,14 +419,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_booking", getElements("tb_b_query_i_booking")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_booking", getElements("tb_b_query_i_booking")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.selectText(driver, new String[]{"tb_b_query_select_otype", getElements("tb_b_query_select_otype")},
                 "Cancel",
                 "qbe_e_operation_type",
@@ -432,7 +435,7 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_select_otype", getElements("tb_b_query_select_otype")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " on QBE BOOKING"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
 
         //Clean QbE
@@ -440,7 +443,7 @@ public class AT2ACCOP0017Sis {
                 "",
                 "clean_qbe",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.selectText(driver, new String[]{"tb_b_query_select_type", getElements("tb_b_query_select_type")},
                 data.getData().get("qbe_e_type"),
                 "qbe_e_type",
@@ -449,7 +452,7 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_select_otype", getElements("tb_b_query_select_otype")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
 
         //Clean QbE
@@ -457,7 +460,7 @@ public class AT2ACCOP0017Sis {
                 "",
                 "clean_qbe",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_orderreport", getElements("tb_b_query_i_orderreport")},
                 "order_report",
                 data.getData().get("qbe_e_order_report"),
@@ -466,14 +469,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_orderreport", getElements("tb_b_query_i_orderreport")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_orderreport", getElements("tb_b_query_i_orderreport")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_financialreport", getElements("tb_b_query_i_financialreport")},
                 "qbe_e_financial_report",
                 data.getData().get("qbe_e_financial_report"),
@@ -482,14 +485,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_financialreport", getElements("tb_b_query_i_financialreport")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_financialreport", getElements("tb_b_query_i_financialreport")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_message", getElements("tb_b_query_i_message")},
                 "qbe_e_message",
                 data.getData().get("qbe_e_message"),
@@ -498,7 +501,7 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_message", getElements("tb_b_query_i_message")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
 
         //Clean QbE
@@ -506,7 +509,7 @@ public class AT2ACCOP0017Sis {
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_date", getElements("tb_b_query_i_date")},
                 "qbe_e_date",
                 data.getData().get("qbe_e_date"),
@@ -521,12 +524,12 @@ public class AT2ACCOP0017Sis {
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_techerrorcode", getElements("tb_b_query_i_techerrorcode")},
                 "qbe_e_error_code",
                 data.getData().get("qbe_e_error_code"),
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_techerrordesc", getElements("tb_b_query_i_techerrordesc")},
                 "tech_error_desc",
                 data.getData().get("qbe_e_tech_error_desc"),
@@ -535,24 +538,24 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_techerrordesc", getElements("tb_b_query_i_techerrordesc")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_techerrorcode", getElements("tb_b_query_i_techerrorcode")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_techerrordesc", getElements("tb_b_query_i_techerrordesc")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_maperrorcode", getElements("tb_b_query_i_maperrorcode")},
                 "qbe_e_map_error_code",
                 data.getData().get("qbe_e_map_error_code"),
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_maperrordesc", getElements("tb_b_query_i_maperrordesc")},
                 "qbe_e_map_error_desc",
                 data.getData().get("qbe_e_map_error_desc"),
@@ -561,24 +564,24 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_maperrordesc", getElements("tb_b_query_i_maperrordesc")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_maperrorcode", getElements("tb_b_query_i_maperrorcode")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_maperrordesc", getElements("tb_b_query_i_maperrordesc")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_pspecode", getElements("tb_b_query_i_pspecode")},
                 "qbe_e_psp_error_code",
                 data.getData().get("qbe_e_psp_error_code"),
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_pspedesc", getElements("tb_b_query_i_pspedesc")},
                 "qbe_e_psp_error_desc",
                 data.getData().get("qbe_e_psp_error_desc"),
@@ -587,7 +590,7 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_pspedesc", getElements("tb_b_query_i_pspedesc")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
 
         //Clean QbE
@@ -595,12 +598,12 @@ public class AT2ACCOP0017Sis {
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_pspedesc", getElements("tb_b_query_i_pspedesc")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_token", getElements("tb_b_query_i_token")},
                 "qbe_e_token_error",
                 data.getData().get("qbe_e_token_error"),
@@ -609,7 +612,7 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_token", getElements("tb_b_query_i_token")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
 
         //Clean QbE
@@ -617,12 +620,12 @@ public class AT2ACCOP0017Sis {
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.selectText(driver, new String[]{"tb_b_query_i_warning", getElements("tb_b_query_i_warning")},
                 data.getData().get("qbe_e_warning"),
                 "qbe_e_warning",
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.selectText(driver,  new String[]{"tb_b_query_i_validated", getElements("tb_b_query_i_validated")},
                 data.getData().get("qbe_e_validated"),
                 "qbe_e_validated",
@@ -633,12 +636,12 @@ public class AT2ACCOP0017Sis {
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
 
         //Clean QbE
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.selectText(driver, new String[]{"tb_b_query_i_validated", getElements("tb_b_query_i_validated")},
                 "",
                 "clean_qbe",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         if (!Functions.selectText(driver, new String[]{"tb_b_query_i_warning", getElements("tb_b_query_i_warning")},
                 "",
                 "clean_qbe",
@@ -651,14 +654,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_validatedby", getElements("tb_b_query_i_validatedby")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_validatedby", getElements("tb_b_query_i_validatedby")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_validateddate", getElements("tb_b_query_i_validateddate")},
                 "validated_date",
@@ -668,14 +671,14 @@ public class AT2ACCOP0017Sis {
                 new String[]{"tb_b_query_i_validateddate", getElements("tb_b_query_i_validateddate")}, //any query input
                 new String[]{"search_e_record", getElements("search_e_record")}, //table result
                 " \"ERROR MONITORING\" TABLE QUERY"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
 
         //Clean QbE
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_validateddate", getElements("tb_b_query_i_validateddate")},
                 "clean_qbe",
                 "",
                 " on CLEAN QBE"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
         return true;
     }
     private boolean validationError(TestDriver driver) {
@@ -1016,10 +1019,10 @@ public class AT2ACCOP0017Sis {
                 "qbe_e_order_code",
                 "",
                 " ON SEARCH OPERATION"))return false;
-        /*if (!Functions.simpleClick(driver,
-                new String[]{"tb_clean_query", getElements("tb_clean_query")}, //element to click
-                " on GO TO SCREEN AT2ACCOP0017"))return false;
-        Functions.break_time(driver,600,1000);
+        if (!Functions.insertInput(driver, new String[]{"search_i_order_code", getElements("search_i_order_code")},
+                "qbe_e_order_code",
+                "e%-%",
+                " on SEARCH ORDER CODE"))return false;
         /*BUSCAR POR SEARCH LOS DATOS DE GET TEXT*/
         if (!Functions.insertInput(driver, new String[]{"search_i_operation", getElements("search_i_operation")},
                 "qbe_e_operation",
@@ -1064,6 +1067,10 @@ public class AT2ACCOP0017Sis {
                 data.getData().get("qbe_e_order_code"),
                 " on SEARCH ORDER CODE"))return false;
         if (!search_and_reset(driver,"search_i_order_code"))return false;
+        if (!Functions.insertInput(driver, new String[]{"search_i_order_code", getElements("search_i_order_code")},
+                "qbe_e_order_code",
+                "e%-%",
+                " on SEARCH ORDER CODE"))return false;
         //BUG EN DESPLEGABLE DE OPERATION TYPE
         if (!Functions.selectText(driver,
                 new String[]{"search_select_otype", getElements("search_select_otype")},
@@ -1128,8 +1135,8 @@ public class AT2ACCOP0017Sis {
         //BUG EN DESPLEGABLE VALIDATED
         if (!Functions.selectText(driver,
                 new String[]{"search_select_validate", getElements("search_select_validate")},
-                data.getData().get("qbe_e_warning"),
-                "qbe_e_warning",
+                data.getData().get("qbe_e_validated"),
+                "qbe_e_validated",
                 " on SEARCH WARNING"))return false;
         if (!search_and_clear_list(driver,"search_select_validate"))return false;
         if (!Functions.insertInput(driver, new String[]{"search_i_validatedby", getElements("search_i_validatedby")},
@@ -1165,16 +1172,21 @@ public class AT2ACCOP0017Sis {
 
     private boolean search_and_reset(TestDriver driver,String xpath){
         /*GENERIC SEARCH*/
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_search", getElements("search_b_search")}, //search button
-                new String[]{"search_e_record", getElements("search_e_record")}, //result element
-                60,1000,
-                " on SEARCH"))return false;
+        Functions.break_time(driver,30,500);
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //element to click
+                " on SEARCH BUTTON")){return false;}
+        Functions.break_time(driver,500,500);
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_e_record", getElements("search_e_record")}, //element to click
+                " on ELEMENT RESULT")){return false;}
+        Functions.sleep(2000);
         if (!Functions.insertInput(driver,
                 new String[]{xpath, getElements(xpath)}, //element to click
                 "clear_input",
                 "",
-                " on RESET SEARCH BLOCK"))return false;
+                " on CLEAR INPUT IN SEARCH BLOCK"))return false;
+        Functions.break_time(driver,30,500);
         return true;
     }
     private boolean search_and_clear_list(TestDriver driver,String xpath){
