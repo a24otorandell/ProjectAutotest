@@ -38,10 +38,38 @@ public class AT2ACCCO0045Sis {
     }
 
     public boolean testCSED(TestDriver driver) {
+        if (!search_special(driver))return false;
         if (!get_values(driver))return false;
         if (!search_element(driver))return false;
+        if (!acepted_rule(driver))return false;
         if (!query_element(driver))return false;
         if (!other_elements(driver))return false;
+        return true;
+    }
+
+    private boolean acepted_rule(TestDriver driver) {
+        driver.getReport().addHeader("ACCEPT RULE", 3, false);
+        Functions.break_time(driver,60,500);
+        if (!Functions.simpleClick(driver,
+                new String[]{"result_e_select_checkbox", getElements("result_e_select_checkbox")}, //element to click
+                " on ACCEPT RULE PROCESS"))return false;
+        if (!Functions.insertInput(driver,
+                new String[]{"result_e_input_observaciones",getElements("result_e_input_observaciones")},
+                "observaciones",
+                "Test Acept Rule in Audit Data screen",
+                " on ACCEPT RULE PROCESS"))return false;
+        if (!Functions.checkClick(driver,
+                new String[]{"b_actions",getElements("b_actions")},
+                new String[]{"b_actions_b_accept",getElements("b_actions_b_accept")},
+                " on ACCEPT RULE PROCESS"))return false;
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"b_actions_b_accept",getElements("b_actions_b_accept")},
+                new String[]{"b_actions_b_accept",getElements("b_actions_b_accept")},
+                " on ACCEPT RULE PROCESS"))return false;
+        data.getData().put("accept","Yes");
+        data.getData().put("date_accept",DataGenerator.getToday(driver,"dd/MM/yyyy"));
+        data.getData().put("user_accept",driver.getUserdetails().getUsername());
+        Functions.break_time(driver,360,500);
         return true;
     }
     public boolean search_element (TestDriver driver) {
@@ -105,75 +133,25 @@ public class AT2ACCCO0045Sis {
     }
     public boolean get_values (TestDriver driver) {
         driver.getReport().addHeader("GET VALUES", 3, false);
-
-        search_accepted(driver);
         Functions.zoomOut(driver);
-        //RECEPTIVE
-        if (!Functions.getText(driver,
-                new String[]{"result_e_receptive", getElements("result_e_receptive")}, // element path
-                "receptive", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //COMPANY
-        if (!Functions.getText(driver,
-                new String[]{"result_e_company", getElements("result_e_company")}, // element path
-                "company", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //OFFICE
-        if (!Functions.getText(driver,
-                new String[]{"result_e_office", getElements("result_e_office")}, // element path
-                "office", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //CONTRACT
-        if (!Functions.getText(driver,
-                new String[]{"result_e_contract", getElements("result_e_contract")}, // element path
-                "contract", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //RULE CODE
-        if (!Functions.getText(driver,
-                new String[]{"result_e_rulecode", getElements("result_e_rulecode")}, // element path
-                "rule_code", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //DESCRIPTION
-        if (!Functions.getText(driver,
-                new String[]{"result_e_description", getElements("result_e_description")}, // element path
-                "description", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //APP DATE
-        if (!Functions.getText(driver,
-                new String[]{"result_e_appdate", getElements("result_e_appdate")}, // element path
-                "appdate", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
 
+        String[] columns = {"select_checkbox","receptive","company","office","contract","rule_code","description","appdate","validation","state","accept"};
+        if (!Functions.collectTableData(driver,columns,getElements("result_table"),1," on GET VALUES IN TABLE RESULT"))return false;
         String [] appdate = data.getData().get("appdate").split(" ");
-
         data.getData().put("appdate_from", DataGenerator.getRelativeDate(driver,appdate[0], "dd/MM/yyyy",0, 0, 0));
         data.getData().put("appdate_to",DataGenerator.getRelativeDate(driver,appdate[0], "dd/MM/yyyy",0, 0, 0));
-
-        //VALIDATION
-        if (!Functions.getText(driver,
-                new String[]{"result_e_uvalidate", getElements("result_e_uvalidate")}, // element path
-                "validation", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //STATE
-        if (!Functions.getText(driver,
-                new String[]{"result_e_state", getElements("result_e_state")}, // element path
-                "state", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //USER ACCEPT
-        if (!Functions.getText(driver,
-                new String[]{"result_e_user_accept", getElements("result_e_user_accept")}, // element path
-                "user_accept", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
-        //DATE ACCEPT
-        if (!Functions.getText(driver,
-                new String[]{"result_e_date_accept", getElements("result_e_date_accept")}, // element path
-                "date_accept", // key for data value (the name)
-                " on RESULT"))return false; // where this operation occurs
         Functions.zoomIn(driver);
         return true;
     }
     public boolean query_element (TestDriver driver) {
         driver.getReport().addHeader("SEARCH BY QBE", 3, false);
+        if (!Functions.selectText(driver,new String[]{"search_i_accepted", getElements("search_i_accepted")},
+                "Yes","accepted", " PREPAER SEARCH BY QBE "))return false;
+        if (!Functions.checkClick(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"search_e_result", getElements("search_e_result")}, //result element
+                360,1000,
+                " PREPAER SEARCH BY QBE "))return false; // where
 
         Functions.zoomOut(driver);
         if (!Functions.clickQbE(driver,
@@ -214,7 +192,7 @@ public class AT2ACCCO0045Sis {
         if (!Functions.insertInput(driver,
                 new String[]{"tb_query_i_description",getElements("tb_query_i_description")},
                 "description",
-                data.getData().get("description"),
+                data.getData().get("description").replace(" ","%"),
                 " on QBE "))return false;
         //APP DATE
         if (!Functions.insertInput(driver,
@@ -234,6 +212,10 @@ public class AT2ACCCO0045Sis {
                 "state",
                 data.getData().get("state"),
                 " on QBE "))return false;
+        //ACCEPT
+        if (!Functions.selectText(driver,
+                new String[]{"tb_query_i_accept",getElements("tb_query_i_accept")},
+                data.getData().get("accept"), "accept", " on QBE "))return false;
         //USER ACCEPT
         if (!Functions.insertInput(driver,
                 new String[]{"tb_query_i_uaccept",getElements("tb_query_i_uaccept")},
@@ -264,14 +246,39 @@ public class AT2ACCCO0045Sis {
                 " on DETACH"))return false;     //where this occurs
         return true;
     }
-    public boolean search_accepted(TestDriver driver) {
-        driver.getReport().addHeader("SEARCH ACCETED ELEMENT", 3, false);
+    public boolean search_special(TestDriver driver) {
+        driver.getReport().addHeader("SEARCH SOME ELEMENTS", 3, false);
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 " on RESET SEARCH FIELD"))return false;
         Functions.break_time(driver,120,500);
+        if (!Functions.createLovByValue(driver,
+                new String[]{"search_company_lov", getElements("search_company_lov")}, //LoV button
+                new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
+                new String[]{"search_company_lov_i_code", getElements("search_company_lov_i_code")}, //internal LoV input
+                "E10", // value to search
+                "company", //name of the data
+                " on COMPANY/OFFICE SEARCH"))return false; //where this operation occurs
+        //OFFICE
+        if (!Functions.createLovByValue(driver,
+                new String[]{"search_office_lov", getElements("search_office_lov")}, //LoV button
+                new String[]{"search_i_office", getElements("search_i_office")}, //external LoV input
+                new String[]{"search_office_lov_i_code", getElements("search_office_lov_i_code")}, //internal LoV input
+                "35", // value to search
+                "office", //name of the data
+                " on COMPANY/OFFICE SEARCH"))return false; //where this operation occurs
         if (!Functions.selectText(driver,new String[]{"search_i_accepted", getElements("search_i_accepted")},
-                "Yes","accepted", " on SEARCH RECORD"))return false;
+                "No","accepted", " on SEARCH RECORD"))return false;
+        if (!Functions.insertInput(driver,
+                new String[]{"search_i_date_from",getElements("search_i_date_from")},
+                "appdate_from",
+                DataGenerator.getRelativeDateToday("dd/MM/yyyy",-1,0,0),
+                " on DATE SEARCH"))return false;
+        if (!Functions.insertInput(driver,
+                new String[]{"search_i_date_to",getElements("search_i_date_to")},
+                "appdate_to",
+                DataGenerator.getToday(driver,"dd/MM/yyyy"),
+                " on DATE SEARCH"))return false;
         if (!Functions.checkClick(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"search_e_result", getElements("search_e_result")}, //result element

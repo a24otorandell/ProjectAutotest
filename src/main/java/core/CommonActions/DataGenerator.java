@@ -184,7 +184,7 @@ public class DataGenerator {
             String ecode = "--ERROR:getRelativeDateToday(): Unable to convert " + format + " to DateFormat please check that is inserted correctly.";
             today = "01/01/2015";
             e.printStackTrace();
-            //ErrorManager.process(driver, ecode);
+            //ErrorManager.process(driver,ecode);
         }
         return today;
     }

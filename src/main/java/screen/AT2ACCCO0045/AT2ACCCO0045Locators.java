@@ -30,10 +30,14 @@ public class AT2ACCCO0045Locators {
         elements.put("tb_query_i_appdate", "//*[contains(@id, 'resId1:id2::content')]");
         elements.put("tb_query_i_validation", "//*[contains(@id, '_afr_resId1_afr_c2::content')]");
         elements.put("tb_query_i_state", "//*[contains(@id, '_pc1_afr_resId1_afr_c3::content')]");
+        elements.put("tb_query_i_accept", "//*[contains(@id, 'pc1:resId1:soc1::content')]");
         elements.put("tb_query_i_uaccept", "//*[contains(@id, 'pc1_afr_resId1_afr_c6::content')]");
         elements.put("tb_query_i_dateaccept", "//*[contains(@id, 'pc1:resId1:id1::content')]");
 
         //RESULTS
+        elements.put("result_table", "//*[contains(@id, 'resId1::db')]");
+        elements.put("result_e_select_checkbox", "//*[contains(@id, 'pc1:resId1:0:sbc3::content')]");
+        elements.put("result_e_input_observaciones", "//*[contains(@id, 'pc1:resId1:0:it1::content')]");
         elements.put("result_e_receptive", "//*[contains(@id, 'resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
         elements.put("result_e_company", "//*[contains(@id, 'resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]");
         elements.put("result_e_office", "//*[contains(@id, 'resId1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[4]");
@@ -75,5 +79,8 @@ public class AT2ACCCO0045Locators {
 
         //ACTIONS & QUERY
         elements.put("tb_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
+        elements.put("b_actions","//*[contains(@id, 'pc1:pcgm1:dc_m1')]");
+        elements.put("b_actions_b_accept","//*[contains(@id, 'pc1:pcgm1:dc_cmi1')]/td[2]");
+
     }
 }
