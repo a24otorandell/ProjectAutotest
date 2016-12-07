@@ -49,9 +49,9 @@ public class AT2MDMRM0037Test {
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
         if (!interaction_add_transfer(driver)) return false;
-        if (!qbe_transfer(driver)) return false;
+        if (!qbe_transfer(driver,true)) return false;
         if (!interaction_edit_transfer(driver)) return false;
-        if (!qbe_transfer(driver)) return false;
+        if (!qbe_transfer(driver, false)) return false;
         if (!others_actions_transfer(driver)) return false;
         if (!delete_transfer(driver)) return false;
         if (!delete(driver)) return false;
@@ -72,22 +72,22 @@ public class AT2MDMRM0037Test {
                 where)) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
+/*        if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_interface", getElements("add_lov_interface")}, //LoV button
                 new String[]{"add_i_interface", getElements("add_i_interface")}, //external LoV input
                 new String[]{"add_lov_interface_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 "W", // value to search
                 "interface", //name of the data
-                where)){return false;}
-/*        if(!Functions.createLov(driver,
+                where)){return false;}*/
+        if(!Functions.createLov(driver,
                 new String[]{"add_lov_interface",getElements("add_lov_interface")}, // b_lov
                 new String[]{"add_i_interface", getElements("add_i_interface")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "interface", //Data name
-                where)){return false;}*/
+                where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_interface_desc", getElements("add_i_interface_desc")}, // element path
                 "interface_des", // key for data value (the name)
                 where)){return false;}
@@ -100,12 +100,12 @@ public class AT2MDMRM0037Test {
                 "Manual", "manual", where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_affect"),"affect",true,true,where)){return false;}
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_ledger", getElements("add_lov_ledger")}, //LoV button
                 new String[]{"add_i_ledger", getElements("add_i_ledger")}, //external LoV input
-                new String[]{"add_lov_ledger_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "0048061671", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "ledger", //name of the data
                 where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
@@ -182,14 +182,14 @@ public class AT2MDMRM0037Test {
                 "Automatic", "manual", where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_affect"),"affect",false,true,where)){return false;}
-/*        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_ledger", getElements("search_lov_ledger")}, //LoV button
                 new String[]{"add_i_ledger", getElements("add_i_ledger")}, //external LoV input
-                new String[]{"add_lov_ledger_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "0048000010", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult2, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "ledger", //name of the data
-                where)){return false;}*/
+                where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -286,6 +286,10 @@ public class AT2MDMRM0037Test {
                 where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"add_i_amount",getElements("add_i_amount")},
+                "amount", "", where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_currency",getElements("add_i_currency")},
+                "currency", "", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_voucher_nr",getElements("add_i_voucher_nr")},
                 "v_num", String.valueOf(DataGenerator.random(1,8000)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_voucher_name",getElements("add_i_voucher_name")},
@@ -303,11 +307,11 @@ public class AT2MDMRM0037Test {
         if (!Functions.insertInput(driver, new String[]{"add_i_begin_trip",getElements("add_i_begin_trip")},
                 "b_trip", DataGenerator.getToday(), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_end_trip",getElements("add_i_end_trip")},
-                "e_trip",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8,3), 0), where)){return false;}
+                "e_trip",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1,15), 0), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_begin_voucher",getElements("add_i_begin_voucher")},
                 "b_voucher", DataGenerator.getToday(), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_end_voucher",getElements("add_i_end_voucher")},
-                "e_voucher",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8,3), 0), where)){return false;}
+                "e_voucher",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1,15), 0), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_associated_partner",getElements("add_lov_associated_partner")}, // b_lov
                 new String[]{"add_i_associated_partner", getElements("add_i_associated_partner")}, // i_lov
@@ -325,6 +329,42 @@ public class AT2MDMRM0037Test {
                 "availability", String.valueOf(DataGenerator.random(1,102)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_100x100",getElements("add_i_100x100")},
                 "perc", String.valueOf(DataGenerator.random(1,100)), where)){return false;}
+        /*if(!Functions.createLov(driver,
+                new String[]{"add_lov_currency",getElements("add_lov_currency")}, // b_lov
+                new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "currency", //Data name
+                where)){return false;}*/
+        if (!Functions.insertInput(driver, new String[]{"add_i_mail",getElements("add_i_mail")},
+                "mail", DataGenerator.getRandomAlphanumericSequence(8,false) + "@mail.es", where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_company",getElements("add_lov_company")}, // b_lov
+                new String[]{"add_i_company", getElements("add_i_company")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "company", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_office",getElements("add_lov_office")}, // b_lov
+                new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "office", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_depart",getElements("add_lov_depart")}, // b_lov
+                new String[]{"add_i_depart", getElements("add_i_depart")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "depart", //Data name
+                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_notes",getElements("add_i_notes")},
+                "notes", DataGenerator.getRandomAlphanumericSequence(8,false), where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
                 recursiveXPaths.glass, //e2
@@ -341,9 +381,11 @@ public class AT2MDMRM0037Test {
             return false;
         }
 /*        if (!Functions.insertInput(driver, new String[]{"add_i_voucher_nr",getElements("add_i_voucher_nr")},
-                "v_num", String.valueOf(DataGenerator.random(1,8000)), where)){return false;}
+                "v_num", String.valueOf(DataGenerator.random(1,8000)), where)){return false;}*/
+        if (!Functions.insertInput(driver, new String[]{"add_i_100x100",getElements("add_i_100x100")},
+                "perc", "", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_voucher_name",getElements("add_i_voucher_name")},
-                "v_name", DataGenerator.getRandomAlphanumericSequence(6,true), where)){return false;}*/
+                "v_name", DataGenerator.getRandomAlphanumericSequence(6,true), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_control",getElements("add_i_control")},
                 "control", String.valueOf(DataGenerator.random(1,1000)), where)){return false;}
         if(!Functions.createLov(driver,
@@ -357,11 +399,11 @@ public class AT2MDMRM0037Test {
         if (!Functions.insertInput(driver, new String[]{"add_i_begin_trip",getElements("add_i_begin_trip")},
                 "b_trip", DataGenerator.getToday(), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_end_trip",getElements("add_i_end_trip")},
-                "e_trip",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8,3), 0), where)){return false;}
+                "e_trip",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1,15), 0), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_begin_voucher",getElements("add_i_begin_voucher")},
                 "b_voucher", DataGenerator.getToday(), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_end_voucher",getElements("add_i_end_voucher")},
-                "e_voucher",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8,3), 0), where)){return false;}
+                "e_voucher",  DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1,15), 0), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_associated_partner",getElements("add_lov_associated_partner")}, // b_lov
                 new String[]{"add_i_associated_partner", getElements("add_i_associated_partner")}, // i_lov
@@ -377,15 +419,51 @@ public class AT2MDMRM0037Test {
                 "allot", String.valueOf(DataGenerator.random(1,500)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_availability",getElements("add_i_availability")},
                 "availability", String.valueOf(DataGenerator.random(1,102)), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_100x100",getElements("add_i_100x100")},
-                "perc", String.valueOf(DataGenerator.random(1,100)), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_amount",getElements("add_i_amount")},
+                "amount", String.valueOf(DataGenerator.random(1,100)), where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_currency",getElements("add_lov_currency")}, // b_lov
+                new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "currency", //Data name
+                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_mail",getElements("add_i_mail")},
+                "mail", DataGenerator.getRandomAlphanumericSequence(8,false) + "@mail.es", where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_company",getElements("add_lov_company")}, // b_lov
+                new String[]{"add_i_company", getElements("add_i_company")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "company", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_office",getElements("add_lov_office")}, // b_lov
+                new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "office", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_depart",getElements("add_lov_depart")}, // b_lov
+                new String[]{"add_i_depart", getElements("add_i_depart")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "depart", //Data name
+                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_notes",getElements("add_i_notes")},
+                "notes", DataGenerator.getRandomAlphanumericSequence(8,false), where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
                 recursiveXPaths.glass, //e2
                 where)) return false; //where
         return true;
     }
-    private boolean qbe_transfer(TestDriver driver) {
+    private boolean qbe_transfer(TestDriver driver, boolean first) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         if (!Functions.clickQbE(driver,
@@ -394,6 +472,9 @@ public class AT2MDMRM0037Test {
                 where)) {
             return false;
         } // where the operation occurs
+        if (first) {
+            Functions.zoomOut(driver);
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_voucher_nr", getElements("qbe_i_voucher_nr")},
                 "v_num", getData("v_num"), where)) {
             return false;
@@ -442,10 +523,24 @@ public class AT2MDMRM0037Test {
                 "perc", getData("perc"), where)) {
             return false;
         }
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_voucher_nr", getElements("qbe_i_voucher_nr")}, //search button
-                new String[]{"transfer_e_result", getElements("transfer_e_result")}, //result element
-                where)) {
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_amount", getElements("qbe_i_amount")},
+                "amount", getData("amount"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_currency", getElements("qbe_i_currency")},
+                "currency", getData("currency"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_company", getElements("qbe_i_company")},
+                "company", getData("company"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_office", getElements("qbe_i_office")},
+                "office", getData("office"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_depart", getElements("qbe_i_depart")},
+                "depart", getData("depart"), where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,

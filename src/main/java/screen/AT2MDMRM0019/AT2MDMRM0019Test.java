@@ -135,7 +135,7 @@ public class AT2MDMRM0019Test {
                 new String[]{"add_lov_sequence",getElements("add_lov_sequence")}, // b_lov
                 new String[]{"add_i_sequence", getElements("add_i_sequence")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "sequence", //Data name
                 where)){return false;}
