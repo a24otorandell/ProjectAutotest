@@ -266,15 +266,12 @@ public class AT2ACCCO0045Sis {
     }
     public boolean search_accepted(TestDriver driver) {
         driver.getReport().addHeader("SEARCH ACCETED ELEMENT", 3, false);
-
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //element to click
                 " on RESET SEARCH FIELD"))return false;
-
         Functions.break_time(driver,120,500);
         if (!Functions.selectText(driver,new String[]{"search_i_accepted", getElements("search_i_accepted")},
                 "Yes","accepted", " on SEARCH RECORD"))return false;
-
         if (!Functions.checkClick(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"search_e_result", getElements("search_e_result")}, //result element
