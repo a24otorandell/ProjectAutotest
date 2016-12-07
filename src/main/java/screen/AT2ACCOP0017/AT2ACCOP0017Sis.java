@@ -1009,12 +1009,22 @@ public class AT2ACCOP0017Sis {
     }
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("SEARCH BLOCK", 3, false);
+        Functions.zoomOut(driver,6);
         Functions.break_time(driver,30,500);
         /*SIMPLE CLICK CAMBIAR DE PESTAÑA A AT2ACCOP0017*/
         if (!Functions.simpleClick(driver,
                 new String[]{"screen_principal", getElements("screen_principal")}, //element to click
                 " on GO TO SCREEN AT2ACCOP0017"))return false;
-        Functions.break_time(driver,30,500);
+        Functions.break_time(driver,120,500);
+        if (!Functions.selectText(driver, new String[]{"tb_b_query_i_warning", getElements("tb_b_query_i_warning")},
+                 "",
+                "clear",
+                " \"ERROR MONITORING\" TABLE QUERY"))return false;
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"tb_b_query_i_order_code", getElements("tb_b_query_i_order_code")}, //any query input
+                new String[]{"search_e_record", getElements("search_e_record")}, //table result
+                " on RECORD QBE"))return false;
+        Functions.zoomIn(driver);
         if (!Functions.insertInput(driver, new String[]{"tb_b_query_i_order_code", getElements("tb_b_query_i_order_code")},
                 "qbe_e_order_code",
                 "",
