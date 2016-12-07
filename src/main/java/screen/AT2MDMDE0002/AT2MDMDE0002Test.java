@@ -67,11 +67,14 @@ public class AT2MDMDE0002Test {
         if (!interaction_edit_table4(driver)) return false;
         if (!qbe_table4(driver)) return false;
         if (!others_actions_table4(driver)) return false;
+        if (!getData(driver)) return false;
         if (!interaction_add_table5(driver)) return false;
         if (!qbe_table5(driver)) return false;
         if (!interaction_edit_table5(driver)) return false;
         if (!qbe_table5(driver)) return false;
         if (!others_actions_table5(driver)) return false;
+        if (!delete_table5(driver)) return false;
+        if (!qbe_table5b(driver)) return false;
         if (!delete_table5(driver)) return false;
         if (!delete_table4(driver)) return false;
         if (!delete_table3(driver)) return false;
@@ -933,12 +936,17 @@ public class AT2MDMDE0002Test {
      * @param driver
      * @return
      */
+    public boolean getData (TestDriver driver) {
+        if (!Functions.simpleClick(driver,
+                new String[]{"supplier_tab", getElements("supplier_tab")}, //element to click
+                "GET DATA")){return false;}
+        String[] columns = {"external_c","description_c", "office", "office_desc_c"};
+        if (!Functions.collectTableData(driver,columns,"//*[contains(@id, 'pc4:Retindestproext::db')]",1,"GET DATA"))return false;
+        return true;
+    }
     public boolean interaction_add_table5 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD SUPPLIER";
-        if (!Functions.simpleClick(driver,
-                new String[]{"supplier_tab", getElements("supplier_tab")}, //element to click
-                where)){return false;}
         if (!Functions.checkClick(driver,
                 new String[]{"supplier_b_add", getElements("supplier_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1039,6 +1047,37 @@ public class AT2MDMDE0002Test {
         }
         if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_office_description", getElements("supplier_i_qbe_office_description")},
                 "s_office_desc", getData("s_office_desc"), where)) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"supplier_i_qbe_agency", getElements("supplier_i_qbe_agency")}, //any query input
+                new String[]{"supplier_e_result", getElements("supplier_e_result")}, //table result
+                where)){return false;}
+        return true;
+    }
+    private boolean qbe_table5b(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE AREAS";
+        if (!Functions.clickQbE(driver,
+                new String[]{"supplier_b_qbe", getElements("supplier_b_qbe")},// query button
+                new String[]{"supplier_i_qbe_agency", getElements("supplier_i_qbe_agency")},//any query input
+                where)) {
+            return false;
+        } // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_agency", getElements("supplier_i_qbe_agency")},
+                "external_c", getData("external_c"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_agency_description", getElements("supplier_i_qbe_agency_description")},
+                "description_c", getData("description_c"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_office", getElements("supplier_i_qbe_office")},
+                "office", getData("office"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_office_description", getElements("supplier_i_qbe_office_description")},
+                "office_desc_c", getData("office_desc_c"), where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,

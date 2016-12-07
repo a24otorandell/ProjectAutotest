@@ -105,14 +105,9 @@ public class AT2MDMDE0002Locators {
         elements.put("description2_b_add", "//*[contains(@id, 'pcgt1:boton_add')]");
         elements.put("description2_b_delete", "//*[contains(@id, 'pcgt1:boton_remove')]");
         elements.put("description2_b_edit", "//*[contains(@id, 'pcgt1:boton_edit')]");
-        if (enviroment.equalsIgnoreCase("sis")) {
-            elements.put("description2_b_actions", "//*[contains(@id, 'pc2:j_id__ctru173pc7:dc_m1')]/div/table/tbody/tr/td[2]/a");
-            elements.put("description2_b_actions_audit_data", "//*[contains(@id, 'ctru173pc7:dc_cmi1')]/td[2]");
-        }
-        else {
-            elements.put("description2_b_actions", "//*[contains(@id, 'pc2:j_id__ctru171pc7:dc_m1')]/div/table/tbody/tr/td[2]/a");
-            elements.put("description2_b_actions_audit_data", "//*[contains(@id, 'ctru171pc7:dc_cmi1')]/td[2]");
-        }
+        elements.put("description2_b_actions", "//*[contains(@id, 'pc2:j_id__ctru171pc7:dc_m1')]/div/table/tbody/tr/td[2]/a");
+        elements.put("description2_b_actions_audit_data", "//*[contains(@id, 'ctru171pc7:dc_cmi1')]/td[2]");
+
 
         elements.put("description2_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]/a");
         elements.put("description2_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
@@ -136,14 +131,10 @@ public class AT2MDMDE0002Locators {
         elements.put("areas_b_add", "//*[contains(@id, 'pcgt3:boton_add')]");
         elements.put("areas_b_delete", "//*[contains(@id, 'pcgt3:boton_remove')]");
         elements.put("areas_b_edit", "//*[contains(@id, 'pcgt3:boton_edit')]");
-        if (enviroment.equalsIgnoreCase("sis")) {
-            elements.put("areas_b_actions", "//*[contains(@id, 'ctru224pc7:dc_m1')]/div/table/tbody/tr/td[2]/a");
-            elements.put("areas_b_actions_audit_data", "//*[contains(@id, 'ctru224pc7:dc_cmi1')]/td[2]");
-        }
-        else {
+
             elements.put("areas_b_actions", "//*[contains(@id, 'ctru222pc7:dc_m1')]/div/table/tbody/tr/td[2]/a");
             elements.put("areas_b_actions_audit_data", "//*[contains(@id, 'ctru222pc7:dc_cmi1')]/td[2]");
-        }
+
         elements.put("areas_b_qbe", "//*[contains(@id, 'pc3:_qbeTbr')]/a");
         elements.put("areas_b_detach", "//*[contains(@id, 'pc3:_dchTbr')]");
         elements.put("areas_e_result", "//*[contains(@id, 'pc3:RetinzonaGe::db')]/table/tbody/tr[1]/td[1]");
@@ -191,14 +182,9 @@ public class AT2MDMDE0002Locators {
         elements.put("supplier_b_add", "//*[contains(@id, 'pcgt5:boton_add')]");
         elements.put("supplier_b_delete", "//*[contains(@id, 'pcgt5:boton_remove')]");
         elements.put("supplier_b_edit", "//*[contains(@id, 'pcgt5:boton_edit')]");
-        if (enviroment.equalsIgnoreCase("sis")) {
-            elements.put("supplier_b_actions", "//*[contains(@id, 'ctru314pc7:dc_m1')]/div/table/tbody/tr/td[2]/a");
-            elements.put("supplier_b_actions_audit_data", "//*[contains(@id, 'ctru314pc7:dc_cmi1')]/td[2]");
-        }
-        else {
             elements.put("supplier_b_actions", "//*[contains(@id, 'ctru312pc7:dc_m1')]/div/table/tbody/tr/td[2]/a");
             elements.put("supplier_b_actions_audit_data", "//*[contains(@id, 'ctru312pc7:dc_cmi1')]/td[2]");
-        }
+
         elements.put("supplier_b_qbe", "//*[contains(@id, 'pc4:_qbeTbr')]/a");
         elements.put("supplier_b_detach", "//*[contains(@id, 'pc4:_dchTbr')]");
         elements.put("supplier_e_result", "//*[contains(@id, 'pc4:Retindestproext::db')]/table/tbody/tr[1]/td[1]");

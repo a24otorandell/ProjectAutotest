@@ -66,16 +66,19 @@ public class AT2MDMDE0002Sis {
         if (!interaction_edit_table4(driver)) return false;
         if (!qbe_table4(driver)) return false;
         if (!others_actions_table4(driver)) return false;
+        if (!getData(driver)) return false;
         if (!interaction_add_table5(driver)) return false;
         if (!qbe_table5(driver)) return false;
         if (!interaction_edit_table5(driver)) return false;
         if (!qbe_table5(driver)) return false;
         if (!others_actions_table5(driver)) return false;
         if (!delete_table5(driver)) return false;
+        if (!qbe_table5b(driver)) return false;
+        if (!delete_table5(driver)) return false;
         if (!delete_table4(driver)) return false;
         if (!delete_table3(driver)) return false;
         if (!delete_table2(driver)) return false;
-/*        if (!delete_table1(driver)) return false;*/
+        if (!delete_table1(driver)) return false;
         return true;
     }
 
@@ -472,7 +475,7 @@ public class AT2MDMDE0002Sis {
                 where)) {
             return false;
         }
-        Functions.break_time(driver, 3, 500);
+        Functions.break_time(driver, 100, 1000);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_lang",getElements("add_lov_lang")}, // b_lov
                 new String[]{"add_i_lang", getElements("add_i_lang")}, // i_lov
@@ -481,13 +484,9 @@ public class AT2MDMDE0002Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "lang", //Data name
                 where)){return false;}
-        Functions.break_time(driver, 3, 500);
+        Functions.break_time(driver, 10, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_description_lang", getElements("add_i_description_lang")},
                 "desc_lang", DataGenerator.getRandomAlphanumericSequence(8,false), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"add_i_description_lang_2", getElements("add_i_description_lang_2")},
-                "desc_lang2", DataGenerator.getRandomAlphanumericSequence(8,false), where)) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -515,10 +514,6 @@ public class AT2MDMDE0002Sis {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_description_lang", getElements("add_i_description_lang")},
                 "desc_lang", DataGenerator.getRandomAlphanumericSequence(8,false), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"add_i_description_lang_2", getElements("add_i_description_lang_2")},
-                "desc_lang2", DataGenerator.getRandomAlphanumericSequence(8,false), where)) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -948,6 +943,14 @@ public class AT2MDMDE0002Sis {
      * @param driver
      * @return
      */
+    public boolean getData (TestDriver driver) {
+        if (!Functions.simpleClick(driver,
+                new String[]{"supplier_tab", getElements("supplier_tab")}, //element to click
+                "GET DATA")){return false;}
+        String[] columns = {"external_c","description_c", "office", "office_desc_c"};
+        if (!Functions.collectTableData(driver,columns,"//*[contains(@id, 'pc4:Retindestproext::db')]",1,"GET DATA"))return false;
+        return true;
+    }
     public boolean interaction_add_table5 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD SUPPLIER";
@@ -1003,7 +1006,7 @@ public class AT2MDMDE0002Sis {
                 new String[]{"supplier_add_lov_agency",getElements("supplier_add_lov_agency")}, // b_lov
                 new String[]{"supplier_add_i_agency", getElements("supplier_add_i_agency")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "agency", //Data name
                 where)){return false;}
@@ -1052,6 +1055,37 @@ public class AT2MDMDE0002Sis {
         }
         if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_office_description", getElements("supplier_i_qbe_office_description")},
                 "s_office_desc", getData("s_office_desc"), where)) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"supplier_i_qbe_agency", getElements("supplier_i_qbe_agency")}, //any query input
+                new String[]{"supplier_e_result", getElements("supplier_e_result")}, //table result
+                where)){return false;}
+        return true;
+    }
+    private boolean qbe_table5b(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE AREAS";
+        if (!Functions.clickQbE(driver,
+                new String[]{"supplier_b_qbe", getElements("supplier_b_qbe")},// query button
+                new String[]{"supplier_i_qbe_agency", getElements("supplier_i_qbe_agency")},//any query input
+                where)) {
+            return false;
+        } // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_agency", getElements("supplier_i_qbe_agency")},
+                "external_c", getData("external_c"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_agency_description", getElements("supplier_i_qbe_agency_description")},
+                "description_c", getData("description_c"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_office", getElements("supplier_i_qbe_office")},
+                "office", getData("office"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"supplier_i_qbe_office_description", getElements("supplier_i_qbe_office_description")},
+                "office_desc_c", getData("office_desc_c"), where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
