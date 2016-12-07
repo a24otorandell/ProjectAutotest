@@ -55,59 +55,14 @@ public class AT2MDMDE0029Sis {
     private boolean interaction_record_web(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION";
+        Functions.break_time(driver, 10, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"web_b_add", getElements("web_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
                 where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_web",getElements("add_i_web")},
-                "web", DataGenerator.getRandomAlphanumericSequence(10, true), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_description",getElements("add_i_description")},
-                "description", DataGenerator.getRandomAlphanumericSequence(10, true), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_days",getElements("add_i_days")},
-                "days", String.valueOf(DataGenerator.random(1, 20)), where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
-                "last", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
-                "p_second", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
-                "p_first", // key for data value (the name)
-                where)){return false;}
-        if (!Functions.checkClickByAbsence(driver,
-                new String[]{"add_b_save", getElements("add_b_save")}, //element to click
-                recursiveXPaths.glass, //element expected to disappear
-                where)) {
-            return false;
-        }
-        return true;
-    }
-    private boolean search_web(TestDriver driver) {
-        driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH";
-        if (!Functions.insertInput(driver, new String[]{"search_i_web",getElements("search_i_web")},
-                "web", getData("web"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"search_i_description",getElements("search_i_description")},
-                "description", getData("description"), where)){return false;}
-        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_search", getElements("search_b_search")}, //search button
-                new String[]{"web_e_result", getElements("web_e_result")}, //result element
-                where)) {
-            return false;
-        }
-        return true;
-    }
-    private boolean interaction_edit_web(TestDriver driver) {
-        driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION";
-        if (!Functions.checkClick(driver,
-                new String[]{"web_b_edit", getElements("web_b_edit")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
-                where)) {
-            return false;
-        }
+        Functions.break_time(driver, 10, 400);
         if (!Functions.insertInput(driver, new String[]{"add_i_web",getElements("add_i_web")},
                 "web", DataGenerator.getRandomAlphanumericSequence(10, true), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_description",getElements("add_i_description")},
@@ -123,6 +78,54 @@ public class AT2MDMDE0029Sis {
         if(!Functions.getValue(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
                 "p_first", // key for data value (the name)
                 where)){return false;}
+        Functions.break_time(driver, 2, 400);
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"add_b_save", getElements("add_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    private boolean search_web(TestDriver driver) {
+        driver.getReport().addHeader("SEARCH RECORD", 3, false);
+        String where = " on SEARCH";
+        Functions.break_time(driver, 10, 400);
+        if (!Functions.insertInput(driver, new String[]{"search_i_web",getElements("search_i_web")},
+                "web", getData("web"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"search_i_description",getElements("search_i_description")},
+                "description", getData("description"), where)){return false;}
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"web_e_result", getElements("web_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    private boolean interaction_edit_web(TestDriver driver) {
+        driver.getReport().addHeader("EDIT RECORD", 3, false);
+        String where = " on EDITTION";
+        Functions.break_time(driver, 10, 400);
+        if (!Functions.checkClick(driver,
+                new String[]{"web_b_edit", getElements("web_b_edit")}, //element to click
+                recursiveXPaths.glass, //element expected to appear
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 10, 400);
+        if (!Functions.insertInput(driver, new String[]{"add_i_web",getElements("add_i_web")},
+                "web", DataGenerator.getRandomAlphanumericSequence(10, true), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_description",getElements("add_i_description")},
+                "description", DataGenerator.getRandomAlphanumericSequence(10, true), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_days",getElements("add_i_days")},
+                "days", String.valueOf(DataGenerator.random(5, 20)), where)){return false;}
+        if(!Functions.insertInput(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
+                "last", String.valueOf(DataGenerator.random(1, 5)), where)){return false;}
+        if(!Functions.insertInput(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
+                "p_second", String.valueOf(DataGenerator.random(5, 10)), where)){return false;}
+        if(!Functions.insertInput(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
+                "p_first", String.valueOf(DataGenerator.random(10, 20)), where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -144,6 +147,7 @@ public class AT2MDMDE0029Sis {
                 "web", getData("web"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_description",getElements("search_i_description")},
                 "description", getData("description"), where)){return false;}*/
+        Functions.break_time(driver, 10, 400);
         if (!Functions.insertInput(driver, new String[]{"search_i_web",getElements("search_i_web")},
                 "web_void", "", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_description",getElements("search_i_description")},
@@ -154,6 +158,7 @@ public class AT2MDMDE0029Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 10, 400);
         if (!Functions.clickQbE(driver,
                 new String[]{"web_b_qbe", getElements("web_b_qbe")},// query button
                 new String[]{"qbe_i_web", getElements("qbe_i_web")},//any query input
@@ -176,6 +181,7 @@ public class AT2MDMDE0029Sis {
                 "last", getData("last"), where)) {
             return false;
         }
+        Functions.break_time(driver, 10, 400);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_previst_sec", getElements("qbe_i_previst_sec")},
                 "p_second", getData("p_second"), where)) {
             return false;
