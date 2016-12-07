@@ -9,6 +9,9 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 27/10/2016.
  */
+/**
+ * LOS CAMPOS COMMUNITY Y CITY NO TIENEN REGISTROS.
+ */
 public class AT2MDMOR0005Sis {
     protected AT2MDMOR0005Locators locators;
     protected AT2MDMOR0005Data data;
@@ -87,13 +90,14 @@ public class AT2MDMOR0005Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "debtor", //Data name
                 where)){return false;}
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_street_type", getElements("add_lov_street_type")},
                 new String[]{"add_i_street_type", getElements("add_i_street_type")},
-                new String[]{"add_i_street_type_code", recursiveXPaths.lov_i_genericinput},
-                "CL",
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov
                 "street_type",
-                where)) {return false;};
+                where)) {return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_n_from",getElements("add_i_n_from")},
                 "from", String.valueOf(DataGenerator.random(1,5)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_n_to",getElements("add_i_n_to")},
@@ -114,6 +118,8 @@ public class AT2MDMOR0005Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "county", //Data name
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_mmoreinfo",getElements("add_i_mmoreinfo")},
+                "more", DataGenerator.getRandomAlphanumericSequence(20, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_street_date",getElements("add_i_street_date")},
                 "street", DataGenerator.getRandomAlphanumericSequence(20, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_stairway",getElements("add_i_stairway")},
@@ -130,6 +136,10 @@ public class AT2MDMOR0005Sis {
 //                recursiveXPaths.lov_b_ok, //lov b ok
 //                "city", //Data name
 //                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_postal_code",getElements("add_i_postal_code")},
+                "postal", String.valueOf(DataGenerator.random(00000,99999)), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_address",getElements("add_i_address")},
+                "address", DataGenerator.getRandomAlphanumericSequence(20, false), where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -199,7 +209,7 @@ public class AT2MDMOR0005Sis {
                 new String[]{"add_lov_creditor",getElements("add_lov_creditor")}, // b_lov
                 new String[]{"add_i_creditor", getElements("add_i_creditor")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "creditor", //Data name
                 where)){return false;}
@@ -207,15 +217,16 @@ public class AT2MDMOR0005Sis {
                 new String[]{"add_lov_debtor",getElements("add_lov_debtor")}, // b_lov
                 new String[]{"add_i_debtor", getElements("add_i_debtor")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "debtor", //Data name
                 where)){return false;}
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_street_type", getElements("add_lov_street_type")},
                 new String[]{"add_i_street_type", getElements("add_i_street_type")},
-                new String[]{"add_i_street_type_code", recursiveXPaths.lov_i_genericinput},
-                "CL",
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult2, // lov result
+                recursiveXPaths.lov_b_ok, //lov
                 "street_type",
                 where)) {return false;};
         if (!Functions.insertInput(driver, new String[]{"add_i_n_from",getElements("add_i_n_from")},
@@ -226,7 +237,7 @@ public class AT2MDMOR0005Sis {
                 new String[]{"add_lov_country",getElements("add_lov_country")}, // b_lov
                 new String[]{"add_i_country", getElements("add_i_country")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "country", //Data name
                 where)){return false;}
@@ -234,10 +245,12 @@ public class AT2MDMOR0005Sis {
                 new String[]{"add_lov_county",getElements("add_lov_county")}, // b_lov
                 new String[]{"add_i_county", getElements("add_i_county")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "county", //Data name
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_mmoreinfo",getElements("add_i_mmoreinfo")},
+                "more", DataGenerator.getRandomAlphanumericSequence(20, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_street_date",getElements("add_i_street_date")},
                 "street", DataGenerator.getRandomAlphanumericSequence(20, false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_stairway",getElements("add_i_stairway")},
@@ -254,6 +267,10 @@ public class AT2MDMOR0005Sis {
 //                recursiveXPaths.lov_b_ok, //lov b ok
 //                "city", //Data name
 //                where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_postal_code",getElements("add_i_postal_code")},
+                "postal", String.valueOf(DataGenerator.random(00000,99999)), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_address",getElements("add_i_address")},
+                "address", DataGenerator.getRandomAlphanumericSequence(20, false), where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear

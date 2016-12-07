@@ -5,6 +5,8 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by jmrios on 03/11/2016.
  */
@@ -60,20 +62,20 @@ public class AT2MDMDE0007Sis {
     private boolean interaction_record_ip_MDM(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
-        Functions.break_time(driver, 90, 500);
+        Functions.break_time(driver, 120, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_ip_b_add", getElements("MDM_ip_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
                 where)) {
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"add_lov_destination_code", getElements("add_lov_destination_code")}, // b_lov
-                new String[]{"add_i_destination_code", getElements("add_i_destination_code")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "destination_code", //Data name
+        //HARDCODEAMOS ESTE VALOR PARA ASEGURARNOS DE QUE USAMOS TODOS LOS CAMPOS EN LA CREACIÓN, BÚSQUEDA, EDICIÓN Y QBE Y QUE DESPUÉS PODEMOS ELIMINAR
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_destination_code", getElements("add_lov_destination_code")}, //LoV button
+                new String[]{"add_i_destination_code", getElements("add_i_destination_code")}, //external LoV input
+                new String[]{"add_lov_destination_code_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                "AAC", // value to search
+                "destination_code", //name of the data
                 where)){
             return false;
         }
@@ -89,6 +91,7 @@ public class AT2MDMDE0007Sis {
                 where)){
             return false;
         }
+        Functions.break_time(driver, 120, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_area_code", getElements("add_lov_area_code")}, // b_lov
                 new String[]{"add_i_area_code", getElements("add_i_area_code")}, // i_lov
@@ -136,7 +139,7 @@ public class AT2MDMDE0007Sis {
     private boolean search_MDM(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 120, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_destination_code", getElements("search_lov_destination_code")}, //LoV button
                 new String[]{"search_i_destination_code", getElements("search_i_destination_code")}, //external LoV input
@@ -146,6 +149,7 @@ public class AT2MDMDE0007Sis {
                 where)){
             return false;
         }
+        Functions.break_time(driver, 120, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_area_code", getElements("search_lov_area_code")}, //LoV button
                 new String[]{"search_i_area_code", getElements("search_i_area_code")}, //external LoV input
@@ -183,40 +187,40 @@ public class AT2MDMDE0007Sis {
     private boolean interaction_edit_ip_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
-        Functions.break_time(driver, 90, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_ip_b_edit", getElements("MDM_ip_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
                 where)) {
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"add_lov_destination_code", getElements("add_lov_destination_code")}, // b_lov
-                new String[]{"add_i_destination_code", getElements("add_i_destination_code")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "destination_code", //Data name
+        Functions.break_time(driver, 120, 500);
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_destination_code", getElements("add_lov_destination_code")}, //LoV button
+                new String[]{"add_i_destination_code", getElements("add_i_destination_code")}, //external LoV input
+                new String[]{"add_lov_destination_code_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                "AAC", // value to search
+                "destination_code_edit", //name of the data
                 where)){
             return false;
         }
-        if (!Functions.getText(driver,
-                new String[]{"add_e_destination_description", getElements("add_e_destination_description")}, // element path
-                "destination_description", // key for data value (the name)
-                where)){
-            return false;
+        if (!Functions.getValue(driver,
+                    new String[]{"add_e_destination_description", getElements("add_e_destination_description")}, // element path
+                    "destination_description_edit", // key for data value (the name)
+                    where)){
+                return false;
         }
-        if (!Functions.getText(driver,
-                new String[]{"add_e_country", getElements("add_e_country")}, // element path
-                "country", // key for data value (the name)
-                where)){
-            return false;
+        if (!Functions.getValue(driver,
+                    new String[]{"add_e_country", getElements("add_e_country")}, // element path
+                    "country_edit", // key for data value (the name)
+                    where)){
+                return false;
         }
+        Functions.break_time(driver, 120, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_area_code", getElements("add_lov_area_code")}, // b_lov
                 new String[]{"add_i_area_code", getElements("add_i_area_code")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "area_code", //Data name
                 where)){
@@ -264,24 +268,23 @@ public class AT2MDMDE0007Sis {
                 where)) {
             return false;
         }
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 120, 500);
         if (!Functions.clickQbE(driver,
                 new String[]{"MDM_ip_b_qbe", getElements("MDM_ip_b_qbe")},// query button
                 new String[]{"qbe_ip_i_destination_code", getElements("qbe_ip_i_destination_code")},//any query input
                 where)) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"qbe_ip_i_destination_code", getElements("qbe_ip_i_destination_code")},
-                "destination_code", getData("destination_code"), where)) {
+                "destination_code", getData("destination_code_edit"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_ip_i_destination_description", getElements("qbe_ip_i_destination_description")},
-                "destination_description", getData("destination_description"), where)) {
+                "destination_description", getData("destination_description_edit"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_ip_i_country", getElements("qbe_ip_i_country")},
-                "country", getData("country"), where)) {
+                "country", getData("country_edit"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_ip_i_area_code", getElements("qbe_ip_i_area_code")},
@@ -315,6 +318,7 @@ public class AT2MDMDE0007Sis {
     private boolean others_actions_ip_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
+        Functions.break_time(driver, 120, 500);
         if (!Functions.auditData(driver,
                 new String[]{"MDM_ip_b_actions", getElements("MDM_ip_b_actions")}, //actions button
                 new String[]{"MDM_ip_b_actions_audit_data", getElements("MDM_ip_b_actions_audit_data")}, //audit button
@@ -324,6 +328,7 @@ public class AT2MDMDE0007Sis {
         }
         driver.getReport().addHeader("OTHER ACTIONS - DETACH", 3, false);
         where = " on DETACH";
+        Functions.break_time(driver, 120, 500);
         if (!Functions.detachTable(driver,
                 new String[]{"MDM_ip_b_detach", getElements("MDM_ip_b_detach")}, //detach button
                 true,     //screenshot??
@@ -335,6 +340,7 @@ public class AT2MDMDE0007Sis {
     private boolean interaction_record_ml_MDM(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
+        Functions.break_time(driver, 120, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_ml_b_add", getElements("MDM_ml_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -367,11 +373,13 @@ public class AT2MDMDE0007Sis {
     private boolean interaction_edit_ml_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.break_time(driver, 120, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"MDM_ml_e_result", getElements("MDM_ml_e_result")}, //element to click
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 120, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_ml_b_edit", getElements("MDM_ml_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -433,6 +441,7 @@ public class AT2MDMDE0007Sis {
     private boolean others_actions_ml_MDM(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
+        Functions.break_time(driver, 120, 500);
         if (!Functions.auditData(driver,
                 new String[]{"MDM_ml_b_actions", getElements("MDM_ml_b_actions")}, //actions button
                 new String[]{"MDM_ml_b_actions_audit_data", getElements("MDM_ml_b_actions_audit_data")}, //audit button
@@ -442,6 +451,7 @@ public class AT2MDMDE0007Sis {
         }
         driver.getReport().addHeader("OTHER ACTIONS - DETACH", 3, false);
         where = " on DETACH";
+        Functions.break_time(driver, 120, 500);
         if (!Functions.detachTable(driver,
                 new String[]{"MDM_ml_b_detach", getElements("MDM_ml_b_detach")}, //detach button
                 true,     //screenshot??

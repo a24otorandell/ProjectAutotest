@@ -6,6 +6,8 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by aibanez on 11/11/2016.
  */
@@ -43,18 +45,18 @@ public class AT2MDMSP0008Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
-        if (!interaction_add(driver, true)) return false;
-        if (!search(driver, false, true, true)) return false;
+        if (!interaction_add(driver)) return false;
+        if (!search(driver, false, true)) return false;
         if (!qbe(driver, false, true)) return false;
-        if (!interaction_edit(driver, false)) return false;
-        if (!search(driver, true, false, false)) return false;
+        if (!interaction_edit(driver)) return false;
+        if (!search(driver, true, false)) return false;
         if (!qbe(driver, true, false)) return false;
         if (!others_actions(driver)) return false;
         if (!delete(driver)) return false;
         return true;
     }
 
-    public boolean interaction_add (TestDriver driver, boolean inhouse) {
+    public boolean interaction_add (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
         Functions.break_time(driver, 3, 600);
@@ -105,15 +107,35 @@ public class AT2MDMSP0008Test {
                 where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_commission",getElements("add_i_commission")},
                 "comission", DataGenerator.randomFloat(1,50), where)){return false;}
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_inhouse"),"inhouse",inhouse,true,where)){return false;}
+        Random booleanValue = new Random();
+        boolean getRandomBoolean = booleanValue.nextBoolean();
+        String randomBoolean;
+        if (getRandomBoolean){
+            randomBoolean= "Yes";
+            if(!Functions.checkboxValue(driver, getElements("add_ck_inhouse"),
+                    "inhouse", true, true,
+                    where)) {
+                return false;
+            }
+        }
+        else {
+            randomBoolean="No";
+            if(!Functions.checkboxValue(driver, getElements("add_ck_inhouse"),
+                    "inhouse", false, true,
+                    where)){
+                return false;
+            }
+        }
+
+/*        if (!Functions.checkboxValue(driver,
+                getElements("add_ck_inhouse"),"inhouse",inhouse,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
                 where)) return false; //where
         return true;
     }
-    private boolean search(TestDriver driver, boolean currency, boolean commision, boolean inhouse) {
+    private boolean search(TestDriver driver, boolean currency, boolean commision) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
         if (!Functions.createLovByValue(driver,
@@ -172,8 +194,18 @@ public class AT2MDMSP0008Test {
                 return false;
             }
         }
-        if (!Functions.checkboxValue(driver,
-                getElements("search_ck_inhouse"),"inhouse",inhouse,true,where)){return false;}
+        Functions.break_time(driver, 3, 500);
+        boolean inhouse;
+        if (getData("inhouse").equalsIgnoreCase("yes")) {
+            inhouse = true;
+        }else{
+            inhouse = false;
+        }
+        Functions.break_time(driver, 3, 500);
+        if (!Functions.checkboxValue(driver, getElements("search_ck_inhouse"), "inhouse", inhouse, true, where)) {
+                return false;
+        }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"supplier_e_result", getElements("supplier_e_result")}, //result element
@@ -182,7 +214,7 @@ public class AT2MDMSP0008Test {
         }
         return true;
     }
-    private boolean interaction_edit(TestDriver driver, boolean inhouse) {
+    private boolean interaction_edit(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDITTION";
         if (!Functions.simpleClick(driver,
@@ -225,7 +257,7 @@ public class AT2MDMSP0008Test {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_application_date",getElements("add_i_application_date")},
                 "date", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8, 3), 0), where)){return false;}
-        Functions.break_time(driver, 3, 700);
+        Functions.break_time(driver, 10, 700);
         if (!Functions.insertInput(driver, new String[]{"add_i_amount",getElements("add_i_amount")},
                 "amount", DataGenerator.randomFloat(1,50), where)){return false;}
         if(!Functions.createLov(driver,
@@ -236,8 +268,27 @@ public class AT2MDMSP0008Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "currency", //Data name
                 where)){return false;}
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_inhouse"),"inhouse",inhouse,true,where)){return false;}
+        Random booleanValue = new Random();
+        boolean getRandomBoolean = booleanValue.nextBoolean();
+        String randomBoolean;
+        if (getRandomBoolean){
+            randomBoolean= "Yes";
+            if(!Functions.checkboxValue(driver, getElements("add_ck_inhouse"),
+                    "inhouse", true, true,
+                    where)) {
+                return false;
+            }
+        }
+        else {
+            randomBoolean="No";
+            if(!Functions.checkboxValue(driver, getElements("add_ck_inhouse"),
+                    "inhouse", false, true,
+                    where)){
+                return false;
+            }
+        }
+/*        if (!Functions.checkboxValue(driver,
+                getElements("add_ck_inhouse"),"inhouse",inhouse,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

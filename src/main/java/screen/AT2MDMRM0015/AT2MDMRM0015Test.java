@@ -321,7 +321,12 @@ public class AT2MDMRM0015Test {
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "company", //Data name
+                "category", //Data name
+                where)) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"add_e_category_description", getElements("add_e_category_description")}, // element path
+                "category_description", // key for data value (the name)
                 where)) {
             return false;
         }

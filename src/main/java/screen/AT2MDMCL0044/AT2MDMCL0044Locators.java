@@ -80,6 +80,7 @@ public class AT2MDMCL0044Locators {
                 elements.put("add_cd_b_save", "//*[contains(@id, 'pcgt4:btn_commitExit')]");
                 elements.put("add_cd_i_property", "//*[contains(@id, 'pcgt4:npvPropertyId::content')]");
                 elements.put("add_cd_lov_property", "//*[contains(@id, 'pcgt4:npvPropertyId::lovIconId')]");
+                elements.put("add_cd_i_property_fourth_result", "//*[contains(@id, 'pcgt4:npvPropertyId_afrLovInternalTableId::db')]/table/tbody/tr[4]/td[2]/div/table/tbody/tr/td[1]");
                 elements.put("add_cd_i_value", "//*[contains(@id, 'pcgt4:it8::content')]");
             //NOTIFICATION TYPE
                 elements.put("add_nt_b_save", "//*[contains(@id, 'pcgt1:btn_commitExit')]");

@@ -6,6 +6,8 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by aibanez on 08/11/2016.
  */
@@ -53,16 +55,6 @@ public class AT2MDMSY0039Test {
         return true;
     }
 
-    public boolean check_bussines () {
-        int random = DataGenerator.random(1,3);
-        if (random == 2) {
-            check = true;
-        }
-        else {
-            check = false;
-        }
-        return check;
-    }
     public boolean interaction_add (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
@@ -85,7 +77,7 @@ public class AT2MDMSY0039Test {
         if (!Functions.insertInput(driver, new String[]{"add_i_fax_lines",getElements("add_i_fax_lines")},
                 "fax",  String.valueOf(DataGenerator.random(1,100)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_orientation",getElements("add_i_orientation")},
-                "orientation", "H", where)){return false;}
+                "orientation", DataGenerator.getRandomAlphanumericSequence(1,false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_size",getElements("add_i_size")},
                 "size",  String.valueOf(DataGenerator.random(1,50)), where)){return false;}
         if (!Functions.checkboxValue(driver,
@@ -94,9 +86,25 @@ public class AT2MDMSY0039Test {
                 getElements("add_ck_visible_screen"),"visible",true,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_modify_labels"),"modify",true,true, where)){return false;}
-        check_bussines();
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_business_labels"),"business",check,true, where)){return false;}
+        Random booleanValue = new Random();
+        boolean getRandomBoolean = booleanValue.nextBoolean();
+        String randomBoolean;
+        if (getRandomBoolean){
+            randomBoolean= "Yes";
+            if(!Functions.checkboxValue(driver, getElements("add_ck_business_labels"),
+                    "business", true, true,
+                    where)) {
+                return false;
+            }
+        }
+        else {
+            randomBoolean="No";
+            if(!Functions.checkboxValue(driver, getElements("add_ck_business_labels"),
+                    "business", false, true,
+                    where)){
+                return false;
+            }
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -128,8 +136,15 @@ public class AT2MDMSY0039Test {
                 getElements("search_ck_visible_screen"),"visible",true,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_modify_labels"),"modify",true,true, where)){return false;}
+        boolean check;
+        if (getData("business").equalsIgnoreCase("yes")) {
+
+            check = true;
+        }else {
+            check = false;
+        }
         if (!Functions.checkboxValue(driver,
-                getElements("search_ck_business_labels"),"business",check,true, where)){return false;}
+                getElements("search_ck_business_labels"),"business",check,true, where)){return false;}//where
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"reports_e_result", getElements("reports_e_result")}, //result element
@@ -160,7 +175,7 @@ public class AT2MDMSY0039Test {
         if (!Functions.insertInput(driver, new String[]{"add_i_fax_lines",getElements("add_i_fax_lines")},
                 "fax",  String.valueOf(DataGenerator.random(1,100)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_orientation",getElements("add_i_orientation")},
-                "orientation", "V", where)){return false;}
+                "orientation", DataGenerator.getRandomAlphanumericSequence(1,false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_size",getElements("add_i_size")},
                 "size",  String.valueOf(DataGenerator.random(1,50)), where)){return false;}
         if (!Functions.checkboxValue(driver,

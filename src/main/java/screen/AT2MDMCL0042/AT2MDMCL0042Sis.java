@@ -98,7 +98,7 @@ public class AT2MDMCL0042Sis {
                 "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(1, 3), 0), where)) {
             return false;
         }
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 20, 400);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_invoicing", getElements("add_lov_invoicing")}, // b_lov
                 new String[]{"add_i_invoicing", getElements("add_i_invoicing")}, // i_lov
@@ -266,7 +266,6 @@ public class AT2MDMCL0042Sis {
     private boolean qbe_comercial(TestDriver driver, boolean reset) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        Functions.zoomOut(driver);
         if (reset) {
             if (!Functions.clickSearchAndResult(driver,
                     new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
@@ -274,6 +273,9 @@ public class AT2MDMCL0042Sis {
                     where)) {
                 return false;
             }
+        }
+        else {
+            Functions.zoomOut(driver);
         }
         if (!Functions.clickQbE(driver,
                 new String[]{"comercial_b_qbe", getElements("comercial_b_qbe")},// query button
@@ -289,18 +291,22 @@ public class AT2MDMCL0042Sis {
                 "interface", getData("interface"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_application_from", getElements("qbe_i_application_from")},
                 "apli_f", getData("apli_f"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_application_to", getElements("qbe_i_application_to")},
                 "apli_t", getData("apli_t"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_booking_from", getElements("qbe_i_booking_from")},
                 "from", getData("from"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_booking_to", getElements("qbe_i_booking_to")},
                 "to", getData("to"), where)) {
             return false;

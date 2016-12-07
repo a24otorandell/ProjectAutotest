@@ -258,9 +258,6 @@ public class AT2BOOSA0001Locators {
         elements.put("go_to_bloqued_bookings_ch_select_all_gods", "//*[contains(@id, 'pc1:sbc1::content')]");
         elements.put("go_to_search_booking", "//*[contains(@id, 'tabIndex::disclosureAnchor')]");
 
-
-
-
         //SEND BOOKING
 
         elements.put("actions_b_send_booking", "//*[contains(@id, 'pc1:pcgm2:dc_cmi1')]/td[2]");
@@ -268,8 +265,25 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_send_booking_i_from", "//*[contains(@id, 'r2:0:it1::content')]");
         elements.put("actions_send_booking_i_destination", "//*[contains(@id, 'r2:0:it2::content')]");
         elements.put("actions_send_booking_b_send", "//*[contains(@id, 'r2:0:cb1')]");
+        elements.put("actions_send_booking_b_cancel", "//*[contains(@id, 'r2:0:cb2')]");
 
+        //SERVICE DETAILS
 
+        elements.put("actions_b_service_details", "//*[contains(@id, 'pc1:pcgm2:dc_cmi2')]/td[2]");
+        elements.put("actions_service_details_e_receptive_office", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
+        elements.put("actions_service_details_e_cost", "//*[contains(@id, 'pc1:t1:0:ot6::content')]");
+        elements.put("action_service_detailse_e_sale", "//*[contains(@id, 'pc1:t1:0:ot7::content')]");
+        elements.put("actions_service_detailse_e_profit", "//*[contains(@id, 'pc1:t1:0:ot8::content')]");
+        elements.put("actions_service_details_e_profitability", "//*[contains(@id, 'pc1:t1:0:ot9::content')]");
+        elements.put("actions_service_details_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
+        elements.put("actions_service_details_i_receptive_office", "//*[contains(@id, 'pc1_afr_t1_afr_c5::content')]");
+        elements.put("actions_service_details_i_cost", "//*[contains(@id, 'pc1_afr_t1_afr_c6::content')]");
+        elements.put("actions_service_details_i_sale", "//*[contains(@id, 'pc1_afr_t1_afr_c7::content')]");
+        elements.put("actions_service_details_i_profit", "//*[contains(@id, 'pc1_afr_t1_afr_c8::content')]");
+        elements.put("actions_service_details_i_profitability", "//*[contains(@id, 'pc1_afr_t1_afr_c9::content')]");
+        elements.put("actions_service_details_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
+        elements.put("actions_service_details_b_ok", "//*[contains(@id, 'd1::ok')]");
+        elements.put("actions_service_details_e_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
 
     }
 

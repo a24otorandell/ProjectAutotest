@@ -164,7 +164,7 @@ public class AT2MDMOR0016Test {
         String where = " on SEARCH";
         if (!Functions.insertInput(driver, new String[]{"search_i_date",getElements("search_i_date")},
                 "date", getData("date"), where)){return false;}
-        Functions.break_time(driver, 3, 800);
+        Functions.break_time(driver, 10, 800);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_b_company", getElements("search_lov_b_company")}, //LoV button
                 new String[]{"search_i_b_company", getElements("search_i_b_company")}, //external LoV input
@@ -285,7 +285,7 @@ public class AT2MDMOR0016Test {
 //                "CEE", // value to search
 //                "location", //name of the data
 //                where)) {return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
                 "des", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -296,6 +296,8 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "contracting", //Data name
                 where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"add_i_extra",getElements("add_i_extra")},
+                "extra","", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_service", getElements("add_sl_service")},
                 "Hotel", "service", where)) {

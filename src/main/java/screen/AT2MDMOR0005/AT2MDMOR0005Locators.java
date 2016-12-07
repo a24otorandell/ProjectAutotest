@@ -66,8 +66,11 @@ public class AT2MDMOR0005Locators {
         elements.put("add_i_county", "//*[contains(@id, 'pcgt1:gprvCodProv1Id::content')]");
         elements.put("add_lov_county", "//*[contains(@id, 'pcgt1:gprvCodProv1Id::lovIconId')]");
         elements.put("add_i_county_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");  //10 - 07
+        elements.put("add_i_mmoreinfo", "//*[contains(@id, 'pcgt1:it23::content')]");
         elements.put("add_i_city", "//*[contains(@id, 'pc1:pcgt1:poblacion1Id::content')]");
         elements.put("add_lov_city", "//*[contains(@id, 'pc1:pcgt1:poblacion1Id::lovIconId')]");
+        elements.put("add_i_community", "//*[contains(@id, 'pc1:pcgt1:gncaCodComunidad1Id::content')]");
+        elements.put("add_lov_community", "//*[contains(@id, 'pc1:pcgt1:gncaCodComunidad1Id::lovIconId')]");
         elements.put("add_i_postal_code", "//*[contains(@id, 'pc1:pcgt1:it13::content')]");
         elements.put("add_i_address", "//*[contains(@id, 'pc1:pcgt1:it19::content')]");
         //QBE

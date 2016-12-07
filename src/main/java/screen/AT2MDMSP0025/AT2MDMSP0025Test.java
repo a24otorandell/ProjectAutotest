@@ -69,10 +69,24 @@ public class AT2MDMSP0025Test {
                 "market", getData("market"), where)) {
             return false;
         }
+        if (!Functions.simpleClick(driver,
+                new String[]{"add_market_i_description", getElements("add_market_i_description")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"add_market_i_description", getElements("add_market_i_description")}, //element to click
+                new String[]{"add_market_i_country", getElements("add_market_i_country")}, //element expected to appear
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.insertInput(driver, new String[]{"add_market_i_description", getElements("add_market_i_description")}, // element path
                 "description", getData("description"), where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_market_lov_country", getElements("add_market_lov_country")}, // b_lov
                 new String[]{"add_market_i_country", getElements("add_market_i_country")}, // i_lov
@@ -174,18 +188,21 @@ public class AT2MDMSP0025Test {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_market_b_actions", getElements("MDM_market_b_actions")}, //element to click
                 new String[]{"MDM_market_b_actions_copy_market", getElements("MDM_market_b_actions_copy_market")}, //element expected to appear
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_market_b_actions_copy_market", getElements("MDM_market_b_actions_copy_market")}, //element to click
                 new String[]{"add_market_i_actions_copy_market", getElements("add_market_i_actions_copy_market")}, //element expected to appear
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.insertInput(driver, new String[]{"add_market_i_actions_copy_market", getElements("add_market_i_actions_copy_market")}, // element path
                 "market", getData("market_edit"), where)) {
             return false;
@@ -194,12 +211,14 @@ public class AT2MDMSP0025Test {
                 "description", getData("description"), where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_market_b_actions_copy_save", getElements("add_market_b_actions_copy_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         driver.getReport().addHeader("OTHER ACTIONS - DETACH", 3, false);
         where = " on DETACH";
         if (!Functions.detachTable(driver,

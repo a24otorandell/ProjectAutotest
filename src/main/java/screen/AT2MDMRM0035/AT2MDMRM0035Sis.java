@@ -58,12 +58,12 @@ public class AT2MDMRM0035Sis {
         if (!interaction_edit_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
         if (!others_actions_t3(driver)) return false;
-/*        if (!interaction_add_t4(driver)) return false;
-        if (!qbe_t4(driver)) return false;
+        if (!interaction_add_t4(driver)) return false;
+        if (!qbe_t4(driver, false)) return false;
         if (!interaction_edit_t4(driver)) return false;
-        if (!qbe_t4(driver)) return false;
+        if (!qbe_t4(driver, true)) return false;
         if (!others_actions_t4(driver)) return false;
-        if (!delete_t4(driver)) return false;*/
+        if (!delete_t4(driver)) return false;
         if (!delete_t3(driver)) return false;
         if (!delete_t2(driver)) return false;
         if (!delete_t1(driver)) return false;
@@ -383,10 +383,6 @@ public class AT2MDMRM0035Sis {
                 new String[]{"qbe_sl_status2",getElements("qbe_sl_status2")},
                 getData("status2"), "status2", where)){return false;}
 
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_ttoo_desc", getElements("qbe_i_ttoo_desc")},
-                "to_desc", getData("to_desc"), where)) {
-            return false;
-        }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_nombre", getElements("qbe_i_nombre")}, //any query input
                 new String[]{"tabs_e_result", getElements("tabs_e_result")}, //table result
@@ -654,7 +650,7 @@ public class AT2MDMRM0035Sis {
                 where)) return false; //where
         return true;
     }
-    private boolean qbe_t4(TestDriver driver) {
+    private boolean qbe_t4(TestDriver driver, boolean second) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE TABS CONTENTS";
         if (!Functions.clickQbE(driver,
@@ -663,13 +659,25 @@ public class AT2MDMRM0035Sis {
                 where)) {
             return false;
         } // where the operation occurs
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_zones_gr", getElements("qbe_i_zones_gr")},
-                "zones", getData("zones"), where)) {
-            return false;
+        if (second) {
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_zones_gr", getElements("qbe_i_zones_gr")},
+                    "zones", "", where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_zones_desc", getElements("qbe_i_zones_desc")},
+                    "zones_desc", "", where)) {
+                return false;
+            }
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_zones_desc", getElements("qbe_i_zones_desc")},
-                "zones_desc", getData("zones_desc"), where)) {
-            return false;
+        else {
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_zones_gr", getElements("qbe_i_zones_gr")},
+                    "zones", getData("zones"), where)) {
+                return false;
+            }
+            if (!Functions.insertInput(driver, new String[]{"qbe_i_zones_desc", getElements("qbe_i_zones_desc")},
+                    "zones_desc", getData("zones_desc"), where)) {
+                return false;
+            }
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_dest_gr", getElements("qbe_i_dest_gr")},
                 "dest", getData("dest"), where)) {

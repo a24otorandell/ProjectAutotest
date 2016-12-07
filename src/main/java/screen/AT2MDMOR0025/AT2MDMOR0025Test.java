@@ -55,9 +55,9 @@ public class AT2MDMOR0025Test {
     public boolean interaction_add (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
-        if (!Functions.checkClick(driver,
+        if (!Functions.checkClickByAbsence(driver,
                 new String[]{"company_b_add", getElements("company_b_add")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
+                new String[]{"add_i_template",getElements("add_i_template")}, //element expected to appear
                 where)) {
             return false;
         }
@@ -204,7 +204,7 @@ public class AT2MDMOR0025Test {
         String where = " on EDITTION";
         if (!Functions.checkClick(driver,
                 new String[]{"company_b_edit", getElements("company_b_edit")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
+                new String[]{"add_i_template",getElements("add_i_template")}, //element expected to appear
                 where)) {
             return false;
         }

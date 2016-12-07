@@ -70,7 +70,7 @@ public class AT2MDMCL0045Sis {
     public boolean getDatos (TestDriver driver) {
         driver.getReport().addHeader("GET DATA", 3, false);
         String where = "GET DATA";
-        Functions.zoomOut(driver);
+        Functions.zoomOut(driver, 2);
         String[] columns = {"key", "secret","client","client_desc", "interface","interface_desc","branch", "", "api", "application", "package", "plan", "p_key", "m_user", "m_mail" };
         Functions.collectTableData(driver,
                 columns, //array with the names of the columns
@@ -137,11 +137,12 @@ public class AT2MDMCL0045Sis {
                 where)) {
             return false;
         }
+        Functions.zoomIn(driver);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_client",getElements("add_lov_client")}, // b_lov
                 new String[]{"add_i_client", getElements("add_i_client")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "client", //Data name
                 where)){return false;}
@@ -149,7 +150,7 @@ public class AT2MDMCL0045Sis {
                 new String[]{"add_lov_interface",getElements("add_lov_interface")}, // b_lov
                 new String[]{"add_i_interface", getElements("add_i_interface")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "interface", //Data name
                 where)){return false;}
@@ -182,7 +183,7 @@ public class AT2MDMCL0045Sis {
                 where)) {
             return false;
         } // where the operation occurs
-        Functions.zoomOut(driver);
+        Functions.zoomOut(driver, 2);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_key", getElements("qbe_i_key")},
                 "key", getData("key"), where)) {
             return false;

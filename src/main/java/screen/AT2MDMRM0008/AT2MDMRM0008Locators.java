@@ -66,11 +66,11 @@ public class AT2MDMRM0008Locators {
             elements.put("search_i_interface_code", "//*[contains(@id, 'qryId2:value20::content')]");
             elements.put("search_cb_allotment", "//*[contains(@id, 'qryId2:value30::content')]");
             elements.put("search_i_no_max", "//*[contains(@id, 'qryId2:value40::content')]");
-            elements.put("search_e_code_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
-            elements.put("search_e_description_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
-            elements.put("search_e_interface_code_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]");
-            elements.put("search_e_allotment_result", "//*[contains(@id, 'pc2:master:0:sbc2::content')]/span/img");
-            elements.put("search_e_no_max_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[5]");
+            elements.put("search_e_code_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[3]/td[2]/div/table/tbody/tr/td[1]");
+            elements.put("search_e_description_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[3]/td[2]/div/table/tbody/tr/td[2]");
+            elements.put("search_e_interface_code_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[3]/td[2]/div/table/tbody/tr/td[3]");
+            elements.put("search_e_allotment_result", "//*[contains(@id, 'pc2:master:2:sbc2::content')]/span/img");
+            elements.put("search_e_no_max_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[3]/td[2]/div/table/tbody/tr/td[5]");
         //QBE
             //INTERFACE
                 elements.put("qbe_inter_i_code", "//*[contains(@id, 'afr_pc2_afr_master_afr_c6::content')]");

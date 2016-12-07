@@ -9,6 +9,10 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 21/11/2016.
  */
+
+/**
+ * CÓDIGO HARDCODEADO PARA QUE SE PUEDAN SELECCIONAR LAS TRES OPCIONES.
+ */
 public class AT2MDMCL0020Test {
     protected AT2MDMCL0020Locators locators;
     protected AT2MDMCL0020Data data;
@@ -58,7 +62,7 @@ public class AT2MDMCL0020Test {
         if (!interaction_edit_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
         if (!others_actions_t3(driver)) return false;
-/*        if (!interaction_add_t4(driver)) return false;
+        if (!interaction_add_t4(driver)) return false;
         if (!search_t4(driver)) return false;
         if (!interaction_edit_t4(driver)) return false;
         if (!qbe_t4(driver)) return false;
@@ -69,7 +73,7 @@ public class AT2MDMCL0020Test {
         if (!qbe_t5(driver)) return false;
         if (!others_actions_t5(driver)) return false;
         if (!delete_t5(driver)) return false;
-        if (!delete_t4(driver)) return false;*/
+        if (!delete_t4(driver)) return false;
         if (!delete_t3(driver)) return false;
         if (!delete_t2(driver)) return false;
         return true;
@@ -95,12 +99,12 @@ public class AT2MDMCL0020Test {
                 "pwd", DataGenerator.getRandomAlphanumericSequence(6, true), where)) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_to", getElements("add_lov_to")}, //LoV button
                 new String[]{"add_i_to", getElements("add_i_to")}, //external LoV input
-                new String[]{"add_lov_to_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "52650", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "to", //name of the data
                 where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_e_des_ttoo", getElements("add_e_des_ttoo")}, // element path
@@ -161,6 +165,7 @@ public class AT2MDMCL0020Test {
                 "pwd", getData("pwd"), where)) {
             return false;
         }
+        Functions.break_time(driver, 2, 300);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_to", getElements("search_lov_to")}, //LoV button
                 new String[]{"search_i_to", getElements("search_i_to")}, //external LoV input
@@ -224,22 +229,22 @@ public class AT2MDMCL0020Test {
                 "pwd", DataGenerator.getRandomAlphanumericSequence(6, true), where)) {
             return false;
         }
-/*        if(!Functions.createLov(driver,
+        if(!Functions.createLov(driver,
                 new String[]{"add_lov_to",getElements("add_lov_to")}, // b_lov
                 new String[]{"add_i_to", getElements("add_i_to")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "to", //Data name
-                where)){return false;}*/
-        if (!Functions.createLovByValue(driver,
+                where)){return false;}
+/*        if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_to", getElements("add_lov_to")}, //LoV button
                 new String[]{"add_i_to", getElements("add_i_to")}, //external LoV input
                 new String[]{"add_lov_to_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 "562", // value to search
                 "to", //name of the data
-                where)){return false;}
+                where)){return false;}*/
         if(!Functions.getValue(driver,new String[]{"add_e_des_ttoo", getElements("add_e_des_ttoo")}, // element path
                 "to_desc", // key for data value (the name)
                 where)){return false;}

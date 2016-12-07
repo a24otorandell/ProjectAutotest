@@ -29,7 +29,7 @@ public class AT2MDMOR0025Data {
     }
 
     public void setDefaultData() {
-        data.put("file_new", "C:\\Users\\aibanez\\Downloads\\hotelbeds.png");
-        data.put("file_new2", "C:\\Users\\aibanez\\Downloads\\hotel2.jpg");
+        data.put("file_new", "C:\\ProjectAutotest\\src\\main\\resources\\hotelbeds.png");
+        data.put("file_new2", "C:\\ProjectAutotest\\src\\main\\resources\\hotel2.jpg");
     }
 }

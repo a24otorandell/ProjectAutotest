@@ -100,7 +100,7 @@ public class AT2MDMCL0044Sis {
                 new String[]{"add_cn_lov_client", getElements("add_cn_lov_client")}, // b_lov
                 new String[]{"add_cn_i_client", getElements("add_cn_i_client")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "client", //Data name
                 where)){
@@ -116,6 +116,7 @@ public class AT2MDMCL0044Sis {
                 where)){
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_cn_lov_type", getElements("add_cn_lov_type")}, // b_lov
                 new String[]{"add_cn_i_type", getElements("add_cn_i_type")}, // i_lov
@@ -174,7 +175,7 @@ public class AT2MDMCL0044Sis {
                 new String[]{"add_cd_lov_property", getElements("add_cd_lov_property")}, // b_lov
                 new String[]{"add_cd_i_property", getElements("add_cd_i_property")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "property", //Data name
                 where)){
@@ -282,7 +283,7 @@ public class AT2MDMCL0044Sis {
                 new String[]{"add_cn_lov_client", getElements("add_cn_lov_client")}, // b_lov
                 new String[]{"add_cn_i_client", getElements("add_cn_i_client")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult2, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "client", //Data name
                 where)){
@@ -361,7 +362,7 @@ public class AT2MDMCL0044Sis {
                 new String[]{"add_cd_lov_property", getElements("add_cd_lov_property")}, // b_lov
                 new String[]{"add_cd_i_property", getElements("add_cd_i_property")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                new String[]{"add_cd_i_property_fourth_result", getElements("add_cd_i_property_fourth_result")}, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "property", //Data name
                 where)){

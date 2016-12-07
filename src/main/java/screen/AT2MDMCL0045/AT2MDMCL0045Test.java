@@ -66,7 +66,7 @@ public class AT2MDMCL0045Test {
     public boolean getDatos (TestDriver driver) {
         driver.getReport().addHeader("GET DATA", 3, false);
         String where = "GET DATA";
-        Functions.zoomOut(driver);
+        Functions.zoomOut(driver, 2);
         String[] columns = {"key", "secret","client","client_desc", "interface","interface_desc","branch", "", "api", "application", "package", "plan", "p_key", "m_user", "m_mail" };
         Functions.collectTableData(driver,
                 columns, //array with the names of the columns
@@ -82,6 +82,11 @@ public class AT2MDMCL0045Test {
                 new String[]{"results_ck_payment", getElements("results_ck_payment")}, // element path
                 "title", // atribute to get data (class, value, id, style, etc...)
                 "payment", // key for data value (the name)
+                where);
+        Functions.getAttr(driver,
+                new String[]{"results_ck_extra", getElements("results_ck_extra")}, // element path
+                "title", // atribute to get data (class, value, id, style, etc...)
+                "extra", // key for data value (the name)
                 where);
         return true;
     }
@@ -133,11 +138,12 @@ public class AT2MDMCL0045Test {
                 where)) {
             return false;
         }
+        Functions.zoomIn(driver);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_client",getElements("add_lov_client")}, // b_lov
                 new String[]{"add_i_client", getElements("add_i_client")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "client", //Data name
                 where)){return false;}
@@ -158,6 +164,7 @@ public class AT2MDMCL0045Test {
                 "branch", //Data name
                 where)){return false;}
         selectBox(driver, "payment");
+        selectBox(driver, "extra");
 /*        if (!Functions.checkboxValue(driver,
                 getElements("add_ck_payment"),"payment",true,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
@@ -178,7 +185,7 @@ public class AT2MDMCL0045Test {
                 where)) {
             return false;
         } // where the operation occurs
-        Functions.zoomOut(driver);
+        Functions.zoomOut(driver, 2);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_key", getElements("qbe_i_key")},
                 "key", getData("key"), where)) {
             return false;
@@ -239,6 +246,9 @@ public class AT2MDMCL0045Test {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_payment",getElements("qbe_sl_payment")},
                 getData("payment"), "payment", where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_extra",getElements("qbe_sl_extra")},
+                getData("extra"), "extra", where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_key", getElements("qbe_i_key")}, //any query input
                 new String[]{"results_e_result", getElements("results_e_result")}, //table result
@@ -268,6 +278,19 @@ public class AT2MDMCL0045Test {
                 if (!Functions.selectText(driver,
                         new String[]{"qbe_sl_active", getElements("qbe_sl_active")},
                         "Yes", "active", "SELECT TEXT")) {
+                    return false;
+                }
+            }
+        }
+        else if (element.equalsIgnoreCase("extra")) {
+            if (getData("extra").equalsIgnoreCase("unchecked")) {
+                if (!Functions.checkboxValue(driver,
+                        getElements("add_ck_extra"), "extra", true, true, "CHECK")) {
+                    return false;
+                }
+            } else {
+                if (!Functions.checkboxValue(driver,
+                        getElements("add_ck_extra"), "extra", false, true, "CHECK")) {
                     return false;
                 }
             }

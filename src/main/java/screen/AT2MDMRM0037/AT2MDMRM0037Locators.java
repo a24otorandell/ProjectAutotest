@@ -93,6 +93,17 @@ public class AT2MDMRM0037Locators {
         elements.put("add_i_allot", "//*[contains(@id, 'pcgt3:it24::content')]");
         elements.put("add_i_availability", "//*[contains(@id, 'pcgt3:it26::content')]");
         elements.put("add_i_100x100", "//*[contains(@id, 'pcgt3:it17::content')]");
+        elements.put("add_i_amount", "//*[contains(@id, 'pcgt3:it25::content')]");
+        elements.put("add_i_currency", "//*[contains(@id, 'pcgt3:codDivisaId::content')]");
+        elements.put("add_lov_currency", "//*[contains(@id, 'pcgt3:codDivisaId::lovIconId')]");
+        elements.put("add_i_mail", "//*[contains(@id, 'pcgt3:it18::content')]");
+        elements.put("add_i_company", "//*[contains(@id, 'pcgt3:empresaId::content')]");
+        elements.put("add_lov_company", "//*[contains(@id, 'pcgt3:empresaId::lovIconId')]");
+        elements.put("add_i_office", "//*[contains(@id, 'pcgt3:oficinaId::content')]");
+        elements.put("add_lov_office", "//*[contains(@id, 'pcgt3:oficinaId::lovIconId')]");
+        elements.put("add_i_depart", "//*[contains(@id, 'pcgt3:departamentoId::content')]");
+        elements.put("add_lov_depart", "//*[contains(@id, 'pcgt3:departamentoId::lovIconId')]");
+        elements.put("add_i_notes", "//*[contains(@id, 'pcgt3:it22::content')]");
         //QBE
         elements.put("qbe_i_voucher_nr", "//*[contains(@id, 'vouch:it8::content')]");
         elements.put("qbe_i_voucher_name", "//*[contains(@id, 'vouch_afr_c14::content')]");
@@ -106,5 +117,10 @@ public class AT2MDMRM0037Locators {
         elements.put("qbe_i_allot", "//*[contains(@id, 'vouch:it28::content')]");
         elements.put("qbe_i_availability", "//*[contains(@id, 'vouch:it30::content')]");
         elements.put("qbe_i_100x100", "//*[contains(@id, 'vouch:it31::content')]");
+        elements.put("qbe_i_amount", "//*[contains(@id, 'vouch:it29::content')]");
+        elements.put("qbe_i_currency", "//*[contains(@id, 'vouch_afr_c18::content')]");
+        elements.put("qbe_i_company", "//*[contains(@id, 'vouch_afr_c8::conten')]");
+        elements.put("qbe_i_office", "//*[contains(@id, 'vouch:it32::content')]");
+        elements.put("qbe_i_depart", "//*[contains(@id, 'vouch_afr_c10::content')]");
     }
 }
