@@ -10,7 +10,8 @@ import core.recursiveData.recursiveXPaths;
  */
 
 /**
- * BUG EN EL CAMPO ZONE. Cuando se crea o se edita, se guarda el dato, pero cuando busca no aparece la información correspondiente a ese campo.
+ * OVERLAP - ANTES DE EJECUTAR COMPROBAR QUE LOS REGISTROS SELECCIONADOS NO ESTAN.
+ * EL CAMPO B2B NO TIENE REGISTROS
  */
 public class AT2MDMDE0015Test {
     protected AT2MDMDE0015Locators locators;
@@ -53,6 +54,7 @@ public class AT2MDMDE0015Test {
         if (!others_actions_b2b(driver)) return false;
         return true;
     }
+
     private boolean interaction_record_b2b(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION";
@@ -64,7 +66,7 @@ public class AT2MDMDE0015Test {
         }
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type",getElements("add_sl_type")},
-                "Destination group", "type", where)){return false;}
+                "Destination and Zone", "type", where)){return false;}
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_destination", getElements("add_lov_destination")}, //LoV button
                 new String[]{"add_i_destination", getElements("add_i_destination")}, //external LoV input
@@ -72,17 +74,18 @@ public class AT2MDMDE0015Test {
                 "ASH", // value to search
                 "destination", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_des", getElements("add_i_info_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_des", getElements("add_i_info_des")}, // element path
                 "info_des", // key for data value (the name)
                 where)){return false;}
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_agency", getElements("add_lov_agency")}, //LoV button
                 new String[]{"add_i_agency", getElements("add_i_agency")}, //external LoV input
-                new String[]{"add_lov_agency_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                "0", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "agency", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_age", getElements("add_i_info_age")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_age", getElements("add_i_info_age")}, // element path
                 "info_age", // key for data value (the name)
                 where)){return false;}
         if (!Functions.createLovByValue(driver,
@@ -92,7 +95,7 @@ public class AT2MDMDE0015Test {
                 "112", // value to search
                 "receptive", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_rec", getElements("add_i_info_rec")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_rec", getElements("add_i_info_rec")}, // element path
                 "info_rec", // key for data value (the name)
                 where)){return false;}
 /*        if (!Functions.createLovByValue(driver,
@@ -154,6 +157,9 @@ public class AT2MDMDE0015Test {
                 where)) {
             return false;
         }
+        /**
+         * NO TIENE REGISTROS
+         */
 /*        if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_b2b", getElements("search_lov_b2b")}, //LoV button
                 new String[]{"search_i_b2b", getElements("search_i_b2b")}, //external LoV input
@@ -163,10 +169,10 @@ public class AT2MDMDE0015Test {
                 where)) {
             return false;
         }*/
-/*        if (!Functions.insertInput(driver, new String[]{"search_i_zone",getElements("search_i_zone")},
+       if (!Functions.insertInput(driver, new String[]{"search_i_zone",getElements("search_i_zone")},
                 "zone", getData("zone"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_active"), getData("search_ck_active"), true, where)) {
             return false;
@@ -198,7 +204,7 @@ public class AT2MDMDE0015Test {
                 "AVN", // value to search
                 "destination", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_des", getElements("add_i_info_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_des", getElements("add_i_info_des")}, // element path
                 "info_des", // key for data value (the name)
                 where)){return false;}
 /*        if (!Functions.createLovByValue(driver,
@@ -218,7 +224,7 @@ public class AT2MDMDE0015Test {
                 "305", // value to search
                 "receptive", //name of the data
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_info_rec", getElements("add_i_info_rec")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_info_rec", getElements("add_i_info_rec")}, // element path
                 "info_rec", // key for data value (the name)
                 where)){return false;}
 /*        if (!Functions.createLovByValue(driver,
@@ -295,10 +301,10 @@ public class AT2MDMDE0015Test {
                 "info_b2b", getData("info_b2b"), where)) {
             return false;
         }*/
-/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_zone", getElements("qbe_i_zone")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_zone", getElements("qbe_i_zone")},
                 "zone", getData("zone"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
                 getData("active"), "type", where)){return false;}
