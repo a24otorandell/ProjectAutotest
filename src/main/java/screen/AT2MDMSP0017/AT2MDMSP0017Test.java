@@ -46,6 +46,7 @@ public class AT2MDMSP0017Test {
         if (!interaction_add(driver)) return false;
         if (!search(driver)) return false;
         if (!interaction_edit(driver)) return false;
+        if (!search2(driver)) return false;
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
         return true;
@@ -151,6 +152,38 @@ public class AT2MDMSP0017Test {
         }
         return true;
     }
+    private boolean search2 (TestDriver driver) {
+        driver.getReport().addHeader("SEARCH RECORD", 3, false);
+        String where = " on SEARCH";
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
+                new String[]{"suppliers_e_result", getElements("suppliers_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        if (!Functions.createLovByValue(driver,
+                new String[]{"search_lov_supplier", getElements("search_lov_supplier")}, //LoV button
+                new String[]{"search_i_supplier", getElements("search_i_supplier")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                getData("supplier"), // value to search
+                "supplier", //name of the data
+                where)) {
+            return false;
+        }
+        if (!Functions.getValue(driver, new String[]{"search_i_comercial", getElements("search_i_comercial")}, // element path
+                "comercial", // key for data value (the name)
+                where)) {
+            return false;
+        }
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"suppliers_e_result", getElements("suppliers_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        return true;
+    }
     private boolean interaction_edit(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
         String where = " on EDITTION";
@@ -164,7 +197,7 @@ public class AT2MDMSP0017Test {
                 new String[]{"add_lov_supplier",getElements("add_lov_supplier")}, // b_lov
                 new String[]{"add_i_supplier", getElements("add_i_supplier")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult2, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "supplier", //Data name
                 where)){return false;}

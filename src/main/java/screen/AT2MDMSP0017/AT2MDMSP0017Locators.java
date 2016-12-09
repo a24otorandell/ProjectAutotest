@@ -24,7 +24,7 @@ public class AT2MDMSP0017Locators {
         elements.put("suppliers_b_edit", "//*[contains(@id, 'pcgtid1:boton_edit')]");
         elements.put("suppliers_b_actions", "//*[contains(@id, 'pcgmid1:dc_m1')]");
         elements.put("suppliers_b_actions_b_audit_data", "//*[contains(@id, 'pcgmid1:dc_cmi0')]/td[2]");
-        elements.put("suppliers_b_qbe", "//*[contains(@id, 'pcid1:_qbeTbr')]");
+        elements.put("suppliers_b_qbe", "//*[contains(@id, 'pcid1:_qbeTbr')]/a");
         elements.put("suppliers_b_detach", "//*[contains(@id, 'pcid1:_dchTbr')]");
         elements.put("suppliers_e_result", "//*[contains(@id, 'pcid1:vccSuppTb::db')]/table/tbody/tr[1]/td[1]");
         elements.put("suppliers_e_records", "//*[contains(@id, 'pcid1:ot1id1')]");
