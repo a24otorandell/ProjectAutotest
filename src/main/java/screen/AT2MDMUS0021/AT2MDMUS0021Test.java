@@ -279,7 +279,7 @@ public class AT2MDMUS0021Test {
         else if (getData("boru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "Key User";
         }
-        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
+        else {
             option = "User";
         }
         if (!Functions.selectText(driver, new String[]{"search_boru_sl_user_type",getElements("search_boru_sl_user_type")},
@@ -595,7 +595,7 @@ public class AT2MDMUS0021Test {
         else if (getData("poru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "Key User";
         }
-        else if (getData("poru_user_type").equalsIgnoreCase("USER")) {
+        else {
             option = "User";
         }
         if (!Functions.selectText(driver, new String[]{"search_poru_sl_user_type",getElements("search_poru_sl_user_type")},
