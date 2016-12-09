@@ -161,6 +161,7 @@ public class AT2MDMSP0017Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_supplier", getElements("search_lov_supplier")}, //LoV button
                 new String[]{"search_i_supplier", getElements("search_i_supplier")}, //external LoV input
@@ -197,7 +198,7 @@ public class AT2MDMSP0017Sis {
                 new String[]{"add_lov_supplier",getElements("add_lov_supplier")}, // b_lov
                 new String[]{"add_i_supplier", getElements("add_i_supplier")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "supplier", //Data name
                 where)){return false;}
@@ -232,6 +233,7 @@ public class AT2MDMSP0017Sis {
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
                 where)) return false; //where
+        Functions.break_time(driver, 3, 400);
         return true;
     }
     private boolean qbe(TestDriver driver) {
