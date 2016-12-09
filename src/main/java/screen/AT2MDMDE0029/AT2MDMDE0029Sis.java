@@ -68,8 +68,14 @@ public class AT2MDMDE0029Sis {
         if (!Functions.insertInput(driver, new String[]{"add_i_description",getElements("add_i_description")},
                 "description", DataGenerator.getRandomAlphanumericSequence(10, true), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_days",getElements("add_i_days")},
-                "days", String.valueOf(DataGenerator.random(1, 20)), where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
+                "days", String.valueOf(DataGenerator.random(5, 20)), where)){return false;}
+        if(!Functions.insertInput(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
+                "last", String.valueOf(DataGenerator.random(1, 5)), where)){return false;}
+        if(!Functions.insertInput(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
+                "p_second", String.valueOf(DataGenerator.random(6, 10)), where)){return false;}
+        if(!Functions.insertInput(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
+                "p_first", String.valueOf(DataGenerator.random(11, 20)), where)){return false;}
+/*        if(!Functions.getValue(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
                 "last", // key for data value (the name)
                 where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
@@ -77,7 +83,7 @@ public class AT2MDMDE0029Sis {
                 where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
                 "p_first", // key for data value (the name)
-                where)){return false;}
+                where)){return false;}*/
         Functions.break_time(driver, 2, 400);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
@@ -123,9 +129,9 @@ public class AT2MDMDE0029Sis {
         if(!Functions.insertInput(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
                 "last", String.valueOf(DataGenerator.random(1, 5)), where)){return false;}
         if(!Functions.insertInput(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
-                "p_second", String.valueOf(DataGenerator.random(5, 10)), where)){return false;}
+                "p_second", String.valueOf(DataGenerator.random(6, 10)), where)){return false;}
         if(!Functions.insertInput(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
-                "p_first", String.valueOf(DataGenerator.random(10, 20)), where)){return false;}
+                "p_first", String.valueOf(DataGenerator.random(11, 20)), where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear

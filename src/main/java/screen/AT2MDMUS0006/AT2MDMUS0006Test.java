@@ -118,11 +118,11 @@ public class AT2MDMUS0006Test {
         }
         if (getData("ok").equalsIgnoreCase("checked")) {
             if (!Functions.checkboxValue(driver,
-                    getElements("add_ck_ok"),"ok",true,true,where)){return false;}
+                    getElements("add_ck_ok"),"ok",false,true,where)){return false;}
         }
         else {
             if (!Functions.checkboxValue(driver,
-                    getElements("add_ck_ok"),"ok",false,true,where)){return false;}
+                    getElements("add_ck_ok"),"ok",true,true,where)){return false;}
         }
 /*        if (!Functions.checkboxValue(driver,
                 getElements("add_ck_ok"),"ok",true,true,where)){return false;}*/
