@@ -64,9 +64,9 @@ public class AT2MDMRM0035Test {
         if (!qbe_t4(driver, true)) return false;
         if (!others_actions_t4(driver)) return false;
         if (!delete_t4(driver)) return false;
-/*        if (!delete_t3(driver)) return false;
+        if (!delete_t3(driver)) return false;
         if (!delete_t2(driver)) return false;
-        if (!delete_t1(driver)) return false;*/
+        if (!delete_t1(driver)) return false;
         return true;
     }
 
@@ -518,6 +518,7 @@ public class AT2MDMRM0035Test {
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"labels_b_delete", getElements("labels_b_delete")}, //button delete
                 new String[]{"labels_e_records", getElements("labels_e_records")}, // result
+                new String[]{"labels_b_ok", getElements("labels_b_ok")},
                 where)){return false;}
         return true;
     }
@@ -718,6 +719,12 @@ public class AT2MDMRM0035Test {
     private boolean delete_t4(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA TABS CONTENTS";
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"configurations_e_result", getElements("configurations_e_result")}, //result element
+                where)) {
+            return false;
+        }
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"tabs_c_b_delete", getElements("tabs_c_b_delete")}, //button delete
                 new String[]{"tabs_c_e_records", getElements("tabs_c_e_records")}, // result

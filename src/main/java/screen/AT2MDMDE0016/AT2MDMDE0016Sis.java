@@ -216,7 +216,7 @@ public class AT2MDMDE0016Sis {
                 "info_age", getData("info_age"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_receptive", getElements("qbe_i_receptive")},
+/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_receptive", getElements("qbe_i_receptive")},
                 "receptive", getData("receptive"), where)) {
             return false;
         }
@@ -224,7 +224,7 @@ public class AT2MDMDE0016Sis {
                 "info_rec", getData("info_rec"), where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_b2b", getElements("qbe_i_b2b")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_b2b", getElements("qbe_i_b2b")},
                 "b2b", getData("b2b"), where)) {
             return false;
         }

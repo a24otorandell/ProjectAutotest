@@ -231,10 +231,10 @@ public class AT2MDMDE0016Test {
                 "info_b2b", getData("info_b2b"), where)) {
             return false;
         }*/
-/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_zone", getElements("qbe_i_zone")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_zone", getElements("qbe_i_zone")},
                 "zone", getData("zone"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
                 getData("active"), "type", where)){return false;}

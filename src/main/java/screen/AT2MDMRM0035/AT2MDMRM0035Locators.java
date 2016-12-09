@@ -96,6 +96,7 @@ public class AT2MDMRM0035Locators {
         elements.put("labels_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
         elements.put("labels_e_result", "//*[contains(@id, 'pc2:t2::db')]/table/tbody/tr[1]/td[1]");
         elements.put("labels_e_records", "//*[contains(@id, 'pc2:outputText3')]");
+        elements.put("labels_b_ok", "//*[contains(@id, ':PCGenericToolbar1:cbt1')]");
         //ADD
         elements.put("add_b_save3", "//*[contains(@id, 'PCGenericToolbar1:btn_commitExit')]");
         elements.put("add_i_lang", "//*[contains(@id, 'etiIdiId::content')]");
