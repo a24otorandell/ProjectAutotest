@@ -9,6 +9,11 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 25/11/2016.
  */
+
+/**
+ * AL EDITAR EL REGISTRO DE LA TABLA ADDRESS EN LA ZONA DE CONSULTAS EL VALOR DEL CAMPO NUMBER, NO APARECE.
+ * EL CÓDIGO ESTÁ SIN ESE CAMPO EN EDICIÓN
+ */
 public class AT2MDMOR0008Sis {
     protected AT2MDMOR0008Locators locators;
     protected AT2MDMOR0008Data data;
@@ -43,19 +48,19 @@ public class AT2MDMOR0008Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
-/*        if (!getData(driver)) return false;
+        if (!getData(driver)) return false;
         if (!search_t1(driver)) return false;
         if (!qbe_t1(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!interaction_record_t2(driver)) return false;
-        if (!qbe_t2(driver)) return false;
+        if (!qbe_t2(driver, true)) return false;
         if (!interaction_edit_t2(driver)) return false;
-        if (!qbe_t2(driver)) return false;
+        if (!qbe_t2(driver, false)) return false;
         if (!others_actions_t2(driver)) return false;
         if (!getData_2(driver)) return false;
         if (!qbe_t4(driver , true)) return false;
         if (!interaction_edit_t4(driver)) return false;
-        if (!qbe_t4(driver, false)) return false;*/
+        if (!qbe_t4(driver, false)) return false;
         if (!others_actions_t4(driver)) return false;
         if (!interaction_record_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
@@ -196,7 +201,7 @@ public class AT2MDMOR0008Sis {
                 "street_desc", // key for data value (the name)
                 where);
         if (!Functions.insertInput(driver, new String[]{"add_i_number",getElements("add_i_number")},
-                "number", String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "number", String.valueOf(DataGenerator.random(1,20)), where)){return false;}
         Functions.getAttr(driver,
                 new String[]{"add_i_door", getElements("add_i_door")}, // element path
                 "title", // atribute to get data (class, value, id, style, etc...)
@@ -308,7 +313,7 @@ public class AT2MDMOR0008Sis {
                 "street_desc", // key for data value (the name)
                 where);
         if (!Functions.insertInput(driver, new String[]{"add_i_number",getElements("add_i_number")},
-                "number", String.valueOf(DataGenerator.random(1,5)), where)){return false;}
+                "number", String.valueOf(DataGenerator.random(1,20)), where)){return false;}
         Functions.getAttr(driver,
                 new String[]{"add_i_door", getElements("add_i_door")}, // element path
                 "title", // atribute to get data (class, value, id, style, etc...)
@@ -387,10 +392,12 @@ public class AT2MDMOR0008Sis {
         }
         return true;
     }
-    private boolean qbe_t2(TestDriver driver) {
+    private boolean qbe_t2(TestDriver driver, boolean first) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE 2";
-        Functions.zoomOut(driver);
+        if (first) {
+            Functions.zoomOut(driver);
+        }
         if (!Functions.clickQbE(driver,
                 new String[]{"address_b_qbe", getElements("address_b_qbe")},// query button
                 new String[]{"qbe_i_country_code", getElements("qbe_i_country_code")},//any query input
@@ -612,34 +619,41 @@ public class AT2MDMOR0008Sis {
             return false;
         }
         Functions.break_time(driver, 3, 400);
-        if (getData("contact_a").equalsIgnoreCase("unchecked")) {
+        if (getData("contact_a").equalsIgnoreCase("No")) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_contact_a"),"contact_a",true,true,where)){return false;}
         }
-        else if (getData("contact_a").equalsIgnoreCase("checked")) {
+        else  {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_contact_a"),"contact_a",false,true,where)){return false;}
         }
-        if (!Functions.checkClickByAbsence(driver,
+        if (!Functions.checkClick(driver,
                 new String[]{"add_b_save4", getElements("add_b_save4")}, //element to click
-                recursiveXPaths.glass, //element expected to disappear
+                new String[]{"qbe_i_areac", getElements("qbe_i_areac")}, //element expected to disappear
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         return true;
     }
     private boolean others_actions_t4(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA 4";
-        if (!Functions.auditData(driver,
-                new String[]{"area_b_actions", getElements("area_b_actions")}, //actions button
-                new String[]{"area_b_actions_b_audit_data", getElements("area_b_actions_b_audit_data")}, //audit button
-                new String[]{"area_audit_ok2",  getElements("area_audit_ok2")}, //audit_b_ok
-                where)) {
-            return false;
-        }
+        if(!Functions.checkClick(driver,
+                new String[]{"area_b_actions", getElements("area_b_actions")}, //element to click
+                new String[]{"area_b_actions_b_audit_data", getElements("area_b_actions_b_audit_data")}, //element expected to appear
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"area_b_actions_b_audit_data", getElements("area_b_actions_b_audit_data")}, //element to click
+                new String[]{"area_audit_ok2", getElements("area_audit_ok2")}, //element expected to appear
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"area_audit_ok2", getElements("area_audit_ok2")}, //element to click
+                new String[]{"area_b_detach", getElements("area_b_detach")}, //element expected to appear
+                where)){return false;}
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH 3";
+        where = " on OTHER DETACH 4";
+        Functions.break_time(driver, 3, 500);
         if (!Functions.detachTable(driver,
                 new String[]{"area_b_detach", getElements("area_b_detach")}, //detach button
                 true,     //screenshot??
@@ -657,6 +671,7 @@ public class AT2MDMOR0008Sis {
     private boolean interaction_record_t3(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION 3";
+        Functions.break_time(driver, 3, 300);
         if (!Functions.checkClick(driver,
                 new String[]{"language_b_add", getElements("language_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -739,6 +754,10 @@ public class AT2MDMOR0008Sis {
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_name", getElements("qbe_i_name")},
                 "name", getData("name"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_position", getElements("qbe_i_position")},
+                "position", "", where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,

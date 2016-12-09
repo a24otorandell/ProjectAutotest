@@ -159,5 +159,6 @@ public class AT2MDMOR0008Locators {
         elements.put("qbe_i_destination_desc", "//*[contains(@id, 'pc3_afr_table3_afr_c27::content')]");
         elements.put("qbe_i_destination_desc2", "//*[contains(@id, 'pc3_afr_table3_afr_c25::content')]");
         elements.put("qbe_i_name", "//*[contains(@id, 'pc3_afr_table3_afr_c24::content')]");
+        elements.put("qbe_i_position", "//*[contains(@id, 'pc3_afr_table3_afr_c28::content')]");
     }
 }
