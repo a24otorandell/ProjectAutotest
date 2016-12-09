@@ -54,12 +54,12 @@ public class AT2MDMUS0010Test {
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
-                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "ABRAVO", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "user", //name of the data
                 where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
