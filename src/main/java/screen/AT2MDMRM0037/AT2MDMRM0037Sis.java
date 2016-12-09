@@ -66,6 +66,7 @@ public class AT2MDMRM0037Sis {
     public boolean interaction_add (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
+        Functions.break_time(driver, 3, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"campaing_b_add", getElements("campaing_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -177,13 +178,15 @@ public class AT2MDMRM0037Sis {
                 "campaign", DataGenerator.getRandomAlphanumericSequence(6,false), where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_name",getElements("add_i_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(6,false), where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_manual",getElements("add_sl_manual")},
                 "Automatic", "manual", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_affect"),"affect",false,true,where)){return false;}
         if (!Functions.createLov(driver,
-                new String[]{"add_lov_ledger", getElements("search_lov_ledger")}, //LoV button
+                new String[]{"add_lov_ledger", getElements("add_lov_ledger")}, //LoV button
                 new String[]{"add_i_ledger", getElements("add_i_ledger")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult2, // lov result
@@ -227,9 +230,11 @@ public class AT2MDMRM0037Sis {
                 "name", getData("name"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_manual",getElements("qbe_sl_manual")},
                 getData("manual"), "manual", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_affect",getElements("qbe_sl_affect")},
                 getData("affect"), "affect", where)){return false;}
