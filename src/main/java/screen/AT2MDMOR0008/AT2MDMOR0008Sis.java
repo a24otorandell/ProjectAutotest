@@ -225,12 +225,12 @@ public class AT2MDMOR0008Sis {
                 where);
 /*        if (!Functions.insertInput(driver, new String[]{"add_i_town",getElements("add_i_town")},
                 "town", DataGenerator.getRandomAlphanumericSequence(6, false), where)){return false;}*/
-        if(!Functions.createLovByValue(driver,
+        if(!Functions.createLov(driver,
                 new String[]{"add_lov_county",getElements("add_lov_county")}, // b_lov
                 new String[]{"add_i_county", getElements("add_i_county")}, // i_lov
-                new String[]{"add_lov_country_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result,
-                "07", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok,
                 "country", //name of the data
                 where)) {return false;}
 /*        Functions.getAttr(driver,
@@ -337,12 +337,12 @@ public class AT2MDMOR0008Sis {
                 where);
 /*        if (!Functions.insertInput(driver, new String[]{"add_i_town",getElements("add_i_town")},
                 "town", DataGenerator.getRandomAlphanumericSequence(6, false), where)){return false;}*/
-        if(!Functions.createLovByValue(driver,
+        if(!Functions.createLov(driver,
                 new String[]{"add_lov_county",getElements("add_lov_county")}, // b_lov
                 new String[]{"add_i_county", getElements("add_i_county")}, // i_lov
-                new String[]{"add_lov_country_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result,
-                "09", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok,
                 "country", //name of the data
                 where)) {return false;}
 /*        Functions.getAttr(driver,
