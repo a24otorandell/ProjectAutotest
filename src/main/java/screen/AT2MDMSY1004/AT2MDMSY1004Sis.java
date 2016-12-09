@@ -55,6 +55,7 @@ public class AT2MDMSY1004Sis {
     public boolean interaction_add (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"configuration_b_add", getElements("configuration_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
