@@ -256,7 +256,7 @@ public class AT2BOOSA0001Locators {
         elements.put("go_to_bloqued_bookings_e_record", "//*[contains(@id, 'pc1:ot4count')]");
         elements.put("go_to_bloqued_bookings_b_delete_b_ok", "//*[contains(@id, 'pc1:pcgt1:cbt1')]");
         elements.put("go_to_bloqued_bookings_ch_select_all_gods", "//*[contains(@id, 'pc1:sbc1::content')]");
-        elements.put("go_to_search_booking", "//*[contains(@id, 'tabIndex::disclosureAnchor')]");
+        elements.put("go_to_search_booking", "//*[contains(@id, 'Pane:1:tabIndex::disclosureAnchor')]");
 
         //SEND BOOKING
 
