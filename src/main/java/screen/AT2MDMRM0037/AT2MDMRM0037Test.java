@@ -183,7 +183,7 @@ public class AT2MDMRM0037Test {
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_affect"),"affect",false,true,where)){return false;}
         if (!Functions.createLov(driver,
-                new String[]{"add_lov_ledger", getElements("search_lov_ledger")}, //LoV button
+                new String[]{"add_lov_ledger", getElements("add_lov_ledger")}, //LoV button
                 new String[]{"add_i_ledger", getElements("add_i_ledger")}, //external LoV input
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult2, // lov result
@@ -425,18 +425,18 @@ public class AT2MDMRM0037Test {
                 new String[]{"add_lov_currency",getElements("add_lov_currency")}, // b_lov
                 new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "currency", //Data name
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_mail",getElements("add_i_mail")},
                 "mail", DataGenerator.getRandomAlphanumericSequence(8,false) + "@mail.es", where)){return false;}
-        if(!Functions.createLov(driver,
+        if(!Functions.createLovByValue(driver,
                 new String[]{"add_lov_company",getElements("add_lov_company")}, // b_lov
                 new String[]{"add_i_company", getElements("add_i_company")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
+                new String[]{"add_lov_company_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "E10", // value to search
                 "company", //Data name
                 where)){return false;}
         if(!Functions.createLov(driver,

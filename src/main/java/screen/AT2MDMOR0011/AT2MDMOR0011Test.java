@@ -6,6 +6,8 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by aibanez on 25/10/2016.
  */
@@ -55,6 +57,15 @@ public class AT2MDMOR0011Test {
     private boolean interaction_record_departments(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION";
+        if (!Functions.checkExistence(driver,
+                "", //value
+                "code",//data name (x)
+                new String[]{"search_i_code", getElements("search_i_code")},//input
+                new String[]{"search_b_search", getElements("search_b_search")},//search button
+                new String[]{"departments_e_result", getElements("departments_e_result")},//expected not found result
+                "String",//type of input
+                2, //value length
+                where)){return false;}
         if (!Functions.checkClick(driver,
                 new String[]{"departments_b_add", getElements("departments_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -62,32 +73,31 @@ public class AT2MDMOR0011Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_code",getElements("add_i_code")},
-                "code", DataGenerator.getRandomAlphanumericSequence(3, true), where)){return false;}
-//        if(!Functions.createLov(driver,
-//                new String[]{"add_lov_department",getElements("add_lov_department")}, // b_lov
-//                new String[]{"add_i_department", getElements("add_i_department")}, // i_lov
-//                recursiveXPaths.lov_b_search, // lov b search
-//                recursiveXPaths.lov_e_altresult, // lov result
-//                recursiveXPaths.lov_b_ok, //lov b ok
-//                "department", //Data name
-//                where)){return false;}
-        if (!Functions.createLovByValue(driver,
+                "code", getData("code"), where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"add_lov_department",getElements("add_lov_department")}, // b_lov
+                new String[]{"add_i_department", getElements("add_i_department")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "department", //Data name
+                where)){return false;}
+/*        if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_department", getElements("add_lov_department")}, //LoV button
                 new String[]{"add_i_department", getElements("add_i_department")}, //external LoV input
                 new String[]{"add_lov_deparment_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 "RRHH", // value to search
                 "department", //name of the data
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_department_des", getElements("add_i_department_des")}, // element path
+                where)){return false;}*/
+        if(!Functions.getValue(driver,new String[]{"add_i_department_des", getElements("add_i_department_des")}, // element path
                 "department_des", // key for data value (the name)
                 where)){return false;}
+
         if (!Functions.insertInput(driver, new String[]{"add_i_activity",getElements("add_i_activity")},
-                "activity", "MI", where)){return false;}
+                "activity", randomActivity(driver), where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_group"),"group",true,true,where)){return false;}
-        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_internet"),"internet",false,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_excursions"),"excursions",true,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
@@ -105,22 +115,18 @@ public class AT2MDMOR0011Test {
         String where = " on SEARCH";
         if (!Functions.insertInput(driver, new String[]{"search_i_code",getElements("search_i_code")},
                 "code", getData("code"), where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"search_lov_department", getElements("search_lov_department")}, //LoV button
-//                new String[]{"search_i_department", getElements("search_i_department")}, //external LoV input
-//                new String[]{"search_lov_department_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                recursiveXPaths.lov_e_result, // lov internal result
-//                getData("department"), // value to search
-//                "department", //name of the data
-//                where)){return false;}
+        if (!Functions.createLovByValue(driver,
+                new String[]{"search_lov_department", getElements("search_lov_department")}, //LoV button
+                new String[]{"search_i_department", getElements("search_i_department")}, //external LoV input
+                new String[]{"search_lov_department_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                getData("department"), // value to search
+                "department", //name of the data
+                where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_activity",getElements("search_i_activity")},
                 "activity", getData("activity"), where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_group"), "group", true, where)) {
-            return false;
-        }
-        if (!Functions.checkboxValue(driver,
-                getElements("search_ck_internet"), "internet", false, where)) {
             return false;
         }
         if (!Functions.checkboxValue(driver,
@@ -149,15 +155,13 @@ public class AT2MDMOR0011Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_activity",getElements("add_i_activity")},
-                "activity", "TO", where)){return false;}
+                "activity", randomActivity(driver), where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_group"),"group",false,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_internet"),"internet",false,true,where)){return false;}
-        if (!Functions.checkboxValue(driver,
                 getElements("add_ck_excursions"),"excursions",false,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_active"),"active",false,true,where)){return false;}
+                getElements("add_ck_active"),"active",true,true,where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -185,34 +189,39 @@ public class AT2MDMOR0011Test {
                 "code", getData("code"), where)) {
             return false;
         }
-//        if (!Functions.insertInput(driver, new String[]{"qbe_i_department", getElements("qbe_i_department")},
-//                "department", getData("department"), where)) {
-//            return false;
-//        }
-//        if (!Functions.insertInput(driver, new String[]{"qbe_i_department_des", getElements("qbe_i_department_des")},
-//                "department_des", getData("department_des"), where)) {
-//            return false;
-//        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_department", getElements("qbe_i_department")},
+                "department", getData("department"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_department_des", getElements("qbe_i_department_des")},
+                "department_des", getData("department_des"), where)) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_activity", getElements("qbe_i_activity")},
                 "activity", getData("activity"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_group", getElements("qbe_sl_group")},
                 getData("group"), "group", where)) {
             return false;
         }
-        if (!Functions.selectText(driver, new String[]{"qbe_sl_internet", getElements("qbe_sl_internet")},
+        Functions.break_time(driver, 3, 400);
+/*        if (!Functions.selectText(driver, new String[]{"qbe_sl_internet", getElements("qbe_sl_internet")},
                 getData("internet"),"internet", where)) {
             return false;
-        }
+        }*/
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_excursions", getElements("qbe_sl_excursions")},
                 getData("excursions"),"excursions", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_active", getElements("qbe_sl_active")},
                 getData("active"), "active", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_code", getElements("qbe_i_code")}, //any query input
                 new String[]{"departments_e_result", getElements("departments_e_result")}, //table result
@@ -250,5 +259,9 @@ public class AT2MDMOR0011Test {
         }
         return true;
     }
-
+    private String randomActivity (TestDriver driver) {
+        String valores [] = {"TO", "MI", "GR", "HX", "BO", "CR"};
+        String result = (valores[new Random().nextInt(valores.length)]);
+        return result;
+    }
 }
