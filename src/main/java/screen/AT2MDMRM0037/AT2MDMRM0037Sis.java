@@ -45,7 +45,7 @@ public class AT2MDMRM0037Sis {
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_add(driver)) return false;
         if (!search(driver)) return false;
-        if (!interaction_edit(driver)) return false;
+/*        if (!interaction_edit(driver)) return false;
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
         if (!interaction_add_transfer(driver)) return false;
@@ -53,7 +53,7 @@ public class AT2MDMRM0037Sis {
         if (!interaction_edit_transfer(driver)) return false;
         if (!qbe_transfer(driver, false)) return false;
         if (!others_actions_transfer(driver)) return false;
-        if (!delete_transfer(driver)) return false;
+        if (!delete_transfer(driver)) return false;*/
         if (!delete(driver)) return false;
         return true;
     }
@@ -133,11 +133,14 @@ public class AT2MDMRM0037Sis {
                 "campaign", getData("campaign"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_name",getElements("search_i_name")},
                 "name", getData("name"), where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_manual",getElements("search_sl_manual")},
                 getData("manual"), "manual", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.checkboxValue(driver,
                 getElements("search_ck_affect"),"affect",true,true,where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_ledger", getElements("search_lov_ledger")}, //LoV button
                 new String[]{"search_i_ledger", getElements("search_i_ledger")}, //external LoV input
@@ -182,9 +185,8 @@ public class AT2MDMRM0037Sis {
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_manual",getElements("add_sl_manual")},
                 "Automatic", "manual", where)){return false;}
-        Functions.break_time(driver, 3, 400);
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_affect"),"affect",false,true,where)){return false;}
+                getElements("add_ck_affect"),"affect",true,true,where)){return false;}
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_ledger", getElements("add_lov_ledger")}, //LoV button
                 new String[]{"add_i_ledger", getElements("add_i_ledger")}, //external LoV input

@@ -53,7 +53,7 @@ public class AT2MDMOR0011Locators {
         elements.put("add_ck_active", "//*[contains(@id, 'pc1:pcgt1:sbc7::content')]");
         //QBE
         elements.put("qbe_i_code", "//*[contains(@id, 'afr_resId1c1::content')]");
-        elements.put("qbe_i_department", "//*[contains(@id, afr_c2::content')]");
+        elements.put("qbe_i_department", "//*[contains(@id, 'afr_c2::content')]");
         elements.put("qbe_i_department_des", "//*[contains(@id, 'afr_c3::content')]");
         elements.put("qbe_i_activity", "//*[contains(@id, 'afr_resId1c2::content')]");
         elements.put("qbe_sl_group", "//*[contains(@id, 'soc4::content')]");
