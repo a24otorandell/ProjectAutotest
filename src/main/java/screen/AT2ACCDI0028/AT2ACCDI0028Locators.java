@@ -197,25 +197,35 @@ public class AT2ACCDI0028Locators {
         elements.put("generals_b_edit", "//*[contains(@id, 'pc1:pcgt2:boton_edit')]");
         //ADD
         elements.put("generals_b_add", "//*[contains(@id, 'pc1:pcgt2:boton_add')]");
+        elements.put("generals_e_secuence", "//*[contains(@id, 'pcgt2:it17::content')]");
         elements.put("generals_i_add_reason", "//*[contains(@id, 'pc1:pcgt2:soc8::content')]");
+        elements.put("generals_sl_add_ie", "//*[contains(@id, 'pc1:pcgt2:soc5::content')]");
         elements.put("generals_i_add_start_date", "//*[contains(@id, 'pc1:pcgt2:id2::content')]");
         elements.put("generals_i_add_ttoo", "//*[contains(@id, 'pc1:pcgt2:seqTtooId::content')]");
         elements.put("generals_lov_add_ttoo", "//*[contains(@id, 'pc1:pcgt2:seqTtooId::lovIconId')]");
+        elements.put("generals_e_add_ttoo_descriptión", "//*[contains(@id, 'pc1:pcgt2:it15::content')]");
         elements.put("generals_i_add_classification", "//*[contains(@id, 'pc1:pcgt2:codClasifId::content')]");
         elements.put("generals_lov_add_classification", "//*[contains(@id, 'pc1:pcgt2:codClasifId::lovIconId')]");
+        elements.put("generals_e_add_classification_description", "//*[contains(@id, 'pc1:pcgt2:it6::content')]");
         elements.put("generals_i_add_hotel", "//*[contains(@id, 'pc1:pcgt2:seqHotelId::content')]");
         elements.put("generals_lov_add_hotel", "//*[contains(@id, 'pc1:pcgt2:seqHotelId::lovIconId')]");
+        elements.put("generals_e_add_hotel_description", "//*[contains(@id, 'pc1:pcgt2:it5::content')]");
         elements.put("generals_i_add_chain", "//*[contains(@id, 'pc1:pcgt2:codCadenaId::content')]");
         elements.put("generals_lov_add_chain", "//*[contains(@id, 'pc1:pcgt2:codCadenaId::lovIconId')]");
+        elements.put("generals_lov_add_chain_description", "//*[contains(@id, 'pc1:pcgt2:it14::content')]");
         elements.put("generals_i_add_destination", "//*[contains(@id, 'pc1:pcgt2:codDestinoId::content')]");
         elements.put("generals_lov_add_destination", "//*[contains(@id, 'pc1:pcgt2:codDestinoId::lovIconId')]");
+        elements.put("generals_e_add_destination_description", "//*[contains(@id, 'pc1:pcgt2:it11::content')]");
         elements.put("generals_i_add_market", "//*[contains(@id, 'pc1:pcgt2:codPaisId::content')]");
         elements.put("generals_lov_add_market", "//*[contains(@id, 'pc1:pcgt2:codPaisId::lovIconId')]");
+        elements.put("generals_e_add_market_description", "//*[contains(@id, 'pc1:pcgt2:it13::content')]");
         elements.put("generals_i_add_country", "//*[contains(@id, 'pc1:pcgt2:codPaisDestinoId::content')]");
         elements.put("generals_lov_add_country", "//*[contains(@id, 'pc1:pcgt2:codPaisDestinoId::lovIconId')]");
-        elements.put("gene rals_i_add_application", "//*[contains(@id, 'pc1:pcgt2:soc4::content')]");
+        elements.put("generals_e_add_country_description", "//*[contains(@id, 'pc1:pcgt2:it16::content')]");
         elements.put("generals_b_add_save", "//*[contains(@id, 'pc1:pcgt2:btn_commitExit')]");
+        elements.put("generals_sl_aplication", "//*[contains(@id, 'pc1:pcgt2:soc4::content')]");
         elements.put("generals_cb_add_b2b", "//*[contains(@id, 'pc1:pcgt2:sbc4::content')]");
+        elements.put("generals_cb_add_main_acount", "//*[contains(@id, 'pc1:pcgt2:sbc7::content')]");
         //QBE
         elements.put("generals_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("generals_i_qbe_reason", "//*[contains(@id, 'pc1:exGeneral:socid0::content')]");

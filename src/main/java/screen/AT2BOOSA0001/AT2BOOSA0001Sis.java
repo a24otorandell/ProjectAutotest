@@ -762,14 +762,14 @@ public class AT2BOOSA0001Sis {
     private boolean Search_booking_other_actions (TestDriver driver){
         String where = " on OTHER ACTIONS";
         driver.getReport().addHeader("OTHER ACTIONS IN SEARCH BOOKING",3,false);
-
+        Functions.break_time(driver,120,500);
         if(!Functions.auditData(driver,
                 new String[]{"tb_b_actions",getElements("tb_b_actions")}, //actions button
                 new String[]{"tb_b_audit",getElements("tb_b_audit")}, //audit button
                 new String[]{"tb_b_audit_b_ok",getElements("tb_b_audit_b_ok")}, //audit_b_ok
                 where)){
             return false;
-        }
+        }Functions.break_time(driver,120,500);
         if(!Functions.detachTable(driver,
                 new String[]{"tb_b_detach",getElements("tb_b_detach")}, //detach button
                 true,     //screenshot??
@@ -865,13 +865,14 @@ public class AT2BOOSA0001Sis {
     private boolean Search_booking_other_actions_service_details (TestDriver driver){
         String where = " on ACTIONS SEND EMAIL/FAX";
         driver.getReport().addHeader("ACTIONS SERVICE DETAIL IN SEARCH BOOKING",3,false);
+        Functions.break_time(driver,120,500);
         if(!Functions.checkClick(driver,
                 new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
                 new String[]{"actions_b_service_details",getElements("actions_b_service_details")}, //element expected to appear
                 30,500, //seconds/miliseconds (driver wait)
                 where)){
             return false;
-        }
+        }Functions.break_time(driver,120,500);
         if(!Functions.checkClick(driver,
                 new String[]{"actions_b_service_details",getElements("actions_b_service_details")}, //element to click
                 new String[]{"actions_service_details_e_receptive_office",getElements("actions_service_details_e_receptive_office")}, //element expected to appear
