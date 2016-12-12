@@ -3,6 +3,7 @@ package core.HTMLReport;
 
 import core.FileGestor.ReportFile;
 import core.TestDriver.TestDriver;
+import org.openqa.selenium.Capabilities;
 
 /**
  * This class creates the report of the test as a html with inline css
