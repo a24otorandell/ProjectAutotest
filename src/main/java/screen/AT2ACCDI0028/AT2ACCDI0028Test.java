@@ -82,7 +82,90 @@ public class AT2ACCDI0028Test {
         where= " on SEARCH";
         driver.getReport().addHeader(" SEARCH IN GENERALS EXCLUSIONS MAINTENACE 2.0 ",3,false);
 
+        if (!Functions.selectText(driver,
+                new String[]{"generals_i_search_reason",getElements("generals_i_search_reason")},
+                getData("reason"), "reason",  where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"generals_i_search_ie",getElements("generals_i_search_ie")},
+                getData("ie"), "ie",  where)){return false;}
 
+        if (!Functions.insertInput(driver, new String[]{"generals_i_search_start_date",getElements("generals_i_search_start_date")},
+                "start_date", getData("start_date")," on where")){return false;}
+
+
+        boolean check_box_main_acount;
+
+        if (getData("main_acount").equalsIgnoreCase("yes")) {
+            check_box_main_acount = true;
+        }else{
+            check_box_main_acount = false;
+        }
+        boolean check_box_b2b;
+
+        if (getData("b2b").equalsIgnoreCase("yes")) {
+            check_box_b2b = true;
+        }else{
+            check_box_b2b = false;
+        }
+        if (!Functions.createLovByValue(driver,
+                new String[]{"generals_lov_search_ttoo", getElements("generals_lov_search_ttoo")}, //LoV button
+                new String[]{"generals_i_search_ttoo", getElements("generals_i_search_ttoo")}, //external LoV input
+                new String[]{"generals_i_search_ttoo_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "tto", // value to search
+                "tto", //name of the data
+                  where)){return false;}//where this operation occurs
+        if (!Functions.createLovByValue(driver,
+                new String[]{"generals_lov_search_classification", getElements("generals_lov_search_classification")}, //LoV button
+                new String[]{"generals_i_search_classification", getElements("generals_i_search_classification")}, //external LoV input
+                new String[]{"generals_i_search_classification_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "clasification", // value to search
+                "clasification", //name of the data
+                where)){return false;}//where this operation occurs
+        if (!Functions.createLovByValue(driver,
+                new String[]{"generals_lov_search_hotel", getElements("generals_lov_search_hotel")}, //LoV button
+                new String[]{"generals_i_search_hotel", getElements("generals_i_search_hotel")}, //external LoV input
+                new String[]{"generals_i_search_hotel_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "hotel_code", // value to search
+                "hotel_code", //name of the data
+                where)){return false;}//where this operation occurs
+        if (!Functions.createLovByValue(driver,
+                new String[]{"generals_lov_search_chain", getElements("generals_lov_search_chain")}, //LoV button
+                new String[]{"generals_i_search_chain", getElements("generals_i_search_chain")}, //external LoV input
+                new String[]{"generals_i_search_chain_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "chain", // value to search
+                "chain", //name of the data
+                where)){return false;}//where this operation occurs
+        if (!Functions.createLovByValue(driver,
+                new String[]{"generals_lov_search_destination", getElements("generals_lov_search_destination")}, //LoV button
+                new String[]{"generals_i_search_destination", getElements("generals_i_search_destination")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "value", // value to search
+                "data_name", //name of the data
+                where)){return false;}//where this operation occurs
+        if (!Functions.createLovByValue(driver,
+                new String[]{"x", getElements("x")}, //LoV button
+                new String[]{"y", getElements("y")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "value", // value to search
+                "data_name", //name of the data
+                where)){return false;}//where this operation occurs
+        if (!Functions.createLovByValue(driver,
+                new String[]{"x", getElements("x")}, //LoV button
+                new String[]{"y", getElements("y")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "value", // value to search
+                "data_name", //name of the data
+                where)){return false;}//where this operation occurs
+        if (!Functions.selectText(driver,
+                new String[]{"x",getElements("x")},
+               getData(""), "dataname",  where)){return false;}
         return true;
     }
 

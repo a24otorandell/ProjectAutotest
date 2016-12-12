@@ -167,6 +167,7 @@ public class AT2ACCDI0028Locators {
         //SEARCH
         elements.put("generals_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("generals_i_search_reason", "//*[contains(@id, 'qryId1:value10::content')]");
+        elements.put("generals_i_search_ie", "//*[contains(@id, 'qryId1:value20::content')]");
         elements.put("generals_i_search_start_date", "//*[contains(@id, 'qryId1:value30::content')]");
         elements.put("generals_i_search_ttoo", "//*[contains(@id, 'qryId1:value60::content')]");
         elements.put("generals_lov_search_ttoo", "//*[contains(@id, 'qryId1:value60::lovIconId')]");
