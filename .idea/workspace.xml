@@ -6,11 +6,10 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" line="198" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" line="458" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Locators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" />
@@ -44,8 +43,8 @@
             <file leaf-file-name="AT2ACCDI0028Locators.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Locators.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="322">
-                    <caret line="175" column="52" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="52" />
+                  <state relative-caret-position="374">
+                    <caret line="260" column="0" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -67,8 +66,8 @@
       <file leaf-file-name="Functions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="26571">
-              <caret line="1563" column="90" selection-start-line="1562" selection-start-column="7" selection-end-line="1563" selection-end-column="90" />
+            <state relative-caret-position="308">
+              <caret line="1602" column="101" selection-start-line="1601" selection-start-column="7" selection-end-line="1602" selection-end-column="101" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,21 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2ACCSU0074Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5287">
-              <caret line="323" column="9" selection-start-line="318" selection-start-column="7" selection-end-line="323" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AT2ACCDI0028Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="79" column="78" selection-start-line="79" selection-start-column="78" selection-end-line="79" selection-end-column="78" />
+            <state relative-caret-position="374">
+              <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
               <folding>
                 <element signature="docComment;class#AT2ACCDI0028Test#0" expanded="false" />
                 <element signature="method#AT2ACCDI0028Test#0;class#AT2ACCDI0028Test#0" expanded="false" />
@@ -101,6 +90,9 @@
                 <element signature="method#testCSED#0;class#AT2ACCDI0028Test#0" expanded="false" />
                 <element signature="e#1623#1686#0" expanded="false" />
                 <element signature="method#Exclusions_maintenance_generals#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
                 <element signature="method#Exclusions_maintenance_generals_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
                 <element signature="method#Exclusions_maintenance_generals_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
                 <element signature="method#Exclusions_maintenance_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
@@ -125,8 +117,17 @@
             <state relative-caret-position="697">
               <caret line="863" column="0" selection-start-line="863" selection-start-column="0" selection-end-line="863" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+                <element signature="e#474#475#0" expanded="false" />
+                <element signature="e#505#506#0" expanded="false" />
+                <element signature="e#567#568#0" expanded="false" />
+                <element signature="e#607#608#0" expanded="false" />
+                <element signature="e#648#649#0" expanded="false" />
+                <element signature="e#675#676#0" expanded="false" />
+                <element signature="e#725#726#0" expanded="false" />
+                <element signature="e#757#758#0" expanded="false" />
                 <element signature="method#start#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
@@ -308,7 +309,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -321,14 +322,7 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
@@ -676,13 +670,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00100" summary="- eliminanción de codigo no usado en accdi0018sis">
-      <created>1478170950154</created>
-      <option name="number" value="00100" />
-      <option name="presentableId" value="LOCAL-00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1478170950155</updated>
-    </task>
     <task id="LOCAL-00101" summary="Corrección codigo de la ACCOP0005 para que use en el historico los valores de la edicion">
       <created>1478175725081</created>
       <option name="number" value="00101" />
@@ -1019,7 +1006,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481559265416</updated>
     </task>
-    <option name="localTasksCounter" value="149" />
+    <task id="LOCAL-00149" summary="   ACTUALIZACION DE AT2BOOSA0001, AT2ACCDI0028&#10;   &#10;&#10;">
+      <created>1481616190906</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1481616190906</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1037,26 +1031,26 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.049808428" sideWeight="0.4892905" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5704648" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.01660281" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.01660281" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298351" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962519" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33163264" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25573066" sideWeight="0.094387755" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.049808428" sideWeight="0.4892905" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PMD" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293011" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" x="1692" y="172" width="1256" height="686" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39889196" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -1417,7 +1411,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java</url>
-          <line>467</line>
+          <line>727</line>
           <properties />
           <option name="timeStamp" value="1078" />
         </line-breakpoint>
@@ -1431,7 +1425,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="1084" />
+      <option name="time" value="1086" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1684,6 +1678,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-102">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1938,8 +1933,17 @@
         <state relative-caret-position="697">
           <caret line="863" column="0" selection-start-line="863" selection-start-column="0" selection-end-line="863" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="e#474#475#0" expanded="false" />
+            <element signature="e#505#506#0" expanded="false" />
+            <element signature="e#567#568#0" expanded="false" />
+            <element signature="e#607#608#0" expanded="false" />
+            <element signature="e#648#649#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+            <element signature="e#725#726#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
             <element signature="method#start#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
@@ -1959,7 +1963,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0074/AT2ACCSU0074Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5287">
+        <state relative-caret-position="332">
           <caret line="323" column="9" selection-start-line="318" selection-start-column="7" selection-end-line="323" selection-end-column="9" />
           <folding />
         </state>
@@ -1967,8 +1971,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26571">
-          <caret line="1563" column="90" selection-start-line="1562" selection-start-column="7" selection-end-line="1563" selection-end-column="90" />
+        <state relative-caret-position="308">
+          <caret line="1602" column="101" selection-start-line="1601" selection-start-column="7" selection-end-line="1602" selection-end-column="101" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Locators.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="260" column="0" selection-start-line="260" selection-start-column="0" selection-end-line="260" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1977,8 +1991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="79" column="78" selection-start-line="79" selection-start-column="78" selection-end-line="79" selection-end-column="78" />
+        <state relative-caret-position="374">
+          <caret line="88" column="24" selection-start-line="88" selection-start-column="24" selection-end-line="88" selection-end-column="24" />
           <folding>
             <element signature="docComment;class#AT2ACCDI0028Test#0" expanded="false" />
             <element signature="method#AT2ACCDI0028Test#0;class#AT2ACCDI0028Test#0" expanded="false" />
@@ -1989,6 +2003,9 @@
             <element signature="method#testCSED#0;class#AT2ACCDI0028Test#0" expanded="false" />
             <element signature="e#1623#1686#0" expanded="false" />
             <element signature="method#Exclusions_maintenance_generals#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
             <element signature="method#Exclusions_maintenance_generals_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
             <element signature="method#Exclusions_maintenance_generals_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
             <element signature="method#Exclusions_maintenance_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
@@ -2002,16 +2019,6 @@
             <element signature="method#Exclusions_maintenance_category_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
             <element signature="method#Exclusions_maintenance_category_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
             <element signature="method#Exclusions_maintenance_category_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Locators.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="175" column="52" selection-start-line="175" selection-start-column="22" selection-end-line="175" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

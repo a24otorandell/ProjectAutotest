@@ -164,9 +164,11 @@ public class AT2ACCDI0028Locators {
         ///////////////////////////////////////////// GENERALS TAB /////////////////////////////////////////////////////
         elements.put("generals_tab", "//*[contains(@id, 'sdi2::disAcr')]");
         elements.put("generals_b_reset", "//*[contains(@id, 'qryId1::reset')]");
+        elements.put("generals_e_sequence", "//*[contains(@id, 'pc1:exGeneral::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
         //SEARCH
         elements.put("generals_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("generals_i_search_reason", "//*[contains(@id, 'qryId1:value10::content')]");
+        elements.put("generals_i_search_sequence", "//*[contains(@id, 'qryId1:value00::content')]");
         elements.put("generals_i_search_ie", "//*[contains(@id, 'qryId1:value20::content')]");
         elements.put("generals_i_search_start_date", "//*[contains(@id, 'qryId1:value30::content')]");
         elements.put("generals_i_search_ttoo", "//*[contains(@id, 'qryId1:value60::content')]");
@@ -228,12 +230,19 @@ public class AT2ACCDI0028Locators {
         elements.put("generals_sl_aplication", "//*[contains(@id, 'pc1:pcgt2:soc4::content')]");
         elements.put("generals_cb_add_b2b", "//*[contains(@id, 'pc1:pcgt2:sbc4::content')]");
         elements.put("generals_cb_add_main_acount", "//*[contains(@id, 'pc1:pcgt2:sbc7::content')]");
+        elements.put("generals_i_add_active", "//*[contains(@id, 'pc1:pcgt2:sbc6::content')]");
+        elements.put("generals_lov_add_active_yes", "//*[contains(@id, 'pc1:d2::yes')]");
         //QBE
         elements.put("generals_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
+        elements.put("generals_i_qbe_sequence", "//*[contains(@id, 'pc1_afr_exGeneral_afr_resId1c1::content')]");
         elements.put("generals_i_qbe_reason", "//*[contains(@id, 'pc1:exGeneral:socid0::content')]");
+        elements.put("generals_i_qbe_ie", "//*[contains(@id, 'pc1:exGeneral:soc6::content')]");
         elements.put("generals_i_qbe_start_date", "//*[contains(@id, 'pc1:exGeneral:id5::content')]");
+        elements.put("generals_i_qbe_active", "//*[contains(@id, 'pc1:exGeneral:soc7::content')]");
         elements.put("generals_i_qbe_ttoo", "//*[contains(@id, '_pc1_afr_exGeneral_afr_resId1c8::content')]");
+        elements.put("generals_i_qbe_main_acount", "//*[contains(@id, 'pc1:exGeneral:soc1::content')]");
         elements.put("generals_i_qbe_classification", "//*[contains(@id, '_pc1_afr_exGeneral_afr_resId1c11::content')]");
+        elements.put("generals_i_qbe_exclude_b2b", "//*[contains(@id, 'pc1:exGeneral:soc9::content')]");
         elements.put("generals_i_qbe_hotel", "//*[contains(@id, '_pc1_afr_exGeneral_afr_resId1c13::content')]");
         elements.put("generals_i_qbe_chain", "//*[contains(@id, '_pc1_afr_exGeneral_afr_resId1c15::content')]");
         elements.put("generals_i_qbe_destination", "//*[contains(@id, '_pc1_afr_exGeneral_afr_resId1c16::content')]");
@@ -246,6 +255,11 @@ public class AT2ACCDI0028Locators {
         elements.put("generals_b_ok", "//*[contains(@id, 'd22::ok')]");
         //DETACH
         elements.put("generals_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
+
+        // ACTIONS COPY EXCLUSIONS
+
+
+
         ///////////////////////////////////////////// ATLAS TAB /////////////////////////////////////////////////////
         elements.put("atlas_tab", "//*[contains(@id, 'sdi3::disAcr')]");
         elements.put("atlas_b_reset", "//*[contains(@id, 'qryId1::reset')]");
