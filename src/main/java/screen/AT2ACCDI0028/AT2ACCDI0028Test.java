@@ -65,11 +65,15 @@ public class AT2ACCDI0028Test {
       //  if(!Exclusions_maintenance_category(driver)){return false;}
       //  if(!Exclusions_maintenance_binding(driver)){return false;}
         if(!Exclusions_maintenance_generals(driver)){return false;}
-
+        if(!Exclusions_maintenance_atlas(driver)){return false;}
      
         return false;
     }
 
+    private boolean Exclusions_maintenance_atlas (TestDriver driver){
+
+        return true;
+    }
 
 
     /*EXCLUSIONS MAINTENANCE TAB GENERALS*/
@@ -88,9 +92,70 @@ public class AT2ACCDI0028Test {
         String where;
         where= " on OTHER ACTIONS";
         driver.getReport().addHeader(" OTHER ACTIONS IN GENERALS EXCLUSIONS MAINTENACE 2.0 ",3,false);
+        if(!Functions.checkClick(driver,
+                new String[]{"generals_b_copy_exclusions", getElements("generals_b_copy_exclusions")}, //element to click
+                new String[]{"generals_copy_exclusions_tour_operators_b_qbe", getElements("generals_copy_exclusions_tour_operators_b_qbe")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.getText(driver,new String[]{"generals_copy_exclusions_tour_operators_qbe_e_to", getElements("generals_copy_exclusions_tour_operators_qbe_e_to")}, // element path
+                "tto", // key for data value (the name)
+                 where)){return false;}
+        if(!Functions.getText(driver,new String[]{"generals_copy_exclusions_tour_operators_qbe_e_to_name", getElements("generals_copy_exclusions_tour_operators_qbe_e_to_name")}, // element path
+                "tto_name", // key for data value (the name)
+                 where)){return false;}
+        if(!Functions.clickQbE(driver,
+                new String[]{"generals_copy_exclusions_tour_operators_b_qbe", getElements("generals_copy_exclusions_tour_operators_b_qbe")},// query button
+                new String[]{"generals_copy_exclusions_tour_operators_qbe_i_to", getElements("generals_copy_exclusions_tour_operators_qbe_i_to")},//any query input
+                where)){return false;} // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"generals_copy_exclusions_tour_operators_qbe_i_to",getElements("generals_copy_exclusions_tour_operators_qbe_i_to")},
+                "tto", getData("tto"), where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"generals_copy_exclusions_tour_operators_qbe_i_to_name",getElements("generals_copy_exclusions_tour_operators_qbe_i_to_name")},
+                "tto_name", getData("tto_name"),  where)){return false;}
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"generals_copy_exclusions_tour_operators_qbe_i_to", getElements("generals_copy_exclusions_tour_operators_qbe_i_to")}, //any query input
+                new String[]{"generals_copy_exclusions_e_result", getElements("generals_copy_exclusions_e_result")}, //table result
+                where)){return false;} // where this operation occurs
+        if(!Functions.getText(driver,new String[]{"generals_copy_exclusions_hotel_name_qbe_i_hotel", getElements("generals_copy_exclusions_hotel_name_qbe_i_hotel")}, // element path
+                "hotel", // key for data value (the name)
+                where)){return false;}
+        if(!Functions.getText(driver,new String[]{"generals_copy_exclusions_hotel_name_qbe_i_hotel_name", getElements("generals_copy_exclusions_hotel_name_qbe_i_hotel_name")}, // element path
+                "hotel_name", // key for data value (the name)
+                where)){return false;}
+        if(!Functions.clickQbE(driver,
+                new String[]{"generals_copy_exclusions_hotel_name_b_qbe", getElements("generals_copy_exclusions_hotel_name_b_qbe")},// query button
+                new String[]{"generals_copy_exclusions_hotel_name_qbe_i_hotel", getElements("generals_copy_exclusions_hotel_name_qbe_i_hotel")},//any query input
+                where)){return false;} // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"generals_copy_exclusions_hotel_name_qbe_i_hotel",getElements("generals_copy_exclusions_hotel_name_qbe_i_hotel")},
+                "hotel", getData("hotel"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"generals_copy_exclusions_hotel_name_qbe_i_hotel_name",getElements("generals_copy_exclusions_hotel_name_qbe_i_hotel_name")},
+                "hotel_name", getData("hotel_name"), where)){return false;}
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"generals_copy_exclusions_hotel_name_qbe_i_hotel", getElements("generals_copy_exclusions_hotel_name_qbe_i_hotel")}, //any query input
+                new String[]{"generals_copy_exclusions_e_result", getElements("generals_copy_exclusions_e_result")}, //table result
+                where)){return false;} // where this operation occurs
+        if(!Functions.detachTable(driver,
+                new String[]{"generals_copy_exclusions_e_detach_tour_operators",getElements("generals_copy_exclusions_e_detach_tour_operators")}, //detach button
+                true,     //screenshot??
+                where)){
+            return false;
+        }
+        if(!Functions.detachTable(driver,
+                new String[]{"generals_copy_exclusions_e_detach_hotels",getElements("generals_copy_exclusions_e_detach_hotels")}, //detach button
+                true,     //screenshot??
+                where)){
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"generals_copy_exclusions_b_copy", getElements("generals_copy_exclusions_b_copy")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                30, 500,
+                where)) {
+            return false;
+        }
+
         return true;
     }
-
     private boolean Exclusions_maintenance_generals_other_actions (TestDriver driver){
         String where;
         where= " on OTHER ACTIONS";

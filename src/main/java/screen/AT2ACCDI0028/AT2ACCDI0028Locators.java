@@ -257,7 +257,22 @@ public class AT2ACCDI0028Locators {
         elements.put("generals_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
 
         // ACTIONS COPY EXCLUSIONS
-
+        elements.put("generals_b_copy_exclusions", "//*[contains(@id, 'pc1:pcgm1:dc_cmi1')]/td[2]");
+        elements.put("generals_copy_exclusions_tour_operators_b_qbe", "//*[contains(@id, 'pc1:r1:0:pc1:_qbeTbr')]/a");
+        elements.put("generals_copy_exclusions_tour_operators_qbe_i_to", "//*[contains(@id, 'pc1_afr_ttoTab_afr_c2::content')]");
+        elements.put("generals_copy_exclusions_tour_operators_qbe_i_to_name", "//*[contains(@id, 'pc1_afr_ttoTab_afr_c1::content')]");
+        elements.put("generals_copy_exclusions_tour_operators_qbe_e_to", "//*[contains(@id, 'pc1:ttoTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
+        elements.put("generals_copy_exclusions_tour_operators_qbe_e_to_name", "//*[contains(@id, 'pc1:ttoTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
+        elements.put("generals_copy_exclusions_hotel_name_b_qbe", "//*[contains(@id, 'pc1:r1:0:pc1:_qbeTbr')]/a");
+        elements.put("generals_copy_exclusions_hotel_name_qbe_i_hotel", "//*[contains(@id, 'pc2_afr_hotTab_afr_c5::content')]");
+        elements.put("generals_copy_exclusions_hotel_name_qbe_i_hotel_name", "//*[contains(@id, 'pc2_afr_hotTab_afr_c4::content')]");
+        elements.put("generals_copy_exclusions_hotel_name_qbe_e_hotel", "//*[contains(@id, 'pc2:ttoTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
+        elements.put("generals_copy_exclusions_hotel_name_qbe_e_hotel_name", "//*[contains(@id, 'pc2:ttoTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
+        elements.put("generals_copy_exclusions_e_result", "//*[contains(@id, 'pc1:ttoTab::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("generals_copy_exclusions_e_result", "//*[contains(@id, 'pc2:ttoTab::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("generals_copy_exclusions_e_detach_tour_operators", "//*[contains(@id, 'pc1:_dchTbr')]/a");
+        elements.put("generals_copy_exclusions_e_detach_hotels", "//*[contains(@id, 'pc2:_dchTbr')]/a");
+        elements.put("generals_copy_exclusions_b_copy", "//*[contains(@id, 'pc1:r1:0:cb1')]");
 
 
         ///////////////////////////////////////////// ATLAS TAB /////////////////////////////////////////////////////
