@@ -173,6 +173,7 @@ public class AT2ACCDI0028Locators {
         elements.put("generals_lov_search_ttoo", "//*[contains(@id, 'qryId1:value60::lovIconId')]");
         elements.put("generals_i_search_ttoo_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
         elements.put("generals_cb_search_b2b", "//*[contains(@id, 'qryId1:value80::content')]");
+        elements.put("generals_cb_search_main_acount", "//*[contains(@id, 'qryId1:value50::content')]");
         elements.put("generals_i_search_classification", "//*[contains(@id, 'qryId1:value90::content')]");
         elements.put("generals_lov_search_classification", "//*[contains(@id, 'qryId1:value90::lovIconId')]");
         elements.put("generals_i_search_classification_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
