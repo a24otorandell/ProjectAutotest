@@ -4,6 +4,7 @@ import core.CommonActions.CommonProcedures;
 import core.ErrorManager.ErrorManager;
 import core.HTMLReport.AutoReport;
 import core.Jira.JiraUpdate;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;

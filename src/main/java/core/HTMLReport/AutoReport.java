@@ -3,6 +3,7 @@ package core.HTMLReport;
 
 import core.FileGestor.ReportFile;
 import core.TestDriver.TestDriver;
+import org.openqa.selenium.Capabilities;
 
 /**
  * This class creates the report of the test as a html with inline css
@@ -93,7 +94,7 @@ public class AutoReport extends HTMLFactory {
                 " Screen: " + driver.getTestdetails().getScreen() +
                 " </span>" +
                 " <span class='header'>" +
-                " Web Browser: firefox 43.0.1" + //ADJUST HERE
+                " Web Browser: firefox 43.0.1" + //TODO Update this to display actual browser version
                 " </span>" +
                 " <span class='header'>" +
                 " Environment: " + driver.getTestdetails().getEnvironment() +
