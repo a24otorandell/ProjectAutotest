@@ -71,12 +71,12 @@ public class AT2BOOSA0001Sis {
         if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
             return false;
         }
-        if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
+   /*     if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
             return false;
-        }
-        if(!Search_booking_other_actions_service_details(driver)){
+        }*/
+    /*    if(!Search_booking_other_actions_service_details(driver)){
             return false;
-        }
+        }*/
 
 
       /*  if(!Search_booking_advanced_search(driver)){return true;}
