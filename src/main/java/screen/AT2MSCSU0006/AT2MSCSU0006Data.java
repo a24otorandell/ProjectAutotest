@@ -35,5 +35,12 @@ public class AT2MSCSU0006Data {
         data.put("update_elements_tab_elements_table_operation", "BookingDetail");
         data.put("update_elements_tab_elements_table_elements", DataGenerator.getRandomAlphanumericSequence(8, true));
 
+        data.put("profile_detail_tab_profile_table_profile", DataGenerator.getRandomAlphanumericSequence(8, true));
+        data.put("profile_detail_tab_profile_table_description", DataGenerator.getRandomAlphanumericSequence(10, true));
+        data.put("update_profile_detail_tab_profile_table_profile", DataGenerator.getRandomAlphanumericSequence(8, true));
+        data.put("update_profile_detail_tab_profile_table_description", DataGenerator.getRandomAlphanumericSequence(10, true));
+
+        data.put("edited_profile_detail_tab_profile_detail_table_operation", "Confirmation");
+
     }
 }
