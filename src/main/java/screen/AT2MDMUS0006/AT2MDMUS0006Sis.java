@@ -116,7 +116,7 @@ public class AT2MDMUS0006Sis {
                 where)) {
             return false;
         }
-        if (getData("ok").equalsIgnoreCase("checked")) {
+        if (getData("ok").equalsIgnoreCase("Yes")) {
             if (!Functions.checkboxValue(driver,
                     getElements("add_ck_ok"),"ok",false,true,where)){return false;}
         }
