@@ -157,13 +157,13 @@ public class AT2MDMCL0042Test {
                 where)) {
             return false;
         }
-        if (!Functions.createLovByValue(driver,
-                new String[]{"add_lov_office", getElements("add_lov_office")}, //LoV button
-                new String[]{"add_i_office", getElements("add_i_office")}, //external LoV input
-                new String[]{"add_lov_office_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result,
-                "92", // value to search
-                "office", //name of the data
+        if (!Functions.createLov(driver,
+                new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
+                new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "office", //Data name
                 where)) {
             return false;
         }
@@ -225,11 +225,11 @@ public class AT2MDMCL0042Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_application_from", getElements("search_i_application_from")},
-                "apli_f", getData("apli_f"), where)) {
+                "apli_f_search", getData("apli_f").substring(0,10), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_application_to", getElements("search_i_application_to")},
-                "apli_t", getData("apli_t"), where)) {
+                "apli_t_search", getData("apli_t").substring(0,10), where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,
