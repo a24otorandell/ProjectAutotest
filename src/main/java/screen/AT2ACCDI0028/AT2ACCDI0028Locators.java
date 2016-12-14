@@ -281,26 +281,36 @@ public class AT2ACCDI0028Locators {
         //ADD
         elements.put("atlas_b_add", "//*[contains(@id, 'pc1:pcgt2:boton_add')]");
         elements.put("atlas_i_add_reasons", "//*[contains(@id, 'pc1:pcgt2:soc2::content')]");
+        elements.put("atlas_i_add_sequence", "//*[contains(@id, 'pc1:pcgt2:it4::content')]");
+        elements.put("atlas_sl_add_ie", "//*[contains(@id, 'pc1:pcgt2:soc3::content')]");
         elements.put("atlas_i_add_start_date", "//*[contains(@id, 'pc1:pcgt2:id3::content')]");
         elements.put("atlas_i_add_ttoo", "//*[contains(@id, 'pc1:pcgt2:seqTtooId::content')]");
         elements.put("atlas_lov_add_ttoo", "//*[contains(@id, 'pc1:pcgt2:seqTtooId::lovIconId')]");
+        elements.put("atlas_e_add_ttoo_description", "//*[contains(@id, 'pc1:pcgt2:it1::content')]");
         elements.put("atlas_cb_add_b2b", "//*[contains(@id, 'pc1:pcgt2:sbc2::content')]");
+        elements.put("atlas_cb_add_main_acount", "//*[contains(@id, 'pc1:pcgt2:sbc1::content')]");
         elements.put("atlas_i_add_classification", "//*[contains(@id, 'pc1:pcgt2:codClasifId::content')]");
         elements.put("atlas_lov_add_classification", "//*[contains(@id, 'pc1:pcgt2:codClasifId::lovIconId')]");
+        elements.put("atlas_e_add_classification_description", "//*[contains(@id, 'pc1:pcgt2:it2::content')]");
         elements.put("atlas_i_add_receptive", "//*[contains(@id, 'pc1:pcgt2:seqRecId::content')]");
         elements.put("atlas_lov_add_receptive", "//*[contains(@id, 'pc1:pcgt2:seqRecId::lovIconId')]");
         elements.put("atlas_i_add_contract", "//*[contains(@id, 'pc1:pcgt2:seqContrId::content')]");
         elements.put("atlas_lov_add_contract", "//*[contains(@id, 'pc1:pcgt2:seqContrId::lovIconId')]");
         elements.put("atlas_i_add_hotel", "//*[contains(@id, 'pc1:pcgt2:seqHotelId::content')]");
         elements.put("atlas_lov_add_hotel", "//*[contains(@id, 'pc1:pcgt2:seqHotelId::lovIconId')]");
+        elements.put("atlas_e_add_hotel_description", "//*[contains(@id, 'pc1:pcgt2:it12::content')]");
         elements.put("atlas_i_add_chain", "//*[contains(@id, 'pc1:pcgt2:codCadenaId::content')]");
         elements.put("atlas_lov_add_chain", "//*[contains(@id, 'pc1:pcgt2:codCadenaId::lovIconId')]");
+        elements.put("atlas_e_add_chain_description", "//*[contains(@id, 'pc1:pcgt2:it7::content')]");
         elements.put("atlas_i_add_destination", "//*[contains(@id, 'pc1:pcgt2:codDestinoId::content')]");
         elements.put("atlas_lov_add_destination", "//*[contains(@id, 'pc1:pcgt2:codDestinoId::lovIconId')]");
+        elements.put("atlas_e_add_destination_description", "//*[contains(@id, 'pc1:pcgt2:it3::content')]");
         elements.put("atlas_i_add_market", "//*[contains(@id, 'pc1:pcgt2:codPaisId::content')]");
         elements.put("atlas_lov_add_market", "//*[contains(@id, 'pc1:pcgt2:codPaisId::lovIconId')]");
+        elements.put("atlas_e_add_market_description", "//*[contains(@id, 'pc1:pcgt2:it10::content')]");
         elements.put("atlas_i_add_country", "//*[contains(@id, 'pc1:pcgt2:codPaisDestinoId::content')]");
         elements.put("atlas_lov_add_country", "//*[contains(@id, 'pc1:pcgt2:codPaisDestinoId::lovIconId')]");
+        elements.put("atlas_lov_add_country_description", "//*[contains(@id, 'pc1:pcgt2:it8::content')]");
         elements.put("atlas_i_add_application", "//*[contains(@id, 'pc1:pcgt2:soc1::content')]");
         elements.put("atlas_b_add_save", "//*[contains(@id, 'pc1:pcgt2:btn_commitExit')]");
         //SEARCH
@@ -308,11 +318,13 @@ public class AT2ACCDI0028Locators {
         elements.put("atlas_n_records", "//*[contains(@id, 'r5:0:pc1:exAtlasTbCount')]");
         elements.put("atlas_e_result", "//*[contains(@id, 'pc1:exAtlasTb::db')]/table/tbody/tr[1]/td[1]");
         elements.put("atlas_i_search_reasons", "//*[contains(@id, 'qryId1:value10::content')]");
+        elements.put("atlas_i_search_ie", "//*[contains(@id, 'qryId1:value20::content')]");
         elements.put("atlas_i_search_start_date", "//*[contains(@id, 'qryId1:value30::content')]");
         elements.put("atlas_i_search_ttoo", "//*[contains(@id, 'qryId1:value60::content')]");
         elements.put("atlas_lov_search_ttoo", "//*[contains(@id, 'qryId1:value60::lovIconId')]");
         elements.put("atlas_i_search_ttoo_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
         elements.put("atlas_cb_search_b2b", "//*[contains(@id, 'qryId1:value80::content')]");
+        elements.put("atlas_cb_search_main_acount", "//*[contains(@id, 'qryId1:value50::content')]");
         elements.put("atlas_i_search_classification", "//*[contains(@id, 'qryId1:value90::content')]");
         elements.put("atlas_lov_search_classification", "//*[contains(@id, 'qryId1:value90::lovIconId')]");
         elements.put("atlas_i_search_classification_code", "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]");
@@ -343,7 +355,10 @@ public class AT2ACCDI0028Locators {
         //QBE
         elements.put("atlas_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("atlas_i_qbe_reason", "//*[contains(@id, 'pc1:exAtlasTb:socid0::content')]");
+        elements.put("atlas_i_qbe_ie", "//*[contains(@id, 'pc1:exAtlasTb:socid0::content')]");
         elements.put("atlas_i_qbe_start_date", "//*[contains(@id, 'pc1:exAtlasTb:id1::content')]");
+        elements.put("atlas_i_qbe_main_acount", "//*[contains(@id, 'pc1:exAtlasTb:socid0::content')]");
+        elements.put("atlas_i_qbe_exclude_b2b", "//*[contains(@id, 'pc1:exAtlasTb:socid0::content')]");
         elements.put("atlas_i_qbe_ttoo", "//*[contains(@id, 'pc1_afr_exAtlasTb_afr_resId1c7::content')]");
         elements.put("atlas_i_qbe_classification", "//*[contains(@id, 'pc1_afr_exAtlasTb_afr_resId1c10::content')]");
         elements.put("atlas_i_qbe_receptive", "//*[contains(@id, 'pc1_afr_exAtlasTb_afr_resId1c12::content')]");

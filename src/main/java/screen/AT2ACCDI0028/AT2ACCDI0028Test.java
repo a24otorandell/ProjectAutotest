@@ -496,65 +496,82 @@ public class AT2ACCDI0028Test {
         where= " on ADD";
         driver.getReport().addHeader(" ADD IN ATLAS EXCLUSIONS MAINTENACE 2.0 ",3,false);
         if(!Functions.checkClick(driver,
-                new String[]{"", getElements("")}, //element to click
-                new String[]{"", getElements("")}, //element expected to appear
+                new String[]{"atlas_tab", getElements("atlas_tab")}, //element to click
+                new String[]{"atlas_b_add", getElements("atlas_b_add")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
         if(!Functions.checkClick(driver,
-                new String[]{"", getElements("")}, //element to click
-                new String[]{"", getElements("")}, //element expected to appear
+                new String[]{"atlas_b_add", getElements("atlas_b_add")}, //element to click
+                new String[]{"atlas_i_add_reasons", getElements("atlas_i_add_reasons")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_i_add_sequence", getElements("atlas_i_add_sequence")}, // element path
                 "secuence", // key for data value (the name)
                 where)){return false;}
 
         String list_options[] = {"Selling to B2C client", "Other reason", "Category", "Direct contract with the hotel"
                 , "Does not comply with Binding", "Client request", "Specific hotel request", "Signed by contract", "Client pricing to be revised", "Administration request", "B2B rate not valid for B2C clients"};
         if (!Functions.selectTextRandom(driver,
-                new String[]{"", getElements("")},
+                new String[]{"atlas_i_add_reasons", getElements("atlas_i_add_reasons")},
                 list_options, "reason", where)){return false;}
 
         String list_options_ie[] = {"I", "E"};
         if (!Functions.selectTextRandom(driver,
-                new String[]{"", getElements("")},
+                new String[]{"atlas_sl_add_ie", getElements("atlas_sl_add_ie")},
                 list_options_ie, "ie", where)){return false;}
 
-        if (!Functions.insertInput(driver, new String[]{"", getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_add_start_date", getElements("atlas_i_add_start_date")},
                 "start_date",DataGenerator.getToday(driver,"dd/MM/yyyy"),where)){
             return false;
         }
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_ttoo",getElements("atlas_lov_add_ttoo")}, // b_lov
+                new String[]{"atlas_i_add_ttoo", getElements("atlas_i_add_ttoo")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "tto", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_ttoo_description", getElements("atlas_e_add_ttoo_description")}, // element path
                 "tto_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_classification",getElements("atlas_lov_add_classification")}, // b_lov
+                new String[]{"atlas_i_add_classification", getElements("atlas_i_add_classification")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "clasification", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_classification_description", getElements("atlas_e_add_classification_description")}, // element path
                 "clasification_description", // key for data value (the name)
                 where)){return false;}
+
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_receptive",getElements("atlas_lov_add_receptive")}, // b_lov
+                new String[]{"atlas_i_add_receptive", getElements("atlas_i_add_receptive")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "receptive", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"atlas_lov_add_contract",getElements("atlas_lov_add_contract")}, // b_lov
+                new String[]{"atlas_i_add_contract", getElements("atlas_i_add_contract")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "contract", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"atlas_lov_add_hotel",getElements("atlas_lov_add_hotel")}, // b_lov
+                new String[]{"atlas_i_add_hotel", getElements("atlas_i_add_hotel")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "hotel", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_hotel_description", getElements("atlas_e_add_hotel_description")}, // element path
                 "hotel_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
