@@ -268,7 +268,6 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_send_booking_b_cancel", "//*[contains(@id, 'r2:0:cb2')]");
 
         //SERVICE DETAILS
-
         elements.put("actions_b_service_details", "//*[contains(@id, 'pc1:pcgm2:dc_cmi2')]/td[2]");
         elements.put("actions_service_details_e_receptive_office", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
         elements.put("actions_service_details_e_cost", "//*[contains(@id, 'pc1:t1:0:ot6::content')]");
@@ -285,6 +284,28 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_service_details_b_ok", "//*[contains(@id, 'd1::ok')]");
         elements.put("actions_service_details_e_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
 
+        //PRINT VOUCHERS
+
+        elements.put("actions_b_print_vouchers", "//*[contains(@id, 'pc1:pcgm2:dc_cmi3')]/td[2]");
+        elements.put("actions_print_vouchers_sl_format", "//*[contains(@id, 'soc2::content')]");
+        elements.put("actions_print_vouchers_sl_lenguage", "//*[contains(@id, 'soc1::content')]");
+        elements.put("actions_print_vouchers_i_destination", "//*[contains(@id, 'it2::content')]");
+        elements.put("actions_print_vouchers_ch_print_paxs", "//*[contains(@id, 'sbc1::content')]");
+        elements.put("actions_print_vouchers_ch_unified_vounchers", "//*[contains(@id, 'sbc2::content')]");
+        elements.put("actions_print_vouchers_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
+        elements.put("actions_print_vouchers_qbe_e_company", "//*[contains(@id, 'pc1:t1:1:ot20::content')]");
+        elements.put("actions_print_vouchers_qbe_e_office", "//*[contains(@id, 'pc1:t1:1:ot21::content')]");
+        elements.put("actions_print_vouchers_qbe_e_locata", "//*[contains(@id, 'pc1:t1:1:ot4::content')]");
+        elements.put("actions_print_vouchers_qbe_e_bundle", "//*[contains(@id, 'pc1:t1:1:ot8::content')]");
+        elements.put("actions_print_vouchers_qbe_e_ini_date", "//*[contains(@id, 'pc1:t1:1:ot18::content')]");
+        elements.put("actions_print_vouchers_qbe_e_end_date", "//*[contains(@id, 'pc1:t1:1:ot19::content')]");
+        elements.put("actions_print_vouchers_qbe_e_units", "//*[contains(@id, 'pc1:t1:1:ot24::content')]");
+        elements.put("actions_print_vouchers_qbe_e_ad", "//*[contains(@id, 'pc1:t1:1:ot22::content')]");
+        elements.put("actions_print_vouchers_qbe_e_description", "//*[contains(@id, 'pc1:t1:1:ot14::content')]");
+        elements.put("actions_print_vouchers_qbe_e_cancel", "//*[contains(@id, 'pc1:t1:1:ot16::content')]");
+        elements.put("actions_print_vouchers_qbe_e_update", "//*[contains(@id, 'pc1:t1:1:ot17::content')]");
+        elements.put("actions_print_vouchers_qbe_e_last_print", "//*[contains(@id, 'pc1:t1:1:ot1::content')]");
+        elements.put("actions_print_vouchers_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
     }
 
     }

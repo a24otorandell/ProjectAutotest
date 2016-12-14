@@ -6,8 +6,13 @@ import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 
+import java.util.Random;
+
 /**
  * Created by vsolis on 18/11/2016.
+ *
+ *
+ * En la pestaña PRINT VOUCHER 4 CAMPOS DE LA QBE ESTAN SIN IMPUT
  */
 public class AT2BOOSA0001Sis {
     protected AT2BOOSA0001Locators locators;
@@ -71,6 +76,7 @@ public class AT2BOOSA0001Sis {
         if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
             return false;
         }
+        if(!Search_booking_other_actions_print_vounchers(driver)){return false;}
    /*     if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
             return false;
         }*/
@@ -83,6 +89,151 @@ public class AT2BOOSA0001Sis {
         return false;*/
 
         return true;
+    }
+
+    private boolean Search_booking_other_actions_print_vounchers (TestDriver driver){
+        String where = " on PRINT VOUCHERS";
+        driver.getReport().addHeader("PRINT VOUCHERS IN SEARCH BOOKING",3,false);
+        Functions.break_time(driver,90,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
+                new String[]{"actions_b_print_vouchers",getElements("actions_b_print_vouchers")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }Functions.break_time(driver,120,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_print_vouchers",getElements("actions_b_print_vouchers")}, //element to click
+                new String[]{"actions_print_vouchers_sl_format",getElements("actions_print_vouchers_sl_format")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }Functions.break_time(driver,120,600);
+        String list_options_format[] = {"Fax", "Printer", "E-Mail"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"x", getElements("x")},
+                list_options_format, "format", where)){return false;}
+        String list_options_lenguage[] = {"German", "Arabic", "Bulgarian"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"x", getElements("x")},
+                list_options_lenguage, "lenguage", where)){return false;}
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData(""),"",where)){
+            return false;
+        }
+        Random Print_pax = new Random();
+        boolean getRandomBoolean =  Print_pax.nextBoolean();
+
+        String RandomBoolean;
+
+        if(getRandomBoolean){
+
+            RandomBoolean= "Yes";
+            if(!Functions.checkboxValue(driver,
+                    getElements("actions_print_vouchers_ch_print_paxs"),"print_paxs",true,true, where)){
+                return false;
+            }
+        }else {RandomBoolean="No";
+            if(!Functions.checkboxValue(driver,
+                    getElements("actions_print_vouchers_ch_print_paxs"),"print_paxs",false,true, where)){
+                return false;
+
+            }
+
+        }
+        Random Unificed_vouchers = new Random();
+        boolean getRandomBoolean2 =  Unificed_vouchers.nextBoolean();
+
+        String RandomBoolean2;
+
+        if(getRandomBoolean2){
+
+            RandomBoolean2= "Yes";
+            if(!Functions.checkboxValue(driver,
+                    getElements("actions_print_vouchers_ch_unified_vounchers"),"unified_voucher",true,true, where)){
+                return false;
+            }
+        }else {RandomBoolean2="No";
+            if(!Functions.checkboxValue(driver,
+                    getElements("actions_print_vouchers_ch_unified_vounchers"),"unified_voucher",false,true, where)){
+                return false;
+            }
+        }
+        String[] columns = {"Company","office","locata","Type_of_service","ord","bundle","Service","Ini_date","End_date","Units","AD","CH","Description","Cancel","Update","Last_print"};
+        if (!Functions.collectTableData(driver,columns,getElements("tabla"),1,where))return false;
+
+        if(!Functions.clickQbE(driver,
+                new String[]{"", getElements("")},// query button
+                new String[]{"", getElements("")},//any query input
+                where)){return false;} // where the operation occurs
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Company"),"Company",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("office"),"office",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("locata"),"locata",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Type_of_service"),"Type_of_service",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("ord"),"ord",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("bundle"),"bundle",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Service"),"Service",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Ini_date"),"Ini_date",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("End_date"),"End_date",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Units"),"Units",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("AD"),"AD",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("CH"),"CH",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Description"),"Description",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Cancel"),"Cancel",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Update"),"Update",where)){
+            return false;
+        }
+        if(!Functions.insertInput(driver,new String[]{"",getElements("")},
+                getData("Last_print"),"Last_print",where)){
+            return false;
+        }
+        return true;
+
+
+
     }
 
     //SEARCH BOOKING
@@ -909,23 +1060,23 @@ public class AT2BOOSA0001Sis {
         } // where the operation occurs
 
         if(!Functions.insertInput(driver,new String[]{"actions_service_details_i_receptive_office",getElements("actions_service_details_i_receptive_office")},
-                "receptive_ofice","receptive_ofice",where)){
+               getData( "receptive_ofice"),"receptive_ofice",where)){
             return false;
         }
         if(!Functions.insertInput(driver,new String[]{"actions_service_details_i_cost",getElements("actions_service_details_i_cost")},
-                "cost","cost",where)){
+               getData("cost"),"cost",where)){
             return false;
         }
         if(!Functions.insertInput(driver,new String[]{"actions_service_details_i_sale",getElements("actions_service_details_i_sale")},
-                "sale","sale",where)){
+                getData("sale"),"sale",where)){
             return false;
         }
         if(!Functions.insertInput(driver,new String[]{"actions_service_details_i_profit",getElements("actions_service_details_i_profit")},
-                "profit","profit",where)){
+                getData("profit"),"profit",where)){
             return false;
         }
         if(!Functions.insertInput(driver,new String[]{"actions_service_details_i_profitability",getElements("actions_service_details_i_profitability")},
-                "profitability","profitability",where)){
+                getData("profitability"),"profitability",where)){
             return false;
         }
         if(!Functions.enterQueryAndClickResult(driver,
