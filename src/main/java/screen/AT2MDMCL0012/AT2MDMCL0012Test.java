@@ -542,7 +542,7 @@ public class AT2MDMCL0012Test {
                 new String[]{"platform_b_rest_qbe", getElements("platform_b_rest_qbe")}, //element to click
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_platform", getElements("search_i_platform")},
-                "platform","1", where)) {
+                "platform","3", where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,

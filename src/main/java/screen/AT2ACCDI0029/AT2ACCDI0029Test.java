@@ -349,7 +349,7 @@ public class AT2ACCDI0029Test {
         }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_opaque_type", getElements("qbe_sl_opaque_type")},
-                "Always", "opaque", where)) {
+                getData("opaque"), "opaque", where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,

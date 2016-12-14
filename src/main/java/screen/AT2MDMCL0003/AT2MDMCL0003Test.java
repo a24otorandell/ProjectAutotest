@@ -673,10 +673,13 @@ public class AT2MDMCL0003Test {
     public boolean interaction_add_t1_2 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
+        Functions.break_time(driver, 40, 600);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
+                recursiveXPaths.glass,
+                400, 300,//element expected to appear
                 where)) {
+            System.out.println("ENTRA PULSA");
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commercial_country", getElements("add_i_commercial_country")},

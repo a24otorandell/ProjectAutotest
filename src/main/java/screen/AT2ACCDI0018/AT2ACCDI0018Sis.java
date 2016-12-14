@@ -63,10 +63,11 @@ public class AT2ACCDI0018Sis {
     private boolean interaction_record_cancellation(TestDriver driver) {
         driver.getReport().addHeader("CREATTION RECORD", 3, false);
         String where = " on CREATTION";
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 100, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"cancellation_b_add", getElements("cancellation_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                150, 500,
                 where)) {
             return false;
         }

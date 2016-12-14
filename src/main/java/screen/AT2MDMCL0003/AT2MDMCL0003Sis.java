@@ -79,7 +79,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1(driver, false)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2(driver)) return false;
@@ -99,7 +98,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_2(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_2(driver)) return false;
@@ -119,7 +117,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_3(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_3(driver)) return false;
@@ -138,7 +135,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_4(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_4(driver)) return false;
@@ -157,7 +153,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_5(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_5(driver)) return false;
@@ -176,7 +171,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_6(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_6(driver)) return false;
@@ -195,7 +189,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_7(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_7(driver)) return false;
@@ -214,7 +207,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_8(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_8(driver)) return false;
@@ -233,7 +225,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_9(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_9(driver)) return false;
@@ -252,7 +243,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_10(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_10(driver)) return false;
@@ -271,7 +261,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_11(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_11(driver)) return false;
@@ -290,7 +279,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_12(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_12(driver)) return false;
@@ -309,7 +297,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_13(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_13(driver)) return false;
@@ -328,7 +315,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_14(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_14(driver)) return false;
@@ -347,7 +333,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_15(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_15(driver)) return false;
@@ -366,7 +351,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_16(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_16(driver)) return false;
@@ -385,7 +369,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_17(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_17(driver)) return false;
@@ -404,7 +387,6 @@ public class AT2MDMCL0003Sis {
         if (!search_t1_18(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-        if (!getData(driver)) return false;
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_18(driver)) return false;
@@ -697,7 +679,7 @@ public class AT2MDMCL0003Sis {
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
-                120, 300,//element expected to appear
+                250, 300,//element expected to appear
                 where)) {
             return false;
         }
@@ -806,7 +788,8 @@ public class AT2MDMCL0003Sis {
         String where = " on EDITTION 1";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
+                recursiveXPaths.glass,
+                120, 400,//element expected to appear
                 where)) {
             return false;
         }

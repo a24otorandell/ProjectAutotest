@@ -106,7 +106,7 @@ public class AT2MDMUS0015Sis {
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
-                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("user_name"), // value to search
                 "user", //name of the data
@@ -252,9 +252,14 @@ public class AT2MDMUS0015Sis {
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_copy", getElements("search_b_copy")}, //element to click
                 "COPY USER")){return false;}
+        Functions.break_time(driver, 300, 700);
         return true;
     }
     public boolean searachHard (TestDriver driver, String user) {
+        Functions.break_time(driver, 300, 700);
+        if (!Functions.simpleClick(driver,
+                new String[]{"users_b_reset", getElements("users_b_reset")}, //element to click
+                "COPY USER")){return false;}
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input

@@ -28,7 +28,7 @@ public class AT2MDMUS0015Locators {
         elements.put("users_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]");
         elements.put("users_e_result", "//*[contains(@id, 'pc1:resId1::db')]/table/tbody/tr[1]/td[1]");
         elements.put("users_e_records", "//*[contains(@id, 'pc1:outputText7')]");
-        elements.put("users_b_reset", "//*[contains(@id, 'resId1::ch::t']/tbody/tr[2]/th/a");
+        elements.put("users_b_reset", "//*[contains(@id, 'resId1::ch::t')]/tbody/tr[2]/th/a");
         //SEARCB
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
