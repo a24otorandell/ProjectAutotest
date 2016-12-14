@@ -6,13 +6,13 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" line="523" mnemonic="2" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" line="776" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -85,24 +85,89 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2BOOSA0001Sis.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
+      <file leaf-file-name="AT2ACCDI0028Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-70">
-              <caret line="170" column="25" selection-start-line="170" selection-start-column="25" selection-end-line="170" selection-end-column="25" />
+            <state relative-caret-position="566">
+              <caret line="1721" column="5" selection-start-line="1721" selection-start-column="5" selection-end-line="1721" selection-end-column="5" />
               <folding>
-                <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#start#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+                <element signature="docComment;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#AT2ACCDI0028Test#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="e#1625#1688#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_copy_exclusions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_actions_copy_exclusions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_binding_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Go_exclusions_maintenance_category_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_binding_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_delete#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AT2ACCDI0028Sis.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="566">
+              <caret line="1709" column="5" selection-start-line="50" selection-start-column="4" selection-end-line="1709" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#AT2ACCDI0028Sis#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#start#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="e#1458#1521#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_copy_exclusions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_other_actions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_qbe#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_edit#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_atlas_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_actions_copy_exclusions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_other_actions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_qbe#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_edit#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_generals_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_binding#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_binding_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Go_exclusions_maintenance_category_binding#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_binding_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_delete#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_other_actions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_qbe#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_edit#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+                <element signature="method#Exclusions_maintenance_category_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -191,14 +256,14 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Manager.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Locators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" />
       </list>
     </option>
   </component>
@@ -277,7 +342,134 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AT2ACCDI0028" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectAutotest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
@@ -749,13 +941,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00104" summary="quitado de mdmcl0013 del array de valores en la lista, el valor Hotel - contract, no sabemos como buscar por este valor en el motor de busqueda&#10;">
-      <created>1478191046730</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1478191046731</updated>
-    </task>
     <task id="LOCAL-00105" summary="    quitar espacios innecesarios de la actsu0037Sis&#10;">
       <created>1478191336149</created>
       <option name="number" value="00105" />
@@ -1092,7 +1277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481629373041</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="   ACTUALIZACION DE AT2BOOSA0001, AT2ACCDI0028&#10;   &#10;&#10;">
+      <created>1481701051665</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1481701051665</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1106,7 +1298,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1394" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3240372" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1116,12 +1308,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21711366" sideWeight="0.32597056" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2673522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5704648" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.01660281" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.01660281" sideWeight="0.4698795" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3256705" sideWeight="0.49732262" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33808097" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298351" sideWeight="0.90561223" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33808097" sideWeight="0.4919355" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962519" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0012771392" sideWeight="0.83199465" order="7" side_tool="false" content_ui="tabs" />
@@ -1490,13 +1682,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java</url>
-          <line>792</line>
+          <line>1045</line>
           <properties />
           <option name="timeStamp" value="1078" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java</url>
-          <line>64</line>
+          <line>643</line>
           <properties />
           <option name="timeStamp" value="1079" />
         </line-breakpoint>
@@ -1836,21 +2028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding>
-            <element signature="docComment;class#AT2ACCDI0028Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCDI0028Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCDI0028Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCDI0028Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCDI0028Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2ACCDI0028Sis#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU0006/AT2ACCSU0006Manager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -2029,39 +2206,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="74" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-          <folding>
-            <element signature="docComment;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#AT2ACCDI0028Test#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#start#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_generals#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_generals_actions_copy_exclusions#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_generals_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_generals_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_generals_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_generals_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_generals_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_binding_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Go_exclusions_maintenance_category_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_binding_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_delete#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
-            <element signature="method#Exclusions_maintenance_category_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/DataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -2107,6 +2251,90 @@
             <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="1709" column="5" selection-start-line="50" selection-start-column="4" selection-end-line="1709" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#AT2ACCDI0028Sis#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="e#1458#1521#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_copy_exclusions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_other_actions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_qbe#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_edit#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_actions_copy_exclusions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_other_actions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_qbe#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_edit#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_binding#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_binding_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Go_exclusions_maintenance_category_binding#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_binding_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_delete#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_other_actions#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_qbe#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_edit#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_search#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_add#0;class#AT2ACCDI0028Sis#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="1721" column="5" selection-start-line="1721" selection-start-column="5" selection-end-line="1721" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#AT2ACCDI0028Test#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="e#1625#1688#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_copy_exclusions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_atlas_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_actions_copy_exclusions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_generals_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_binding_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Go_exclusions_maintenance_category_binding#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_binding_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_delete#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_other_actions#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_qbe#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_edit#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_search#0;class#AT2ACCDI0028Test#0" expanded="false" />
+            <element signature="method#Exclusions_maintenance_category_add#0;class#AT2ACCDI0028Test#0" expanded="false" />
           </folding>
         </state>
       </provider>
