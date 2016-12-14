@@ -181,7 +181,7 @@ public class AT2MDMCL0029Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_zip_code", getElements("add_i_zip_code")},
-                "zip", "00001", where)) {
+                "zip", String.valueOf(DataGenerator.random(00000,99999)), where)) {
             return false;
         }
         if(!Functions.createLov(driver,
@@ -204,7 +204,7 @@ public class AT2MDMCL0029Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_email", getElements("add_i_email")},
-                "mail", "aaa@aaa.es", where)) {
+                "mail", DataGenerator.getRandomAlphanumericSequence(5, false) +"@mail.es", where)) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -321,6 +321,14 @@ public class AT2MDMCL0029Sis {
                 where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"add_i_credit_amount", getElements("add_i_credit_amount")},
+                "amount", "", where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_i_credit_currency", getElements("add_i_credit_currency")},
+                "credit_c", "", where)) {
+            return false;
+        }
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_partner",getElements("add_lov_partner")}, // b_lov
                 new String[]{"add_i_partner", getElements("add_i_partner")}, // i_lov
@@ -387,18 +395,6 @@ public class AT2MDMCL0029Sis {
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_credit",getElements("add_sl_credit")},
                 "Prepaid", "credit", where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_credit_amount", getElements("add_i_credit_amount")},
-                "amount", DataGenerator.randomFloat(1,3), where)) {
-            return false;
-        }
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_credit_currency",getElements("add_lov_credit_currency")}, // b_lov
-                new String[]{"add_i_credit_currency", getElements("add_i_credit_currency")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "credit", //Data name
-                where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_tax", getElements("add_i_tax")},
                 "tax", DataGenerator.randomFloat(1,3), where)) {
             return false;
@@ -407,10 +403,6 @@ public class AT2MDMCL0029Sis {
                 "tax_p", DataGenerator.randomFloat(1,3), where)) {
             return false;
         }
-        if(!Functions.getAttr(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
-                "value",
-                "agency", // key for data value (the name)
-                where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_street", getElements("add_i_street")},
                 "street", DataGenerator.getRandomAlphanumericSequence(12, false), where)) {
             return false;
@@ -420,7 +412,7 @@ public class AT2MDMCL0029Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_zip_code", getElements("add_i_zip_code")},
-                "zip", "00021", where)) {
+                "zip", String.valueOf(DataGenerator.random(00000,99999)), where)) {
             return false;
         }
         if(!Functions.createLov(driver,
@@ -443,7 +435,7 @@ public class AT2MDMCL0029Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_email", getElements("add_i_email")},
-                "mail", "bb@abba.es", where)) {
+                "mail", DataGenerator.getRandomAlphanumericSequence(5, false) +"@mail.es", where)) {
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
@@ -500,6 +492,7 @@ public class AT2MDMCL0029Sis {
                 "lang", getData("lang"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_classification",getElements("qbe_sl_classification")},
                 getData("classification"), "classification", where)){return false;}
@@ -511,21 +504,23 @@ public class AT2MDMCL0029Sis {
                 "invoice", getData("invoice"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_stop",getElements("qbe_sl_stop")},
                 getData("stop"), "stop", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_credit",getElements("qbe_sl_credit")},
                 getData("credit"), "credit", where)){return false;}
 
-//        if (!Functions.insertInput(driver, new String[]{"qbe_i_credit_amount", getElements("qbe_i_credit_amount")},
-//                "amount", getData("amount"), where)) {
-//            return false;
-//        }
-//        if (!Functions.insertInput(driver, new String[]{"qbe_i_credit_currency", getElements("qbe_i_credit_currency")},
-//                "credit_c", getData("credit_c"), where)) {
-//            return false;
-//        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_credit_amount", getElements("qbe_i_credit_amount")},
+                "amount", getData("amount"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_credit_currency", getElements("qbe_i_credit_currency")},
+                "credit_c", getData("credit_c"), where)) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_tax", getElements("qbe_i_tax")},
                 "tax", getData("tax"), where)) {
             return false;
@@ -539,12 +534,6 @@ public class AT2MDMCL0029Sis {
             return false;
         }
         Functions.break_time(driver, 3, 400);
-/*        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"qbe_i_partner", getElements("qbe_i_partner")}, //search button
-                new String[]{"agency_e_result", getElements("agency_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_partner", getElements("qbe_i_partner")}, //any query input
                 new String[]{"agency_e_result", getElements("agency_e_result")}, //table result
@@ -628,7 +617,7 @@ public class AT2MDMCL0029Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"b_add_i_zip", getElements("b_add_i_zip")},
-                "b_zip", "00001", where)) {
+                "b_zip", String.valueOf(DataGenerator.random(00000,99999)), where)) {
             return false;
         }
         if(!Functions.createLov(driver,
@@ -666,6 +655,7 @@ public class AT2MDMCL0029Sis {
                 where)) {
             return false;
         }
+
         if (!Functions.insertInput(driver, new String[]{"b_add_i_short_name", getElements("b_add_i_short_name")},
                 "short2", DataGenerator.getRandomAlphanumericSequence(12, true), where)) {
             return false;
@@ -689,7 +679,7 @@ public class AT2MDMCL0029Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"b_add_i_zip", getElements("b_add_i_zip")},
-                "b_zip", "03301", where)) {
+                "b_zip", String.valueOf(DataGenerator.random(00000,99999)), where)) {
             return false;
         }
         if(!Functions.createLov(driver,

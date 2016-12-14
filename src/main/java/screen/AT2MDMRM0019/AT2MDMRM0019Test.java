@@ -12,6 +12,7 @@ import core.recursiveData.recursiveXPaths;
 public class AT2MDMRM0019Test {
     protected AT2MDMRM0019Locators locators;
     protected AT2MDMRM0019Data data;
+    String[] lov_resultado = {"lov_e_altresult2", "//*[contains(@id, '_afrLovInternalTableId::db')]/table/tbody/tr[10]/td[1]"};
     public AT2MDMRM0019Test() {
     }
     public AT2MDMRM0019Locators getLocators() {
@@ -131,22 +132,22 @@ public class AT2MDMRM0019Test {
                 where)) {
             return false;
         }
-/*        if(!Functions.createLov(driver,
+        if(!Functions.createLov(driver,
                 new String[]{"add_lov_sequence",getElements("add_lov_sequence")}, // b_lov
                 new String[]{"add_i_sequence", getElements("add_i_sequence")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult2, // lov result
+                lov_resultado, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "sequence", //Data name
-                where)){return false;}*/
-        if (!Functions.createLovByValue(driver,
+                where)){return false;}
+/*        if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_sequence", getElements("add_lov_sequence")}, //LoV button
                 new String[]{"add_i_sequence", getElements("add_i_sequence")}, //external LoV input
                 new String[]{"add_lov_sequence_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
+                lov_resultado, // lov internal result
                 "86536", // value to search
                 "sequence", //name of the data
-                where)){return false;}
+                where)){return false;}*/
         if (!Functions.getText(driver, new String[]{"add_i_hotel", getElements("add_i_hotel")},
                 "hotel", where)){return false;}
         if(!Functions.createLov(driver,

@@ -80,11 +80,11 @@ public class AT2MDMCL0040Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"search_i_code", getElements("search_i_code")},
-                "code", "E10", where)) {
+                "code", getData("code"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"search_i_short", getElements("search_i_short")},
-                "short", "HOTELBEDS", where)) {
+                "short", getData("short"), where)) {
             return false;
         }
         if (!Functions.clickSearchAndResult(driver,
