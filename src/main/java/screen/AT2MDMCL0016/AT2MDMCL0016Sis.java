@@ -9,6 +9,9 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 03/11/2016.
  */
+/**
+ * AL BUSCAR EN LA QBE DE LA TABLA GROUPS NO SE INTRODUCE NINGÚN VALOR EN EL CAMPO HOTELEXTRAS, YA QUE ES UN INPUT Y DEBERÁIA SER UN SELECT TEXT
+ */
 public class AT2MDMCL0016Sis {
     protected AT2MDMCL0016Locators locators;
     protected AT2MDMCL0016Data data;
@@ -219,6 +222,8 @@ public class AT2MDMCL0016Sis {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         qbe_hard(driver);
+        String[] columns = {"short","nane"};
+        if (!Functions.collectTableData(driver,columns,"//*[contains(@id, 'pc2:t2::db')]",1,where))return false;
         Functions.zoomOut(driver);
         if (!Functions.clickQbE(driver,
                 new String[]{"to_b_qbe", getElements("to_b_qbe")},// query button
@@ -227,7 +232,7 @@ public class AT2MDMCL0016Sis {
             return false;
         } // where the operation occurs
         if (!Functions.insertInput(driver, new String[]{"qbe_i_short_name", getElements("qbe_i_short_name")},
-                "short", getData("code"), where)) {
+                "short", getData("short"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_to_name", getElements("qbe_i_to_name")},
