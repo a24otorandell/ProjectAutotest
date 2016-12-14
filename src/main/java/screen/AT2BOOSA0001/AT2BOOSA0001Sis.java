@@ -11,7 +11,7 @@ import java.util.Random;
 /**
  * Created by vsolis on 18/11/2016.
  *
- *
+ * QA-53076, QA-53077
  * En la pestaña PRINT VOUCHER 4 CAMPOS DE LA QBE ESTAN SIN IMPUT
  */
 public class AT2BOOSA0001Sis {
@@ -73,10 +73,10 @@ public class AT2BOOSA0001Sis {
         if(!Search_booking_other_actions(driver)){
             return false;
         }
-        if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
+      /*  if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
             return false;
-        }
-        if(!Search_booking_other_actions_print_vounchers(driver)){return false;}
+        }*/
+     /*   if(!Search_booking_other_actions_print_vounchers(driver)){return false;}*/
    /*     if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
             return false;
         }*/
