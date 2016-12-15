@@ -115,6 +115,7 @@ public class AT2MDMCL0020Locators {
         elements.put("ip_e_records", "//*[contains(@id, 'pc3:ot27')]");
         elements.put("ip_e_extra_actions", "//*[contains(@id, 'pc3:t6::eoi')]");
         elements.put("ip_e_extra_detach", "//*[contains(@id, 'pc3:_tbr::eoi')]");
+        elements.put("table_e_developed", "//*[contains(@id, 'pc3:anacon3::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[2]");
         //ADD
         elements.put("add_b_save3", "//*[contains(@id, 'pcgt4:btn_commitExit')]");
         elements.put("add_i_ip_id", "//*[contains(@id, 'idIpId::content')]");

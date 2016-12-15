@@ -307,6 +307,7 @@ public class AT2MDMCL0018Test {
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"client_b_delete", getElements("client_b_delete")},
                 new String[]{"client_e_records", getElements("client_e_records")},
+                new String[]{"client_b_ok", getElements("client_b_ok")},
                 where)){
             return false;
         }

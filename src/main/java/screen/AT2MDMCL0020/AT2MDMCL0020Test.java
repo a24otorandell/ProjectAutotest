@@ -178,7 +178,7 @@ public class AT2MDMCL0020Test {
                 "branch", getData("branch"), where)) {
             return false;
         }
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 100, 400);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_interface", getElements("search_lov_interface")}, //LoV button
                 new String[]{"search_i_interface", getElements("search_i_interface")}, //external LoV input
@@ -187,7 +187,7 @@ public class AT2MDMCL0020Test {
                 getData("interface"), // value to search
                 "interface", //name of the data
                 where)){return false;}
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 60, 400);
         if (!Functions.insertInput(driver, new String[]{"search_i_major", getElements("search_i_major")},
                 "major", getData("major"), where)) {
             return false;
@@ -572,6 +572,14 @@ public class AT2MDMCL0020Test {
                 "ip_id", getData("ip_id"), where)) {
             return false;
         }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_ip_id", getElements("qbe_i_ip_id")}, //any query input
+                new String[]{"ip_e_result", getElements("ip_e_result")}, //table result
+                where)){return false;}
+        Functions.getText(driver,
+                new String[]{"table_e_developed", getElements("table_e_developed")}, // element path
+                "devel", // key for data value (the name)
+                where);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_devel_code", getElements("qbe_i_devel_code")},
                 "devel", getData("devel"), where)) {
             return false;

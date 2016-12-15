@@ -30,6 +30,7 @@ public class AT2MDMCL0018Locators {
         elements.put("client_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]");
         elements.put("client_e_result", "//*[contains(@id, 'pc2:master::db')]/table/tbody/tr[1]/td[1]");
         elements.put("client_e_records", "//*[contains(@id, 'pc2:otp2')]");
+        elements.put("client_b_ok", "//*[contains(@id, 'pcgt1:cbt1')]");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");

@@ -81,6 +81,7 @@ public class AT2MDMCL0020Sis {
     public boolean interaction_add_t1 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD TABLE CREDENTIALS";
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"credentials_b_add", getElements("credentials_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -567,6 +568,14 @@ public class AT2MDMCL0020Sis {
                 "ip_id", getData("ip_id"), where)) {
             return false;
         }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_ip_id", getElements("qbe_i_ip_id")}, //any query input
+                new String[]{"ip_e_result", getElements("ip_e_result")}, //table result
+                where)){return false;}
+        Functions.getText(driver,
+                new String[]{"table_e_developed", getElements("table_e_developed")}, // element path
+                "devel", // key for data value (the name)
+                where);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_devel_code", getElements("qbe_i_devel_code")},
                 "devel", getData("devel"), where)) {
             return false;
@@ -749,6 +758,7 @@ public class AT2MDMCL0020Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 500);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_ip",getElements("add_lov_ip")}, // b_lov
                 new String[]{"add_i_ip", getElements("add_i_ip")}, // i_lov
@@ -757,6 +767,7 @@ public class AT2MDMCL0020Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "ip", //Data name
                 where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save5", getElements("add_b_save5")}, //e1
                 recursiveXPaths.glass, //e2
