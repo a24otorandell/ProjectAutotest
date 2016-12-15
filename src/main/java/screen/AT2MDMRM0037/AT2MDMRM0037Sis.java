@@ -45,7 +45,7 @@ public class AT2MDMRM0037Sis {
     protected boolean testCSED(TestDriver driver) {
         if (!interaction_add(driver)) return false;
         if (!search(driver)) return false;
-/*        if (!interaction_edit(driver)) return false;
+        if (!interaction_edit(driver)) return false;
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
         if (!interaction_add_transfer(driver)) return false;
@@ -53,7 +53,7 @@ public class AT2MDMRM0037Sis {
         if (!interaction_edit_transfer(driver)) return false;
         if (!qbe_transfer(driver, false)) return false;
         if (!others_actions_transfer(driver)) return false;
-        if (!delete_transfer(driver)) return false;*/
+        if (!delete_transfer(driver)) return false;
         if (!delete(driver)) return false;
         return true;
     }
@@ -185,8 +185,10 @@ public class AT2MDMRM0037Sis {
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_manual",getElements("add_sl_manual")},
                 "Automatic", "manual", where)){return false;}
+        Functions.break_time(driver, 20, 600);
         if (!Functions.checkboxValue(driver,
-                getElements("add_ck_affect"),"affect",true,true,where)){return false;}
+                getElements("add_ck_affect"),"affect",false,true,where)){return false;}
+        Functions.break_time(driver, 60, 600);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_ledger", getElements("add_lov_ledger")}, //LoV button
                 new String[]{"add_i_ledger", getElements("add_i_ledger")}, //external LoV input
