@@ -9,7 +9,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/screen/AT2ACCSU1002/AT2ACCSU1002Sis.java" line="318" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="modificacion accco0045 test y sis&#10;">
+    <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -413,6 +413,7 @@
         <entry key="$PROJECT_DIR$" value="4f53f8882d19a1ac6b9f426b185f7fad57e10206" />
       </map>
     </option>
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -710,7 +711,6 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21724138" />
@@ -1197,13 +1197,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00092" summary="    quitar espacios innecesarios de la trfsu0016&#10;">
-      <created>1476882344672</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1476882344701</updated>
-    </task>
     <task id="LOCAL-00093" summary="    quitar espacios innecesarios de la trfsu0005&#10;">
       <created>1476889251543</created>
       <option name="number" value="00093" />
@@ -1540,7 +1533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481823794368</updated>
     </task>
-    <option name="localTasksCounter" value="141" />
+    <task id="LOCAL-00141" summary="modificacion accco0045 test y sis&#10;">
+      <created>1481823827276</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1481823827276</updated>
+    </task>
+    <option name="localTasksCounter" value="142" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1646,9 +1646,9 @@
     <MESSAGE value="corrección en la pantalla at2accop0017SIS y añadida instrucción en functions  con tiempo de espera&#10;" />
     <MESSAGE value="modificacion accop0017 sis y nueva pantalla at2accco0045&#10;" />
     <MESSAGE value="modificacion accop0017 sis&#10;" />
-    <MESSAGE value="modificacion accco0045 test y sis&#10;" />
     <MESSAGE value="nueva pantalla at2accsu0020&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="nueva pantalla at2accsu0020&#10;" />
+    <MESSAGE value="modificacion accco0045 test y sis&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="modificacion accco0045 test y sis&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
