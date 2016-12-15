@@ -56,6 +56,7 @@ public class AT2MDMCL0027Sis {
     private boolean interaction_record_accommodation(TestDriver driver) {
         driver.getReport().addHeader("CREATION RECORD", 3, false);
         String where = " on CREATION";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_b_add", getElements("MDM_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -66,6 +67,7 @@ public class AT2MDMCL0027Sis {
                 "group", getData("group"), where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_short_name", getElements("add_lov_short_name")}, // b_lov
                 new String[]{"add_i_short_name", getElements("add_i_short_name")}, // i_lov
@@ -76,6 +78,7 @@ public class AT2MDMCL0027Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_language", getElements("add_lov_language")}, // b_lov
                 new String[]{"add_i_language", getElements("add_i_language")}, // i_lov
@@ -102,6 +105,7 @@ public class AT2MDMCL0027Sis {
                 "group", getData("group"), where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_short_name", getElements("search_lov_short_name")}, //LoV button
                 new String[]{"search_i_short_name", getElements("search_i_short_name")}, //external LoV input
@@ -111,6 +115,7 @@ public class AT2MDMCL0027Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_language", getElements("search_lov_language")}, //LoV button
                 new String[]{"search_i_language", getElements("search_i_language")}, //external LoV input
@@ -120,6 +125,7 @@ public class AT2MDMCL0027Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"MDM_e_result", getElements("MDM_e_result")}, //result element
@@ -131,6 +137,7 @@ public class AT2MDMCL0027Sis {
     private boolean interaction_edit_accommodation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_b_edit", getElements("MDM_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -141,6 +148,7 @@ public class AT2MDMCL0027Sis {
                 "group", getData("group_edit"), where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_short_name", getElements("add_lov_short_name")}, // b_lov
                 new String[]{"add_i_short_name", getElements("add_i_short_name")}, // i_lov
@@ -151,6 +159,7 @@ public class AT2MDMCL0027Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_language", getElements("add_lov_language")}, // b_lov
                 new String[]{"add_i_language", getElements("add_i_language")}, // i_lov
