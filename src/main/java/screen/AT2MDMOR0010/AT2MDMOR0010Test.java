@@ -69,7 +69,7 @@ public class AT2MDMOR0010Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "company", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_company_des", getElements("add_i_company_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_company_des", getElements("add_i_company_des")}, // element path
                 "c_desc", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -80,7 +80,7 @@ public class AT2MDMOR0010Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "dept", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_dept_desc", getElements("add_i_dept_desc")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_dept_desc", getElements("add_i_dept_desc")}, // element path
                 "d_desc", // key for data value (the name)
                 where)){return false;}
         if (!Functions.fileUploader(driver,
@@ -153,7 +153,7 @@ public class AT2MDMOR0010Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "company", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_company_des", getElements("add_i_company_des")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_company_des", getElements("add_i_company_des")}, // element path
                 "c_desc", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
@@ -164,7 +164,7 @@ public class AT2MDMOR0010Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "dept", //Data name
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_dept_desc", getElements("add_i_dept_desc")}, // element path
+        if(!Functions.getValue(driver,new String[]{"add_i_dept_desc", getElements("add_i_dept_desc")}, // element path
                 "d_desc", // key for data value (the name)
                 where)){return false;}
         if (!Functions.fileUploader(driver,

@@ -241,9 +241,11 @@ public class AT2MDMCL0045Sis {
                 "m_mail", getData("m_mail"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_payment",getElements("qbe_sl_payment")},
                 getData("payment"), "payment", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_key", getElements("qbe_i_key")}, //any query input
                 new String[]{"results_e_result", getElements("results_e_result")}, //table result
