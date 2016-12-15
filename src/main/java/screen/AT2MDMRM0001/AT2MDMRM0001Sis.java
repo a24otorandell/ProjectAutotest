@@ -456,10 +456,11 @@ public class AT2MDMRM0001Sis {
         if (!Functions.simpleClick(driver,
                 new String[]{"classif_b_reset", getElements("classif_b_reset")}, //element to click
                 where)){return false;}
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 10, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
                 "Retailer sale", "type", where)){return false;}
+        Functions.break_time(driver, 10, 400);
         return true;
     }
     private boolean others_actions_t1(TestDriver driver) {

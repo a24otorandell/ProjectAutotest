@@ -55,6 +55,7 @@ public class AT2MDMOR0025Sis {
     public boolean interaction_add (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"company_b_add", getElements("company_b_add")}, //element to click
                 new String[]{"add_i_template",getElements("add_i_template")}, //element expected to appear
@@ -172,9 +173,11 @@ public class AT2MDMOR0025Sis {
                 "from", getData("from"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_dtoy",getElements("search_i_dtoy")},
                 "to", getData("to"), where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_type",getElements("search_sl_type")},
                 getData("type"), "type", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_interface", getElements("search_lov_interface")}, //LoV button
                 new String[]{"search_i_interface", getElements("search_i_interface")}, //external LoV input
@@ -325,10 +328,10 @@ public class AT2MDMOR0025Sis {
                 "to", getData("to"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_type",getElements("qbe_sl_type")},
                 getData("type"), "type", where)){return false;}
-
         if (!Functions.insertInput(driver, new String[]{"qbe_i_interface", getElements("qbe_i_interface")},
                 "interface", getData("interface"), where)) {
             return false;
@@ -337,7 +340,7 @@ public class AT2MDMOR0025Sis {
                 "web", getData("web"), where)) {
             return false;
         }
-
+        Functions.break_time(driver, 3, 400);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_template", getElements("qbe_i_template")}, //any query input
                 new String[]{"company_e_result", getElements("company_e_result")}, //table result

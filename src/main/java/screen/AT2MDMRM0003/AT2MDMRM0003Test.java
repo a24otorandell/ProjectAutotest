@@ -247,7 +247,7 @@ public class AT2MDMRM0003Test {
             recursiveXPaths.lov_b_ok, //lov b ok
             "web_code", //Data name
             where)){return false;}
-    if (!Functions.getValue(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
+    if (!Functions.getText(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
             "web_des", where)){return false;}
     if (!Functions.checkClickByAbsence(driver,
             new String[]{"add_configuration_b_save", getElements("add_configuration_b_save")}, //e1
@@ -313,7 +313,7 @@ public class AT2MDMRM0003Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "web_code", //Data name
                 where)){return false;}
-        if (!Functions.getValue(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
+        if (!Functions.getText(driver, new String[]{"add_i_web_description",getElements("add_i_web_description")},
                 "web_des", where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_configuration_b_save", getElements("add_configuration_b_save")}, //e1
@@ -353,7 +353,7 @@ public class AT2MDMRM0003Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_agency", getElements("qbe_i_agency")},
-                "agency", getData("agency"), where)) {
+                "agency", "%"+getData("agency"), where)) {
             return false;
         }
         if (!Functions.enterQueryAndClickResult(driver,
@@ -422,6 +422,7 @@ public class AT2MDMRM0003Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "char_seq", //Data name
                 where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_configuration_sequence",getElements("add_lov_configuration_sequence")}, // b_lov
                 new String[]{"add_i_configuration_sequence", getElements("add_i_configuration_sequence")}, // i_lov
@@ -430,6 +431,7 @@ public class AT2MDMRM0003Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "conf_seq", //Data name
                 where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_status",getElements("add_sl_status")},
                 "ACTIVE", "status", where)){return false;}
@@ -503,13 +505,13 @@ public class AT2MDMRM0003Test {
                 "INACTIVE", "status", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_est_value",getElements("add_i_est_value")},
                 "value", String.valueOf(DataGenerator.random(1,10)), where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_char_name", getElements("add_i_char_name")}, // element path
+        if(!Functions.getText(driver,new String[]{"add_i_char_name2", getElements("add_i_char_name2")}, // element path
                 "char_name", // key for data value (the name)
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_char_desc", getElements("add_i_char_desc")}, // element path
                 "char_desc", // key for data value (the name)
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
+        if(!Functions.getText(driver,new String[]{"add_i_agency2", getElements("add_i_agency2")}, // element path
                 "agency", // key for data value (the name)
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_idweb", getElements("add_i_idweb")}, // element path
@@ -554,7 +556,7 @@ public class AT2MDMRM0003Test {
                 "value", getData("value"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_char_name", getElements("qbe_i_char_name")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_char_name2", getElements("qbe_i_char_name2")},
                 "char_name", getData("char_name"), where)) {
             return false;
         }
@@ -562,7 +564,7 @@ public class AT2MDMRM0003Test {
                 "char_desc", getData("char_desc"), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_agency", getElements("qbe_i_agency")},
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_agency2", getElements("qbe_i_agency2")},
                 "agency", getData("agency"), where)) {
             return false;
         }
