@@ -52,6 +52,7 @@ public class AT2MDMCL0028Locators {
                 elements.put("MDM_gr_b_actions", "//*[contains(@id, 'r1:1:r2:0:pc2:pdm2:dc_m1')]");
                 elements.put("MDM_gr_b_actions_audit_data", "//*[contains(@id, 'r1:1:r2:0:pc2:pdm2:dc_cmi1')]/td[2]");
                 elements.put("MDM_gr_b_qbe", "//*[contains(@id, 'r1:1:r2:0:pc2:_qbeTbr')]");
+                elements.put("MDM_gr_b_qbe_restart", "//*[contains(@id, 'r1:1:r2:0:pc2:md1::ch::t')]/tbody/tr[2]/th/a");
                 elements.put("MDM_gr_b_detach", "//*[contains(@id, 'r1:1:r2:0:pc2:_dchTbr')]");
                 elements.put("MDM_gr_e_result", "//*[contains(@id, 'r1:1:r2:0:pc2:md1::db')]/table/tbody/tr[1]/td[1]");
                 elements.put("MDM_gr_e_records", "//*[contains(@id, 'r1:1:r2:0:pc2:otp2')]");
@@ -63,6 +64,7 @@ public class AT2MDMCL0028Locators {
                 elements.put("MDM_grd_b_actions", "//*[contains(@id, 'r1:1:r2:0:pc3:pdm3:dc_m1')]");
                 elements.put("MDM_grd_b_actions_audit_data", "//*[contains(@id, 'r1:1:r2:0:pc3:pdm3:dc_cmi1')]/td[2]");
                 elements.put("MDM_grd_b_qbe", "//*[contains(@id, 'r1:1:r2:0:pc3:_qbeTbr')]");
+                elements.put("MDM_grd_b_qbe_restart", "//*[contains(@id, 'r1:1:r2:0:pc3:t1::ch::t')]/tbody/tr[2]/th/a");
                 elements.put("MDM_grd_b_detach", "//*[contains(@id, 'r1:1:r2:0:pc3:_dchTbr')]");
                 elements.put("MDM_grd_e_result", "//*[contains(@id, 'r1:1:r2:0:pc3:t1::db')]/table/tbody/tr[1]/td[1]");
                 elements.put("MDM_grd_e_records", "//*[contains(@id, 'r1:1:r2:0:pc3:otp9')]");
@@ -71,7 +73,7 @@ public class AT2MDMCL0028Locators {
                 elements.put("MDM_assp_b_actions_audit_data", "//*[contains(@id, 'r1:1:r2:0:pc1:pdm4:dc_cmi1')]/td[2]");
                 elements.put("MDM_assp_b_qbe", "//*[contains(@id, 'r1:1:r2:0:pc1:_qbeTbr')]");
                 elements.put("MDM_assp_b_detach", "//*[contains(@id, 'r1:1:r2:0:pc1:_dchTbr')]");
-                elements.put("MDM_assp_e_result", "//*[contains(@id, 'r1:0:pc1:t2::db')]/table/tbody/tr[1]/td[1]");
+                elements.put("MDM_assp_e_result", "//*[contains(@id, 'r1:1:r2:0:pc1:t2::db')]/table/tbody/tr[1]/td[1]");
                 elements.put("MDM_assp_e_records", "//*[contains(@id, 'r1:1:r2:0:pc1:otp95')]");
         //ADD|MODIFY
             //PARTNERS
@@ -113,12 +115,15 @@ public class AT2MDMCL0028Locators {
                 elements.put("search_prtns_lov_supplier", "//*[contains(@id, 'r1:1:r1:0:qryId1:value60::lovIconId')]");
                 elements.put("search_prtns_cb_internal_result", "//*[contains(@id, '')]");
                 elements.put("search_prtns_cb_dotmar_result", "//*[contains(@id, '')]");
-
             //GROUPS
                 elements.put("search_gr_b_search", "//*[contains(@id, 'r1:1:r2:0:qryId1::search')]");
                 elements.put("search_gr_b_reset", "//*[contains(@id, 'r1:1:r2:0:qryId1::reset')]");
                 elements.put("search_gr_i_group_code", "//*[contains(@id, 'r1:1:r2:0:qryId1:value00::content')]");
                 elements.put("search_gr_i_group_name", "//*[contains(@id, 'r1:1:r2:0:qryId1:value10::content')]");
+            //ASSOCIATED PARTNERS
+                elements.put("search_assp_i_identif_result", "//*[contains(@id, 'r1:1:r2:0:pc1:t2::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
+                elements.put("search_assp_name_result", "//*[contains(@id, 'r1:1:r2:0:pc1:t2::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
+                elements.put("search_assp_i_description_result", "//*[contains(@id, 'r1:1:r2:0:pc1:t2::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]");
         //QBE
             //PARTNERS
                 elements.put("qbe_prtns_i_identif", "//*[contains(@id, 'r1:1:r1:0:pc1:mprtnr:ipt1::content')]");

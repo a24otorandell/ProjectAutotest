@@ -71,13 +71,13 @@ public class AT2MDMCL0028Sis {
         if (!interaction_edit_grd_MDM(driver)) return false;
         if (!qbe_grd_MDM(driver)) return false;
         if (!others_actions_grd_MDM(driver)) return false;
-        //ASSOCIATED PARTNER TABLE
-        // if (!qbe_assp_MDM(driver)) return false;
-        if (!others_actions_assp_MDM(driver)) return false;
-        //GROUP DESCRIPTION TABLE
         if (!delete_grd_MDM(driver)) return false;
         //GROUPS TABLE
         if (!delete_gr_MDM(driver)) return false;
+        //ASSOCIATED PARTNER TABLE
+        if (!data_assp_MDM(driver)) return false;
+        if (!qbe_assp_MDM(driver)) return false;
+        if (!others_actions_assp_MDM(driver)) return false;
         //CHANGE TAB
         if (!second_change_tab(driver)) return false;
         //ASSIGNED GROUP TABLE
@@ -216,7 +216,6 @@ public class AT2MDMCL0028Sis {
             return false;
         }
         return true;
-
     }
     private boolean interaction_edit_prtns_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
@@ -764,12 +763,51 @@ public class AT2MDMCL0028Sis {
         return true;
     }
     //ASSOCIATED PARTNERS TABLE
+    private boolean data_assp_MDM(TestDriver driver) {
+        driver.getReport().addHeader("DATA RECORD", 3, false);
+        Functions.break_time(driver, 30, 500);
+        String where = " on DATA";
+        if (!Functions.simpleClick(driver,
+                new String[]{"MDM_gr_b_qbe_restart", getElements("MDM_gr_b_qbe_restart")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.simpleClick(driver,
+                new String[]{"MDM_grd_b_qbe_restart", getElements("MDM_grd_b_qbe_restart")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_gr_b_search", getElements("search_gr_b_search")}, //search button
+                new String[]{"MDM_assp_e_result", getElements("MDM_assp_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        if (!Functions.getText(driver, new String[]{"search_assp_i_identif_result", getElements("search_assp_i_identif_result")}, // element path
+                "assp_identif", // key for data value (the name)
+                where)) {
+            return false;
+        } // where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_assp_name_result", getElements("search_assp_name_result")}, // element path
+                "assp_name", // key for data value (the name)
+                where)) {
+            return false;
+        } // where this operation occurs
+        if (!Functions.getText(driver, new String[]{"search_assp_i_description_result", getElements("search_assp_i_description_result")}, // element path
+                "assp_description", // key for data value (the name)
+                where)) {
+            return false;
+        } // where this operation occurs
+        return true;
+    }
     private boolean qbe_assp_MDM(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         Functions.break_time(driver, 30, 500);
         if (!Functions.clickQbE(driver,
-                new String[]{"MDM_grd_b_qbe", getElements("MDM_grd_b_qbe")},// query button
+                new String[]{"MDM_assp_b_qbe", getElements("MDM_assp_b_qbe")},// query button
                 new String[]{"qbe_assp_i_identif", getElements("qbe_assp_i_identif")},//any query input
                 where)) {
             return false;
@@ -796,7 +834,7 @@ public class AT2MDMCL0028Sis {
         return true;
     }
     private boolean others_actions_assp_MDM(TestDriver driver) {
-        /*driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
+        driver.getReport().addHeader("OTHER ACTIONS - AUDIT DATA", 3, false);
         String where = " on AUDIT DATA";
         if (!Functions.auditData(driver,
                 new String[]{"MDM_assp_b_actions", getElements("MDM_assp_b_actions")}, //actions button
@@ -804,9 +842,9 @@ public class AT2MDMCL0028Sis {
                 new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
                 where)) {
             return false;
-        }*/
+        }
         driver.getReport().addHeader("OTHER ACTIONS - DETACH", 3, false);
-        String where = " on DETACH";
+        where = " on DETACH";
         if (!Functions.detachTable(driver,
                 new String[]{"MDM_assp_b_detach", getElements("MDM_assp_b_detach")}, //detach button
                 true,     //screenshot??
