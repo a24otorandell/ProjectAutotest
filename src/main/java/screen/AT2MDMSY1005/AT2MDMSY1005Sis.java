@@ -8,6 +8,10 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 23/11/2016.
  */
+
+/**
+ * Hay select list que tienen más datos en la qbe que en la busqueda y viceversa
+ */
 public class AT2MDMSY1005Sis {
     protected AT2MDMSY1005Locators locators;
     protected AT2MDMSY1005Data data;
@@ -42,12 +46,12 @@ public class AT2MDMSY1005Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
-/*        if (!first_search_t1(driver)) return false;
+        if (!first_search_t1(driver)) return false;
         if (!getData_t1(driver)) return false;
         if (!search_t1(driver)) return false;
         if (!qbe_t1(driver)) return false;
-        if (!others_actions_t1(driver)) return false;*/
-       if (!first_search_t2(driver)) return false;
+        if (!others_actions_t1(driver)) return false;
+        if (!first_search_t2(driver)) return false;
         if (!getData_t2(driver)) return false;
         if (!search_t2(driver)) return false;
         if (!qbe_t2(driver)) return false;
@@ -65,14 +69,17 @@ public class AT2MDMSY1005Sis {
         Functions.zoomOut(driver);
         Functions.zoomOut(driver);
         Functions.zoomOut(driver);
+        Functions.break_time(driver, 4, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_from_date",getElements("search_i_from_date")},
                 "from", "23/11/2016 23:30:00",where)){return false;}
+        Functions.break_time(driver, 4, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_to_date",getElements("search_i_to_date")},
                 "to", "23/11/2016 23:31:00",where)){return false;}
         Functions.break_time(driver, 3, 600);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search1", getElements("search_b_search1")}, //search button
                 new String[]{"transaction_e_result", getElements("transaction_e_result")}, //result element
+                200, 600,
                 where)) {
             return false;
         }
@@ -114,22 +121,30 @@ public class AT2MDMSY1005Sis {
                 return false;
             }
         }
-        if (!Functions.createLovByValue(driver,
-                new String[]{"search_lov_company", getElements("search_lov_company")}, //LoV button
-                new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
-                new String[]{"search_lov_company_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                getData("company"), // value to search
-                "company", //name of the data
-                where)){return false;}
-        if (!Functions.createLovByValue(driver,
-                new String[]{"search_lov_supplier", getElements("search_lov_supplier")}, //LoV button
-                new String[]{"search_i_supplier", getElements("search_i_supplier")}, //external LoV input
-                new String[]{"search_lov_supplier_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                getData("supplier"), // value to search
-                "supplier", //name of the data
-                where)){return false;}
+        if (!getData("company").equalsIgnoreCase(" ")) {
+            if (!Functions.createLovByValue(driver,
+                    new String[]{"search_lov_company", getElements("search_lov_company")}, //LoV button
+                    new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
+                    new String[]{"search_lov_company_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                    recursiveXPaths.lov_e_result, // lov internal result
+                    getData("company"), // value to search
+                    "company", //name of the data
+                    where)) {
+                return false;
+            }
+        }
+        if (!getData("supplier").equalsIgnoreCase(" ")) {
+            if (!Functions.createLovByValue(driver,
+                    new String[]{"search_lov_supplier", getElements("search_lov_supplier")}, //LoV button
+                    new String[]{"search_i_supplier", getElements("search_i_supplier")}, //external LoV input
+                    new String[]{"search_lov_supplier_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                    recursiveXPaths.lov_e_result, // lov internal result
+                    getData("supplier"), // value to search
+                    "supplier", //name of the data
+                    where)) {
+                return false;
+            }
+        }
         if (!Functions.insertInput(driver, new String[]{"search_i_ref_tmp",getElements("search_i_ref_tmp")},
                 "reference", getData("reference"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"search_i_file",getElements("search_i_file")},
@@ -163,14 +178,18 @@ public class AT2MDMSY1005Sis {
                 return false;
             }
         }
-        if (!Functions.createLovByValue(driver,
-                new String[]{"search_lov_currency", getElements("search_lov_currency")}, //LoV button
-                new String[]{"search_i_currency", getElements("search_i_currency")}, //external LoV input
-                new String[]{"search_lov_currency_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                getData("currency"), // value to search
-                "currency", //name of the data
-                where)){return false;}
+        if (!getData("currency").equalsIgnoreCase(" ")) {
+            if (!Functions.createLovByValue(driver,
+                    new String[]{"search_lov_currency", getElements("search_lov_currency")}, //LoV button
+                    new String[]{"search_i_currency", getElements("search_i_currency")}, //external LoV input
+                    new String[]{"search_lov_currency_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                    recursiveXPaths.lov_e_result, // lov internal result
+                    getData("currency"), // value to search
+                    "currency", //name of the data
+                    where)) {
+                return false;
+            }
+        }
         if (!getData("t_currency").equalsIgnoreCase(" ")) {
             if (!Functions.createLovByValue(driver,
                     new String[]{"search_lov_trans", getElements("search_lov_trans")}, //LoV button
@@ -192,6 +211,7 @@ public class AT2MDMSY1005Sis {
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search1", getElements("search_b_search1")}, //search button
                 new String[]{"transaction_e_result_1", getElements("transaction_e_result_1")}, //result element
+                200,600,
                 where)) {
             return false;
         }
@@ -247,12 +267,12 @@ public class AT2MDMSY1005Sis {
                 "activa", getData("activa"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_exp",getElements("qbe_i_exp")},
                 "expira", getData("expira"),where)){return false;}
-/*        if (!Functions.selectText(driver,
+        if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_operator",getElements("qbe_sl_operator")},
                 getData("operator"), "operator", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_client",getElements("qbe_sl_client")},
-                getData("client"), "client", where)){return false;}*/
+                getData("client"), "client", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_req",getElements("qbe_i_req")},
                 "request", getData("request"),where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_ref_tmp",getElements("qbe_i_ref_tmp")},
@@ -357,8 +377,10 @@ public class AT2MDMSY1005Sis {
         if (!Functions.simpleClick(driver,
                 new String[]{"load_tab", getElements("load_tab")}, //element to click
                 where)){return false;}
+        Functions.break_time(driver, 4, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_from_date",getElements("search_i_from_date")},
                 "start1", "21/11/2016",where)){return false;}
+        Functions.break_time(driver, 4, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_to_date",getElements("search_i_to_date")},
                 "end1", "22/11/2016",where)){return false;}
         if (!Functions.clickSearchAndResult(driver,

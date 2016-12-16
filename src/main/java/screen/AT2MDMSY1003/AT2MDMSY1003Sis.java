@@ -66,7 +66,7 @@ public class AT2MDMSY1003Sis {
         if (!Functions.insertInput(driver, new String[]{"add_i_value",getElements("add_i_value")},
                 "value", String.valueOf(DataGenerator.random(1,100)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_type",getElements("add_i_type")},
-                "type", DataGenerator.getRandomAlphanumericSequence(6, false), where)){return false;}
+                "type", "CITI_CONFIG", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_environment",getElements("add_sl_environment")},
                 "Live", "environment", where)){return false;}
@@ -83,6 +83,7 @@ public class AT2MDMSY1003Sis {
         String where = " on SEARCH";
         if (!Functions.insertInput(driver, new String[]{"search_i_param",getElements("search_i_param")},
                 "param", getData("param"), where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_type",getElements("search_sl_type")},
                 getData("type"), "type", where)){return false;}
@@ -139,9 +140,11 @@ public class AT2MDMSY1003Sis {
                 "value", getData("value"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_type",getElements("qbe_i_type")},
                 "type", getData("type"), where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_environment",getElements("qbe_sl_environment")},
                 getData("environment"), "environment", where)){return false;}
+        Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_desc",getElements("qbe_i_desc")},
                 "desc", getData("desc"), where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,

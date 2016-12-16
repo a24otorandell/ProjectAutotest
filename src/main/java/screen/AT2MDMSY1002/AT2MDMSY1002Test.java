@@ -197,15 +197,15 @@ public class AT2MDMSY1002Test {
         Functions.simpleClick(driver,
                 new String[]{"b_delete_yes", recursiveXPaths.delete_b_yes}, //element to click
                 where);
-/*        try {
-            if (driver.getDriver().findElement(By.xpath("/*//*[contains(@id, 'pc1:gvcc:1:sbc4::content')]/span/img")).getAttribute("title").equals("unchecked")) {
+        try {
+            if (driver.getDriver().findElement(By.xpath("/*//*[contains(@id, 'pc1:userSet:1:sbc1::content')]/span/img")).getAttribute("title").equals("unchecked")) {
                 driver.getReport().addContent("\"Active\" CHECKBOX IS UNCHECKED. DELETION WORKED", "h3","class='success'" );
             }
         } catch (Exception e) {
             String exc = ("--ERROR: \"Active\" - CHECKBOX IS CHECKED. DELETION DID NOT WORKED");
             e.printStackTrace();
             ErrorManager.process(driver, exc);
-        }*/
+        }
         return true;
     }
 }
