@@ -289,6 +289,7 @@ public class AT2MDMSY0018Sis {
         }
         if (!Functions.insertInput(driver, new String[]{"t3_add_i_to_seq",getElements("t3_add_i_to_seq")},
                 "to_seq", "55555", where)){return false;}
+        Functions.break_time(driver, 10, 500);
         if(!Functions.createLov(driver,
                 new String[]{"t3_add_lov_type_name",getElements("t3_add_lov_type_name")}, // b_lov
                 new String[]{"t3_add_i_type_name", getElements("t3_add_i_type_name")}, // i_lov
@@ -297,6 +298,7 @@ public class AT2MDMSY0018Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "type2", //Data name
                 where)){return false;}
+        Functions.break_time(driver, 10, 500);
         if(!Functions.createLov(driver,
                 new String[]{"t3_add_lov_name",getElements("t3_add_lov_name")}, // b_lov
                 new String[]{"t3_add_i_name", getElements("t3_add_i_name")}, // i_lov
@@ -305,7 +307,7 @@ public class AT2MDMSY0018Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "name2", //Data name
                 where)){return false;}
-        Functions.break_time(driver, 3, 500);
+        Functions.break_time(driver, 30, 500);
 /*        Functions.getAttr(driver,
                 new String[]{"t3_add_i_to_name", getElements("t3_add_i_to_name")}, // element path
                 "value", // atribute to get data (class, value, id, style, etc...)
@@ -362,6 +364,7 @@ public class AT2MDMSY0018Sis {
         }
         if (!Functions.insertInput(driver, new String[]{"t3_add_i_to_seq",getElements("t3_add_i_to_seq")},
                 "to_seq", "35248", where)){return false;}
+        Functions.break_time(driver, 10, 500);
         if(!Functions.createLov(driver,
                 new String[]{"t3_add_lov_type_name",getElements("t3_add_lov_type_name")}, // b_lov
                 new String[]{"t3_add_i_type_name", getElements("t3_add_i_type_name")}, // i_lov
@@ -370,6 +373,7 @@ public class AT2MDMSY0018Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "type2", //Data name
                 where)){return false;}
+        Functions.break_time(driver, 10, 500);
         if(!Functions.createLov(driver,
                 new String[]{"t3_add_lov_name",getElements("t3_add_lov_name")}, // b_lov
                 new String[]{"t3_add_i_name", getElements("t3_add_i_name")}, // i_lov
@@ -378,16 +382,10 @@ public class AT2MDMSY0018Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "name2", //Data name
                 where)){return false;}
-
-        Functions.break_time(driver, 3, 500);
+        Functions.break_time(driver, 30, 500);
         if(!Functions.getValue(driver,new String[]{"t3_add_i_to_name", getElements("t3_add_i_to_name")}, // element path
                 "to_name", // key for data value (the name)
                 where)){return false;}
-/*        Functions.getAttr(driver,
-                new String[]{"t3_add_i_to_name", getElements("t3_add_i_to_name")}, // element path
-                "value", // atribute to get data (class, value, id, style, etc...)
-                "to_name", // key for data value (the name)
-                where);*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"t3_add_b_save", getElements("t3_add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

@@ -86,8 +86,8 @@ public class AT2MDMSY1001Test {
                 "url_t", DataGenerator.getRandomAlphanumericSequence(10,false), where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_alternative"),"alternative",true,true, where)){return false;}
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_active"),"active",true,true,where)){return false;}*/
+        if (!Functions.checkboxValue(driver,
+                getElements("add_ck_active"),"active",true,true,where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -165,9 +165,9 @@ public class AT2MDMSY1001Test {
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_alternative",getElements("qbe_sl_alternative")},
                 getData("alternative"), "alternative", where)){return false;}
-//        if (!Functions.selectText(driver,
-//                new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
-//                getData("active"), "active", where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_active",getElements("qbe_sl_active")},
+                getData("active"), "active", where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_operator", getElements("qbe_i_operator")}, //any query input
                 new String[]{"operator_e_result", getElements("operator_e_result")}, //table result
