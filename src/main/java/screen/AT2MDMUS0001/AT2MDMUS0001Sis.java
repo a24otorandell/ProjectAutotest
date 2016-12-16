@@ -288,6 +288,7 @@ public class AT2MDMUS0001Sis {
     private boolean others_actions(TestDriver driver) {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA USER";
+        Functions.break_time(driver, 3, 500);
         if (!Functions.auditData(driver,
                 new String[]{"associated_b_actions", getElements("associated_b_actions")}, //actions button
                 new String[]{"associated_b_actions_b_audit_data", getElements("associated_b_actions_b_audit_data")}, //audit button

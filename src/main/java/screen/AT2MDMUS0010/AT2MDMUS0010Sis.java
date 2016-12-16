@@ -54,7 +54,7 @@ public class AT2MDMUS0010Sis {
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 80, 400);
         if (!Functions.createLov(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
@@ -63,7 +63,7 @@ public class AT2MDMUS0010Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "user", //name of the data
                 where)){return false;}
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 30, 400);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"passwords_e_result", getElements("passwords_e_result")}, //result element
@@ -119,7 +119,7 @@ public class AT2MDMUS0010Sis {
     private boolean qbe(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        Functions.break_time(driver, 3, 700);
+        Functions.break_time(driver, 1, 700);
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
                 new String[]{"passwords_e_result", getElements("passwords_e_result")}, //result element
