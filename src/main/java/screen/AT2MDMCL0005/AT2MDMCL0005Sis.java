@@ -152,10 +152,10 @@ public class AT2MDMCL0005Sis {
                 "type",getData("type"), where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"search_i_desc", getElements("search_i_desc")},
+        if (!Functions.insertInput(driver, new String[]{"search_i_desc", getElements("search_i_desc")},
                 "desc",getData("desc"), where)) {
             return false;
-        }*/
+        }
         if (!Functions.insertInput(driver, new String[]{"search_i_module", getElements("search_i_module")},
                 "module",getData("module"), where)) {
             return false;

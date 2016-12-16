@@ -928,7 +928,7 @@ public class AT2MDMSP0014Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_type",getElements("table8_add_i_type")},
-                "t8_type", "E", where)){return false;}
+                "t8_type", "I", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"table8_add_sl_status",getElements("table8_add_sl_status")},
                 "Active", "t8_status", where)){return false;}
@@ -992,7 +992,7 @@ public class AT2MDMSP0014Sis {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"table8_add_i_type",getElements("table8_add_i_type")},
-                "t8_type", "I", where)){return false;}
+                "t8_type", "E", where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"table8_add_sl_status",getElements("table8_add_sl_status")},
                 "Inactive", "t8_status", where)){return false;}

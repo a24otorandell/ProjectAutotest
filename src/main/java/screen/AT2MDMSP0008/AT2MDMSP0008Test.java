@@ -228,6 +228,7 @@ public class AT2MDMSP0008Test {
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commission",getElements("add_i_commission")},
                 "comission", "", where)){return false;}
+        Functions.break_time(driver, 3, 500);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_company",getElements("add_lov_company")}, // b_lov
                 new String[]{"add_i_company", getElements("add_i_company")}, // i_lov

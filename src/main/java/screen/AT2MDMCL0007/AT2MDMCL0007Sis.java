@@ -206,22 +206,22 @@ public class AT2MDMCL0007Sis {
                 "mail", getData("mail"), where)) {
             return false;
         }
-/*        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_to_agency", getElements("search_lov_to_agency")}, //LoV button
                 new String[]{"search_i_to_agency", getElements("search_i_to_agency")}, //external LoV input
                 new String[]{"search_lov_to_agency_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("to"), // value to search
                 "to", //name of the data
-                where)){return false;}*/
-/*        if (!Functions.createLovByValue(driver,
+                where)){return false;}
+        if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_branch", getElements("search_lov_branch")}, //LoV button
                 new String[]{"search_i_branch", getElements("search_i_branch")}, //external LoV input
                 new String[]{"search_lov_branch_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("branch"), // value to search
                 "branch", //name of the data
-                where)){return false;}*/
+                where)){return false;}
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_lang", getElements("search_lov_lang")}, //LoV button
                 new String[]{"search_i_lang", getElements("search_i_lang")}, //external LoV input
