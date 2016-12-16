@@ -53,12 +53,12 @@ public class AT2MDMCL0017Test {
         if (!others_actions_t2(driver)) return false;
         if (!getData_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
-        if (!marcarSelect(driver)) return false;
         if (!others_actions_t3(driver)) return false;
-/*        if (!getData_t4(driver)) return false;
+        if (!marcarSelect(driver)) return false;
+        if (!getData_t4(driver)) return false;
         if (!qbe_t4(driver)) return false;
         if (!others_actions_t4(driver)) return false;
-        if (!delete_t3(driver)) return false;*/
+       // if (!delete_t3(driver)) return false;
         if (!delete_t2(driver)) return false;
         if (!delete_t1(driver)) return false;
         return true;
@@ -255,8 +255,14 @@ public class AT2MDMCL0017Test {
     public boolean marcarSelect (TestDriver driver) {
         driver.getReport().addHeader("MARCAR SELECT", 3, false);
         String where = " on ACTIVAR SELECT";
-        if (!Functions.simpleClick(driver,
+/*        if (!Functions.simpleClick(driver,
                 new String[]{"company_ck_select", getElements("company_ck_select")}, //element to click
+                where)){return false;}*/
+        Functions.break_time(driver, 4, 400);
+        if(!Functions.checkClick(driver,
+                new String[]{"company_ck_select", getElements("company_ck_select")}, //element to click
+                new String[]{"office_e_result", getElements("office_e_result")}, //element expected to appear
+                100, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
         return true;
     }
@@ -296,7 +302,7 @@ public class AT2MDMCL0017Test {
         Functions.break_time(driver, 3, 400);
         return true;
     }
-/*    private boolean delete_t3(TestDriver driver) {
+    private boolean delete_t3(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA 3";
         if (!Functions.doDeleteNCheck(driver,
@@ -306,7 +312,7 @@ public class AT2MDMCL0017Test {
             return false;
         }
         return true;
-    }*/
+    }
 
     public boolean getData_t4 (TestDriver driver) {
         driver.getReport().addHeader("GET DATA", 3, false);
@@ -329,6 +335,10 @@ public class AT2MDMCL0017Test {
                 where)) {
             return false;
         } // where the operation occurs
+        if(!Functions.checkClick(driver,
+                new String[]{"company_ck_select", getElements("company_ck_select")}, //element to click
+                new String[]{"office_e_result", getElements("office_e_result")}, //element expected to appear
+                where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_office", getElements("qbe_i_office")},
                 "office", getData("office"), where)) {
             return false;
