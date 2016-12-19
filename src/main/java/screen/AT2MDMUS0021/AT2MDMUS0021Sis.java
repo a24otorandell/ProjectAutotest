@@ -612,7 +612,7 @@ public class AT2MDMUS0021Sis {
         else if (getData("poru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "Key User";
         }
-        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
+        else if (getData("poru_user_type").equalsIgnoreCase("USER")) {
             option = "User";
         }
         Functions.break_time(driver, 30, 500);
@@ -697,7 +697,7 @@ public class AT2MDMUS0021Sis {
         else if (getData("poru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "KU";
         }
-        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
+        else if (getData("poru_user_type").equalsIgnoreCase("USER")) {
             option = "U";
         }
         Functions.break_time(driver, 30, 500);
