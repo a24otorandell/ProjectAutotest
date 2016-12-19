@@ -86,8 +86,13 @@ public class AT2ACCDI0028Test {
         where= " on OTHER ACTIONS";
         driver.getReport().addHeader(" OTHER ACTIONS IN GENERALS EXCLUSIONS MAINTENACE 2.0 ",3,false);
         if(!Functions.checkClick(driver,
-                new String[]{"", getElements("")}, //element to click
-                new String[]{"", getElements("")}, //element expected to appear
+                new String[]{"atlas_b_actions", getElements("atlas_b_actions")}, //element to click
+                new String[]{"actions_b_copy_exclusions", getElements("actions_b_copy_exclusions")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_copy_exclusions", getElements("actions_b_copy_exclusions")}, //element to click
+                new String[]{"actions_copy_exclusions_tour_operators_b_qbe", getElements("actions_copy_exclusions_tour_operators_b_qbe")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"", getElements("")}, // element path
@@ -153,14 +158,14 @@ public class AT2ACCDI0028Test {
         where= " on OTHER ACTIONS";
         driver.getReport().addHeader(" OTHER ACTIONS IN ATLAS EXCLUSIONS MAINTENACE 2.0 ",3,false);
         if(!Functions.auditData(driver,
-                new String[]{"",getElements("")}, //actions button
-                new String[]{"",getElements("")}, //audit button
-                new String[]{"",getElements("")}, //audit_b_ok
+                new String[]{"atlas_b_actions",getElements("atlas_b_actions")}, //actions button
+                new String[]{"atlas_b_audit",getElements("atlas_b_audit")}, //audit button
+                new String[]{"atlas_b_ok",getElements("atlas_b_ok")}, //audit_b_ok
                 where)){
             return false;
         }
         if(!Functions.detachTable(driver,
-                new String[]{"",getElements("")}, //detach button
+                new String[]{"atlas_b_detach",getElements("atlas_b_detach")}, //detach button
                 true,     //screenshot??
                 where)){
             return false;
@@ -172,48 +177,52 @@ public class AT2ACCDI0028Test {
         where= " on QBE";
         driver.getReport().addHeader(" QBE IN ATLAS EXCLUSIONS MAINTENACE 2.0 ",3,false);
         if(!Functions.clickQbE(driver,
-                new String[]{"", getElements("")},// query button
-                new String[]{"", getElements("")},//any query input
+                new String[]{"atlas_b_qbe", getElements("atlas_b_qbe")},// query button
+                new String[]{"atlas_i_qbe_reason", getElements("atlas_i_qbe_reason")},//any query input
                 where)){return false;} // where the operation occurs
-
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        Functions.zoomOut(driver,3);
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_sequence",getElements("atlas_i_qbe_sequence")},
                 "sequence", getData("sequence"), where)){return false;}
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_qbe_reason",getElements("atlas_i_qbe_reason")},
                 "reason", getData("reason"),  where)){return false;}
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_qbe_ie",getElements("atlas_i_qbe_ie")},
                 "ie", getData("ie"),  where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_start_date",getElements("atlas_i_qbe_start_date")},
                 "start_date", getData("start_date"), where)){return false;}
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_qbe_active",getElements("atlas_i_qbe_active")},
                 "active", getData("active"),  where)){return false;}
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_qbe_main_acount",getElements("atlas_i_qbe_main_acount")},
                 "main_acount", getData("main_acount"),  where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_ttoo",getElements("atlas_i_qbe_ttoo")},
                 "tto", getData("tto"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_exclude_b2b",getElements("atlas_i_qbe_exclude_b2b")},
                 "b2b", getData("b2b"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_classification",getElements("atlas_i_qbe_classification")},
                 "clasification", getData("clasification"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_receptive",getElements("atlas_i_qbe_receptive")},
+                "receptive", getData("receptive"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_contract",getElements("atlas_i_qbe_contract")},
+                "contract", getData("contract"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_hotel",getElements("atlas_i_qbe_hotel")},
                 "hotel", getData("hotel"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_chain",getElements("atlas_i_qbe_chain")},
                 "chain", getData("chain"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_destination",getElements("atlas_i_qbe_destination")},
                 "destination", getData("destination"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_market",getElements("atlas_i_qbe_market")},
                 "market", getData("market"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_country",getElements("atlas_i_qbe_country")},
                 "country", getData("country"), where)){return false;}
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_qbe_application",getElements("atlas_i_qbe_application")},
                 "aplication", getData("aplication"),  where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
-                new String[]{"", getElements("")}, //any query input
-                new String[]{"", getElements("")}, //table result
+                new String[]{"atlas_i_qbe_sequence", getElements("atlas_i_qbe_sequence")}, //any query input
+                new String[]{"atlas_n_records", getElements("atlas_n_records")}, //table result
                 where)){return false;} // where this operation occurs
 
         return true;
@@ -224,13 +233,13 @@ public class AT2ACCDI0028Test {
         driver.getReport().addHeader(" SEARCH IN ATLAS EXCLUSIONS MAINTENACE 2.0 ",3,false);
 
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_search_reasons",getElements("atlas_i_search_reasons")},
                 getData("reason"), "reason",  where)){return false;}
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_search_ie",getElements("atlas_i_search_ie")},
                 getData("ie"), "ie",  where)){return false;}
 
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_search_start_date",getElements("atlas_i_search_start_date")},
                 "start_date", getData("start_date"), where)){return false;}
         boolean check_box_main_acount;
 
@@ -247,83 +256,100 @@ public class AT2ACCDI0028Test {
             check_box_b2b = false;
         }
         if (!Functions.checkboxValue(driver,
-                getElements(""),"main_acount",check_box_main_acount,true, where)){return false;}//where
+                getElements("atlas_cb_search_main_acount"),"main_acount",check_box_main_acount,true, where)){return false;}//where
         if (!Functions.checkboxValue(driver,
-                getElements(""),"b2b",check_box_b2b,true, where)){return false;}//where
+                getElements("atlas_cb_search_b2b"),"b2b",check_box_b2b,true, where)){return false;}//where
         if (!Functions.createLovByValue(driver,
-                new String[]{"", getElements("")}, //LoV button
-                new String[]{"", getElements("")}, //external LoV input
-                new String[]{"", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"atlas_lov_search_ttoo", getElements("atlas_lov_search_ttoo")}, //LoV button
+                new String[]{"atlas_i_search_ttoo", getElements("atlas_i_search_ttoo")}, //external LoV input
+                new String[]{"atlas_i_search_ttoo_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("tto"), // value to search
                 "tto", //name of the data
                 where)){return false;}//where this operation occurs
         if (!Functions.createLovByValue(driver,
-                new String[]{"", getElements("")}, //LoV button
-                new String[]{"", getElements("")}, //external LoV input
-                new String[]{"", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"atlas_lov_search_classification", getElements("atlas_lov_search_classification")}, //LoV button
+                new String[]{"atlas_i_search_classification", getElements("atlas_i_search_classification")}, //external LoV input
+                new String[]{"atlas_i_search_classification_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("clasification"), // value to search
                 "clasification", //name of the data
                 where)){return false;}//where this operation occurs
         if (!Functions.createLovByValue(driver,
-                new String[]{"", getElements("")}, //LoV button
-                new String[]{"", getElements("")}, //external LoV input
-                new String[]{"", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"atlas_lov_search_receptive", getElements("atlas_lov_search_receptive")}, //LoV button
+                new String[]{"atlas_i_search_receptive", getElements("atlas_i_search_receptive")}, //external LoV input
+                new String[]{"atlas_i_search_receptive_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                getData("receptive"), // value to search
+                "receptive", //name of the data
+                where)){return false;}//where this operation occurs
+        if (!Functions.createLovByValue(driver,
+                new String[]{"atlas_lov_search_contract", getElements("atlas_lov_search_contract")}, //LoV button
+                new String[]{"atlas_i_search_contract", getElements("atlas_i_search_contract")}, //external LoV input
+                new String[]{"atlas_i_search_contract_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                getData("contract"), // value to search
+                "contract", //name of the data
+                where)){return false;}//where this operation occurs
+
+        if (!Functions.createLovByValue(driver,
+                new String[]{"atlas_lov_search_hotel", getElements("atlas_lov_search_hotel")}, //LoV button
+                new String[]{"atlas_i_search_hotel", getElements("atlas_i_search_hotel")}, //external LoV input
+                new String[]{"atlas_i_search_hotel_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("hotel_code"), // value to search
                 "hotel_code", //name of the data
                 where)){return false;}//where this operation occurs
         if (!Functions.createLovByValue(driver,
-                new String[]{"", getElements("")}, //LoV button
-                new String[]{"", getElements("")}, //external LoV input
-                new String[]{"", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"atlas_lov_search_chain", getElements("atlas_lov_search_chain")}, //LoV button
+                new String[]{"atlas_i_search_chain", getElements("atlas_i_search_chain")}, //external LoV input
+                new String[]{"atlas_i_search_chain_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("chain"), // value to search
                 "chain", //name of the data
                 where)){return false;}//where this operation occurs
         if (!Functions.createLovByValue(driver,
-                new String[]{"", getElements("")}, //LoV button
-                new String[]{"", getElements("")}, //external LoV input
-                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"atlas_i_search_destination", getElements("atlas_i_search_destination")}, //LoV button
+                new String[]{"atlas_lov_search_destination", getElements("atlas_lov_search_destination")}, //external LoV input
+                new String[]{"atlas_i_search_destination_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("destination"), // value to search
                 "destination", //name of the data
                 where)){return false;}//where this operation occurs
         if (!Functions.createLovByValue(driver,
-                new String[]{"", getElements("")}, //LoV button
-                new String[]{"", getElements("")}, //external LoV input
-                new String[]{"", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"atlas_lov_search_market", getElements("atlas_lov_search_market")}, //LoV button
+                new String[]{"atlas_i_search_market", getElements("atlas_i_search_market")}, //external LoV input
+                new String[]{"atlas_i_search_market_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("market"), // value to search
                 "market", //name of the data
                 where)){return false;}//where this operation occurs
         if (!Functions.createLovByValue(driver,
-                new String[]{"", getElements("")}, //LoV button
-                new String[]{"", getElements("")}, //external LoV input
-                new String[]{"", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"atlas_lov_search_country", getElements("atlas_lov_search_country")}, //LoV button
+                new String[]{"atlas_i_search_country", getElements("atlas_i_search_country")}, //external LoV input
+                new String[]{"atlas_i_search_country_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
                 getData("country"), // value to search
                 "country", //name of the data
                 where)){return false;}//where this operation occurs
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"atlas_i_search_application",getElements("atlas_i_search_application")},
                 getData("aplication"), "dataname",  where)){return false;}
         if(!Functions.clickSearchAndResult(driver,
-                new String[]{"",getElements("")}, //search button
-                new String[]{"",getElements("")}, //result element
-                " on SEARCH")){
+                new String[]{"atlas_b_search",getElements("atlas_b_search")}, //search button
+                new String[]{"atlas_e_result",getElements("atlas_e_result")}, //result element
+                where)){
             return false;
         }
-        if(!Functions.getText(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getText(driver,new String[]{"atlas_e_search_sequence", getElements("atlas_e_search_sequence")}, // element path
                 "seguence", // key for data value (the name)
                 where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_search_sequence",getElements("atlas_i_search_sequence")},
                 "sequenece", getData("sequenece"), where)){return false;}
         if(!Functions.clickSearchAndResult(driver,
-                new String[]{"",getElements("")}, //search button
-                new String[]{"",getElements("")}, //result element
-                " on SEARCH")){
+                new String[]{"atlas_b_search",getElements("atlas_b_search")}, //search button
+                new String[]{"atlas_e_result",getElements("atlas_e_result")}, //result element
+                where)){
             return false;
         }
         return true;
@@ -333,114 +359,126 @@ public class AT2ACCDI0028Test {
         where= " on EDIT";
         driver.getReport().addHeader(" EDIT IN ATLAS EXCLUSIONS MAINTENACE 2.0 ",3,false);
         if(!Functions.checkClick(driver,
-                new String[]{"", getElements("")}, //element to click
-                new String[]{"", getElements("")}, //element expected to appear
+                new String[]{"atlas_b_add", getElements("atlas_b_add")}, //element to click
+                new String[]{"atlas_i_add_reasons", getElements("atlas_i_add_reasons")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
-        if(!Functions.checkClick(driver,
-                new String[]{"", getElements("")}, //element to click
-                new String[]{"", getElements("")}, //element expected to appear
-                30, 500, //seconds/miliseconds (driver wait)
-                where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_i_add_sequence", getElements("atlas_i_add_sequence")}, // element path
                 "secuence", // key for data value (the name)
                 where)){return false;}
 
         String list_options[] = {"Selling to B2C client", "Other reason", "Category", "Direct contract with the hotel"
                 , "Does not comply with Binding", "Client request", "Specific hotel request", "Signed by contract", "Client pricing to be revised", "Administration request", "B2B rate not valid for B2C clients"};
         if (!Functions.selectTextRandom(driver,
-                new String[]{"", getElements("")},
+                new String[]{"atlas_i_add_reasons", getElements("atlas_i_add_reasons")},
                 list_options, "reason", where)){return false;}
 
         String list_options_ie[] = {"I", "E"};
         if (!Functions.selectTextRandom(driver,
-                new String[]{"", getElements("")},
+                new String[]{"atlas_sl_add_ie", getElements("atlas_sl_add_ie")},
                 list_options_ie, "ie", where)){return false;}
 
-        if (!Functions.insertInput(driver, new String[]{"", getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_add_start_date", getElements("atlas_i_add_start_date")},
                 "start_date",DataGenerator.getToday(driver,"dd/MM/yyyy"),where)){
             return false;
         }
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_ttoo",getElements("atlas_lov_add_ttoo")}, // b_lov
+                new String[]{"atlas_i_add_ttoo", getElements("atlas_i_add_ttoo")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "tto", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_ttoo_description", getElements("atlas_e_add_ttoo_description")}, // element path
                 "tto_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_classification",getElements("atlas_lov_add_classification")}, // b_lov
+                new String[]{"atlas_i_add_classification", getElements("atlas_i_add_classification")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "clasification", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_classification_description", getElements("atlas_e_add_classification_description")}, // element path
                 "clasification_description", // key for data value (the name)
                 where)){return false;}
+
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_receptive",getElements("atlas_lov_add_receptive")}, // b_lov
+                new String[]{"atlas_i_add_receptive", getElements("atlas_i_add_receptive")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "receptive", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"atlas_lov_add_contract",getElements("atlas_lov_add_contract")}, // b_lov
+                new String[]{"atlas_i_add_contract", getElements("atlas_i_add_contract")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "contract", //Data name
+                where)){return false;}
+        if(!Functions.createLov(driver,
+                new String[]{"atlas_lov_add_hotel",getElements("atlas_lov_add_hotel")}, // b_lov
+                new String[]{"atlas_i_add_hotel", getElements("atlas_i_add_hotel")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "hotel", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_hotel_description", getElements("atlas_e_add_hotel_description")}, // element path
                 "hotel_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_chain",getElements("atlas_lov_add_chain")}, // b_lov
+                new String[]{"atlas_i_add_chain", getElements("atlas_i_add_chain")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "chain", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_chain_description", getElements("atlas_e_add_chain_description")}, // element path
                 "cahin_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_destination",getElements("atlas_lov_add_destination")}, // b_lov
+                new String[]{"atlas_i_add_destination", getElements("atlas_i_add_destination")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "destination", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_destination_description", getElements("atlas_e_add_destination_description")}, // element path
                 "destination_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_market",getElements("atlas_lov_add_market")}, // b_lov
+                new String[]{"atlas_i_add_market", getElements("atlas_i_add_market")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "market", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_market_description", getElements("atlas_e_add_market_description")}, // element path
                 "market_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_country",getElements("atlas_lov_add_country")}, // b_lov
+                new String[]{"atlas_i_add_country", getElements("atlas_i_add_country")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "country", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_lov_add_country_description", getElements("atlas_lov_add_country_description")}, // element path
                 "country_description", // key for data value (the name)
                 where)){return false;}
         String list_options_aplication[] = {"All", "Xml","Web"};
         if (!Functions.selectTextRandom(driver,
-                new String[]{"", getElements("")},
+                new String[]{"atlas_i_add_application", getElements("atlas_i_add_application")},
                 list_options_aplication, "aplication", where)){return false;}
 
 
@@ -453,12 +491,12 @@ public class AT2ACCDI0028Test {
 
             RandomBoolean= "Yes";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"main_acount",true,true, where)){
+                    getElements("atlas_cb_add_main_acount"),"main_acount",true,true, where)){
                 return false;
             }
         }else {RandomBoolean="No";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"main_acount",false,true, where)){
+                    getElements("atlas_cb_add_main_acount"),"main_acount",false,true, where)){
                 return false;
 
             }
@@ -472,18 +510,18 @@ public class AT2ACCDI0028Test {
 
             RandomBoolean2= "Yes";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"b2b",true,true, where)){
+                    getElements("atlas_cb_add_b2b"),"b2b",true,true, where)){
                 return false;
             }
         }else {RandomBoolean2="No";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"b2b",false,true, where)){
+                    getElements("atlas_cb_add_b2b"),"b2b",false,true, where)){
                 return false;
 
             }
         }
         if (!Functions.checkClickByAbsence(driver,
-                new String[]{"", getElements("")}, //element to click
+                new String[]{"atlas_b_add_save", getElements("atlas_b_add_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
                 30, 500,
                 where)) {
@@ -575,52 +613,52 @@ public class AT2ACCDI0028Test {
                 "hotel_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_chain",getElements("atlas_lov_add_chain")}, // b_lov
+                new String[]{"atlas_i_add_chain", getElements("atlas_i_add_chain")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "chain", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_chain_description", getElements("atlas_e_add_chain_description")}, // element path
                 "cahin_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_destination",getElements("atlas_lov_add_destination")}, // b_lov
+                new String[]{"atlas_i_add_destination", getElements("atlas_i_add_destination")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "destination", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_destination_description", getElements("atlas_e_add_destination_description")}, // element path
                 "destination_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_market",getElements("atlas_lov_add_market")}, // b_lov
+                new String[]{"atlas_i_add_market", getElements("atlas_i_add_market")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "market", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_e_add_market_description", getElements("atlas_e_add_market_description")}, // element path
                 "market_description", // key for data value (the name)
                 where)){return false;}
         if(!Functions.createLov(driver,
-                new String[]{"",getElements("")}, // b_lov
-                new String[]{"", getElements("")}, // i_lov
+                new String[]{"atlas_lov_add_country",getElements("atlas_lov_add_country")}, // b_lov
+                new String[]{"atlas_i_add_country", getElements("atlas_i_add_country")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "country", //Data name
                 where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getValue(driver,new String[]{"atlas_lov_add_country_description", getElements("atlas_lov_add_country_description")}, // element path
                 "country_description", // key for data value (the name)
                 where)){return false;}
         String list_options_aplication[] = {"All", "Xml","Web"};
         if (!Functions.selectTextRandom(driver,
-                new String[]{"", getElements("")},
+                new String[]{"atlas_i_add_application", getElements("atlas_i_add_application")},
                 list_options_aplication, "aplication", where)){return false;}
 
 
@@ -633,12 +671,12 @@ public class AT2ACCDI0028Test {
 
             RandomBoolean= "Yes";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"main_acount",true,true, where)){
+                    getElements("atlas_cb_add_main_acount"),"main_acount",true,true, where)){
                 return false;
             }
         }else {RandomBoolean="No";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"main_acount",false,true, where)){
+                    getElements("atlas_cb_add_main_acount"),"main_acount",false,true, where)){
                 return false;
 
             }
@@ -652,18 +690,18 @@ public class AT2ACCDI0028Test {
 
             RandomBoolean2= "Yes";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"b2b",true,true, where)){
+                    getElements("atlas_cb_add_b2b"),"b2b",true,true, where)){
                 return false;
             }
         }else {RandomBoolean2="No";
             if(!Functions.checkboxValue(driver,
-                    getElements(""),"b2b",false,true, where)){
+                    getElements("atlas_cb_add_b2b"),"b2b",false,true, where)){
                 return false;
 
             }
         }
         if (!Functions.checkClickByAbsence(driver,
-                new String[]{"", getElements("")}, //element to click
+                new String[]{"atlas_b_add_save", getElements("atlas_b_add_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
                 30, 500,
                 where)) {
