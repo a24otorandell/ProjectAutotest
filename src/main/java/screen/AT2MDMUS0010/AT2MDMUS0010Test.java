@@ -43,23 +43,35 @@ public class AT2MDMUS0010Test {
     }
 
     protected boolean testCSED(TestDriver driver) {
-        if (!search(driver)) return false;
+        if (!first_search(driver)) return false;
         if (!getDatos(driver)) return false;
+        if (!search(driver)) return false;
         if (!cambiarPass(driver)) return false;
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
         return true;
     }
 
+    private boolean first_search(TestDriver driver) {
+        driver.getReport().addHeader("SEARCH RECORD", 3, false);
+        String where = " on FIRST SEARCH";
+        if (!Functions.clickSearchAndResult(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //search button
+                new String[]{"passwords_e_result", getElements("passwords_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        return true;
+    }
+
     private boolean search(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
-        if (!Functions.createLov(driver,
+        if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_user", getElements("search_lov_user")}, //LoV button
                 new String[]{"search_i_user", getElements("search_i_user")}, //external LoV input
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
+                new String[]{"search_lov_user_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("user"), // value to search
                 "user", //name of the data
                 where)){return false;}
         if (!Functions.clickSearchAndResult(driver,
@@ -105,11 +117,6 @@ public class AT2MDMUS0010Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"change_b_ok", getElements("change_b_ok")}, //element to click
                 where)){return false;}
-
-/*        if (!Functions.checkClickByAbsence(driver,
-                new String[]{"change_b_ok", getElements("change_b_ok")}, //element to click
-                recursiveXPaths.glass, //element expected to disappear
-                where)){return false;}*/
         return true;
     }
     private boolean qbe(TestDriver driver) {

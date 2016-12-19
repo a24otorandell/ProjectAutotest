@@ -5,6 +5,7 @@ import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
+import sun.text.resources.cldr.ar.FormatData_ar_YE;
 
 /**
  * Created by aibanez on 28/11/2016.
@@ -90,13 +91,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_WebUser_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 40, 500);
         if (!interaction_add_t1_2(driver)) return false;
         if (!search_t1_2(driver)) return false;
         if (!interaction_edit_t1_2(driver)) return false;
         if (!search_t1_2(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_2(driver)) return false;
@@ -109,13 +110,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_WebUser_Cbranch_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_3(driver)) return false;
         if (!search_t1_3(driver)) return false;
         if (!interaction_edit_t1_3(driver)) return false;
         if (!search_t1_3(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_3(driver)) return false;
@@ -127,13 +128,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_WebUser_Dbranch_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_4(driver)) return false;
         if (!search_t1_4(driver)) return false;
         if (!interaction_edit_t1_4(driver)) return false;
         if (!search_t1_4(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_4(driver)) return false;
@@ -145,13 +146,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_HX2_SAPCode_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_5(driver)) return false;
         if (!search_t1_5(driver)) return false;
         if (!interaction_edit_t1_5(driver)) return false;
         if (!search_t1_5(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_5(driver)) return false;
@@ -163,13 +164,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_AdministrativeSupplier_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 30, 500);
         if (!interaction_add_t1_6(driver)) return false;
         if (!search_t1_6(driver)) return false;
         if (!interaction_edit_t1_6(driver)) return false;
         if (!search_t1_6(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_6(driver)) return false;
@@ -181,13 +182,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_SAPSupplier_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 30, 500);
         if (!interaction_add_t1_7(driver)) return false;
         if (!search_t1_7(driver)) return false;
         if (!interaction_edit_t1_7(driver)) return false;
         if (!search_t1_7(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_7(driver)) return false;
@@ -199,13 +200,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_SAPCustomer_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 30, 500);
         if (!interaction_add_t1_8(driver)) return false;
         if (!search_t1_8(driver)) return false;
         if (!interaction_edit_t1_8(driver)) return false;
         if (!search_t1_8(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_8(driver)) return false;
@@ -217,13 +218,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_ICs_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 40, 500);
         if (!interaction_add_t1_9(driver)) return false;
         if (!search_t1_9(driver)) return false;
         if (!interaction_edit_t1_9(driver)) return false;
         if (!search_t1_9(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_9(driver)) return false;
@@ -235,13 +236,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_SupplierClassification_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 40, 500);
         if (!interaction_add_t1_10(driver)) return false;
         if (!search_t1_10(driver)) return false;
         if (!interaction_edit_t1_10(driver)) return false;
         if (!search_t1_10(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_10(driver)) return false;
@@ -253,13 +254,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_Administrative_classification_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_11(driver)) return false;
         if (!search_t1_11(driver)) return false;
         if (!interaction_edit_t1_11(driver)) return false;
         if (!search_t1_11(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_11(driver)) return false;
@@ -271,13 +272,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_InvoicingCompanies_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_12(driver)) return false;
         if (!search_t1_12(driver)) return false;
         if (!interaction_edit_t1_12(driver)) return false;
         if (!search_t1_12(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_12(driver)) return false;
@@ -289,13 +290,13 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_SAPCustomerGroup_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 30, 500);
         if (!interaction_add_t1_13(driver)) return false;
         if (!search_t1_13(driver)) return false;
         if (!interaction_edit_t1_13(driver)) return false;
         if (!search_t1_13(driver)) return false;
         if (!others_actions_t1(driver)) return false;
         if (!rulesChange(driver)) return false;
-/*        if (!getData(driver)) return false;*/
         if (!qbeChange(driver)) return false;
         if (!others_actions_rule(driver)) return false;
         if (!interaction_edit_t2_13(driver)) return false;
@@ -307,6 +308,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_SAPCustomer_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_14(driver)) return false;
         if (!search_t1_14(driver)) return false;
         if (!interaction_edit_t1_14(driver)) return false;
@@ -325,6 +327,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_SAPSupplier_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_15(driver)) return false;
         if (!search_t1_15(driver)) return false;
         if (!interaction_edit_t1_15(driver)) return false;
@@ -343,6 +346,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_Extensions_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_16(driver)) return false;
         if (!search_t1_16(driver)) return false;
         if (!interaction_edit_t1_16(driver)) return false;
@@ -361,6 +365,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_SAPCustomerType_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_17(driver)) return false;
         if (!search_t1_17(driver)) return false;
         if (!interaction_edit_t1_17(driver)) return false;
@@ -379,6 +384,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_AtlasAdmin_classification_DR", "d_type", "SELECT OPTION")){return false;}
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_18(driver)) return false;
         if (!search_t1_18(driver)) return false;
         if (!interaction_edit_t1_18(driver)) return false;
@@ -1767,7 +1773,7 @@ public class AT2MDMCL0003Test {
     public boolean interaction_add_t1_9 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 30, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
@@ -1950,9 +1956,11 @@ public class AT2MDMCL0003Test {
     public boolean interaction_add_t1_10 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
+        Functions.break_time(driver, 30, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                120, 400,
                 where)) {
             return false;
         }
@@ -2510,6 +2518,7 @@ public class AT2MDMCL0003Test {
                 "c_saldo",DataGenerator.getRandomAlphanumericSequence(2, false), where)){
             return false;
         }
+        Functions.break_time(driver, 50, 400);
         if (!Functions.insertInput(driver, new String[]{"edit_i_credito_t", getElements("edit_i_credito_t")},
                 "credito_t",String.valueOf(DataGenerator.random(11,9999)), where)) {
             return false;
@@ -2734,9 +2743,11 @@ public class AT2MDMCL0003Test {
     public boolean interaction_add_t1_14 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                200, 700,
                 where)) {
             return false;
         }
@@ -2854,6 +2865,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                200, 700,
                 where)) {
             return false;
         }
@@ -2885,7 +2897,7 @@ public class AT2MDMCL0003Test {
                 "clave",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_grupo", getElements("add_i_grupo")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_grupo15", getElements("add_i_grupo15")},
                 "grupo",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
@@ -2999,6 +3011,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                200, 700,
                 where)) {
             return false;
         }
@@ -3014,7 +3027,7 @@ public class AT2MDMCL0003Test {
                 "clave",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"edit_i_grupo", getElements("edit_i_grupo")},
+        if (!Functions.insertInput(driver, new String[]{"edit_i_grupo15", getElements("edit_i_grupo15")},
                 "grupo",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
@@ -3073,6 +3086,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                200, 700,
                 where)) {
             return false;
         }
@@ -3154,6 +3168,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                250,700,
                 where)) {
             return false;
         }
@@ -3359,6 +3374,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                200, 700,
                 where)) {
             return false;
         }

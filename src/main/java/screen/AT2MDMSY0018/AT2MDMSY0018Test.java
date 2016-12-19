@@ -162,12 +162,6 @@ public class AT2MDMSY0018Test {
     private boolean delete_t1(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA COMPONENT";
-/*        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"component_b_delete", getElements("component_b_delete")},
-                new String[]{"component_e_records", getElements("component_e_records")},
-                where)){
-            return false;
-        }*/
         if(!Functions.doDelete(driver,
                 new String[]{"component_b_delete", getElements("component_b_delete")},//delete button
                 new String[]{"delete_b_yes", getElements("delete_b_yes")},//delete button
@@ -281,7 +275,7 @@ public class AT2MDMSY0018Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"t3_add_i_to_seq",getElements("t3_add_i_to_seq")},
-                "to_seq", "55555", where)){return false;}
+                "to_seq", String.valueOf(DataGenerator.random(1,10)), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"t3_add_lov_type_name",getElements("t3_add_lov_type_name")}, // b_lov
                 new String[]{"t3_add_i_type_name", getElements("t3_add_i_type_name")}, // i_lov
@@ -299,11 +293,6 @@ public class AT2MDMSY0018Test {
                 "name2", //Data name
                 where)){return false;}
         Functions.break_time(driver, 3, 500);
-/*        Functions.getAttr(driver,
-                new String[]{"t3_add_i_to_name", getElements("t3_add_i_to_name")}, // element path
-                "value", // atribute to get data (class, value, id, style, etc...)
-                "to_name", // key for data value (the name)
-                where);*/
         if(!Functions.getValue(driver,new String[]{"t3_add_i_to_name", getElements("t3_add_i_to_name")}, // element path
                 "to_name", // key for data value (the name)
                 where)){return false;}
@@ -354,7 +343,7 @@ public class AT2MDMSY0018Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"t3_add_i_to_seq",getElements("t3_add_i_to_seq")},
-                "to_seq", "35248", where)){return false;}
+                "to_seq", String.valueOf(DataGenerator.random(1,10)), where)){return false;}
         if(!Functions.createLov(driver,
                 new String[]{"t3_add_lov_type_name",getElements("t3_add_lov_type_name")}, // b_lov
                 new String[]{"t3_add_i_type_name", getElements("t3_add_i_type_name")}, // i_lov
@@ -376,11 +365,7 @@ public class AT2MDMSY0018Test {
         if(!Functions.getValue(driver,new String[]{"t3_add_i_to_name", getElements("t3_add_i_to_name")}, // element path
                 "to_name", // key for data value (the name)
                 where)){return false;}
-/*        Functions.getAttr(driver,
-                new String[]{"t3_add_i_to_name", getElements("t3_add_i_to_name")}, // element path
-                "value", // atribute to get data (class, value, id, style, etc...)
-                "to_name", // key for data value (the name)
-                where);*/
+
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"t3_add_b_save", getElements("t3_add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

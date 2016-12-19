@@ -139,7 +139,7 @@ public class AT2MDMCL0003Locators {
             elements.put("search_i_commercial_province4", "//*[contains(@id, '21:soc6::content')]");
             elements.put("search_i_direct_hotel4", "//*[contains(@id, '22:soc6::content')]");
             elements.put("search_i_web_user4", "//*[contains(@id, '23:soc6::content')]");
-            elements.put("search_i_type_widget4", "//*[contains(@id, '24:it5::content')]");
+            elements.put("search_i_type_widget4", "//*[contains(@id, '24:soc6::content')]");
             //ADD
             elements.put("add_i_commercial_country4", "//*[contains(@id, '18:it5::content')]");
             elements.put("add_i_commercial_brand4", "//*[contains(@id, '19:it5::content')]");
@@ -269,7 +269,7 @@ public class AT2MDMCL0003Locators {
             //SEARCH
             elements.put("search_i_source", "//*[contains(@id, '44:soc6::content')]");
             elements.put("search_i_customer", "//*[contains(@id, '45:soc6::content')]");
-            elements.put("search_i_comercial_b", "//*[contains(@id, 46:soc6::content')]");
+            elements.put("search_i_comercial_b", "//*[contains(@id, '46:soc6::content')]");
             elements.put("search_i_white", "//*[contains(@id, '47:soc6::content')]");
             elements.put("search_i_connectivity", "//*[contains(@id, '48:soc6::content')]");
             //ADD
@@ -390,7 +390,7 @@ public class AT2MDMCL0003Locators {
             elements.put("add_i_g_cuenta", "//*[contains(@id, '68:it25::content')]");
             elements.put("add_i_c_associada", "//*[contains(@id, '69:it25::content')]");
             elements.put("add_i_clave", "//*[contains(@id, '70:it25::content')]");
-            elements.put("add_i_grupo", "//*[contains(@id, '71:it25::content')]");
+            elements.put("add_i_grupo15", "//*[contains(@id, '71:it25::content')]");
             elements.put("add_i_condi", "//*[contains(@id, '72:it25::content')]");
             elements.put("add_i_condi_abono", "//*[contains(@id, '73:it25::content')]");
             elements.put("add_i_ver", "//*[contains(@id, '74:it25::content')]");
@@ -677,7 +677,7 @@ public class AT2MDMCL0003Locators {
             //SEARCH
             elements.put("search_i_source", "//*[contains(@id, '47:soc6::content')]");
             elements.put("search_i_customer", "//*[contains(@id, '48:soc6::content')]");
-            elements.put("search_i_comercial_b", "//*[contains(@id, 49:soc6::content')]");
+            elements.put("search_i_comercial_b", "//*[contains(@id, '49:soc6::content')]");
             elements.put("search_i_white", "//*[contains(@id, '50:soc6::content')]");
             elements.put("search_i_connectivity", "//*[contains(@id, '51:soc6::content')]");
             //ADD
@@ -799,7 +799,7 @@ public class AT2MDMCL0003Locators {
             elements.put("add_i_g_cuenta", "//*[contains(@id, '69:it25::content')]");
             elements.put("add_i_c_associada", "//*[contains(@id, '70:it25::content')]");
             elements.put("add_i_clave", "//*[contains(@id, '71:it25::content')]");
-            elements.put("add_i_grupo", "//*[contains(@id, '72:it25::content')]");
+            elements.put("add_i_grupo15", "//*[contains(@id, '72:it25::content')]");
             elements.put("add_i_condi", "//*[contains(@id, '73:it25::content')]");
             elements.put("add_i_condi_abono", "//*[contains(@id, '74:it25::content')]");
             elements.put("add_i_ver", "//*[contains(@id, '75:it25::content')]");
@@ -982,7 +982,7 @@ public class AT2MDMCL0003Locators {
             elements.put("edit_i_credito", "//*[contains(@id, '32:it5::content')]");
             elements.put("edit_i_credito_g", "//*[contains(@id, '33:it5::content')]");
             elements.put("edit_i_c_saldo", "//*[contains(@id, '34:it5::content')]");
-            elements.put("edit_i_credito_t", "//*[contains(@id, '35:it5::content')]");
+            elements.put("edit_i_credito_t", "//*[contains(@id, '35:it6::content')]");
             elements.put("edit_i_empresa", "//*[contains(@id, '36:it5::content')]");
             elements.put("edit_i_oficina", "//*[contains(@id, '37:it5::content')]");
             elements.put("edit_i_canal", "//*[contains(@id, '38:it5::content')]");
@@ -1039,7 +1039,7 @@ public class AT2MDMCL0003Locators {
             elements.put("edit_i_g_cuenta", "//*[contains(@id, '68:it5::content')]");
             elements.put("edit_i_c_associada", "//*[contains(@id, '69:it5::content')]");
             elements.put("edit_i_clave", "//*[contains(@id, '70:it5::content')]");
-            elements.put("edit_i_grupo", "//*[contains(@id, '71:it5::content')]");
+            elements.put("edit_i_grupo15", "//*[contains(@id, '71:it5::content')]");
             elements.put("edit_i_condi", "//*[contains(@id, '72:it5::content')]");
             elements.put("edit_i_condi_abono", "//*[contains(@id, '73:it5::content')]");
             elements.put("edit_i_ver", "//*[contains(@id, '74:it5::content')]");
@@ -1190,7 +1190,7 @@ public class AT2MDMCL0003Locators {
             elements.put("edit_i_credito", "//*[contains(@id, '32:it5::content')]");
             elements.put("edit_i_credito_g", "//*[contains(@id, '33:it5::content')]");
             elements.put("edit_i_c_saldo", "//*[contains(@id, '34:it5::content')]");
-            elements.put("edit_i_credito_t", "//*[contains(@id, '35:it5::content')]");
+            elements.put("edit_i_credito_t", "//*[contains(@id, '35:it6::content')]");
             elements.put("edit_i_empresa", "//*[contains(@id, '36:it5::content')]");
             elements.put("edit_i_oficina", "//*[contains(@id, '37:it5::content')]");
             elements.put("edit_i_canal", "//*[contains(@id, '38:it5::content')]");

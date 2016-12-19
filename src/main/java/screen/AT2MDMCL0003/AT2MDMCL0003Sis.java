@@ -445,6 +445,7 @@ public class AT2MDMCL0003Sis {
     private boolean qbeChange (TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE RULES";
+        Functions.break_time(driver, 20, 600);
         if (!Functions.clickQbE(driver,
                 new String[]{"rules_b_qbe", getElements("rules_b_qbe")},// query button
                 new String[]{"qbe_i_user", getElements("qbe_i_user")},//any query input
@@ -675,11 +676,11 @@ public class AT2MDMCL0003Sis {
     public boolean interaction_add_t1_2 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
-        Functions.break_time(driver, 3, 400);
+        Functions.break_time(driver, 30, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
-                250, 300,//element expected to appear
+                450, 300,//element expected to appear
                 where)) {
             return false;
         }
@@ -872,9 +873,11 @@ public class AT2MDMCL0003Sis {
     public boolean interaction_add_t1_3 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
+        Functions.break_time(driver, 30, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
+                recursiveXPaths.glass,
+                500, 600,//element expected to appear
                 where)) {
             return false;
         }
@@ -886,7 +889,7 @@ public class AT2MDMCL0003Sis {
                 "comercial3",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity2", getElements("add_i_customer_connectivity2")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity3", getElements("add_i_customer_connectivity3")},
                 "customer3", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
@@ -971,7 +974,7 @@ public class AT2MDMCL0003Sis {
                 "comercial3",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity2", getElements("add_i_customer_connectivity2")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity3", getElements("add_i_customer_connectivity3")},
                 "customer3", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
@@ -1033,6 +1036,7 @@ public class AT2MDMCL0003Sis {
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                300, 600,
                 where)) {
             return false;
         }
@@ -1044,7 +1048,7 @@ public class AT2MDMCL0003Sis {
                 "comercial4",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity2", getElements("add_i_customer_connectivity2")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity4", getElements("add_i_customer_connectivity4")},
                 "customer4", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
@@ -1137,7 +1141,7 @@ public class AT2MDMCL0003Sis {
                 "comercial4",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity2", getElements("add_i_customer_connectivity2")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity4", getElements("add_i_customer_connectivity4")},
                 "customer4", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
@@ -2145,9 +2149,11 @@ public class AT2MDMCL0003Sis {
     public boolean interaction_add_t1_12 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
+        Functions.break_time(driver, 10, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                200, 600,
                 where)) {
             return false;
         }
@@ -2487,6 +2493,7 @@ public class AT2MDMCL0003Sis {
                 "c_saldo",DataGenerator.getRandomAlphanumericSequence(2, false), where)){
             return false;
         }
+        Functions.break_time(driver, 50, 400);
         if (!Functions.insertInput(driver, new String[]{"edit_i_credito_t", getElements("edit_i_credito_t")},
                 "credito_t",String.valueOf(DataGenerator.random(11,9999)), where)) {
             return false;
@@ -2623,9 +2630,11 @@ public class AT2MDMCL0003Sis {
     public boolean interaction_add_t1_13 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
+        Functions.break_time(driver, 3, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
+                200, 800,
                 where)) {
             return false;
         }
@@ -2860,7 +2869,7 @@ public class AT2MDMCL0003Sis {
                 "clave",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_grupo", getElements("add_i_grupo")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_grupo15", getElements("add_i_grupo15")},
                 "grupo",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
@@ -2989,7 +2998,7 @@ public class AT2MDMCL0003Sis {
                 "clave",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"edit_i_grupo", getElements("edit_i_grupo")},
+        if (!Functions.insertInput(driver, new String[]{"edit_i_grupo15", getElements("edit_i_grupo15")},
                 "grupo",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
