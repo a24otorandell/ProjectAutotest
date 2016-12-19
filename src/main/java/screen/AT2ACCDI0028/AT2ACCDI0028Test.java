@@ -62,12 +62,40 @@ public class AT2ACCDI0028Test {
 
     protected boolean testCSED (TestDriver driver){
 
-        //  if(!Exclusions_maintenance_category(driver)){return false;}
+        if(!Exclusions_maintenance_category(driver)){return false;}
         //  if(!Exclusions_maintenance_binding(driver)){return false;}
         if(!Exclusions_maintenance_generals(driver)){return false;}
         if(!Exclusions_maintenance_atlas(driver)){return false;}
+        if(!Exclusions_maintenance_si(driver)){return false;}
 
         return false;
+    }
+
+    private boolean Exclusions_maintenance_si (TestDriver driver){
+
+        if(!Exclusions_maintenance_si_add(driver)){return false;}
+
+        return true;
+    }
+
+
+    /*EXCLUSIONS MAINTENANCE TAB SI*/
+    private boolean Exclusions_maintenance_si_add (TestDriver driver){
+        String where;
+        where= " on ADD";
+        driver.getReport().addHeader(" ADD IN SI EXCLUSIONS MAINTENACE 2.0 ",3,false);
+
+        if(!Functions.checkClick(driver,
+                new String[]{"", getElements("")}, //element to click
+                new String[]{"", getElements("")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        if(!Functions.checkClick(driver,
+                new String[]{"", getElements("")}, //element to click
+                new String[]{"", getElements("")}, //element expected to appear
+                30, 500, //seconds/miliseconds (driver wait)
+                where)){return false;}
+        return true;
     }
 
     private boolean Exclusions_maintenance_atlas (TestDriver driver){
@@ -80,6 +108,8 @@ public class AT2ACCDI0028Test {
         if(!Exclusions_maintenance_atlas_copy_exclusions(driver)){return false;}
         return true;
     }
+
+     /*EXCLUSIONS MAINTENANCE TAB ATLAS*/
 
     private boolean Exclusions_maintenance_atlas_copy_exclusions (TestDriver driver){
         String where;
@@ -95,57 +125,59 @@ public class AT2ACCDI0028Test {
                 new String[]{"actions_copy_exclusions_tour_operators_b_qbe", getElements("actions_copy_exclusions_tour_operators_b_qbe")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getText(driver,new String[]{"actions_copy_exclusions_tour_operators_qbe_e_tto", getElements("actions_copy_exclusions_tour_operators_qbe_e_tto")}, // element path
                 "tto", // key for data value (the name)
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getText(driver,new String[]{"actions_copy_exclusions_tour_operators_qbe_e_tto_name", getElements("actions_copy_exclusions_tour_operators_qbe_e_tto_name")}, // element path
                 "tto_name", // key for data value (the name)
                 where)){return false;}
         if(!Functions.clickQbE(driver,
-                new String[]{"", getElements("")},// query button
-                new String[]{"", getElements("")},//any query input
+                new String[]{"actions_copy_exclusions_tour_operators_b_qbe", getElements("actions_copy_exclusions_tour_operators_b_qbe")},// query button
+                new String[]{"actions_copy_exclusions_tour_operators_qbe_i_tto", getElements("actions_copy_exclusions_tour_operators_qbe_i_tto")},//any query input
                 where)){return false;} // where the operation occurs
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"actions_copy_exclusions_tour_operators_qbe_i_tto",getElements("actions_copy_exclusions_tour_operators_qbe_i_tto")},
                 "tto", getData("tto"), where)){return false;}
         if (!Functions.selectText(driver,
-                new String[]{"",getElements("")},
+                new String[]{"actions_copy_exclusions_tour_operators_qbe_i_tto_name",getElements("actions_copy_exclusions_tour_operators_qbe_i_tto_name")},
                 "tto_name", getData("tto_name"),  where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
-                new String[]{"", getElements("")}, //any query input
-                new String[]{"", getElements("")}, //table result
+                new String[]{"actions_copy_exclusions_tour_operators_qbe_i_tto", getElements("actions_copy_exclusions_tour_operators_qbe_i_tto")}, //any query input
+                new String[]{"actions_copy_exclusions_e_result_tour_operators", getElements("actions_copy_exclusions_e_result_tour_operators")}, //table result
                 where)){return false;} // where this operation occurs
-        if(!Functions.getText(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getText(driver,new String[]{"actions_copy_exclusions_hotels_e_hotel", getElements("actions_copy_exclusions_hotels_e_hotel")}, // element path
                 "hotel", // key for data value (the name)
                 where)){return false;}
-        if(!Functions.getText(driver,new String[]{"", getElements("")}, // element path
+        if(!Functions.getText(driver,new String[]{"actions_copy_exclusions_hotels_e_hotel_name", getElements("actions_copy_exclusions_hotels_e_hotel_name")}, // element path
                 "hotel_name", // key for data value (the name)
                 where)){return false;}
         if(!Functions.clickQbE(driver,
-                new String[]{"", getElements("")},// query button
-                new String[]{"", getElements("")},//any query input
+                new String[]{"actions_copy_exclusions_hotels_b_qbe", getElements("actions_copy_exclusions_hotels_b_qbe")},// query button
+                new String[]{"actions_copy_exclusions_hotels_qbe_hotel", getElements("actions_copy_exclusions_hotels_qbe_hotel")},//any query input
                 where)){return false;} // where the operation occurs
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"actions_copy_exclusions_hotels_qbe_hotel",getElements("actions_copy_exclusions_hotels_qbe_hotel")},
                 "hotel", getData("hotel"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+        if (!Functions.insertInput(driver, new String[]{"actions_copy_exclusions_hotels_qbe_hotel_name",getElements("actions_copy_exclusions_hotels_qbe_hotel_name")},
                 "hotel_name", getData("hotel_name"), where)){return false;}
+
+
         if (!Functions.enterQueryAndClickResult(driver,
-                new String[]{"", getElements("")}, //any query input
-                new String[]{"", getElements("")}, //table result
+                new String[]{"actions_copy_exclusions_hotels_qbe_hotel", getElements("actions_copy_exclusions_hotels_qbe_hotel")}, //any query input
+                new String[]{"actions_copy_exclusions_e_result_hotels", getElements("actions_copy_exclusions_e_result_hotels")}, //table result
                 where)){return false;} // where this operation occurs
         if(!Functions.detachTable(driver,
-                new String[]{"",getElements("")}, //detach button
+                new String[]{"actions_copy_exclusions_tour_operators_b_detach",getElements("actions_copy_exclusions_tour_operators_b_detach")}, //detach button
                 true,     //screenshot??
                 where)){
             return false;
         }
         if(!Functions.detachTable(driver,
-                new String[]{"",getElements("")}, //detach button
+                new String[]{"actions_copy_exclusions_hotels_b_detach",getElements("actions_copy_exclusions_hotels_b_detach")}, //detach button
                 true,     //screenshot??
                 where)){
             return false;
         }
         if (!Functions.checkClickByAbsence(driver,
-                new String[]{"", getElements("")}, //element to click
+                new String[]{"actions_copy_exclusions_b_copy", getElements("actions_copy_exclusions_b_copy")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
                 30, 500,
                 where)) {

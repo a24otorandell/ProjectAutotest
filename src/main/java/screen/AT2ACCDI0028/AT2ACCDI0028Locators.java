@@ -390,12 +390,17 @@ public class AT2ACCDI0028Locators {
         elements.put("actions_copy_exclusions_tour_operators_qbe_e_tto", "//*[contains(@id, 'pc1:ttoTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
         elements.put("actions_copy_exclusions_tour_operators_qbe_e_tto_name", "//*[contains(@id, 'pc1:ttoTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
         elements.put("actions_copy_exclusions_hotels_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]/a");
-        elements.put("actions_copy_exclusions_hotels_qbe_i_hotel", "//*[contains(@id, 'pc2:_qbeTbr')]/a");
         elements.put("actions_copy_exclusions_hotels_qbe_hotel", "//*[contains(@id, 'pc2_afr_hotTab_afr_c5::content')]");
         elements.put("actions_copy_exclusions_hotels_qbe_hotel_name", "//*[contains(@id, 'pc2_afr_hotTab_afr_c4::content')]");
         elements.put("actions_copy_exclusions_hotels_e_hotel", "//*[contains(@id, 'pc2:hotTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
         elements.put("actions_copy_exclusions_hotels_e_hotel_name", "//*[contains(@id, 'pc2:hotTab::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
+        elements.put("actions_copy_exclusions_e_result_tour_operators", "//*[contains(@id, 'pc1:ttoTab::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("actions_copy_exclusions_e_result_hotels", "//*[contains(@id, 'pc2:hotTab::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("actions_copy_exclusions_tour_operators_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
+        elements.put("actions_copy_exclusions_hotels_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]/a");
+
         elements.put("actions_copy_exclusions_b_copy", "//*[contains(@id, 'pc1:r1:0:cb1')]");
+
 
 
 
