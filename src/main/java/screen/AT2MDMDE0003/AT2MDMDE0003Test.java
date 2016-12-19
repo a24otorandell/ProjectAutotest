@@ -186,17 +186,8 @@ public class AT2MDMDE0003Test {
         return true;
     }
     private boolean others_actions_country(TestDriver driver) {
-        driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
-        String where = " on OTHER AUDIT DATA";
-/*        if (!Functions.auditData(driver,
-                new String[]{"product_b_actions", getElements("product_b_actions")}, //actions button
-                new String[]{"product_b_actions_b_audit_data", getElements("product_b_actions_b_audit_data")}, //audit button
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
-                where)) {
-            return false;
-        }*/
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH";
+        String where = " on OTHER DETACH";
         if (!Functions.detachTable(driver,
                 new String[]{"country_b_detach", getElements("country_b_detach")}, //detach button
                 true,     //screenshot??
@@ -266,12 +257,6 @@ public class AT2MDMDE0003Test {
     private boolean qbe_multi(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-/*        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"product_e_result", getElements("product_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.clickQbE(driver,
                 new String[]{"multi_b_qbe", getElements("multi_b_qbe")},// query button
                 new String[]{"multi_qbe_i_language", getElements("multi_qbe_i_language")},//any query input
@@ -297,17 +282,8 @@ public class AT2MDMDE0003Test {
         return true;
     }
     private boolean others_actions_multi(TestDriver driver) {
-        driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
-        String where = " on OTHER AUDIT DATA";
-/*        if (!Functions.auditData(driver,
-                new String[]{"multi_b_actions", getElements("multi_b_actions")}, //actions button
-                new String[]{"multi_b_actions_b_audit_data", getElements("multi_b_actions_b_audit_data")}, //audit button
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
-                where)) {
-            return false;
-        }*/
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH";
+        String where = " on OTHER DETACH";
         if (!Functions.detachTable(driver,
                 new String[]{"multi_b_detach", getElements("multi_b_detach")}, //detach button
                 true,     //screenshot??

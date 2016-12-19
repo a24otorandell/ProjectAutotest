@@ -155,34 +155,15 @@ public class AT2ACCDI0018Sis {
                 where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
-                "amount_cost", ""+1, where)) {
-            return false;
-        }*/
-
         if (!Functions.insertInput(driver, new String[]{"add_i_extra", getElements("add_i_extra")},
                 "extra", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
-                "amount_extra", ""+1, where)) {
-            return false;
-        }*/
         if (!Functions.getText(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")}, // element path
                 "amount_extra", // key for data value (the name)
                 where)) {
             return false;
         }
-        /*if (!Functions.createLov(driver,
-                new String[]{"add_lov_currency", getElements("add_lov_currency")}, // b_lov
-                new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "currency", //Data name
-                where)) {
-            return false;
-        }*/
         if (!Functions.getText(driver, new String[]{"add_i_currency", getElements("add_i_currency")}, // element path
                 "currency", // key for data value (the name)
                 where)) {
@@ -198,10 +179,6 @@ public class AT2ACCDI0018Sis {
                 "Only Generic.", "application_cost", where)) {
             return false;
         }
-        /*if (!Functions.checkboxValue(driver,
-                getElements("add_ck_net_amount"), "visible", true, where)) {
-            return false;
-        }*/
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_net_amount"), "net_amount", true, true, where)) {
             return false;
@@ -251,10 +228,6 @@ public class AT2ACCDI0018Sis {
                 where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"search_i_to_description", getElements("search_i_to_description")},
-                "to_desc", getData("to_desc"), where)) {
-            return false;
-        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_booking_type", getElements("search_lov_booking_type")}, //LoV button
                 new String[]{"search_i_booking_type", getElements("search_i_booking_type")}, //external LoV input
@@ -309,15 +282,6 @@ public class AT2ACCDI0018Sis {
                 "currency", getData("currency"), where)) {
             return false;
         }
-        /*if (!Functions.createLovByValue(driver,
-                new String[]{"search_lov_currency", getElements("search_lov_currency")}, //LoV button
-                new String[]{"search_i_currency", getElements("search_i_currency")}, //external LoV input
-                new String[]{"search_lov_currency_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                getData("currency"), // value to search
-                "currency", //name of the data
-                where)) {
-            return false;
-        }*/
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_application_type", getElements("search_sl_application_type")},
                 getData("application_type"), "application_type", where)) {
@@ -439,14 +403,6 @@ public class AT2ACCDI0018Sis {
                 "amount_extra", DataGenerator.randomFloat(1,2), where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_amount_cost", getElements("add_i_amount_cost")},
-                "amount_cost", "" + randomNumber, where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"add_i_amount_extra", getElements("add_i_amount_extra")},
-                "amount_extra", "" + randomNumber2, where)) {
-            return false;
-        }*/
         if (!Functions.createLov(driver,
                 new String[]{"add_lov_currency", getElements("add_lov_currency")}, // b_lov
                 new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
@@ -467,10 +423,6 @@ public class AT2ACCDI0018Sis {
                 "Contract+Generic.", "application_cost", where)) {
             return false;
         }
-        /*if (!Functions.checkboxValue(driver,
-                getElements("add_ck_net_amount"), "net_amount", false, where)) {
-            return false;
-        }*/
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_net_amount"), "net_amount", false, true, where)) {
             return false;

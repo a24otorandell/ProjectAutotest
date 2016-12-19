@@ -108,8 +108,6 @@ public class AT2MDMRM0028Sis {
                 where)) {
             return false;
         }
-//        if (!Functions.insertInput(driver, new String[]{"add_i_category",getElements("add_i_category")},
-//                "category",DataGenerator.getRandomAlphanumericSequence(2,true), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type",getElements("add_sl_type")},
                 "Ticketing", "type", " on where")){return false;}

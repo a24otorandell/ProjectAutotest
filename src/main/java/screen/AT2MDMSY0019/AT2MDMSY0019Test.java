@@ -155,17 +155,8 @@ public class AT2MDMSY0019Test {
         return true;
     }
     private boolean others_actions(TestDriver driver) {
-        driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
-        String where = " on OTHER AUDIT DATA";
-/*        if (!Functions.auditData(driver,
-                new String[]{"profiles_b_actions", getElements("profiles_b_actions")}, //actions button
-                new String[]{"profiles_b_actions_b_audit_data", getElements("profiles_b_actions_b_audit_data")}, //audit button
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
-                where)) {
-            return false;
-        }*/
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH";
+        String where = " on OTHER DETACH";
         if (!Functions.detachTable(driver,
                 new String[]{"scheduler_b_detach", getElements("scheduler_b_detach")}, //detach button
                 true,     //screenshot??

@@ -427,12 +427,6 @@ public class AT2MDMDE0002Test {
     private boolean delete_table1(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA DESCRIPTION";
-/*        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"description1_b_delete", getElements("description1_b_delete")},
-                new String[]{"description1_e_records", getElements("description1_e_records")},
-                where)){
-            return false;
-        }*/
         if(!Functions.doDelete(driver,
                 new String[]{"description1_b_delete", getElements("description1_b_delete")},//delete button
                 new String[]{"a_delete_ok", getElements("a_delete_ok")},//delete button
@@ -584,14 +578,6 @@ public class AT2MDMDE0002Test {
         }
         if (!Functions.checkboxValue(driver,
                 getElements("areas_add_ck_priority"),"priority",true,true,where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"areas_add_i_latitude", getElements("areas_add_i_latitude")},
-                "latitude", "23,3400000000", where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"areas_add_i_longitude", getElements("areas_add_i_longitude")},
-                "longitude", "52,3400510000", where)) {
-            return false;
-        }*/
         if (!Functions.insertInput(driver, new String[]{"areas_add_i_latitude", getElements("areas_add_i_latitude")},
                 "latitude", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
@@ -713,14 +699,7 @@ public class AT2MDMDE0002Test {
         }
         if (!Functions.checkboxValue(driver,
                 getElements("areas_add_ck_priority"),"priority",false,true,where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"areas_add_i_latitude", getElements("areas_add_i_latitude")},
-                "latitude", "25,3400000003", where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"areas_add_i_longitude", getElements("areas_add_i_longitude")},
-                "longitude", "57,3400510005", where)) {
-            return false;
-        }*/
+
         if (!Functions.insertInput(driver, new String[]{"areas_add_i_latitude", getElements("areas_add_i_latitude")},
                 "latitude", String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
@@ -798,12 +777,6 @@ public class AT2MDMDE0002Test {
     private boolean delete_table3(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA AREA";
-/*        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"areas_b_delete", getElements("areas_b_delete")},
-                new String[]{"areas_e_records", getElements("areas_e_records")},
-                where)){
-            return false;
-        }*/
         if(!Functions.doDelete(driver,
                 new String[]{"areas_b_delete", getElements("areas_b_delete")},//delete button
                 new String[]{"b_delete_ok", getElements("b_delete_ok")},//delete button
@@ -825,10 +798,6 @@ public class AT2MDMDE0002Test {
                 where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"multi_add_i_code", getElements("multi_add_i_code")},
-                "code", DataGenerator.getRandomAlphanumericSequence(3,false), where)) {
-            return false;
-        }*/
         if(!Functions.createLov(driver,
                 new String[]{"multi_add_lov_language",getElements("multi_add_lov_language")}, // b_lov
                 new String[]{"multi_add_i_language", getElements("multi_add_i_language")}, // i_lov
@@ -856,10 +825,6 @@ public class AT2MDMDE0002Test {
                 where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"multi_add_i_code", getElements("multi_add_i_code")},
-                "code", DataGenerator.getRandomAlphanumericSequence(3,false), where)) {
-            return false;
-        }*/
         if(!Functions.createLov(driver,
                 new String[]{"multi_add_lov_language",getElements("multi_add_lov_language")}, // b_lov
                 new String[]{"multi_add_i_language", getElements("multi_add_i_language")}, // i_lov

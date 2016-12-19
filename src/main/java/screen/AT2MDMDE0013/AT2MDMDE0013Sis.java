@@ -86,16 +86,6 @@ public class AT2MDMDE0013Sis {
         if(!Functions.getText(driver,new String[]{"add_i_area_name", getElements("add_i_area_name")}, // element path
                 "area_name", // key for data value (the name)
                 where)){return false;}
-/*        if (!Functions.createLov(driver,
-                new String[]{"add_lov_external_supplier", getElements("add_lov_external_supplier")}, // b_lov
-                new String[]{"add_i_external_supplier", getElements("add_i_external_supplier")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "ext_su", //Data name
-                where)) {
-            return false;
-        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_external_supplier", getElements("add_lov_external_supplier")}, //LoV button
                 new String[]{"add_i_external_supplier", getElements("add_i_external_supplier")}, //external LoV input
@@ -208,16 +198,6 @@ public class AT2MDMDE0013Sis {
         if(!Functions.getText(driver,new String[]{"add_i_area_name", getElements("add_i_area_name")}, // element path
                 "area_name", // key for data value (the name)
                 where)){return false;}
-/*        if (!Functions.createLov(driver,
-                new String[]{"add_lov_external_supplier", getElements("add_lov_external_supplier")}, // b_lov
-                new String[]{"add_i_external_supplier", getElements("add_i_external_supplier")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "invoicing", //Data name
-                where)) {
-            return false;
-        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_external_supplier", getElements("add_lov_external_supplier")}, //LoV button
                 new String[]{"add_i_external_supplier", getElements("add_i_external_supplier")}, //external LoV input

@@ -140,14 +140,6 @@ public class AT2MDMRM0019Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "sequence", //Data name
                 where)){return false;}
-/*        if (!Functions.createLovByValue(driver,
-                new String[]{"add_lov_sequence", getElements("add_lov_sequence")}, //LoV button
-                new String[]{"add_i_sequence", getElements("add_i_sequence")}, //external LoV input
-                new String[]{"add_lov_sequence_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                lov_resultado, // lov internal result
-                "86536", // value to search
-                "sequence", //name of the data
-                where)){return false;}*/
         if (!Functions.getText(driver, new String[]{"add_i_hotel", getElements("add_i_hotel")},
                 "hotel", where)){return false;}
         if(!Functions.createLov(driver,

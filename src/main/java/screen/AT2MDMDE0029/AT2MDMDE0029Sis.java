@@ -75,15 +75,6 @@ public class AT2MDMDE0029Sis {
                 "p_second", String.valueOf(DataGenerator.random(6, 10)), where)){return false;}
         if(!Functions.insertInput(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
                 "p_first", String.valueOf(DataGenerator.random(11, 20)), where)){return false;}
-/*        if(!Functions.getValue(driver,new String[]{"add_i_last", getElements("add_i_last")}, // element path
-                "last", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"add_i_previst_sec", getElements("add_i_previst_sec")}, // element path
-                "p_second", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"add_i_previst_firs", getElements("add_i_previst_firs")}, // element path
-                "p_first", // key for data value (the name)
-                where)){return false;}*/
         Functions.break_time(driver, 2, 400);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
@@ -143,16 +134,6 @@ public class AT2MDMDE0029Sis {
     private boolean qbe_web(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-        /*if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"web_e_result", getElements("web_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
-      /*  if (!Functions.insertInput(driver, new String[]{"search_i_web",getElements("search_i_web")},
-                "web", getData("web"), where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"search_i_description",getElements("search_i_description")},
-                "description", getData("description"), where)){return false;}*/
         Functions.break_time(driver, 10, 400);
         if (!Functions.insertInput(driver, new String[]{"search_i_web",getElements("search_i_web")},
                 "web_void", "", where)){return false;}

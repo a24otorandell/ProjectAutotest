@@ -543,25 +543,7 @@ public class AT2MDMOR0022Sis {
         if (!Functions.simpleClick(driver,
                 recursiveXPaths.lov_b_ok, //element to click
                 where)){return false;}
-/*        if(!Functions.createLov(driver,
-                new String[]{"tab1_add_lov_supplier",getElements("tab1_add_lov_supplier")}, // b_lov
-                new String[]{"tab1_add_i_supplier", getElements("tab1_add_i_supplier")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "supplier", //Data name
-                where)){return false;}*/
         if (!getData("module1").equalsIgnoreCase("Web sending")) {
-/*            if (!Functions.createLov(driver,
-                    new String[]{"tab1_add_lov_hotel", getElements("tab1_add_lov_hotel")}, // b_lov
-                    new String[]{"tab1_add_i_hotel", getElements("tab1_add_i_hotel")}, // i_lov
-                    recursiveXPaths.lov_b_search, // lov b search
-                    recursiveXPaths.lov_e_result, // lov result
-                    recursiveXPaths.lov_b_ok, //lov b ok
-                    "hotel", //Data name
-                    where)) {
-                return false;
-            }*/
             Functions.break_time(driver, 3, 4000);
             if (!Functions.createLovByValue(driver,
                     new String[]{"tab1_add_lov_hotel", getElements("tab1_add_lov_hotel")}, //LoV button

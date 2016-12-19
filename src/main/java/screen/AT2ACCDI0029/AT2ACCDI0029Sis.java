@@ -164,10 +164,6 @@ public class AT2ACCDI0029Sis {
                 where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"search_i_incoming_office", getElements("search_i_incoming_office")},
-                "incoming", getData("incoming"), where)) {
-            return false;
-        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_market_country", getElements("search_lov_market_country")}, //LoV button
                 new String[]{"search_i_market_country", getElements("search_i_market_country")}, //external LoV input
@@ -177,10 +173,6 @@ public class AT2ACCDI0029Sis {
                 where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"search_i_country", getElements("search_i_country")},
-                "country", getData("country"), where)) {
-            return false;
-        }*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_chain", getElements("search_lov_chain")}, //LoV button
                 new String[]{"search_i_chain", getElements("search_i_chain")}, //external LoV input

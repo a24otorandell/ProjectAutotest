@@ -164,9 +164,6 @@ public class AT2MDMCL0029Test {
                 "tax_p", DataGenerator.randomFloat(1,3), where)) {
             return false;
         }
-/*        if(!Functions.getText(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
-                "agency", // key for data value (the name)
-                where)){return false;}*/
         if(!Functions.getAttr(driver,new String[]{"add_i_agency", getElements("add_i_agency")}, // element path
                 "value",
                 "agency", // key for data value (the name)
@@ -698,12 +695,6 @@ public class AT2MDMCL0029Test {
     private boolean qbe_branch(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE BRANCH";
-/*        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"agency_e_result", getElements("agency_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.clickQbE(driver,
                 new String[]{"branch_b_qbe", getElements("branch_b_qbe")},// query button
                 new String[]{"b_qbe_i_short_name", getElements("b_qbe_i_short_name")},//any query input
@@ -717,12 +708,6 @@ public class AT2MDMCL0029Test {
         if (!Functions.selectText(driver,
                 new String[]{"b_qbe_sl_stop",getElements("b_qbe_sl_stop")},
                 getData("stop2"), "stop2", where)){return false;}
-/*        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"b_qbe_i_short_name", getElements("b_qbe_i_short_name")}, //search button
-                new String[]{"branch_e_result", getElements("branch_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"b_qbe_i_short_name", getElements("b_qbe_i_short_name")}, //any query input
                 new String[]{"branch_e_result", getElements("branch_e_result")}, //table result
@@ -756,12 +741,6 @@ public class AT2MDMCL0029Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"branch_tab", getElements("branch_tab")}, //element to click
                 where)){return false;}
-/*        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"branch_b_delete", getElements("branch_b_delete")},
-                new String[]{"branch_e_records", getElements("branch_e_records")},
-                where)){
-            return false;
-        }*/
         if(!Functions.doDelete(driver,
                 new String[]{"branch_b_delete", getElements("branch_b_delete")},//delete button
                 new String[]{"delete_yes", recursiveXPaths.delete_b_yes},//delete button
@@ -876,12 +855,6 @@ public class AT2MDMCL0029Test {
     private boolean qbe_currency(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE CURRENCY";
-/*        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"agency_e_result", getElements("agency_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.clickQbE(driver,
                 new String[]{"currencies_b_qbe", getElements("currencies_b_qbe")},// query button
                 new String[]{"c_qbe_i_country", getElements("c_qbe_i_country")},//any query input
@@ -912,12 +885,6 @@ public class AT2MDMCL0029Test {
                 "curre_des", getData("curre_des"), where)) {
             return false;
         }
-/*        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"c_qbe_i_country", getElements("c_qbe_i_country")}, //search button
-                new String[]{"currencies_e_result", getElements("currencies_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"c_qbe_i_country", getElements("c_qbe_i_country")}, //any query input
                 new String[]{"currencies_e_result", getElements("currencies_e_result")}, //table result

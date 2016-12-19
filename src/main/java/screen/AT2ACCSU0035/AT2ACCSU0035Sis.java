@@ -102,10 +102,6 @@ public class AT2ACCSU0035Sis {
                 where)) {
             return false;
         }
-        /*if (!Functions.insertInput(driver, new String[]{"search_i_description2", getElements("search_i_description2")},
-                "description2", getData("description2"), where)) {
-            return false;
-        }*/
         if (!Functions.insertInput(driver, new String[]{"search_i_purchase_percentage", getElements("search_i_purchase_percentage")},
                 "purchase_percentage", getData("purchase_percentage"), where)) {
             return false;
@@ -174,26 +170,6 @@ public class AT2ACCSU0035Sis {
                 where)) {
             return false;
         }
-        /*if (!Functions.createLov(driver,
-                new String[]{"add_lov_company_code", getElements("add_lov_company_code")}, // b_lov
-                new String[]{"add_i_company_code", getElements("add_i_company_code")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "company_code", //Data name
-                where)) {
-            return false;
-        }
-        if (!Functions.createLov(driver,
-                new String[]{"add_lov_office", getElements("add_lov_office")}, // b_lov
-                new String[]{"add_i_office", getElements("add_i_office")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "office", //Data name
-                where)) {
-            return false;
-        }*/
         if (!Functions.getText(driver, new String[]{"add_i_description", getElements("add_i_description")}, // element path
                 "description", // key for data value (the name)
                 where)){

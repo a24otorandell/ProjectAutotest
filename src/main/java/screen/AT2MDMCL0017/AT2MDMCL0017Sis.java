@@ -43,7 +43,7 @@ public class AT2MDMCL0017Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
-/*        if (!interaction_add_t1(driver)) return false;
+        if (!interaction_add_t1(driver)) return false;
         if (!qbe_t1(driver)) return false;
         if (!interaction_edit_t1(driver)) return false;
         if (!qbe_t1(driver)) return false;
@@ -53,14 +53,14 @@ public class AT2MDMCL0017Sis {
         if (!others_actions_t2(driver)) return false;
         if (!getData_t3(driver)) return false;
         if (!qbe_t3(driver)) return false;
-        if (!others_actions_t3(driver)) return false;*/
+        if (!others_actions_t3(driver)) return false;
         if (!marcarSelect(driver)) return false;
         if (!getData_t4(driver)) return false;
         if (!qbe_t4(driver)) return false;
         if (!others_actions_t4(driver)) return false;
-        /*if (!delete_t3(driver)) return false;*/
-/*        if (!delete_t2(driver)) return false;
-        if (!delete_t1(driver)) return false;*/
+        if (!delete_t3(driver)) return false;
+        if (!delete_t2(driver)) return false;
+        if (!delete_t1(driver)) return false;
         return true;
     }
 

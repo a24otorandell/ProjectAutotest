@@ -95,16 +95,6 @@ public class AT2MDMSP0008Test {
                 where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_application_date",getElements("add_i_application_date")},
                 "date", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8, 3), 0), where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_amount",getElements("add_i_amount")},
-                "amount", String.valueOf(DataGenerator.random(1,50)), where)){return false;}
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_currency",getElements("add_lov_currency")}, // b_lov
-                new String[]{"add_i_currency", getElements("add_i_currency")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "currency", //Data name
-                where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_commission",getElements("add_i_commission")},
                 "comission", DataGenerator.randomFloat(1,50), where)){return false;}
         Random booleanValue = new Random();
@@ -126,9 +116,6 @@ public class AT2MDMSP0008Test {
                 return false;
             }
         }
-
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_inhouse"),"inhouse",inhouse,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -138,6 +125,16 @@ public class AT2MDMSP0008Test {
     private boolean search(TestDriver driver, boolean currency, boolean commision) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
         String where = " on SEARCH";
+        boolean inhouse;
+        if (getData("inhouse").equalsIgnoreCase("yes")) {
+            if (!Functions.checkboxValue(driver, getElements("search_ck_inhouse"), "inhouse", true, true, where)) {
+                return false;
+            }
+        }else{
+            if (!Functions.checkboxValue(driver, getElements("search_ck_inhouse"), "inhouse", false, true, where)) {
+                return false;
+            }
+        }
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_company", getElements("search_lov_company")}, //LoV button
                 new String[]{"search_i_company", getElements("search_i_company")}, //external LoV input
@@ -193,17 +190,6 @@ public class AT2MDMSP0008Test {
                     "comission", getData("comission"), where)) {
                 return false;
             }
-        }
-        Functions.break_time(driver, 3, 500);
-        boolean inhouse;
-        if (getData("inhouse").equalsIgnoreCase("yes")) {
-            inhouse = true;
-        }else{
-            inhouse = false;
-        }
-        Functions.break_time(driver, 3, 500);
-        if (!Functions.checkboxValue(driver, getElements("search_ck_inhouse"), "inhouse", inhouse, true, where)) {
-                return false;
         }
         Functions.break_time(driver, 3, 500);
         if (!Functions.clickSearchAndResult(driver,
@@ -288,8 +274,6 @@ public class AT2MDMSP0008Test {
                 return false;
             }
         }
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_inhouse"),"inhouse",inhouse,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

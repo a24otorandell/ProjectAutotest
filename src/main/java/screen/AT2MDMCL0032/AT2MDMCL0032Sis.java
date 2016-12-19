@@ -329,22 +329,6 @@ public class AT2MDMCL0032Sis {
                 "to", getData("to"), where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"qbe_i_partner", getElements("qbe_i_partner")},
-                "partner", getData("partner"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_agency", getElements("qbe_i_agency")},
-                "agency", getData("agency"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_rappel", getElements("qbe_i_rappel")},
-                "rappel", getData("rappel"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_agent", getElements("qbe_i_agent")},
-                "agent", getData("agent"), where)) {
-            return false;
-        }*/
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_group", getElements("qbe_i_group")}, //any query input
                 new String[]{"pricing_e_result", getElements("pricing_e_result")}, //table result

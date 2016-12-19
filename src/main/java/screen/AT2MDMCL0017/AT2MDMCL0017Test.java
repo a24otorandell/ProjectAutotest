@@ -255,9 +255,6 @@ public class AT2MDMCL0017Test {
     public boolean marcarSelect (TestDriver driver) {
         driver.getReport().addHeader("MARCAR SELECT", 3, false);
         String where = " on ACTIVAR SELECT";
-/*        if (!Functions.simpleClick(driver,
-                new String[]{"company_ck_select", getElements("company_ck_select")}, //element to click
-                where)){return false;}*/
         Functions.break_time(driver, 4, 400);
         if(!Functions.checkClick(driver,
                 new String[]{"company_ck_select", getElements("company_ck_select")}, //element to click

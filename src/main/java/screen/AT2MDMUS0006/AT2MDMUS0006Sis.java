@@ -165,17 +165,8 @@ public class AT2MDMUS0006Sis {
         return true;
     }
     private boolean others_actions_user(TestDriver driver) {
-        driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
-        String where = " on OTHER AUDIT DATA USER";
-/*        if (!Functions.auditData(driver,
-                new String[]{"users_b_actions", getElements("users_b_actions")}, //actions button
-                new String[]{"users_b_actions_b_audit_data", getElements("users_b_actions_b_audit_data")}, //audit button
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
-                where)) {
-            return false;
-        }*/
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH USER";
+        String where = " on OTHER DETACH USER";
         if (!Functions.detachTable(driver,
                 new String[]{"users_b_detach", getElements("users_b_detach")}, //detach button
                 true,     //screenshot??

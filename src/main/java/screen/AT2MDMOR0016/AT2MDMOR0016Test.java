@@ -71,13 +71,6 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "company", //Data name
                 where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"add_lov_b_company", getElements("add_lov_b_company")}, //LoV button
-//                new String[]{"add_i_b_company", getElements("add_i_b_company")}, //external LoV input
-//                new String[]{"add_code_company", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                "E15", // value to search
-//                "company", //name of the data
-//                where)) {return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_b_office",getElements("add_lov_b_office")}, // b_lov
                 new String[]{"add_i_b_office", getElements("add_i_b_office")}, // i_lov
@@ -86,13 +79,6 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "office", //Data name
                 where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"add_lov_b_office", getElements("add_lov_b_office")}, //LoV button
-//                new String[]{"add_i_b_office", getElements("add_i_b_office")}, //external LoV input
-//                new String[]{"add_code_office", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                "600", // value to search
-//                "office", //name of the data
-//                where)) {return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_location",getElements("add_lov_location")}, // b_lov
                 new String[]{"add_i_location", getElements("add_i_location")}, // i_lov
@@ -101,14 +87,6 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "location", //Data name
                 where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"add_lov_location", getElements("add_lov_location")}, //LoV button
-//                new String[]{"add_i_location", getElements("add_i_location")}, //external LoV input
-//                new String[]{"add_code_loc", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                "CEE", // value to search
-//                "location", //name of the data
-//                where)) {return false;}
-
         if(!Functions.getText(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
                 "des", // key for data value (the name)
                 where)){return false;}
@@ -120,13 +98,7 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "contracting", //Data name
                 where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"add_lov_contracting", getElements("add_lov_contracting")}, //LoV button
-//                new String[]{"add_i_contracting", getElements("add_i_contracting")}, //external LoV input
-//                new String[]{"add_code_con", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                "E10", // value to search
-//                "contracting", //name of the data
-//                where)) {return false;}
+
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_service", getElements("add_sl_service")},
                 "Extras", "service", where)) {
@@ -248,13 +220,6 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "company", //Data name
                 where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"add_lov_b_company", getElements("add_lov_b_company")}, //LoV button
-//                new String[]{"add_i_b_company", getElements("add_i_b_company")}, //external LoV input
-//                new String[]{"add_code_company", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                "E15", // value to search
-//                "company", //name of the data
-//                where)) {return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_b_office",getElements("add_lov_b_office")}, // b_lov
                 new String[]{"add_i_b_office", getElements("add_i_b_office")}, // i_lov
@@ -263,13 +228,6 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "office", //Data name
                 where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"add_lov_b_office", getElements("add_lov_b_office")}, //LoV button
-//                new String[]{"add_i_b_office", getElements("add_i_b_office")}, //external LoV input
-//                new String[]{"add_code_office", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                "600", // value to search
-//                "office", //name of the data
-//                where)) {return false;}
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_location",getElements("add_lov_location")}, // b_lov
                 new String[]{"add_i_location", getElements("add_i_location")}, // i_lov
@@ -278,13 +236,6 @@ public class AT2MDMOR0016Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "location", //Data name
                 where)){return false;}
-//        if (!Functions.createLovByValue(driver,
-//                new String[]{"add_lov_location", getElements("add_lov_location")}, //LoV button
-//                new String[]{"add_i_location", getElements("add_i_location")}, //external LoV input
-//                new String[]{"add_code_loc", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-//                "CEE", // value to search
-//                "location", //name of the data
-//                where)) {return false;}
         if(!Functions.getValue(driver,new String[]{"add_i_b_desc", getElements("add_i_b_desc")}, // element path
                 "des", // key for data value (the name)
                 where)){return false;}
@@ -314,14 +265,6 @@ public class AT2MDMOR0016Test {
                 "p_billing",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_p_allotment",getElements("add_p_allotment")},
                 "p_allotment",String.valueOf(DataGenerator.randomFloat(1,2)), where)){return false;}
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_extra",getElements("add_lov_extra")}, // b_lov
-                new String[]{"add_i_extra", getElements("add_i_extra")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "extra", //Data name
-                where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear

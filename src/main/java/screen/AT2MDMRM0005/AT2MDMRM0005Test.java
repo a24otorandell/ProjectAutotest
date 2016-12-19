@@ -279,12 +279,6 @@ public class AT2MDMRM0005Test {
     private boolean qbe_multi(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
-/*        if (!Functions.clickSearchAndResult(driver,
-                new String[]{"search_b_reset", getElements("search_b_reset")}, //search button
-                new String[]{"product_e_result", getElements("product_e_result")}, //result element
-                where)) {
-            return false;
-        }*/
         if (!Functions.clickQbE(driver,
                 new String[]{"multi_b_qbe", getElements("multi_b_qbe")},// query button
                 new String[]{"qbe_i_lang", getElements("qbe_i_lang")},//any query input
