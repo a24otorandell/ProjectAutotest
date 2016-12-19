@@ -230,7 +230,7 @@ public class AT2MDMUS0021Sis {
             return false;
         }
         Functions.break_time(driver, 30, 500);
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_boru_sl_user_type", getElements("add_boru_sl_user_type")},
                 list_options, "boru_user_type",
@@ -285,7 +285,7 @@ public class AT2MDMUS0021Sis {
         else if (getData("boru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "Key User";
         }
-        else {
+        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
             option = "User";
         }
         Functions.break_time(driver, 30, 500);
@@ -323,7 +323,7 @@ public class AT2MDMUS0021Sis {
             return false;
         }
         Functions.break_time(driver, 30, 500);
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_boru_sl_user_type", getElements("add_boru_sl_user_type")},
                 list_options, "boru_user_type",
@@ -371,7 +371,7 @@ public class AT2MDMUS0021Sis {
         else if (getData("boru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "KU";
         }
-        else {
+        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
             option = "U";
         }
         Functions.break_time(driver, 30, 500);
@@ -556,7 +556,7 @@ public class AT2MDMUS0021Sis {
             return false;
         }
         Functions.break_time(driver, 30, 500);
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_poru_sl_user_type", getElements("add_poru_sl_user_type")},
                 list_options, "poru_user_type",
@@ -612,7 +612,7 @@ public class AT2MDMUS0021Sis {
         else if (getData("poru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "Key User";
         }
-        else {
+        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
             option = "User";
         }
         Functions.break_time(driver, 30, 500);
@@ -649,7 +649,7 @@ public class AT2MDMUS0021Sis {
             return false;
         }
         Functions.break_time(driver, 30, 500);
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_poru_sl_user_type", getElements("add_poru_sl_user_type")},
                 list_options, "poru_user_type",
@@ -697,7 +697,7 @@ public class AT2MDMUS0021Sis {
         else if (getData("poru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "KU";
         }
-        else {
+        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
             option = "U";
         }
         Functions.break_time(driver, 30, 500);

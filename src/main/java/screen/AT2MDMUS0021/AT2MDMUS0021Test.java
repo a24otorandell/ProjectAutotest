@@ -227,7 +227,7 @@ public class AT2MDMUS0021Test {
                 where)){
             return false;
         }
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_boru_sl_user_type", getElements("add_boru_sl_user_type")},
                 list_options, "boru_user_type",
@@ -276,11 +276,11 @@ public class AT2MDMUS0021Test {
         if (getData("boru_user_type").equalsIgnoreCase("GUEST")) {
             option = "Guest";
         }
+        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
+            option = "User";
+        }
         else if (getData("boru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "Key User";
-        }
-        else {
-            option = "User";
         }
         if (!Functions.selectText(driver, new String[]{"search_boru_sl_user_type",getElements("search_boru_sl_user_type")},
                 option, "boru_user_type", where)) {
@@ -314,7 +314,7 @@ public class AT2MDMUS0021Test {
                 where)){
             return false;
         }
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_boru_sl_user_type", getElements("add_boru_sl_user_type")},
                 list_options, "boru_user_type",
@@ -358,11 +358,11 @@ public class AT2MDMUS0021Test {
         if (getData("boru_user_type").equalsIgnoreCase("GUEST")) {
             option = "GU";
         }
+        else if (getData("boru_user_type").equalsIgnoreCase("USER")) {
+            option = "U";
+        }
         else if (getData("boru_user_type").equalsIgnoreCase("KEY USER")) {
             option = "KU";
-        }
-        else {
-            option = "U";
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_boru_i_owner", getElements("qbe_boru_i_owner")},
                 "boru_owner", getData("boru_owner"), where)) {
@@ -543,7 +543,7 @@ public class AT2MDMUS0021Test {
                 where)){
             return false;
         }
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_poru_sl_user_type", getElements("add_poru_sl_user_type")},
                 list_options, "poru_user_type",
@@ -592,11 +592,11 @@ public class AT2MDMUS0021Test {
         if (getData("poru_user_type").equalsIgnoreCase("GUEST")) {
             option = "Guest";
         }
-        else if (getData("poru_user_type").equalsIgnoreCase("KEY USER")) {
-            option = "Key User";
-        }
-        else {
+        else if (getData("poru_user_type").equalsIgnoreCase("USER")) {
             option = "User";
+        }
+        else if (getData("boru_user_type").equalsIgnoreCase("KEY USER")) {
+            option = "Key User";
         }
         if (!Functions.selectText(driver, new String[]{"search_poru_sl_user_type",getElements("search_poru_sl_user_type")},
                 option, "poru_user_type", where)) {
@@ -629,7 +629,7 @@ public class AT2MDMUS0021Test {
                 where)){
             return false;
         }
-        String list_options[] = {"GUEST", "KEY USER", "USER"};
+        String list_options[] = {"GUEST", "KEY USER"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_poru_sl_user_type", getElements("add_poru_sl_user_type")},
                 list_options, "poru_user_type",
@@ -673,11 +673,11 @@ public class AT2MDMUS0021Test {
         if (getData("poru_user_type").equalsIgnoreCase("GUEST")) {
             option = "GU";
         }
-        else if (getData("poru_user_type").equalsIgnoreCase("KEY USER")) {
-            option = "KU";
-        }
-        else {
+        else if (getData("poru_user_type").equalsIgnoreCase("USER")) {
             option = "U";
+        }
+        else if (getData("boru_user_type").equalsIgnoreCase("KEY USER")) {
+            option = "KU";
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_poru_i_owner", getElements("qbe_poru_i_owner")},
                 "poru_owner", getData("poru_owner"), where)) {
