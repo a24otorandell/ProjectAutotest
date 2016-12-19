@@ -84,7 +84,9 @@ public class AT2MDMCL0044Sis {
         //CHANGE TAB
         if (!first_tab_change(driver)) return false;
         //NOTIFICATION TYPE
+        if (!qbe_nt_MDM(driver)) return false;
         if (!delete_nt_MDM(driver)) return false;
+        if (!second_qbe_nt_MDM(driver)) return false;
         return false;
     }
 
@@ -300,14 +302,14 @@ public class AT2MDMCL0044Sis {
         if (getRandomBoolean) {
             randomBoolean = "Yes";
             if (!Functions.checkboxValue(driver, getElements("add_nt_cb_active"),
-                    "nt_active", true, true,
+                    "second_nt_active", true, true,
                     where)) {
                 return false;
             }
         } else {
             randomBoolean = "No";
             if (!Functions.checkboxValue(driver, getElements("add_nt_cb_active"),
-                    "nt_active", false, true,
+                    "second_nt_active", false, true,
                     where)) {
                 return false;
             }
@@ -764,6 +766,42 @@ public class AT2MDMCL0044Sis {
         }
         if (!Functions.selectText(driver, new String[]{"qbe_nt_sl_active", getElements("qbe_nt_sl_active")},
                 getData("nt_active"), "nt_active", where)) {
+            return false;
+        }
+        Functions.break_time(driver, 90, 500);
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_nt_i_type", getElements("qbe_nt_i_type")}, //search button
+                new String[]{"MDM_nt_e_result", getElements("MDM_nt_e_result")}, //result element
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    private boolean second_qbe_nt_MDM(TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE";
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_nt_b_reset", getElements("search_nt_b_reset")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 90, 500);;
+        if (!Functions.clickQbE(driver,
+                new String[]{"MDM_nt_b_qbe", getElements("MDM_nt_b_qbe")},// query button
+                new String[]{"qbe_nt_i_type", getElements("qbe_nt_i_type")},//any query input
+                where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_nt_i_type", getElements("qbe_nt_i_type")},
+                "second_nt_type", getData("second_nt_type"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_nt_i_description", getElements("qbe_nt_i_description")},
+                "second_description", getData("second_description"), where)) {
+            return false;
+        }
+        if (!Functions.selectText(driver, new String[]{"qbe_nt_sl_active", getElements("qbe_nt_sl_active")},
+                getData("second_nt_active"), "second_nt_active", where)) {
             return false;
         }
         Functions.break_time(driver, 90, 500);
