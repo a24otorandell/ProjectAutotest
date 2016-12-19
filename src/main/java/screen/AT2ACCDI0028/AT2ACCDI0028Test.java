@@ -71,6 +71,10 @@ public class AT2ACCDI0028Test {
         return false;
     }
 
+
+
+
+    /*EXCLUSIONS MAINTENANCE TAB SI*/
     private boolean Exclusions_maintenance_si (TestDriver driver){
 
         if(!Exclusions_maintenance_si_add(driver)){return false;}
@@ -78,8 +82,6 @@ public class AT2ACCDI0028Test {
         return true;
     }
 
-
-    /*EXCLUSIONS MAINTENANCE TAB SI*/
     private boolean Exclusions_maintenance_si_add (TestDriver driver){
         String where;
         where= " on ADD";
@@ -95,9 +97,15 @@ public class AT2ACCDI0028Test {
                 new String[]{"", getElements("")}, //element expected to appear
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
+
+
+
         return true;
     }
 
+
+
+     /*EXCLUSIONS MAINTENANCE TAB ATLAS*/
     private boolean Exclusions_maintenance_atlas (TestDriver driver){
 
         if(!Exclusions_maintenance_atlas_add(driver)){return false;}
@@ -108,8 +116,6 @@ public class AT2ACCDI0028Test {
         if(!Exclusions_maintenance_atlas_copy_exclusions(driver)){return false;}
         return true;
     }
-
-     /*EXCLUSIONS MAINTENANCE TAB ATLAS*/
 
     private boolean Exclusions_maintenance_atlas_copy_exclusions (TestDriver driver){
         String where;
