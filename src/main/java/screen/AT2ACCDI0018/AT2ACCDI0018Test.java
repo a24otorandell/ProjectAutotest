@@ -61,7 +61,7 @@ public class AT2ACCDI0018Test {
         if (!qbe_cancellation(driver, true)) return false;
         if (!interaction_edit_cancellation(driver)) return false;
         if (!search_cancellation(driver, false)) return false;
-        if (!qbe_cancellation(driver, false)) return false;
+        if (!qbe_cancellation(driver, true)) return false;
         if (!others_actions_cancellation(driver)) return false;
         if (!delete_cancellation(driver)) return false;
         return false;
@@ -350,6 +350,7 @@ public class AT2ACCDI0018Test {
     private boolean interaction_edit_cancellation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.zoomIn(driver);
         Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"cancellation_b_edit", getElements("cancellation_b_edit")}, //element to click

@@ -54,7 +54,7 @@ public class AT2ACCDI0018Sis {
         if (!qbe_cancellation(driver, true)) return false;
         if (!interaction_edit_cancellation(driver)) return false;
         if (!search_cancellation(driver, false)) return false;
-        if (!qbe_cancellation(driver, false)) return false;
+        if (!qbe_cancellation(driver, true)) return false;
         if (!others_actions_cancellation(driver)) return false;
         if (!delete_cancellation(driver)) return false;
         return false;
@@ -343,6 +343,7 @@ public class AT2ACCDI0018Sis {
     private boolean interaction_edit_cancellation(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on EDITION";
+        Functions.zoomIn(driver);
         Functions.break_time(driver, 30, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"cancellation_b_edit", getElements("cancellation_b_edit")}, //element to click
@@ -510,11 +511,6 @@ public class AT2ACCDI0018Sis {
                 "office", getData("office"), where)) {
             return false;
         }
-        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_application_cost", getElements("qbe_sl_application_cost")},
-                getData("application_cost"), "application_cost", where)) {
-            return false;
-        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_to", getElements("qbe_i_to")},
                 "to", getData("to"), where)) {
             return false;
@@ -567,11 +563,19 @@ public class AT2ACCDI0018Sis {
                 "currency", getData("currency"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 600);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_application_type", getElements("qbe_sl_application_type")},
                 getData("application_type"), "application_type", where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 600);
+        if (!Functions.selectText(driver,
+                new String[]{"qbe_sl_application_cost", getElements("qbe_sl_application_cost")},
+                getData("application_cost"), "application_cost", where)) {
+            return false;
+        }
+        Functions.break_time(driver, 3, 600);
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_net_amount", getElements("qbe_sl_net_amount")},
                 getData("net_amount"), "net_amount", where)) {
