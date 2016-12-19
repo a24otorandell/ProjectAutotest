@@ -45,6 +45,26 @@ public class AT2MDMCL0044Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
+        //CHANGE TAB
+        if (!first_tab_change(driver)) return false;
+        //NOTIFICATION TYPE
+        if (!interaction_record_nt_MDM(driver)) return false;
+        if (!search_nt_MDM(driver)) return false;
+        if (!interaction_edit_nt_MDM(driver)) return false;
+        if (!qbe_nt_MDM(driver)) return false;
+        if (!others_actions_nt_MDM(driver)) return false;
+        if (!interaction_second_record_nt_MDM(driver)) return false;
+        //CHANGE TAB
+        if (!second_tab_change(driver)) return false;
+        //NOTIFICATION PROPERTIES
+        if (!interaction_record_np_MDM(driver)) return false;
+        if (!search_np_MDM(driver)) return false;
+        if (!interaction_edit_np_MDM(driver)) return false;
+        if (!qbe_np_MDM(driver)) return false;
+        if (!others_actions_np_MDM(driver)) return false;
+        if (!interaction_second_record_np_MDM(driver)) return false;
+        //CHANGE TAB
+        if (!third_tab_change(driver)) return false;
         //CLIENT NOTIFICATIONS
         if (!interaction_record_cn_MDM(driver)) return false;
         if (!search_cn_MDM(driver)) return false;
@@ -57,31 +77,14 @@ public class AT2MDMCL0044Sis {
         if (!interaction_edit_cd_MDM(driver)) return false;
         if (!qbe_cd_MDM(driver)) return false;
         if (!others_actions_cd_MDM(driver)) return false;
-        //CHANGE TAB
-        if (!first_tab_change(driver)) return false;
-        //NOTIFICATION TYPE
-        if (!interaction_record_nt_MDM(driver)) return false;
-        if (!search_nt_MDM(driver)) return false;
-        if (!interaction_edit_nt_MDM(driver)) return false;
-        if (!qbe_nt_MDM(driver)) return false;
-        if (!others_actions_nt_MDM(driver)) return false;
+        if (!delete_cd_MDM(driver)) return false;
         //CHANGE TAB
         if (!second_tab_change(driver)) return false;
-        //NOTIFICATION PROPERTIES
-        if (!interaction_record_np_MDM(driver)) return false;
-        if (!search_np_MDM(driver)) return false;
-        if (!interaction_edit_np_MDM(driver)) return false;
-        if (!qbe_np_MDM(driver)) return false;
-        if (!others_actions_np_MDM(driver)) return false;
         if (!delete_np_MDM(driver)) return false;
         //CHANGE TAB
         if (!first_tab_change(driver)) return false;
         //NOTIFICATION TYPE
         if (!delete_nt_MDM(driver)) return false;
-        //CHANGE TAB
-        if (!third_tab_change(driver)) return false;
-        //CONFIGURATION DETAIL
-        if (!delete_cd_MDM(driver)) return false;
         return false;
     }
 
@@ -96,6 +99,7 @@ public class AT2MDMCL0044Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_cn_lov_client", getElements("add_cn_lov_client")}, // b_lov
                 new String[]{"add_cn_i_client", getElements("add_cn_i_client")}, // i_lov
@@ -106,6 +110,7 @@ public class AT2MDMCL0044Sis {
                 where)){
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_cn_lov_branch", getElements("add_cn_lov_branch")}, // b_lov
                 new String[]{"add_cn_i_branch", getElements("add_cn_i_branch")}, // i_lov
@@ -116,17 +121,17 @@ public class AT2MDMCL0044Sis {
                 where)){
             return false;
         }
-        Functions.break_time(driver, 30, 500);
-        if (!Functions.createLov(driver,
-                new String[]{"add_cn_lov_type", getElements("add_cn_lov_type")}, // b_lov
-                new String[]{"add_cn_i_type", getElements("add_cn_i_type")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "type", //Data name
-                where)){
+        Functions.break_time(driver, 90, 500);
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_cn_lov_type", getElements("add_cn_lov_type")}, //LoV button
+                new String[]{"add_cn_i_type", getElements("add_cn_i_type")}, //external LoV input
+                new String[]{"add_type_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("nt_type"), // value to search
+                "type", //name of the data
+                where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         String list_options[] = {"Daily", "Monthly", "Real Time", "Weekly"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_cn_sl_frequency", getElements("add_cn_sl_frequency")},
@@ -134,6 +139,7 @@ public class AT2MDMCL0044Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         Random booleanValue = new Random();
         boolean getRandomBoolean = booleanValue.nextBoolean();
         String randomBoolean;
@@ -171,14 +177,14 @@ public class AT2MDMCL0044Sis {
                 where)) {
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"add_cd_lov_property", getElements("add_cd_lov_property")}, // b_lov
-                new String[]{"add_cd_i_property", getElements("add_cd_i_property")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "property", //Data name
-                where)){
+        Functions.break_time(driver, 90, 500);
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_cd_lov_property", getElements("add_cd_lov_property")}, //LoV button
+                new String[]{"add_cd_i_property", getElements("add_cd_i_property")}, //external LoV input
+                new String[]{"add_property_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("np_property"), // value to search
+                "property", //name of the data
+                where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_cd_i_value", getElements("add_cd_i_value")}, // element path
@@ -212,6 +218,7 @@ public class AT2MDMCL0044Sis {
                 "description", getData("description"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         Random booleanValue = new Random();
         boolean getRandomBoolean = booleanValue.nextBoolean();
         String randomBoolean;
@@ -268,6 +275,81 @@ public class AT2MDMCL0044Sis {
         }
         return true;
     }
+    private boolean interaction_second_record_nt_MDM(TestDriver driver) {
+        driver.getReport().addHeader("CREATION RECORD", 3, false);
+        String where = " on CREATION";
+        Functions.break_time(driver, 90, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"MDM_nt_b_add", getElements("MDM_nt_b_add")}, //element to click
+                recursiveXPaths.glass, //element expected to appear
+                where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_nt_i_type", getElements("add_nt_i_type")}, // element path
+                "second_nt_type", getData("second_nt_type"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_nt_i_description", getElements("add_nt_i_description")}, // element path
+                "second_description", getData("second_description"), where)) {
+            return false;
+        }
+        Functions.break_time(driver, 90, 500);
+        Random booleanValue = new Random();
+        boolean getRandomBoolean = booleanValue.nextBoolean();
+        String randomBoolean;
+        if (getRandomBoolean) {
+            randomBoolean = "Yes";
+            if (!Functions.checkboxValue(driver, getElements("add_nt_cb_active"),
+                    "nt_active", true, true,
+                    where)) {
+                return false;
+            }
+        } else {
+            randomBoolean = "No";
+            if (!Functions.checkboxValue(driver, getElements("add_nt_cb_active"),
+                    "nt_active", false, true,
+                    where)) {
+                return false;
+            }
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"add_nt_b_save", getElements("add_nt_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    private boolean interaction_second_record_np_MDM(TestDriver driver) {
+        driver.getReport().addHeader("CREATION RECORD", 3, false);
+        String where = " on CREATION";
+        Functions.break_time(driver, 90, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"MDM_np_b_add", getElements("MDM_np_b_add")}, //element to click
+                recursiveXPaths.glass, //element expected to appear
+                where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_np_i_property", getElements("add_np_i_property")}, // element path
+                "second_np_property", getData("second_np_property"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_np_i_description", getElements("add_np_i_description")}, // element path
+                "second_np_property_description", getData("second_np_property_description"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"add_np_i_default", getElements("add_np_i_default")}, // element path
+                "second_default", getData("second_default"), where)) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"add_np_b_save", getElements("add_np_b_save")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                where)) {
+            return false;
+        }
+        return true;
+    }
     //EDITION
     private boolean interaction_edit_cn_MDM(TestDriver driver) {
         driver.getReport().addHeader("EDITION RECORD", 3, false);
@@ -279,6 +361,7 @@ public class AT2MDMCL0044Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_cn_lov_client", getElements("add_cn_lov_client")}, // b_lov
                 new String[]{"add_cn_i_client", getElements("add_cn_i_client")}, // i_lov
@@ -289,6 +372,7 @@ public class AT2MDMCL0044Sis {
                 where)){
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_cn_lov_branch", getElements("add_cn_lov_branch")}, // b_lov
                 new String[]{"add_cn_i_branch", getElements("add_cn_i_branch")}, // i_lov
@@ -299,16 +383,17 @@ public class AT2MDMCL0044Sis {
                 where)){
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"add_cn_lov_type", getElements("add_cn_lov_type")}, // b_lov
-                new String[]{"add_cn_i_type", getElements("add_cn_i_type")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "type", //Data name
-                where)){
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_cn_lov_type", getElements("add_cn_lov_type")}, //LoV button
+                new String[]{"add_cn_i_type", getElements("add_cn_i_type")}, //external LoV input
+                new String[]{"add_type_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("second_nt_type"), // value to search
+                "type", //name of the data
+                where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         String list_options[] = {"Daily", "Monthly", "Real Time", "Weekly"};
         if (!Functions.selectTextRandom(driver,
                 new String[]{"add_cn_sl_frequency", getElements("add_cn_sl_frequency")},
@@ -316,6 +401,7 @@ public class AT2MDMCL0044Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         Random booleanValue = new Random();
         boolean getRandomBoolean = booleanValue.nextBoolean();
         String randomBoolean;
@@ -358,14 +444,14 @@ public class AT2MDMCL0044Sis {
                 where)) {
             return false;
         }
-        if (!Functions.createLov(driver,
-                new String[]{"add_cd_lov_property", getElements("add_cd_lov_property")}, // b_lov
-                new String[]{"add_cd_i_property", getElements("add_cd_i_property")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                new String[]{"add_cd_i_property_fourth_result", getElements("add_cd_i_property_fourth_result")}, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "property", //Data name
-                where)){
+        Functions.break_time(driver, 90, 500);
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_cd_lov_property", getElements("add_cd_lov_property")}, //LoV button
+                new String[]{"add_cd_i_property", getElements("add_cd_i_property")}, //external LoV input
+                new String[]{"add_property_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                getData("second_np_property"), // value to search
+                "property", //name of the data
+                where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_cd_i_value", getElements("add_cd_i_value")}, // element path
@@ -403,6 +489,7 @@ public class AT2MDMCL0044Sis {
                 "description", getData("description_edit"), where)) {
             return false;
         }
+        Functions.break_time(driver, 90, 500);
         Random booleanValue = new Random();
         boolean getRandomBoolean = booleanValue.nextBoolean();
         String randomBoolean;
@@ -505,6 +592,12 @@ public class AT2MDMCL0044Sis {
     private boolean delete_np_MDM(TestDriver driver) {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
+        if (!Functions.simpleClick(driver,
+                new String[]{"MDM_np_e_result", getElements("MDM_np_e_result")}, //element to click
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 90, 500);
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"MDM_np_b_delete", getElements("MDM_np_b_delete")},
                 new String[]{"MDM_np_e_records", getElements("MDM_np_e_records")},

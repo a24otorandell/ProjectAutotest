@@ -33,9 +33,14 @@ public class AT2MDMCL0044Data {
         data.put("value", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("nt_type", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("description", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("second_nt_type", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("second_description", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("np_property", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("np_property_description", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("default", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("second_np_property", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("second_np_property_description", DataGenerator.getRandomAlphanumericSequence(5, true));
+        data.put("second_default", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("value_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("nt_type_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
         data.put("description_edit", DataGenerator.getRandomAlphanumericSequence(5, true));
