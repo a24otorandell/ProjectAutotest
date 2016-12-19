@@ -16,6 +16,7 @@ public class AT2MDMSP0008Sis {
     protected AT2MDMSP0008Data data;
     public AT2MDMSP0008Sis() {
     }
+
     public AT2MDMSP0008Locators getLocators() {
         return locators;
     }
