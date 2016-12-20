@@ -9,6 +9,10 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 22/11/2016.
  */
+/**
+ * EN LA CREACIÓN DE LA SEGUNDA TABLA SE INTRODUCEN VALORES EN AMOUNT Y CURRENCY. EN LA EDICIÓN SE INTRODUCE DATOS EN %IMP Y LOS ANTERIORES QUEDAN VACIOS.
+ */
+
 public class AT2MDMCL0012Sis {
     protected AT2MDMCL0012Locators locators;
     protected AT2MDMCL0012Data data;
@@ -51,9 +55,9 @@ public class AT2MDMCL0012Sis {
         if (!others_actions_t1(driver)) return false;
         if (!actions_delete(driver)) return false;
         if (!interaction_add_t2(driver)) return false;
-        if (!qbe_t2(driver)) return false;
+        if (!qbe_t2(driver, true)) return false;
         if (!interaction_edit_t2(driver)) return false;
-        if (!qbe_t2(driver)) return false;
+        if (!qbe_t2(driver, false)) return false;
         if (!others_actions_t2(driver)) return false;
         if (!delete_t2(driver)) return false;
         if (!delete_t1(driver)) return false;
@@ -448,10 +452,12 @@ public class AT2MDMCL0012Sis {
                 where)) return false; //where
         return true;
     }
-    private boolean qbe_t2(TestDriver driver) {
+    private boolean qbe_t2(TestDriver driver, boolean first) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE 2";
-        Functions.zoomOut(driver);
+        if (first) {
+            Functions.zoomOut(driver);
+        }
         if (!Functions.clickQbE(driver,
                 new String[]{"free_b_qbe", getElements("free_b_qbe")},// query button
                 new String[]{"qbe_i_app_date_start", getElements("qbe_i_app_date_start")},//any query input
