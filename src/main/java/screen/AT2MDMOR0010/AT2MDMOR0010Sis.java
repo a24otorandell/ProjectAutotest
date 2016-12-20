@@ -159,7 +159,7 @@ public class AT2MDMOR0010Sis {
                 new String[]{"add_lov_dept",getElements("add_lov_dept")}, // b_lov
                 new String[]{"add_i_dept", getElements("add_i_dept")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "dept", //Data name
                 where)){return false;}
