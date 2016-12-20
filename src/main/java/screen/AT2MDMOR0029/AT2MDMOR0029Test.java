@@ -138,6 +138,12 @@ public class AT2MDMOR0029Test {
                 "qbe_atlas_company", data.getData().get("atlas_company"), "on QBE")) {
             return false;
         }
+        Functions.break_time(driver,10,500);
+        if(!Functions.selectText(driver,
+                new String[]{"service_authorization_qbe_sl_cod_division",getElements("service_authorization_qbe_sl_cod_division")},
+                data.getData().get("cod_division"),"qbe_cod_division"," on QBE")){
+            return false;
+        }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_qbe_i_receptive", getElements("service_authorization_qbe_i_receptive")},
                 "qbe_receptive", data.getData().get("receptive"), "on QBE")) {
@@ -158,12 +164,12 @@ public class AT2MDMOR0029Test {
                 "qbe_to", data.getData().get("to"), "on QBE")) {
             return false;
         }
-
         if (!Functions.selectText(driver,
                 new String[]{"service_authorization_qbe_sl_cod_division", getElements("service_authorization_qbe_sl_cod_division")},
                 data.getData().get("cod_division"), "qbe_cod_division", " on QBE")) {
             return false;
         }
+
         Functions.break_time(driver, 6, 500);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"service_authorization_qbe_i_text", getElements("service_authorization_qbe_i_text")}, //search button
@@ -185,7 +191,6 @@ public class AT2MDMOR0029Test {
             return false;
         }
         Functions.break_time(driver, 5, 500);
-
         if (!Functions.checkClick(driver,
                 new String[]{"service_authorization_ed_ch_atlas_company", getElements("service_authorization_ed_ch_atlas_company")}, //element to click
                 new String[]{"service_authorization_ed_lov_atlas_company", getElements("service_authorization_ed_lov_atlas_company")}, //element expected to appear
@@ -229,12 +234,12 @@ public class AT2MDMOR0029Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
-                "from", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6, 10), 0), "on EDIT")) {
+                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,1,0),"on EDIT")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_fate_to", getElements("service_authorization_ed_i_apply_fate_to")},
-                "to", DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(6, 10), 0), "on EDIT")) {
+                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,2,0),"on EDIT")){
             return false;
         }
 
@@ -373,12 +378,12 @@ public class AT2MDMOR0029Test {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_add_i_apply_date_from", getElements("service_authorization_add_i_apply_date_from")},
-                "from", DataGenerator.getToday(driver, "dd/MM/yyyy"), "on ADD")) {
+                "from",DataGenerator.getToday(driver,"dd/MM/yyyy"),"on ADD")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_add_i_apply_fate_to", getElements("service_authorization_add_i_apply_fate_to")},
-                "to", DataGenerator.getToday(driver, "dd/MM/yyyy"), "on ADD")) {
+                "to",DataGenerator.getToday(driver,"dd/MM/yyyy"),"on ADD")){
             return false;
         }
 

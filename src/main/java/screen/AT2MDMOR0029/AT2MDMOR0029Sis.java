@@ -163,7 +163,11 @@ public class AT2MDMOR0029Sis {
                 "qbe_to", data.getData().get("to"), "on QBE")) {
             return false;
         }
-
+        if (!Functions.selectText(driver,
+                new String[]{"service_authorization_qbe_sl_cod_division", getElements("service_authorization_qbe_sl_cod_division")},
+                data.getData().get("cod_division"), "qbe_cod_division", " on QBE")) {
+            return false;
+        }
 
         Functions.break_time(driver, 6, 500);
         if (!Functions.enterQueryAndClickResult(driver,
@@ -229,12 +233,12 @@ public class AT2MDMOR0029Sis {
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
-                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(0,1),0),"on EDIT")){
+                "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,1,0),"on EDIT")){
             return false;
         }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_fate_to", getElements("service_authorization_ed_i_apply_fate_to")},
-                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,DataGenerator.random(0,1),0),"on EDIT")){
+                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,2,0),"on EDIT")){
             return false;
         }
 

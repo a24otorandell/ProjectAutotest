@@ -74,9 +74,12 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_other_actions_service_details(driver)){
             return false;
         }
+        if(!Search_booking_other_actions_booking_confirmation(driver)){return false;}
        /* if(!Search_booking_advanced_search(driver)){return false;}*/
         return true;
     }
+
+
 
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
@@ -808,6 +811,28 @@ public class AT2BOOSA0001Test {
                 where)){
             return false;
         }
+        return true;
+    }
+    private boolean Search_booking_other_actions_booking_confirmation (TestDriver driver){
+        String where = " on BOOKING CONFIRMATION";
+        driver.getReport().addHeader(" BOOKING CONFIRMATION",3,false);
+        Functions.break_time(driver,120,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
+                new String[]{"",getElements("")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }Functions.break_time(driver,120,500);
+        if(!Functions.checkClick(driver,
+                new String[]{"",getElements("")}, //element to click
+                new String[]{"",getElements("")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }Functions.break_time(driver,120,500);
+
+
         return true;
     }
     private boolean Search_booking_other_actions_send_booking_by_fax_email (TestDriver driver){

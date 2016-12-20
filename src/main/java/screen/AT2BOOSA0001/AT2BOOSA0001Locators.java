@@ -285,7 +285,6 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_service_details_e_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
 
         //PRINT VOUCHERS
-
         elements.put("actions_b_print_vouchers", "//*[contains(@id, 'pc1:pcgm2:dc_cmi3')]/td[2]");
         elements.put("actions_print_vouchers_sl_format", "//*[contains(@id, 'soc2::content')]");
         elements.put("actions_print_vouchers_sl_lenguage", "//*[contains(@id, 'soc1::content')]");
@@ -306,6 +305,11 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_print_vouchers_qbe_e_update", "//*[contains(@id, 'pc1:t1:1:ot17::content')]");
         elements.put("actions_print_vouchers_qbe_e_last_print", "//*[contains(@id, 'pc1:t1:1:ot1::content')]");
         elements.put("actions_print_vouchers_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
+
+        //BOOKING CONFIRMATION
+
+        elements.put("", "//*[contains(@id, '");
+
     }
 
     }
