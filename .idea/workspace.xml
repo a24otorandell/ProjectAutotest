@@ -11,9 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -98,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="307">
-              <caret line="940" column="5" selection-start-line="81" selection-start-column="3" selection-end-line="940" selection-end-column="5" />
+              <caret line="940" column="5" selection-start-line="53" selection-start-column="3" selection-end-line="940" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
@@ -134,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
-              <caret line="1098" column="5" selection-start-line="1098" selection-start-column="5" selection-end-line="1098" selection-end-column="5" />
+              <caret line="948" column="5" selection-start-line="948" selection-start-column="5" selection-end-line="948" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
@@ -143,7 +141,6 @@
                 <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#testCSED#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-                <element signature="method#Search_booking_other_actions_print_vounchers#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
@@ -916,13 +913,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00113" summary="nuevo metodo en functions de selectextrandom">
-      <created>1478794563316</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1478794563316</updated>
-    </task>
     <task id="LOCAL-00114" summary="Actualización AT2ACCSU0006&#10;&#10;">
       <created>1479122487998</created>
       <option name="number" value="00114" />
@@ -1259,7 +1249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482224317654</updated>
     </task>
-    <option name="localTasksCounter" value="162" />
+    <task id="LOCAL-00162" summary="   ACTUALIZACION DE AT2BOOSA0001, AT2ACCDI0028&#10;   &#10;&#10;">
+      <created>1482235080807</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1482235080807</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2210,7 +2207,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
-          <caret line="940" column="5" selection-start-line="81" selection-start-column="3" selection-end-line="940" selection-end-column="5" />
+          <caret line="940" column="5" selection-start-line="53" selection-start-column="3" selection-end-line="940" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
             <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
@@ -2234,7 +2231,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
-          <caret line="1098" column="5" selection-start-line="1098" selection-start-column="5" selection-end-line="1098" selection-end-column="5" />
+          <caret line="948" column="5" selection-start-line="948" selection-start-column="5" selection-end-line="948" selection-end-column="5" />
           <folding>
             <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
@@ -2243,7 +2240,6 @@
             <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#testCSED#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_print_vounchers#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
             <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
