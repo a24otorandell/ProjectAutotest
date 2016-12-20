@@ -74,16 +74,27 @@ public class AT2MDMCL0003Sis {
                 "CL_Activate_WebPrepayment_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1(driver, true)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1(driver, false)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
 
     }
@@ -91,18 +102,29 @@ public class AT2MDMCL0003Sis {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_WebUser_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 30, 400);
+        Functions.break_time(driver, 50, 400);
         if (!interaction_add_t1_2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
 
     }
@@ -112,16 +134,27 @@ public class AT2MDMCL0003Sis {
                 "CL_WebUser_Cbranch_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_3(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_3(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_3(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_3(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_3(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect4 (TestDriver driver) {
@@ -130,16 +163,27 @@ public class AT2MDMCL0003Sis {
                 "CL_WebUser_Dbranch_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_4(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_4(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_4(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_4(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_4(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect5 (TestDriver driver) {
@@ -148,16 +192,27 @@ public class AT2MDMCL0003Sis {
                 "CL_HX2_SAPCode_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_5(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_5(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_5(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_5(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_5(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect6 (TestDriver driver) {
@@ -166,16 +221,27 @@ public class AT2MDMCL0003Sis {
                 "SP_AdministrativeSupplier_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_6(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_6(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_6(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_6(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_6(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect7 (TestDriver driver) {
@@ -184,16 +250,27 @@ public class AT2MDMCL0003Sis {
                 "SP_SAPSupplier_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_7(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_7(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_7(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_7(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_7(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect8 (TestDriver driver) {
@@ -202,16 +279,27 @@ public class AT2MDMCL0003Sis {
                 "SP_SAPCustomer_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_8(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_8(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_8(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_8(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_8(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect9 (TestDriver driver) {
@@ -220,16 +308,27 @@ public class AT2MDMCL0003Sis {
                 "SP_ICs_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_9(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_9(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_9(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_9(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_9(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect10 (TestDriver driver) {
@@ -238,16 +337,27 @@ public class AT2MDMCL0003Sis {
                 "SP_SupplierClassification_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_10(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_10(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_10(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_10(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_10(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect11 (TestDriver driver) {
@@ -256,16 +366,27 @@ public class AT2MDMCL0003Sis {
                 "CL_Administrative_classification_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_11(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_11(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_11(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_11(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_11(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect12 (TestDriver driver) {
@@ -274,16 +395,27 @@ public class AT2MDMCL0003Sis {
                 "CL_InvoicingCompanies_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_12(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_12(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_12(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_12(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_12(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect13 (TestDriver driver) {
@@ -292,16 +424,27 @@ public class AT2MDMCL0003Sis {
                 "CL_SAPCustomerGroup_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_13(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_13(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_13(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_13(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_13(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect14 (TestDriver driver) {
@@ -310,16 +453,27 @@ public class AT2MDMCL0003Sis {
                 "CL_SAPCustomer_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_14(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_14(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_14(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_14(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_14(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect15 (TestDriver driver) {
@@ -328,16 +482,27 @@ public class AT2MDMCL0003Sis {
                 "CL_SAPSupplier_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_15(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_15(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_15(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_15(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_15(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect16 (TestDriver driver) {
@@ -346,16 +511,27 @@ public class AT2MDMCL0003Sis {
                 "CL_Extensions_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_16(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_16(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_16(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_16(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_16(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect17 (TestDriver driver) {
@@ -364,16 +540,27 @@ public class AT2MDMCL0003Sis {
                 "CL_SAPCustomerType_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_17(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_17(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_17(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_17(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_17(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
     public boolean optionSelect18 (TestDriver driver) {
@@ -382,16 +569,27 @@ public class AT2MDMCL0003Sis {
                 "CL_AtlasAdmin_classification_DR", "d_type", "SELECT OPTION")){return false;}
         Functions.break_time(driver, 30, 400);
         if (!interaction_add_t1_18(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_18(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t1_18(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!search_t1_18(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!rulesChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!qbeChange(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_rule(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!interaction_edit_t2_18(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!others_actions_t2(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         if (!delete_t1(driver)) return false;
+        Functions.break_time(driver, 6, 400);
         return true;
     }
 
@@ -556,7 +754,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_Activate_WebPrepayment_DR";
         Functions.break_time(driver, 3, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
@@ -588,7 +786,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1(TestDriver driver, boolean first) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_Activate_WebPrepayment_DR";
         if (first) {
             if (!Functions.checkClick(driver,
                     new String[]{"search_b_show_search", getElements("search_b_show_search")}, //element to click
@@ -619,7 +817,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_Activate_WebPrepayment_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -649,7 +847,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_Activate_WebPrepayment_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -675,8 +873,8 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_2 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
-        Functions.break_time(driver, 30, 400);
+        String where = " ADD 1 - CL_WebUser_DR";
+        Functions.break_time(driver, 50, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
@@ -696,6 +894,7 @@ public class AT2MDMCL0003Sis {
                 "customer2", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_comercial_province", getElements("add_i_comercial_province")},
                 "province",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -712,6 +911,7 @@ public class AT2MDMCL0003Sis {
                 "type_w", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_hotelextras", getElements("add_i_hotelextras")},
                 "hotel_e", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -738,7 +938,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_2(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_WebUser_DR";
         Functions.break_time(driver, 50, 400);
         if (!Functions.insertInput(driver, new String[]{"search_i_commercial_country", getElements("search_i_commercial_country")},
                 "country",getData("country"), where)) {
@@ -756,6 +956,7 @@ public class AT2MDMCL0003Sis {
                 "province",getData("province"), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_direct_hotel", getElements("search_i_direct_hotel")},
                 "direct",getData("direct"), where)) {
             return false;
@@ -772,6 +973,7 @@ public class AT2MDMCL0003Sis {
                 "hotel_e", getData("hotel_e"), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_princing", getElements("search_i_princing")},
                 "princing", getData("princing"), where)) {
             return false;
@@ -786,7 +988,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_2(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_WebUser_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass,
@@ -806,6 +1008,7 @@ public class AT2MDMCL0003Sis {
                 "customer2", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_comercial_province", getElements("add_i_comercial_province")},
                 "province",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -826,6 +1029,7 @@ public class AT2MDMCL0003Sis {
                 "hotel_e", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_princing", getElements("add_i_princing")},
                 "princing", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -842,7 +1046,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_2(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_WebUser_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -872,12 +1076,10 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_3 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
-        Functions.break_time(driver, 30, 400);
+        String where = " ADD 1 - CL_WebUser_Cbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
-                500, 600,//element expected to appear
                 where)) {
             return false;
         }
@@ -923,7 +1125,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_3(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_WebUser_Cbranch_DR";
         Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"search_i_commercial_country3", getElements("search_i_commercial_country3")},
                 "country3",getData("country3"), where)) {
@@ -959,7 +1161,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_3(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_WebUser_Cbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1002,7 +1204,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_3(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_WebUser_Cbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1032,11 +1234,10 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_4 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_WebUser_Dbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
-                300, 600,
                 where)) {
             return false;
         }
@@ -1052,6 +1253,7 @@ public class AT2MDMCL0003Sis {
                 "customer4", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_comercial_province4", getElements("add_i_comercial_province4")},
                 "province4",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -1060,6 +1262,7 @@ public class AT2MDMCL0003Sis {
                 "direct4", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_web_user4", getElements("add_i_web_user4")},
                 "web_u4", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -1086,7 +1289,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_4(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_WebUser_Dbranch_DR";
         Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"search_i_commercial_country4", getElements("search_i_commercial_country4")},
                 "country4",getData("country4"), where)) {
@@ -1104,6 +1307,7 @@ public class AT2MDMCL0003Sis {
                 "province4",getData("province4"), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_direct_hotel4", getElements("search_i_direct_hotel4")},
                 "direct4",getData("direct4"), where)) {
             return false;
@@ -1126,7 +1330,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_4(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_WebUser_Dbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1141,6 +1345,7 @@ public class AT2MDMCL0003Sis {
                 "comercial4",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_customer_connectivity4", getElements("add_i_customer_connectivity4")},
                 "customer4", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -1149,6 +1354,7 @@ public class AT2MDMCL0003Sis {
                 "province4",DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_direct_hotel4", getElements("add_i_direct_hotel4")},
                 "direct4", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -1173,7 +1379,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_4(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_WebUser_Dbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1203,7 +1409,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_5 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_HX2_SAPCode_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1230,7 +1436,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_5(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_HX2_SAPCode_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_invoicing", getElements("search_i_invoicing")},
                 "invoicing",getData("invoicing"), where)) {
             return false;
@@ -1249,7 +1455,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_5(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_HX2_SAPCode_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1275,7 +1481,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_5(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_HX2_SAPCode_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1300,7 +1506,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_6 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_AdministrativeSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1327,7 +1533,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_6(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_AdministrativeSupplier_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_supplier", getElements("search_i_supplier")},
                 "supplier",getData("supplier"), where)) {
             return false;
@@ -1346,7 +1552,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_6(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_AdministrativeSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1372,7 +1578,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_6(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_AdministrativeSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1397,7 +1603,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_7 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_SAPSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1420,6 +1626,7 @@ public class AT2MDMCL0003Sis {
                 "adm_s", DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_sap_group", getElements("add_i_sap_group")},
                 "sap_g", DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
@@ -1444,7 +1651,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_7(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_SAPSupplier_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_atlas_c", getElements("search_i_atlas_c")},
                 "atlas_c",getData("atlas_c"), where)) {
             return false;
@@ -1471,7 +1678,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_7(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_SAPSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1505,7 +1712,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_7(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_SAPSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1542,7 +1749,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_8 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1561,6 +1768,7 @@ public class AT2MDMCL0003Sis {
                 "atlas_o_o", DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_payments8", getElements("add_i_payments8")},
                 "payment8", DataGenerator.getRandomAlphanumericSequence(4, true), where)) {
             return false;
@@ -1577,6 +1785,7 @@ public class AT2MDMCL0003Sis {
                 "gl", String.valueOf(DataGenerator.random(000000,9999999)), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_class", getElements("add_i_class")},
                 "class", DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
@@ -1597,6 +1806,7 @@ public class AT2MDMCL0003Sis {
                 "payment_m", DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_ar", getElements("add_i_ar")},
                 "ar", DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -1613,6 +1823,7 @@ public class AT2MDMCL0003Sis {
                 "account8", DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save1", getElements("add_b_save1")}, //e1
                 recursiveXPaths.glass, //e2
@@ -1621,7 +1832,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_8(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_bussiness", getElements("search_i_bussiness")},
                 "bussiness",getData("bussiness"), where)) {
             return false;
@@ -1644,7 +1855,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_8(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1674,7 +1885,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_8(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1697,6 +1908,7 @@ public class AT2MDMCL0003Sis {
                 "gl", String.valueOf(DataGenerator.random(000000,9999999)), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_class", getElements("edit_i_class")},
                 "class", DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
@@ -1717,6 +1929,7 @@ public class AT2MDMCL0003Sis {
                 "payment_m", DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_ar", getElements("edit_i_ar")},
                 "ar", DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -1747,8 +1960,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_9 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
-        Functions.break_time(driver, 3, 400);
+        String where = " ADD 1 - SP_ICs_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1775,6 +1987,7 @@ public class AT2MDMCL0003Sis {
                 "management", DataGenerator.getRandomAlphanumericSequence(4, true), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_hotel_chain", getElements("add_i_hotel_chain")},
                 "hotel_chain", DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -1791,6 +2004,7 @@ public class AT2MDMCL0003Sis {
                 "ap_g",  String.valueOf(DataGenerator.random(000000,9999999)), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_ap_a", getElements("add_i_ap_a")},
                 "ap_a",  String.valueOf(DataGenerator.random(000000,9999999)), where)) {
             return false;
@@ -1807,7 +2021,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_9(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_ICs_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_adm_sup", getElements("search_i_adm_sup")},
                 "adm_sup",getData("adm_sup"), where)) {
             return false;
@@ -1824,6 +2038,7 @@ public class AT2MDMCL0003Sis {
                 "account9", getData("account9"), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_management", getElements("search_i_management")},
                 "management", getData("management"), where)) {
             return false;
@@ -1846,7 +2061,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_9(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_ICs_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1892,7 +2107,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_9(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_ICs_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1929,7 +2144,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_10 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_SupplierClassification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1952,7 +2167,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_10(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_SupplierClassification_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_supplier10", getElements("search_i_supplier10")},
                 "supplier10",getData("supplier10"), where)) {
             return false;
@@ -1967,7 +2182,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_10(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_SupplierClassification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1989,7 +2204,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_10(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_SupplierClassification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2014,7 +2229,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_11 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_Administrative_classification_DR";
         Functions.break_time(driver, 3, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
@@ -2030,6 +2245,7 @@ public class AT2MDMCL0003Sis {
                 "customer",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_comercial_b", getElements("add_i_comercial_b")},
                 "commercial_b",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2042,6 +2258,7 @@ public class AT2MDMCL0003Sis {
                 "connect",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_adm_cust", getElements("add_i_adm_cust")},
                 "adm_cust",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2054,7 +2271,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_11(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_Administrative_classification_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_source", getElements("search_i_source")},
                 "source",getData("source"), where)) {
             return false;
@@ -2085,7 +2302,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_11(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_Administrative_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2104,6 +2321,7 @@ public class AT2MDMCL0003Sis {
                 "commercial_b",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_white", getElements("add_i_white")},
                 "white",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2123,7 +2341,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_11(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_Administrative_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2148,7 +2366,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_12 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_InvoicingCompanies_DR";
         Functions.break_time(driver, 10, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
@@ -2177,6 +2395,7 @@ public class AT2MDMCL0003Sis {
                 "provincia",String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_fiscal", getElements("add_i_fiscal")},
                 "fiscal",String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
@@ -2197,6 +2416,7 @@ public class AT2MDMCL0003Sis {
                 "princing",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_type", getElements("add_i_type")},
                 "type",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2221,6 +2441,7 @@ public class AT2MDMCL0003Sis {
                 "credito_t",String.valueOf(DataGenerator.random(11,9999)), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_empresa", getElements("add_i_empresa")},
                 "empresa",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2245,6 +2466,7 @@ public class AT2MDMCL0003Sis {
                 "c_divisa",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_check", getElements("add_i_check")},
                 "check",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2261,6 +2483,7 @@ public class AT2MDMCL0003Sis {
                 "class_o",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_class_rap", getElements("add_i_class_rap")},
                 "class_rap",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2281,6 +2504,7 @@ public class AT2MDMCL0003Sis {
                 "divisa_res",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_imp_cred", getElements("add_i_imp_cred")},
                 "imp_cred",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2301,6 +2525,7 @@ public class AT2MDMCL0003Sis {
                 "venta",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_ind_p", getElements("add_i_ind_p")},
                 "ind_p",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2317,6 +2542,7 @@ public class AT2MDMCL0003Sis {
                 "ind_tpv",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_ind_tr", getElements("add_i_ind_tr")},
                 "ind_tr",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2333,6 +2559,7 @@ public class AT2MDMCL0003Sis {
                 "ref_o",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_cli_pro", getElements("add_i_cli_pro")},
                 "cli_pro",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2346,7 +2573,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_12(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_InvoicingCompanies_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_adm_class", getElements("search_i_adm_class")},
                 "adm_class", getData("adm_class"), where)) {
             return false;
@@ -2363,6 +2590,7 @@ public class AT2MDMCL0003Sis {
                 "hotel_pay", getData("hotel_pay"), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_provincia", getElements("search_i_provincia")},
                 "provincia", getData("provincia"), where)) {
             return false;
@@ -2375,6 +2603,7 @@ public class AT2MDMCL0003Sis {
                 "asia", getData("asia"), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_white12", getElements("search_i_white12")},
                 "white12", getData("white12"), where)) {
             return false;
@@ -2391,6 +2620,7 @@ public class AT2MDMCL0003Sis {
                 "type", getData("type"), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"search_i_adquisition", getElements("search_i_adquisition")},
                 "adquisition", getData("adquisition"), where)) {
             return false;
@@ -2405,7 +2635,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_12(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_InvoicingCompanies_DR";
         Functions.break_time(driver, 3, 300);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
@@ -2426,6 +2656,7 @@ public class AT2MDMCL0003Sis {
                 "pais",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_hotel_pay", getElements("add_i_hotel_pay")},
                 "hotel_pay",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2438,6 +2669,7 @@ public class AT2MDMCL0003Sis {
                 "fiscal",String.valueOf(DataGenerator.random(1,50)), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_asia", getElements("add_i_asia")},
                 "asia",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2454,6 +2686,7 @@ public class AT2MDMCL0003Sis {
                 "princing",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_type", getElements("add_i_type")},
                 "type",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2474,7 +2707,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_12(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_InvoicingCompanies_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2502,6 +2735,7 @@ public class AT2MDMCL0003Sis {
                 "empresa",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_oficina", getElements("edit_i_oficina")},
                 "oficina",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2514,6 +2748,7 @@ public class AT2MDMCL0003Sis {
                 "factura",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_d_reserva", getElements("edit_i_d_reserva")},
                 "reserva",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2526,6 +2761,7 @@ public class AT2MDMCL0003Sis {
                 "check",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_imp_c", getElements("edit_i_imp_c")},
                 "imp_c",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2538,6 +2774,7 @@ public class AT2MDMCL0003Sis {
                 "class_o",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_class_rap", getElements("edit_i_class_rap")},
                 "class_rap",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2550,6 +2787,7 @@ public class AT2MDMCL0003Sis {
                 "tipo_rap",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_pais_o", getElements("edit_i_pais_o")},
                 "pais_o",DataGenerator.getRandomAlphanumericSequence(2, false), where)){
             return false;
@@ -2566,6 +2804,7 @@ public class AT2MDMCL0003Sis {
                 "divisa_cred",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_traslados", getElements("edit_i_traslados")},
                 "traslados",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2582,6 +2821,7 @@ public class AT2MDMCL0003Sis {
                 "ind_p",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_ind_v", getElements("edit_i_ind_v")},
                 "ind_v",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -2598,6 +2838,7 @@ public class AT2MDMCL0003Sis {
                 "ind_tr",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_one", getElements("edit_i_one")},
                 "one",DataGenerator.getRandomAlphanumericSequence(2, false), where)){
             return false;
@@ -2629,7 +2870,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_13 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomerGroup_DR";
         Functions.break_time(driver, 3, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
@@ -2654,7 +2895,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_13(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomerGroup_DR";
 
         if (!Functions.insertInput(driver, new String[]{"search_i_relation", getElements("search_i_relation")},
                 "relation", getData("relation"), where)) {
@@ -2670,7 +2911,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_13(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomerGroup_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2692,7 +2933,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_13(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomerGroup_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2717,7 +2958,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_14 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2752,7 +2993,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_14(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_relation14", getElements("search_i_relation14")},
                 "relation14",getData("relation14"), where)) {
             return false;
@@ -2775,7 +3016,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_14(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2805,7 +3046,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_14(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2834,7 +3075,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_15 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2857,6 +3098,7 @@ public class AT2MDMCL0003Sis {
                 "adm_cus",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_g_cuenta", getElements("add_i_g_cuenta")},
                 "g_cuenta",DataGenerator.getRandomAlphanumericSequence(4, false), where)) {
             return false;
@@ -2873,6 +3115,7 @@ public class AT2MDMCL0003Sis {
                 "grupo",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_condi", getElements("add_i_condi")},
                 "condi",DataGenerator.getRandomAlphanumericSequence(4, false), where)) {
             return false;
@@ -2881,7 +3124,6 @@ public class AT2MDMCL0003Sis {
                 "condi_abono",DataGenerator.getRandomAlphanumericSequence(4, false), where)) {
             return false;
         }
-
         if (!Functions.insertInput(driver, new String[]{"add_i_ver", getElements("add_i_ver")},
                 "ver",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
@@ -2890,6 +3132,7 @@ public class AT2MDMCL0003Sis {
                 "via",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_bloqueo", getElements("add_i_bloqueo")},
                 "bloqueo",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
@@ -2906,6 +3149,7 @@ public class AT2MDMCL0003Sis {
                 "paga_alt",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_adm15", getElements("add_i_adm15")},
                 "adm",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -2918,7 +3162,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_15(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_pago_h", getElements("search_i_pago_h")},
                 "pago_h", getData("pago_h"), where)) {
             return false;
@@ -2945,7 +3189,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_15(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2979,7 +3223,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_15(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2998,6 +3242,7 @@ public class AT2MDMCL0003Sis {
                 "clave",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_grupo15", getElements("edit_i_grupo15")},
                 "grupo",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
@@ -3010,7 +3255,7 @@ public class AT2MDMCL0003Sis {
                 "condi_abono",DataGenerator.getRandomAlphanumericSequence(4, false), where)) {
             return false;
         }
-
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_ver", getElements("edit_i_ver")},
                 "ver",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
@@ -3023,6 +3268,7 @@ public class AT2MDMCL0003Sis {
                 "bloqueo",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_clave_a", getElements("edit_i_clave_a")},
                 "clave_a",String.valueOf(DataGenerator.random(1,8)), where)) {
             return false;
@@ -3053,7 +3299,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_16 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_Extensions_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3074,7 +3320,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_16(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_Extensions_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_duplicity", getElements("search_i_duplicity")},
                 "duplicity", getData("duplicity"), where)) {
             return false;
@@ -3089,7 +3335,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_16(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_Extensions_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3111,7 +3357,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_16(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_Extensions_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3134,7 +3380,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_17 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3157,6 +3403,7 @@ public class AT2MDMCL0003Sis {
                 "adm_cus17",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_adquisition17", getElements("add_i_adquisition17")},
                 "adquisition17",DataGenerator.getRandomAlphanumericSequence(4, false), where)) {
             return false;
@@ -3173,6 +3420,7 @@ public class AT2MDMCL0003Sis {
                 "grupo17",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_condi17", getElements("add_i_condi17")},
                 "condi17",DataGenerator.getRandomAlphanumericSequence(4, false), where)) {
             return false;
@@ -3189,6 +3437,7 @@ public class AT2MDMCL0003Sis {
                 "via17",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_clave_a17", getElements("add_i_clave_a17")},
                 "clave_a17",String.valueOf(DataGenerator.random(1,8)), where)) {
             return false;
@@ -3209,7 +3458,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_17(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_domiciliado", getElements("search_i_domiciliado")},
                 "domiciliado",getData("domiciliado"), where)) {
             return false;
@@ -3240,7 +3489,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_17(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3259,6 +3508,7 @@ public class AT2MDMCL0003Sis {
                 "pais17",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_adm_cus17", getElements("add_i_adm_cus17")},
                 "adm_cus17",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -3278,7 +3528,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_17(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3293,6 +3543,7 @@ public class AT2MDMCL0003Sis {
                 "clave17",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_grupo17", getElements("edit_i_grupo17")},
                 "grupo17",DataGenerator.getRandomAlphanumericSequence(3, false), where)) {
             return false;
@@ -3309,6 +3560,7 @@ public class AT2MDMCL0003Sis {
                 "grabar",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_via17", getElements("edit_i_via17")},
                 "via17",DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
             return false;
@@ -3339,7 +3591,7 @@ public class AT2MDMCL0003Sis {
      */
     public boolean interaction_add_t1_18 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_AtlasAdmin_classification_DR";
         Functions.break_time(driver, 3, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
@@ -3359,6 +3611,7 @@ public class AT2MDMCL0003Sis {
                 "division18",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_customer18", getElements("add_i_customer18")},
                 "customer18",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
@@ -3367,6 +3620,7 @@ public class AT2MDMCL0003Sis {
                 "commercial_b18",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"add_i_white18", getElements("add_i_white18")},
                 "white18",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
@@ -3391,7 +3645,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean search_t1_18(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_AtlasAdmin_classification_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_source18", getElements("search_i_source18")},
                 "source18",getData("source18"), where)) {
             return false;
@@ -3414,7 +3668,7 @@ public class AT2MDMCL0003Sis {
     }
     private boolean interaction_edit_t1_18(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_AtlasAdmin_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3444,7 +3698,7 @@ public class AT2MDMCL0003Sis {
      */
     private boolean interaction_edit_t2_18(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_AtlasAdmin_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3463,6 +3717,7 @@ public class AT2MDMCL0003Sis {
                 "white18",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
+        Functions.break_time(driver,3, 500);
         if (!Functions.insertInput(driver, new String[]{"edit_i_cust_sub", getElements("edit_i_cust_sub")},
                 "cust_sub",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;

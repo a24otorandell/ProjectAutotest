@@ -11,9 +11,6 @@ import sun.text.resources.cldr.ar.FormatData_ar_YE;
  * Created by aibanez on 28/11/2016.
  */
 
-/**
- * La QBE de la opción Rules Change el campo de Date Modified no funciona
- */
 public class AT2MDMCL0003Test {
     protected AT2MDMCL0003Locators locators;
     protected AT2MDMCL0003Data data;
@@ -560,7 +557,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = "ADD 1 - CL_Activate_WebPrepayment_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -591,7 +588,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1(TestDriver driver, boolean first) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_Activate_WebPrepayment_DR";
         if (first) {
             if (!Functions.checkClick(driver,
                     new String[]{"search_b_show_search", getElements("search_b_show_search")}, //element to click
@@ -622,7 +619,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_Activate_WebPrepayment_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -652,7 +649,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_Activate_WebPrepayment_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -678,7 +675,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_2 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_WebUser_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
@@ -741,7 +738,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_2(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_WebUser_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_commercial_country", getElements("search_i_commercial_country")},
                 "country",getData("country"), where)) {
             return false;
@@ -792,7 +789,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_2(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_WebUser_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -850,7 +847,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_2(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_WebUser_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -880,7 +877,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_3 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_WebUser_Cbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -931,7 +928,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_3(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_WebUser_Cbranch_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_commercial_country3", getElements("search_i_commercial_country3")},
                 "country3",getData("country3"), where)) {
             return false;
@@ -970,7 +967,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_3(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_WebUser_Cbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1016,7 +1013,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_3(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_WebUser_Cbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1046,7 +1043,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_4 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_WebUser_Dbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1101,7 +1098,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_4(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_WebUser_Dbranch_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_commercial_country4", getElements("search_i_commercial_country4")},
                 "country4",getData("country4"), where)) {
             return false;
@@ -1144,7 +1141,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_4(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_WebUser_Dbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1194,7 +1191,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_4(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_WebUser_Dbranch_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1224,7 +1221,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_5 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_HX2_SAPCode_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1251,7 +1248,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_5(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_HX2_SAPCode_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_invoicing", getElements("search_i_invoicing")},
                 "invoicing",getData("invoicing"), where)) {
             return false;
@@ -1270,7 +1267,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_5(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_HX2_SAPCode_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1296,7 +1293,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_5(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_HX2_SAPCode_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1321,7 +1318,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_6 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_AdministrativeSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
@@ -1348,7 +1345,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_6(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_AdministrativeSupplier_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_supplier", getElements("search_i_supplier")},
                 "supplier",getData("supplier"), where)) {
             return false;
@@ -1367,7 +1364,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_6(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_AdministrativeSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1393,7 +1390,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_6(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_AdministrativeSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1418,7 +1415,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_7 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_SAPSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1465,7 +1462,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_7(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_SAPSupplier_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_atlas_c", getElements("search_i_atlas_c")},
                 "atlas_c",getData("atlas_c"), where)) {
             return false;
@@ -1492,7 +1489,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_7(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_SAPSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1526,7 +1523,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_7(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_SAPSupplier_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1563,7 +1560,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_8 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1642,7 +1639,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_8(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_bussiness", getElements("search_i_bussiness")},
                 "bussiness",getData("bussiness"), where)) {
             return false;
@@ -1665,7 +1662,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_8(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1695,7 +1692,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_8(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1768,7 +1765,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_9 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_ICs_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
@@ -1827,7 +1824,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_9(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_ICs_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_adm_sup", getElements("search_i_adm_sup")},
                 "adm_sup",getData("adm_sup"), where)) {
             return false;
@@ -1866,7 +1863,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_9(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_ICs_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1912,7 +1909,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_9(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_ICs_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1949,7 +1946,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_10 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - SP_SupplierClassification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -1972,7 +1969,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_10(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - SP_SupplierClassification_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_supplier10", getElements("search_i_supplier10")},
                 "supplier10",getData("supplier10"), where)) {
             return false;
@@ -1987,7 +1984,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_10(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - SP_SupplierClassification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2009,7 +2006,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_10(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - SP_SupplierClassification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2034,7 +2031,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_11 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_Administrative_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2073,7 +2070,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_11(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_Administrative_classification_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_source", getElements("search_i_source")},
                 "source",getData("source"), where)) {
             return false;
@@ -2104,7 +2101,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_11(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_Administrative_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2142,7 +2139,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_11(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_Administrative_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2167,7 +2164,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_12 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_InvoicingCompanies_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2366,7 +2363,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_12(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_InvoicingCompanies_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_adm_class", getElements("search_i_adm_class")},
                 "adm_class", getData("adm_class"), where)) {
             return false;
@@ -2425,7 +2422,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_12(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 -  CL_InvoicingCompanies_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2491,7 +2488,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_12(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_InvoicingCompanies_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2649,7 +2646,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_13 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomerGroup_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2672,7 +2669,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_13(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomerGroup_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_relation", getElements("search_i_relation")},
                 "relation", getData("relation"), where)) {
             return false;
@@ -2687,7 +2684,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_13(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomerGroup_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2709,7 +2706,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_13(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomerGroup_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2734,7 +2731,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_14 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomer_DR";
         Functions.break_time(driver, 3, 500);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
@@ -2771,7 +2768,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_14(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_relation14", getElements("search_i_relation14")},
                 "relation14",getData("relation14"), where)) {
             return false;
@@ -2794,7 +2791,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_14(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2824,7 +2821,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_14(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2853,7 +2850,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_15 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2938,7 +2935,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_15(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_pago_h", getElements("search_i_pago_h")},
                 "pago_h", getData("pago_h"), where)) {
             return false;
@@ -2965,7 +2962,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_15(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -2999,7 +2996,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_15(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3074,7 +3071,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_16 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3096,7 +3093,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_16(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_duplicity", getElements("search_i_duplicity")},
                 "duplicity", getData("duplicity"), where)) {
             return false;
@@ -3111,7 +3108,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_16(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3133,7 +3130,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_16(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3156,7 +3153,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_17 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3232,7 +3229,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_17(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_SAPCustomer_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_domiciliado", getElements("search_i_domiciliado")},
                 "domiciliado",getData("domiciliado"), where)) {
             return false;
@@ -3263,7 +3260,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_17(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3301,7 +3298,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_17(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_SAPCustomer_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3362,7 +3359,7 @@ public class AT2MDMCL0003Test {
      */
     public boolean interaction_add_t1_18 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
-        String where = " ADD 1";
+        String where = " ADD 1 - CL_AtlasAdmin_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3414,7 +3411,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean search_t1_18(TestDriver driver) {
         driver.getReport().addHeader("SEARCH RECORD", 3, false);
-        String where = " on SEARCH 1";
+        String where = " on SEARCH 1 - CL_AtlasAdmin_classification_DR";
         if (!Functions.insertInput(driver, new String[]{"search_i_source18", getElements("search_i_source18")},
                 "source18",getData("source18"), where)) {
             return false;
@@ -3437,7 +3434,7 @@ public class AT2MDMCL0003Test {
     }
     private boolean interaction_edit_t1_18(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 1";
+        String where = " on EDITTION 1 - CL_AtlasAdmin_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_edit", getElements("inputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3467,7 +3464,7 @@ public class AT2MDMCL0003Test {
      */
     private boolean interaction_edit_t2_18(TestDriver driver) {
         driver.getReport().addHeader("EDIT RECORD", 3, false);
-        String where = " on EDITTION 2";
+        String where = " on EDITTION 2 - CL_AtlasAdmin_classification_DR";
         if (!Functions.checkClick(driver,
                 new String[]{"outputs_b_edit", getElements("outputs_b_edit")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
