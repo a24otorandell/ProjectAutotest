@@ -164,7 +164,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_AdministrativeSupplier_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 15, 500);
         if (!interaction_add_t1_6(driver)) return false;
         if (!search_t1_6(driver)) return false;
         if (!interaction_edit_t1_6(driver)) return false;
@@ -182,7 +182,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_SAPSupplier_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 10, 500);
         if (!interaction_add_t1_7(driver)) return false;
         if (!search_t1_7(driver)) return false;
         if (!interaction_edit_t1_7(driver)) return false;
@@ -200,7 +200,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_SAPCustomer_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 10, 500);
         if (!interaction_add_t1_8(driver)) return false;
         if (!search_t1_8(driver)) return false;
         if (!interaction_edit_t1_8(driver)) return false;
@@ -218,7 +218,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_ICs_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 40, 500);
+        Functions.break_time(driver, 20, 500);
         if (!interaction_add_t1_9(driver)) return false;
         if (!search_t1_9(driver)) return false;
         if (!interaction_edit_t1_9(driver)) return false;
@@ -236,7 +236,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "SP_SupplierClassification_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 40, 500);
+        Functions.break_time(driver,10, 500);
         if (!interaction_add_t1_10(driver)) return false;
         if (!search_t1_10(driver)) return false;
         if (!interaction_edit_t1_10(driver)) return false;
@@ -290,7 +290,7 @@ public class AT2MDMCL0003Test {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_SAPCustomerGroup_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 30, 500);
+        Functions.break_time(driver, 10, 500);
         if (!interaction_add_t1_13(driver)) return false;
         if (!search_t1_13(driver)) return false;
         if (!interaction_edit_t1_13(driver)) return false;
@@ -490,7 +490,7 @@ public class AT2MDMCL0003Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_date", getElements("qbe_i_date")},
-                "date_r", "" /*getData("date_r")*/, where)) {
+                "date_r", getData("date_r"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_rule", getElements("qbe_i_rule")},
@@ -679,13 +679,10 @@ public class AT2MDMCL0003Test {
     public boolean interaction_add_t1_2 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
-        Functions.break_time(driver, 40, 600);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
-                400, 300,//element expected to appear
                 where)) {
-            System.out.println("ENTRA PULSA");
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"add_i_commercial_country", getElements("add_i_commercial_country")},
@@ -1328,7 +1325,6 @@ public class AT2MDMCL0003Test {
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
-                100,300,//element expected to appear
                 where)) {
             return false;
         }
@@ -1773,11 +1769,9 @@ public class AT2MDMCL0003Test {
     public boolean interaction_add_t1_9 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
-        Functions.break_time(driver, 30, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass,
-                120, 500,//element expected to appear
                 where)) {
             return false;
         }
@@ -1956,11 +1950,9 @@ public class AT2MDMCL0003Test {
     public boolean interaction_add_t1_10 (TestDriver driver) {
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD 1";
-        Functions.break_time(driver, 30, 400);
         if (!Functions.checkClick(driver,
                 new String[]{"inputs_b_add", getElements("inputs_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
-                120, 400,
                 where)) {
             return false;
         }

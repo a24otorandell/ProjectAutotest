@@ -589,6 +589,7 @@ public class AT2MDMCL0012Sis {
                 new String[]{"supplier_e_result", getElements("supplier_e_result")}, //element to click
                 "GET DATA")){return false;}
         String[] columns = {"supplier", "company", "code", "market"};
+        Functions.break_time(driver, 4 ,600);
         Functions.collectTableData(driver,
                 columns, //array with the names of the columns
                 "//*[contains(@id, 'pc3:psupp::db')]",

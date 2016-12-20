@@ -48,6 +48,11 @@ public class AT2MDMCL0007Sis {
         if (!interaction_edit(driver)) return false;
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
+        if (!qbeHard(driver)) return false;
+        if (!historicActions(driver)) return false;
+/*        if (!getData(driver)) return false;
+        if (!qbeHistoric(driver)) return false;*/
+        if (!others_actionsHistoric(driver)) return false;
         return true;
     }
 
@@ -61,6 +66,10 @@ public class AT2MDMCL0007Sis {
                 where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"add_i_internal_user", getElements("add_i_internal_user")},
+                "internal", "", where)) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"add_i_name", getElements("add_i_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -69,6 +78,7 @@ public class AT2MDMCL0007Sis {
                 "surname", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver, 10, 800);
         if (!Functions.insertInput(driver, new String[]{"add_i_pass", getElements("add_i_pass")},
                 "passd", String.valueOf(DataGenerator.random(1,2050)), where)) {
             return false;
@@ -113,12 +123,14 @@ public class AT2MDMCL0007Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "interface", //Data name
                 where)){return false;}
-        if (!Functions.selectText(driver,
-                new String[]{"add_sl_status",getElements("add_sl_status")},
-                "Blocked", "status", where)){return false;}
-        if (!Functions.selectText(driver,
+        String list_options[] = {"Blocked", "Active", "Inactive"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"add_sl_status", getElements("add_sl_status")},
+                list_options, "status", where)){return false;}
+        String list_options2[] = {"Read only", "Full access", "Modify and cancel"};
+        if (!Functions.selectTextRandom(driver,
                 new String[]{"add_sl_profile",getElements("add_sl_profile")},
-                "Read only", "profile", where)){return false;}
+                list_options2, "profile", where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_super"),"super",true,true, where)){return false;}
         if(!Functions.createLov(driver,
@@ -145,21 +157,20 @@ public class AT2MDMCL0007Sis {
                 "type", "E", where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_internal_user", getElements("add_i_internal_user")},
-                "internal", DataGenerator.getRandomAlphanumericSequence(5,false), where)) {
-            return false;
-        }*/
+        Functions.break_time(driver, 6, 500);
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_hotel",getElements("add_lov_hotel")}, // b_lov
                 new String[]{"add_i_hotel", getElements("add_i_hotel")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
                 recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
-                "hotel", //Data name
+                "hotel",
+                100, 700,//Data name
                 where)){return false;}
-        if (!Functions.selectText(driver,
+        String list_options3[] = {"Test"};
+        if (!Functions.selectTextRandom(driver,
                 new String[]{"add_sl_subcategory",getElements("add_sl_subcategory")},
-                "Test", "sub", where)){return false;}
+                list_options3, "sub", where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_e_user_id", getElements("add_e_user_id")}, // element path
                 "id", // key for data value (the name)
                 where)){return false;}
@@ -209,9 +220,9 @@ public class AT2MDMCL0007Sis {
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_to_agency", getElements("search_lov_to_agency")}, //LoV button
                 new String[]{"search_i_to_agency", getElements("search_i_to_agency")}, //external LoV input
-                new String[]{"search_lov_to_agency_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                new String[]{"search_lov_to_agency_code", recursiveXPaths.lov_i_altgenericinput2}, //internal LoV input
                 recursiveXPaths.lov_e_result, // lov internal result
-                getData("to"), // value to search
+                "%"+getData("to"), // value to search
                 "to", //name of the data
                 where)){return false;}
         if (!Functions.createLovByValue(driver,
@@ -270,6 +281,7 @@ public class AT2MDMCL0007Sis {
                 "type", getData("type"), where)) {
             return false;
         }
+        Functions.break_time(driver, 4, 600);
         if (!Functions.createLovByValue(driver,
                 new String[]{"search_lov_hotel", getElements("search_lov_hotel")}, //LoV button
                 new String[]{"search_i_hotel", getElements("search_i_hotel")}, //external LoV input
@@ -278,6 +290,7 @@ public class AT2MDMCL0007Sis {
                 getData("hotel"), // value to search
                 "hotel", //name of the data
                 where)){return false;}
+        Functions.break_time(driver, 4, 600);
         if (!Functions.selectText(driver,
                 new String[]{"search_sl_subcategory",getElements("search_sl_subcategory")},
                 getData("sub"), "sub", where)){return false;}
@@ -298,6 +311,10 @@ public class AT2MDMCL0007Sis {
                 where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"add_i_type", getElements("add_i_type")},
+                "type", "I", where)) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"add_i_name", getElements("add_i_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -306,6 +323,7 @@ public class AT2MDMCL0007Sis {
                 "surname", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"add_i_pass", getElements("add_i_pass")},
                 "passd", String.valueOf(DataGenerator.random(1,2050)), where)) {
             return false;
@@ -342,20 +360,14 @@ public class AT2MDMCL0007Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "lang", //Data name
                 where)){return false;}
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_interface",getElements("add_lov_interface")}, // b_lov
-                new String[]{"add_i_interface", getElements("add_i_interface")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "interface", //Data name
-                where)){return false;}*/
-        if (!Functions.selectText(driver,
-                new String[]{"add_sl_status",getElements("add_sl_status")},
-                "Inactive", "status", where)){return false;}
-        if (!Functions.selectText(driver,
+        String list_options[] = {"Blocked", "Active", "Inactive"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"add_sl_status", getElements("add_sl_status")},
+                list_options, "status", where)){return false;}
+        String list_options2[] = {"Read only", "Full access", "Modify and cancel"};
+        if (!Functions.selectTextRandom(driver,
                 new String[]{"add_sl_profile",getElements("add_sl_profile")},
-                "Full access", "profile", where)){return false;}
+                list_options2, "profile", where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_super"),"super",false,true, where)){return false;}
         if(!Functions.createLov(driver,
@@ -378,8 +390,8 @@ public class AT2MDMCL0007Sis {
                 getElements("add_ck_client_xml"),"xml",true,true, where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_client_html"),"html",false,true, where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_type", getElements("add_i_type")},
-                "type", "I", where)) {
+        if (!Functions.insertInput(driver, new String[]{"add_i_internal_user", getElements("add_i_internal_user")},
+                "internal", DataGenerator.getRandomAlphanumericSequence(5,false), where)) {
             return false;
         }
         if(!Functions.createLov(driver,
@@ -406,9 +418,10 @@ public class AT2MDMCL0007Sis {
             return false;
         }
         Functions.break_time(driver, 3, 400);
-        if (!Functions.selectText(driver,
+        String list_options3[] = {"Internal Cost", "DMC Accounts", "Internal Sales"};
+        if (!Functions.selectTextRandom(driver,
                 new String[]{"add_sl_subcategory",getElements("add_sl_subcategory")},
-                "Internal Sales", "sub", where)){return false;}
+                list_options3, "sub", where)){return false;}
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -424,6 +437,9 @@ public class AT2MDMCL0007Sis {
                 where)) {
             return false;
         }
+        if (!Functions.simpleClick(driver,
+                new String[]{"search_b_search", getElements("search_b_search")}, //element to click
+                where)){return false;}
         if (!Functions.clickQbE(driver,
                 new String[]{"user_b_qbe", getElements("user_b_qbe")},// query button
                 new String[]{"qbe_i_user_id", getElements("qbe_i_user_id")},//any query input
@@ -467,6 +483,10 @@ public class AT2MDMCL0007Sis {
                 "branch", getData("branch"), where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_branch_name", getElements("qbe_i_branch_name")},
+                "branch_name", "", where)) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"qbe_i_hotel", getElements("qbe_i_hotel")},
                 "hotel_desc", getData("hotel_desc"), where)) {
             return false;
@@ -491,6 +511,10 @@ public class AT2MDMCL0007Sis {
                 getData("super"), "super", where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_web", getElements("qbe_i_web")},
                 "web", getData("web"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_default_prof", getElements("qbe_i_default_prof")},
+                "default", getData("default"), where)) {
             return false;
         }
         Functions.break_time(driver, 3, 500);
@@ -527,14 +551,7 @@ public class AT2MDMCL0007Sis {
                 where)) {
             return false;
         }
-        where = " on OTHER HISTORIC";
-        if (!Functions.auditData(driver,
-                new String[]{"user_b_actions", getElements("user_b_actions")}, //actions button
-                new String[]{"user_b_actions_b_historic", getElements("user_b_actions_b_historic")}, //audit button
-                new String[]{"user_b_hist_close", getElements("user_b_hist_close")}, //audit_b_ok
-                where)) {
-            return false;
-        }
+
         driver.getReport().addHeader("OTHER DETACH", 3, false);
         where = " on OTHER DETACH";
         if (!Functions.detachTable(driver,
@@ -543,6 +560,96 @@ public class AT2MDMCL0007Sis {
                 where)) {
             return false;
         }
+        return true;
+    }
+
+    public boolean qbeHard (TestDriver driver) {
+        driver.getReport().addHeader("QBE HARD", 3, false);
+        String where = "QBE HARD";
+        if (!Functions.simpleClick(driver,
+                new String[]{"user_qbe_reset", getElements("user_qbe_reset")}, //element to click
+                "QBE RESET")){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_user_id", getElements("qbe_i_user_id")},
+                "id", "KVILIANIOT", where)) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_user_id", getElements("qbe_i_user_id")}, //any query input
+                new String[]{"user_e_result", getElements("user_e_result")}, //table result
+                where)){return false;}
+        return true;
+    }
+    public boolean historicActions(TestDriver driver) {
+        driver.getReport().addHeader("OTHER ACTIONS HISTORIC", 3, false);
+        String where = " on OTHER HISTORIC";
+        if (!Functions.checkClick(driver,
+                new String[]{"user_b_actions", getElements("user_b_actions")}, //element to click
+                new String[]{"user_b_actions_b_historic", getElements("user_b_actions_b_historic")}, //element expected to appear
+                where)) {
+            return false;
+        }
+        if (!Functions.checkClick(driver,
+                new String[]{"user_b_actions_b_historic", getElements("user_b_actions_b_historic")},
+                new String[]{"user_b_hist_close", getElements("user_b_hist_close")}, //element to click
+                where)) {
+            return false;
+        }
+        return true;
+    }
+    public boolean getData (TestDriver driver) {
+        String[] columns = {"user_p","start_d", "start_u", "end_d", "end_u"};
+        if (!Functions.collectTableData(driver,columns,"//*[contains(@id, 'pc2:t7::db')]",1,"GET DATA"))return false;
+        return true;
+    }
+    private boolean qbeHistoric (TestDriver driver) {
+        driver.getReport().addHeader("QBE RECORD", 3, false);
+        String where = " on QBE 1";
+        if (!Functions.clickQbE(driver,
+                new String[]{"historic_b_qbe", getElements("historic_b_qbe")},// query button
+                new String[]{"qbe_i_user_profile", getElements("qbe_i_user_profile")},//any query input
+                where)) {
+            return false;
+        } // where the operation occurs
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_user_profile", getElements("qbe_i_user_profile")},
+                "user_p", getData("user_p"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_start_d", getElements("qbe_i_start_d")},
+                "start_d", getData("start_d"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_start_u", getElements("qbe_i_start_u")},
+                "start_u", getData("start_u"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_end_d", getElements("qbe_i_end_d")},
+                "end_d", getData("end_d"), where)) {
+            return false;
+        }
+        if (!Functions.insertInput(driver, new String[]{"qbe_i_end_u", getElements("qbe_i_end_u")},
+                "end_u", getData("end_u"), where)) {
+            return false;
+        }
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"qbe_i_user_profile", getElements("qbe_i_user_profile")}, //any query input
+                new String[]{"historic_e_result", getElements("historic_e_result")}, //table result
+                where)){return false;}
+        return true;
+    }
+    private boolean others_actionsHistoric(TestDriver driver) {
+        driver.getReport().addHeader("OTHER DETACH", 3, false);
+        String where = " on OTHER DETACH";
+        if (!Functions.detachTable(driver,
+                new String[]{"historic_b_detach", getElements("historic_b_detach")}, //detach button
+                true,     //screenshot??
+                where)) {
+            return false;
+        }
+        Functions.break_time(driver, 3, 500);
+        if (!Functions.simpleClick(driver,
+                new String[]{"user_b_hist_close", getElements("user_b_hist_close")}, //element to click
+                "CLOSE")){return false;}
         return true;
     }
 }

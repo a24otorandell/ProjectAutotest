@@ -1248,7 +1248,7 @@ public class AT2MDMCL0003Locators {
             elements.put("edit_i_g_cuenta", "//*[contains(@id, '69:it5::content')]");
             elements.put("edit_i_c_associada", "//*[contains(@id, '70:it5::content')]");
             elements.put("edit_i_clave", "//*[contains(@id, '71:it5::content')]");
-            elements.put("edit_i_grupo", "//*[contains(@id, '72:it5::content')]");
+            elements.put("edit_i_grupo15", "//*[contains(@id, '72:it5::content')]");
             elements.put("edit_i_condi", "//*[contains(@id, '73:it5::content')]");
             elements.put("edit_i_condi_abono", "//*[contains(@id, '74:it5::content')]");
             elements.put("edit_i_ver", "//*[contains(@id, '75:it5::content')]");

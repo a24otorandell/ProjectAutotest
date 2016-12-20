@@ -2193,7 +2193,7 @@ public class AT2MDMCL0003Sis {
                 "cust_cont12",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_princing", getElements("add_i_princing")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_princing12", getElements("add_i_princing12")},
                 "princing",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }
@@ -2450,7 +2450,7 @@ public class AT2MDMCL0003Sis {
                 "cust_cont12",DataGenerator.getRandomAlphanumericSequence(2, false), where)) {
             return false;
         }
-        if (!Functions.insertInput(driver, new String[]{"add_i_princing", getElements("add_i_princing")},
+        if (!Functions.insertInput(driver, new String[]{"add_i_princing12", getElements("add_i_princing12")},
                 "princing",DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
             return false;
         }

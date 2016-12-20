@@ -30,6 +30,7 @@ public class AT2MDMCL0007Locators {
         elements.put("user_e_result", "//*[contains(@id, 'pc1:webuser::db')]/table/tbody/tr[1]/td[1]");
         elements.put("user_e_records", "//*[contains(@id, 'pc1:ot4')]");
         elements.put("user_b_ok_delete", "//*[contains(@id, 'dialogConfirmDelete::yes')]");
+        elements.put("user_qbe_reset", "//*[contains(@id, ':pc1:webuser::ch::t')]/tbody/tr[2]/th/a");
         //SEARCH
         elements.put("search_b_search", "//*[contains(@id, 'qryId1::search')]");
         elements.put("search_b_reset", "//*[contains(@id, 'qryId1::reset')]");
@@ -111,11 +112,24 @@ public class AT2MDMCL0007Locators {
         elements.put("qbe_sl_profile", "//*[contains(@id, 'webuser:soc12::content')]");
         elements.put("qbe_sl_super", "//*[contains(@id, 'webuser:selectOneChoice2::content')]");
         elements.put("qbe_i_web", "//*[contains(@id, 'webuser:it22::content')]");
+        elements.put("qbe_i_default_prof", "//*[contains(@id, 'pc1_afr_webuser_afr_c34::content')]");
         elements.put("qbe_sl_client_xml", "//*[contains(@id, 'webuser:soc13::content')]");
         elements.put("qbe_sl_client_html", "//*[contains(@id, 'webuser:soc15::content')]");
         elements.put("qbe_i_type", "//*[contains(@id, 'pc1_afr_webuser_afr_c41::content')]");
         elements.put("qbe_i_internal_user", "//*[contains(@id, 'pc1_afr_webuser_afr_c42::content')]");
         elements.put("qbe_sl_subcategory", "//*[contains(@id, 'webuser:soc38::content')]");
+        /**
+         * TABLE HISTORIC
+         */
+        elements.put("historic_b_qbe", "//*[contains(@id, 'pc2:_qbeTbr')]/a");
+        elements.put("historic_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]/a");
+        elements.put("historic_e_result", "//*[contains(@id, 'pc2:t7::db')]/table/tbody/tr[1]/td[1]");
+        //QBE
+        elements.put("qbe_i_user_profile", "//*[contains(@id, 'pc2_afr_t7_afr_c51::content')]");
+        elements.put("qbe_i_start_d", "//*[contains(@id, 'pc2:t7:id4::content')]");
+        elements.put("qbe_i_start_u", "//*[contains(@id, 'pc2_afr_t7_afr_c48::content')]");
+        elements.put("qbe_i_end_d", "//*[contains(@id, 'pc2:t7:id5::content')]");
+        elements.put("qbe_i_end_u", "//*[contains(@id, 'pc2_afr_t7_afr_c49::content')]");
     }
 }
 
