@@ -65,7 +65,7 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_other_actions(driver)){
             return false;
         }
-        if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
+      /*  if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
             return false;
         }
         if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
@@ -74,9 +74,7 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_other_actions_service_details(driver)){
             return false;
         }
-
-
-      /*  if(!Search_booking_advanced_search(driver)){return true;}
+        if(!Search_booking_advanced_search(driver)){return true;}
         return false;*/
 
         return true;
@@ -726,7 +724,6 @@ public class AT2BOOSA0001Test {
                 where);
         return true;
     }
-
     private boolean Search_booking_simple_search (TestDriver driver){
 
         String where = " on SIMPLE SEARCH";
@@ -755,7 +752,6 @@ public class AT2BOOSA0001Test {
         }
         return true;
     }
-
     private boolean Search_booking_other_actions (TestDriver driver){
         String where = " on OTHER ACTIONS";
         driver.getReport().addHeader("OTHER ACTIONS IN SEARCH BOOKING",3,false);
@@ -775,7 +771,6 @@ public class AT2BOOSA0001Test {
         }
         return true;
     }
-
     private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
         String where = " on GO TO CANCELED_BOOKINGD";
         driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
@@ -815,7 +810,6 @@ public class AT2BOOSA0001Test {
 
         return true;
     }
-
     private boolean Search_booking_other_actions_send_booking_by_fax_email (TestDriver driver){
         String where = " on ACTIONS SEND EMAIL/FAX";
         driver.getReport().addHeader("ACTIONS SEND EMAIL/FAX IN SEARCH BOOKING",3,false);
@@ -858,7 +852,6 @@ public class AT2BOOSA0001Test {
 
         return true;
     }
-
     private boolean Search_booking_other_actions_service_details (TestDriver driver){
         String where = " on ACTIONS SEND EMAIL/FAX";
         driver.getReport().addHeader("ACTIONS SERVICE DETAIL IN SEARCH BOOKING",3,false);
@@ -945,7 +938,6 @@ public class AT2BOOSA0001Test {
         }
         return true;
     }
-
     private boolean Search_booking_advanced_search (TestDriver driver){
         String where = " on SUPER SEARCH";
         driver.getReport().addHeader("SUPER SEARCH IN SEARCH BOOKING",3,false);
