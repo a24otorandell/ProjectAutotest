@@ -90,6 +90,54 @@ public class AT2ACCDI0028Test {
         String where;
         where= " on QBE";
         driver.getReport().addHeader(" QBE IN SI EXCLUSIONS MAINTENACE 2.0 ",3,false);
+        if(!Functions.clickQbE(driver,
+                new String[]{"", getElements("")},// query button
+                new String[]{"", getElements("")},//any query input
+                where)){return false;} // where the operation occurs
+        Functions.zoomOut(driver,3);
+        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+                "sequence", getData("sequence"), where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"",getElements("")},
+                "reason", getData("reason"),  where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"",getElements("")},
+                "ie", getData("ie"),  where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+                "start_date", getData("start_date"), where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"",getElements("")},
+                "active", getData("active"),  where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"",getElements("")},
+                "main_acount", getData("main_acount"),  where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+                "tto", getData("tto"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+                "b2b", getData("b2b"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+                "clasification", getData("clasification"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"",getElements("")},
+                "receptive", getData("receptive"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_contract",getElements("atlas_i_qbe_contract")},
+                "contract", getData("contract"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_hotel",getElements("atlas_i_qbe_hotel")},
+                "hotel", getData("hotel"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_chain",getElements("atlas_i_qbe_chain")},
+                "chain", getData("chain"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_destination",getElements("atlas_i_qbe_destination")},
+                "destination", getData("destination"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_market",getElements("atlas_i_qbe_market")},
+                "market", getData("market"), where)){return false;}
+        if (!Functions.insertInput(driver, new String[]{"atlas_i_qbe_country",getElements("atlas_i_qbe_country")},
+                "country", getData("country"), where)){return false;}
+        if (!Functions.selectText(driver,
+                new String[]{"atlas_i_qbe_application",getElements("atlas_i_qbe_application")},
+                "aplication", getData("aplication"),  where)){return false;}
+        if (!Functions.enterQueryAndClickResult(driver,
+                new String[]{"atlas_i_qbe_sequence", getElements("atlas_i_qbe_sequence")}, //any query input
+                new String[]{"atlas_n_records", getElements("atlas_n_records")}, //table result
+                where)){return false;} // where this operation occurs
         return true;
     }
 
