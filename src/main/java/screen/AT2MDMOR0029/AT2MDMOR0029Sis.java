@@ -231,16 +231,17 @@ public class AT2MDMOR0029Sis {
                 "text", DataGenerator.getRandomAlphanumericSequence(8, true), "on EDIT")) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_fate_to", getElements("service_authorization_ed_i_apply_fate_to")},
+                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,2,0),"on EDIT")){
+            return false;
+        }
 
         if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_date_from", getElements("service_authorization_ed_i_apply_date_from")},
                 "from",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,1,0),"on EDIT")){
             return false;
         }
 
-        if (!Functions.insertInput(driver, new String[]{"service_authorization_ed_i_apply_fate_to", getElements("service_authorization_ed_i_apply_fate_to")},
-                "to",DataGenerator.getRelativeDateToday("dd/MM/yyyy",0,2,0),"on EDIT")){
-            return false;
-        }
+
 
         if (!Functions.selectText(driver,
                 new String[]{"service_authorization_ed_sl_cod_division", getElements("service_authorization_ed_sl_cod_division")},
