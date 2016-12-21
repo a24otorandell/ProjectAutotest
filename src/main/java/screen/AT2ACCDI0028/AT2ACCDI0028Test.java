@@ -85,7 +85,6 @@ public class AT2ACCDI0028Test {
 
         return true;
     }
-
     private boolean Exclusions_maintenance_si_qbe (TestDriver driver){
         String where;
         where= " on QBE";
@@ -140,7 +139,6 @@ public class AT2ACCDI0028Test {
                 where)){return false;} // where this operation occurs
         return true;
     }
-
     private boolean Exclusions_maintenance_si_search (TestDriver driver){
         String where;
         where= " on SEARCH";
