@@ -88,7 +88,6 @@ public class AT2BOOSA0001Test {
         return true;
     }
 
-
     //SEARCH BOOKING
     private boolean Search_booking_qbe (TestDriver driver){
         String where = " on SEARCH BY QUERY BY EXAPLE";
@@ -490,7 +489,6 @@ public class AT2BOOSA0001Test {
         }
         return true;
     }
-
     private boolean Getrecords (TestDriver driver){
 
         String where = " on GET RECORDS";
@@ -733,7 +731,6 @@ public class AT2BOOSA0001Test {
                 where);
         return true;
     }
-
     private boolean Search_booking_simple_search (TestDriver driver){
 
         String where = " on SIMPLE SEARCH";
@@ -762,7 +759,6 @@ public class AT2BOOSA0001Test {
         }
         return true;
     }
-
     private boolean Search_booking_other_actions (TestDriver driver){
         String where = " on OTHER ACTIONS";
         driver.getReport().addHeader("OTHER ACTIONS IN SEARCH BOOKING",3,false);
@@ -783,7 +779,6 @@ public class AT2BOOSA0001Test {
         }
         return true;
     }
-
     private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
         String where = " on GO TO CANCELED_BOOKINGD";
         driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
@@ -828,7 +823,6 @@ public class AT2BOOSA0001Test {
         }
         return true;
     }
-
     private boolean Search_booking_other_actions_booking_confirmation (TestDriver driver){
         String where = " on BOOKING CONFIRMATION";
         driver.getReport().addHeader(" BOOKING CONFIRMATION",3,false);
@@ -848,11 +842,11 @@ public class AT2BOOSA0001Test {
                 where)){
             return false;
         }
-        Functions.break_time(driver,120,500);
+     /*   Functions.break_time(driver,120,500);
         if(!Functions.navigateTable(driver, new String[]{"actions_booking_confirmation_e_scroller", getElements("actions_booking_confirmation_e_scroller")}, //scroller xpath
                 "back")) {
             return false;
-        }
+        }*/
         return true;
     }
     private boolean Search_booking_other_actions_send_booking_by_fax_email (TestDriver driver){
