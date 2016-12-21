@@ -6,7 +6,7 @@ import screen.AT2Test;
 import java.util.Map;
 
 /**
- * Created by vsolis on 18/11/2016.
+ * Created by aibanez on 21/12/2016.
  */
 public class AT2ACCSU0051Manager implements AT2Test{
     AT2ACCSU0051Test test;

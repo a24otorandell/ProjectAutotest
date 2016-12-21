@@ -6,6 +6,7 @@ import java.util.Map;
 /**
  * @author acarrillo on 18/05/2016.
  */
+@SuppressWarnings("UnusedParameters")
 public class AT2BOOSA1002Locators {
     Map<String, String> elements = new HashMap<>();
 
@@ -32,6 +33,7 @@ public class AT2BOOSA1002Locators {
         elements.put("header_add_lov_user", "//*[contains(@id, 'ilov1::lovIconId')]");
         elements.put("header_add_i_booking_type", "//*[contains(@id, 'rtreCodTipoRes::content')]");
         elements.put("header_add_lov_booking_type", "//*[contains(@id, 'rtreCodTipoRes::lovIconId')]");
+        elements.put("header_add_lov_booking_type_i_desc", "//*[contains(@id, 'r2:0:rtreCodTipoRes::_afrLovInternalQueryId:value10::content')]");
         elements.put("header_add_i_ag_ref", "//*[contains(@id, 'it23::content')]");
         elements.put("header_add_i_despt", "//*[contains(@id, 'soc11::content')]");
         elements.put("header_add_i_adults", "//*[contains(@id, 'it19::content')]");
@@ -47,6 +49,7 @@ public class AT2BOOSA1002Locators {
         elements.put("search_b_icon", "//*[contains(@id, 'cb2::icon')]");
         elements.put("search_i_booking", "//*[contains(@id, 'it55::content')]");
         elements.put("search_b_search", "//*[contains(@id, '0:cb1header')]");
+        elements.put("search_b_cancel_booking", "//*[contains(@id, 'r2:1:r2:0:ctb3::icon')]");
 
         elements.put("search_e_result", "//*[contains(@id, 'pc1:tSales::db')]/table/tbody/tr/td[1]");
         elements.put("search_result_b_actions", "//*[contains(@id, 'pc1:pdm12:dc_m1')]");
@@ -70,7 +73,7 @@ public class AT2BOOSA1002Locators {
         elements.put("header_b_actions_b_tobooking", "//*[contains(@id, '0:pcgm1:dc_cmi2')]/td[2]");
         elements.put("header_b_actions_b_tobooking_b_accept", "//*[contains(@id, '0:cb10')]");
         //PAXES
-        elements.put("header_b_actions_b_paxes", "//*[contains(@id, '0:pcgm1:dc_cmi5')]/td[2]");
+        elements.put("header_b_actions_b_paxes", "//*[contains(@id, 'r2:1:r2:0:pcgm1:dc_cmi3')]/td[2]");
 
         elements.put("header_b_actions_b_paxes_e_record", "//*[contains(@id, 'pc1:tPaxes::db')]/table/tbody/tr[1]/td[1]");
 
@@ -89,13 +92,15 @@ public class AT2BOOSA1002Locators {
         elements.put("header_b_actions_b_paxes_b_add_lov_country_i", "//*[contains(@id, 'pc1:pcgt1:gpaiCodPais1Id::_afrLovInternalQueryId:value00::content')]");
         elements.put("header_b_actions_b_paxes_b_add_i_age", "//*[contains(@id, 'pc1:pcgt1:it10::content')]");
         elements.put("header_b_actions_b_paxes_b_add_i_passport", "//*[contains(@id, 'pc1:pcgt1:it11::content')]");
+        elements.put("header_b_actions_b_paxes_b_add_b_ok_alert", "//*[contains(@id, 'doc0::msgDlg::_hce')]/table/tbody/tr/td[3]/div");
+        elements.put("header_b_actions_b_paxes_b_add_e_bar_alert", "//*[contains(@id, 'doc0::msgDlg::_ttxt')]");
         elements.put("header_b_actions_b_paxes_b_add_b_save", "//*[contains(@id, 'pc1:pcgt1:btn_commitExit')]");
 
         elements.put("header_b_actions_b_paxes_b_delete", "//*[contains(@id, 'pc1:pcgt1:boton_remove')]");
         elements.put("header_b_actions_b_paxes_b_delete_b_ok", "//*[contains(@id, 'pc1:pcgt1:cbt1')]");
         elements.put("header_b_actions_b_paxes_b_edit", "//*[contains(@id, 'pc1:pcgt1:boton_edit')]");
 
-        elements.put("header_b_actions_b_paxes_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]/a");
+        elements.put("header_b_actions_b_paxes_b_qbe", "//*[contains(@id, 'r2:0:r9:0:pc1:_tbr::oc')]//*[contains(@id, 'r2:0:r9:0:pc1:_qbeTbr')]/a");
         elements.put("header_b_actions_b_paxes_b_qbe_i_order", "//*[contains(@id, 'pc1_afr_tPaxes_afr_c7::content')]");
         elements.put("header_b_actions_b_paxes_b_qbe_i_name", "//*[contains(@id, 'pc1_afr_tPaxes_afr_c4::content')]");
         elements.put("header_b_actions_b_paxes_b_qbe_i_surnames", "//*[contains(@id, 'pc1_afr_tPaxes_afr_c5::content')]");
@@ -107,12 +112,12 @@ public class AT2BOOSA1002Locators {
         elements.put("header_b_actions_b_paxes_b_qbe_i_country", "//*[contains(@id, 'pc1_afr_tPaxes_afr_c2::content')]");
         elements.put("header_b_actions_b_paxes_b_qbe_i_country_description", "//*[contains(@id, 'pc1_afr_tPaxes_afr_c3::content')]");
 
-        elements.put("header_b_actions_b_paxes_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
-        elements.put("header_b_actions_b_paxes_b_detach_b_close", "//*[contains(@id, 'pc1::_afrDetachDialogId::close')]");
+        elements.put("header_b_actions_b_paxes_b_detach", "//*[contains(@id, 'r2:1:r2:0:r9:0:pc1:_dchTbr')]/a");
+        elements.put("header_b_actions_b_paxes_b_detach_b_close", "//*[contains(@id, 'r2:1:r2:0:r9:0:pc1::_afrDetachDialogId::close')]");
 
-        elements.put("header_b_actions_b_paxes_b_close", "//*[contains(@id, '0:d19::close')]");
+        elements.put("header_b_actions_b_paxes_b_close", "//*[contains(@id, 'r3:1:r2:0:d20::close')]");
         //COLLECTIONDATA
-        elements.put("header_b_actions_b_collectiondata", "//*[contains(@id, '0:pcgm1:dc_cmi3')]/td[2]");
+        elements.put("header_b_actions_b_collectiondata", "//*[contains(@id, '0:pcgm1:dc_cmi5')]/td[2]");
         elements.put("header_b_actions_b_collectiondata_b_close", "//*[contains(@id, '0:d20::close')]");
         //HOTELOPIACLIENT
         elements.put("header_b_actions_b_hotelopiaclient", "//*[contains(@id, '0:pcgm1:dc_cmi7')]/td[2]");
@@ -130,9 +135,68 @@ public class AT2BOOSA1002Locators {
         elements.put("header_b_consult_b_cancelation_b_close", "//*[contains(@id, ':0:d29::close')]");
         //HEADER HISTORIC
         elements.put("header_b_consult_b_headerhistoric", "//*[contains(@id, '0:pcgm2:dc_cmi5')]/td[2]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab", "//*[contains(@id, 'sdi1::disAcr')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe", "//*[contains(@id, 'r2:0:r3:0:pc1:_qbeTbr')]/a");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_date", "//*[contains(@id, 'pc1:t1:id3::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_refTTOO", "//*[contains(@id, 'pc1_afr_t1_afr_c5::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_TTOOCompany", "//*[contains(@id, 'pc1_afr_t1_afr_c7::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_TTOOName", "//*[contains(@id, 'pc1_afr_t1_afr_c12::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_TOdesc", "//*[contains(@id, 'pc1_afr_t1_afr_c4::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_branchoffice", "//*[contains(@id, 'pc1_afr_t1_afr_c6::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_description", "//*[contains(@id, 'pc1_afr_t1_afr_c11::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_main_passenger_name", "//*[contains(@id, 'pc1_afr_t1_afr_c10::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_adults", "//*[contains(@id, 'pc1_afr_t1_afr_c1::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_children", "//*[contains(@id, 'pc1_afr_t1_afr_c13::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_babies", "//*[contains(@id, 'pc1_afr_t1_afr_c14::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_credit_type", "//*[contains(@id, 'pc1_afr_t1_afr_c22::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_interface", "//*[contains(@id, 'pc1_afr_t1_afr_c8::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_company", "//*[contains(@id, 'pc1_afr_t1_afr_c9::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_user", "//*[contains(@id, 'pc1_afr_t1_afr_c2::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_agent", "//*[contains(@id, 'pc1_afr_t1_afr_c23::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_cancel_user", "//*[contains(@id, 'pc1:t1:it4::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_qbe_i_cancel_date", "//*[contains(@id, 'pc1:t1:id4::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_booking_tab_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
+
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab", "//*[contains(@id, 'sdi2::disAcr')]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_action", "//*[contains(@id, 'pc2:pcgm1:dc_m1')]/div/table/tbody/tr/td[2]/a");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_action_b_query_sendings", "//*[contains(@id, 'pc2:pcgm1:dc_cmi1')]/td[2]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_detach", "//*[contains(@id, 'r2:0:r3:0:pc2:_dchTbr')]/a");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe", "//*[contains(@id, 'r2:0:r3:0:pc2:_qbeTbr')]/a");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe_i_code", "//*[contains(@id, 'pc2_afr_t2_afr_c17::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe_i_supplier", "//*[contains(@id, 'pc2_afr_t2_afr_c18::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe_i_hotel", "//*[contains(@id, 'pc2_afr_t2_afr_c19::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe_i_sending_date", "//*[contains(@id, 'pc2:t2:id1::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe_i_sending_type", "//*[contains(@id, 'pc2_afr_t2_afr_c16::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe_i_status", "//*[contains(@id, 'pc2_afr_t2_afr_c15::content')]");
+        elements.put("header_b_consult_b_headerhistoric_e_supp_tab_b_qbe_i_address", "//*[contains(@id, 'pc2_afr_t2_afr_c26::content')]");
+
         elements.put("header_b_consult_b_headerhistoric_b_close", "//*[contains(@id, ':0:d4::close')]");
         //HEADER OPERATION HISTORIC
         elements.put("header_b_consult_b_headeroperationhistoric", "//*[contains(@id, '0:pcgm2:dc_cmi6')]/td[2]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_detach", "//*[contains(@id, r2:0:r4:0:pc1:_dchTbr')]/a");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe", "//*[contains(@id, 'r2:0:r4:0:pc1:_qbeTbr')]/a");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_ord", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c4::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_op", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c8::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_app", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c1::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_server", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c9::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_credential", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c3::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_user_atlas", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c6::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_user_web", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c10::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_id_web", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c7::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_ip", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c5::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_i_domain", "//*[contains(@id, 'r4_afr_0_afr_pc1_afr_t2_afr_c2::content')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_ord", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it47')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_op", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it3')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_app", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it4')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_server", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it5')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_credential", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it7')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_user_atlas", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it6')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_user_web", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it8')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_id_web", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it10')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_ip", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it9')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_b_qbe_e_domain", "//*[contains(@id, 'r2:0:r4:0:pc1:t2:0:it11')]");
+        elements.put("header_b_consult_b_headeroperationhistoric_e_result", "//*[contains(@id, 'r2:0:r4:0:pc1:t2::db')]/table/tbody/tr/td[1]");
+
         elements.put("header_b_consult_b_headeroperationhistoric_b_close", "//*[contains(@id, '0:d15::close')]");
         //GENERAL HISTORIC
         elements.put("header_b_consult_b_generalhistoric", "//*[contains(@id, '0:pcgm2:dc_cmi7')]/td[2]");
@@ -143,8 +207,36 @@ public class AT2BOOSA1002Locators {
         //AUDIT DATA
         elements.put("header_b_consult_b_audit", "//*[contains(@id, '0:pcgm2:dc_cmi9')]/td[2]");
         elements.put("header_b_consult_b_audit_b_close", "//*[contains(@id, '0:d13::close')]");
-
+        //CANCO
+        elements.put("header_b_consult_b_canco", "//*[contains(@id, 'r2:1:r2:0:pcgm2:dc_cmi10']/td[2]')]");
+        elements.put("header_b_consult_b_canco_b_exit", "//*[contains(@id, 'r2:1:r2:0:d23::close')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe", "//*[contains(@id, 'r2:0:r10:0:pc1:_qbeTbr')]/a");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_tip", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c5::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_ord", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c8::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_service", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c3::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_canco_cost", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c10::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_canco_sale", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c9::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_canco_cpa", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c5::content7')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_taxC_vta", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c4::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_taxC_margin", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c13::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_ch_cost", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c2::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_ch_sale", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c6::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_ch_cpa", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c11::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_taxB_vta", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c12::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_qbe_i_taxB_margin", "//*[contains(@id, 'afr_r10_afr_0_afr_pc1_afr_t2_afr_c1::content')]");
+        elements.put("header_b_consult_b_canco_t_currency_b_detach", "//*[contains(@id, 'r2:0:r10:0:pc1:_dchTbr')]/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe", "//*[contains(@id, 'r2:0:r10:0:pc2:_qbeTbr']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_from", "//*[contains(@id, 'r2:0:r10:0:pc2:t6:id1::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_to", "//*[contains(@id, 'r2:0:r10:0:pc2:t6:id2::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_description", "//*[contains(@id, 'afr_r10_afr_0_afr_pc2_afr_t6_afr_c19::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_total_cost", "//*[contains(@id, 'afr_r10_afr_0_afr_pc2_afr_t6_afr_c25::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_currency", "//*[contains(@id, 'afr_r10_afr_0_afr_pc2_afr_t6_afr_c22::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_trp", "//*[contains(@id, 'afr_r10_afr_0_afr_pc2_afr_t6_afr_c14::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_rv", "//*[contains(@id, 'afr_r10_afr_0_afr_pc2_afr_t6_afr_c2::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_qbe_i_mod", "//*[contains(@id, 'afr_r10_afr_0_afr_pc2_afr_t6_afr_c1::content']/a");
+        elements.put("header_b_consult_b_canco_t_endowments_b_detach", "//*[contains(@id, 'r2:0:r10:0:pc2:_dchTbr']/a");
         //HOTEL TAB
+        elements.put("hotel_tab", "//*[contains(@id, 'r2:1:i1::icon')]");
         elements.put("hotel_b_save", "//*[contains(@id, '1:r1:0:r2:0:pc1:pcgt12:boton_commit')]");
         elements.put("hotel_b_add", "//*[contains(@id, '1:r1:0:r2:0:pc1:pcgt12:boton_add')]");
         elements.put("hotel_b_remove", "//*[contains(@id, '1:r1:0:r2:0:pc1:pcgt12:boton_remove')]");
@@ -165,6 +257,14 @@ public class AT2BOOSA1002Locators {
         elements.put("hotel_e_result_lov_char", "//*[contains(@id, 'pc1:tSales:1:transCharacId::lovIconId')]");
         elements.put("hotel_e_result_i_board", "//*[contains(@id, 'pc1:tSales:1:transBoardId::content')]");
         elements.put("hotel_e_result_lov_board", "//*[contains(@id, 'pc1:tSales:1:transBoardId::lovIconId')]");
+        elements.put("hotel_e_result_i_adults", "//*[contains(@id, 'pc1:tSales:0:nroAdults::content')]");
+        elements.put("hotel_e_result_i_childs", "//*[contains(@id, 'pc1:tSales:0:nroNins::content')]");
+        elements.put("hotel_e_result_i_infants", "//*[contains(@id, 'pc1:tSales:0:nroBebes::content')]");
+        elements.put("hotel_e_result_ch_SI", "//*[contains(@id, 'pc1:tSales:0:incVenta::content')]");
+        elements.put("hotel_e_result_ch_PU", "//*[contains(@id, 'pc1:tSales:0:incPurchase::content')]");
+        elements.put("hotel_e_result_ch_Blo", "//*[contains(@id, 'pc1:tSales:0:indBloqueo::content')]");
+        elements.put("hotel_e_result_ch_MC", "//*[contains(@id, pc1:tSales:0:indCompra::content')]");
+        elements.put("hotel_e_result_sl_tranfers", "//*[contains(@id, 'pc1:tSales:0:indTrasl::content')]");
 
         //Hotel query
         elements.put("hotel_b_query", "//*[contains(@id, '1:r1:0:r2:0:pc1:_qbeTbr')]");
@@ -185,21 +285,72 @@ public class AT2BOOSA1002Locators {
         elements.put("hotel_b_actions", "//*[contains(@id, '1:r1:0:r2:0:pc1:pdm12:dc_m1')]/div/table/tbody/tr/td[3]/div");
         elements.put("hotel_b_actions_b_audit", "//*[contains(@id, 'r1:0:r2:0:pc1:pdm12:dc_cmi1')]/td[2]");
         elements.put("hotel_b_actions_b_audit_b_ok", "//*[contains(@id, 'd13::ok')]");
+        //hotel actions supplier info
         elements.put("hotel_b_actions_b_supplierinfo", "//*[contains(@id, 'r1:0:r2:0:pc1:pdm12:dc_cmi7')]/td[2]");
+
+        elements.put("hotel_b_actions_b_supplierinfo_b_edit", "//*[contains(@id, 'r2:0:pc4:pcgt2:boton_edit')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_edit_i_supl_ref", "//*[contains(@id, 'r2:0:pc4:pcgt2:it19::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_edit_i_cancel_ref", "//*[contains(@id, 'r2:0:pc4:pcgt2:it21::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_edit_i_denied", "//*[contains(@id, 'r2:0:pc4:pcgt2:sbc21::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_edit_i_den_comments", "//*[contains(@id, 'r2:0:pc4:pcgt2:it22::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_edit_b_save", "//*[contains(@id, 'r2:0:pc4:pcgt2:btn_commitExit')]");
+
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe", "//*[contains(@id, 'r1:0:r2:0:pc4:_qbeTbr')]/a");
+        elements.put("hotel_b_actions_b_supplierinfo_b_detach", "//*[contains(@id, 'r1:0:r2:0:pc4:_dchTbr')]/a");
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_qbe", "//*[contains(@id, 'r1:0:r2:0:pc5:_qbeTbr')]/a");
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_detach", "//*[contains(@id, 'r1:0:r2:0:pc5:_dchTbr')]/a");
+        elements.put("hotel_b_actions_b_supplierinfo_e_result", "//*[contains(@id, 'r2:0:pc4:t8::db')]/table/tbody/tr/td[1]");
         elements.put("hotel_b_actions_b_supplierinfo_b_ok", "//*[contains(@id, '0:d9::close')]");
-
+        // elements
+        elements.put("hotel_b_actions_b_supplierinfo_i_hc", "//*[contains(@id, 'r2:0:pc4:t8:0:it24::content')]");//value
+        elements.put("hotel_b_actions_b_supplierinfo_i_supl_ref", "//*[contains(@id, 'r2:0:pc4:t8:0:it32::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_i_cancel_ref", "//*[contains(@id, 'r2:0:pc4:t8:0:it30::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_ch_denied", "//*[contains(@id, 'r2:0:pc4:t8:0:sbc19::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_i_den_comments", "//*[contains(@id, 'r2:0:pc4:t8:0:it20::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_i_creation_user", "//*[contains(@id, 'r2:0:pc4:t8::db')]/table/tbody/tr/td[2]/div/table/tbody/tr/td[6]/input");//value
+        elements.put("hotel_b_actions_b_supplierinfo_i_creation_date", "//*[contains(@id, 'r1:0:r2:0:pc4:t8:0:it50')]");//value
+        elements.put("hotel_b_actions_b_supplierinfo_i_mod_user", "//*[contains(@id, 'r1:0:r2:0:pc4:t8:0:ot50')]");
+        elements.put("hotel_b_actions_b_supplierinfo_i_mod_date", "//*[contains(@id, 'r1:0:r2:0:pc4:t8:0:ot63')]");
+        //qbe inputs
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_hc", "//*[contains(@id, 'r2_afr_0_afr_pc4_afr_t8_afr_c50::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_supl_ref", "//*[contains(@id, 'r2_afr_0_afr_pc4_afr_t8_afr_c76::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_cancel_ref", "//*[contains(@id, 'r2_afr_0_afr_pc4_afr_t8_afr_c45::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_sl_denied", "//*[contains(@id, 'r2:0:pc4:t8:soc14::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_den_comments", "//*[contains(@id, 'r2_afr_0_afr_pc4_afr_t8_afr_c71::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_creation_user", "//*[contains(@id, 'r2_afr_0_afr_pc4_afr_t8_afr_c70::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_creation_date", "//*[contains(@id, 'r2:0:pc4:t8:id10::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_mod_user", "//*[contains(@id, 'r2_afr_0_afr_pc4_afr_t8_afr_c65::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_b_qbe_i_mod_date", "//*[contains(@id, 'r2:0:pc4:t8:id2::content')]");
+        // qbe history inputs
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_qbe_i_hist_ord", "//*[contains(@id, 'r2_afr_0_afr_pc5_afr_t11_afr_c84::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_qbe_i_supl_ref", "//*[contains(@id, 'r2_afr_0_afr_pc5_afr_t11_afr_c86::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_qbe_i_cancel_ref", "//*[contains(@id, 'r2_afr_0_afr_pc5_afr_t11_afr_c85::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_qbe_sl_denied", "//*[contains(@id, 'r2:0:pc5:t11:soc5::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_qbe_i_den_comments", "//*[contains(@id, 'r2_afr_0_afr_pc5_afr_t11_afr_c78::content')]");
+        elements.put("hotel_b_actions_b_supplierinfo_history_b_qbe_i_mod_user", "//*[contains(@id, 'r2_afr_0_afr_pc5_afr_t11_afr_c81::content')]");
+        //Arrow hiding more actions
+        elements.put("hotel_b_arrow", "//*[contains@id, 'r1:0:r2:0:pc1:t2::eoi')]");
         //Hotel fixinfo
-
         elements.put("hotel_b_fixinfo", "//*[contains(@id, '1:r1:0:r2:0:pc1:ctb1::icon')]");
-        elements.put("hotel_b_fixinfo_i_telephone", "//*[contains(@id, '---')]");
-        elements.put("hotel_b_fixinfo_i_email", "//*[contains(@id, '---')]");
-        elements.put("hotel_b_fixinfo_i_comments", "//*[contains(@id, '---')]");
+        elements.put("hotel_b_fixinfo_i_telephone", "//*[contains(@id, 'r1:0:r2:0:r1:0:it1::content')]");
+        elements.put("hotel_b_fixinfo_i_email", "//*[contains(@id, 'r1:0:r2:0:r1:0:it2::content')]");
+        elements.put("hotel_b_fixinfo_i_comments", "//*[contains(@id, 'r1:0:r2:0:r1:0:it3::content')]");
         elements.put("hotel_b_fixinfo_b_ok", "//*[contains(@id, '1:r1:0:r2:0:pc1:ctb1::icon')]");
-
+        elements.put("hotel_b_fixinfo_b_send", "//*[contains(@id, 'r1:0:r2:0:r1:0:cb1sendmain')]");
         //Hotel Notifications
         elements.put("hotel_b_notification", "//*[contains(@id, '1:r2:1:pc1:ctb3::icon')]");
-        elements.put("hotel_b_notification_b_ok", "//*[contains(@id, '---')]");
-
+        elements.put("hotel_b_notification_b_close", "//*[contains(@id, 'r1:0:r2:0:d23::close')]");
+        elements.put("hotel_b_notification_b_accept", "//*[contains(@id, 'r1:0:r2:0:cb10')]");
+        elements.put("hotel_b_notification_b_qbe", "//*[contains(@id, 'r1:0:r2:0:pc3:_qbeTbr')]/a");
+        elements.put("hotel_b_notification_b_detach", "//*[contains(@id, 'r1:0:r2:0:pc3:_dchTbr')]/a");
+        elements.put("hotel_b_notification_b_qbe_i_hotel_name", "//*[contains(@id, 'r2_afr_0_afr_pc3_afr_t15_afr_c61::content')]");
+        elements.put("hotel_b_notification_b_qbe_i_supplier_name", "//*[contains(@id, 'r2_afr_0_afr_pc3_afr_t15_afr_c56::content')]");
+        elements.put("hotel_b_notification_b_qbe_i_fax", "//*[contains(@id, 'r2_afr_0_afr_pc3_afr_t15_afr_c57::content')]");
+        elements.put("hotel_b_notification_b_qbe_i_mail", "//*[contains(@id, 'r2_afr_0_afr_pc3_afr_t15_afr_c60::content')]");
+        elements.put("hotel_b_notification_b_qbe_i_language", "//*[contains(@id, 'r2_afr_0_afr_pc3_afr_t15_afr_c62::content')]");
+        elements.put("hotel_b_notification_b_qbe_i_view", "//*[contains(@id, 'r2_afr_0_afr_pc3_afr_t15_afr_c63::content')]");
+        elements.put("hotel_b_notification_b_qbe_i_update_date", "//*[contains(@id, 'r2_afr_0_afr_pc3_afr_t15_afr_c58::content')]");
+        //TODO Encontrar una booking con un registro o averiguar ande coño se crean
         //TRANSFER TAB
         elements.put("transfer_tab_tab", "//*[contains(@id, 'pt1:dyntdc:r1:1:i2')]/a");
         //toolbar
@@ -211,15 +362,18 @@ public class AT2BOOSA1002Locators {
         elements.put("transfer_b_fixinfo", "//*[contains(@id, '1:pc1:ctb1::icon')]");
         elements.put("transfer_b_notification", "//*[contains(@id, '1:pc1:ctb3::icon')]");
         elements.put("transfer_b_query", "//*[contains(@id, '1:pc1:_qbeTbr')]");
+        elements.put("transfer_error_b_ok", "//*[contains(@id, 'msgDlg::cancel')]");
         //result
         elements.put("transfer_e_result", "//*[contains(@id, '1:pc1:t1::db')]/table/tbody/tr/td[1]/span");
         elements.put("transfer_e_result_i_date", "//*[contains(@id, '1:pc1:t1:1:id1::content')]");
         elements.put("transfer_e_result_i_fromzone", "//*[contains(@id, '1:pc1:t1:1:inputListOfValuesZonOri::content')]");
         elements.put("transfer_e_result_lov_fromzone", "//*[contains(@id, '1:pc1:t1:1:inputListOfValuesZonOri::lovIconId')]");
+        elements.put("transfer_e_result_lov_fromzone_i_code", "//*[contains(@id, 'pc1:t1:1:inputListOfValuesZonOri::_afrLovInternalQueryId:value00::content')]");
         elements.put("transfer_e_result_i_fromhotel", "//*[contains(@id, '1:pc1:t1:1:inputListOfValues9::content')]");
         elements.put("transfer_e_result_lov_fromhotel", "//*[contains(@id, '1:pc1:t1:1:inputListOfValues9::lovIconId')]");
         elements.put("transfer_e_result_i_tozone", "//*[contains(@id, '1:pc1:t1:1:inputListOfValuesZonDes::content')]");
         elements.put("transfer_e_result_lov_tozone", "//*[contains(@id, '1:pc1:t1:1:inputListOfValuesZonDes::content')]");
+        elements.put("transfer_e_result_lov_tozone_i_code", "//*[contains(@id, 'pc1:t1:1:inputListOfValuesZonDes::_afrLovInternalQueryId:value00::content')]");
         elements.put("transfer_e_result_i_tohotel", "//*[contains(@id, '1:pc1:t1:1:inputListOfValues8::content')]");
         elements.put("transfer_e_result_lov_tohotel", "//*[contains(@id, '1:pc1:t1:1:inputListOfValues8::lovIconId')]");
         elements.put("transfer_e_result_i_salecontract", "//*[contains(@id, '1:pc1:t1:1:transNomContrVtaId::content')]");
@@ -232,6 +386,17 @@ public class AT2BOOSA1002Locators {
         elements.put("transfer_e_result_lov_vehicle", "//*[contains(@id, '1:pc1:t1:1:inputListOfValuesTipVeh::lovIconId')]");
         elements.put("transfer_e_result_i_flight", "//*[contains(@id, '1:pc1:t1:1:inputListOfValuesNumVuelo::content')]");
         elements.put("transfer_e_result_lov_flight", "//*[contains(@id, '1:pc1:t1:1:inputListOfValuesNumVuelo::lovIconId')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight", "//*[contains(@id, '1481276943390')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_i_flight_name", "//*[contains(@id, 'r3:1:r15:0:it6::content')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_i_arrival", "//*[contains(@id, 'r3:1:r15:0:transAerOriId::content')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_lov_arrival", "//*[contains(@id, 'r3:1:r15:0:transAerOriId::lovIconId')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_lov_arrival_i_description", "//*[contains(@id, '3:1:r15:0:transAerOriId::_afrLovInternalQueryId:value10::content')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_lov_arrival_b_search", "//*[contains(@id, 'r3:1:r15:0:transAerOriId::_afrLovInternalQueryId::search')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_i_hour", "//*[contains(@id, 'r3:1:r15:0:it4::content')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_b_acept", "//*[contains(@id, 'msgDlg::cancel')]");
+        elements.put("transfer_e_result_lov_flight_b_create_flight_e_result", "//*[contains(@id, 'r3:1:pc1:t1:1:inputListOfValuesNumVuelo_afrLovInternalTableId::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("transfer_e_result_lov_flight_b_search", "//*[contains(@id, 'pc1:t1:1:inputListOfValuesNumVuelo::_afrLovInternalQueryId::search')]");
+        elements.put("transfer_e_result_lov_flight_b_ok", "//*[contains(@id, 'pc1:t1:1:inputListOfValuesNumVuelo::lovDialogId::ok')]");
         elements.put("transfer_e_result_i_flighthour", "//*[contains(@id, '1:pc1:t1:1:it20::content')]");
         elements.put("transfer_e_result_i_depart", "//*[contains(@id, '1:pc1:t1:1:inputListOfValues5::content')]");
         elements.put("transfer_e_result_lov_depart", "//*[contains(@id, '1:pc1:t1:1:inputListOfValues5::lovIconId')]");
@@ -388,11 +553,8 @@ public class AT2BOOSA1002Locators {
         elements.put("extra_remmarks_voucher_b_save", "//*[contains(@id, '0:pcgt2:boton_commit')]");
         elements.put("extra_remmarks_voucher_b_edit_i_internal", "//*[contains(@id, '0:it5::content')]");
         elements.put("extra_remmarks_voucher_b_edit_b_save", "//*[contains(@id, '0:pcgt3:boton_commit')]");
-
-
-        //FEES AND DISCOUNTS TABL
+        //FEES AND DISCOUNTS TABLE
         elements.put("extra_tab_tab", "//*[contains(@id, 'pt1:dyntdc:r1:1:image2']/a");
-
         //toolbar
         elements.put("fees_b_save", "//*[contains(@id, '1:pc1:pcgt12:boton_commit')]");
         elements.put("fees_b_add", "//*[contains(@id, '1:pc1:pcgt12:boton_add')]");
@@ -401,9 +563,7 @@ public class AT2BOOSA1002Locators {
         elements.put("fees_b_actions", "//*[contains(@id, 'pc1:pcgm1:dc_m1')]/div/table/tbody/tr/td[3]");
         elements.put("fees_b_fixinfo", "//*[contains(@id, '1:pc1:ctb1::icon')]");
         elements.put("fees_b_query", "//*[contains(@id, '1:pc1:_qbeTbr')]");
-
         //ADD
-
         elements.put("fees_b_add_i_startdate", "//*[contains(@id, 'pc1:pcgt12:id4::content')]");
         elements.put("fees_b_add_lov_extra", "//*[contains(@id, '1:pc1:pcgt12:ilov1::lovIconId')]");
         elements.put("fees_b_add_i_extra", "//*[contains(@id, '1:pc1:pcgt12:ilov1::content')]");
@@ -423,7 +583,6 @@ public class AT2BOOSA1002Locators {
         elements.put("fees_b_add_lov_product", "//*[contains(@id, '1:pc1:pcgt12:ilov5::lovIconId')]");
         elements.put("fees_b_add_i_product", "//*[contains(@id, '1:pc1:pcgt12:ilov5::content')]");
         elements.put("fees_b_add_b_save", "//*[contains(@id, '1:pc1:pcgt12:btn_commitExit')]");
-
         //QUERY
         elements.put("fees_b_query_i_startdate", "//*[contains(@id, '1:pc1:tExtras:id9::content')]");
         elements.put("fees_b_query_i_extra", "//*[contains(@id, '1_afr_pc1_afr_tExtras_afr_c4::content')]");
@@ -436,10 +595,8 @@ public class AT2BOOSA1002Locators {
         elements.put("fees_b_query_i_costperunit", "//*[contains(@id, '_afr_1_afr_pc1_afr_tExtras_afr_c15::content')]");
         elements.put("fees_b_query_i_currency", "//*[contains(@id, 'afr_1_afr_pc1_afr_tExtras_afr_c17::content')]");
         elements.put("fees_b_query_i_saleperunit", "//*[contains(@id, '_afr_1_afr_pc1_afr_tExtras_afr_c16::content')]");
-
         //ACTIONS
         elements.put("fees_b_actions_b_audit", "//*[contains(@id, '1:pc1:pcgm1:dc_cmi1')]/td[2]");
-
         //REMARKS
         elements.put("fees_remmarks_internal_b_edit", "//*[contains(@id, '0:pcgt1:boton_edit')]");
         elements.put("fees_remmarks_internal_b_save", "//*[contains(@id, '0:pcgt1:boton_commit')]");

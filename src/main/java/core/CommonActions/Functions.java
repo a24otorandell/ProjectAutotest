@@ -44,9 +44,11 @@ public class Functions {
                 new String[]{"header_add", getElements("header_add")}, //element to click
                 " on CREATION HEADER")){return false;}*/
         try {
+            break_time(driver, 2, 500);
             driver.getDriver().findElement(By.xpath(path[1])).click();
+            break_time(driver, 2, 500);
             driver.getReport().addContent(path[0] + " clicked " + where);
-
+            break_time(driver, 2, 500);
         } catch (Exception e) {
             String ecode = "--ERROR: simpleClick(): Unable to click the element " + path[0] + " with xpath: " + path[1] + where + ".";
             e.printStackTrace();
@@ -293,6 +295,7 @@ public class Functions {
         }
         return true;
     }
+
     /**
      * This method does a check click and a simple click, intended to do click and search actions which are very common
      *
@@ -302,13 +305,13 @@ public class Functions {
      * @param where    String - Tells where the operation is taking effect
      * @return {@code boolean} to control the process flow
      */
-    public static boolean clickSearchAndResult(TestDriver driver, String[] b_search, String[] e_result,int segundos, int milisegundos, String where) {
+    public static boolean clickSearchAndResult(TestDriver driver, String[] b_search, String[] e_result, int segundos, int milisegundos, String where) {
         //HOW TO CALL THIS METHOD
         /*if(!Functions.clickSearchAndResult(driver,
                 new String[]{"x", getElements("x")}, //search button
                 new String[]{"y", getElements("y")}, //result element
                 " on SEARCH")){return false;}*/ // where
-        if (!checkClick(driver, b_search, e_result,segundos,milisegundos, where)) {
+        if (!checkClick(driver, b_search, e_result, segundos, milisegundos, where)) {
             return false;
         }
         //break_time(driver, segundos, milisegundos);
@@ -560,6 +563,7 @@ public class Functions {
         return true;
 
     }
+
     /**
      * this method fills a LoV field by searching in the internal lov search for a value, and saves it into data for a further usage
      *
@@ -593,7 +597,7 @@ public class Functions {
         if (!checkClick(driver, b_lov, b_search, where)) {
             return false;
         }
-        if (!clickSearchAndResult(driver, b_search, e_result,segundos, milisegundos, where)) {
+        if (!clickSearchAndResult(driver, b_search, e_result, segundos, milisegundos, where)) {
             return false;
         }
         if (!checkClickByAbsence(driver, b_ok, recursiveXPaths.lov_e_result, where)) {
@@ -744,6 +748,11 @@ public class Functions {
         if (!checkClick(driver, b_lov, recursiveXPaths.lov_b_search, where)) {
             return false;
         }
+        try {
+            break_time(driver, 30, 500);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if (!insertInput(driver, i_inside_lov, "ref" + data_name, value, where)) {
             return false;
         }
@@ -873,6 +882,7 @@ public class Functions {
         }
         return true;
     }
+
     /**
      * This method presses the enter button to do a query search, and then tries to click a result
      *
@@ -883,7 +893,7 @@ public class Functions {
      * @return {@code boolean} to control the process flow
      * @see ErrorManager#process(TestDriver, String)
      */
-    public static boolean enterQueryAndClickResult(TestDriver driver, String[] qbe_input, String[] e_result,  int seconds, long miliseconds, String where) {
+    public static boolean enterQueryAndClickResult(TestDriver driver, String[] qbe_input, String[] e_result, int seconds, long miliseconds, String where) {
         //HOW TO CALL THIS METHOD
         /*if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"x", getElements("x")}, //any query input
@@ -1632,6 +1642,37 @@ public class Functions {
     }
 
     /**
+     * @param driver
+     * @param checkbox
+     * @param data
+     * @param where
+     * @return
+     */
+    public static boolean randomCheck(TestDriver driver, String checkbox, String data, String where) {
+        /*
+        //Creación|Edición
+        if (!Functions.randomCheck(driver, getElements("inputvalue"), "dataname"
+                where)){return false;}
+
+        //Busqueda
+        boolean check_box_nombre;
+        if (getData("").equalsIgnoreCase("yes")) {
+            check_box_nombre = true;
+        } else {
+            check_box_nombre = false;
+        }
+        */
+        Random randomBoolean = new Random();
+        boolean getRandomBoolean = randomBoolean.nextBoolean();
+        String RandomBoolean;
+        if (!Functions.checkboxValue(driver,
+                checkbox, data, getRandomBoolean, true, where)) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
      * This function waits for the working image to dissapear in the adf screeen
      *
      * @param driver      TestDriver - This object gathers all the info refferent to the current test
@@ -1660,10 +1701,9 @@ public class Functions {
     /**
      * @param driver     {@code TestDriver} This object gathers and provides all the info refferent to the current test
      * @param columns    {@code String[]} The names of the columns of the table to get
-     * @param xpathBegin {@code String} First part of the xpath of the table until the number of the row
-     * @param xpathMid   {@code String} Mid part of the xpath from the number of the row until the number of the column
-     * @param xpathEnd   {@code String} End of the xpath normally a simple ']'
+     * @param xpathtable {@code String} First part of the xpath of the table until the number of the row
      * @param rows       {@code Integer} Rows that you want to be stored
+     * @param where      {@code String} Tells where the operation is taking effect
      * @return {@code boolean}
      */
     public static boolean collectTableData(TestDriver driver, String[] columns, String xpathtable, int rows, String where) {
@@ -1675,17 +1715,17 @@ public class Functions {
         String xpathBegin = "/table/tbody/tr[";
         String xpathMid = "]/td[2]/div/table/tbody/tr/td[";
         String xpathEnd = "]";
-        if (xpathtable.isEmpty()){
+        if (xpathtable.isEmpty()) {
             String ecode = "--ERROR: The xpath table is null " + where;
             ErrorManager.process(driver, ecode);
             return false;
         }
         try {
-                for (int j = 1; j < columns.length + 1; j++) {
-                    getText(driver,
-                            new String[]{columns[j - 1], xpathtable + xpathBegin + rows + xpathMid + j + xpathEnd},
-                            columns[j - 1], where);
-                }
+            for (int j = 1; j < columns.length + 1; j++) {
+                getText(driver,
+                        new String[]{columns[j - 1], xpathtable + xpathBegin + rows + xpathMid + j + xpathEnd},
+                        columns[j - 1], where);
+            }
         } catch (Exception e) {
             String ecode = "--ERROR: error to retrieve values " + where;
             e.printStackTrace();
@@ -1779,23 +1819,26 @@ public class Functions {
         return true;
     }
 
-   /* public static boolean navigateTable(TestDriver driver, String scrollBar[], String direction){
-
+    /**
+     * @param driver
+     * @param scrollBar
+     * @param direction
+     * @return
+     */
+    public static boolean navigateTable(TestDriver driver, String scrollBar[], String direction) {
+      /*
       if(!Functions.navigateTable(driver,
                 new String[]{"scrollBar", getElements("scrollBar")}, //scroller xpath
                 "back/forward")); //nav direction(just back or forward){
         return false;
-    }
-
-
+        }*/
         try {
             switch (direction) {
                 case "forward":
-
-                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT,Keys.RIGHT)); //FOWARD
+                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT, Keys.RIGHT)); //FOWARD
                     break;
                 case "back":
-                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT,Keys.LEFT)); //BACK
+                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT, Keys.LEFT)); //BACK
                     break;
                 default:
                     driver.getReport().addContent("Definition for direction introuced is wron: " + direction);
@@ -1803,9 +1846,9 @@ public class Functions {
         } catch (Exception e) {
             String ecode = "--ERROR: navigateTable(): An unexpected error has occurred, please check.";
             e.printStackTrace();
-            ErrorManager.process(driver,ecode);
+            ErrorManager.process(driver, ecode);
             return true;
         }
         return true;
-    }*/
+    }
 }
