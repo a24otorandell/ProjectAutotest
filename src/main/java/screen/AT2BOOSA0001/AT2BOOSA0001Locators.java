@@ -321,9 +321,23 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_booking_confirmation_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("actions_booking_confirmation_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("actions_booking_confirmation_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
-        elements.put("actions_booking_confirmation_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
+        elements.put("actions_booking_confirmation_b_ok", "//*[contains(@id, 'dialog2::ok')]");
         elements.put("actions_booking_confirmation_e_scroller", "//*[contains(@id, 'pc1:t1::scroller')]");
         elements.put("actions_booking_confirmation_e_key", "//*[contains(@id, 'r1:0:pc1:_tbx')]");
+
+        //BOOKING CANCELATION
+        elements.put("actions_b_booking_cancelation", "//*[contains(@id, 'pc1:pcgm2:dc_cmi7')]/td[2]");
+        elements.put("actions_b_booking_cancelation_key", "//*[contains(@id, 'pc2:_tbx')]");
+        elements.put("actions_booking_cancelation_b_edit", "//*[contains(@id, 'pc2:_tbx')]//*[contains(@id, 'pc2:pcgt1:boton_edit')]");
+        elements.put("actions_b_booking_cancelation_sl_action", "//*[contains(@id, 'pc2:pcgt1:soc112::content')]");
+        elements.put("actions_b_booking_cancelation_b_save", "//*[contains(@id, 'pc2:pcgt1:btn_commitExit')]");
+        elements.put("actions_b_booking_cancelation_e_result", "//*[contains(@id, 'pc2:table5::db')]/table/tbody/tr/td[1]");
+        elements.put("actions_b_booking_cancelation_b_ok", "//*[contains(@id, 'cb17')]");
+        elements.put("actions_b_booking_cancelation_b_close", "//*[contains(@id, 'cb16')]");
+        elements.put("actions_b_booking_cancelation", "//*[contains(@id, 'pc1:pcgm2:dc_cmi7')]/td[2]");
+        elements.put("actions_b_booking_cancelation", "//*[contains(@id, 'pc1:pcgm2:dc_cmi7')]/td[2]");
+        elements.put("actions_b_booking_cancelation", "//*[contains(@id, 'pc1:pcgm2:dc_cmi7')]/td[2]");
+        elements.put("actions_b_booking_cancelation", "//*[contains(@id, 'pc1:pcgm2:dc_cmi7')]/td[2]");
 
 
     }

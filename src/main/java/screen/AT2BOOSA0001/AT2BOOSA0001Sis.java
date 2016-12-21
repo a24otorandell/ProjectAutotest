@@ -78,6 +78,9 @@ public class AT2BOOSA0001Sis {
         if(!Search_booking_other_actions_booking_confirmation(driver)){
             return false;
         }
+        if(!Search_booking_other_actions_cancel_booking(driver)){
+            return false;
+        }
        /* if(!Search_booking_advanced_search(driver)){return false;}*/
         return true;
     }
@@ -836,6 +839,24 @@ public class AT2BOOSA0001Sis {
                 where)){
             return false;
         }
+        if(Functions.displayed(driver, getElements("actions_booking_confirmation_e_office"))){
+
+            Functions.getText(driver,
+                    new String[]{"actions_booking_confirmation_e_office",getElements("actions_booking_confirmation_e_office")}, // element path
+                    "cancelation_office", // key for data value (the name)
+                    where);
+
+        }
+
+        if(!Functions.checkClickByAbsence(driver,
+                new String[]{"actions_booking_confirmation_b_ok",getElements("actions_booking_confirmation_b_ok")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                120,500,
+                where)){
+            return false;
+        }
+
+
      /*   Functions.break_time(driver,120,500);
         if(!Functions.navigateTable(driver, new String[]{"actions_booking_confirmation_e_scroller", getElements("actions_booking_confirmation_e_scroller")}, //scroller xpath
                 "back")) {
@@ -965,6 +986,65 @@ public class AT2BOOSA0001Sis {
                 where)){
             return false;
         }
+        return true;
+    }
+    private boolean Search_booking_other_actions_cancel_booking (TestDriver driver){
+        String where = " on CANCEL BOOKING";
+        driver.getReport().addHeader(" CANCEL BOOKING",3,false);
+        Functions.break_time(driver,120,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
+                new String[]{"actions_b_booking_cancelation",getElements("actions_b_booking_cancelation")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        Functions.break_time(driver,120,500);
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_booking_cancelation",getElements("actions_b_booking_cancelation")}, //element to click
+                new String[]{"actions_booking_cancelation_b_edit",getElements("actions_booking_cancelation_b_edit")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        if(Functions.displayed(driver, getElements("actions_b_booking_cancelation_e_result"))){
+
+            if (!Functions.simpleClick(driver,
+                    new String[]{"actions_b_booking_cancelation_e_result", getElements("actions_b_booking_cancelation_e_result")}, //element to click
+                    where)){return false;}
+            if(!Functions.checkClick(driver,
+                    new String[]{"actions_booking_cancelation_b_edit",getElements("actions_booking_cancelation_b_edit")}, //element to click
+                    new String[]{"actions_b_booking_cancelation_sl_action",getElements("actions_b_booking_cancelation_sl_action")}, //element expected to appear
+                    30,500, //seconds/miliseconds (driver wait)
+                    where)){
+                return false;
+            }
+
+            String list_options[] = {"Do not cancel", "Try again",};
+            if (!Functions.selectTextRandom(driver,
+                    new String[]{"actions_b_booking_cancelation_sl_action", getElements("actions_b_booking_cancelation_sl_action")},
+                    list_options, "action", where)){return false;}
+
+            if(!Functions.checkClick(driver,
+                    new String[]{"actions_b_booking_cancelation_b_save",getElements("actions_b_booking_cancelation_b_save")}, //element to click
+                    new String[]{"actions_booking_cancelation_b_edit",getElements("actions_booking_cancelation_b_edit")}, //element expected to appear
+                    120,500, //seconds/miliseconds (driver wait)
+                    where)){
+                return false;
+            }
+            if (!Functions.simpleClick(driver,
+                    new String[]{"actions_b_booking_cancelation_b_ok", getElements("actions_b_booking_cancelation_b_ok")}, //element to click
+                    where)){return false;}
+        }
+
+        if(!Functions.checkClickByAbsence(driver,
+                new String[]{"actions_b_booking_cancelation_b_close",getElements("actions_b_booking_cancelation_b_close")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                120,500,
+                where)){
+            return false;
+        }
+
         return true;
     }
     private boolean Search_booking_advanced_search (TestDriver driver){
