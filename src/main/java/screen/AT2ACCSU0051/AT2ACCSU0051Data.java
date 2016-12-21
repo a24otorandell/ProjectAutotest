@@ -6,14 +6,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by vsolis on 18/11/2016.
+ * Created by aibanez on 21/12/2016.
  */
 public class AT2ACCSU0051Data {
     Map<String, String> data = new HashMap<>();
     DataHarvester harvester;
 
     public AT2ACCSU0051Data (String enviroment){
-        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources  AT2ACCSU0051Values.txt");
+        this.harvester = new DataHarvester("C:/ProjectAutotest/src/main/resources AT2ACCSU0051Values.txt");
         setData();
     }
 
