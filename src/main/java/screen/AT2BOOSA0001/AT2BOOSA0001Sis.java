@@ -25,35 +25,28 @@ public class AT2BOOSA0001Sis {
     public AT2BOOSA0001Locators getLocators (){
         return locators;
     }
-
     public void setLocators (AT2BOOSA0001Locators locators){
         this.locators = locators;
     }
-
     public AT2BOOSA0001Data getData (){
         return data;
     }
-
     public void setData (AT2BOOSA0001Data data){
         this.data = data;
     }
-
     public void start (TestDriver driver){
         setScreenInfo(driver);
         CommonProcedures.goToScreen(driver);
     }
-
     protected void setScreenInfo (TestDriver driver){
         driver.getTestdetails().setMainmenu("Bookings");
         driver.getTestdetails().setSubmenu("Setup");
         driver.getTestdetails().setScreen("Search Booking 2.0");
     }
-
     protected String getElements (String key){
         String value = this.locators.getElements().get(key);
         return value;
     }
-
     protected String getData (String key){
         String value = this.data.getData().get(key);
         return value;
