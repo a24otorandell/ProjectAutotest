@@ -9,6 +9,10 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 24/11/2016.
  */
+
+/**
+ * DATOS HARDCODEADOS PARA TENER DATOS EN TODOS LOS SITIOS
+ */
 public class AT2MDMRM0001Test {
     protected AT2MDMRM0001Locators locators;
     protected AT2MDMRM0001Data data;
@@ -736,14 +740,6 @@ public class AT2MDMRM0001Test {
                 where)) {
             return false;
         }
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_interface",getElements("add_lov_interface")}, // b_lov
-                new String[]{"add_i_interface", getElements("add_i_interface")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "interface", //Data name
-                where)){return false;}*/
         if (!Functions.createLovByValue(driver,
                 new String[]{"add_lov_interface", getElements("add_lov_interface")}, //LoV button
                 new String[]{"add_i_interface", getElements("add_i_interface")}, //external LoV input

@@ -209,8 +209,6 @@ public class AT2MDMOR0008Test {
                 "door", String.valueOf(DataGenerator.random(1,25)), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_floor",getElements("add_i_floor")},
                 "floor", String.valueOf(DataGenerator.random(1,25)), where)){return false;}
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_postal_code",getElements("add_i_postal_code")},
-                "postal", "01524", where)){return false;}*/
         Functions.getAttr(driver,
                 new String[]{"add_i_postal_code", getElements("add_i_postal_code")}, // element path
                 "value", // atribute to get data (class, value, id, style, etc...)
@@ -221,8 +219,6 @@ public class AT2MDMOR0008Test {
                 "value", // atribute to get data (class, value, id, style, etc...)
                 "town", // key for data value (the name)
                 where);
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_town",getElements("add_i_town")},
-                "town", DataGenerator.getRandomAlphanumericSequence(6, false), where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_county",getElements("add_lov_county")}, // b_lov
                 new String[]{"add_i_county", getElements("add_i_county")}, // i_lov
@@ -231,11 +227,6 @@ public class AT2MDMOR0008Test {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "country", //name of the data
                 where)) {return false;}
-/*        Functions.getAttr(driver,
-                new String[]{"add_i_county", getElements("add_i_county")}, // element path
-                "value", // atribute to get data (class, value, id, style, etc...)
-                "country", // key for data value (the name)
-                where);*/
         if(!Functions.getText(driver,new String[]{"add_i_county_desc", getElements("add_i_county_desc")}, // element path
                 "country_desc", // key for data value (the name)
                 where)){return false;}
@@ -332,8 +323,6 @@ public class AT2MDMOR0008Test {
                 "value", // atribute to get data (class, value, id, style, etc...)
                 "town", // key for data value (the name)
                 where);
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_town",getElements("add_i_town")},
-                "town", DataGenerator.getRandomAlphanumericSequence(6, false), where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_county",getElements("add_lov_county")}, // b_lov
                 new String[]{"add_i_county", getElements("add_i_county")}, // i_lov
@@ -342,11 +331,6 @@ public class AT2MDMOR0008Test {
                 recursiveXPaths.lov_b_ok,
                 "country",//lov b ok
                 where)) {return false;}
-/*        Functions.getAttr(driver,
-                new String[]{"add_i_county", getElements("add_i_county")}, // element path
-                "value", // atribute to get data (class, value, id, style, etc...)
-                "country", // key for data value (the name)
-                where);*/
         if(!Functions.getText(driver,new String[]{"add_i_county_desc", getElements("add_i_county_desc")}, // element path
                 "country_desc", // key for data value (the name)
                 where)){return false;}

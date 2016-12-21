@@ -87,7 +87,6 @@ public class AT2MDMSY1005Sis {
         return true;
     }
     private boolean getData_t1 (TestDriver driver) {
-        //Functions.zoomOut(driver);
         String[] columns = {"trans", "ref", "type", "desc_type", "company", "currency", "supplier", "cost", "buffer", "amount", "payment", "activa", "expira", "operator", "client", "request", "reference", "id", "status", "code", "origin", "file", "load", "t_amount", "t_currency", "b_amount", "b_currency", "from", "merchant", "b_card", "b_date", "ref1", "ref2", "ref3", "sap", "error", "desc_error", "c_user", "c_date", "m_user", "m_date"};
         Functions.collectTableData(driver,
                 columns, //array with the names of the columns

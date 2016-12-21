@@ -11,6 +11,12 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 22/11/2016.
  */
+
+/**
+ * SE HARDCODEA LA PRIMERA BUSQUEDA PARA ENCONTRAR REGISTROS QUE TENGA DATOS EN LA SEGUNDA TABLA
+ * EN LA EDICIÓN NO SE EDITAN TODOS LOS CAMPOS PORQUE ESTAN RELACIONADAS LAS DOS TABLAS Y SI SE EDITAN, SE PIERDE LA RELACIÓN
+ * NO SE PUEEDE ELIMINAR DE LA PRIMERA TABLA PORQUE ESTA RELACIONADA CON OTRAS PANTALLAS
+ */
 public class AT2MDMCL0018Test {
     protected AT2MDMCL0018Locators locators;
     protected AT2MDMCL0018Data data;
@@ -57,7 +63,7 @@ public class AT2MDMCL0018Test {
         if (!qbe_t2(driver)) return false;
         if (!others_actions_t2(driver)) return false;
         if (!delete_t2(driver)) return false;
-        if (!delete_t1(driver)) return false;
+/*        if (!delete_t1(driver)) return false;*/
         return true;
     }
 
@@ -190,18 +196,6 @@ public class AT2MDMCL0018Test {
                 where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"add_i_agency_id", getElements("add_i_agency_id")},
-                "agency", String.valueOf(DataGenerator.random(1,700)), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"add_i_to_branch", getElements("add_i_to_branch")},
-                "to", String.valueOf(DataGenerator.random(1,300)), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"add_i_interface", getElements("add_i_interface")},
-                "interface", DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
-            return false;
-        }*/
         if (!Functions.insertInput(driver, new String[]{"add_i_major", getElements("add_i_major")},
                 "major", String.valueOf(DataGenerator.random(1,800)), where)) {
             return false;
@@ -377,10 +371,6 @@ public class AT2MDMCL0018Test {
                 where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"a_add_i_agency_code", getElements("a_add_i_agency_code")},
-                "agency2", String.valueOf(DataGenerator.random(1,700)), where)) {
-            return false;
-        }*/
         if (!Functions.insertInput(driver, new String[]{"a_add_i_to_branch", getElements("a_add_i_to_branch")},
                 "to2", String.valueOf(DataGenerator.random(1,9)), where)) {
             return false;
@@ -389,30 +379,6 @@ public class AT2MDMCL0018Test {
                 "a_name", DataGenerator.getRandomAlphanumericSequence(10,false), where)) {
             return false;
         }
-/*        if (!Functions.insertInput(driver, new String[]{"a_add_i_major", getElements("a_add_i_major")},
-                "major2", String.valueOf(DataGenerator.random(1,800)), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"a_add_i_submajor", getElements("a_add_i_submajor")},
-                "sub2", String.valueOf(DataGenerator.random(1,100)), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"a_add_i_detail", getElements("a_add_i_detail")},
-                "detail2", String.valueOf(DataGenerator.random(1,10)), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"a_add_i_atlas_code", getElements("a_add_i_atlas_code")},
-                "atlas", getData("agency"), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"a_add_i_atlas_branch", getElements("a_add_i_atlas_branch")},
-                "a_branch", String.valueOf(DataGenerator.random(1,60)), where)) {
-            return false;
-        }
-        if (!Functions.insertInput(driver, new String[]{"a_add_i_interface", getElements("a_add_i_interface")},
-                "interface2", DataGenerator.getRandomAlphanumericSequence(1, false), where)) {
-            return false;
-        }*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save2", getElements("add_b_save2")}, //e1
                 recursiveXPaths.glass, //e2

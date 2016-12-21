@@ -363,9 +363,6 @@ public class AT2MDMUS0003Test {
         if (!Functions.insertInput(driver, new String[]{"add_i_unblocking",getElements("add_i_unblocking")},
                 "unblocking", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
         Functions.break_time(driver, 3, 400);
-/*        if (!Functions.selectText(driver,
-                new String[]{"add_sl_blocking",getElements("add_sl_blocking")},
-                "Inactiviy", "blocking",  where)){return false;}*/
         if (!Functions.simpleClick(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //element to click
                 where)){return false;}
@@ -433,9 +430,6 @@ public class AT2MDMUS0003Test {
                 "intranet", getData("intranet"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_language",getElements("qbe_i_language")},
                 "lang", getData("lang"), where)){return false;}
-/*        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_blocking",getElements("qbe_sl_blocking")},
-                getData("blocking"), "blocking",  where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"qbe_i_unblocking",getElements("qbe_i_unblocking")},
                 "unblocking", getData("unblocking"), where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
@@ -502,11 +496,6 @@ public class AT2MDMUS0003Test {
         driver.getDriver().get("http://atlbiptest.hotelbeds.com/xmlpserver/reports/ATLAS20/MDM/XDO/AT2MDMRP0008.xdo?_xpf=&_xpt=0&_xmode=4&_paramsPC_ACTIVO=T&_paramsPC_COD_OFI=1&_paramsPG_LANGUAGE=ENG&_paramsPC_COD_EMP=BG1&_xt=AT2MDMRP0008_01&_xf=pdf");
         Functions.screenshot(driver);
         driver.getDriver().navigate().to(windowsadf);
-
-       // driver.getDriverdetails().getUrl();
-        //driver.getDriver().close();
-        //driver.getDriver().switchTo();
-       // driver.getDriver().navigate().to(windowsadf);
         return true;
     }
     private boolean delete_user(TestDriver driver) {
@@ -629,12 +618,12 @@ public class AT2MDMUS0003Test {
     private boolean qbe_2(TestDriver driver) {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE 2";
-/*        if (!Functions.clickQbE(driver,
+        if (!Functions.clickQbE(driver,
                 new String[]{"office_b_qbe", getElements("office_b_qbe")},// query button
                 new String[]{"office_qbe_i_company", getElements("office_qbe_i_company")},//any query input
                 where)) {
             return false;
-        }*/
+        }
         // where the operation occurs
         if (!Functions.insertInput(driver, new String[]{"office_qbe_i_company", getElements("office_qbe_i_company")},
                 "o_company", getData("o_company"), where)) {
@@ -682,10 +671,6 @@ public class AT2MDMUS0003Test {
                 where)){
             return false;
         }
-/*        if(!Functions.doDelete(driver,
-                new String[]{"users_b_delete", getElements("users_b_delete")},//delete button
-                new String[]{"users_b_yes", getElements("users_b_yes")},//delete button
-                where)){return false;}*/
         return true;
     }
 
@@ -798,10 +783,6 @@ public class AT2MDMUS0003Test {
                 where)){
             return false;
         }
-/*        if(!Functions.doDelete(driver,
-                new String[]{"users_b_delete", getElements("users_b_delete")},//delete button
-                new String[]{"users_b_yes", getElements("users_b_yes")},//delete button
-                where)){return false;}*/
         return true;
     }
 
@@ -912,10 +893,6 @@ public class AT2MDMUS0003Test {
                 where)){
             return false;
         }
-/*        if(!Functions.doDelete(driver,
-                new String[]{"users_b_delete", getElements("users_b_delete")},//delete button
-                new String[]{"users_b_yes", getElements("users_b_yes")},//delete button
-                where)){return false;}*/
         return true;
     }
 }

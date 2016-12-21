@@ -116,8 +116,6 @@ public class AT2MDMSY1001Test {
                 where)) {
             return false;
         }
-//        if (!Functions.insertInput(driver, new String[]{"add_i_operator",getElements("add_i_operator")},
-//                "operator", DataGenerator.getRandomAlphanumericSequence(10,false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_description",getElements("add_i_description")},
                 "desc", DataGenerator.getRandomAlphanumericSequence(10,false), where)){return false;}
         if (!Functions.selectText(driver,
@@ -135,8 +133,6 @@ public class AT2MDMSY1001Test {
                 "url_t", DataGenerator.getRandomAlphanumericSequence(10,false), where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_alternative"),"alternative",false,true, where)){return false;}
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_active"),"active",false,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -207,13 +203,6 @@ public class AT2MDMSY1001Test {
         Functions.simpleClick(driver,
                 new String[]{"b_delete_yes", recursiveXPaths.delete_b_yes}, //element to click
                 where);
-/*        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"operator_b_delete", getElements("operator_b_delete")},
-                new String[]{"operator_e_records", getElements("operator_e_records")},
-                where)){
-
-            return false;
-        }*/
         try {
             if (driver.getDriver().findElement(By.xpath("//*[contains(@id, 'pc1:gvcc:1:sbc4::content')]/span/img")).getAttribute("title").equals("unchecked")) {
                 driver.getReport().addContent("\"Active\" CHECKBOX IS UNCHECKED. DELETION WORKED", "h3","class='success'" );

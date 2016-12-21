@@ -85,14 +85,6 @@ public class AT2MDMRM0035Sis {
                 where)) {
             return false;
         }
-/*        if (!Functions.createLovByValue(driver,
-                new String[]{"add_lov_interface", getElements("add_lov_interface")}, //LoV button
-                new String[]{"add_i_interface", getElements("add_i_interface")}, //external LoV input
-                new String[]{"add_lov_interface_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "W", // value to search
-                "interface", //name of the data
-                where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_web_desc",getElements("add_lov_web_desc")}, // b_lov
                 new String[]{"add_i_web_desc", getElements("add_i_web_desc")}, // i_lov
@@ -164,14 +156,6 @@ public class AT2MDMRM0035Sis {
                 where)) {
             return false;
         }
-/*        if (!Functions.createLovByValue(driver,
-                new String[]{"add_lov_interface", getElements("add_lov_interface")}, //LoV button
-                new String[]{"add_i_interface", getElements("add_i_interface")}, //external LoV input
-                new String[]{"add_lov_interface_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "W", // value to search
-                "interface", //name of the data
-                where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_web_desc",getElements("add_lov_web_desc")}, // b_lov
                 new String[]{"add_i_web_desc", getElements("add_i_web_desc")}, // i_lov
@@ -549,14 +533,6 @@ public class AT2MDMRM0035Sis {
         if(!Functions.getText(driver,new String[]{"add_i_zones_desc", getElements("add_i_zones_desc")}, // element path
                 "zones_desc", // key for data value (the name)
                 where)){return false;}
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_dest_gr",getElements("add_lov_dest_gr")}, // b_lov
-                new String[]{"add_i_dest_gr", getElements("add_i_dest_gr")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "dest", //Data name
-                where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_dest_gr", getElements("add_i_dest_gr")},
                 "dest", "", where)) {
             return false;
@@ -564,14 +540,6 @@ public class AT2MDMRM0035Sis {
         if(!Functions.getText(driver,new String[]{"add_i_dest_gr_desc", getElements("add_i_dest_gr_desc")}, // element path
                 "dest_desc", // key for data value (the name)
                 where)){return false;}
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_destination",getElements("add_lov_destination")}, // b_lov
-                new String[]{"add_i_destination", getElements("add_i_destination")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "destina", //Data name
-                where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"add_i_destination", getElements("add_i_destination")},
                 "destina", "", where)) {
             return false;
@@ -605,14 +573,6 @@ public class AT2MDMRM0035Sis {
                 "zones", "", where)) {
             return false;
         }
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_zones",getElements("add_lov_zones")}, // b_lov
-                new String[]{"add_i_zones", getElements("add_i_zones")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "zones", //Data name
-                where)){return false;}*/
         if(!Functions.getText(driver,new String[]{"add_i_zones_desc", getElements("add_i_zones_desc")}, // element path
                 "zones_desc", // key for data value (the name)
                 where)){return false;}

@@ -11,6 +11,9 @@ import org.openqa.selenium.By;
 /**
  * Created by aibanez on 08/11/2016.
  */
+/**
+ * EL CHECK BOX ACTIVE NO LO TOCO EN CREACIÓN NI EDICIÓN, NI QBE, PORQUE A LA HORA DE ELIMINAR SE ACTIVA ESE CHECKBOX
+ */
 public class AT2MDMSY1002Test {
     protected AT2MDMSY1002Locators locators;
     protected AT2MDMSY1002Data data;
@@ -119,8 +122,6 @@ public class AT2MDMSY1002Test {
                 getElements("add_ck_update"),"update",false,true, where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_monitoring"),"monitoring",false,true, where)){return false;}
-   /*     if (!Functions.checkboxValue(driver,
-                getElements("add_ck_active"),"active",true,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

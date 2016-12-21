@@ -184,8 +184,6 @@ public class AT2MDMSY0039Test {
                 getElements("add_ck_visible_screen"),"visible",false,true,where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_modify_labels"),"modify",false,true, where)){return false;}
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_business_labels"),"business",false,true, where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2

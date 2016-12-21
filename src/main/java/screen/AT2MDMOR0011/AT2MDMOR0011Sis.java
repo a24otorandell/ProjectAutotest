@@ -82,14 +82,6 @@ public class AT2MDMOR0011Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "department", //Data name
                 where)){return false;}
-/*        if (!Functions.createLovByValue(driver,
-                new String[]{"add_lov_department", getElements("add_lov_department")}, //LoV button
-                new String[]{"add_i_department", getElements("add_i_department")}, //external LoV input
-                new String[]{"add_lov_deparment_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "RRHH", // value to search
-                "department", //name of the data
-                where)){return false;}*/
         if(!Functions.getValue(driver,new String[]{"add_i_department_des", getElements("add_i_department_des")}, // element path
                 "department_des", // key for data value (the name)
                 where)){return false;}
@@ -213,11 +205,6 @@ public class AT2MDMOR0011Sis {
                 getData("group"), "group", where)) {
             return false;
         }
-        Functions.break_time(driver, 3, 400);
-/*        if (!Functions.selectText(driver, new String[]{"qbe_sl_internet", getElements("qbe_sl_internet")},
-                getData("internet"),"internet", where)) {
-            return false;
-        }*/
         Functions.break_time(driver, 3, 400);
         if (!Functions.selectText(driver, new String[]{"qbe_sl_excursions", getElements("qbe_sl_excursions")},
                 getData("excursions"),"excursions", where)) {

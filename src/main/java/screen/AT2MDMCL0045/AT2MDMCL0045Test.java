@@ -9,6 +9,10 @@ import core.recursiveData.recursiveXPaths;
 /**
  * Created by aibanez on 22/11/2016.
  */
+
+/**
+ * NO HAY REGISTROS PARA COMPROBAR EL FUNCIONAMIENTO
+ */
 public class AT2MDMCL0045Test {
     protected AT2MDMCL0045Locators locators;
     protected AT2MDMCL0045Data data;

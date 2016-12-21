@@ -802,12 +802,6 @@ AT2MDMSP0014Test {
         if (!Functions.simpleClick(driver,
                 new String[]{"table6_e_result", getElements("table6_e_result")}, //element to click
                 where)){return false;}
-/*        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"table6_b_delete", getElements("table6_b_delete")},
-                new String[]{"table6_e_records", getElements("table6_e_records")},
-                where)){
-            return false;
-        }*/
         if(!Functions.doDelete(driver,
                 new String[]{"table6_b_delete", getElements("table6_b_delete")},//delete button
                 new String[]{"table6_b_yes", getElements("table6_b_yes")},//delete button

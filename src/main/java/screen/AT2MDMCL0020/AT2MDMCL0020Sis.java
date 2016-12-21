@@ -233,14 +233,6 @@ public class AT2MDMCL0020Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "to", //Data name
                 where)){return false;}
-/*        if (!Functions.createLovByValue(driver,
-                new String[]{"add_lov_to", getElements("add_lov_to")}, //LoV button
-                new String[]{"add_i_to", getElements("add_i_to")}, //external LoV input
-                new String[]{"add_lov_to_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
-                recursiveXPaths.lov_e_result, // lov internal result
-                "562", // value to search
-                "to", //name of the data
-                where)){return false;}*/
         if(!Functions.getValue(driver,new String[]{"add_e_des_ttoo", getElements("add_e_des_ttoo")}, // element path
                 "to_desc", // key for data value (the name)
                 where)){return false;}
@@ -590,9 +582,6 @@ public class AT2MDMCL0020Sis {
         driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
         String where = " on OTHER AUDIT DATA IP";
         Functions.zoomOut(driver);
-/*        if (!Functions.simpleClick(driver,
-                new String[]{"ip_e_extra_actions", getElements("ip_e_extra_actions")}, //element to click
-                where)){return false;}*/
         if (!Functions.auditData(driver,
                 new String[]{"ip_b_actions", getElements("ip_b_actions")}, //actions button
                 new String[]{"ip_b_actions_audit_data", getElements("ip_b_actions_audit_data")}, //audit button
@@ -603,9 +592,6 @@ public class AT2MDMCL0020Sis {
         driver.getReport().addHeader("OTHER DETACH", 3, false);
         where = " on OTHER DETACH IP";
         Functions.zoomOut(driver);
-/*        if (!Functions.simpleClick(driver,
-                new String[]{"ip_e_extra_detach", getElements("ip_e_extra_detach")}, //element to click
-                where)){return false;}*/
         if (!Functions.detachTable(driver,
                 new String[]{"ip_b_detach", getElements("ip_b_detach")}, //detach button
                 true,     //screenshot??

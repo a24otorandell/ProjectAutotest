@@ -151,17 +151,6 @@ public class AT2MDMSP0031Sis {
                 where)) {
             return false;
         }
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_supplier",getElements("add_lov_supplier")}, // b_lov
-                new String[]{"add_i_supplier", getElements("add_i_supplier")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult2, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "supplier", //Data name
-                where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"add_i_comercial", getElements("add_i_comercial")}, // element path
-                "comercial", // key for data value (the name)
-                where)){return false;}*/
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_service",getElements("add_sl_service")},
                 "Tickets", "service", where)){return false;}

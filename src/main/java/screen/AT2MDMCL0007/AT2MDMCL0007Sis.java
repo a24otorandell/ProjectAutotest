@@ -50,8 +50,8 @@ public class AT2MDMCL0007Sis {
         if (!others_actions(driver)) return false;
         if (!qbeHard(driver)) return false;
         if (!historicActions(driver)) return false;
-/*        if (!getData(driver)) return false;
-        if (!qbeHistoric(driver)) return false;*/
+        if (!getData(driver)) return false;
+        if (!qbeHistoric(driver)) return false;
         if (!others_actionsHistoric(driver)) return false;
         return true;
     }
@@ -70,6 +70,10 @@ public class AT2MDMCL0007Sis {
                 "internal", "", where)) {
             return false;
         }
+        if (!Functions.insertInput(driver, new String[]{"add_i_type", getElements("add_i_type")},
+                "type", "E", where)) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"add_i_name", getElements("add_i_name")},
                 "name", DataGenerator.getRandomAlphanumericSequence(8, false), where)) {
             return false;
@@ -79,6 +83,15 @@ public class AT2MDMCL0007Sis {
             return false;
         }
         Functions.break_time(driver, 10, 800);
+        if(!Functions.getValue(driver,new String[]{"add_i_usu_login", getElements("add_i_usu_login")}, // element path
+                "user_log", // key for data value (the name)
+                where)){return false;}
+        if (getData("user_log").equalsIgnoreCase("")) {
+            if (!Functions.insertInput(driver, new String[]{"add_i_usu_login", getElements("add_i_usu_login")},
+                    "user_log", DataGenerator.getRandomAlphanumericSequence(5, false), where)) {
+                return false;
+            }
+        }
         if (!Functions.insertInput(driver, new String[]{"add_i_pass", getElements("add_i_pass")},
                 "passd", String.valueOf(DataGenerator.random(1,2050)), where)) {
             return false;
@@ -153,33 +166,35 @@ public class AT2MDMCL0007Sis {
                 getElements("add_ck_client_xml"),"xml",false,true, where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_client_html"),"html",true,true, where)){return false;}
-        if (!Functions.insertInput(driver, new String[]{"add_i_type", getElements("add_i_type")},
-                "type", "E", where)) {
-            return false;
-        }
-        Functions.break_time(driver, 6, 500);
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_hotel",getElements("add_lov_hotel")}, // b_lov
-                new String[]{"add_i_hotel", getElements("add_i_hotel")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "hotel",
-                100, 700,//Data name
-                where)){return false;}
-        String list_options3[] = {"Test"};
-        if (!Functions.selectTextRandom(driver,
-                new String[]{"add_sl_subcategory",getElements("add_sl_subcategory")},
-                list_options3, "sub", where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"add_e_user_id", getElements("add_e_user_id")}, // element path
-                "id", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getValue(driver,new String[]{"add_i_usu_login", getElements("add_i_usu_login")}, // element path
-                "user_log", // key for data value (the name)
-                where)){return false;}
-        if(!Functions.getText(driver,new String[]{"add_i_hotel_desc", getElements("add_i_hotel_desc")}, // element path
-                "hotel_desc", // key for data value (the name)
-                where)){return false;}
+            Functions.break_time(driver, 4, 600);
+            if (!Functions.createLov(driver,
+                    new String[]{"add_lov_hotel", getElements("add_lov_hotel")}, // b_lov
+                    new String[]{"add_i_hotel", getElements("add_i_hotel")}, // i_lov
+                    recursiveXPaths.lov_b_search, // lov b search
+                    recursiveXPaths.lov_e_result, // lov result
+                    recursiveXPaths.lov_b_ok, //lov b ok
+                    "hotel",
+                    100, 700,//Data name
+                    where)) {
+                return false;
+            }
+            String list_options3[] = {"Test"};
+            if (!Functions.selectTextRandom(driver,
+                    new String[]{"add_sl_subcategory", getElements("add_sl_subcategory")},
+                    list_options3, "sub", where)) {
+                return false;
+            }
+            if (!Functions.getValue(driver, new String[]{"add_e_user_id", getElements("add_e_user_id")}, // element path
+                    "id", // key for data value (the name)
+                    where)) {
+                return false;
+            }
+
+            if (!Functions.getText(driver, new String[]{"add_i_hotel_desc", getElements("add_i_hotel_desc")}, // element path
+                    "hotel_desc", // key for data value (the name)
+                    where)) {
+                return false;
+            }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -566,14 +581,6 @@ public class AT2MDMCL0007Sis {
     public boolean qbeHard (TestDriver driver) {
         driver.getReport().addHeader("QBE HARD", 3, false);
         String where = "QBE HARD";
-        if (!Functions.simpleClick(driver,
-                new String[]{"user_qbe_reset", getElements("user_qbe_reset")}, //element to click
-                "QBE RESET")){return false;}
-
-        if (!Functions.insertInput(driver, new String[]{"qbe_i_user_id", getElements("qbe_i_user_id")},
-                "id", "KVILIANIOT", where)) {
-            return false;
-        }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_user_id", getElements("qbe_i_user_id")}, //any query input
                 new String[]{"user_e_result", getElements("user_e_result")}, //table result

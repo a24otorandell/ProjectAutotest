@@ -338,9 +338,6 @@ public class AT2MDMUS0003Sis {
                 "sur1", getData("sur01"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_intranet_user",getElements("add_i_intranet_user")},
                 "intranet", DataGenerator.getRandomAlphanumericSequence(7, false), where)){return false;}
-/*        if (!Functions.selectText(driver,
-                new String[]{"add_sl_blocking",getElements("add_sl_blocking")},
-                "Inactiviy", "blocking",  where)){return false;}*/
         if(!Functions.createLov(driver,
                 new String[]{"add_lov_reference_user",getElements("add_lov_reference_user")}, // b_lov
                 new String[]{"add_i_reference_user", getElements("add_i_reference_user")}, // i_lov
@@ -432,9 +429,6 @@ public class AT2MDMUS0003Sis {
                 "intranet", getData("intranet"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_language",getElements("qbe_i_language")},
                 "lang", getData("lang"), where)){return false;}
-/*        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_blocking",getElements("qbe_sl_blocking")},
-                getData("blocking"), "blocking",  where)){return false;}*/
         if (!Functions.insertInput(driver, new String[]{"qbe_i_unblocking",getElements("qbe_i_unblocking")},
                 "unblocking", getData("unblocking"), where)){return false;}
         if (!Functions.enterQueryAndClickResult(driver,
@@ -515,11 +509,6 @@ public class AT2MDMUS0003Sis {
         driver.getDriver().get("http://atlbipsis.hotelbeds.com/xmlpserver/reports/ATLAS20/MDM/XDO/AT2MDMRP0008.xdo?_xpf=&_xpt=0&_xmode=4&_paramsPC_ACTIVO=T&_paramsPG_LANGUAGE=ENG&_paramsPC_COD_EMP=997&_xt=AT2MDMRP0008_01&_xf=pdf");
         Functions.screenshot(driver);
         driver.getDriver().navigate().to(windowsadf);
-
-        // driver.getDriverdetails().getUrl();
-        //driver.getDriver().close();
-        //driver.getDriver().switchTo();
-        // driver.getDriver().navigate().to(windowsadf);
         return true;
     }
 
@@ -676,10 +665,6 @@ public class AT2MDMUS0003Sis {
                 where)){
             return false;
         }
-/*        if(!Functions.doDelete(driver,
-                new String[]{"users_b_delete", getElements("users_b_delete")},//delete button
-                new String[]{"users_b_yes", getElements("users_b_yes")},//delete button
-                where)){return false;}*/
         return true;
     }
 
@@ -790,10 +775,6 @@ public class AT2MDMUS0003Sis {
                 where)){
             return false;
         }
-/*        if(!Functions.doDelete(driver,
-                new String[]{"users_b_delete", getElements("users_b_delete")},//delete button
-                new String[]{"users_b_yes", getElements("users_b_yes")},//delete button
-                where)){return false;}*/
         return true;
     }
 
@@ -901,10 +882,6 @@ public class AT2MDMUS0003Sis {
                 where)){
             return false;
         }
-/*        if(!Functions.doDelete(driver,
-                new String[]{"users_b_delete", getElements("users_b_delete")},//delete button
-                new String[]{"users_b_yes", getElements("users_b_yes")},//delete button
-                where)){return false;}*/
         return true;
     }
 }

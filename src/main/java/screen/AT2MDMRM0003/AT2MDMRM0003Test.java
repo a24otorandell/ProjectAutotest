@@ -427,7 +427,7 @@ public class AT2MDMRM0003Test {
                 new String[]{"add_lov_configuration_sequence",getElements("add_lov_configuration_sequence")}, // b_lov
                 new String[]{"add_i_configuration_sequence", getElements("add_i_configuration_sequence")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
+                recursiveXPaths.lov_e_altresult2, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "conf_seq", //Data name
                 where)){return false;}
@@ -484,22 +484,6 @@ public class AT2MDMRM0003Test {
                 where)) {
             return false;
         }
-/*        if(!Functions.createLov(driver,
-                new String[]{"add_lov_characteristic_sequence",getElements("add_lov_characteristic_sequence")}, // b_lov
-                new String[]{"add_i_characteristic_sequence", getElements("add_i_characteristic_sequence")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult,// lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "char_seq", //Data name
-                where)){return false;}
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_configuration_sequence",getElements("add_lov_configuration_sequence")}, // b_lov
-                new String[]{"add_i_configuration_sequence", getElements("add_i_configuration_sequence")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "conf_seq", //Data name
-                where)){return false;}*/
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_status",getElements("add_sl_status")},
                 "INACTIVE", "status", where)){return false;}

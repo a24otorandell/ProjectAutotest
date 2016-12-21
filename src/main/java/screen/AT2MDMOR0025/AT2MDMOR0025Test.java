@@ -345,17 +345,8 @@ public class AT2MDMOR0025Test {
         return true;
     }
     private boolean others_actions(TestDriver driver) {
-        driver.getReport().addHeader("OTHER ACTIONS AUDIT DATA", 3, false);
-        String where = " on OTHER AUDIT DATA";
-/*        if (!Functions.auditData(driver,
-                new String[]{"product_b_actions", getElements("product_b_actions")}, //actions button
-                new String[]{"product_b_actions_b_audit_data", getElements("product_b_actions_b_audit_data")}, //audit button
-                new String[]{"audit_b_ok", recursiveXPaths.audit_b_ok}, //audit_b_ok
-                where)) {
-            return false;
-        }*/
         driver.getReport().addHeader("OTHER DETACH", 3, false);
-        where = " on OTHER DETACH";
+        String where = " on OTHER DETACH";
         if (!Functions.detachTable(driver,
                 new String[]{"company_b_detach", getElements("company_b_detach")}, //detach button
                 true,     //screenshot??

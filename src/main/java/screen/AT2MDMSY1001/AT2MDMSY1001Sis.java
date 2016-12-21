@@ -115,8 +115,6 @@ public class AT2MDMSY1001Sis {
                 where)) {
             return false;
         }
-//        if (!Functions.insertInput(driver, new String[]{"add_i_operator",getElements("add_i_operator")},
-//                "operator", DataGenerator.getRandomAlphanumericSequence(10,false), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"add_i_description",getElements("add_i_description")},
                 "desc", DataGenerator.getRandomAlphanumericSequence(10,false), where)){return false;}
         if (!Functions.selectText(driver,
@@ -134,8 +132,6 @@ public class AT2MDMSY1001Sis {
                 "url_t", DataGenerator.getRandomAlphanumericSequence(10,false), where)){return false;}
         if (!Functions.checkboxValue(driver,
                 getElements("add_ck_alternative"),"alternative",false,true, where)){return false;}
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_active"),"active",false,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -219,13 +215,6 @@ public class AT2MDMSY1001Sis {
             e.printStackTrace();
             ErrorManager.process(driver, exc);
         }
-/*        if (!Functions.doDeleteNCheck(driver,
-                new String[]{"operator_b_delete", getElements("operator_b_delete")},
-                new String[]{"operator_e_records", getElements("operator_e_records")},
-                where)){
-
-            return false;
-        }*/
         return true;
     }
 }
