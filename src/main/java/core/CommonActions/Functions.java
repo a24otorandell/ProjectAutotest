@@ -1779,4 +1779,33 @@ public class Functions {
         return true;
     }
 
+   /* public static boolean navigateTable(TestDriver driver, String scrollBar[], String direction){
+
+      if(!Functions.navigateTable(driver,
+                new String[]{"scrollBar", getElements("scrollBar")}, //scroller xpath
+                "back/forward")); //nav direction(just back or forward){
+        return false;
+    }
+
+
+        try {
+            switch (direction) {
+                case "forward":
+
+                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT,Keys.RIGHT)); //FOWARD
+                    break;
+                case "back":
+                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT,Keys.LEFT)); //BACK
+                    break;
+                default:
+                    driver.getReport().addContent("Definition for direction introuced is wron: " + direction);
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: navigateTable(): An unexpected error has occurred, please check.";
+            e.printStackTrace();
+            ErrorManager.process(driver,ecode);
+            return true;
+        }
+        return true;
+    }*/
 }
