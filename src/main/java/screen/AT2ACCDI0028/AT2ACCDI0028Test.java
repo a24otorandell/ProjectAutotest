@@ -2303,12 +2303,12 @@ public class AT2ACCDI0028Test {
                 30, 500, //seconds/miliseconds (driver wait)
                 where)){return false;}
 
-        String sl_reason[] = {"Selling to B2C client", "TEST Other reasons",
+        String sl_reason[] = {"Selling to B2C client", "Other reasons",
                 "Category","Reduced commission",
                 "Direct contract with the hotel", "Price Differences", "Does not comply with Binding",
                 "Client request", "Specific hotel request", "Signed by contract",
-                "Technical issues", "Client pricing to be revised", "Administration request", "Tes",
-                "TEST", "Test reason", "B2B rate not valid for B2C clients"   };
+                "Technical issues", "Client pricing to be revised", "Administration request",
+                  "B2B rate not valid for B2C clients"   };
         if (!Functions.selectTextRandom(driver,
                 new String[]{"category_sl_reason", getElements("category_sl_reason")},
                 sl_reason, "sl_reason", where)){return false;}
