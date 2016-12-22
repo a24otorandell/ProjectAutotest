@@ -306,6 +306,7 @@ public class AT2BOOSA0001Locators {
         elements.put("actions_print_vouchers_qbe_e_last_print", "//*[contains(@id, 'pc1:t1:1:ot1::content')]");
         elements.put("actions_print_vouchers_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
         elements.put("actions_print_vouchers_e_result", "//*[contains(@id, 'r4:0:pc1:_tbx')]//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr/td[1]");
+        elements.put("actions_print_vouchers_b_ok", "//*[contains(@id, 'r4:0:cb2')]");
         elements.put("key_options", "//*[contains(@id, 'r1:1:r4:0:pfl1')]");
         elements.put("key_buttons", "//*[contains(@id, 'r4:0:pc1:_tbx')]");
         elements.put("key_table", "//*[contains(@id, 'r4:0:pc1:_tbx')]");

@@ -1651,7 +1651,7 @@ public class Functions {
     public static boolean randomCheck(TestDriver driver, String checkbox, String data, String where) {
         /*
         //Creación|Edición
-        if (!Functions.randomCheck(driver, getElements("inputvalue"), "dataname"
+        if (!Functions.randomCheck(driver, getElements("inputvalue"), "dataname",
                 where)){return false;}
 
         //Busqueda

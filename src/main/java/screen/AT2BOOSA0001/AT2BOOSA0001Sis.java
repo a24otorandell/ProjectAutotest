@@ -72,9 +72,9 @@ public class AT2BOOSA0001Sis {
        /* if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
             return false;
         }*/
-       if(!Search_booking_other_actions_print_vouchers(driver)){
-           return false;
-       }
+        if(!Search_booking_other_actions_print_vouchers(driver)){
+            return false;
+        }
         if(!Search_booking_other_actions_service_details(driver)){
             return false;
         }
@@ -85,14 +85,6 @@ public class AT2BOOSA0001Sis {
             return false;
         }
        /* if(!Search_booking_advanced_search(driver)){return false;}*/
-        return true;
-    }
-
-    private boolean Search_booking_other_actions_print_vouchers (TestDriver driver){
-        String where = " on PRINT VOUCHERS";
-        driver.getReport().addHeader("PRINT VOUCHERS IN SEARCH BOOKING",3,false);
-        Functions.break_time(driver,120,600);
-
         return true;
     }
 
@@ -742,6 +734,82 @@ public class AT2BOOSA0001Sis {
                 new String[]{"result_e_contract_name",getElements("result_e_contract_name")},
                 "result_contract_name",
                 where);
+        return true;
+    }
+    private boolean Search_booking_other_actions_print_vouchers (TestDriver driver){
+        String where = " on PRINT VOUCHERS";
+        driver.getReport().addHeader("PRINT VOUCHERS IN SEARCH BOOKING",3,false);
+        Functions.break_time(driver,120,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
+                new String[]{"actions_b_print_vouchers",getElements("actions_b_print_vouchers")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        Functions.break_time(driver,120,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_print_vouchers",getElements("actions_b_print_vouchers")}, //element to click
+                new String[]{"actions_print_vouchers_sl_format",getElements("actions_print_vouchers_sl_format")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        String Format[] = {"Fax", "Printer", "E-Mail"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"actions_print_vouchers_sl_format", getElements("actions_print_vouchers_sl_format")},
+                Format, "format", where)){return false;}
+        String Lenguage[] = {"German", "Arabic", "Bulgarian"};
+        if (!Functions.selectTextRandom(driver,
+                new String[]{"actions_print_vouchers_sl_lenguage", getElements("actions_print_vouchers_sl_lenguage")},
+                Lenguage, "format", where)){return false;}
+
+        if (!Functions.randomCheck(driver, getElements("actions_print_vouchers_ch_print_paxs"), "print_paxs",
+                where)){return false;}
+
+        if (!Functions.randomCheck(driver, getElements("actions_print_vouchers_ch_unified_vounchers"), "unified_vouchers",
+                where)){return false;}
+
+        if (!Functions.insertInput(driver, new String[]{"actions_print_vouchers_i_destination",getElements("actions_print_vouchers_i_destination")},
+                "destination", DataGenerator.getRandomAlphanumericSequence(9, true),where)){return false;}
+
+        if(!Functions.displayed(driver, getElements("actions_print_vouchers_e_result"))){
+
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_company", getElements("actions_print_vouchers_qbe_e_company")}, // element path
+                    "company", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_office", getElements("actions_print_vouchers_qbe_e_office")}, // element path
+                    "office", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_locata", getElements("actions_print_vouchers_qbe_e_locata")}, // element path
+                    "locata", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_bundle", getElements("actions_print_vouchers_qbe_e_bundle")}, // element path
+                    "bundle", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_ini_date", getElements("actions_print_vouchers_qbe_e_ini_date")}, // element path
+                    "ini_date", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_end_date", getElements("actions_print_vouchers_qbe_e_end_date")}, // element path
+                    "end", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_units", getElements("actions_print_vouchers_qbe_e_units")}, // element path
+                    "unit", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_ad", getElements("actions_print_vouchers_qbe_e_ad")}, // element path
+                    "ad", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_description", getElements("actions_print_vouchers_qbe_e_description")}, // element path
+                    "description", // key for data value (the name)
+                    where)){return false;}
+        }
+        if(!Functions.checkClickByAbsence(driver,
+                new String[]{"actions_print_vouchers_b_ok",getElements("actions_print_vouchers_b_ok")}, //element to click
+                recursiveXPaths.glass, //element expected to disappear
+                120,500,
+                where)){
+            return false;
+        }
         return true;
     }
     private boolean Search_booking_simple_search (TestDriver driver){
