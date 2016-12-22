@@ -66,11 +66,12 @@ public class AT2MDMDE0016Test {
         if (!Functions.selectText(driver,
                 new String[]{"add_sl_type",getElements("add_sl_type")},
                 "Destination and Zone", "type", where)){return false;}
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_destination", getElements("add_lov_destination")}, //LoV button
                 new String[]{"add_i_destination", getElements("add_i_destination")}, //external LoV input
-                new String[]{"add_lov_dest_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                "BBE", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "destination", //name of the data
                 where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_i_info_des", getElements("add_i_info_des")}, // element path
@@ -87,21 +88,23 @@ public class AT2MDMDE0016Test {
         if(!Functions.getValue(driver,new String[]{"add_i_info_age", getElements("add_i_info_age")}, // element path
                 "info_age", // key for data value (the name)
                 where)){return false;}
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.createLov(driver,
                 new String[]{"add_lov_receptive", getElements("add_lov_receptive")}, //LoV button
                 new String[]{"add_i_receptive", getElements("add_i_receptive")}, //external LoV input
-                new String[]{"add_lov_receptive_i_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
-                "112", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "receptive", //name of the data
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_info_rec", getElements("add_i_info_rec")}, // element path
                 "info_rec", // key for data value (the name)
                 where)){return false;}
-/*        if (!Functions.createLovByValue(driver,
+/*        if (!Functions.createLov(driver,
                 new String[]{"add_lov_b2b", getElements("add_lov_b2b")}, //LoV button
                 new String[]{"add_i_b2b", getElements("add_i_b2b")}, //external LoV input
-                new String[]{"add_lov_b2b_i_code", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                "18128", // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "b2b", //name of the data
                 where)){return false;}
         if(!Functions.getText(driver,new String[]{"add_i_info_b2b", getElements("add_i_info_b2b")}, // element path

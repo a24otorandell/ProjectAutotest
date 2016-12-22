@@ -102,7 +102,7 @@ public class AT2MDMCL0003Sis {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_WebUser_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 10, 400);
+        Functions.break_time(driver, 25, 400);
         if (!interaction_add_t1_2(driver)) return false;
         Functions.break_time(driver, 6, 400);
         if (!search_t1_2(driver)) return false;
@@ -190,7 +190,7 @@ public class AT2MDMCL0003Sis {
         if (!Functions.selectText(driver,
                 new String[]{"derivation_sl_type",getElements("derivation_sl_type")},
                 "CL_HX2_SAPCode_DR", "d_type", "SELECT OPTION")){return false;}
-        Functions.break_time(driver, 30, 400);
+        Functions.break_time(driver, 10, 400);
         if (!interaction_add_t1_5(driver)) return false;
         Functions.break_time(driver, 6, 400);
         if (!search_t1_5(driver)) return false;

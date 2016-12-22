@@ -556,14 +556,6 @@ public class AT2MDMCL0007Test {
     public boolean qbeHard (TestDriver driver) {
         driver.getReport().addHeader("QBE HARD", 3, false);
         String where = "QBE HARD";
-//        if (!Functions.simpleClick(driver,
-//                new String[]{"user_qbe_reset", getElements("user_qbe_reset")}, //element to click
-//                "QBE RESET")){return false;}
-//
-//        if (!Functions.insertInput(driver, new String[]{"qbe_i_user_id", getElements("qbe_i_user_id")},
-//                "id", "KVILIANIOT", where)) {
-//            return false;
-//        }
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_user_id", getElements("qbe_i_user_id")}, //any query input
                 new String[]{"user_e_result", getElements("user_e_result")}, //table result

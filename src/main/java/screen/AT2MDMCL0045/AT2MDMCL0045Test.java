@@ -51,6 +51,7 @@ public class AT2MDMCL0045Test {
         if (!getDatos(driver)) return false;
         if (!search(driver)) return false;
         if (!interaction_edit(driver)) return false;
+        if (!getDatos(driver)) return false;
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
         return true;
@@ -169,8 +170,6 @@ public class AT2MDMCL0045Test {
                 where)){return false;}
         selectBox(driver, "payment");
         selectBox(driver, "extra");
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_payment"),"payment",true,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -247,9 +246,19 @@ public class AT2MDMCL0045Test {
                 "m_mail", getData("m_mail"), where)) {
             return false;
         }
-        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_payment",getElements("qbe_sl_payment")},
-                getData("payment"), "payment", where)){return false;}
+        Functions.break_time(driver, 3, 400);
+        if (getData("payment").equalsIgnoreCase("checked")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_payment",getElements("qbe_sl_payment")},
+                    "Yes", "payment", where)){return false;}
+        }
+        else {
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_payment", getElements("qbe_sl_payment")},
+                    "No", "payment", where)) {
+                return false;
+            }
+        }
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_extra",getElements("qbe_sl_extra")},
                 getData("extra"), "extra", where)){return false;}

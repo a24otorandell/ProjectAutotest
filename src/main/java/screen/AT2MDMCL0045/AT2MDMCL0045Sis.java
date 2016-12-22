@@ -46,6 +46,7 @@ public class AT2MDMCL0045Sis {
         if (!getDatos(driver)) return false;
         if (!search(driver)) return false;
         if (!interaction_edit(driver)) return false;
+        if (!getDatos(driver)) return false;
         if (!qbe(driver)) return false;
         if (!others_actions(driver)) return false;
         return true;
@@ -54,14 +55,10 @@ public class AT2MDMCL0045Sis {
     private boolean first_search(TestDriver driver) {
         driver.getReport().addHeader("FIRST SEARCH RECORD", 3, false);
         String where = " on FIRST SEARCH";
-        Functions.break_time(driver, 300, 5000);
-        if (!Functions.insertInput(driver, new String[]{"search_i_key", getElements("search_i_key")},
-                "key", "zzs65y3n2ey72u7tsud8syuh", where)) {
-            return false;
-        }
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"search_b_search", getElements("search_b_search")}, //search button
                 new String[]{"results_e_result", getElements("results_e_result")}, //result element
+                300, 800,
                 where)) {
             return false;
         }
@@ -162,9 +159,8 @@ public class AT2MDMCL0045Sis {
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "branch", //Data name
                 where)){return false;}
+        Functions.break_time(driver, 3, 400);
         selectBox(driver, "payment");
-/*        if (!Functions.checkboxValue(driver,
-                getElements("add_ck_payment"),"payment",true,true,where)){return false;}*/
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_b_save", getElements("add_b_save")}, //e1
                 recursiveXPaths.glass, //e2
@@ -237,14 +233,24 @@ public class AT2MDMCL0045Sis {
                 "m_user", getData("m_user"), where)) {
             return false;
         }
+        Functions.break_time(driver, 3, 400);
         if (!Functions.insertInput(driver, new String[]{"qbe_i_member_email", getElements("qbe_i_member_email")},
                 "m_mail", getData("m_mail"), where)) {
             return false;
         }
         Functions.break_time(driver, 3, 400);
-        if (!Functions.selectText(driver,
-                new String[]{"qbe_sl_payment",getElements("qbe_sl_payment")},
-                getData("payment"), "payment", where)){return false;}
+        if (getData("payment").equalsIgnoreCase("checked")) {
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_payment",getElements("qbe_sl_payment")},
+                    "Yes", "payment", where)){return false;}
+        }
+        else {
+            if (!Functions.selectText(driver,
+                    new String[]{"qbe_sl_payment", getElements("qbe_sl_payment")},
+                    "No", "payment", where)) {
+                return false;
+            }
+        }
         Functions.break_time(driver, 3, 400);
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"qbe_i_key", getElements("qbe_i_key")}, //any query input
