@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.util.Random;
 
 /**
  * Created by vsolis on 18/11/2016.
@@ -16,6 +17,7 @@ import java.awt.event.KeyEvent;
 public class AT2BOOSA0001Test {
     protected AT2BOOSA0001Locators locators;
     protected AT2BOOSA0001Data data;
+
 
     public AT2BOOSA0001Test (){
 
@@ -78,6 +80,9 @@ public class AT2BOOSA0001Test {
        /* if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
             return false;
         }*/
+        if(!Search_booking_other_actions_print_vouchers(driver)){
+            return false;
+        }
         if(!Search_booking_other_actions_service_details(driver)){
             return false;
         }
@@ -91,7 +96,90 @@ public class AT2BOOSA0001Test {
         return true;
     }
 
+   private boolean Search_booking_other_actions_print_vouchers (TestDriver driver){
+        String where = " on PRINT VOUCHERS";
+        driver.getReport().addHeader("PRINT VOUCHERS IN SEARCH BOOKING",3,false);
+        Functions.break_time(driver,120,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
+                new String[]{"actions_b_print_vouchers",getElements("actions_b_print_vouchers")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        Functions.break_time(driver,120,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"actions_b_print_vouchers",getElements("actions_b_print_vouchers")}, //element to click
+                new String[]{"actions_print_vouchers_sl_format",getElements("actions_print_vouchers_sl_format")}, //element expected to appear
+                30,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+       String Format[] = {"Fax", "Printer", "E-Mail"};
+       if (!Functions.selectTextRandom(driver,
+               new String[]{"actions_print_vouchers_sl_format", getElements("actions_print_vouchers_sl_format")},
+               Format, "format", where)){return false;}
+       String Lenguage[] = {"German", "Arabic", "Bulgarian"};
+       if (!Functions.selectTextRandom(driver,
+               new String[]{"actions_print_vouchers_sl_lenguage", getElements("actions_print_vouchers_sl_lenguage")},
+               Lenguage, "format", where)){return false;}
+
+
+       Random print_paxs = new Random();
+       boolean getRandomBoolean = print_paxs.nextBoolean();
+
+       String RandomBoolean;
+
+       if(getRandomBoolean){
+
+           RandomBoolean= "Yes";
+           if(!Functions.checkboxValue(driver,
+                   getElements("actions_print_vouchers_ch_print_paxs"),"print_paxs",true,true, where)){
+               return false;
+           }
+       }else {RandomBoolean="No";
+           if(!Functions.checkboxValue(driver,
+                   getElements("actions_print_vouchers_ch_print_paxs"),"print_paxs",false,true, where)){
+               return false;
+
+           }
+       }
+       Random unified_vouchers = new Random();
+       boolean getRandomBoolean2 = unified_vouchers.nextBoolean();
+
+       String RandomBoolean2;
+
+       if(getRandomBoolean2){
+
+           RandomBoolean2= "Yes";
+           if(!Functions.checkboxValue(driver,
+                   getElements("actions_print_vouchers_ch_unified_vounchers"),"unified_vouchers",true,true, where)){
+               return false;
+           }
+       }else {RandomBoolean2="No";
+           if(!Functions.checkboxValue(driver,
+                   getElements("actions_print_vouchers_ch_unified_vounchers"),"unified_vouchers",false,true, where)){
+               return false;
+           }
+       }
+       if (!Functions.insertInput(driver, new String[]{"actions_print_vouchers_i_destination",getElements("actions_print_vouchers_i_destination")},
+               "destination", DataGenerator.getRandomAlphanumericSequence(9, true),where)){return false;}
+
+        if(!Functions.displayed(driver, getElements("actions_print_vouchers_e_result"))){
+
+            if(!Functions.getValue(driver,new String[]{"", getElements("")}, // element path
+                    "", // key for data value (the name)
+                    where)){return false;}
+        }
+       return true;
+    }
+
     //SEARCH BOOKING
+    private boolean Search_booking_other_actions_print_proforma (TestDriver driver){
+        String where = " on SIMPLE SEARCH";
+        driver.getReport().addHeader("SIMPLE SEARCH IN SEARCH BOOKING",3,false);
+        return true;
+    }
     private boolean Search_booking_qbe (TestDriver driver){
         String where = " on SEARCH BY QUERY BY EXAPLE";
         driver.getReport().addHeader("SEARCH BY QUERY BY EXAPLE IN SEARCH BOOKING",3,false);
@@ -785,7 +873,7 @@ public class AT2BOOSA0001Test {
     private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
         String where = " on GO TO CANCELED_BOOKINGD";
         driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
-        Functions.break_time(driver,90,600);
+        Functions.break_time(driver,120,600);
         if(!Functions.checkClick(driver,
                 new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
                 new String[]{"go_to_actions_b_bloqued_bookings",getElements("go_to_actions_b_bloqued_bookings")}, //element expected to appear
@@ -816,7 +904,7 @@ public class AT2BOOSA0001Test {
                 return false;
             }
         }
-        Functions.break_time(driver,90,600);
+        Functions.break_time(driver,120,600);
         if(!Functions.checkClick(driver,
                 new String[]{"go_to_search_booking",getElements("go_to_search_booking")}, //element to click
                 new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element expected to appear
@@ -853,7 +941,11 @@ public class AT2BOOSA0001Test {
                     where);
 
         }
-
+        Functions.break_time(driver,120,500);
+        if(!Functions.navigateTable(driver, new String[]{"actions_booking_confirmation_e_scroller", getElements("actions_booking_confirmation_e_scroller")}, //scroller xpath
+                "back")) {
+            return false;
+        }
         if(!Functions.checkClickByAbsence(driver,
                 new String[]{"actions_booking_confirmation_b_ok",getElements("actions_booking_confirmation_b_ok")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
@@ -863,11 +955,7 @@ public class AT2BOOSA0001Test {
         }
 
 
-     /*   Functions.break_time(driver,120,500);
-        if(!Functions.navigateTable(driver, new String[]{"actions_booking_confirmation_e_scroller", getElements("actions_booking_confirmation_e_scroller")}, //scroller xpath
-                "back")) {
-            return false;
-        }*/
+
         return true;
     }
     private boolean Search_booking_other_actions_send_booking_by_fax_email (TestDriver driver){
@@ -1024,25 +1112,25 @@ public class AT2BOOSA0001Test {
                     30,500, //seconds/miliseconds (driver wait)
                     where)){
                 return false;
-            }
+            }Functions.break_time(driver,120,600);
 
-            String list_options[] = {"Do not cancel", "Try again",};
+            String list_options[] = {"Do not cancel",};
             if (!Functions.selectTextRandom(driver,
                     new String[]{"actions_b_booking_cancelation_sl_action", getElements("actions_b_booking_cancelation_sl_action")},
                     list_options, "action", where)){return false;}
-
+            Functions.break_time(driver,120,600);
             if(!Functions.checkClick(driver,
                     new String[]{"actions_b_booking_cancelation_b_save",getElements("actions_b_booking_cancelation_b_save")}, //element to click
                     new String[]{"actions_booking_cancelation_b_edit",getElements("actions_booking_cancelation_b_edit")}, //element expected to appear
                     120,500, //seconds/miliseconds (driver wait)
                     where)){
                 return false;
-            }
+            }Functions.break_time(driver,120,600);
             if (!Functions.simpleClick(driver,
                     new String[]{"actions_b_booking_cancelation_b_ok", getElements("actions_b_booking_cancelation_b_ok")}, //element to click
                     where)){return false;}
         }
-
+        Functions.break_time(driver,120,600);
         if(!Functions.checkClickByAbsence(driver,
                 new String[]{"actions_b_booking_cancelation_b_close",getElements("actions_b_booking_cancelation_b_close")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
