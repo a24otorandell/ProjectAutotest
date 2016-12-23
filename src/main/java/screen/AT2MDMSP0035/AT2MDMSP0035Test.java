@@ -81,7 +81,7 @@ public class AT2MDMSP0035Test {
                 new String[]{"add_lov_hotel_code",getElements("add_lov_hotel_code")}, // b_lov
                 new String[]{"add_i_hotel_code", getElements("add_i_hotel_code")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult2, // lov result
+                recursiveXPaths.lov_e_result, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "hotel_code", //Data name
                 where)) {
