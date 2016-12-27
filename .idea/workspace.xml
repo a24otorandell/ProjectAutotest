@@ -10,10 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" afterPath="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -64,21 +63,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AT2BOOSA0001Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AT2BOOSA0001Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-410">
-              <caret line="983" column="0" selection-start-line="983" selection-start-column="0" selection-end-line="983" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="593">
+              <caret line="1185" column="5" selection-start-line="62" selection-start-column="4" selection-end-line="1185" selection-end-column="5" />
+              <folding>
+                <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#start#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#getElements#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#getData#1;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#testCSED#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Getrecords#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_print_vouchers#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_booking_confirmation#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_cancel_booking#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_other_actions_print_proforma#0;class#AT2BOOSA0001Test#0" expanded="false" />
+                <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AT2BOOSA0001Sis.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AT2BOOSA0001Sis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="1047" column="59" selection-start-line="1047" selection-start-column="59" selection-end-line="1047" selection-end-column="59" />
+            <state relative-caret-position="544">
+              <caret line="1167" column="5" selection-start-line="1167" selection-start-column="5" selection-end-line="1167" selection-end-column="5" />
               <folding>
                 <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
                 <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
@@ -107,7 +126,7 @@
       <file leaf-file-name="AT2BOOSA0001Manager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Manager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="168">
               <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
@@ -300,10 +319,10 @@
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2MDMOR0029/AT2MDMOR0029Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2ACCDI0028/AT2ACCDI0028Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/TestDriver/TestDriver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java" />
         <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Locators.java" />
+        <option value="$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java" />
       </list>
     </option>
   </component>
@@ -865,13 +884,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00126" summary="Actualizazcion AT2TRFSU0016&#10;&#10;">
-      <created>1479285497195</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1479285497195</updated>
-    </task>
     <task id="LOCAL-00127" summary="Actualizazcion AT2ACCSU0027&#10;&#10;">
       <created>1479304740791</created>
       <option name="number" value="00127" />
@@ -1208,7 +1220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482837001406</updated>
     </task>
-    <option name="localTasksCounter" value="175" />
+    <task id="LOCAL-00175" summary="   ACTUALIZACION DE AT2BOOSA0001, AT2ACCDI0028&#10;   &#10;&#10;">
+      <created>1482845314434</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1482845314434</updated>
+    </task>
+    <option name="localTasksCounter" value="176" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2120,46 +2139,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="1047" column="59" selection-start-line="1047" selection-start-column="59" selection-end-line="1047" selection-end-column="59" />
-          <folding>
-            <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#start#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#testCSED#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_print_vouchers#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_booking_confirmation#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_cancel_booking#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_other_actions_print_proforma#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-            <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/core/CommonActions/DataGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="109" column="27" selection-start-line="109" selection-start-column="27" selection-end-line="109" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Manager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2317,9 +2300,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-410">
-          <caret line="983" column="0" selection-start-line="983" selection-start-column="0" selection-end-line="983" selection-end-column="0" />
+        <state relative-caret-position="593">
+          <caret line="1185" column="5" selection-start-line="62" selection-start-column="4" selection-end-line="1185" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#AT2BOOSA0001Test#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#start#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Getrecords#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_print_vouchers#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_booking_confirmation#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_cancel_booking#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_print_proforma#0;class#AT2BOOSA0001Test#0" expanded="false" />
+            <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Manager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSA0001/AT2BOOSA0001Sis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="1167" column="5" selection-start-line="1167" selection-start-column="5" selection-end-line="1167" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#AT2BOOSA0001Sis#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#start#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#setScreenInfo#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#getElements#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#getData#1;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#testCSED#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_simple_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Getrecords#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_qbe#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_go_to_canceled_bookings#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_send_booking_by_fax_email#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_print_vouchers#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_service_details#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_booking_confirmation#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_cancel_booking#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_other_actions_print_proforma#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+            <element signature="method#Search_booking_advanced_search#0;class#AT2BOOSA0001Sis#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

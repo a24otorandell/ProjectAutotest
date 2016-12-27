@@ -72,9 +72,9 @@ public class AT2BOOSA0001Sis {
         if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
             return false;
         }
-       /* if(!Search_booking_other_actions_print_vouchers(driver)){
+        if(!Search_booking_other_actions_print_vouchers(driver)){
             return false;
-        }*/
+        }
         if(!Search_booking_other_actions_service_details(driver)){
             return false;
         }
@@ -924,7 +924,7 @@ public class AT2BOOSA0001Sis {
         if (!Functions.insertInput(driver, new String[]{"actions_print_vouchers_i_destination",getElements("actions_print_vouchers_i_destination")},
                 "destination", DataGenerator.getRandomAlphanumericSequence(9, true),where)){return false;}
 
-        if(!Functions.displayed(driver, getElements("actions_print_vouchers_e_result"))){
+        if(Functions.displayed(driver, getElements("actions_print_vouchers_e_result"))){
 
             if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_company", getElements("actions_print_vouchers_qbe_e_company")}, // element path
                     "company", // key for data value (the name)
@@ -935,8 +935,14 @@ public class AT2BOOSA0001Sis {
             if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_locata", getElements("actions_print_vouchers_qbe_e_locata")}, // element path
                     "locata", // key for data value (the name)
                     where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_type_of_service", getElements("actions_print_vouchers_qbe_e_type_of_service")}, // element path
+                    "type_of_service", // key for data value (the name)
+                    where)){return false;}
             if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_bundle", getElements("actions_print_vouchers_qbe_e_bundle")}, // element path
                     "bundle", // key for data value (the name)
+                    where)){return false;}
+            if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_service", getElements("actions_print_vouchers_qbe_e_service")}, // element path
+                    "service", // key for data value (the name)
                     where)){return false;}
             if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_ini_date", getElements("actions_print_vouchers_qbe_e_ini_date")}, // element path
                     "ini_date", // key for data value (the name)
