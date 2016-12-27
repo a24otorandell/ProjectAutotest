@@ -1535,7 +1535,7 @@ public class Functions {
     }
 
     /**
-     * This function is to verify that element by xpath appears en the screen
+     * This function is to verify that element by xpath appears in the screen
      *
      * @param driver TestDriver - This object gathers all the info refferent to the current test
      * @param xpath  String - Xpath referent to the element that verify that appaers
