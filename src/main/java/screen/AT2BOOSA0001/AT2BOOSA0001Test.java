@@ -66,7 +66,7 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_other_actions(driver)){
             return false;
         }
-        if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
+  /*      if(!Search_booking_other_actions_go_to_canceled_bookings(driver)){
             return false;
         }
         if(!Search_booking_other_actions_send_booking_by_fax_email(driver)){
@@ -84,10 +84,10 @@ public class AT2BOOSA0001Test {
         if(!Search_booking_other_actions_cancel_booking(driver)){
             return false;
         }
-      /*  if(!Search_booking_other_actions_print_proforma(driver)){
+        if(!Search_booking_other_actions_print_proforma(driver)){
             return false;
-        }*/
-       /* if(!Search_booking_advanced_search(driver)){return false;}*/
+        }
+        if(!Search_booking_advanced_search(driver)){return false;}*/
         return true;
     }
 
@@ -456,11 +456,11 @@ public class AT2BOOSA0001Test {
                 "result_arrival_booking",
                 getData("result_arrival_booking"),
                 where);
-    /*    Functions.insertInput(driver,
+        Functions.insertInput(driver,
                 new String[]{"query_i_departure_booking",getElements("query_i_departure_booking")},
                 "result_departure_booking",
                 getData("result_departure_booking"),
-                where);*/
+                where);
         Functions.insertInput(driver,
                 new String[]{"query_i_hotel_send",getElements("query_i_hotel_send")},
                 "result_hotel_send",
@@ -584,7 +584,7 @@ public class AT2BOOSA0001Test {
                 "result_cancellation_date",
                 getData("result_cancellation_date"),
                 where);
-       /* Functions.insertInput(driver,
+        Functions.insertInput(driver,
                 new String[]{"query_i_cancellation_fee_date",getElements("query_i_cancellation_fee_date")},
                 "result_e_cancellation_fee_date",
                 getData("result_e_cancellation_fee_date"),
@@ -593,7 +593,7 @@ public class AT2BOOSA0001Test {
                 new String[]{"query_i_auto_cancellation_date_time",getElements("query_i_auto_cancellation_date_time")},
                 "result_auto_cancellation_date_time",
                 getData("result_auto_cancellation_date_time"),
-                where);*/
+                where);
         Functions.insertInput(driver,
                 new String[]{"query_i_client_code",getElements("query_i_client_code")},
                 "result_client_code",
@@ -786,23 +786,23 @@ public class AT2BOOSA0001Test {
     private boolean Search_booking_other_actions_go_to_canceled_bookings (TestDriver driver){
         String where = " on GO TO CANCELED_BOOKINGD";
         driver.getReport().addHeader("GO TO CANCELED_BOOKINGD IN SEARCH BOOKING",3,false);
-        Functions.break_time(driver,120,600);
+        Functions.break_time(driver,360,600);
         if(!Functions.checkClick(driver,
                 new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element to click
                 new String[]{"go_to_actions_b_bloqued_bookings",getElements("go_to_actions_b_bloqued_bookings")}, //element expected to appear
-                30,500, //seconds/miliseconds (driver wait)
+                360,500, //seconds/miliseconds (driver wait)
                 where)){
             return false;
         }
-        Functions.break_time(driver,120,600);
+        Functions.break_time(driver,360,600);
         if(!Functions.checkClick(driver,
                 new String[]{"go_to_actions_b_bloqued_bookings",getElements("go_to_actions_b_bloqued_bookings")}, //element to click
                 new String[]{"go_to_bloqued_bookings_ch_select_all_gods",getElements("go_to_bloqued_bookings_ch_select_all_gods")}, //element expected to appear
-                30,500, //seconds/miliseconds (driver wait)
+                360,500, //seconds/miliseconds (driver wait)
                 where)){
             return false;
         }
-        Functions.break_time(driver,120,600);
+        Functions.break_time(driver,360,600);
 
         if(Functions.displayed(driver,getElements("go_to_bloqued_bookings_e_result"))){
             if(!Functions.checkboxValue(driver,
@@ -817,7 +817,7 @@ public class AT2BOOSA0001Test {
                 return false;
             }
         }
-        Functions.break_time(driver,120,600);
+        Functions.break_time(driver,360,600);
         if(!Functions.checkClick(driver,
                 new String[]{"go_to_search_booking",getElements("go_to_search_booking")}, //element to click
                 new String[]{"tb_b_actions",getElements("tb_b_actions")}, //element expected to appear
@@ -869,16 +869,20 @@ public class AT2BOOSA0001Test {
                 where)){
             return false;
         }if(!Functions.screenshot(driver));
-            if (!Functions.selectText(driver,
-                    new String[]{"actions_send_booking_sl_format",getElements("actions_send_booking_sl_format")},
-                    "E-Mail", "Format",  where)){return false;}
+
+        Functions.break_time(driver,360,500);
+        if (!Functions.selectText(driver,
+                new String[]{"actions_send_booking_sl_format",getElements("actions_send_booking_sl_format")},
+                "E-Mail", "Format",  where)){return false;}
+        Functions.break_time(driver,360,500);
         if(!Functions.getValue(driver,new String[]{"actions_send_booking_i_from", getElements("actions_send_booking_i_from")}, // element path
                 "From", // key for data value (the name)
-                 where)){return false;}
+                where)){return false;}
+        Functions.break_time(driver,360,500);
         if (!Functions.insertInput(driver, new String[]{"actions_send_booking_i_destination",getElements("actions_send_booking_i_destination")},
                 "Destination", getData("From"), where)){return false;}
         if(!Functions.screenshot(driver));
-
+        Functions.break_time(driver,360,500);
         if(!Functions.simpleClick(driver,
                 new String[]{"actions_send_booking_b_cancel",getElements("actions_send_booking_b_cancel")}, //element to click
                 where)){
@@ -924,7 +928,7 @@ public class AT2BOOSA0001Test {
         if (!Functions.insertInput(driver, new String[]{"actions_print_vouchers_i_destination",getElements("actions_print_vouchers_i_destination")},
                 "destination", DataGenerator.getRandomAlphanumericSequence(9, true),where)){return false;}
 
-        if(Functions.displayed(driver, getElements("actions_print_vouchers_e_result"))){
+        if(!Functions.displayed(driver, getElements("actions_print_vouchers_e_result"))){
 
             if(!Functions.getValue(driver,new String[]{"actions_print_vouchers_qbe_e_company", getElements("actions_print_vouchers_qbe_e_company")}, // element path
                     "company", // key for data value (the name)
