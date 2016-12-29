@@ -1642,13 +1642,15 @@ public class Functions {
     }
 
     /**
-     * @param driver
-     * @param checkbox
-     * @param data
-     * @param where
+     * This function makes a random boolean for the checkboxes
+     *
+     * @param driver   {@code TestDriver} - This object gathers all the info refferent to the current test
+     * @param checkbox {@code String} -
+     * @param dataname {@code String} - Name of the data that is included in the data map
+     * @param where    {@code String} - Tells where the operation is taking effect
      * @return
      */
-    public static boolean randomCheck(TestDriver driver, String checkbox, String data, String where) {
+    public static boolean randomCheck(TestDriver driver, String checkbox, String dataname, String where) {
         /*
         //Creación|Edición
         if (!Functions.randomCheck(driver, getElements("inputvalue"), "dataname",
@@ -1666,7 +1668,7 @@ public class Functions {
         boolean getRandomBoolean = randomBoolean.nextBoolean();
         String RandomBoolean;
         if (!Functions.checkboxValue(driver,
-                checkbox, data, getRandomBoolean, true, where)) {
+                checkbox, dataname, getRandomBoolean, true, where)) {
             return false;
         }
         return true;
@@ -1820,19 +1822,31 @@ public class Functions {
     }
 
     /**
+     *
+     *
      * @param driver
      * @param scrollBar
-     * @param direction
+     * @param distance
+     * @param where
      * @return
      */
-    public static boolean navigateTable(TestDriver driver, String scrollBar[], String direction) {
+    public static boolean navigateTable(TestDriver driver, String scrollBar[], int distance, String where) {
       /*
       if(!Functions.navigateTable(driver,
                 new String[]{"scrollBar", getElements("scrollBar")}, //scroller xpath
                 "back/forward")); //nav direction(just back or forward){
         return false;
-        }*/
-        try {
+        }
+        */
+
+
+        WebElement scroll = driver.getDriver().findElement(By.xpath(scrollBar[1]));
+
+        ((JavascriptExecutor) driver.getDriver()).executeScript("arguments[0].scrollLeft: '0, -" + distance + "');", scroll);
+
+
+
+        /*try {
             switch (direction) {
                 case "forward":
                     driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT, Keys.RIGHT)); //FOWARD
@@ -1848,7 +1862,7 @@ public class Functions {
             e.printStackTrace();
             ErrorManager.process(driver, ecode);
             return true;
-        }
+        }*/
         return true;
     }
 }

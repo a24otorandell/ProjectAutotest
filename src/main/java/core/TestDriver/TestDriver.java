@@ -4,7 +4,6 @@ import core.CommonActions.CommonProcedures;
 import core.ErrorManager.ErrorManager;
 import core.HTMLReport.AutoReport;
 import core.Jira.JiraUpdate;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -14,7 +13,6 @@ import screen.AT2Test;
 
 import java.io.File;
 import java.lang.reflect.Constructor;
-import java.sql.Array;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -332,7 +330,7 @@ public class TestDriver {
                     this.jirastatus = false;
                     jira = new JiraUpdate(this);
                     jira.start();
-                    System.out.println("Test updated sacssefull in Jira.");
+                    System.out.println("Test updated successfull in Jira.");
                 }
                 break;
             case "JIRA":

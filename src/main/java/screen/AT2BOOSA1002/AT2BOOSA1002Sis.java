@@ -2634,13 +2634,16 @@ class AT2BOOSA1002Sis {
         if (!header_collectiondata(driver)) {
             return false;
         }
-        /*if (!header_hotelopiaclient(driver)) {
-            return false;
-        }*/
+        /**
+         //ToDo No se conseguir que se active esta opción
+         if (!header_hotelopiaclient(driver)) {
+         return false;
+         }*/
         return true;
     }
 
- /*   private boolean header_hotelopiaclient(TestDriver driver) {
+    //<editor-fold desc="Hotelopia Client">
+ /*    private boolean header_hotelopiaclient(TestDriver driver) {
         if (!Functions.checkClick(driver,
                 new String[]{"header_b_actions", getElements("header_b_actions")}, //element to click
                 new String[]{"header_b_actions_b_hotelopiaclient", getElements("header_b_actions_b_hotelopiaclient")}, //element expected to appear
@@ -2674,6 +2677,7 @@ class AT2BOOSA1002Sis {
         }
         return true;
     }*/
+    //</editor-fold>
 
     private boolean header_collectiondata(TestDriver driver) {
 
@@ -2717,36 +2721,47 @@ class AT2BOOSA1002Sis {
         if (!header_paxes_creationEdit(driver, true, on)) {
             return false;
         }
-        if (!header_paxes_qbe(driver, on)) {
+        if (!header_paxes_qbe(driver, true, on)) {
             return false;
         }
-        /*
         if (!header_paxes_creationEdit(driver, false, on)) {
             return false;
         }
-        if (!header_paxes_qbe(driver, on)) {
-            return false;
-        }*/
-        if (!Functions.detachTable(driver,
-                new String[]{"header_b_actions_b_paxes_b_detach", getElements("header_b_actions_b_paxes_b_detach")}, //element to click
-                true,
-                on)) {
+        if (!header_paxes_qbe(driver, false, on)) {
             return false;
         }
-        /*if (!header_paxes_delete(driver, on)) {
+        // Después de hacer el detach el xpath de close cambia
+        /**
+         if (!Functions.detachTable(driver,
+         new String[]{"header_b_actions_b_paxes_b_detach", getElements("header_b_actions_b_paxes_b_detach")}, //element to click
+         true,
+         on)) {
+         return false;
+         }*/
+        if (!header_paxes_delete(driver, on)) {
             return false;
-        }*/
+        }
+        while (!Functions.displayed(driver, getElements("header_b_actions_b_paxes_b_close"))
+                && Functions.displayed(driver, getElements("header_b_actions_b_paxes_b_detach_b_close"))) {
+            System.out.println("Searching love in ADF");
+            if (!Functions.checkClickByAbsence(driver,
+                    new String[]{"header_b_actions_b_paxes_b_detach_b_close", getElements("header_b_actions_b_paxes_b_detach_b_close")}, //element to click
+                    new String[]{"header_b_actions_b_paxes_b_detach_b_close", getElements("header_b_actions_b_paxes_b_detach_b_close")},
+                    180, 500, on)) {
+                return false;
+            }
+        }
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"header_b_actions_b_paxes_b_close", getElements("header_b_actions_b_paxes_b_close")}, //element to click
-                recursiveXPaths.glass, //element expected to appear
-                on)) {
+                new String[]{"header_b_actions_b_paxes_b_close", getElements("header_b_actions_b_paxes_b_close")},
+                180, 500, on)) {
             return false;
         }
         return true;
     }
 
     private boolean header_paxes_creationEdit(TestDriver driver, boolean type, String on) {
-        String onplus;
+        String onplus, edit = "";
         if (type) {
             onplus = on + "-> Record creation";
             Functions.break_time(driver, 10, 500);
@@ -2758,12 +2773,14 @@ class AT2BOOSA1002Sis {
             }
         } else {
             onplus = on + "-> Record edition";
+            edit = "_edit";
             Functions.break_time(driver, 10, 500);
             if (!Functions.simpleClick(driver,
                     new String[]{"header_b_actions_b_paxes_e_record", getElements("header_b_actions_b_paxes_e_record")},
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.checkClick(driver,
                     new String[]{"header_b_actions_b_paxes_b_edit", getElements("header_b_actions_b_paxes_b_edit")},
                     new String[]{"header_b_actions_b_paxes_b_add_i_name", getElements("header_b_actions_b_paxes_b_add_i_name")},
@@ -2778,20 +2795,22 @@ class AT2BOOSA1002Sis {
                 onplus)) {
             return false;
         }
+        Functions.break_time(driver, 10, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"header_b_actions_b_paxes_b_add_lov_type", getElements("header_b_actions_b_paxes_b_add_lov_type")},
                 new String[]{"header_b_actions_b_paxes_b_add_i_type", getElements("header_b_actions_b_paxes_b_add_i_type")},
                 new String[]{"header_b_actions_b_paxes_b_add_lov_type_i", getElements("header_b_actions_b_paxes_b_add_lov_type_i")},
-                getData("da_header_paxes_type"),
+                getData("da_header_paxes_type" + edit),
                 "header_paxes_type",
                 onplus)) {
             return false;
         }
+        Functions.break_time(driver, 10, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"header_b_actions_b_paxes_b_add_lov_type2", getElements("header_b_actions_b_paxes_b_add_lov_type2")},
                 new String[]{"header_b_actions_b_paxes_b_add_i_type2", getElements("header_b_actions_b_paxes_b_add_i_type2")},
                 new String[]{"header_b_actions_b_paxes_b_add_lov_type2_i", getElements("header_b_actions_b_paxes_b_add_lov_type2_i")},
-                getData("da_header_paxes_type2"),
+                getData("da_header_paxes_type2" + edit),
                 "header_paxes_type2",
                 onplus)) {
             return false;
@@ -2806,7 +2825,7 @@ class AT2BOOSA1002Sis {
         if (!Functions.insertInput(driver,
                 new String[]{"header_b_actions_b_paxes_b_add_i_birth_date", getElements("header_b_actions_b_paxes_b_add_i_birth_date")},
                 "header_paxes_birth_date",
-                DataGenerator.getRelativeDateToday("dd/MM/yyyy", 0, DataGenerator.random(8, 3), 0),
+                DataGenerator.getRelativeDateToday("dd/MM/yyyy", -5, DataGenerator.random(8, 3), 0),
                 onplus)) {
             return false;
         }
@@ -2814,7 +2833,7 @@ class AT2BOOSA1002Sis {
                 new String[]{"header_b_actions_b_paxes_b_add_lov_country", getElements("header_b_actions_b_paxes_b_add_lov_country")},
                 new String[]{"header_b_actions_b_paxes_b_add_i_country", getElements("header_b_actions_b_paxes_b_add_i_country")},
                 new String[]{"header_b_actions_b_paxes_b_add_lov_country_i", getElements("header_b_actions_b_paxes_b_add_lov_country_i")},
-                getData("header_paxes_country"),
+                getData("header_paxes_country" + edit),
                 "header_paxes_country",
                 onplus)) {
             return false;
@@ -2822,7 +2841,7 @@ class AT2BOOSA1002Sis {
         if (!Functions.insertInput(driver,
                 new String[]{"header_b_actions_b_paxes_b_add_i_age", getElements("header_b_actions_b_paxes_b_add_i_age")},
                 "header_paxes_age",
-                String.valueOf(DataGenerator.random(12, 199)),
+                String.valueOf(DataGenerator.random(12, 18)),
                 onplus)) {
             return false;
         }
@@ -2841,10 +2860,13 @@ class AT2BOOSA1002Sis {
                         onplus)) {
                     return false;
                 }
-                if (!Functions.simpleClick(driver,
-                        new String[]{"header_b_actions_b_paxes_b_add_b_ok_alert", getElements("header_b_actions_b_paxes_b_add_b_ok_alert")},
-                        onplus)) {
-                    return false;
+                if (Functions.displayed(driver,
+                        getElements("header_b_actions_b_paxes_b_add_b_ok_alert"))) {
+                    if (!Functions.simpleClick(driver,
+                            new String[]{"header_b_actions_b_paxes_b_add_b_ok_alert", getElements("header_b_actions_b_paxes_b_add_b_ok_alert")},
+                            onplus)) {
+                        return false;
+                    }
                 }
             }
         } catch (Exception e) {
@@ -2857,6 +2879,12 @@ class AT2BOOSA1002Sis {
                 onplus)) {
             return false;
         }
+        if (!Functions.getValue(driver,
+                new String[]{"header_b_actions_b_paxes_b_add_e_country_desc", getElements("header_b_actions_b_paxes_b_add_e_country_desc")},
+                "header_paxes_country_desc",
+                onplus)) {
+            return false;
+        }
         if (!Functions.simpleClick(driver,
                 new String[]{"header_b_actions_b_paxes_b_add_b_save", getElements("header_b_actions_b_paxes_b_add_b_save")},
                 onplus)) {
@@ -2865,16 +2893,19 @@ class AT2BOOSA1002Sis {
         return true;
     }
 
-    private boolean header_paxes_qbe(TestDriver driver, String on) {
-        String onplus = on + "-> QBE";
+    private boolean header_paxes_qbe(TestDriver driver, boolean first, String on) {
+        String edit = "", onplus = on + "-> QBE";
+        if (!first) {
+            edit = "_edit";
+        }
         if (Functions.displayed(driver, getElements("header_b_actions_b_paxes_b_qbe"))) {
-            System.out.println("YEEEEEHA!");
-            if (!Functions.checkClick(driver,
+            if (!Functions.clickQbE(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe", getElements("header_b_actions_b_paxes_b_qbe")},
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_order", getElements("header_b_actions_b_paxes_b_qbe_i_order")},
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_order", getElements("header_b_actions_b_paxes_b_qbe_i_order")},
                     "header_paxes_order",
@@ -2882,6 +2913,7 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_name", getElements("header_b_actions_b_paxes_b_qbe_i_name")},
                     "header_paxes_name",
@@ -2889,6 +2921,7 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_surnames", getElements("header_b_actions_b_paxes_b_qbe_i_surnames")},
                     "header_paxes_surname",
@@ -2896,6 +2929,7 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_age", getElements("header_b_actions_b_paxes_b_qbe_i_age")},
                     "header_paxes_age",
@@ -2903,20 +2937,23 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_type", getElements("header_b_actions_b_paxes_b_qbe_i_type")},
                     "header_paxes_type",
-                    getData("da_header_paxes_type"),
+                    getData("da_header_paxes_type" + edit),
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_type2", getElements("header_b_actions_b_paxes_b_qbe_i_type2")},
                     "header_paxes_type2",
-                    getData("da_header_paxes_type2"),
+                    getData("da_header_paxes_type2" + edit),
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_birth_date", getElements("header_b_actions_b_paxes_b_qbe_i_birth_date")},
                     "header_paxes_birth_date",
@@ -2924,6 +2961,7 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_passport", getElements("header_b_actions_b_paxes_b_qbe_i_passport")},
                     "header_paxes_passport",
@@ -2931,6 +2969,7 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_country", getElements("header_b_actions_b_paxes_b_qbe_i_country")},
                     "header_paxes_country",
@@ -2938,6 +2977,7 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_country_description", getElements("header_b_actions_b_paxes_b_qbe_i_country_description")},
                     "header_paxes_country_desc",
@@ -2945,6 +2985,7 @@ class AT2BOOSA1002Sis {
                     onplus)) {
                 return false;
             }
+            Functions.break_time(driver, 10, 500);
             if (!Functions.enterQueryAndClickResult(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_name", getElements("header_b_actions_b_paxes_b_qbe_i_name")},
                     new String[]{"header_b_actions_b_paxes_e_record", getElements("header_b_actions_b_paxes_e_record")},
@@ -2957,8 +2998,14 @@ class AT2BOOSA1002Sis {
 
     private boolean header_paxes_delete(TestDriver driver, String on) {
         String onplus = on + "-> Delete";
-        if (!Functions.doDelete(driver,
+        if (!Functions.checkClick(driver,
                 new String[]{"header_b_actions_b_paxes_b_delete", getElements("header_b_actions_b_paxes_b_delete")},
+                new String[]{"header_b_actions_b_paxes_b_delete_b_ok", getElements("header_b_actions_b_paxes_b_delete_b_ok")},
+                onplus)) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"header_b_actions_b_paxes_b_delete_b_ok", getElements("header_b_actions_b_paxes_b_delete_b_ok")},
                 new String[]{"header_b_actions_b_paxes_b_delete_b_ok", getElements("header_b_actions_b_paxes_b_delete_b_ok")},
                 onplus)) {
             return false;

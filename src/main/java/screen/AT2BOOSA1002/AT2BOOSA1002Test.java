@@ -5,6 +5,8 @@ import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 
 /**
  * @author acarrillo on 18/05/2016.
@@ -64,12 +66,12 @@ class AT2BOOSA1002Test {
         if (!create_header(driver)) {
             return false;
         }
-        if (!header_actions(driver)) {
+       /* if (!header_actions(driver)) {
             return false;
         }
         if (!header_consult(driver)) {
             return false;
-        }
+        }*/
         if (!hotel(driver)) {
             return false;
         }
@@ -1183,6 +1185,8 @@ class AT2BOOSA1002Test {
     //</editor-fold >
     //<editor-fold desc="Hotel CSED">
     private boolean hotel(TestDriver driver) {
+        Functions.zoomIn(driver);
+        driver.getDriver().findElement(By.tagName("html")).sendKeys(Keys.chord(Keys.PAGE_DOWN));
         if (!create_hotel(driver)) {
             return false;
         }
@@ -1733,7 +1737,6 @@ class AT2BOOSA1002Test {
     }
 
     private boolean create_hotel(TestDriver driver) {
-
         if (!Functions.checkClick(driver,
                 new String[]{"hotel_b_add", getElements("hotel_b_add")}, //element to click
                 new String[]{"hotel_e_result", getElements("hotel_e_result")}, //element expected to appear
@@ -1748,6 +1751,7 @@ class AT2BOOSA1002Test {
                 "hotel_night", getData("hotel_night"), " on BOOSA1002 Hotel")) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLovByValue(driver,
                 new String[]{"hotel_e_result_lov_hotel", getElements("hotel_e_result_lov_hotel")}, //LoV button
                 new String[]{"hotel_e_result_i_hotel", getElements("hotel_e_result_i_hotel")}, //external LoV input
@@ -1757,19 +1761,24 @@ class AT2BOOSA1002Test {
                 " on BOOSA1002 Hotel")) {
             return false;
         }
-
+        Functions.break_time(driver, 30, 500);
         //contract
-        //uni
-
-        if (!Functions.createLovByValue(driver,
+        if (!Functions.insertInput(driver, new String[]{"hotel_e_result_i_uni", getElements("hotel_e_result_i_uni")},
+                "hotel_uni", String.valueOf(DataGenerator.random(1, 3)), " on BOOSA1002 Hotel")) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.createLov(driver,
                 new String[]{"hotel_e_result_lov_room", getElements("hotel_e_result_lov_room")}, //LoV button
                 new String[]{"hotel_e_result_i_room", getElements("hotel_e_result_i_room")}, //external LoV input
-                new String[]{"lovinput", recursiveXPaths.lov_i_genericinput}, //internal LoV input
-                getData("room_name"), // value to search
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
                 "room_name", //name of the data
                 " on BOOSA1002 Hotel")) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"hotel_e_result_lov_char", getElements("hotel_e_result_lov_char")}, //LoV button
                 new String[]{"hotel_e_result_i_char", getElements("hotel_e_result_i_char")}, //external LoV input
@@ -1780,6 +1789,7 @@ class AT2BOOSA1002Test {
                 " on BOOSA1002 Hotel")) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"hotel_e_result_lov_board", getElements("hotel_e_result_lov_board")}, //LoV button
                 new String[]{"hotel_e_result_i_board", getElements("hotel_e_result_i_board")}, //external LoV input
@@ -1790,7 +1800,18 @@ class AT2BOOSA1002Test {
                 " on BOOSA1002 Hotel")) {
             return false;
         }
-
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.createLov(driver,
+                new String[]{"hotel_e_result_lov_prod_ofi", getElements("hotel_e_result_lov_prod_ofi")}, //LoV button
+                new String[]{"hotel_e_result_i_prod_ofi", getElements("hotel_e_result_i_prod_ofi")}, //external LoV input
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "board_name", //name of the data
+                " on BOOSA1002 Hotel")) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"hotel_b_save", getElements("hotel_b_save")}, //element to click
                 " on BOOSA1002 Hotel")) {
@@ -2547,12 +2568,13 @@ class AT2BOOSA1002Test {
                 on + "-> Actions Suppliers Tab")) {
             return false;
         }
-        if (!Functions.checkClickByAbsence(driver,
-                new String[]{"header_b_consult_b_headerhistoric_e_supp_tab_b_action_b_query_sendings", getElements("header_b_consult_b_headerhistoric_e_supp_tab_b_action_b_query_sendings")}, //element to click
-                new String[]{"workingclasshero", "//*[contains(@id, 'si7')]/img"},
-                on + "-> Actions Suppliers Tab")) {
-            return false;
-        }
+        /** No se dde donde salen los registros de esta pestaña asi que no puedo dejar que haga la QBE y pete sin ser bug
+         if (!Functions.checkClickByAbsence(driver,
+         new String[]{"header_b_consult_b_headerhistoric_e_supp_tab_b_action_b_query_sendings", getElements("header_b_consult_b_headerhistoric_e_supp_tab_b_action_b_query_sendings")}, //element to click
+         new String[]{"workingclasshero", "//*[contains(@id, 'si7')]/img"},
+         on + "-> Actions Suppliers Tab")) {
+         return false;
+         }*/
         Functions.break_time(driver, 30, 100);
         Functions.screenshot(driver);
         if (!Functions.checkClickByAbsence(driver,
@@ -2634,9 +2656,11 @@ class AT2BOOSA1002Test {
         if (!header_collectiondata(driver)) {
             return false;
         }
-        /*if (!header_hotelopiaclient(driver)) {
-            return false;
-        }*/
+        /**
+         //ToDo No se conseguir que se active esta opción
+         if (!header_hotelopiaclient(driver)) {
+         return false;
+         }*/
         return true;
     }
 
@@ -2719,24 +2743,26 @@ class AT2BOOSA1002Test {
         if (!header_paxes_creationEdit(driver, true, on)) {
             return false;
         }
-        if (!header_paxes_qbe(driver, on)) {
+        if (!header_paxes_qbe(driver, true, on)) {
             return false;
         }
         if (!header_paxes_creationEdit(driver, false, on)) {
             return false;
         }
-        /*if (!header_paxes_qbe(driver, on)) {
-            return false;
-        }*/
-        if (!Functions.detachTable(driver,
-                new String[]{"header_b_actions_b_paxes_b_detach", getElements("header_b_actions_b_paxes_b_detach")}, //element to click
-                true,
-                on)) {
+        if (!header_paxes_qbe(driver, false, on)) {
             return false;
         }
-        /*if (!header_paxes_delete(driver, on)) {
+        // Después de hacer el detach el xpath de close cambia
+        /**
+         if (!Functions.detachTable(driver,
+         new String[]{"header_b_actions_b_paxes_b_detach", getElements("header_b_actions_b_paxes_b_detach")}, //element to click
+         true,
+         on)) {
+         return false;
+         }*/
+        if (!header_paxes_delete(driver, on)) {
             return false;
-        }*/
+        }
         while (!Functions.displayed(driver, getElements("header_b_actions_b_paxes_b_close"))
                 && Functions.displayed(driver, getElements("header_b_actions_b_paxes_b_detach_b_close"))) {
             System.out.println("Searching love in ADF");
@@ -2875,6 +2901,12 @@ class AT2BOOSA1002Test {
                 onplus)) {
             return false;
         }
+        if (!Functions.getValue(driver,
+                new String[]{"header_b_actions_b_paxes_b_add_e_country_desc", getElements("header_b_actions_b_paxes_b_add_e_country_desc")},
+                "header_paxes_country_desc",
+                onplus)) {
+            return false;
+        }
         if (!Functions.simpleClick(driver,
                 new String[]{"header_b_actions_b_paxes_b_add_b_save", getElements("header_b_actions_b_paxes_b_add_b_save")},
                 onplus)) {
@@ -2883,10 +2915,12 @@ class AT2BOOSA1002Test {
         return true;
     }
 
-    private boolean header_paxes_qbe(TestDriver driver, String on) {
-        String onplus = on + "-> QBE";
+    private boolean header_paxes_qbe(TestDriver driver, boolean first, String on) {
+        String edit = "", onplus = on + "-> QBE";
+        if (!first) {
+            edit = "_edit";
+        }
         if (Functions.displayed(driver, getElements("header_b_actions_b_paxes_b_qbe"))) {
-            System.out.println("YEEEEEHA!");
             if (!Functions.clickQbE(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe", getElements("header_b_actions_b_paxes_b_qbe")},
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_order", getElements("header_b_actions_b_paxes_b_qbe_i_order")},
@@ -2929,7 +2963,7 @@ class AT2BOOSA1002Test {
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_type", getElements("header_b_actions_b_paxes_b_qbe_i_type")},
                     "header_paxes_type",
-                    getData("da_header_paxes_type"),
+                    getData("da_header_paxes_type" + edit),
                     onplus)) {
                 return false;
             }
@@ -2937,7 +2971,7 @@ class AT2BOOSA1002Test {
             if (!Functions.insertInput(driver,
                     new String[]{"header_b_actions_b_paxes_b_qbe_i_type2", getElements("header_b_actions_b_paxes_b_qbe_i_type2")},
                     "header_paxes_type2",
-                    getData("da_header_paxes_type2"),
+                    getData("da_header_paxes_type2" + edit),
                     onplus)) {
                 return false;
             }
@@ -2986,8 +3020,14 @@ class AT2BOOSA1002Test {
 
     private boolean header_paxes_delete(TestDriver driver, String on) {
         String onplus = on + "-> Delete";
-        if (!Functions.doDelete(driver,
+        if (!Functions.checkClick(driver,
                 new String[]{"header_b_actions_b_paxes_b_delete", getElements("header_b_actions_b_paxes_b_delete")},
+                new String[]{"header_b_actions_b_paxes_b_delete_b_ok", getElements("header_b_actions_b_paxes_b_delete_b_ok")},
+                onplus)) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver,
+                new String[]{"header_b_actions_b_paxes_b_delete_b_ok", getElements("header_b_actions_b_paxes_b_delete_b_ok")},
                 new String[]{"header_b_actions_b_paxes_b_delete_b_ok", getElements("header_b_actions_b_paxes_b_delete_b_ok")},
                 onplus)) {
             return false;
@@ -3226,12 +3266,16 @@ class AT2BOOSA1002Test {
         Functions.break_time(driver, 60, 500);
         String mystring = getData("booking_value");
         System.out.println(mystring);
-        String bookings_value[] = mystring.split("-");
-        System.out.println(bookings_value);
-        putData("booking", bookings_value[1]);
-        String recep_value[] = bookings_value[0].split(" ");
-        System.out.println(recep_value);
-        putData("receptive", recep_value[2]);
+        try {
+            String bookings_value[] = mystring.split("-");
+            System.out.println(bookings_value);
+            putData("booking", bookings_value[1]);
+            String recep_value[] = bookings_value[0].split(" ");
+            System.out.println(recep_value);
+            putData("receptive", recep_value[2]);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return true;
     }
