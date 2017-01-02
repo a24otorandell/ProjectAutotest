@@ -1746,17 +1746,18 @@ public class Functions {
      * @param where       {@code String} - Tells where the operation is taking effect
      * @return {@code boolean}
      */
-    public static boolean lovMultiSelection(TestDriver driver, String[] b_lov, boolean altreresult, String where) {
+    public static boolean lovMultiSelection(TestDriver driver, String[] b_lov, boolean altreresult,String where) {
         /*
           if(!Functions.lovMultiSelection(driver,
             new String[]{"", getElements("")},
             false, //like this selects the 1º record
             "where")){
-                return false
+                return false;
             }
          */
 
         driver.getReport().addContent("Lov with Multiselection values:", "h5", "");
+
         try {
             checkClick(driver, b_lov, recursiveXPaths.msilov_b_arrow, 4, 500, where);
             checkClick(driver, recursiveXPaths.msilov_b_search, recursiveXPaths.msilov_e_result, 4, 500, where);
@@ -1765,8 +1766,9 @@ public class Functions {
             } else {
                 simpleClick(driver, recursiveXPaths.msilov_e_result, where);
             }
+
             checkClick(driver, recursiveXPaths.msilov_b_arrow, recursiveXPaths.msilov_e_result_2, 1, 500, where);
-            checkClickByAbsence(driver, recursiveXPaths.msilov_b_ok, recursiveXPaths.glass, 2, 500, where);
+            checkClickByAbsence(driver, recursiveXPaths.msilov_b_ok, recursiveXPaths.msilov_b_ok, 2, 500, where);
         } catch (Exception e) {
             String message = "--ERROR: to select values in multiselection lov on" + where;
             e.printStackTrace();

@@ -1,12 +1,15 @@
 package screen.AT2BOOSA1003;
 
 import core.CommonActions.CommonProcedures;
+import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
 import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import screen.AT2BOOSA0001.AT2BOOSA0001Locators;
+
 
 /**
  * @author ajvirgili  Created on 29/06/2016
@@ -17,8 +20,10 @@ import org.openqa.selenium.Keys;
 public class AT2BOOSA1003Test {
 
     protected AT2BOOSA1003Locators locators;
+    protected AT2BOOSA0001Locators locatorsuno;
     protected AT2BOOSA1003Data data;
     protected Exception exception;
+
 
     /**
      * Constructor
@@ -27,6 +32,7 @@ public class AT2BOOSA1003Test {
     public AT2BOOSA1003Test(String enviroment) {
         setData(new AT2BOOSA1003Data(enviroment));
         setLocators(new AT2BOOSA1003Locators(enviroment));
+        setLocatorsBoosa(new AT2BOOSA0001Locators(enviroment));
     }
 
     /**
@@ -36,12 +42,20 @@ public class AT2BOOSA1003Test {
         return locators;
     }
 
+    public AT2BOOSA0001Locators getLocatorsUno() {
+        return locatorsuno;
+    }
+
     /**
      * @param locators Gets the locators given in the ATBOOSA1003Locators, a Hashmap with locator_name[0], xpath[1]
      *                 and puts it in the locators variable
      */
     public void setLocators(AT2BOOSA1003Locators locators) {
         this.locators = locators;
+    }
+
+    public void setLocatorsBoosa(AT2BOOSA0001Locators locators){
+        this.locatorsuno = locators;
     }
 
     /**
@@ -91,6 +105,10 @@ public class AT2BOOSA1003Test {
         return String.valueOf(this.locators.getElements().get(key));
     }
 
+    protected String getElementsUno(String key) {
+        return String.valueOf(this.locatorsuno.getElements().get(key));
+    }
+
     /**
      * @param key String with the data_name to get
      * @return String with an xpath
@@ -110,13 +128,15 @@ public class AT2BOOSA1003Test {
         if (!Search_booking(driver)) {
             return false;
         }
-        if (!searchBooking(driver, false)) {
+
+
+   /*     if (!searchBooking(driver, false)) {
             return false;
         }
         if (!estimationProcess(driver)) {
             return false;
         }
-        /*
+
         if (!salesQbe(driver)) {
             return false;
         }
@@ -145,8 +165,100 @@ public class AT2BOOSA1003Test {
     }
 
     private boolean Search_booking(TestDriver driver) {
+        String where = " on SEARCH BOOKING IN AT2BOOSA0001";
+        driver.getReport().addHeader("SEARCH BOOKING IN AT2BOOSA0001",3,false);
+        driver.getTestdetails().setTestname("AT2BOOSA0001");
+        CommonProcedures.goToScreen(driver,1);
+
+        //Busqueda Del receptivo nada mas entrar ne la pantalla
+        Functions.break_time(driver,360,500);
+        if(!Functions.createLovByValue(driver,
+                new String[]{"query_lov_receptive",getElementsUno("query_lov_receptive")}, //LoV button
+                new String[]{"query_simple_i_receptive",getElementsUno("query_simple_i_receptive")}, //external LoV input
+                new String[]{"query_lov_i_receptive",getElementsUno("query_lov_i_receptive")}, //internal LoV input
+                "1", // value to search
+                "receptive", //name of the data
+                where)){
+            return false;
+        }
+        Functions.break_time(driver,360,500);
+        if(!Functions.insertInput(driver,new String[]{"query_simple_i_creation_date",getElementsUno("query_simple_i_creation_date")},
+                "create_date",DataGenerator.getToday(driver,"dd/MM/yyyy"),where)){
+            return false;
+        }
+
+        //Busqueda avanzada para encontrar una reserva que no este cancelada y que tengo como mínimo un hotel
+        Functions.break_time(driver,360,500);
+        if(!Functions.checkClick(driver,
+                new String[]{"search_b_advanced_search_2",getElementsUno("search_b_advanced_search_2")}, //element to click
+                new String[]{"advanced_search_sl_canceled",getElementsUno("advanced_search_sl_canceled")}, //element expected to appear
+                500,1000, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        if (!Functions.selectText(driver,
+                new String[]{"advanced_search_sl_canceled",getElementsUno("advanced_search_sl_canceled")},
+                "No", "No",  where)){return false;}
+        if (!Functions.checkboxValue(driver,
+                getElementsUno("advanced_search_ch_only_hotel"),"only hotel",true,true, where)){return false;}//where
+
+        Functions.break_time(driver,360,500);
+        if(!Functions.clickSearchAndResult(driver,
+                new String[]{"query_b_search",getElementsUno("query_b_search")}, //search button
+                new String[]{"query_e_result",getElementsUno("query_e_result")}, //result element
+                " on SEARCH")){
+            return false;
+        }
+     if(!Functions.displayed(driver,getElementsUno("query_e_result")));
+        {
+
+            if(!Functions.insertInput(driver,new String[]{"query_simple_i_creation_date",getElementsUno("query_simple_i_creation_date")},
+                    "hola",DataGenerator.getRelativeDateToday("dd/MM/yyyy",-1,DataGenerator.random(0,-1),0),where)){
+                return false;
+            }
+        }
+
+        Functions.getText(driver,
+                new String[]{"result_e_booking_reference",getElementsUno("result_e_booking_reference")},
+                "result_booking_reference",
+                where);
 
 
+
+        //Dado que no es posible saber si la booking esta bloqueada en ese momento se entra en la boosa1004 para desbloquear la reserva usada
+        Functions.break_time(driver,360,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"tb_b_actions",getElementsUno("tb_b_actions")}, //element to click
+                new String[]{"go_to_actions_b_bloqued_bookings",getElementsUno("go_to_actions_b_bloqued_bookings")}, //element expected to appear
+                360,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        Functions.break_time(driver,360,600);
+        if(!Functions.checkClick(driver,
+                new String[]{"go_to_actions_b_bloqued_bookings",getElementsUno("go_to_actions_b_bloqued_bookings")}, //element to click
+                new String[]{"go_to_bloqued_bookings_ch_select_all_gods",getElementsUno("go_to_bloqued_bookings_ch_select_all_gods")}, //element expected to appear
+                360,500, //seconds/miliseconds (driver wait)
+                where)){
+            return false;
+        }
+        Functions.break_time(driver,360,600);
+
+        if(Functions.displayed(driver,getElementsUno("go_to_bloqued_bookings_e_result"))){
+            if(!Functions.checkboxValue(driver,
+                    getElementsUno("go_to_bloqued_bookings_ch_select_all_gods"),"datanme",true,true,where)){
+                return false;
+            }//where
+            if(!Functions.doDeleteNCheck(driver,
+                    new String[]{"go_to_bloqued_bookings_b_delete",getElementsUno("go_to_bloqued_bookings_b_delete")},
+                    new String[]{"go_to_bloqued_bookings_e_record",getElementsUno("go_to_bloqued_bookings_e_record")},
+                    new String[]{"go_to_bloqued_bookings_b_delete_b_ok",getElementsUno("go_to_bloqued_bookings_b_delete_b_ok")},
+                    where)){
+                return false;
+            }
+        }
+        driver.getTestdetails().setTestname("AT2BOOSA1003");
+        CommonProcedures.goToScreen(driver,2);
         return true;
     }
 
@@ -636,6 +748,10 @@ public class AT2BOOSA1003Test {
     }
 
     protected boolean changeTab(TestDriver driver, boolean wch) {
+
+      CommonProcedures.goToScreen(driver,2);
+
+
         Functions.zoomOut(driver);
         String tab = "general_e_transfers";
         if (wch) {

@@ -78,7 +78,7 @@ public class AT2BOOSA0001Locators {
         elements.put("advanced_search_ch_extra", "//*[contains(@id, 'it9::content')]");
         elements.put("advanced_search_lov_extra", "//*[contains(@id, 'extraId::lovIconId')]");
         elements.put("advanced_search_i_extra", "//*[contains(@id, 'extraId::content')]");
-        elements.put("advanced_search_ch_only_hotel", "//*[contains(@id, 'it20::content')]");
+        elements.put("advanced_search_ch_only_hotel", "//*[contains(@id, 'r2:1:it20::content')]");
         elements.put("advanced_search_ch_pay_associated", "//*[contains(@id, 'it11::content')]");
         elements.put("advanced_search_ch_other", "//*[contains(@id, 'it13::content')]");
         elements.put("advanced_search_sl_other", "//*[contains(@id, 'soc3::content')]");
@@ -102,10 +102,11 @@ public class AT2BOOSA0001Locators {
 
 
         // ADVANCED SEARCH
-        elements.put("search_b_advanced_search", "//*[contains(@id, 'dyntdc:r1:1:cb2')]");
+        elements.put("search_b_advanced_search", " //*[contains(@id, 'dyntdc:r1:1:cb2')]");
         elements.put("advanced_search_b_show", "//*[contains(@id, 'pb3::_afrDscl')]");
         elements.put("advanced_search_sel_cancelled", "//*[contains(@id, 'soc5::content')]");
-
+        elements.put("keys_advances_search", "//*[contains(@id, 'pb2')]/div");
+        elements.put("search_b_advanced_search_2", " //*[contains(@id, 'dyntdc:r2:1:cb2')]");
 
         //SIMPLE SEARACH
         elements.put("query_lov_receptive", "//*[contains(@id, '1:grecSeqRecId::lovIconId')]");
