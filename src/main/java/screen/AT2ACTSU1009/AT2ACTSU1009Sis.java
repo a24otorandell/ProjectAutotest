@@ -43,6 +43,6 @@ public class AT2ACTSU1009Sis {
 
     protected boolean testCSED(TestDriver driver) {
         CommonProcedures.styleGuide(driver);
-        return false;
+        return true;
     }
 }
