@@ -75,6 +75,7 @@ public class AT2BOOSU1004Locators {
         elements.put("configuration_by_ttoo_add_sl_include_integrations", "//*[contains(@id, '0:soc1::content')]");
         elements.put("configuration_by_ttoo_add_ch_client_confirmation", "//*[contains(@id, '0:sbc22::content')]");
         elements.put("configuration_by_ttoo_add_ch_send_copy_kam", "//*[contains(@id, '0:sbc21::content')]");
+        elements.put("configuration_by_ttoo_add_ch_active", "//*[contains(@id, '0:sbc23::content')]");
         elements.put("configuration_by_ttoo_add_b_save", "//*[contains(@id, '0:pcgt45:boton_commit')]");
 
 
@@ -162,6 +163,7 @@ public class AT2BOOSU1004Locators {
         elements.put("configuration_by_ttoo_ed_sl_include_integrations", "//*[contains(@id, '0:soc1::content')]");
         elements.put("configuration_by_ttoo_ed_ch_client_confirmation", "//*[contains(@id, '0:sbc22::content')]");
         elements.put("configuration_by_ttoo_ed_ch_send_copy_kam", "//*[contains(@id, '0:sbc21::content')]");
+        elements.put("configuration_by_ttoo_ed_ch_active", "//*[contains(@id, '0:sbc23::content')]");
         elements.put("configuration_by_ttoo_ed_b_save", "//*[contains(@id, '0:pcgt45:boton_commit')]");
         elements.put("configuration_by_ttoo_ed_b_delete_atlas_co", "//*[contains(@id, '0:msilovCodEmp:dc_ctb3::icon')]");
         elements.put("configuration_by_ttoo_ed_b_delete_atlas_office", "//*[contains(@id, '0:msilovCodOfi:dc_ctb3::icon')]");

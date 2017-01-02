@@ -1082,11 +1082,11 @@ public class AT2BOOSA0001Test {
                     where);
 
         }
-        Functions.break_time(driver,120,500);
+      /*  Functions.break_time(driver,120,500);
         if(!Functions.navigateTable(driver, new String[]{"actions_booking_confirmation_e_scroller", getElements("actions_booking_confirmation_e_scroller")}, //scroller xpath
                 "back")) {
             return false;
-        }
+        }*/
         if(!Functions.checkClickByAbsence(driver,
                 new String[]{"actions_booking_confirmation_b_ok",getElements("actions_booking_confirmation_b_ok")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
