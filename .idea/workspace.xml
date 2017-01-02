@@ -10,12 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e173232a-92e9-486f-8a6b-60ffb01c5841" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" afterPath="$PROJECT_DIR$/out/artifacts/ProjectAutotest_jar/ProjectAutotest.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" afterPath="$PROJECT_DIR$/target/classes/core/CommonActions/Functions.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/core/CommonActions/CommonProcedures.class" afterPath="$PROJECT_DIR$/target/classes/core/CommonActions/CommonProcedures.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" afterPath="$PROJECT_DIR$/src/main/java/core/CommonActions/Functions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACTSU1009/AT2ACTSU1009Sis.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACTSU1009/AT2ACTSU1009Sis.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/screen/AT2ACTSU1009/AT2ACTSU1009Test.java" afterPath="$PROJECT_DIR$/src/main/java/screen/AT2ACTSU1009/AT2ACTSU1009Test.java" />
     </list>
     <list id="617e0ae1-fdc3-4242-b9b1-dce6829be5ac" name="Failed commit: Default" comment="*modificado manager at2actsu0037, correción separación codigo de test y sis&#10;" />
     <ignored path="ProjectAutotest.iws" />
@@ -985,13 +981,6 @@
       <option name="presentableId" value="Default" />
       <updated>1454668829543</updated>
     </task>
-    <task id="LOCAL-00095" summary="    quitar espacios innecesarios de la mdmcl0030&#10;">
-      <created>1476896694955</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1476896694955</updated>
-    </task>
     <task id="LOCAL-00096" summary="modificacion del metodo de ramdomfloat para que solo saque dos cecimales y sea un string&#10;">
       <created>1476961029384</created>
       <option name="number" value="00096" />
@@ -1328,7 +1317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483369854199</updated>
     </task>
-    <option name="localTasksCounter" value="144" />
+    <task id="LOCAL-00144" summary="quitado espera en el simple click&#10;">
+      <created>1483373697919</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1483373697919</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1411,7 +1407,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="*en accsu0017 añadido tiempo de espera en la qbe, en los campos de listas.&#10;*añadido información en la funtion de selectext&#10;" />
     <MESSAGE value="*pasar at2carsu0012 a guia de estilo" />
     <MESSAGE value="nuevo metodo en functions de selectextrandom" />
     <MESSAGE value="Actualización AT2ACCSU0006&#10;&#10;" />
@@ -1436,7 +1431,8 @@
     <MESSAGE value="modificacion accop0017 sis&#10;" />
     <MESSAGE value="modificacion accco0045 test y sis&#10;" />
     <MESSAGE value="nueva pantalla at2accsu0020&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="nueva pantalla at2accsu0020&#10;" />
+    <MESSAGE value="quitado espera en el simple click&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="quitado espera en el simple click&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1707,7 +1703,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/screen/AT2BOOSU1004/AT2BOOSU1004Test.java</url>
-          <line>2007</line>
+          <line>2001</line>
           <properties />
           <option name="timeStamp" value="933" />
         </line-breakpoint>
