@@ -44,11 +44,11 @@ public class Functions {
                 new String[]{"header_add", getElements("header_add")}, //element to click
                 " on CREATION HEADER")){return false;}*/
         try {
-            break_time(driver, 2, 500);
+            break_time(driver, 30, 500);
             driver.getDriver().findElement(By.xpath(path[1])).click();
-            break_time(driver, 2, 500);
+            break_time(driver, 30, 500);
             driver.getReport().addContent(path[0] + " clicked " + where);
-            break_time(driver, 2, 500);
+            break_time(driver, 30, 500);
         } catch (Exception e) {
             String ecode = "--ERROR: simpleClick(): Unable to click the element " + path[0] + " with xpath: " + path[1] + where + ".";
             e.printStackTrace();
