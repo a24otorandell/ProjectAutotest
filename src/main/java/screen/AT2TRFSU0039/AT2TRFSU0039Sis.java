@@ -42,6 +42,6 @@ public class AT2TRFSU0039Sis {
 
     protected boolean testCSED(TestDriver driver) {
         CommonProcedures.styleGuide(driver);
-        return false;
+        return true;
     }
 }

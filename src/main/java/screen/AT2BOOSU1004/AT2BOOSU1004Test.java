@@ -1503,19 +1503,12 @@ public class AT2BOOSU1004Test {
       String where=" on SEARCHQBE IN CONFIGURATION BY TTOO";
         driver.getReport().addHeader(" SEARCH IN CONFIGURATION BY TTO", 3, false);
 
-        if (!Functions.clickQbE(driver,
+           if (!Functions.clickQbE(driver,
                 new String[]{"configuration_by_ttoo_se_b_qbe", getElements("configuration_by_ttoo_se_b_qbe")},// query button
                 new String[]{"configuration_by_ttoo_se_i_ttoo", getElements("configuration_by_ttoo_se_i_ttoo")},//any query input
                 where)) {
             return false;
         }
-
-        if (!Functions.simpleClick(driver,
-                new String[]{"configuration_by_ttoo_se_b_reset", getElements("configuration_by_ttoo_se_b_reset")}, //element to click
-                where)) {
-            return false;
-        }
-
         if (!Functions.zoomOut(driver, 3)) {
             return false;
         }
@@ -1561,27 +1554,27 @@ public class AT2BOOSU1004Test {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_se_i_atlas_co", getElements("configuration_by_ttoo_se_i_atlas_co")},
-                "se_atlas_co", data.getData().get("atlas_co"), where)) {
+                "se_atlas_co", getData("atlas_co"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_se_i_atlas_office", getElements("configuration_by_ttoo_se_i_atlas_office")},
-                "se_atlas_office", data.getData().get("atlas_office"), where)) {
+                "se_atlas_office", getData("atlas_office"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_se_i_destination", getElements("configuration_by_ttoo_se_i_destination")},
-                "se_destination", data.getData().get("destination"), where)) {
+                "se_destination", getData("destination"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_se_i_destination_zone", getElements("configuration_by_ttoo_se_i_destination_zone")},
-                "se_destination_zone", data.getData().get("destination_zone"), where)) {
+                "se_destination_zone", getData("destination_zone"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_se_i_hotel_category", getElements("configuration_by_ttoo_se_i_hotel_category")},
-                "se_hotel_category", data.getData().get("hotel_category"), where)) {
+                "se_hotel_category", getData("hotel_category"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_se_i_last_minutes_days", getElements("configuration_by_ttoo_se_i_last_minutes_days")},
-                "se_last_minute", data.getData().get("last_minute"), where)) {
+                "se_last_minute", getData("last_minute"), where)) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"configuration_by_ttoo_se_i_project_name", getElements("configuration_by_ttoo_se_i_project_name")},
@@ -1590,7 +1583,8 @@ public class AT2BOOSU1004Test {
         }
         if (!Functions.selectText(driver,
                 new String[]{"configuration_by_ttoo_se_sl_include_dnd_hotels", getElements("configuration_by_ttoo_se_sl_include_dnd_hotels")},
-                "No", "se_dnd_hotels", where)) {
+                getData("include_dns_hotels"), "se_dnd_hotels", where)) {
+
             return false;
         }
 
@@ -1608,23 +1602,23 @@ public class AT2BOOSU1004Test {
 
         if (!Functions.selectText(driver,
                 new String[]{"configuration_by_ttoo_se_sl_include_ref_to_clients", getElements("configuration_by_ttoo_se_sl_include_ref_to_clients")},
-                "No", "se_to_clients", where)) {
+                getData("include_ref_to_client"), "se_to_clients", where)) {
             return false;
         }
 
         if (!Functions.selectText(driver,
                 new String[]{"configuration_by_ttoo_se_sl_client_confirmation", getElements("configuration_by_ttoo_se_sl_client_confirmation")},
-                "No", "se_client_confirmation", where)) {
+                getData("client_confirmation"), "se_client_confirmation", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"configuration_by_ttoo_se_sl_send_copy_kam", getElements("configuration_by_ttoo_se_sl_send_copy_kam")},
-                "No", "se_copy_kam", where)) {
+                getData("copy_kam"), "se_copy_kam", where)) {
             return false;
         }
         if (!Functions.selectText(driver,
                 new String[]{"configuration_by_ttoo_se_sl_active", getElements("configuration_by_ttoo_se_sl_active")},
-                "No", "se_active", where)) {
+                getData("active"), "se_active", where)) {
             return false;
         }
 
@@ -1632,7 +1626,7 @@ public class AT2BOOSU1004Test {
         if (!Functions.enterQueryAndClickResult(driver,
                 new String[]{"configuration_by_ttoo_se_i_ttoo", getElements("configuration_by_ttoo_se_i_ttoo")}, //search button
                 new String[]{"configuration_by_ttoo_se_e_result", getElements("configuration_by_ttoo_se_e_result")}, //result element
-                where)) {
+                " on QBE")) {
             return false;
         }
 
