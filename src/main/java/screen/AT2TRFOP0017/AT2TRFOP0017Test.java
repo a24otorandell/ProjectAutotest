@@ -42,6 +42,6 @@ public class AT2TRFOP0017Test {
 
     protected boolean testCSED(TestDriver driver) {
         CommonProcedures.styleGuide(driver);
-        return false;
+        return true;
     }
 }
