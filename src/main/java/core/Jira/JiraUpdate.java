@@ -143,7 +143,7 @@ public class JiraUpdate {
      * @return {@code String}
      */
     private String hudsonEnvironment() {
-        if (getDriver().getTestdetails().getEnvironment().equals("test")) {
+        if (getDriver().getTestdetails().getEnvironment().equalsIgnoreCase("test")) {
             return "http://192.168.22.143:8080/view/" + getDriver().getTestdetails().getMenu() + "/job/Test" + getDriver().getTestdetails().getTestname() + "/ws/" + getDriver().getReport().getFile().getFilename();
         } else {
             return "http://192.168.22.143:8092/view/" + getDriver().getTestdetails().getMenu() + "/job/Sis" + getDriver().getTestdetails().getTestname() + "/ws/" + getDriver().getReport().getFile().getFilename();

@@ -173,6 +173,10 @@ public class CommonProcedures {
      */
     private static void checkAlert(TestDriver driver) {
         try {
+            WebDriverWait breathetime = new WebDriverWait(driver.getDriver(), 30, 500);
+            if (driver.getTestdetails().getEnvironment().equalsIgnoreCase("sis")) {
+                breathetime.until(ExpectedConditions.alertIsPresent());
+            }
             Thread.sleep(3000);
             Alert alert = driver.getDriver().switchTo().alert();
             //EXIST ALERT??
