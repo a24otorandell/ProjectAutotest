@@ -179,6 +179,8 @@ public class AT2MDMSY1003Sis {
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"parameters_b_delete", getElements("parameters_b_delete")},
                 new String[]{"parameters_e_records", getElements("parameters_e_records")},
+                new String[]{"b_delete_yes", recursiveXPaths.delete_b_yes},
+                120,500,
                 where)){
             return false;
         }

@@ -1240,6 +1240,81 @@ public class Functions {
         return true;
 
     }
+    /**
+     * This method manages all the delete process in Atlas 2.0, also checks the records to check if was successful
+     *
+     * @param driver       TestDriver - This object gathers all the info refferent to the current test
+     * @param b_delete     String[] - Xpath referent to the delete button, [0] is the data name, [1] is the value
+     * @param n_records    String[] - Xpath referent to the record values, [0] is the data name, [1] is the value
+     * @param delete_b_yes String[] - Xpath referent to the yes button (confirmation deletion), [0] is the data name, [1] is the value
+     * @param where        String - Tells where the operation is taking effect
+     * @return {@code boolean} to control the process flow
+     */
+    public static boolean doDeleteNCheck(TestDriver driver, String[] b_delete, String[] n_records, String[] delete_b_yes,int seconds, int miliseconds, String where) {
+        /*
+        if (!Functions.doDeleteNCheck(driver,
+                new String[]{"x", getElements("x")}, //button delete
+                new String[]{"x", getElements("x")}, // result
+                new String[]{"delete_b_yes", getElements("delete_b_yes")}, //delete button yes
+                120,500,
+                " where")){return false;}
+         */
+
+        driver.getReport().addContent("Deleting Record:", "h5", "");
+        if (!zoomOut(driver)) {
+            return false;
+        }
+        int recordsbefore = 0;
+        int recordsafter = 0;
+        int expected = 1;
+        int unexpected = 0;
+        try {
+            if (driver.getDriver().findElement(By.xpath(n_records[1])).getText().contains("Records")) {
+                String algo = driver.getDriver().findElement(By.xpath(n_records[1])).getText();
+                String[] algo3 = driver.getDriver().findElement(By.xpath(n_records[1])).getText().split("Records:");
+                recordsbefore = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText().split("Records:")[1]);
+            } else {
+                recordsbefore = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: doDeleteNCheck(): Unable to find " + n_records[0] + " or cast it to integer before delete was done.";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+        }
+        checkClick(driver, b_delete, recursiveXPaths.glass, seconds,miliseconds,where);
+        checkClickByAbsence(driver,
+                new String[]{"b_delete_yes", delete_b_yes[1]},
+                recursiveXPaths.glass,
+                seconds, miliseconds,
+                where);
+        try {
+            if (driver.getDriver().findElement(By.xpath(n_records[1])).getText().contains("Records")) {
+                recordsafter = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText().split("Records:")[1]);
+            } else {
+                recordsafter = Integer.parseInt(driver.getDriver().findElement(By.xpath(n_records[1])).getText());
+            }
+        } catch (Exception f) {
+            String ecode = "--ERROR: doDeleteNCheck(): Unable to find " + n_records[0] + " or cast it to integer after delete was done.";
+            f.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        if (recordsbefore - recordsafter == expected) {
+            driver.getReport().addContent("Delete successful, records changed from: " + recordsbefore + " to: " + recordsafter + ".");
+        } else if (recordsbefore - recordsafter != unexpected) {
+            driver.getReport().addContent("Oops seems like mutiple operations happened during test, cannot confirm delete was or not successful, records from: " + recordsbefore + " to: " + recordsafter + ".", "p", "class='warning'");
+        } else if (recordsbefore - recordsafter == unexpected) {
+            String message = "Delete Unsuccessful, records didn't change (from: " + recordsbefore + " to: " + recordsafter + ").";
+            ErrorManager.process(driver, message);
+            return false;
+        }
+        if (!zoomIn(driver)) {
+            return false;
+        }
+        driver.getReport().addContent("", "br", "");
+        return true;
+
+    }
 
     /**
      * Zooms out the WebDriver
