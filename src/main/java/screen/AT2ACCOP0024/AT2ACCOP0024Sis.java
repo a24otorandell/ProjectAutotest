@@ -153,25 +153,25 @@ public class AT2ACCOP0024Sis {
     protected boolean gettingData(TestDriver driver) {
         driver.getReport().addContent("Getting data to test:", "h4", "");
         Functions.zoomOut(driver, 1);
-        Functions.break_time(driver, 4, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"search_b_search", getElements("search_b_search")},
                 " on Get data")) {
             return false;
         }
-        Functions.break_time(driver, 4, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_qbe_total_amount", getElements("record_interaction_b_qbe_total_amount")},
                 " on Get data")) {
             return false;
         }
-        Functions.break_time(driver, 4, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_qbe_total_amount", getElements("record_interaction_b_qbe_total_amount")},
                 " on Get data")) {
             return false;
         }
-        Functions.break_time(driver, 4, 500);
+        Functions.break_time(driver, 30, 500);
         String[] fields = {"report", "file", "type", "financial_date_from", "financial_status",
                 "merchant", "settelment", "currency", "modification_user", "modification_date_from",
                 "batchID", "total_amount", "submerchant"};
@@ -190,7 +190,7 @@ public class AT2ACCOP0024Sis {
      * @see Robot#keyPress(int)
      */
     protected boolean exportAction(TestDriver driver) {
-        Functions.break_time(driver, 3, 500);
+        Functions.break_time(driver, 30, 500);
         driver.getReport().addContent("Action Export:", "h4", "");
         if (!Functions.checkClick(driver,
                 new String[]{"record_interaction_b_actions", getElements("record_interaction_b_actions")},
@@ -198,13 +198,13 @@ public class AT2ACCOP0024Sis {
                 " on export")) {
             return false;
         }
-        Functions.break_time(driver, 1, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_export", getElements("record_interaction_b_export")},
                 " on export")) {
             return false;
         }
-        Functions.break_time(driver, 3, 500);
+        Functions.break_time(driver, 30, 500);
         if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed() || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
             if (!getData("info_text_export").equals("The report will be process in the next execution")) {
                 ErrorManager.process(driver, "Cannot complete the ~Export~ Action");
@@ -243,7 +243,7 @@ public class AT2ACCOP0024Sis {
      * @see #modifyActionFileCreator(TestDriver)
      */
     protected boolean modifyAction(TestDriver driver) {
-        Functions.break_time(driver, 2, 500);
+        Functions.break_time(driver, 30, 500);
         driver.getReport().addContent("Action Modify:", "h4", "");
         modifyActionFileCreator(driver);
         if (!Functions.checkClick(driver,
@@ -252,7 +252,7 @@ public class AT2ACCOP0024Sis {
                 " on modify")) {
             return false;
         }
-        Functions.break_time(driver, 3, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_modify", getElements("record_interaction_b_modify")},
                 " on modify")) {
@@ -264,14 +264,14 @@ public class AT2ACCOP0024Sis {
                 " on modify")) {
             return false;
         }
-        Functions.break_time(driver, 2, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_modify_b_save", getElements("record_interaction_b_modify_b_save")},
                 " on modify")) {
             return false;
         }
         try {
-            Functions.break_time(driver, 4, 500);
+            Functions.break_time(driver, 30, 500);
             if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed() || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
                 ErrorManager.process(driver, "Cannot complete the ~Modify~ Action");
                 Functions.simpleClick(driver,
@@ -347,7 +347,7 @@ public class AT2ACCOP0024Sis {
                     " on reprocess")) {
                 return false;
             }
-            Functions.break_time(driver, 2, 500);
+            Functions.break_time(driver, 30, 500);
             if (!Functions.getText(driver,
                     new String[]{"alert_e_info", getElements("alert_e_info")},
                     "info_text_reprocess",
@@ -357,7 +357,7 @@ public class AT2ACCOP0024Sis {
             if (!getData("info_text_reprocess").equals("No such file")) {
                 Functions.screenshot(driver, false);
             }
-            Functions.break_time(driver, 2, 500);
+            Functions.break_time(driver, 30, 500);
             if (Functions.displayed(driver, getElements("alert_b_ok"))) {
                 if (!Functions.simpleClick(driver,
                         new String[]{"alert_b_ok", getElements("alert_b_ok")},
@@ -388,19 +388,21 @@ public class AT2ACCOP0024Sis {
      */
     protected boolean newAction(TestDriver driver) {
         driver.getReport().addContent("Action New:", "h4", "");
-        Functions.break_time(driver, 1, 500);
-        if (!Functions.simpleClick(driver,
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.checkClick(driver,
                 new String[]{"record_interaction_b_actions", getElements("record_interaction_b_actions")},
-                " on new")) {
-            return false;
-        }
-        Functions.break_time(driver, 1, 500);
-        if (!Functions.simpleClick(driver,
                 new String[]{"record_interaction_b_new", getElements("record_interaction_b_new")},
                 " on new")) {
             return false;
         }
-        Functions.break_time(driver, 2, 500);
+        //Functions.break_time(driver, 30, 500);
+        if (!Functions.checkClick(driver,
+                new String[]{"record_interaction_b_new", getElements("record_interaction_b_new")},
+                new String[]{"record_interaction_b_new_i_type", getElements("record_interaction_b_new_i_type")},
+                " on new")) {
+            return false;
+        }
+        Functions.break_time(driver, 30, 500);
         if (!Functions.selectText(driver,
                 new String[]{"record_interaction_b_new_i_type", getElements("record_interaction_b_new_i_type")},
                 "IPS",
@@ -415,7 +417,7 @@ public class AT2ACCOP0024Sis {
                 " on new")) {
             return false;
         }
-        Functions.break_time(driver, 2, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"record_interaction_b_new_i_add", getElements("record_interaction_b_new_i_add")},
                 recursiveXPaths.glass,
@@ -423,7 +425,7 @@ public class AT2ACCOP0024Sis {
             return false;
         }
         try {
-            Functions.break_time(driver, 2, 500);
+            Functions.break_time(driver, 30, 500);
             if (driver.getDriver().findElement(By.xpath(getElements("alert_b_ok"))).isDisplayed()
                     || driver.getDriver().findElement(By.xpath(getElements("alert_b_x"))).isDisplayed()) {
                 if (!Functions.getText(driver,
@@ -513,7 +515,7 @@ public class AT2ACCOP0024Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Functions.break_time(driver, 4, 500);
+            Functions.break_time(driver, 30, 500);
             if (!getData("type").equals("ERROR")) {
                 if (!Functions.selectText(driver,
                         new String[]{"search_l_type", getElements("search_l_type")},
@@ -546,7 +548,7 @@ public class AT2ACCOP0024Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Functions.break_time(driver, 4, 500);
+            Functions.break_time(driver, 30, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"search_i_financial_date_from", getElements("search_i_financial_date_from")},
                     "financial_date_from",
@@ -554,7 +556,7 @@ public class AT2ACCOP0024Sis {
                     " on SEARCH")) {
                 return false;
             }
-            Functions.break_time(driver, 4, 500);
+            Functions.break_time(driver, 30, 500);
             if (!Functions.insertInput(driver,
                     new String[]{"search_i_settelment", getElements("search_i_settelment")},
                     "settelment",
@@ -618,6 +620,7 @@ public class AT2ACCOP0024Sis {
     protected boolean qbe(TestDriver driver) {
         driver.getReport().addContent("QBE Search:", "h4", "");
         Functions.zoomOut(driver, 2);
+        Functions.break_time(driver,30,500);
         if (!Functions.clickQbE(driver,
                 new String[]{"record_interaction_b_qbe", getElements("record_interaction_b_qbe")},
                 new String[]{"record_interaction_b_qbe_i_report", getElements("record_interaction_b_qbe_i_report")},
@@ -638,11 +641,9 @@ public class AT2ACCOP0024Sis {
                 " on QBE")) {
             return false;
         }
-        if (!Functions.insertInput(driver,
+        if (!Functions.selectText(driver,
                 new String[]{"record_interaction_b_qbe_i_type", getElements("record_interaction_b_qbe_i_type")},
-                "type",
-                getData("type"),
-                " on QBE")) {
+                getData("type"), "type", " on SEARCH")) {
             return false;
         }
         if (!Functions.insertInput(driver,
@@ -862,7 +863,7 @@ public class AT2ACCOP0024Sis {
         if (one) {
             un = "[1]";
         }
-        Functions.break_time(driver, 4, 500);
+        Functions.break_time(driver, 30, 500);
         driver.getReport().addContent("Financial report - Getting data:", "h5", "");
         String[] fields = {"error_code", "error_desc"};
         for (int j = 1; j < 3; j++) {
@@ -892,6 +893,7 @@ public class AT2ACCOP0024Sis {
             return false;
         }
         driver.getDriver().findElement(By.xpath(getElements("record_interaction_b_qbe_i_financial_status"))).sendKeys(Keys.RETURN);
+        Functions.break_time(driver,30,500);
         if (Functions.displayed(driver, getElements("search_e_result"))) {
             if (!Functions.doDeleteNCheck(driver,
                     new String[]{"record_interaction_b_delete", getElements("record_interaction_b_delete")},
