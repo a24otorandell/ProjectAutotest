@@ -54,12 +54,7 @@ public class AT2ACCOP0019Sis {
     }
 
     protected boolean testCSED(TestDriver driver) {
-
-        if (!Create_merchant(driver)) {
-            return false;
-        }
-
-
+        if (!Create_merchant(driver))return false;
         return false;
     }
 
@@ -268,11 +263,15 @@ public class AT2ACCOP0019Sis {
                 " on DELETE")) {
             return false;
         }
+        if (!Functions.selectText(driver,
+                new String[]{"mercant_se_sl_active", getElements("mercant_se_sl_active")},
+                "No", "se_active", " on DELETE")) {
+            return false;
+        }
         if (!Functions.insertInput(driver, new String[]{"mercant_se_i_delete_date", getElements("mercant_se_i_delete_date")},
                 "del_gettoday",DataGenerator.getToday(driver,"dd/MM/yyyy")," on DELETE")){
             return false;
         }
-
         if (!Functions.clickSearchAndResult(driver,
                 new String[]{"mercant_se_b_save", getElements("mercant_se_b_save")}, //search button
                 new String[]{"mercant_se_e_result", getElements("mercant_se_e_result")}, //result element

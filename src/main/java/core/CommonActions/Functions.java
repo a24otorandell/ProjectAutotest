@@ -873,7 +873,7 @@ public class Functions {
             ErrorManager.process(driver, ecode);
             return false;
         }
-        break_time(driver, 30, 500);
+        break_time(driver, 120, 500);
         if (!simpleClick(driver, e_result, where)) {
             return false;
         }

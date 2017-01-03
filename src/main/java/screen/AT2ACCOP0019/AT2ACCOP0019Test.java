@@ -50,19 +50,14 @@ public class AT2ACCOP0019Test {
 
     protected boolean testCSED(TestDriver driver) {
 
-        if (!Create_merchant(driver)) {
-            return false;
-        }
-
-
-        return false;
+        if (!Create_merchant(driver))return false;
+        return true;
     }
 
     private boolean Create_merchant(TestDriver driver) {
         if (!Give_elements_merchant(driver)) {
             return false;
         }
-
         if (!Add_merchant(driver)) {
             return false;
         }
@@ -261,6 +256,11 @@ public class AT2ACCOP0019Test {
                 recursiveXPaths.glass, //element expected to disappear
                 30, 500,
                 " on DELETE")) {
+            return false;
+        }
+        if (!Functions.selectText(driver,
+                new String[]{"mercant_se_sl_active", getElements("mercant_se_sl_active")},
+                "No", "se_active", " on SEARCH")) {
             return false;
         }
         if (!Functions.insertInput(driver, new String[]{"mercant_se_i_delete_date", getElements("mercant_se_i_delete_date")},
