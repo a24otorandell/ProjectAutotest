@@ -3,8 +3,10 @@ package screen.AT2MDMSP0031;
 import core.CommonActions.CommonProcedures;
 import core.CommonActions.DataGenerator;
 import core.CommonActions.Functions;
+import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
+import org.openqa.selenium.By;
 
 /**
  * Created by aibanez on 16/11/2016.
@@ -52,21 +54,27 @@ public class AT2MDMSP0031Sis {
     }
 
     public boolean interaction_add (TestDriver driver) {
+        String[] columns = {"commercial_name","supplier"};
+        String table = "//*[contains(@id, '_afrLovInternalTableId::db')]";
+        if (!checkexistence(driver,columns,
+                "search_b_search", "search_lov_supplier","search_i_supplier", table,"supplier"))
+
         driver.getReport().addHeader("CREATTION", 3, false);
         String where = " ADD";
+
         if (!Functions.checkClick(driver,
                 new String[]{"suppliers_b_add", getElements("suppliers_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
                 where)) {
             return false;
         }
-        if(!Functions.createLov(driver,
-                new String[]{"add_lov_supplier",getElements("add_lov_supplier")}, // b_lov
-                new String[]{"add_i_supplier", getElements("add_i_supplier")}, // i_lov
-                recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_altresult, // lov result
-                recursiveXPaths.lov_b_ok, //lov b ok
-                "supplier", //Data name
+        if (!Functions.createLovByValue(driver,
+                new String[]{"add_lov_supplier", getElements("add_lov_supplier")}, //LoV button
+                new String[]{"add_i_supplier", getElements("add_i_supplier")}, //external LoV input
+                new String[]{"add_lov_supplier_code", recursiveXPaths.lov_i_altgenericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                getData("supplier"), // value to search
+                "supplier", //name of the data
                 where)){return false;}
         if(!Functions.getValue(driver,new String[]{"add_i_comercial", getElements("add_i_comercial")}, // element path
                 "comercial", // key for data value (the name)
@@ -199,7 +207,7 @@ public class AT2MDMSP0031Sis {
         if (!Functions.insertInput(driver, new String[]{"qbe_i_supplier",getElements("qbe_i_supplier")},
                 "supplier", getData("supplier"), where)){return false;}
         if (!Functions.insertInput(driver, new String[]{"qbe_i_comercial",getElements("qbe_i_comercial")},
-                "comercial",  getData("comercial"), where)){return false;}
+                "comercial",  getData("comercial").replace(" ","%"), where)){return false;}
         if (!Functions.selectText(driver,
                 new String[]{"qbe_sl_service",getElements("qbe_sl_service")},
                 getData("service"), "service", where)){return false;}
@@ -241,4 +249,47 @@ public class AT2MDMSP0031Sis {
         }
         return true;
     }
+
+    private boolean checkexistence (TestDriver driver, String[] columns, String b_search, String b_lov, String input, String resulttable, String dataname){
+        driver.getReport().addHeader("CHECK EXISTENCE", 3, false);
+        String where = " on CHECK EXISTENCE SUPPLIER";
+        int i = 1;
+        if (!Functions.checkClick(driver, new String[]{b_lov, getElements(b_lov)}, recursiveXPaths.lov_b_search, where))return false;
+        if (!Functions.checkClick(driver,recursiveXPaths.lov_b_search,recursiveXPaths.lov_e_result, where))return false;
+        if (!collectTableDataLoV(driver,columns,resulttable,11,where))return false;
+        if (!Functions.checkClickByAbsence(driver,recursiveXPaths.lov_b_ok,recursiveXPaths.glass, where))return false;
+        do {
+            if (!Functions.insertInput(driver, new String[]{input, getElements(input)},
+                    dataname,getData(dataname+i), where)) return false;
+            if (!Functions.simpleClick(driver, new String[] {b_search,getElements(b_search)}, where))return false;
+            i++;
+        } while (Functions.displayed(driver,getElements("suppliers_e_result")) || i >= 11);
+        return true;
+    }
+    private boolean collectTableDataLoV (TestDriver driver, String[] columns, String xpathtable, int rows, String where){
+        String xpathBegin = "/table/tbody/tr[";
+        String xpathMid = "]/td[2]/div/table/tbody/tr/td[";
+        String xpathEnd = "]";
+        if (xpathtable.isEmpty()) {
+            String ecode = "--ERROR: The xpath table is null " + where;
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        try {
+            for (int i = 1; i < rows+1;i++) {
+                for (int j = 1; j < columns.length + 1; j++) {
+                    Functions.getText(driver,
+                            new String[]{columns[j - 1], xpathtable + xpathBegin + i + xpathMid + j + xpathEnd},
+                            columns[j - 1]+i, where);
+                }
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: error to retrieve values " + where;
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        return true;
+    }
+
 }
