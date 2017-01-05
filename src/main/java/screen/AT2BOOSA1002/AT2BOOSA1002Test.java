@@ -66,12 +66,12 @@ class AT2BOOSA1002Test {
         if (!create_header(driver)) {
             return false;
         }
-       /* if (!header_actions(driver)) {
+        if (!header_actions(driver)) {
             return false;
         }
         if (!header_consult(driver)) {
             return false;
-        }*/
+        }
         if (!hotel(driver)) {
             return false;
         }
