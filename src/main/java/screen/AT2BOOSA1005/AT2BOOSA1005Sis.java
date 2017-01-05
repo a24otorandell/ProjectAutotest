@@ -46,6 +46,6 @@ public class AT2BOOSA1005Sis {
 
     protected boolean testCSED (TestDriver driver){
 
-        return false;
+        return true;
     }
 }
