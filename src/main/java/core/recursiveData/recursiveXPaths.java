@@ -13,6 +13,8 @@ public class recursiveXPaths {
     //</editor-fold>
     //<editor-fold desc="LOV XPATHS">
     public static final String[] lov_b_search = {"lov_b_search", "//*[contains(@id, '_afrLovInternalQueryId::search')]"};
+    public static final String[] lov_b_advanced = {"lov_b_advanced", "//*[contains(@id, '_afrLovInternalQueryId::mode')]"};
+    public static final String[] lov_ls_genericlist = {"lov_ls_genericlist", "//*[contains(@id, '_afrLovInternalQueryId:operator0::content')]"};
     public static final String lov_i_genericinput = "//*[contains(@id, '_afrLovInternalQueryId:value00::content')]";
     public static final String lov_i_altgenericinput = "//*[contains(@id, '_afrLovInternalQueryId:value10::content')]";
     public static final String lov_i_altgenericinput2 = "//*[contains(@id, '_afrLovInternalQueryId:value20::content')]";

@@ -1939,4 +1939,74 @@ public class Functions {
         }*/
         return true;
     }
+    /**
+     *  This functions is to search advance inside to lov
+     * @param driver
+     * @param b_lov
+     * @param i_lov
+     * @param i_inside_lov
+     * @param e_result
+     * @param value
+     * @param dataName
+     * @param value_list_advanced
+     * @param where
+     * @return
+     */
+    public static boolean createLovByValueAdvanced(TestDriver driver, String[] b_lov, String[] i_lov, String[] i_inside_lov, String[] e_result,
+                                                   String value, String dataName,String value_list_advanced,String where) {
+        //HOW TO CALL THIS METHOD
+        /*if (!Functions.createLovByValue(driver,
+                new String[]{"x", getElements("x")}, //LoV button
+                new String[]{"y", getElements("y")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "value", // value to search
+                "data_name", //name of the data
+                "Start with"
+                " on where")){return false;}*/ //where this operation occurs
+
+        driver.getReport().addContent("LoV by value Creation: ", "h5", "");
+        String attr = "";
+        if (!Functions.simpleClick(driver, i_lov, where)) {
+            return false;
+        }
+        if (!Functions.checkClick(driver, b_lov, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+        if (!Functions.displayed(driver,recursiveXPaths.lov_ls_genericlist[1])){
+            if (!Functions.checkClick(driver, recursiveXPaths.lov_b_advanced, recursiveXPaths.lov_ls_genericlist, where))return false;
+        }
+        if (!Functions.selectText(driver,
+                recursiveXPaths.lov_ls_genericlist,value_list_advanced, "lov_ls_genericlist", where)){return false;}
+
+        if (!Functions.insertInput(driver, i_inside_lov, "ref" + dataName, value, where)) {
+            return false;
+        }
+        Functions.sleep(1000);
+        if (!Functions.clickSearchAndResult(driver, recursiveXPaths.lov_b_search, e_result, where)) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver, recursiveXPaths.lov_b_ok, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+
+        try {
+            attr = driver.getDriver().findElement(By.xpath(i_lov[1])).getAttribute("value");
+            if (!attr.equals("") && !attr.equals(null)) {
+                driver.getTest().getData().put(dataName, attr);
+            } else {
+                String ecode = "--ERROR: createLov - Unable to check that the correct value was inserted in " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ". Value is blank or null.";
+                ErrorManager.process(driver, ecode);
+                return false;
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: createLov - Unable to get the selected " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ".";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+
+        driver.getReport().addContent("", "br", "");
+        return true;
+    }
 }

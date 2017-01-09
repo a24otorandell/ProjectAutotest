@@ -100,6 +100,7 @@ public class AT2ACCSU0020Locators {
         elements.put("hpc_e_result_no_data", "//*[contains(@id, 'resId4::db')]");
         elements.put("hpc_n_records", "//*[contains(@id, 'pc4:ot29')]");
         elements.put("hpc_b_show_toolbar", "//*[contains(@id, 'pc4:t1::eoi')]");
+        elements.put("hpc_b_show_nrecords", "//*[contains(@id, 'pc4:t2::eoi')]");
         elements.put("hpc_click_e_search","//*[contains(@id, 'pc4:resId4::db')]/table/tbody/tr[1]/td[1]"); // //*[contains(@id, 'pc4:resId4::db')]/table/tbody/tr[1]/td[1] // //*[contains(@id, 'pt1:dyntdc:r3:1:pc4:resId4::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]
         elements.put("hpc_click_popup_edit","//*[contains(@id, 'doc0::msgDlg::cancel')]");
         elements.put("hpc_b_actions_b_portail_update", "//*[contains(@id, 'pc4:pcgm2:dc_cmi2')]/td[2]");

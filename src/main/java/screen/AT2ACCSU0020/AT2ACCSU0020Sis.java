@@ -6,6 +6,9 @@ import core.CommonActions.Functions;
 import core.ErrorManager.ErrorManager;
 import core.TestDriver.TestDriver;
 import core.recursiveData.recursiveXPaths;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
 /**
  * Created by acarrillo on 07/12/2016.
@@ -381,6 +384,7 @@ public class AT2ACCSU0020Sis {
     }
     private boolean delete_hpc(TestDriver driver) {
         driver.getReport().addHeader("DELETE THE RECORD", 3, false);
+        Functions.break_time(driver,30,500);
         if (!Functions.doDeleteNCheck(driver,
                 new String[]{"hpc_b_delete", getElements("hpc_b_delete")}, //button delete
                 new String[]{"hpc_n_records", getElements("hpc_n_records")}, // result
@@ -542,6 +546,7 @@ public class AT2ACCSU0020Sis {
     private boolean getData_cli(TestDriver driver, int num_element) {
         driver.getReport().addHeader("GET VALUES IN HOTEL PRIORITY FOR CLIENT BLOCK", 3, false);
         Functions.zoomOut(driver,4);
+        Functions.break_time(driver,30,500);
         if (no_data_to_display(driver,"cli_click_e_search")){
             if (num_element == 1) {
                 testNormal_cli1 = true;
@@ -585,14 +590,14 @@ public class AT2ACCSU0020Sis {
             value_hotel_lov = data.getData().get("cli_hotel_code" + num_element);
             value_priority = data.getData().get("cli_priority" + num_element);
             if (!data.getData().get("hotel_client" + num_element).isEmpty()) {
-                value_client_lov = "%" + data.getData().get("hotel_client" + num_element);
-            }else if (num_element == 2){
+                value_client_lov = "%"+data.getData().get("hotel_client" + num_element).replace(" ","");
+            }/*else if (num_element == 2){
                 result_lov = recursiveXPaths.lov_e_altresult;
-            }
+            }*/
         }
-        if (num_element == 2 && this.testNormal_cli2==true){
+        /*/if (num_element == 2 && this.testNormal_cli2==true){
             result_lov = recursiveXPaths.lov_e_altresult;
-        }
+        }*/
 
         if (creation) {
             driver.getReport().addHeader("CREATE A NEW RECORD IN HOTEL PRIORITY FOR CLIENT BLOCK", 3, false);
@@ -617,13 +622,14 @@ public class AT2ACCSU0020Sis {
                 value_hotel_lov,
                 "cli_hotel_code"+num_element,
                 where))return false; // where the operation occurs
-        if (!Functions.createLovByValue(driver,
+        if (!createLovByValueAdvanced(driver,
                 new String[]{"cli_ss_add_lov_client_code",getElements("cli_ss_add_lov_client_code")}, // b_lov
                 new String[]{"cli_ss_add_i_client_code", getElements("cli_ss_add_i_client_code")}, // i_lov
                 new String[]{"ccli_ss_add_lov_client_code_i_code",recursiveXPaths.lov_i_genericinput},
                 result_lov, // lov internal result
                 value_client_lov, //Data name
                 "hotel_client"+num_element,
+                "Starts with",
                 where))return false; // where the operation occurs
         if (!Functions.insertInput(driver,
                 new String[]{"cli_ss_add_i_priority", getElements("cli_ss_add_i_priority")}, //input
@@ -663,16 +669,20 @@ public class AT2ACCSU0020Sis {
                     "des_hotel" + num_element, //data_name
                     data.getData().get("cli_destination_hotel" + num_element), //value
                     " on query cli"); //where
+            //QUERY
+            Functions.enterQueryAndClickResult(driver,
+                    new String[]{"cli_qbe_i_hotel_code", getElements("cli_qbe_i_hotel_code")}, //query input
+                    new String[]{"cli_e_result", getElements("cli_e_result")}, //result
+                    " on query cli"); //where
+        }else{
+            sendkeyEnter(driver);
         }
-        //QUERY
-        Functions.enterQueryAndClickResult(driver,
-                new String[]{"cli_qbe_i_hotel_code", getElements("cli_qbe_i_hotel_code")}, //query input
-                new String[]{"cli_e_result", getElements("cli_e_result")}, //result
-                " on query cli"); //where
+
         return true;
     }
     private boolean delete_cli(TestDriver driver) {
         driver.getReport().addHeader("DELETE THE RECORD IN HOTEL PRIORITY FOR CLIENT BLOCK", 3, false);
+        Functions.break_time(driver,30, 500);
         if (!Functions.simpleClick(driver,
                 new String[]{"cli_click_e_search", getElements("cli_click_e_search")}, //element to click
                 " on click e search cli"))return false;
@@ -681,21 +691,6 @@ public class AT2ACCSU0020Sis {
                 new String[]{"cli_n_records", getElements("cli_n_records")}, // result
                 new String[]{"cli_ss_delete_b_yes", getElements("cli_ss_delete_b_yes")}, //delete button yes
                 " on HOTEL PRIORITY FROM CLIENT DELETE")){return false;}
-        /*Functions.simpleClick(driver,
-                new String[]{"cli_click_e_search", getElements("cli_click_e_search")}, //element to click
-                " on where");
-
-        Functions.checkClick(driver,
-                new String[]{"cli_b_delete", getElements("cli_b_delete")},
-                recursiveXPaths.glass,
-                " on HOTEL PRIORITY COUNTRY DELETE");
-        Functions.checkClickByAbsence(driver,
-                new String[]{"cli_ss_delete_b_yes", recursiveXPaths.delete_b_yes},
-                recursiveXPaths.glass,
-                " on HOTEL PRIORITY COUNTRY DELETE");*/
-      /*  Functions.checkDelete(driver,
-                new String[]{"cli_e_result_no_data", getElements("cli_e_result_no_data")});*/
-
         return true;
     }
 
@@ -927,5 +922,73 @@ public class AT2ACCSU0020Sis {
             }
         }
         return false;
+    }
+    private boolean sendkeyEnter (TestDriver driver){
+        try {
+            WebElement html = driver.getDriver().findElement(By.tagName("html"));
+            html.sendKeys(Keys.chord(Keys.ENTER));
+        } catch (Exception e) { // by the way, this error "should never" be shown, zoom cannot fail (unless something really weird happens)
+            String ecode = "--ERROR: error sendkey convination";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+        return true;
+    }
+    public static boolean createLovByValueAdvanced(TestDriver driver, String[] b_lov, String[] i_lov, String[] i_inside_lov, String[] e_result, String value, String dataName,String value_list_advanced,String where) {
+        //HOW TO CALL THIS METHOD
+        /*if (!Functions.createLovByValue(driver,
+                new String[]{"x", getElements("x")}, //LoV button
+                new String[]{"y", getElements("y")}, //external LoV input
+                new String[]{"z", recursiveXPaths.lov_i_genericinput}, //internal LoV input
+                recursiveXPaths.lov_e_result, // lov internal result
+                "value", // value to search
+                "data_name", //name of the data
+                "Start with"
+                " on where")){return false;}*/ //where this operation occurs
+
+        driver.getReport().addContent("LoV by value Creation: ", "h5", "");
+        String attr = "";
+        if (!Functions.simpleClick(driver, i_lov, where)) {
+            return false;
+        }
+        if (!Functions.checkClick(driver, b_lov, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+        if (!Functions.displayed(driver,recursiveXPaths.lov_ls_genericlist[1])){
+            if (!Functions.checkClick(driver, recursiveXPaths.lov_b_advanced, recursiveXPaths.lov_ls_genericlist, where))return false;
+        }
+        if (!Functions.selectText(driver,
+                recursiveXPaths.lov_ls_genericlist,value_list_advanced, "lov_ls_genericlist", where)){return false;}
+
+        if (!Functions.insertInput(driver, i_inside_lov, "ref" + dataName, value, where)) {
+            return false;
+        }
+        Functions.sleep(1000);
+        if (!Functions.clickSearchAndResult(driver, recursiveXPaths.lov_b_search, e_result, where)) {
+            return false;
+        }
+        if (!Functions.checkClickByAbsence(driver, recursiveXPaths.lov_b_ok, recursiveXPaths.lov_b_search, where)) {
+            return false;
+        }
+
+        try {
+            attr = driver.getDriver().findElement(By.xpath(i_lov[1])).getAttribute("value");
+            if (!attr.equals("") && !attr.equals(null)) {
+                driver.getTest().getData().put(dataName, attr);
+            } else {
+                String ecode = "--ERROR: createLov - Unable to check that the correct value was inserted in " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ". Value is blank or null.";
+                ErrorManager.process(driver, ecode);
+                return false;
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: createLov - Unable to get the selected " + i_lov[0] + " (xpath: " + i_lov[1] + ")" + where + ".";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+            return false;
+        }
+
+        driver.getReport().addContent("", "br", "");
+        return true;
     }
 }
