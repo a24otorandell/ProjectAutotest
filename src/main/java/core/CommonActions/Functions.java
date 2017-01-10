@@ -1904,20 +1904,36 @@ public class Functions {
      * @param where
      * @return
      */
-    public static boolean navigateTable(TestDriver driver, String scrollBar[], int distance, String where) {
+    public static boolean navigateTable(TestDriver driver, String scrollBar[], String direction, String where) {
       /*
       if(!Functions.navigateTable(driver,
                 new String[]{"scrollBar", getElements("scrollBar")}, //scroller xpath
-                "back/forward")); //nav direction(just back or forward){
+                "back/forward", where)){ //nav direction(just back or forward)
         return false;
         }
         */
+        try {
+            switch (direction) {
+                case "forward":
+                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT, Keys.PAGE_UP)); //FOWARD
+                    break;
+                case "back":
+                    driver.getDriver().findElement(By.xpath(scrollBar[1])).sendKeys(Keys.chord(Keys.ALT, Keys.PAGE_DOWN)); //BACK
+                    break;
+                default:
+                    driver.getReport().addContent("Definition for direction introuced is wron: " + direction);
+            }
+        } catch (Exception e) {
+            String ecode = "--ERROR: navigateTable(): An unexpected error has occurred, please check.";
+            e.printStackTrace();
+            ErrorManager.process(driver, ecode);
+        }
 
 
-        WebElement scroll = driver.getDriver().findElement(By.xpath(scrollBar[1]));
+     /*   WebElement scroll = driver.getDriver().findElement(By.xpath(scrollBar[1]));
 
         ((JavascriptExecutor) driver.getDriver()).executeScript("arguments[0].scrollLeft: '0, -" + distance + "');", scroll);
-
+*/
 
 
         /*try {

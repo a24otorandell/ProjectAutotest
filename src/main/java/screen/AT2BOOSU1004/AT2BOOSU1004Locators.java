@@ -177,9 +177,69 @@ public class AT2BOOSU1004Locators {
         elements.put("configuration_by_ttoo_b_actions_b_data_history", "//*[contains(@id, 'pdm12:dc_cmi0')]/td[2]");
         elements.put("configuration_by_ttoo_b_actions_b_data_history_b_ok", "//*[contains(@id, ':pdm12:d22::ok']");
         elements.put("configuration_by_ttoo_b_detach", "//*[contains(@id, 'pc1:_dchTbr')]/a");
-        elements.put("configuration_by_ttoo_b_detach_b_historic","//*[contains(@id, 'pc1:pdm12:dc_cmi1')]/td[2]");
-        elements.put("configuration_by_ttoo_b_detach_b_historic_b_qbe","//*[contains(@id, 'pc4:_qbeTbr')]/a");
-        elements.put("configuration_by_ttoo_b_detach_b_historic_qbe_ttoo","//*[contains(@id, 'pc4_afr_t6_afr_c101::content')]");
+        elements.put("configuration_by_ttoo_b_historic","//*[contains(@id, 'pc1:pdm12:dc_cmi1')]/td[2]");
+        elements.put("configuration_by_ttoo_b_historic_b_qbe","//*[contains(@id, 'pc3:_qbeTbr')]/a");
+        elements.put("configuration_by_ttoo_b_historic_i_ttoo","//*[contains(@id, 'pc3:t5:inputText10::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_ttoo_shortname","//*[contains(@id, 'pc3_afr_t5_afr_c54::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_sale_value","//*[contains(@id, 'pc3:t5:inputText11::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_arrival_date_from","//*[contains(@id, 'pc3:t5:id12::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_arrival_date_to","//*[contains(@id, 'pc3:t5:id14::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_stay_date_from","//*[contains(@id, 'pc3:t5:id9::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_stay_date_to","//*[contains(@id, 'pc3:t5:id11::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_chase_from","//*[contains(@id, 'pc3:t5:inputText12::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_chase_until","//*[contains(@id, 'pc3:t5:inputText13::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_rechase_days","//*[contains(@id, 'pc3:t5:inputText14::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_atlas_co","//*[contains(@id, 'pc3_afr_t5_afr_c48::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_soficodofi","//*[contains(@id, 'pc3:t5:inputText15::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_destination","//*[contains(@id, 'pc3_afr_t5_afr_c72::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_deszonage","//*[contains(@id, 'pc3_afr_t5_afr_c56::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_hotel_category","//*[contains(@id, 'pc3_afr_t5_afr_c66::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_last_minute_days","//*[contains(@id, 'pc3:t5:inputText16::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_proyect_name","//*[contains(@id, 'pc3_afr_t5_afr_c62::content')]");
+        elements.put("configuration_by_ttoo_b_historic_sl_include_dnc_hotels","//*[contains(@id, 'pc3:t5:soc12::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_include_bms","//*[contains(@id, 'pc3_afr_t5_afr_c70::content')]");
+        elements.put("configuration_by_ttoo_b_historic_sl_include_integrations","//*[contains(@id, 'pc3_afr_t5_afr_c61::content')]");
+        elements.put("configuration_by_ttoo_b_historic_sl_include_ref_to_client","//*[contains(@id, 'pc3:t5:soc13::content')]");
+        elements.put("configuration_by_ttoo_b_historic_sl_client_confirmation","//*[contains(@id, 'pc3:t5:soc14::content')]");
+        elements.put("configuration_by_ttoo_b_historic_sl_send_copy_kam","//*[contains(@id, 'pc3:t5:soc15::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_active","//*[contains(@id, 'pc3:t5:soc16::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_fecinv","//*[contains(@id, 'pc3:t5:id10::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_fecfinv","//*[contains(@id, 'pc3:t5:id13::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_usuiniv","//*[contains(@id, 'pc3_afr_t5_afr_c74::content')]");
+        elements.put("configuration_by_ttoo_b_historic_i_usufinv","//*[contains(@id, 'pc3_afr_t5_afr_c60::content')]");
+        elements.put("configuration_by_ttoo_b_historic_e_scroll","//*[contains(@id, 'pc3:t5::scroller')]");
+        elements.put("configuration_by_ttoo_b_historic_b_exit","//*[contains(@id, '0:d2::close')]");
+        elements.put("configuration_by_ttoo_b_historic_b_dtach","//*[contains(@id, 'pc3:_dchTbr')]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[1]");
+        elements.put("configuration_by_ttoo_b_historic_e_ttoo_shortname","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[2]");
+        elements.put("configuration_by_ttoo_b_historic_e_sale_value","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[3]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[4]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[5]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[6]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[7]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[8]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[9]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[10]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[11]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[12]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[13]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[14]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[15]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[16]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[17]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[18]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[19]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[20]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[21]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[22]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[23]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[24]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[25]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[26]");
+        elements.put("configuration_by_ttoo_b_historic_e_result_ttoo","//*[contains(@id, 'pc3:t5::db')]/table/tbody/tr[1]/td[2]/div/table/tbody/tr/td[28]");
+
+
+
 
         //DELETE
 
@@ -339,7 +399,35 @@ public class AT2BOOSU1004Locators {
         elements.put("configuration_by_clients_rating_b_actions_b_data_history", "//*[contains(@id, 'PCGenericMenu1:dc_cmi0')]/td[2]");
         elements.put("configuration_by_clients_rating_b_actions_b_data_history_b_ok", "//*[contains(@id, 'PCGenericMenu1:d22::ok')]");
         elements.put("configuration_by_clients_rating_b_detach", "//*[contains(@id, 'pc2:_dchTbr')]/a");
-
+        elements.put("configuration_by_clients_rating_b_actions_b_historic", "//*[contains(@id, 'pc2:PCGenericMenu1:dc_cmi1')]/td[2]");
+        elements.put("configuration_by_clients_b_historic_b_qbe","//*[contains(@id, 'pc4:_qbeTbr')]/a");
+        elements.put("configuration_by_clients_b_historic_i_codsegmento","//*[contains(@id, 'pc4_afr_t6_afr_c101::content')]");
+        elements.put("configuration_by_clients_b_historic_i_sale_value","//*[contains(@id, 'pc4:t6:inputText17::content')]");
+        elements.put("configuration_by_clients_b_historic_i_arrival_date_from","//*[contains(@id, 'pc4:t6:id16::content')]");
+        elements.put("configuration_by_clients_b_historic_i_arrival_date_to","//*[contains(@id, 'pc4:t6:id20::content')]");
+        elements.put("configuration_by_clients_b_historic_i_stay_date_from","//*[contains(@id, 'pc4:t6:id17::content')]");
+        elements.put("configuration_by_clients_b_historic_i_stay_date_to","//*[contains(@id, 'pc4:t6:id18::content')]");
+        elements.put("configuration_by_clients_b_historic_i_chase_from","//*[contains(@id, 'pc4:t6:inputText18::content')]");
+        elements.put("configuration_by_clients_b_historic_i_chase_until","//*[contains(@id, 'pc4:t6:inputText19::content')]");
+        elements.put("configuration_by_clients_b_historic_i_rechase_days","//*[contains(@id, 'pc4:t6:inputText20::content')]");
+        elements.put("configuration_by_clients_b_historic_i_atlas_co","//*[contains(@id, 'pc4_afr_t6_afr_c97::content')]");
+        elements.put("configuration_by_clients_b_historic_i_soficodofi","//*[contains(@id, 'pc4:t6:inputText21::content')]");
+        elements.put("configuration_by_clients_b_historic_i_destination","//*[contains(@id, 'pc4_afr_t6_afr_c94::content')]");
+        elements.put("configuration_by_clients_b_historic_i_deszonage","//*[contains(@id, 'pc4_afr_t6_afr_c85::content')]");
+        elements.put("configuration_by_clients_b_historic_i_hotel_category","//*[contains(@id, 'pc4_afr_t6_afr_c90::content')]");
+        elements.put("configuration_by_clients_b_historic_i_last_minute_days","//*[contains(@id, 'pc4:t6:inputText22::content')]");
+        elements.put("configuration_by_clients_b_historic_i_proyect_name","//*[contains(@id, 'pc4_afr_t6_afr_c102::content')]");
+        elements.put("configuration_by_clients_b_historic_sl_include_dnc_hotels","//*[contains(@id, 'pc4:t6:soc17::content')]");
+        elements.put("configuration_by_clients_b_historic_i_include_bms","//*[contains(@id, 'pc4_afr_t6_afr_c81::content')]");
+        elements.put("configuration_by_clients_b_historic_sl_include_integrations","//*[contains(@id, 'pc4_afr_t6_afr_c91::content')]");
+        elements.put("configuration_by_clients_b_historic_sl_include_ref_to_client","//*[contains(@id, 'pc4:t6:soc18::content')]");
+        elements.put("configuration_by_clients_b_historic_sl_client_confirmation","//*[contains(@id, 'pc4:t6:soc21::content')]");
+        elements.put("configuration_by_clients_b_historic_sl_send_copy_kam","//*[contains(@id, 'pc4:t6:soc20::content')]");
+        elements.put("configuration_by_clients_b_historic_i_active","//*[contains(@id, 'pc4:t6:soc19::content')]");
+        elements.put("configuration_by_clients_b_historic_i_fecinv","//*[contains(@id, 'pc4:t6:id19::content')]");
+        elements.put("configuration_by_clients_b_historic_i_fecfinv","//*[contains(@id, 'pc4:t6:id15::content')]");
+        elements.put("configuration_by_clients_b_historic_i_usuiniv","//*[contains(@id, 'pc4_afr_t6_afr_c84::content')]");
+        elements.put("configuration_by_clients_b_historic_i_usufinv","//*[contains(@id, 'pc4_afr_t6_afr_c78::content')]");
 
         //DELETE
 
