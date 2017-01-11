@@ -462,8 +462,8 @@ public class AT2MDMDE0004Locators {
                     elements.put("qbe_tpcntrs_i_country", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc1_afr_childTb1_afr_c11::content')]");
                     elements.put("qbe_tpcntrs_i_country_description", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc1_afr_childTb1_afr_c10::content')]");
                 //TOP DESTINATIONS
-                    elements.put("MDM_tpdstnts_i_destination", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc2_afr_childTb2_afr_c13::content')]");
-                    elements.put("MDM_tpdstnts_i_destination_description", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc2_afr_childTb2_afr_c12::content')]");
+                    elements.put("qbe_tpdstnts_i_destination", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc2_afr_childTb2_afr_c13::content')]");
+                    elements.put("qbe_tpdstnts_i_destination_description", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc2_afr_childTb2_afr_c12::content')]");
                 //TOP EVENTS
                     elements.put("qbe_tpevents_i_event", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc3_afr_childTb3_afr_c14::content')]");
                     elements.put("qbe_tpevents_i_title", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc3_afr_childTb3_afr_c24::content')]");

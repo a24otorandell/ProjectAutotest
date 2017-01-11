@@ -259,7 +259,14 @@ public class TestDriver {
     public void setTestend() {
         this.testend = System.currentTimeMillis();
     }
-
+    /**
+     * Sets a {@code long} var to calculate the duration of the test with the current time in miliseconds
+     *
+     * @see System#currentTimeMillis()
+     */
+    public void setTeststart() {
+        this.teststart = System.currentTimeMillis();
+    }
     /**
      * Gets the testdate which is the system date as {@code Date}
      *
@@ -286,6 +293,7 @@ public class TestDriver {
      */
     public void testStart() {
         System.out.println("Welcome to Autotest 2.0");
+        setTeststart();
         if (checkExistence(this.getTestdetails().getTestname())) {
             switch (driverdetails.getBrowser()) {
                 case "ff":

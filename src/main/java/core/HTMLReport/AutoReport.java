@@ -94,7 +94,7 @@ public class AutoReport extends HTMLFactory {
                 " Screen: " + driver.getTestdetails().getScreen() +
                 " </span>" +
                 " <span class='header'>" +
-                " Web Browser: firefox 43.0.1" + //TODO Update this to display actual browser version
+                " Web Browser: firefox 47.0.1" + //TODO Update this to display actual browser version
                 " </span>" +
                 " <span class='header'>" +
                 " Environment: " + driver.getTestdetails().getEnvironment() +
@@ -138,7 +138,7 @@ public class AutoReport extends HTMLFactory {
                 " Test Realized on " + driver.getTestdate() +
                 " </span>" +
                 " <span class='header'>" +
-                " Total time: " + (driver.getTestend() - driver.getTeststart()) / 1000 + " seconds" +
+                " Total time: " + (driver.getTestend() - driver.getTeststart()) / 1000 + " seconds // " + (driver.getTestend() - driver.getTeststart()) / 1000*60 + " minuts"+
                 " </span>" +
                 "<a href='#title'>Go to page top</a>" +
                 "<hr>";

@@ -771,6 +771,7 @@ public class AT2MDMDE0004Sis {
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_cmmc_b_save", getElements("add_cmmc_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
+                240,500,
                 where)) {
             return false;
         }
@@ -821,6 +822,7 @@ public class AT2MDMDE0004Sis {
         if (!Functions.checkClickByAbsence(driver,
                 new String[]{"add_cmmc_b_save", getElements("add_cmmc_b_save")}, //element to click
                 recursiveXPaths.glass, //element expected to disappear
+                120,500,
                 where)) {
             return false;
         }
@@ -1926,6 +1928,18 @@ public class AT2MDMDE0004Sis {
                 where)) {
             return false;
         }
+        Functions.break_time(driver, 30, 500);
+        if (!Functions.simpleClick(driver,new String[]{"add_gnrls_lov_category", getElements("add_gnrls_lov_category")},where))return false;
+        if (!Functions.createLov(driver,
+                new String[]{"add_gnrls_lov_category", getElements("add_gnrls_lov_category")}, // b_lov
+                new String[]{"add_gnrls_i_category", getElements("add_gnrls_i_category")}, // i_lov
+                recursiveXPaths.lov_b_search, // lov b search
+                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_b_ok, //lov b ok
+                "gnrls_category", //Data name
+                where)){
+            return false;
+        }
         if (!Functions.getText(driver,
                 new String[]{"add_gnrls_i_category", getElements("add_gnrls_i_category")}, // element path
                 "gnrls_category", // key for data value (the name)
@@ -1953,7 +1967,7 @@ public class AT2MDMDE0004Sis {
         return true;
     }
     private boolean interaction_edit_gnrls_MDM(TestDriver driver) {
-        driver.getReport().addHeader("CREATION RECORD", 3, false);
+        driver.getReport().addHeader("EDITION RECORD", 3, false);
         String where = " on CREATION";
         Functions.break_time(driver, 120, 500);
         if (!Functions.checkClick(driver,
@@ -1967,12 +1981,12 @@ public class AT2MDMDE0004Sis {
                 where)) {
             return false;
         }
-        Functions.break_time(driver, 120, 500);
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_gnrls_lov_category", getElements("add_gnrls_lov_category")}, // b_lov
                 new String[]{"add_gnrls_i_category", getElements("add_gnrls_i_category")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "gnrls_category", //Data name
                 where)){
@@ -2388,15 +2402,15 @@ public class AT2MDMDE0004Sis {
         driver.getReport().addHeader("QBE RECORD", 3, false);
         String where = " on QBE";
         Functions.break_time(driver, 120, 500);
-        if (!Functions.simpleClick(driver,
-                new String[]{"MDM_cntrs_b_clear_qbe", getElements("MDM_cntrs_b_clear_qbe")}, //element to click
+        if (!Functions.clickQbE(driver,
+                new String[]{"MDM_cntrs_b_qbe", getElements("MDM_cntrs_b_qbe")},// query button
+                new String[]{"qbe_cntrs_i_code", getElements("qbe_cntrs_i_code")},//any query input
                 where)) {
             return false;
         }
         Functions.break_time(driver, 120, 500);
-        if (!Functions.clickQbE(driver,
-                new String[]{"MDM_cntrs_b_qbe", getElements("MDM_cntrs_b_qbe")},// query button
-                new String[]{"qbe_cntrs_i_code", getElements("qbe_cntrs_i_code")},//any query input
+        if (!Functions.simpleClick(driver,
+                new String[]{"MDM_cntrs_b_clear_qbe", getElements("MDM_cntrs_b_clear_qbe")}, //element to click
                 where)) {
             return false;
         }
@@ -3051,7 +3065,7 @@ public class AT2MDMDE0004Sis {
             return false;
         }
         if (!Functions.getText(driver,
-                new String[]{"qbe_tpevents_e_destination", getElements("qbe_tpevents_e_destination")}, // element path
+                new String[]{"add_tpevents_e_destination", getElements("add_tpevents_e_destination")}, // element path
                 "tpevents_destination", // key for data value (the name)
                 where)){
             return false;
@@ -3157,9 +3171,9 @@ public class AT2MDMDE0004Sis {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
         if (!Functions.doDeleteNCheck(driver,
-                new String[]{"MDM_hghlts_delete", getElements("MDM_hghlts_delete")},
-                new String[]{"MDM_hghlts_records", getElements("MDM_hghlts_records")},
-                new String[]{"MDM_hghlts_delete_ok", getElements("MDM_hghlts_delete_ok")}, //delete button yes
+                new String[]{"MDM_hghlts_b_delete", getElements("MDM_hghlts_b_delete")},
+                new String[]{"MDM_hghlts_e_records", getElements("MDM_hghlts_e_records")},
+                new String[]{"MDM_hghlts_b_delete_ok", getElements("MDM_hghlts_b_delete_ok")}, //delete button yes
                 where)) {
             return false;
         }
@@ -3169,9 +3183,9 @@ public class AT2MDMDE0004Sis {
         driver.getReport().addHeader("DELETE DATA", 3, false);
         String where = " on DELETE DATA";
         if (!Functions.doDeleteNCheck(driver,
-                new String[]{"MDM_hghltssl_delete", getElements("MDM_hghltssl_delete")},
-                new String[]{"MDM_hghltssl_records", getElements("MDM_hghltssl_records")},
-                new String[]{"MDM_hghltssl_delete_ok", getElements("MDM_hghltssl_delete_ok")}, //delete button yes
+                new String[]{"MDM_hghltssl_b_delete", getElements("MDM_hghltssl_b_delete")},
+                new String[]{"MDM_hghltssl_e_records", getElements("MDM_hghltssl_e_records")},
+                new String[]{"MDM_hghltssl_b_delete_ok", getElements("MDM_hghltssl_b_delete_ok")}, //delete button yes
                 where)) {
             return false;
         }
