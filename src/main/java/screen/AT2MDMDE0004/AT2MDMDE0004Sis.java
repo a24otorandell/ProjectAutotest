@@ -1930,6 +1930,7 @@ public class AT2MDMDE0004Sis {
         }
         Functions.break_time(driver, 30, 500);
         if (!Functions.simpleClick(driver,new String[]{"add_gnrls_lov_category", getElements("add_gnrls_lov_category")},where))return false;
+        Functions.break_time(driver, 30, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_gnrls_lov_category", getElements("add_gnrls_lov_category")}, // b_lov
                 new String[]{"add_gnrls_i_category", getElements("add_gnrls_i_category")}, // i_lov
@@ -2966,9 +2967,24 @@ public class AT2MDMDE0004Sis {
         return true;
     }
     private boolean interaction_record_tpdstnts_MDM(TestDriver driver) {
-        driver.getReport().addHeader("CREATION RECORD", 3, false);
-        String where = " on CREATION";
+        driver.getReport().addHeader("VERIFY IF EXISTE RECORDS", 3, false);
+        String where = " on VERIFY EXISTENCE RECORDS";
         Functions.break_time(driver, 120, 500);
+        if (Functions.displayed(driver,getElements("MDM_tpdstnts_e_result"))) {
+            if (!Functions.simpleClick(driver, new String[]{"MDM_tpdstnts_e_result", getElements("MDM_tpdstnts_e_result")}, where))
+                return false;
+            if (!delete_tpdstnts_MDM(driver)) return false;
+        }else{
+            driver.getReport().addContent("Not exist record in TOP DESTINATION TABLE");
+        }
+        if (Functions.displayed(driver,getElements("MDM_tpevents_e_result"))) {
+            if (!Functions.simpleClick(driver,new String[]{"MDM_tpevents_e_result", getElements("MDM_tpevents_e_result")},where))return false;
+            if (!delete_tpevents_MDM(driver)) return false;
+        }else{
+            driver.getReport().addContent("Not exist record in TOP EVENTS TABLE");
+        }
+        driver.getReport().addHeader("CREATION RECORD", 3, false);
+        where = " on CREATION";
         if (!Functions.checkClick(driver,
                 new String[]{"MDM_tpdstnts_b_add", getElements("MDM_tpdstnts_b_add")}, //element to click
                 recursiveXPaths.glass, //element expected to appear
@@ -3052,7 +3068,7 @@ public class AT2MDMDE0004Sis {
                 new String[]{"add_tpevents_lov_event", getElements("add_tpevents_lov_event")}, // b_lov
                 new String[]{"add_tpevents_i_event", getElements("add_tpevents_i_event")}, // i_lov
                 recursiveXPaths.lov_b_search, // lov b search
-                recursiveXPaths.lov_e_result, // lov result
+                recursiveXPaths.lov_e_altresult, // lov result
                 recursiveXPaths.lov_b_ok, //lov b ok
                 "tpevents_event", //Data name
                 where)){

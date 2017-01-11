@@ -138,7 +138,7 @@ public class AutoReport extends HTMLFactory {
                 " Test Realized on " + driver.getTestdate() +
                 " </span>" +
                 " <span class='header'>" +
-                " Total time: " + (driver.getTestend() - driver.getTeststart()) / 1000 + " seconds // " + (driver.getTestend() - driver.getTeststart()) / 1000*60 + " minuts"+
+                " Total time: " + (driver.getTestend() - driver.getTeststart()) / 1000 + " seconds // " + (driver.getTestend() - driver.getTeststart()) / (1000*60) + " minuts"+
                 " </span>" +
                 "<a href='#title'>Go to page top</a>" +
                 "<hr>";
