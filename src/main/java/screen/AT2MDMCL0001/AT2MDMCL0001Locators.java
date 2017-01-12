@@ -27,6 +27,10 @@ public class AT2MDMCL0001Locators {
         elements.put("results_b_qbe", "//*[contains(@id, 'pc1:_qbeTbr')]");
         elements.put("results_e_records", "//*[contains(@id, 'pc1:ot42')]");
         elements.put("results_e_result", "//*[contains(@id, 'pc1:t1::db')]/table/tbody/tr[1]/td[1]");
+        elements.put("tab_add_client", "//*[contains(@id, ':2:tabIndex::disclosureAnchor')]");
+        elements.put("tab_client_management", "//*[contains(@id, ':1:tabIndex::disclosureAnchor')]");
+        elements.put("tab_add_client_b_close", "//*[contains(@id, ':2:tabIndex::rmAbv')]");
+
         //SEARCH
         elements.put("search_i_shot_name", "//*[contains(@id, 'qryId1:value00::content')]");
         elements.put("search_i_commercial_name", "//*[contains(@id, 'qryId1:value10::content')]");
@@ -78,20 +82,47 @@ public class AT2MDMCL0001Locators {
         elements.put("results_qbe_i_collections_company", "//*[contains(@id, 't1_afr_c44::content')]");
         elements.put("results_qbe_i_crc", "//*[contains(@id, 't1_afr_c49::content')]");
         elements.put("results_qbe_ls_tripAdvisor", "//*[contains(@id, 't1:soc19::content')]");
-        //CREATION
+        //region CREATION
+        elements.put("creation_b_register", "//*[contains(@id, 'commandButton1')]");
         //CUSTOMER REGISTER REQUEST
         elements.put("creation_ls_administrative_customer", "//*[contains(@id, 'choiceAdmCustType::content')]");
         elements.put("creation_i_atlas_short_name", "//*[contains(@id, 'it45::content')]");
         elements.put("creation_i_commercial_name", "//*[contains(@id, 'it46::content')]");
-        elements.put("creation_ls_relationship", "//*[contains(@id, 'qryId1:value230::content')]");
-        elements.put("creation_ls_division", "//*[contains(@id, 'qryId1:value230::content')]");
-        elements.put("creation_ls_direct_hotel_payment", "//*[contains(@id, 'qryId1:value230::content')]");
-        elements.put("creation_ls_source_market", "//*[contains(@id, 'qryId1:value230::content')]");
-        elements.put("creation_ls_office_comments", "//*[contains(@id, 'qryId1:value230::content')]");
-
-
+        elements.put("creation_ls_relationship", "//*[contains(@id, 'soc2::content')]");
+        elements.put("creation_ls_division", "//*[contains(@id, 'soc3::content')]");
+        elements.put("creation_ls_direct_hotel_payment", "//*[contains(@id, 'it54::content')]");
+        elements.put("creation_ls_source_market", "//*[contains(@id, 'soc16::content')]");
+        elements.put("creation_i_office_comments", "//*[contains(@id, 'it58::content')]");
+        //Administrative ADDRES
+        elements.put("creation_i_fiscal_number", "//*[contains(@id, 'it5::content')]");
+        elements.put("creation_i_fiscal_name", "//*[contains(@id, 'it6::content')]");
+        elements.put("creation_i_administrative_street", "//*[contains(@id, 'it7::content')]");
+        elements.put("creation_i_city", "//*[contains(@id, 'it11::content')]");
+        elements.put("creation_i_post_code", "//*[contains(@id, 'it8::content')]");
+        elements.put("creation_ls_country", "//*[contains(@id, 'soc11::content')]");
+        elements.put("creation_ls_province", "//*[contains(@id, 'soc10::content')]");
+        elements.put("creation_i_local_name", "//*[contains(@id, 'it14::content')]");
+        elements.put("creation_i_street_local", "//*[contains(@id, 'it15::content')]");
+        elements.put("creation_i_city_local", "//*[contains(@id, 'it16::content')]");
+        elements.put("creation_ls_billing_language", "//*[contains(@id, 'soc12::content')]");
+        //Administrative CONTACT
+        elements.put("creation_i_administrative_phone", "//*[contains(@id, 'it18::content')]");
+        elements.put("creation_i_administrative_email", "//*[contains(@id, 'it20::content')]");
+        elements.put("creation_i_fax", "//*[contains(@id, 'it19::content')]");
+        elements.put("creation_ls_contact_language", "//*[contains(@id, 'soc23::content')]");
+        //Commercial ADDRES
+        elements.put("creation_i_account_owner", "//*[contains(@id, 'it28::content')]");
+        elements.put("creation_b_copy_from_fiscal_addres", "//*[contains(@id, '1:cb1')]");
+        //Commercial CONTACT
+        elements.put("creation_ls_salutation", "//*[contains(@id, 'soc4::content')]");
+        elements.put("creation_i_first_name", "//*[contains(@id, 'it32::content')]");
+        elements.put("creation_i_comercial_phone", "//*[contains(@id, 'it35::content')]");
+        elements.put("creation_i_last_name", "//*[contains(@id, 'it33::content')]");
+        elements.put("creation_i_commercial_email", "//*[contains(@id, 'it36::content')]");
+        //Invoicing Company
+        elements.put("creation_ls_currency_to_invoice", "//*[contains(@id, 'soc7::content')]");
         //endregion
-
+        //endregion
     }
 
 }
