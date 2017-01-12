@@ -303,6 +303,7 @@ public class AT2MDMDE0004Test {
                 where)) {
             return false;
         }
+
         Functions.break_time(driver, 120, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_cntrs_lov_code", getElements("add_cntrs_lov_code")}, // b_lov

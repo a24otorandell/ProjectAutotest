@@ -457,6 +457,7 @@ public class AT2MDMDE0004Locators {
                     elements.put("qbe_hghltslngs_i_link", "//*[contains(@id, 'afr_r1_afr_1_afr_r4_afr_0_afr_pc3_afr_hhighId_afr_c8::content')]");
                     elements.put("qbe_hghltslngs_i_image", "//*[contains(@id, 'afr_r1_afr_1_afr_r4_afr_0_afr_pc3_afr_hhighId_afr_c6::content')]");
                     elements.put("qbe_hghltslngs_i_alternative_text", "//*[contains(@id, 'afr_r1_afr_1_afr_r4_afr_0_afr_pc3_afr_hhighId_afr_c9::content')]");
+
             //TOPS
                 //TOP COUNTRIES
                     elements.put("qbe_tpcntrs_i_country", "//*[contains(@id, 'afr_r1_afr_1_afr_r5_afr_0_afr_pc1_afr_childTb1_afr_c11::content')]");

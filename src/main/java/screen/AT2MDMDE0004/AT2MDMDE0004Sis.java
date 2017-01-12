@@ -3063,6 +3063,7 @@ public class AT2MDMDE0004Sis {
                 where)) {
             return false;
         }
+
         Functions.break_time(driver, 120, 500);
         if (!Functions.createLov(driver,
                 new String[]{"add_tpevents_lov_event", getElements("add_tpevents_lov_event")}, // b_lov
